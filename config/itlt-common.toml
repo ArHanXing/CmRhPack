@@ -1,0 +1,61 @@
+	[Java.Version]
+		guideUrl = ""
+		# 
+		# The minimum recommended Java version to run the modpack.
+		# Newer versions may have better performance, but some mods may break.
+		# Depending on the launcher being used, it may be difficult/annoying for users to change the Java version used for starting your modpack.
+		# 
+		# The default is Java 21, which is the minimum version required by Minecraft 1.20.5+.
+		#Range: 21 ~ 127
+		min = 21
+		# 
+		# The maximum recommended Java version to run the modpack.
+		# If you know that a mod in your pack is buggy with a certain Java version, you can warn the user against using too new Java here.
+		# 
+		# To disable this warning, set the value to 0.
+		#Range: 0 ~ 127
+		max = 0
+
+	[Java.Memory]
+		guideUrl = ""
+		# 
+		# If you know that your modpack fails to load into a world if the player allocates too little memory, you can set a minimum memory warning here.
+		# Do not set the minimum too high, as allocating too much memory can hurt performance and prevent the game from starting on low-end PCs.
+		# 
+		# To disable this warning, set the value to 0.
+		#Range: 0.0 ~ 1024.0
+		min = 1.0
+		#
+		# Allocating too much memory can hurt performance and cause lag spikes - you can set a max memory warning to help prevent that.
+		# 
+		# To disable this warning, set the value to 0.
+		#Range: 0.0 ~ 1024.0
+		max = 0.0
+		# 
+		# Some players may allocate more memory than they have in their PC, or allocate all of it without leaving any spare for the OS, drivers and other apps.
+		# This can severely hurt performance because it makes the game fight with everything else for resources and spills over from RAM to the much slower swap space.
+		# You can set a warning when the allocated memory is near the maximum available memory to help prevent that.
+		# The default is to warn when there's less than 1GB spare memory left.
+		# 
+		# To disable this warning, set the value to 0.
+		#Range: 0.0 ~ 3.0
+		nearMax = 1.0
+
+	[Java.Advanced]
+		# 
+		# Run an explicit full GC after the game has finished loading.
+		# This can help reduce initial memory usage, but causes a one-time brief pause after the game loads.
+		# 
+		# Warning: This option has no effect if the -XX:+DisableExplicitGC JVM arg is present.
+		enableExplicitGC = true
+
+[ModpackInfo]
+	# 
+	# The name of your modpack
+	name = "CmRhPack"
+	# 
+	# The version of your modpack
+	version = ""
+	# 
+	# The URL to your modpack's support page for players to get help with crashes
+	supportUrl = "https://discord.minecraftforge.net"

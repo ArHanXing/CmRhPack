@@ -1,0 +1,1087 @@
+{
+  "itemGroup.affinity.affinity": "Affinity",
+  "itemGroup.affinity.affinity.button.github": "GitHub",
+  "itemGroup.affinity.affinity.button.modrinth": "Modrinth",
+  "itemGroup.affinity.affinity.button.curseforge": "CurseForge",
+  "itemGroup.affinity.affinity.tab.main": "Affinity",
+  "itemGroup.affinity.affinity.tab.machinery": "Machinery",
+  "itemGroup.affinity.affinity.tab.nature": "Nature",
+  "itemGroup.affinity.affinity.tab.equipment": "Equipment",
+
+  "biome.affinity.wisp_forest": "Wisp Forest",
+
+  "swivel_property.affinity.facing": "Facing",
+  "swivel_property.affinity.feed_direction": "Feed Direction",
+  "swivel_property.affinity.block_half": "Block Half",
+  "swivel_property.affinity.door_hinge": "Hinge Side",
+  "swivel_property.affinity.rotation": "Rotation",
+  "swivel_property.affinity.axis": "Axis",
+
+  "text.affinity.unfinished_item_tooltip": ["", {"text": "⚠", "color": "yellow"}, {"text": " Unfinished", "color": "gray"}],
+
+  "item.affinity.wispen_testament": "The Wispen Testament",
+  "text.affinity.wispen_testament.next_page": "Continued on next page...",
+  "text.affinity.wispen_testament.staff_pedestal_function": {
+    "text": "On Staff Pedestal",
+    "color": "dark_gray"
+  },
+  "structure.affinity.augmented_crafting_table": "Augmented Crafting Table",
+  "structure.affinity.void_beacon": "Void Beacon",
+  "structure.affinity.rudimentary_aspen_infusion": "Rudimentary Aspen Infusion",
+
+  "key.affinity.activate_evade_ring": [
+    {
+      "translate": "text.affinity.prefix"
+    },
+    " Activate Evade Ring"
+  ],
+  "key.affinity.select_staff_from_bundle": [
+    {
+      "translate": "text.affinity.prefix"
+    },
+    " Select Staff from Bundle"
+  ],
+
+  "text.affinity.ethereal_aethum_flux_injector.node_location_tooltip": [
+    {
+      "index": 0
+    },
+    {
+      "text": " in ",
+      "color": "gray"
+    },
+    {
+      "index": 1,
+      "color": "#4D4C7D"
+    }
+  ],
+  "text.affinity.ethereal_aethum_flux_injector.linked_node_tooltip": [
+    "",
+    {
+      "text": "[",
+      "color": "dark_gray"
+    },
+    {
+      "text": "⌘",
+      "color": "#6A67CE"
+    },
+    {
+      "text": "]",
+      "color": "dark_gray"
+    },
+    {
+      "text": " Linked (click to unlink)",
+      "color": "gray"
+    }
+  ],
+  "text.affinity.ethereal_aethum_flux_injector.unlinked_node_tooltip": [
+    "",
+    {
+      "text": "[",
+      "color": "dark_gray"
+    },
+    {
+      "text": "+",
+      "color": "green"
+    },
+    {
+      "text": "]",
+      "color": "dark_gray"
+    },
+    {
+      "text": " Click to link",
+      "color": "gray"
+    }
+  ],
+  "text.affinity.ethereal_aethum_flux_injector.global_nodes": [
+    "",
+    {
+      "text": "u ",
+      "font": "affinity:symbols"
+    },
+    "All public nodes"
+  ],
+  "text.affinity.ethereal_aethum_flux_injector.private_nodes": [
+    "",
+    {
+      "text": "l ",
+      "font": "affinity:symbols"
+    },
+    "My nodes only"
+  ],
+
+  "text.affinity.aethum_flux_consumer": {
+    "translate": "text.affinity.aethum_flux_member_template",
+    "with": [
+      "consumer"
+    ]
+  },
+  "text.affinity.aethum_flux_generator": {
+    "translate": "text.affinity.aethum_flux_member_template",
+    "with": [
+      "generator"
+    ]
+  },
+  "text.affinity.aethum_flux_node": {
+    "translate": "text.affinity.aethum_flux_member_template",
+    "with": [
+      "node"
+    ]
+  },
+  "text.affinity.aethum_flux_storage": {
+    "translate": "text.affinity.aethum_flux_member_template",
+    "with": [
+      "storage"
+    ]
+  },
+  "text.affinity.aethum_flux_member_template": [
+    "",
+    {
+      "text": "a",
+      "font": "affinity:symbols"
+    },
+    {
+      "text": " Flux ",
+      "color": "gray"
+    },
+    {
+      "index": 0,
+      "color": "gray"
+    }
+  ],
+
+  "entity.affinity.wisp": "Wisp",
+  "entity.affinity.asteroid": "Asteroid",
+  "entity.affinity.aethum_missile": "Aethum Missile",
+  "death.attack.aethum_missile": "%s got liquidated by a concentrated Aethum charge",
+  "death.attack.aethum_missile.player": "%s got liquidated by %s's concentrated Aethum charge",
+  "entity.affinity.emancipated_block": "Emancipated Block",
+  "entity.affinity.emancipated_block_state": "Emancipated %s",
+  "item.affinity.wisp_matter": "Wisp Matter",
+  "item.affinity.wisp_mist": "Wisp Mist",
+  "item.affinity.wisp_spawn_egg": "Wisp Spawn Egg",
+  "wispType.affinity.inert": "Inert",
+  "wispType.affinity.wise": "Wise",
+  "wispType.affinity.vicious": "Vicious",
+
+  "category.affinity.assembly": "Assembly",
+  "category.affinity.aspen_infusion": "Aspen Infusion",
+  "category.affinity.spirit_assimilation": "Spirit Assimilation",
+  "category.affinity.potion_mixing": "Potion Mixing",
+  "category.affinity.containing_potions": "Containing Potions",
+  "category.affinity.arcane_fading": "Arcane Fading",
+  "category.affinity.ornament_carving": "Ornament Carving",
+  "category.affinity.socle_composing": "Socle Composing",
+
+  "informationProvider.affinity.block_aethum_flux_storage": "aethum flux storage",
+  "informationProvider.affinity.item_transfer_node_queue": "item transfer node queue",
+  "informationProvider.affinity.brewing_cauldron_mixture": "brewing cauldron mixture",
+
+  "stat.affinity.interact_with_field_coherence_modulator": "Interactions with Field Modulator",
+
+  "block.affinity.brewing_cauldron": "Brewing Cauldron",
+  "block.affinity.sundial": "Sundial",
+  "block.affinity.copper_plated_aethum_flux_node": "Copper Plated Aethum Flux Node",
+  "block.affinity.aethum_flux_cache": "Aethum Flux Cache",
+  "block.affinity.creative_aethum_flux_cache": "Creative Aethum Flux Cache",
+  "block.affinity.stone_banded_aethum_flux_node": "Stone Banded Aethum Flux Node",
+  "block.affinity.arboreal_annihilation_apparatus": "Arboreal Annihilation Apparatus",
+  "block.affinity.peculiar_clump": "Peculiar Clump",
+  "block.affinity.blank_ritual_socle": "Blank Ritual Socle",
+  "block.affinity.rudimentary_ritual_socle": "Rudimentary Ritual Socle",
+  "item.affinity.stone_socle_ornament": "Stone Socle Ornament",
+  "block.affinity.sophisticated_ritual_socle": "Sophisticated Ritual Socle",
+  "item.affinity.prismarine_socle_ornament": "Prismarine Socle Ornament",
+  "block.affinity.refined_ritual_socle": "Refined Ritual Socle",
+  "item.affinity.purpur_socle_ornament": "Purpur Socle Ornament",
+  "block.affinity.asp_rite_core": "Asp Rite Core",
+  "block.affinity.ritual_socle_composer": "Ritual Socle Composer",
+  "block.affinity.affine_infuser": "Affine Infuser",
+  "block.affinity.ranthracite_wire": "Ranthracite Dust",
+  "item.affinity.ranthracite_dust": {
+    "translate": "block.affinity.ranthracite_wire"
+  },
+  "block.affinity.crop_reaper": "Crop Reaper",
+  "block.affinity.affine_candle": "Affine Candle",
+  "block.affinity.world_pin": "World Pin",
+  "block.affinity.sunshine_monolith": "Sunshine Monolith",
+  "block.affinity.arcane_treetap": "Arcane Treetap",
+  "block.affinity.assembly_augment": "Assembly Augment",
+  "block.affinity.mangrove_basket": "Mangrove Basket",
+  "block.affinity.staff_pedestal": "Staff Pedestal",
+  "block.affinity.ouija_board": "Ouija Board",
+  "block.affinity.the_sky": "The Sky",
+  "block.affinity.emerald_block": "Block of Emerald",
+  "block.affinity.arcane_fade": "Arcane Fade",
+  "block.affinity.inversion_stone": "Inversion Stone",
+  "block.affinity.item_transfer_node": "Item Transfer Node",
+  "block.affinity.item_transfer_node.clear_filter_hint": "Click to clear filter",
+  "block.affinity.aethum_probe": "Aethum Probe",
+  "block.affinity.void_beacon": "Void Beacon",
+  "block.affinity.field_coherence_modulator": "Field Coherence Modulator",
+  "block.affinity.infused_stone": "Infused Stone",
+  "block.affinity.matter_harvesting_hearth": "Matter Harvesting Hearth",
+  "block.affinity.graviton_transducer": "Graviton Transducer",
+  "block.affinity.ethereal_aethum_flux_node": "Ethereal Aethum Flux Node",
+  "block.affinity.ethereal_aethum_flux_node.tooltip.visibility_public": "Accessible to everyone",
+  "block.affinity.ethereal_aethum_flux_node.tooltip.visibility_private": "Accessible only to you",
+  "block.affinity.ethereal_aethum_flux_node.tooltip.owned_by_you": "Owned by you",
+  "block.affinity.ethereal_aethum_flux_node.tooltip.owned_by_someone_else": "Owned by someone else",
+  "block.affinity.ethereal_aethum_flux_injector": "Ethereal Aethum Flux Injector",
+  "block.affinity.local_displacement_gateway": "Local Displacement Gateway",
+
+  "block.affinity.villager_armature": "Villager Armature",
+  "block.affinity.villager_armature.option.action": "Action",
+  "block.affinity.villager_armature.action.use": "☞ Use",
+  "block.affinity.villager_armature.action.break": "⛏ Break",
+  "block.affinity.villager_armature.action.attack": "\uD83D\uDDE1 Attack",
+  "block.affinity.villager_armature.option.redstone-mode": "Redstone Mode",
+  "block.affinity.villager_armature.redstone-mode.always_active": "Always Active",
+  "block.affinity.villager_armature.redstone-mode.repeat": "Repeat",
+  "block.affinity.villager_armature.redstone-mode.impulse": "Impulse",
+  "block.affinity.villager_armature.option.sneak": "Sneak",
+  "block.affinity.villager_armature.sneak.yes": "Yes",
+  "block.affinity.villager_armature.sneak.no": "No",
+
+  "block.affinity.spirit_integration_apparatus": "Spirit Integration Apparatus",
+  "block.affinity.spirit_integration_apparatus.tooltip.complete": "Complete",
+  "block.affinity.spirit_integration_apparatus.tooltip.incomplete.singular": [
+    "Missing ",
+    {
+      "index": 0,
+      "color": "blue"
+    },
+    " core"
+  ],
+  "block.affinity.spirit_integration_apparatus.tooltip.incomplete.plural": [
+    "Missing ",
+    {
+      "index": 0,
+      "color": "blue"
+    },
+    " cores"
+  ],
+  "death.attack.ritual_sacrifice": "%s was commited to the Way of the Goat",
+
+  "block.affinity.holographic_stereopticon": "Holographic Stereopticon",
+  "block.affinity.holographic_stereopticon.tooltip_spin": "Spin",
+  "block.affinity.holographic_stereopticon.tooltip_dont_spin": "Don't spin",
+  "block.affinity.holographic_stereopticon.tooltip.assembling": "Assembling...",
+  "block.affinity.holographic_stereopticon.imprint_block_hint": [
+    {
+      "text": "Sneak-use on",
+      "color": "gray"
+    },
+    {
+      "text": " block ",
+      "color": "blue"
+    },
+    "to imprint"
+  ],
+  "block.affinity.holographic_stereopticon.imprint_item_hint": [
+    {
+      "text": "Right-click onto",
+      "color": "gray"
+    },
+    {
+      "text": " item ",
+      "color": "blue"
+    },
+    "to imprint"
+  ],
+  "block.affinity.holographic_stereopticon.imprint_entity_hint": [
+    {
+      "text": "Sneak-use on",
+      "color": "gray"
+    },
+    {
+      "text": " entity ",
+      "color": "blue"
+    },
+    "to imprint"
+  ],
+  "block.affinity.holographic_stereopticon.imprint_section_hint": [
+    {
+      "text": "Sneak-use to imprint",
+      "color": "gray"
+    },
+    {
+      "text": " world section ",
+      "color": "blue"
+    }
+  ],
+  "block.affinity.holographic_stereopticon.cycle_imprint_kind_hint": {
+    "text": "Right-click to cycle imprint kind",
+    "color": "gray"
+  },
+  "block.affinity.holographic_stereopticon.imprinted.section_at": [
+    "Section at ",
+    {
+      "index": 0
+    }
+  ],
+  "block.affinity.holographic_stereopticon.imprinted": [
+    {
+      "text": "Imprinted: ",
+      "color": "gray"
+    },
+    {
+      "index": 0,
+      "color": "dark_gray"
+    }
+  ],
+
+  "block.affinity.azalea_planks": "Azalea Planks",
+  "block.affinity.azalea_log": "Azalea Log",
+  "block.affinity.stripped_azalea_log": "Stripped Azalea Log",
+  "block.affinity.azalea_wood": "Azalea Wood",
+  "block.affinity.stripped_azalea_wood": "Stripped Azalea Wood",
+  "block.affinity.azalea_slab": "Azalea Slab",
+  "block.affinity.azalea_fence": "Azalea Fence",
+  "block.affinity.azalea_stairs": "Azalea Stairs",
+  "block.affinity.azalea_button": "Azalea Button",
+  "block.affinity.azalea_pressure_plate": "Azalea Pressure Plate",
+  "block.affinity.azalea_door": "Azalea Door",
+  "block.affinity.azalea_trapdoor": "Azalea Trapdoor",
+  "block.affinity.azalea_fence_gate": "Azalea Fence Gate",
+  "block.affinity.azalea_sign": "Azalea Sign",
+  "block.affinity.azalea_hanging_sign": "Azalea Hanging Sign",
+  "block.affinity.azalea_chest": "Azalea Chest",
+  "container.affinity.azalea_chest": "Azalea Chest",
+  "container.affinity.azalea_chest_double": "Large Azalea Chest",
+  "item.affinity.azalea_boat": "Azalea Boat",
+  "item.affinity.azalea_chest_boat": "Azalea Boat with Chest",
+
+  "block.affinity.unflowering_azalea_leaves": "Unflowering Azalea Leaves",
+  "block.affinity.budding_azalea_leaves": "Budding Azalea Leaves",
+  "item.affinity.azalea_flowers": "Azalea Flowers",
+  "item.affinity.soup_of_bee": "Soup of Bee",
+
+  "text.affinity.infinite_attack_damage": "Infinite",
+  "item.affinity.forgotten_artifact_blade": "Forgotten Artifact Blade",
+  "item.affinity.stabilized_artifact_blade": "Stabilized Artifact Blade",
+  "item.affinity.strengthened_artifact_blade": "Strengthened Artifact Blade",
+  "item.affinity.superior_artifact_blade": "Superior Artifact Blade",
+  "item.affinity.astral_artifact_blade": "Astral Artifact Blade",
+
+  "item.affinity.emerald_helmet": "Emerald Helmet",
+  "item.affinity.emerald_chestplate": "Emerald Chestplate",
+  "item.affinity.emerald_leggings": "Emerald Leggings",
+  "item.affinity.emerald_boots": "Emerald Boots",
+  "item.affinity.emerald_ingot": "Emerald Ingot",
+  "item.affinity.emerald_nugget": "Emerald Nugget",
+  "attribute.name.generic.affinity.damage_taken": "Damage Taken",
+  "attribute.name.generic.affinity.knockback_susceptibility": "Knockback Susceptibility",
+  "attribute.name.generic.affinity.fall_resistance": "Fall Resistance",
+  "attribute.name.generic.affinity.extra_arrow_damage": "Arrow Damage",
+
+  "item.affinity.emerald_wand_of_iridescence": "Emerald Wand of Iridescence",
+  "item.affinity.sapphire_wand_of_iridescence": "Sapphire Wand of Iridescence",
+  "item.affinity.wand_of_iridescence.mode_suffix": [
+    {
+      "text": " [",
+      "color": "dark_gray"
+    },
+    {
+      "index": 0
+    },
+    "]"
+  ],
+  "item.affinity.wand_of_iridescence.help": {
+    "text": "Sneak-use to cycle modes",
+    "color": "gray"
+  },
+  "item.affinity.wand_of_iridescence.help.template": "⇄ %s",
+  "item.affinity.wand_of_iridescence.retain_mode.disabled": [
+    {
+      "text": "Not Retaining: ",
+      "color": "dark_gray"
+    },
+    {
+      "text": "Right-click to toggle",
+      "color": "gray"
+    }
+  ],
+  "item.affinity.wand_of_iridescence.retain_mode.enabled": [
+    {
+      "text": "Retaining: "
+    },
+    {
+      "text": "Sneak-use to clear",
+      "color": "gray"
+    }
+  ],
+  "item.affinity.wand_of_iridescence.mode.bind": "Bind",
+  "item.affinity.wand_of_iridescence.mode.bind.description": {
+    "text": "Link machines together",
+    "color": "gray"
+  },
+  "item.affinity.wand_of_iridescence.mode.release": "Release",
+  "item.affinity.wand_of_iridescence.mode.release.description": {
+    "text": "Remove links between machines",
+    "color": "gray"
+  },
+
+  "item.affinity.time_staff": "Time Staff",
+  "item.affinity.time_staff": "Time Staff",
+  "item.affinity.time_staff.mode.normal": "Normal (x%s)",
+  "item.affinity.time_staff.mode.fast": "Fast (x%s)",
+  "item.affinity.time_staff.mode.ludicrous": "Ludicrous (x%s)",
+  "item.affinity.time_staff.tooltip": [
+    {
+      "text": "☄ ",
+      "color": "#c624ed"
+    },
+    {
+      "index": 0,
+      "color": "gray"
+    }
+  ],
+
+  "item.affinity.wand_of_inquiry": "Wand of Inquiry",
+  "item.affinity.geological_resonator": "Geological Resonator",
+  "item.affinity.collection_staff": "Collection Staff",
+  "item.affinity.kinesis_staff": "Kinesis Staff",
+  "item.affinity.astrokinesis_staff": "Astrokinesis Staff",
+  "item.affinity.cultivation_staff": "Cultivation Staff",
+  "item.affinity.cultivation_staff.super_foraging_mode": "Super Foraging Mode™",
+  "item.affinity.salvo_staff": "Salvo Staff",
+  "item.affinity.swivel_staff": "Swivel Staff",
+  "item.affinity.swivel_staff.tooltip.consumption_per_spin": [
+    {
+      "index": 0,
+      "color": "#4D4C7D"
+    },
+    {
+      "text": " aethum to spin an entity",
+      "color": "gray"
+    }
+  ],
+  "item.affinity.nimble_staff": "Nimble Staff",
+  "item.affinity.nimble_staff.direction.north": "North",
+  "item.affinity.nimble_staff.direction.south": "South",
+  "item.affinity.nimble_staff.direction.east": "East",
+  "item.affinity.nimble_staff.direction.west": "West",
+  "item.affinity.aethum_flux_bottle": "Bottle of Aethum Flux",
+  "item.affinity.bare_resplendent_gem": "Bare Resplendent Gem",
+  "item.affinity.resplendent_gem": "Resplendent Gem",
+  "item.affinity.resonance_crystal": "Resonance Crystal",
+  "item.affinity.unfired_clay_cup": "Unfired Clay Cup",
+  "item.affinity.clay_cup": "Clay Cup",
+  "item.affinity.affinitea": "Affinitea",
+  "item.affinity.milk_cup": "Milk Cup",
+  "item.affinity.satiating_potion": "Satiating Potion",
+  "item.affinity.dragon_drop": "Dragon Drop",
+  "item.affinity.blackstone_prism": "Blackstone Prism",
+  "item.affinity.synthetic_dragon_heart": "Synthetic Dragon Heart",
+  "item.affinity.arcane_fade_bucket": "Bucket of Arcane Fade",
+  "item.affinity.aethum_overcharger": "Aethum Overcharger",
+  "item.affinity.archetypal_iron_ring": "Archetypal Iron Ring",
+  "item.affinity.featherweight_ring": "Featherweight Ring",
+  "item.affinity.evade_ring": "Evade Ring",
+  "item.affinity.evade_ring.tooltip.consumption_per_use": [
+    {
+      "index": 0,
+      "color": "#4D4C7D"
+    },
+    {
+      "text": " aethum per use",
+      "color": "gray"
+    }
+  ],
+  "item.affinity.evade_ring.tooltip.take_control": [
+    {
+      "text": "▼ ",
+      "color": "#690926"
+    },
+    {
+      "text": "Take Control",
+      "color": "gray"
+    }
+  ],
+  "item.affinity.lavaliere_of_safe_keeping": "Lavaliere of Safekeeping",
+  "item.affinity.assassins_quiver": "Assassin's Quiver",
+  "item.affinity.aethum_fire_extinguisher": "Aethum Fire Extinguisher",
+  "item.affinity.budding_experience_crystal": "Budding Experience Crystal",
+  "item.affinity.crystallized_experience": "Crystallized Experience",
+  "item.affinity.uncanny_rod": "Uncanny Rod",
+  "item.affinity.staff_prototype": "Staff Prototype",
+  "item.affinity.misty_potion": {
+    "text": "Misty Potion",
+    "italic": false
+  },
+  "item.affinity.potion_of_infinite_prowess": {
+    "text": "Potion of Infinite Prowess",
+    "italic": false,
+    "color": "dark_red"
+  },
+
+  "item.affinity.resounding_chime": "Resounding Chime",
+  "item.affinity.azalea_bow": "Azalea Bow",
+  "item.affinity.azalea_bow.tooltip.consumption_per_shot": [
+    {
+      "index": 0,
+      "color": "#4D4C7D"
+    },
+    {
+      "text": " aethum per shot",
+      "color": "gray"
+    }
+  ],
+  "death.attack.resonating": "%s was late to class",
+  "death.attack.resonating.player": "%s was late to class because they were chatting with %s",
+
+  "item.affinity.staff.mode_template": [
+    {
+      "text": " [",
+      "color": "dark_gray"
+    },
+    {
+      "index": 0,
+      "color": "gray"
+    },
+    "]"
+  ],
+  "item.affinity.staff.tooltip.consumption_per_use": [
+    {
+      "index": 0,
+      "color": "#4D4C7D"
+    },
+    {
+      "text": " aethum per use",
+      "color": "gray"
+    }
+  ],
+  "item.affinity.staff.tooltip.consumption_per_second": [
+    {
+      "index": 0,
+      "color": "#4D4C7D"
+    },
+    {
+      "text": " aethum per second",
+      "color": "gray"
+    }
+  ],
+  "item.affinity.staff.tooltip.cycle_mode_hint": [
+    {
+      "text": "⇄",
+      "color": "#4D4C7D"
+    },
+    {
+      "text": " Sneak-use to cycle modes",
+      "color": "gray"
+    }
+  ],
+
+  "item.affinity.kinesis_staff.tooltip.consumption_per_throw": [
+    {
+      "index": 0,
+      "color": "#4D4C7D"
+    },
+    {
+      "text": " aethum per throw",
+      "color": "gray"
+    }
+  ],
+  "item.affinity.astrokinesis_staff.tooltip.consumption_per_throw": [
+    {
+      "index": 0,
+      "color": "#4D4C7D"
+    },
+    {
+      "text": " aethum to throw an asteroid",
+      "color": "gray"
+    }
+  ],
+  "item.affinity.salvo_staff.tooltip.consumption_per_missile": [
+    {
+      "index": 0,
+      "color": "#4D4C7D"
+    },
+    {
+      "text": " aethum per missile",
+      "color": "gray"
+    }
+  ],
+
+  "text.affinity.attuned_shard_range": [
+    {
+      "text": "Range: ",
+      "color": "gray"
+    },
+    {
+      "index": 0,
+      "color": "#4D4C7D"
+    },
+    {
+      "text": " blocks",
+      "color": "#4D4C7D"
+    }
+  ],
+  "text.affinity.attuned_shard_max_transfer": [
+    {
+      "text": "Rate: ",
+      "color": "gray"
+    },
+    {
+      "index": 0,
+      "color": "#4D4C7D"
+    },
+    {
+      "text": " af/s",
+      "color": "#4D4C7D"
+    }
+  ],
+  "text.affinity.echo_shard_location": "Bound to %s in %s",
+  "item.affinity.mildly_attuned_amethyst_shard": "Mildly Attuned Amethyst Shard",
+  "item.affinity.fairly_attuned_amethyst_shard": "Fairly Attuned Amethyst Shard",
+  "item.affinity.greatly_attuned_amethyst_shard": "Greatly Attuned Amethyst Shard",
+  "item.affinity.sculk_resonant_ethereal_amethyst_shard": "Sculk-Resonant Ethereal Amethyst Shard",
+  "item.affinity.void_resonant_ethereal_amethyst_shard": "Void-Resonant Ethereal Amethyst Shard",
+  "item.affinity.phantom_bundle": "Phantom Bundle",
+
+  "item.affinity.villager_arms": "Villager Arms",
+  "item.affinity.villager_arms.with_profession": "%s Arms",
+  "item.affinity.villager_arms.with_profession.with_level": "%2$s %1$s Arms",
+
+  "item.affinity.anthracite_powder": "Anthracite Powder",
+  "item.affinity.carbon_copy.empty": "Carbon Copy of ... Nothing?",
+  "item.affinity.carbon_copy": [
+    "Carbon Copy of ",
+    {
+      "index": 0,
+      "color": "gray"
+    },
+    {
+      "text": "x ",
+      "color": "dark_gray"
+    },
+    {
+      "index": 1,
+      "color": "gray"
+    }
+  ],
+  "item.affinity.scintillant_anthracite_blend": "Scintillant Anthracite Blend",
+  "item.affinity.crystalline_wisp_matter_composite": "Crystalline Wisp Matter Composite",
+  "item.affinity.aethum_map_prototype": "Aethum Map Prototype",
+  "item.affinity.realized_aethum_map": "Realized Aethum Map",
+  "item.affinity.realized_aethum_map.tooltip.locked": {
+    "text": "Locked",
+    "color": "gray"
+  },
+  "item.affinity.realized_aethum_map.tooltip.unlocked": {
+    "text": "Unlocked",
+    "color": "gray"
+  },
+
+  "enchantment.affinity.curse_of_illiteracy": "Curse of Illiteracy",
+  "enchantment.affinity.curse_of_illiteracy.desc": [
+    {
+      "text": "honestly strange that this is now readable",
+      "obfuscated": true
+    }
+  ],
+  "enchantment.affinity.curse_of_health": "Curse of Health",
+  "enchantment.affinity.curse_of_health.desc": "Increases your health when put on. Taking off is not recommended",
+  "enchantment.affinity.affine": "Affine",
+  "enchantment.affinity.affine.desc": "Repairs items on the ground, in your hand or in Item Frames when in range of an Affine Infuser",
+  "enchantment.affinity.ender_scourge": "Ender Scourge",
+  "enchantment.affinity.ender_scourge.desc": "Increased damage to creatures from the End",
+  "text.affinity.absolute_enchantment_prefix": [
+    {
+      "text": "Absolute",
+      "color": "#541690"
+    },
+    {
+      "text": " | ",
+      "color": "gray"
+    }
+  ],
+  "enchantment.affinity.berserker": "Berserker",
+  "enchantment.affinity.berserker.desc": [
+    {
+      "translate": "text.affinity.absolute_enchantment_prefix"
+    },
+    {
+      "text": "Increased maximum health and higher attack damage the lower your health"
+    }
+  ],
+  "enchantment.affinity.gravecaller": "Gravecaller",
+  "enchantment.affinity.gravecaller.desc": [
+    {
+      "translate": "text.affinity.absolute_enchantment_prefix"
+    },
+    {
+      "text": "Your armor conjures undead minions and subdues other undead in range"
+    }
+  ],
+  "enchantment.affinity.bastion": "Bastion",
+  "enchantment.affinity.bastion.desc": [
+    {
+      "translate": "text.affinity.absolute_enchantment_prefix"
+    },
+    {
+      "text": "Extreme, health-based regeneration at the cost of halving your damage output"
+    }
+  ],
+  "enchantment.affinity.wounding": "Wounding",
+  "enchantment.affinity.wounding.desc": "Increased critical hit damage",
+  "enchantment.affinity.critical_gamble": "Critical Gamble",
+  "enchantment.affinity.critical_gamble.desc": "Chance to instantly kill foes when performing a critical hit, at the cost of no increase in damage otherwise",
+  "enchantment.affinity.execute": "Execute",
+  "enchantment.affinity.execute.desc": "Execute targets that would just have clung onto life otherwise",
+  "enchantment.affinity.prosecute": "Prosecute",
+  "enchantment.affinity.prosecute.desc": "Increased damage to enemies that are at full health",
+  "enchantment.affinity.updog": "Updog",
+  "enchantment.affinity.updog.desc": "Increased damage to opponents with much more health than you",
+
+  "message.affinity.linking.already_linked": "%s is already linked",
+  "message.affinity.linking.not_linked": "%s is not linked",
+  "message.affinity.linking.no_target": "Invalid link target",
+  "message.affinity.linking.out_of_range": "%s is out of range",
+  "message.affinity.linking.too_many_links": "This node cannot carry any more links",
+  "message.affinity.linking.failed": "Could not link to %s",
+
+  "attribute.name.player.affinity.max_aethum": "Maximum Aethum",
+  "attribute.name.player.affinity.natural_aethum_regen_speed": "Aethum Regeneration",
+  "death.attack.aethum_drain": [
+    {
+      "index": 0,
+      "hoverEvent": {
+        "action": "show_text",
+        "contents": "Pretty careless"
+      }
+    },
+    " ran out of juice"
+  ],
+
+  "text.affinity.tooltip.aethum_storage": "Flux: %d/%d",
+  "text.affinity.tooltip.creative_flux_cache_flux_level": "All of it, really",
+
+  "death.attack.asteroid": "%s was expunged by an Asteroid",
+  "death.attack.asteroid.player": "%s was expunged by %s's Asteroid",
+  "death.attack.artifact_blade.player": "%s was pierced by %s's Artifact Blade",
+  "death.attack.artifact_blade.item": "%s was pierced by %s's %s",
+  "death.attack.sawblade": "%s was slice'n'diced",
+  "death.attack.sawblade.player": "%s was slice'n'diced whilst trying to escape %s",
+
+  "gui.affinity.augmented_crafting_table.title": "Augmented Crafting Table",
+
+  "gui.affinity.flux_network_visualizer.network_statistics": "Network statistics",
+  "gui.affinity.flux_network_visualizer.member_count": [
+    "Member count: ",
+    {
+      "index": 0,
+      "color": "blue"
+    }
+  ],
+  "gui.affinity.flux_network_visualizer.node_count": [
+    "Node count: ",
+    {
+      "index": 0,
+      "color": "blue"
+    }
+  ],
+  "gui.affinity.flux_network_visualizer.flux_capacity": [
+    "Flux capacity: ",
+    {
+      "index": 0,
+      "color": "blue"
+    }
+  ],
+  "gui.affinity.flux_network_visualizer.total_flux": [
+    "Total flux: ",
+    {
+      "index": 0,
+      "color": "blue"
+    }
+  ],
+  "gui.affinity.flux_network_visualizer.rotate_hint": [
+    "Mouse 1 to ",
+    {
+      "text": "rotate",
+      "color": "yellow"
+    }
+  ],
+  "gui.affinity.flux_network_visualizer.move_hint": [
+    "Mouse 2 to ",
+    {
+      "text": "move",
+      "color": "yellow"
+    }
+  ],
+  "gui.affinity.flux_network_visualizer.reset_hint": [
+    "Double-click to ",
+    {
+      "text": "reset",
+      "color": "yellow"
+    }
+  ],
+  "gui.affinity.flux_network_visualizer.hover_hint": [
+    "Hover to ",
+    {
+      "text": "view information",
+      "color": "yellow"
+    }
+  ],
+
+  "gui.affinity.villager_armature.rotate_hint": [
+    "Mouse 1 to ",
+    {
+      "text": "rotate",
+      "color": "yellow"
+    }
+  ],
+  "gui.affinity.villager_armature.click_hint": [
+    "Mouse 2 to ",
+    {
+      "text": "set target",
+      "color": "yellow"
+    }
+  ],
+  "gui.affinity.villager_armature.reset_hint": [
+    "Double-click to ",
+    {
+      "text": "reset",
+      "color": "yellow"
+    }
+  ],
+
+  "advancement.affinity.root.title": "Affinity",
+  "advancement.affinity.root.description": "Tomfoolery awaits",
+  "advancement.affinity.so_tell_me_whats_your_intention.title": "So Tell Me, What's Your Intention?",
+  "advancement.affinity.so_tell_me_whats_your_intention.description": "Equip an item enchanted with Curse of Illiteracy",
+  "advancement.affinity.drag_and_drop.title": "Drag'n'Drop",
+  "advancement.affinity.drag_and_drop.description": "Obtain the Dragon Drop",
+  "advancement.affinity.some_assembly_required.title": "Some Assembly Required",
+  "advancement.affinity.some_assembly_required.description": "Augment a Crafting Table",
+  "advancement.affinity.this_resource_matters.title": "This Resource Matters",
+  "advancement.affinity.this_resource_matters.description": "Obtain your first piece of Wisp Matter",
+  "advancement.affinity.a_resounding_success.title": "A Resounding Success",
+  "advancement.affinity.a_resounding_success.description": "Construct a Resounding Chime",
+  "advancement.affinity.resistance_is_futile.title": "Resistance is Futile",
+  "advancement.affinity.resistance_is_futile.description": "Prepare a Spirit Assimilation ritual",
+  "advancement.affinity.rock_and_stone.title": "Rock and Stone",
+  "advancement.affinity.rock_and_stone.description": "You successfully mined your first Peculiar Clump. Let's bring it home, team.",
+  "advancement.affinity.i_still_use_paint.title": "I Still use Paint",
+  "advancement.affinity.i_still_use_paint.description": "Craft an Asp Rite Core",
+  "advancement.affinity.isnt_it_iron_sword.title": "Isn't It Iron... Sword?",
+  "advancement.affinity.isnt_it_iron_sword.description": "Construct your Artifact Blade",
+  "advancement.affinity.unbreakable.title": "Unbreakable",
+  "advancement.affinity.unbreakable.description": "Stabilize your Artifact Blade",
+  "advancement.affinity.slayer_of_titans.title": "Slayer Of Titans",
+  "advancement.affinity.slayer_of_titans.description": "Strengthen your Artifact Blade using energies from Hell",
+  "advancement.affinity.everything_is_yours.title": "Everything Is Yours",
+  "advancement.affinity.everything_is_yours.description": "Fuse your Artifact Blade with the heart of a dragon. Artemis would have liked this",
+  "advancement.affinity.sup_b.title": "sup(B)",
+  "advancement.affinity.sup_b.description": "The supremum (abbreviated sup; plural suprema) of a subset S of a partially ordered set P is the least element in P that is greater than or equal to each element of S, if such an element exists",
+  "advancement.affinity.big_girl_decisions.title": "Big Girl Decisions",
+  "advancement.affinity.big_girl_decisions.description": "Specialize your first Staff Prototype",
+  "advancement.affinity.intermix_chamber.title": "Intermix Chamber",
+  "advancement.affinity.intermix_chamber.description": "Infuse a Brewing Cauldron",
+  "advancement.affinity.you_cheated.title": "You Cheated",
+  "advancement.affinity.you_cheated.description": "Obtain a creative-only item",
+  "advancement.affinity.its_a_fidget_cube.title": "It's a Fidget Cube",
+  "advancement.affinity.its_a_fidget_cube.description": "I'm sure that won't cause RSI",
+  "advancement.affinity.a_severe_and_continuous_lapse_in_your_judgement.title": "A Severe and Continuous Lapse in your Judgement",
+  "advancement.affinity.a_severe_and_continuous_lapse_in_your_judgement.description": "Put on a helmet enchanted with both Curse of Illiteracy and Curse of Binding",
+  "advancement.affinity.living_is_wise_if_you_never_ever_think_twice.title": "Living Is Wise, If You Never Ever Think Twice",
+  "advancement.affinity.living_is_wise_if_you_never_ever_think_twice.description": "Find an Item enchanted with Curse of Health",
+  "advancement.affinity.how_many_hours_do_we_fly.title": "How Many Hours Do We Fly?",
+  "advancement.affinity.how_many_hours_do_we_fly.description": "Brew up an extended Potion of Paragravity",
+  "advancement.affinity.nice_try.title": "Nice Try",
+  "advancement.affinity.nice_try.description": "Perform an Artifact Blade Smash after falling more than 100 blocks",
+  "advancement.affinity.return_to_sender_2.title": "Return to Sender 2",
+  "advancement.affinity.return_to_sender_2.description": "Hit a Shulker with its own Bullet",
+  "advancement.affinity.cache_invalidation.title": "Cache Invalidation",
+  "advancement.affinity.cache_invalidation.description": "Break an Aethum Flux Cache that's filled at least 50%",
+  "advancement.affinity.when_pigs_fly.title": "When Pigs Fly",
+  "advancement.affinity.when_pigs_fly.description": "Fly on a Pig",
+  "advancement.affinity.you_re_doomed.title": "You're Doomed",
+  "advancement.affinity.you_re_doomed.description": "Use an Aethum Overcharger to cheat death and turn divine - temporarily",
+  "advancement.affinity.when_the_world_is_calling_you.title": "When the World is Calling You",
+  "advancement.affinity.when_the_world_is_calling_you.description": "Sacrifice yourself to a ritual",
+  "advancement.affinity.gamedesign.title": "Gamedesign!",
+  "advancement.affinity.gamedesign.description": "64 nuggets in a block",
+  "advancement.affinity.pure_shot_of_poison_to_my_heart.title": "Pure Shot Of Poison To My Heart",
+  "advancement.affinity.pure_shot_of_poison_to_my_heart.description": "Sacrifice a tamed animal to a ritual",
+  "advancement.affinity.verfluxt_und_zugenaeht.title": "Verfluxt und Zugenäht",
+  "advancement.affinity.verfluxt_und_zugenaeht.description": "Witness a ritual failure",
+  "advancement.affinity.from_two_hundred_cycles_to_one.title": "From 200 Cycles to 1",
+  "advancement.affinity.from_two_hundred_cycles_to_one.description": "Add a Cache to your Aethum Flux network",
+  "advancement.affinity.opening_the_fluxgates.title": "Opening The Fluxgates",
+  "advancement.affinity.opening_the_fluxgates.description": "Place your first Aethum Flux generator",
+  "advancement.affinity.the_sky_suit.title": "The Sky Suit!",
+
+  "text.affinity.prefix": [
+    "",
+    {
+      "text": "[",
+      "color": "gray"
+    },
+    {
+      "text": "A",
+      "color": "#0096ff"
+    },
+    {
+      "text": "f",
+      "color": "#009fff"
+    },
+    {
+      "text": "f",
+      "color": "#00a8ff"
+    },
+    {
+      "text": "i",
+      "color": "#00b1ff"
+    },
+    {
+      "text": "n",
+      "color": "#00bbff"
+    },
+    {
+      "text": "i",
+      "color": "#00c4ff"
+    },
+    {
+      "text": "t",
+      "color": "#00cdff"
+    },
+    {
+      "text": "y",
+      "color": "#00d7ff"
+    },
+    {
+      "text": "]",
+      "color": "gray"
+    }
+  ],
+  "text.config.affinity.title": [
+    {
+      "translate": "text.affinity.prefix"
+    },
+    " Configuration"
+  ],
+  "text.config.affinity.option.renderEntitiesInStereopticonSectionImprints": "Show entities",
+  "text.config.affinity.option.renderBlockEntitiesInStereopticonSectionImprints": "Show block entities",
+  "text.config.affinity.option.affineInfuserCostPerDurabilityPoint": "Flux cost per durability point repaired",
+  "text.config.affinity.option.maxFluxNodeShards": "Maximum outer shards per Flux Node",
+  "text.config.affinity.section.experimental": {
+    "text": "Experimental",
+    "color": "red"
+  },
+  "text.config.affinity.option.stereopticonSectionImprintRecursionLimit": "Recursion limit",
+  "text.config.affinity.option.stereopticonSectionImprintRecursionLimit.tooltip": "How many times a stereopticon's section may be rendered\nwhen nested inside another stereopticon's section",
+  "text.config.affinity.option.theSkyIrisIntegration": "Integrate The Sky with Iris shaders",
+  "text.config.affinity.option.unfinishedFeatures": "Unfinished features",
+
+  "effect.affinity.dripping": "Dripping",
+  "effect.affinity.dripping.desc": "Got that drip",
+  "effect.affinity.bastion_regeneration": "Bastion",
+  "effect.affinity.bastion_regeneration.desc": "Extremely fast regeneration when low on health",
+  "effect.affinity.affine": "Affine",
+  "effect.affinity.affine.desc": "Heals the affected when in range of an active Affine Infuser",
+  "effect.affinity.resonant": "Resonant",
+  "effect.affinity.resonant.desc": "dingggggggggg",
+
+  "effect.affinity.life_leech": "Life Leech",
+  "effect.affinity.life_leech.desc": "Heals the affected when attacking",
+  "item.minecraft.potion.effect.life_leech": "Potion of Life Leech",
+  "item.minecraft.splash_potion.effect.life_leech": "Splash Potion of Life Leech",
+  "item.minecraft.lingering_potion.effect.life_leech": "Lingering Potion of Life Leech",
+  "item.minecraft.tipped_arrow.effect.life_leech": "Arrow of Life Leech",
+
+  "effect.affinity.cat_anxiety": "Cat Anxiety",
+  "effect.affinity.cat_anxiety.desc": "Aw man",
+  "item.minecraft.potion.effect.cat_anxiety": "Potion of Cat Anxiety",
+  "item.minecraft.splash_potion.effect.cat_anxiety": "Splash Potion of Cat Anxiety",
+  "item.minecraft.lingering_potion.effect.cat_anxiety": "Lingering Potion of Cat Anxiety",
+  "item.minecraft.tipped_arrow.effect.cat_anxiety": "Arrow of Cat Anxiety",
+
+  "effect.affinity.steadfast": "Steadfast",
+  "effect.affinity.steadfast.desc": "Temporary Knockback Resistance",
+  "item.minecraft.potion.effect.steadfast": "Potion of Knockback Resistance",
+  "item.minecraft.splash_potion.effect.steadfast": "Splash Potion of Knockback Resistance",
+  "item.minecraft.lingering_potion.effect.steadfast": "Lingering Potion of Knockback Resistance",
+  "item.minecraft.tipped_arrow.effect.steadfast": "Arrow of Knockback Resistance",
+
+  "effect.affinity.flight": "Flight",
+  "effect.affinity.flight.desc": "Fragile creative-mode like flight",
+  "effect.affinity.gravity_modifier": "-9.81 Gravity",
+  "item.minecraft.potion.effect.flight": "Potion of Paragravity",
+  "item.minecraft.splash_potion.effect.flight": "Splash Potion of Paragravity",
+  "item.minecraft.lingering_potion.effect.flight": "Lingering Potion of Paragravity",
+  "item.minecraft.tipped_arrow.effect.flight": "Arrow of Paragravity",
+
+  "effect.affinity.freezing": "Freezing",
+  "effect.affinity.freezing.desc": "Winter is coming",
+  "item.minecraft.potion.effect.freezing": "Potion of Winter",
+  "item.minecraft.splash_potion.effect.freezing": "Splash Potion of Winter",
+  "item.minecraft.lingering_potion.effect.freezing": "Lingering Potion of Winter",
+  "item.minecraft.tipped_arrow.effect.freezing": "Arrow of Winter",
+
+  "effect.affinity.impending_doom": "Impending Doom",
+  "effect.affinity.impending_doom.desc": "They knew he would come, as he always had, as he always will, to feast on the blood of the wicked",
+  "item.minecraft.potion.effect.impending_doom": "Potion of Doom",
+  "item.minecraft.splash_potion.effect.impending_doom": "Splash Potion of Doom",
+  "item.minecraft.lingering_potion.effect.impending_doom": "Lingering Potion of Doom",
+  "item.minecraft.tipped_arrow.effect.impending_doom": "Arrow of Doom",
+  "death.attack.doom_potion": "%1$s got ripped and torn",
+  "death.attack.threw_doom_potion": "%1$s discovered a very powerful mechanic that sadly had to be disabled",
+
+  "effect.affinity.banished": "Banished",
+  "effect.affinity.banished.desc": "Temporary teleportation that ends when the effect runs out",
+  "item.minecraft.potion.effect.banished": "Potion of Banishment",
+  "item.minecraft.splash_potion.effect.banished": "Splash Potion of Banishment",
+  "item.minecraft.lingering_potion.effect.banished": "Lingering Potion of Banishment",
+  "item.minecraft.tipped_arrow.effect.banished": "Arrow of Banishment",
+
+  "effect.affinity.unholy": "Unholy",
+  "effect.affinity.unholy.desc": "The affected becomes vulnerable to the Smite enchantment",
+  "item.minecraft.potion.effect.unholy": "Unholy Water",
+  "item.minecraft.splash_potion.effect.unholy": "Splash Unholy Water",
+  "item.minecraft.lingering_potion.effect.unholy": "Lingering Unholy Water",
+  "item.minecraft.tipped_arrow.effect.unholy": "Unholy Arrow",
+
+  "item.minecraft.potion.effect.dubious": "Dubious Potion",
+  "item.minecraft.splash_potion.effect.dubious": "Twhicc Splashy Potion",
+  "item.minecraft.lingering_potion.effect.dubious": "Twhicc Goes-Everyhwere Potion",
+  "item.minecraft.tipped_arrow.effect.dubious": "Dubious Arrow",
+
+  "item.minecraft.potion.effect.resistance": "Potion of Resilience",
+  "item.minecraft.splash_potion.effect.resistance": "Splash Potion of Resilience",
+  "item.minecraft.lingering_potion.effect.resistance": "Lingering Potion of Resilience",
+  "item.minecraft.tipped_arrow.effect.resistance": "Arrow of Resilience",
+
+  "item.minecraft.potion.effect.glowing": "Potion of Incandescence",
+  "item.minecraft.splash_potion.effect.glowing": "Splash Potion of Incandescence",
+  "item.minecraft.lingering_potion.effect.glowing": "Lingering Potion of Incandescence",
+  "item.minecraft.tipped_arrow.effect.glowing": "Arrow of Incandescence",
+
+  "item.minecraft.potion.effect.blindness": "Potion of Sightlessness",
+  "item.minecraft.splash_potion.effect.blindness": "Splash Potion of Sightlessness",
+  "item.minecraft.lingering_potion.effect.blindness": "Lingering Potion of Sightlessness",
+  "item.minecraft.tipped_arrow.effect.blindness": "Arrow of Sightlessness",
+
+  "item.minecraft.potion.effect.wither": "Potion of Decay",
+  "item.minecraft.splash_potion.effect.wither": "Splash Potion of Decay",
+  "item.minecraft.lingering_potion.effect.wither": "Lingering Potion of Decay",
+  "item.minecraft.tipped_arrow.effect.wither": "Arrow of Decay",
+
+  "item.minecraft.potion.effect.hunger": "Potion of Enervation",
+  "item.minecraft.splash_potion.effect.hunger": "Splash Potion of Enervation",
+  "item.minecraft.lingering_potion.effect.hunger": "Lingering Potion of Enervation",
+  "item.minecraft.tipped_arrow.effect.hunger": "Arrow of Enervation",
+
+  "dimension.minecraft.overworld": "The Overworld",
+  "dimension.minecraft.the_nether": "The Nether",
+  "dimension.minecraft.the_end": "The End",
+
+  "villagerType.minecraft.desert": "Desert",
+  "villagerType.minecraft.jungle": "Jungle",
+  "villagerType.minecraft.plains": "Plains",
+  "villagerType.minecraft.savanna": "Savanna",
+  "villagerType.minecraft.snow": "Snow",
+  "villagerType.minecraft.swamp": "Swamp",
+  "villagerType.minecraft.taiga": "Taiga"
+}

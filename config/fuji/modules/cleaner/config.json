@@ -1,0 +1,39 @@
+{
+  "cron": "0 * * ? * * *",
+  "ignore": {
+    "ignore_item_entity": false,
+    "ignore_living_entity": true,
+    "ignore_named_entity": true,
+    "ignore_entity_with_vehicle": true,
+    "ignore_entity_with_passengers": true,
+    "ignore_glowing_entity": true,
+    "ignore_leashed_entity": true
+  },
+  "matchers": [
+    {
+      "enable": true,
+      "translatable_key": "block.minecraft.sand",
+      "lives_longer_than_age": 1200,
+      "cleanup_method": "DISCARD"
+    },
+    {
+      "enable": true,
+      "translatable_key": "item.minecraft.ender_pearl",
+      "lives_longer_than_age": 1200,
+      "cleanup_method": "DISCARD"
+    },
+    {
+      "enable": true,
+      "translatable_key": "block.minecraft.white_carpet",
+      "lives_longer_than_age": 1200,
+      "cleanup_method": "DISCARD"
+    },
+    {
+      "enable": true,
+      "translatable_key": "block.minecraft.cobblestone",
+      "lives_longer_than_age": 1200,
+      "cleanup_method": "DISCARD"
+    }
+  ],
+  "MOD_VERSION": "14.9.2"
+}

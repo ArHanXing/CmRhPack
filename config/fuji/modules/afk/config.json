@@ -1,0 +1,16 @@
+{
+  "afk_display_name_format": "<gray>[AFK] %player:displayname_visual%",
+  "afk_checker": {
+    "cron": "0 0/5 * ? * *"
+  },
+  "afk_event": {
+    "on_enter_afk_commands": [
+      "send-broadcast <gold>Player %player:name% is now afk"
+    ],
+    "on_leave_afk_commands": [
+      "send-broadcast <gold>Player %player:name% is no longer afk",
+      "effect give %player:name% minecraft:absorption 5 4"
+    ]
+  },
+  "MOD_VERSION": "14.9.2"
+}

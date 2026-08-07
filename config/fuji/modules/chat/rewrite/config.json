@@ -1,0 +1,26 @@
+{
+  "rewrite": {
+    "regex": [
+      {
+        "regex": "(?<=^|\\s)item(?=\\s|$)",
+        "replacement": "[item]"
+      },
+      {
+        "regex": "(?<=^|\\s)inv(?=\\s|$)",
+        "replacement": "[inv]"
+      },
+      {
+        "regex": "(?<=^|\\s)ender(?=\\s|$)",
+        "replacement": "[ender]"
+      },
+      {
+        "regex": "((https?)://[^\\s/$.?#].\\S*)",
+        "replacement": "<underline><blue><hover:show_text:'$1'><click:open_url:'$1'>$1</click></hover></blue></underline>"
+      },
+      {
+        "regex": "^BV(\\w{10})",
+        "replacement": "<underline><blue><hover:show_text:'$1'><click:open_url:'https://www.bilibili.com/video/BV$1'>bilibili $1</click></hover></blue></underline>"
+      }
+    ]
+  }
+}

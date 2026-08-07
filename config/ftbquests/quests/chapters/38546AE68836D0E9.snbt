@@ -1,0 +1,552 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "38546AE68836D0E9"
+	group: "31D997DA5FF8E05D"
+	id: "38546AE68836D0E9"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["78D244C0BD67EBFC"]
+			id: "40A698C4D55D8668"
+			tasks: [
+				{
+					id: "2480D7C55B5F48D7"
+					item: { components: { "techreborn:fluid": "oritech:still_oil" }, count: 1, id: "techreborn:cell" }
+					match_components: "strict"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "202328F2AD8598DB"
+					item: { components: { "techreborn:fluid": "techreborn:oil" }, count: 1, id: "techreborn:cell" }
+					match_components: "strict"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["40A698C4D55D8668"]
+			id: "79A2E147283EF347"
+			tasks: [{
+				id: "1743648D91F78042"
+				item: { components: { "techreborn:fluid": "jsonreg:desalted_crude" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["79A2E147283EF347"]
+			icon_scale: 1.5d
+			id: "42E203F6AFEDD132"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "4BF9079E541E2E0F"
+				item: { components: { "techreborn:fluid": "oritech:still_naphtha" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["79A2E147283EF347"]
+			id: "2745FFF82445034D"
+			tasks: [{
+				id: "41367BAC02D87781"
+				item: { components: { "techreborn:fluid": "jsonreg:heavy_diesel" }, count: 1, id: "techreborn:cell" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["79A2E147283EF347"]
+			id: "7C4958C45C488795"
+			tasks: [{
+				id: "5560E2AEBDD2A5A4"
+				item: { components: { "techreborn:fluid": "jsonreg:atmospheric_residue" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["42E203F6AFEDD132"]
+			id: "1428B5227E4BC37D"
+			tasks: [{
+				id: "3D808ACEC9A15A47"
+				item: { components: { "techreborn:fluid": "jsonreg:pyrolysis_gas_mix" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1428B5227E4BC37D"]
+			id: "19FB1A6965908809"
+			tasks: [{
+				id: "2310A3A09DB009CE"
+				item: { components: { "techreborn:fluid": "jsonreg:pyrolysis_gasoline" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 8.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1428B5227E4BC37D"]
+			id: "77D699357961FFE8"
+			tasks: [{
+				id: "2E6501D531345CA2"
+				item: { components: { "techreborn:fluid": "jsonreg:pyrolysis_dry_gas" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["77D699357961FFE8"]
+			id: "23E82055106F9391"
+			tasks: [{
+				id: "445DA0EB2350CC95"
+				item: { components: { "techreborn:fluid": "jsonreg:ethylene" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["77D699357961FFE8"]
+			id: "698B4A8348B194CB"
+			tasks: [{
+				id: "2E980844BCC293B5"
+				item: { components: { "techreborn:fluid": "jsonreg:propylene" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["77D699357961FFE8"]
+			id: "5433CFF8D40149C8"
+			tasks: [{
+				id: "028F6AFA286A40D8"
+				item: { components: { "techreborn:fluid": "jsonreg:butadiene" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["23E82055106F9391"]
+			id: "0518AD89AAEE82A3"
+			rewards: [{
+				count: 16
+				id: "2B1778A163DF05AE"
+				item: {
+					count: 1
+					id: "jsonreg:polyethylene_plate"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "4E00C40A8A926D95"
+				item: { count: 1, id: "jsonreg:polyethylene_pellets" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["19FB1A6965908809"]
+			id: "3FCE5DB31C7F36A5"
+			tasks: [{
+				id: "1AFB06FB69437D3D"
+				item: { components: { "techreborn:fluid": "jsonreg:benzene" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["19FB1A6965908809"]
+			id: "4AED4571EDE28FF7"
+			tasks: [{
+				id: "2782634318105F95"
+				item: { components: { "techreborn:fluid": "jsonreg:toluene" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["19FB1A6965908809"]
+			id: "1680AE1EBF0A3AF6"
+			tasks: [{
+				id: "6A56CA7C32B274E0"
+				item: { components: { "techreborn:fluid": "jsonreg:xylene" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"3FCE5DB31C7F36A5"
+				"42E203F6AFEDD132"
+			]
+			id: "3B37D9E2A49E74D0"
+			tasks: [{
+				id: "542A164705D147E0"
+				item: { components: { "techreborn:fluid": "jsonreg:gasoline" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"698B4A8348B194CB"
+				"3FCE5DB31C7F36A5"
+			]
+			id: "3C6BAC91E4107F25"
+			tasks: [{
+				id: "7CB363A5AF2AE23D"
+				item: { components: { "techreborn:fluid": "jsonreg:cumene" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3C6BAC91E4107F25"]
+			id: "081B6E5BDA29ED24"
+			tasks: [{
+				id: "4D26A64BE0E35FD0"
+				item: { components: { "techreborn:fluid": "jsonreg:phenol_acetone_mix" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["081B6E5BDA29ED24"]
+			id: "31E61515BD7392AD"
+			tasks: [{
+				id: "7282018F5A80CA35"
+				item: { components: { "techreborn:fluid": "jsonreg:phenol" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 11.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["081B6E5BDA29ED24"]
+			id: "7E6CFF6D11C990D4"
+			tasks: [{
+				id: "0F87957F330E64D2"
+				item: { components: { "techreborn:fluid": "jsonreg:acetone" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 13.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"31E61515BD7392AD"
+				"7E6CFF6D11C990D4"
+			]
+			id: "7764ADF9F5C87C00"
+			tasks: [{
+				id: "3744A18D6B333898"
+				item: { count: 1, id: "jsonreg:bisphenol_a" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["698B4A8348B194CB"]
+			id: "165CD49FA082586F"
+			tasks: [{
+				id: "26AF84B486F6B2D2"
+				item: { components: { "techreborn:fluid": "jsonreg:chloropropanol" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["165CD49FA082586F"]
+			id: "0E9033AD0513DCFD"
+			tasks: [{
+				id: "62119F867A5C225F"
+				item: { components: { "techreborn:fluid": "jsonreg:epichlorohydrin" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"7764ADF9F5C87C00"
+				"0E9033AD0513DCFD"
+			]
+			id: "1EAFAB5DA9A8EB5C"
+			rewards: [{
+				count: 16
+				id: "10EB178A52357473"
+				item: {
+					count: 1
+					id: "jsonreg:epoxy_resin_plate"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "090CCD6972519B90"
+				item: { count: 1, id: "jsonreg:epoxy_resin" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["2745FFF82445034D"]
+			id: "637CC77FB2B4828F"
+			tasks: [{
+				id: "33DB4DDAB70AFCCF"
+				item: { components: { "techreborn:fluid": "jsonreg:ultra_low_sulfur_diesel" }, count: 1, id: "techreborn:cell" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["23E82055106F9391"]
+			id: "4CF27238B456CD1F"
+			rewards: [{
+				count: 16
+				id: "36EFEDE8630A0DE0"
+				item: {
+					count: 1
+					id: "jsonreg:polyethylene_pellets"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7FB9BD80431D2015"
+				item: { components: { "techreborn:fluid": "jsonreg:ethanol" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["4CF27238B456CD1F"]
+			id: "29521645F3B6E178"
+			tasks: [{
+				id: "786E9F65E1880868"
+				item: { components: { "techreborn:fluid": "jsonreg:ethyl_nitrate" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 8.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"637CC77FB2B4828F"
+				"29521645F3B6E178"
+			]
+			id: "45DA96CE56524B5F"
+			tasks: [{
+				id: "061D320CB2F83CAB"
+				item: { components: { "techreborn:fluid": "techreborn:nitro_diesel" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["56E11D7B12905B64"]
+			id: "202B776E9289D479"
+			tasks: [{
+				id: "1840BB58734927A5"
+				item: { count: 1, id: "jsonreg:petroleum_coke" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["7C4958C45C488795"]
+			id: "56E11D7B12905B64"
+			tasks: [{
+				id: "7E789A4BA7EAC144"
+				item: { components: { "techreborn:fluid": "jsonreg:vacuum_residue" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["7C4958C45C488795"]
+			id: "29B5B0D1165617FE"
+			tasks: [{
+				id: "6C510717A70274E6"
+				item: { components: { "techreborn:fluid": "jsonreg:vacuum_diesel" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"45DA96CE56524B5F"
+				"202B776E9289D479"
+			]
+			id: "752C380A8741E84C"
+			tasks: [{
+				id: "75DDE67D192B3F16"
+				item: { components: { "techreborn:fluid": "techreborn:nitrocoal_fuel" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["56E11D7B12905B64"]
+			id: "3D226EB3AE3E33B6"
+			tasks: [{
+				id: "5DB4312B6A38AF71"
+				item: { components: { "techreborn:fluid": "jsonreg:coke_gas" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["56E11D7B12905B64"]
+			id: "2073A38C605B838A"
+			tasks: [{
+				id: "3E69A088C3A8E436"
+				item: { components: { "techreborn:fluid": "jsonreg:coker_light_oil" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["2A28943AFB868811"]
+			hide_dependency_lines: true
+			id: "56A37FB3BDD63D29"
+			rewards: [
+				{
+					count: 2
+					id: "572B82582CF811EA"
+					item: {
+						count: 1
+						id: "oritech:refinery_block"
+					}
+					type: "item"
+				}
+				{
+					count: 6
+					id: "152B08926149FA8F"
+					item: {
+						count: 1
+						id: "oritech:refinery_module_block"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "7D4D0F5927575B5C"
+					item: {
+						count: 1
+						id: "techreborn:wind_mill"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "63481D3DC6DC3E34"
+				item: { count: 1, id: "oritech:refinery_block" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2A28943AFB868811"]
+			id: "1CDF452947152BA8"
+			rewards: [
+				{
+					count: 4
+					id: "47637B1C869C7969"
+					item: {
+						count: 1
+						id: "techreborn:chemical_reactor"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "7B63CE9CE50EA92B"
+					item: {
+						count: 1
+						id: "techreborn:wind_mill"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "51ED34D9D962EFFB"
+					item: {
+						count: 1
+						id: "techreborn:chrome_ingot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "2BC9DBC5A65A6E9E"
+				item: { count: 1, id: "techreborn:chemical_reactor" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 2.0d
+		}
+	]
+}

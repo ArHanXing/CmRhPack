@@ -1,0 +1,25 @@
+filename = 'yarrp-mc1.21.1-fabric-v0.2.0.jar'
+name = 'YARRP'
+side = 'both'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = '0.2.0+1.21.1'
+
+[download]
+hash = '4bb3e434935b09220125710261c637b9bc985a7102aa77171e022091e7923d2f1736963a0fb9bd0fecb7cb9f7d1360812c3ab2297dcaab71a184dee7f47ea99f'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Z2RtCqwR/versions/rKCtRipc/yarrp-mc1.21.1-fabric-v0.2.0.jar'
+
+[update.modrinth]
+mod-id = 'Z2RtCqwR'
+version = 'rKCtRipc'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'mOgUt4GM'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'Ha28R6CL'
+type = 'REQUIRED'

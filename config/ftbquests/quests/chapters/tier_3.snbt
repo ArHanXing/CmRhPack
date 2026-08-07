@@ -1,0 +1,877 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "tier_3"
+	group: "65B400649AF290A7"
+	icon: {
+		id: "techreborn:industrial_blast_furnace"
+	}
+	id: "7079D61449538F85"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["45E45ECA23073D45"]
+			id: "4583BC15A2165F6C"
+			rewards: [{
+				count: 9
+				id: "2DE553540F95F810"
+				item: {
+					count: 1
+					id: "techreborn:overclocker_upgrade"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7A66100E0FF897C1"
+				item: { count: 1, id: "techreborn:cupronickel_heating_coil" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4583BC15A2165F6C"
+				"47614B42FB9C45AB"
+				"0B79CCECAB548F7D"
+			]
+			id: "7F0896BD9B9C3AD6"
+			rewards: [
+				{
+					count: 20
+					id: "3C64C445D7AB24EC"
+					item: {
+						count: 1
+						id: "techreborn:basic_machine_casing"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "02A80D5913E46625"
+					item: {
+						components: {
+							"techreborn:fluid": "minecraft:lava"
+						}
+						count: 1
+						id: "techreborn:cell"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 2.5d
+			tasks: [
+				{
+					id: "08BCEC19ABA03623"
+					item: { count: 1, id: "techreborn:industrial_blast_furnace" }
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "420EE562C4CA1FED"
+					item: { count: 1, id: "techreborn:advanced_machine_casing" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7F0896BD9B9C3AD6"]
+			id: "7532EDD2ED246982"
+			rewards: [
+				{
+					count: 16
+					id: "3C9F7A0C2A97F53A"
+					item: {
+						count: 1
+						id: "techreborn:aluminum_dust"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "627F02BE397258DE"
+					item: {
+						count: 1
+						id: "techreborn:raw_iridium"
+					}
+					type: "item"
+				}
+			]
+			size: 1.5d
+			tasks: [{
+				id: "4A1A22620C2EA1B4"
+				item: { count: 1, id: "techreborn:aluminum_ingot" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7532EDD2ED246982"]
+			id: "43FC2186A2CF54FA"
+			shape: "square"
+			size: 1.5d
+			tasks: [{
+				id: "138B79ACDE19CDB4"
+				item: { count: 1, id: "techreborn:assembly_machine" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: -3.75d
+		}
+		{
+			dependencies: ["7532EDD2ED246982"]
+			id: "0EEEA1286B1B024B"
+			rewards: [{
+				id: "029824DE6FF1CC66"
+				item: {
+					count: 1
+					id: "techreborn:drain"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "0A32BCE477C85C6C"
+				item: { count: 1, id: "techreborn:industrial_grinder" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7F0896BD9B9C3AD6"]
+			id: "775EA5490ED6F2AF"
+			rewards: [{
+				count: 64
+				id: "6707C95BCD3AB4CB"
+				item: {
+					count: 1
+					id: "minecraft:netherite_scrap"
+				}
+				type: "item"
+			}]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "62408CE4A2C48081"
+				item: { count: 1, id: "oritech:duratium_ingot" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["775EA5490ED6F2AF"]
+			id: "77FA50402C836C59"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "3DFB3A0A8180D13B"
+				item: { count: 1, id: "oritech:atomic_forge_block" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["77FA50402C836C59"]
+			id: "5CB096DBE42521DD"
+			tasks: [{
+				id: "32EB85A8EF1000AF"
+				item: { count: 1, id: "oritech:silicon_wafer" }
+				type: "item"
+			}]
+			x: 12.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5CB096DBE42521DD"]
+			id: "049CF35EC300F5FF"
+			size: 1.5d
+			tasks: [{
+				id: "4C9D3B4AE835AB12"
+				item: { count: 1, id: "oritech:advanced_computing_engine" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["43FC2186A2CF54FA"]
+			id: "680CFBE2C854CEDC"
+			tasks: [{
+				id: "689EDCE20FBF90F0"
+				item: { count: 1, id: "techreborn:energy_crystal" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: -6.0d
+		}
+		{
+			dependencies: [
+				"680CFBE2C854CEDC"
+				"4E4F8908A19073FC"
+			]
+			id: "0A539E167A19F7C6"
+			rewards: [{
+				id: "467E8174B5DD2929"
+				item: {
+					count: 1
+					id: "techreborn:high_voltage_su"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "7C5588E6629B8534"
+					item: { components: { "minecraft:attribute_modifiers": { modifiers: [{ amount: 1.0d, id: "techreborn:nano_suit_armor/head", operation: "add_value", slot: "head", type: "minecraft:generic.armor" }] } }, count: 1, id: "techreborn:nano_helmet" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "74C5AF6E3397C819"
+					item: { components: { "minecraft:attribute_modifiers": { modifiers: [{ amount: 2.0d, id: "techreborn:nano_suit_armor/chest", operation: "add_value", slot: "chest", type: "minecraft:generic.armor" }] } }, count: 1, id: "techreborn:nano_chestplate" }
+					type: "item"
+				}
+				{
+					id: "6D4F33A30B11CF13"
+					item: { components: { "minecraft:attribute_modifiers": { modifiers: [{ amount: 3.0d, id: "techreborn:nano_suit_armor/legs", operation: "add_value", slot: "legs", type: "minecraft:generic.armor" }] } }, count: 1, id: "techreborn:nano_leggings" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6B37FAD95020A867"
+					item: { components: { "minecraft:attribute_modifiers": { modifiers: [{ amount: 1.0d, id: "techreborn:nano_suit_armor/feet", operation: "add_value", slot: "feet", type: "minecraft:generic.armor" }] } }, count: 1, id: "techreborn:nano_boots" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "53D7CF97712F510F"
+					item: { components: { "techreborn:is_active": 0b }, count: 1, id: "techreborn:nanosaber" }
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: -6.0d
+		}
+		{
+			dependencies: [
+				"34D94F7929BACA2D"
+				"34DC636661FFBF62"
+			]
+			id: "1CF8FD0A6842C567"
+			rewards: [{
+				count: 3
+				id: "00B78D723DA2DC4D"
+				item: {
+					count: 1
+					id: "oritech:dubios_container"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "3FF3305581791F6F"
+				item: { count: 1, id: "oritech:dubios_container" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1CF8FD0A6842C567"]
+			id: "1F82F0B51C37755F"
+			shape: "diamond"
+			size: 2.0d
+			tasks: [{
+				id: "11BC7733FE4B46A8"
+				item: { count: 1, id: "oritech:unholy_intelligence" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"1F82F0B51C37755F"
+				"775EA5490ED6F2AF"
+			]
+			id: "2A11311F264F457B"
+			tasks: [{
+				id: "4A0179B9F8BB987A"
+				item: { count: 1, id: "oritech:heisenberg_compensator" }
+				type: "item"
+			}]
+			x: 11.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1CF8FD0A6842C567"]
+			id: "3CB39EFF7F8C9319"
+			rewards: [{
+				count: 16
+				id: "733D4244D85F4FCF"
+				item: {
+					count: 1
+					id: "oritech:superconductor"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7565BD00ED5497E9"
+				item: { count: 1, id: "oritech:superconductor" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"3CB39EFF7F8C9319"
+				"2A11311F264F457B"
+			]
+			id: "5BFD35796A287588"
+			rewards: [
+				{
+					count: 2
+					id: "1CBCD50EFFC5B887"
+					item: {
+						count: 1
+						id: "refinedstorage:64k_storage_disk"
+					}
+					type: "item"
+				}
+				{
+					id: "3BE326729B42FB86"
+					item: {
+						count: 1
+						id: "oritech:fragment_forge_block"
+					}
+					type: "item"
+				}
+				{
+					id: "66ED693AE04CF3FA"
+					item: {
+						count: 1
+						id: "advanced_reborn:ray_generator_6"
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			size: 3.0d
+			tasks: [{
+				id: "0C5C213C8A95B6AD"
+				item: { count: 1, id: "oritech:deep_drill_block" }
+				type: "item"
+			}]
+			x: 11.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"3CB39EFF7F8C9319"
+				"049CF35EC300F5FF"
+				"31EA5DB1A60A0DFB"
+			]
+			id: "4C93947305433190"
+			rewards: [
+				{
+					command: "/say oritech官方关于加速器的wiki：https://moddedmc.wiki/zh_cn/project/oritech/docs/interaction/particle_accelerator"
+					id: "5FEA2EF4B5F6B5C6"
+					type: "command"
+				}
+				{
+					count: 32
+					id: "262D569A3504B6AE"
+					item: {
+						count: 1
+						id: "oritech:accelerator_ring"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "2DE195188544B12A"
+					item: {
+						count: 1
+						id: "oritech:accelerator_motor"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 3.5d
+			tasks: [
+				{
+					id: "19649825AD74A90D"
+					item: { count: 1, id: "oritech:accelerator_controller" }
+					type: "item"
+				}
+				{
+					id: "4DB540F5023DAF7F"
+					item: { count: 1, id: "oritech:accelerator_motor" }
+					type: "item"
+				}
+				{
+					id: "0892C84087538E57"
+					item: { count: 1, id: "oritech:accelerator_ring" }
+					type: "item"
+				}
+			]
+			x: 14.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4C93947305433190"]
+			id: "5742518D5FD334C4"
+			rewards: [{
+				count: 4
+				id: "12503649D3FE6A9C"
+				item: {
+					count: 1
+					id: "oritech:accelerator_motor"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "3B7DF730052AE616"
+				item: { count: 1, id: "oritech:overcharged_crystal" }
+				type: "item"
+			}]
+			x: 18.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["5742518D5FD334C4"]
+			id: "71B012A9F2F032AB"
+			shape: "diamond"
+			size: 2.0d
+			tasks: [{
+				id: "7B7E3DF5A51EF704"
+				item: { count: 1, id: "oritech:prometheum_ingot" }
+				type: "item"
+			}]
+			x: 20.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["71B012A9F2F032AB"]
+			id: "5D1F964B6D68917D"
+			shape: "pentagon"
+			size: 3.0d
+			tasks: [{
+				id: "4EDA6E196FA16BCA"
+				item: { count: 1, id: "oritech:super_ai_chip" }
+				type: "item"
+			}]
+			x: 23.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["7F0896BD9B9C3AD6"]
+			id: "77769AA1A6C16B9C"
+			size: 1.5d
+			tasks: [{
+				id: "206EAA0A315AFD4F"
+				item: { count: 1, id: "techreborn:iridium_ingot" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"77769AA1A6C16B9C"
+				"5379FE7751110E87"
+				"6D3EE35DABFB6AB1"
+			]
+			id: "2202CF407F9C50DE"
+			rewards: [{
+				count: 8
+				id: "47F5F5A7816226F7"
+				item: {
+					count: 1
+					id: "techreborn:industrial_machine_frame"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "4A84D58B643B56D8"
+				item: { count: 1, id: "techreborn:industrial_machine_frame" }
+				type: "item"
+			}]
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			id: "1A68B3641CCE8A8E"
+			rewards: [{
+				count: 16
+				id: "030BDCED7ACF7F7F"
+				item: {
+					count: 1
+					id: "minecraft:tnt"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "079532C3A449A673"
+				item: { count: 1, id: "techreborn:implosion_compressor" }
+				type: "item"
+			}]
+			x: 18.0d
+			y: -4.5d
+		}
+		{
+			dependencies: [
+				"5742518D5FD334C4"
+				"2E5EBD89875B28CF"
+			]
+			id: "116D5EEA76BAA2A4"
+			rewards: [{
+				count: 16
+				id: "3282BA2F12365FE0"
+				item: {
+					count: 1
+					id: "ends_delight:dried_endermite_meat"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7D991A564AE0855D"
+				item: { count: 1, id: "minecraft:ender_eye" }
+				type: "item"
+			}]
+			x: 18.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"116D5EEA76BAA2A4"
+				"3474E4508B2984D2"
+			]
+			id: "5379FE7751110E87"
+			tasks: [{
+				id: "723A5944E7DD23BF"
+				item: { count: 1, id: "techreborn:tungsten_ingot" }
+				type: "item"
+			}]
+			x: 18.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"5D1F964B6D68917D"
+				"3EFE908E4331BF17"
+			]
+			id: "696232AAF65409AE"
+			rewards: [{
+				id: "3E815EB4574A5A06"
+				item: {
+					count: 1
+					id: "techreborn:matter_fabricator"
+				}
+				type: "item"
+			}]
+			size: 2.0d
+			tasks: [{
+				id: "58846FA6CEFD942E"
+				item: { count: 1, id: "techreborn:matter_fabricator" }
+				type: "item"
+			}]
+			x: 23.392857142857153d
+			y: 0.0535714285714306d
+		}
+		{
+			dependencies: ["2202CF407F9C50DE"]
+			id: "295C2E5AABAB95C0"
+			rewards: [{
+				id: "21850D93B63CBE31"
+				item: {
+					count: 1
+					id: "techreborn:scrapboxinator"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "12CD01EBA9613B35"
+					item: { count: 1, id: "techreborn:scrap" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7C4DE7B4AC3A338F"
+					item: { count: 1, id: "techreborn:scrap_box" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"696232AAF65409AE"
+				"295C2E5AABAB95C0"
+			]
+			id: "3DF140D964C8D7A1"
+			rewards: [{
+				id: "00A0747E76416AD1"
+				item: {
+					count: 1
+					id: "techreborn:fluid_replicator"
+				}
+				type: "item"
+			}]
+			shape: "pentagon"
+			size: 2.0d
+			tasks: [{
+				id: "4E165078840A96AC"
+				item: { count: 1, id: "techreborn:uu_matter" }
+				type: "item"
+			}]
+			x: 21.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5D1F964B6D68917D"]
+			id: "3EFE908E4331BF17"
+			shape: "diamond"
+			size: 2.0d
+			tasks: [{
+				id: "19A508FFC0EEEAD3"
+				item: { count: 1, id: "techreborn:industrial_circuit" }
+				type: "item"
+			}]
+			x: 23.571428571428562d
+			y: 8.660714285714299d
+		}
+		{
+			dependencies: [
+				"1A68B3641CCE8A8E"
+				"77769AA1A6C16B9C"
+			]
+			id: "6D3EE35DABFB6AB1"
+			tasks: [{
+				id: "37E620C56E361352"
+				item: { count: 1, id: "techreborn:iridium_alloy_plate" }
+				type: "item"
+			}]
+			x: 18.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["049CF35EC300F5FF"]
+			id: "3AB7AA1F1C3B44A9"
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "669D02209508CDC8"
+				item: { count: 1, id: "justarod:basic_electric_rod" }
+				type: "item"
+			}]
+			x: 16.5d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"5BFD35796A287588"
+				"727114FF805D8F74"
+			]
+			id: "308871E5E84436D5"
+			optional: true
+			rewards: [{
+				count: 2
+				id: "06E65C48A855190A"
+				item: {
+					count: 1
+					id: "tesseract:tesseract"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "406494F28320A0E8"
+				item: { count: 1, id: "oritech:resource_node_iron" }
+				optional_task: true
+				type: "item"
+			}]
+			x: 11.0d
+			y: 11.0d
+		}
+		{
+			dependencies: [
+				"5D1F964B6D68917D"
+				"727114FF805D8F74"
+			]
+			id: "700A22FADD6FE1C3"
+			rewards: [{
+				count: 16
+				id: "1CE0A8C0F6354210"
+				item: {
+					count: 1
+					id: "oritech:superconductor"
+				}
+				type: "item"
+			}]
+			size: 2.0d
+			tasks: [
+				{
+					id: "5B37559641F9B18D"
+					item: { count: 1, id: "jsonreg:resource_node_iridium" }
+					type: "item"
+				}
+				{
+					id: "46CF2748A99BB922"
+					item: { count: 1, id: "jsonreg:resource_node_tungsten" }
+					type: "item"
+				}
+				{
+					id: "4D6AE3267E61C094"
+					item: { count: 1, id: "jsonreg:resource_node_fossil" }
+					type: "item"
+				}
+			]
+			x: 26.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["576864302B51DF99"]
+			id: "31EA5DB1A60A0DFB"
+			rewards: [{
+				count: 8
+				id: "0A04577785C0E922"
+				item: {
+					count: 1
+					id: "oritech:ion_thruster"
+				}
+				type: "item"
+			}]
+			size: 1.5d
+			tasks: [{
+				id: "3AFD45376074B4E3"
+				item: { count: 1, id: "oritech:ion_thruster" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: 8.5d
+		}
+		{
+			id: "576864302B51DF99"
+			rewards: [{
+				count: 16
+				id: "66604608F1146C96"
+				item: {
+					count: 1
+					id: "oritech:reinforced_carbon_sheet"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "517A59A665ADC126"
+				item: { count: 1, id: "oritech:reinforced_carbon_sheet" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"71B012A9F2F032AB"
+				"7269F25FC3FECBD3"
+			]
+			id: "69448FC29413D817"
+			rewards: [{
+				id: "18D4706DC7075403"
+				item: {
+					count: 1
+					id: "techreborn:deepslate_tungsten_ore"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			size: 2.5d
+			tasks: [{
+				id: "6A0904DE263E4A48"
+				item: { count: 1, id: "oritech:creative_storage_block" }
+				type: "item"
+			}]
+			x: 20.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["1CF8FD0A6842C567"]
+			id: "5BF073D473B8CEED"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "3765BB7728E6FF5C"
+				item: { count: 1, id: "oritech:augment_application_block" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7F0896BD9B9C3AD6"]
+			id: "5EB7936AF8758211"
+			tasks: [{
+				id: "4A87A2473DB160A8"
+				item: { count: 1, id: "transmog:void_fragment" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"7532EDD2ED246982"
+				"5EB7936AF8758211"
+			]
+			id: "0F7AB7A6EF715ABE"
+			rewards: [{
+				id: "5673667ABC5E374C"
+				item: {
+					count: 1
+					id: "refinedstorage:creative_range_upgrade"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "005161BD7320C821"
+				item: { count: 1, id: "refinedstorage:creative_controller" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["0F7AB7A6EF715ABE"]
+			id: "5461A3423C7F3FAC"
+			rewards: [{
+				id: "5BCF971774EE49DD"
+				item: {
+					count: 1
+					id: "refinedstorage:creative_wireless_autocrafting_monitor"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "2B15DD802E302C6F"
+				item: { count: 1, id: "interdimensionalwirelesstransmitter:interdimensional_wireless_transmitter" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: -6.0d
+		}
+	]
+}

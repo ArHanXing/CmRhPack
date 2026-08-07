@@ -1,0 +1,17 @@
+{
+  "update_cron": "* * * ? * *",
+  "style": {
+    "enable_header": true,
+    "enable_footer": true,
+    "header": [
+      "<#FFA1F5>PlayerList<newline>------%server:online%/%server:max_players%------"
+    ],
+    "body": [
+      "<rainbow>%player:displayname_visual%"
+    ],
+    "footer": [
+      "<#FFA1F5>-----------------<newline>TPS: %server:tps_colored% PING: %player:ping_colored%<newline><rainbow>Memory: %server:used_ram%/%server:max_ram% MB<newline>%fuji:rotate Welcome to the server. %"
+    ]
+  },
+  "MOD_VERSION": "14.9.2"
+}

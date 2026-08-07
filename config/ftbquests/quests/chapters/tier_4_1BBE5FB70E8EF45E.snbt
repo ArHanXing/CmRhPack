@@ -1,0 +1,303 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "tier_4_1BBE5FB70E8EF45E"
+	group: "65B400649AF290A7"
+	icon: {
+		id: "eternal_starlight:orb_of_prophecy"
+	}
+	id: "1BBE5FB70E8EF45E"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "eternal_starlight:chiseled_voidstone"
+			}
+			id: "5F1F6ED0A21FB05A"
+			tasks: [
+				{
+					id: "4E8822A2F46D8C18"
+					observation_type: "block"
+					observe_type: 0
+					timer: 0L
+					to_observe: "eternal_starlight:chiseled_voidstone"
+					type: "observation"
+				}
+				{
+					id: "20BACA9343325598"
+					item: { count: 1, id: "eternal_starlight:orb_of_prophecy" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F1F6ED0A21FB05A"]
+			id: "151C349269CC0ED7"
+			rewards: [{
+				count: 5
+				id: "58FC3A1F40DD556F"
+				item: {
+					count: 1
+					id: "eternal_starlight:cooked_ratlin_meat"
+				}
+				type: "item"
+			}]
+			size: 2.0d
+			tasks: [{
+				dimension: "eternal_starlight:starlight"
+				icon: {
+					id: "eternal_starlight:orb_of_prophecy"
+				}
+				id: "751ADC9B920B8A8C"
+				type: "dimension"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["151C349269CC0ED7"]
+			id: "2E5EBD89875B28CF"
+			rewards: [{
+				id: "60A836A16FE3F2C7"
+				item: {
+					count: 1
+					id: "eternal_starlight:seeking_eye"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "3C2342429C33AE7D"
+				item: { count: 1, id: "eternal_starlight:seeking_eye" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["151C349269CC0ED7"]
+			icon: {
+				components: {
+					"techreborn:fluid": "eternal_starlight:ether"
+				}
+				id: "techreborn:cell"
+			}
+			id: "0A79DDBB3E3642EC"
+			tasks: [
+				{
+					id: "3943FD938B3DFC77"
+					item: { count: 1, id: "eternal_starlight:ether_bucket" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					biome: "eternal_starlight:ether_river"
+					id: "74594DCA898940F5"
+					type: "biome"
+				}
+			]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["2E5EBD89875B28CF"]
+			id: "13CA8EFCCCD5BB9E"
+			rewards: [{
+				count: 16
+				id: "41B09F2CC33CE75F"
+				item: {
+					count: 1
+					id: "eternal_starlight:golem_steel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "6B31968223A72581"
+				structure: "eternal_starlight:golem_forge"
+				type: "structure"
+			}]
+			x: 4.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"2E5EBD89875B28CF"
+				"13CA8EFCCCD5BB9E"
+			]
+			id: "739CE27B6CC460C5"
+			tasks: [{
+				id: "0B22D6C4437966AE"
+				item: { count: 1, id: "eternal_starlight:frozen_tube" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: 1.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["13CA8EFCCCD5BB9E"]
+			id: "073CBBEB4B3AFFA7"
+			optional: true
+			rewards: [{
+				id: "78EC2AAE3C6E378E"
+				item: {
+					count: 1
+					id: "eternal_starlight:starlight_golem_spawner"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 32L
+				id: "1873A62BBD7D5CD9"
+				item: { count: 1, id: "eternal_starlight:frozen_tube" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2E5EBD89875B28CF"]
+			id: "3CF28111121E6B75"
+			tasks: [{
+				id: "49216EAFC7CCB17B"
+				structure: "eternal_starlight:cursed_garden"
+				type: "structure"
+			}]
+			x: 6.5d
+			y: 3.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["3CF28111121E6B75"]
+			id: "26F8F2E98AA9F792"
+			optional: true
+			rewards: [{
+				id: "0349BE2A45348C24"
+				item: {
+					count: 1
+					id: "eternal_starlight:lunar_monstrosity_spawner"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 16L
+				id: "42A813A4682AFF28"
+				item: { count: 1, id: "eternal_starlight:tangled_skull" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2E5EBD89875B28CF"]
+			id: "67F86071C002440E"
+			rewards: [{
+				count: 16
+				id: "491EC87E29D58567"
+				item: {
+					count: 1
+					id: "eternal_starlight:aethersent_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7269F25FC3FECBD3"
+				item: { count: 1, id: "eternal_starlight:raw_aethersent" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["67F86071C002440E"]
+			id: "2CCF50BBB1A88B73"
+			optional: true
+			rewards: [{
+				id: "236C43600864E86A"
+				item: {
+					count: 1
+					id: "eternal_starlight:aetherstrike_rocket"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 8L
+				id: "6F83108217672F46"
+				item: { count: 1, id: "eternal_starlight:nebulaite" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2E5EBD89875B28CF"]
+			icon: {
+				id: "eternal_starlight:twilight_sand"
+			}
+			id: "3AB51A20C6B52B9E"
+			tasks: [{
+				biome: "eternal_starlight:crystallized_desert"
+				id: "4538924DF58A2931"
+				type: "biome"
+			}]
+			x: 2.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["2E5EBD89875B28CF"]
+			icon: {
+				id: "eternal_starlight:thermal_springstone"
+			}
+			id: "04619F54D8C55DAF"
+			tasks: [{
+				biome: "eternal_starlight:the_abyss"
+				id: "182FA17184E395B4"
+				type: "biome"
+			}]
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2E5EBD89875B28CF"]
+			id: "65494CDB32EFB1D3"
+			tasks: [{
+				biome: "eternal_starlight:starlight_permafrost_forest"
+				icon: {
+					id: "eternal_starlight:haze_ice"
+				}
+				id: "74A9D1FA2EC049A5"
+				type: "biome"
+			}]
+			x: 8.5d
+			y: 2.5d
+		}
+		{
+			icon: {
+				id: "eternal_starlight:orb_of_prophecy"
+			}
+			id: "266C7518EA20B99F"
+			rewards: [{
+				count: 8
+				id: "3CBDA62681962485"
+				item: {
+					count: 1
+					id: "eternal_starlight:mana_crystal"
+				}
+				type: "item"
+			}]
+			shape: "octagon"
+			size: 2.0d
+			tasks: [{
+				id: "4AEBD3441E16C272"
+				type: "checkmark"
+			}]
+			x: 8.5d
+			y: 0.0d
+		}
+	]
+}

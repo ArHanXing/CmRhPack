@@ -1,0 +1,15 @@
+{
+  "replace": {
+    "rules": [
+      {
+        "regex": "(?<=^|\\s)pos(?=\\s|$)",
+        "replacement": "%fuji:pos%"
+      },
+      {
+        "regex": "(?<=^|\\s)uuid(?=\\s|$)",
+        "replacement": "<green>my uuid is %player:uuid%</green>"
+      }
+    ]
+  },
+  "MOD_VERSION": "14.9.2"
+}

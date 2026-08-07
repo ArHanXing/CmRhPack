@@ -1,0 +1,314 @@
+import crafttweaker.api.tag.MCTag;
+import crafttweaker.api.recipe.type.Recipe;
+
+//永恒星光的一些少量联动
+
+//试管速冷钨钢
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("etst.techreborn.tungstensteel_freeze", {type: "techreborn:chemical_reactor", time: 400, 
+    outputs: [{id: "techreborn:tungstensteel_ingot", count: 2}], power: 30, 
+    ingredients: [{item: "eternal_starlight:frozen_tube"}, {item: "techreborn:hot_tungstensteel_ingot", count:2}]});
+
+//Affinity的一些魔改
+// ====      mod的杜鹃灌注必须用数据包        ====
+// ==== 可在 OpenLoader/LanguageAdd包 里查看 ====
+
+//无烟煤粉
+<recipetype:botania:mana_infusion>.addJsonRecipe("magic.bot.mana_infusion/ranthracite_dust", {type: "botania:mana_infusion",
+    input: {item:"affinity:anthracite_powder"},
+    output: {id:"affinity:ranthracite_dust",count:1},
+    mana: 200
+});
+
+//BOT符文
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.air", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_air", count: 2 },
+    duration: 100,
+    inputs: [
+        { tag: "c:dusts/mana" },
+        { tag: "c:ingots/manasteel" },
+        { tag: "minecraft:wool_carpets" },
+        { item: "minecraft:feather" },
+        { item: "minecraft:string" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.autumn", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_autumn", count: 1 },
+    duration: 100,
+    inputs: [
+        { item: "botania:rune_of_fire" },
+        { item: "botania:rune_of_air" },
+        { tag: "minecraft:leaves" },
+        { tag: "minecraft:leaves" },
+        { tag: "minecraft:leaves" },
+        { item: "minecraft:spider_eye" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.earth", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_earth", count: 2 },
+    duration: 100,
+    inputs: [
+        { tag: "c:dusts/mana" },
+        { tag: "c:ingots/manasteel" },
+        { item: "minecraft:stone" },
+        { tag: "c:storage_blocks/coal" },
+        { item: "minecraft:brown_mushroom" }  // 原 wrapped 取第一个
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.envy", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_envy", count: 1 },
+    duration: 100,
+    inputs: [
+        { item: "botania:rune_of_winter" },
+        { item: "botania:rune_of_water" },
+        { tag: "c:gems/mana_diamond" },
+        { tag: "c:gems/mana_diamond" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.fire", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_fire", count: 2 },
+    duration: 100,
+    inputs: [
+        { tag: "c:dusts/mana" },
+        { tag: "c:ingots/manasteel" },
+        { tag: "c:bricks/nether" },
+        { item: "minecraft:gunpowder" },
+        { item: "minecraft:nether_wart" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.gluttony", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_gluttony", count: 1 },
+    duration: 100,
+    inputs: [
+        { item: "botania:rune_of_winter" },
+        { item: "botania:rune_of_fire" },
+        { tag: "c:gems/mana_diamond" },
+        { tag: "c:gems/mana_diamond" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.greed", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_greed", count: 1 },
+    duration: 100,
+    inputs: [
+        { item: "botania:rune_of_spring" },
+        { item: "botania:rune_of_water" },
+        { tag: "c:gems/mana_diamond" },
+        { tag: "c:gems/mana_diamond" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.lust", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_lust", count: 1 },
+    duration: 100,
+    inputs: [
+        { item: "botania:rune_of_summer" },
+        { item: "botania:rune_of_air" },
+        { tag: "c:gems/mana_diamond" },
+        { tag: "c:gems/mana_diamond" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.mana", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_mana", count: 1 },
+    duration: 100,
+    inputs: [
+        { tag: "c:ingots/manasteel" },
+        { tag: "c:ingots/manasteel" },
+        { tag: "c:ingots/manasteel" },
+        { tag: "c:ingots/manasteel" },
+        { tag: "c:ingots/manasteel" },
+        { tag: "c:gems/mana_pearl" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.pride", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_pride", count: 1 },
+    duration: 100,
+    inputs: [
+        { item: "botania:rune_of_summer" },
+        { item: "botania:rune_of_fire" },
+        { tag: "c:gems/mana_diamond" },
+        { tag: "c:gems/mana_diamond" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.sloth", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_sloth", count: 1 },
+    duration: 100,
+    inputs: [
+        { item: "botania:rune_of_autumn" },
+        { item: "botania:rune_of_air" },
+        { tag: "c:gems/mana_diamond" },
+        { tag: "c:gems/mana_diamond" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.spring", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_spring", count: 1 },
+    duration: 100,
+    inputs: [
+        { item: "botania:rune_of_water" },
+        { item: "botania:rune_of_fire" },
+        { tag: "minecraft:saplings" },
+        { tag: "minecraft:saplings" },
+        { tag: "minecraft:saplings" },
+        { item: "minecraft:wheat" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.summer", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_summer", count: 1 },
+    duration: 100,
+    inputs: [
+        { item: "botania:rune_of_earth" },
+        { item: "botania:rune_of_air" },
+        { tag: "minecraft:sand" },
+        { tag: "minecraft:sand" },
+        { item: "minecraft:slime_ball" },
+        { item: "minecraft:melon_slice" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.water", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_water", count: 2 },
+    duration: 100,
+    inputs: [
+        { tag: "c:dusts/mana" },
+        { tag: "c:ingots/manasteel" },
+        { item: "minecraft:bone_meal" },
+        { item: "minecraft:sugar_cane" },
+        { tag: "c:tools/fishing_rod" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.winter", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_winter", count: 1 },
+    duration: 100,
+    inputs: [
+        { item: "botania:rune_of_water" },
+        { item: "botania:rune_of_earth" },
+        { item: "minecraft:snow_block" },
+        { item: "minecraft:snow_block" },
+        { tag: "minecraft:wool" },
+        { item: "minecraft:cake" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.wrath", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "botania:livingrock" },
+    output: { id: "botania:rune_of_wrath", count: 1 },
+    duration: 100,
+    inputs: [
+        { item: "botania:rune_of_winter" },
+        { item: "botania:rune_of_earth" },
+        { tag: "c:gems/mana_diamond" },
+        { tag: "c:gems/mana_diamond" }
+    ],
+    flux_cost_per_tick: 10
+});
+
+//生魂迷雾的填充配方
+<recipetype:techreborn:solid_canning_machine>.addJsonRecipe("magic.tr.solid_canning_machine/mist.inert", {type: "techreborn:solid_canning_machine", 
+    time: 20, outputs: [{id: "affinity:inert_wisp_mist"}], power: 1, 
+    ingredients: [{item:"minecraft:glass_bottle"}, {item:"affinity:inert_wisp_matter"}]});
+<recipetype:techreborn:solid_canning_machine>.addJsonRecipe("magic.tr.solid_canning_machine/mist.wise", {type: "techreborn:solid_canning_machine", 
+    time: 20, outputs: [{id: "affinity:wise_wisp_mist"}], power: 1, 
+    ingredients: [{item:"minecraft:glass_bottle"}, {item:"affinity:wise_wisp_matter"}]});
+<recipetype:techreborn:solid_canning_machine>.addJsonRecipe("magic.tr.solid_canning_machine/mist.vicious", {type: "techreborn:solid_canning_machine", 
+    time: 20, outputs: [{id: "affinity:vicious_wisp_mist"}], power: 1, 
+    ingredients: [{item:"minecraft:glass_bottle"}, {item:"affinity:vicious_wisp_matter"}]});
+
+//化反制作闪烁无烟煤混合物
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("magic.tr.chemical/scintillant_anthracite_blend", {type: "techreborn:chemical_reactor", time: 400, 
+    outputs: [{id: "affinity:scintillant_anthracite_blend", count: 2}], power: 40, 
+    ingredients: [{item: "minecraft:glowstone_dust"}, {item: "affinity:anthracite_powder", count:2}]});
+
+//更贵的Affinitea
+<recipetype:affinity:aspen_infusion>.removeByName("affinity:aspen_infusion/affinitea");
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/affinitea", {type: "affinity:aspen_infusion", transfer_components: false, 
+primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", count: 1}, duration: 200, 
+    inputs: [{item: "affinity:inert_wisp_matter"}, {item: "minecraft:sugar"}, {item: "minecraft:melon_slice"}, {item: "minecraft:glow_berries"}, 
+    {item: "minecraft:melon_slice"}, {item: "minecraft:sugar"}], flux_cost_per_tick: 20});
+
+//我就是要在稳定刀里塞猫猫锭，你来打我啊（
+<recipetype:affinity:aspen_infusion>.removeByName("affinity:aspen_infusion/stabilized_artifact_blade");
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("t3.magic.affinity.aspen_infusion/stabilized_artifact_blade", {type: "affinity:aspen_infusion", 
+    transfer_components: true, primary_input: {item: "affinity:forgotten_artifact_blade"}, output: {id: "affinity:stabilized_artifact_blade", count: 1}, duration: 800, 
+    inputs: [{item: "toneko:neko_ingot"}, {item: "minecraft:diamond"}, {item: "affinity:vicious_wisp_matter"}, 
+        {item: "affinity:scintillant_anthracite_blend"}, {item: "affinity:vicious_wisp_matter"}, {item: "affinity:resonance_crystal"}, 
+        {item: "affinity:vicious_wisp_matter"}, {item: "affinity:scintillant_anthracite_blend"}, {item: "affinity:vicious_wisp_matter"}, 
+        {item: "minecraft:diamond"}], flux_cost_per_tick: 20});
+
+//时间瓶
+craftingTable.removeByName("tiab:time_in_a_bottle");
+craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, [
+    [<tag:item:c:ingots/gold>, <item:affinity:infused_stone>, <tag:item:c:ingots/gold>], 
+    [<item:techreborn:steel_plate>, <item:minecraft:clock>, <item:oritech:plastic_sheet>], 
+    [<tag:item:c:gems/lapis>, <item:minecraft:glass_bottle>, <tag:item:c:gems/lapis>]]);

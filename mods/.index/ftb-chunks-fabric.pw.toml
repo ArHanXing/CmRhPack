@@ -1,0 +1,37 @@
+filename = 'ftb-chunks-fabric-2101.1.20.jar'
+name = 'FTB Chunks'
+side = 'server'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '[FABRIC][1.21.1] FTB Chunks 2101.1.20'
+
+[download]
+hash = 'f54db43c2873b9b3ca19b7a7250b36cb443fd3a5'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8317866
+project-id = 472657
+
+[[x-prismlauncher-dependencies]]
+addonId = '472659'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = '306612'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '438495'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '438497'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '419699'
+type = 'REQUIRED'

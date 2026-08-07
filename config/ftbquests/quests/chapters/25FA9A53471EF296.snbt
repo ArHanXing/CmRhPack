@@ -1,0 +1,32 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "25FA9A53471EF296"
+	group: "65B400649AF290A7"
+	id: "25FA9A53471EF296"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "29A8B822A402D9B3"
+			tasks: [{
+				id: "23008FD7540426ED"
+				item: { count: 1, id: "techreborn:rolling_machine" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["29A8B822A402D9B3"]
+			id: "62E7FB0860345BFA"
+			tasks: [{
+				id: "7C9A80F073EEF5D4"
+				item: { count: 1, id: "techreborn:cupronickel_heating_coil" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+	]
+}

@@ -1,0 +1,41 @@
+filename = '!ctgui-fabric-1.21.1-0.3.1.jar'
+name = 'CraftTweaker GUI'
+side = 'client'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = '0.3.1'
+
+[download]
+hash = '8b65e6bb2225b791ca203d042ad515ab02b37c4096ec9ad607221c348ad1eee45c56976c3a918050502e7115def51312500787a8fc701bc0d3a4d91ed146d42d'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/FPG0nezA/versions/MyRQjuW1/ctgui-fabric-1.21.1-0.3.1.jar'
+
+[update.modrinth]
+mod-id = 'FPG0nezA'
+version = 'MyRQjuW1'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'fRiHVvU7'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'ohNO6lps'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'mOgUt4GM'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'P7dR8mSH'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'Xg35A4rS'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'u6dRKJwZ'
+type = 'OPTIONAL'

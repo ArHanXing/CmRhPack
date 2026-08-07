@@ -1,0 +1,16 @@
+#Set to on/true to disable advancement locking for ALL books, making all entries visible at all times. Config Flag: advancements_disabled
+disableAdvancementLocking = false
+#Granular list of Book ID's to disable advancement locking for, e.g. [ "survivalistessentials:lexicon" ]. Config Flags: advancements_disabled_<bookid>
+noAdvancementBooks = []
+#Set to on/true to enable testing mode. By default this doesn't do anything, but you can use the config flag in your books if you want. Config Flag: testing_mode
+testingMode = false
+#Set this to the ID of a book to have it show up in players' inventories, replacing the recipe book.
+inventoryButtonBook = ""
+#Set to on/true to use Shift instead of Ctrl for the inventory quick lookup feature.
+useShiftForQuickLookup = false
+#Set how text overflow should be coped with: overflow the text off the page, truncate overflowed text, or resize everything to fit. Reload world after changing.
+#Allowed Values: OVERFLOW, TRUNCATE, RESIZE
+textOverflowMode = "RESIZE"
+#How long in ticks the quick lookup key needs to be pressed before the book opens
+#Range: 1 ~ 20
+quickLookupTime = 10

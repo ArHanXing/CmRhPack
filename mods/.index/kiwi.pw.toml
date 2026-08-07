@@ -1,0 +1,25 @@
+filename = 'Kiwi-1.21.1-Fabric-15.8.4.jar'
+name = 'Kiwi 🥝'
+side = 'both'
+x-prismlauncher-loaders = [ 'quilt', 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '15.8.4+fabric'
+
+[download]
+hash = 'ac3f4a5114ca9033b5d856e6f8faa5db28fa14b84d143d0823ef24bc86f95a5b8cfeffdd41b4b31aa74efda798c2f105122c797dbad7451ca6d196ce63bb2ccd'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/ufdDoWPd/versions/QTwmfxCj/Kiwi-1.21.1-Fabric-15.8.4.jar'
+
+[update.modrinth]
+mod-id = 'ufdDoWPd'
+version = 'QTwmfxCj'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'P7dR8mSH'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '9s6osm5g'
+type = 'OPTIONAL'

@@ -1,0 +1,33 @@
+filename = 'ftb-ultimine-fabric-2101.1.15.jar'
+name = 'FTB Ultimine'
+side = ''
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '[FABRIC][1.21.1] FTB Ultimine 2101.1.15'
+
+[download]
+hash = '7b60cbf3c5320489b1b702bdbfc373deb39f5159'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 8231401
+project-id = 448231
+
+[[x-prismlauncher-dependencies]]
+addonId = '419699'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '306612'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '438495'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '472659'
+type = 'OPTIONAL'

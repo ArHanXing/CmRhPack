@@ -1,0 +1,115 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "cmxx_debug"
+	group: ""
+	id: "3A75FC2BABF5DD54"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			can_repeat: true
+			id: "7418AA20A3B426C4"
+			rewards: [{
+				command: "/execute in minecraft:the_nether run tp 0 150 0"
+				id: "5E41123E447B97D1"
+				type: "command"
+			}]
+			tasks: [{
+				id: "3EBF8F23C958154F"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: -0.5d
+		}
+		{
+			can_repeat: true
+			id: "1B513BA53D71BDC0"
+			rewards: [{
+				command: "/execute in minecraft:the_end run tp 0 150 0"
+				id: "19DE682AF5D84CAB"
+				type: "command"
+			}]
+			tasks: [{
+				id: "07B63E75B0BD73B8"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: -0.5d
+		}
+		{
+			can_repeat: true
+			id: "4AC5E07721B2F77E"
+			rewards: [{
+				command: "/execute in eternal_starlight:starlight run tp 0 150 0"
+				id: "5D2F1F70694CE3FB"
+				type: "command"
+			}]
+			tasks: [{
+				id: "6E62D81FBB867A4F"
+				type: "checkmark"
+			}]
+			x: 3.5d
+			y: -0.5d
+		}
+		{
+			can_repeat: true
+			id: "59BF6C313663D446"
+			rewards: [{
+				command: "/execute in minecraft:overworld run tp 0 150 0"
+				id: "53AC5A0794AC4ADB"
+				type: "command"
+			}]
+			tasks: [{
+				id: "53ED1ACBAB600F91"
+				type: "checkmark"
+			}]
+			x: -2.5d
+			y: -0.5d
+		}
+		{
+			icon: {
+				id: "patchouli:guide_book"
+			}
+			icon_scale: 2.0d
+			id: "3ED51EAB1C7FBF85"
+			size: 3.0d
+			tasks: [{
+				id: "58E57D09C1E9573A"
+				type: "checkmark"
+			}]
+			x: -7.5d
+			y: -3.0d
+		}
+		{
+			can_repeat: true
+			id: "00FC209C50C92456"
+			rewards: [{
+				command: "/rtp"
+				id: "20C27E0AF5020DFC"
+				type: "command"
+			}]
+			tasks: [{
+				id: "7D302FA853711F21"
+				type: "checkmark"
+			}]
+			x: 0.5d
+			y: -4.5d
+		}
+		{
+			can_repeat: true
+			id: "71EFF4EA370A6B00"
+			rewards: [{
+				command: "/execute in d4r4_dimension:void_dimension run tp 0 100 0"
+				id: "7EEBC9403CB7439E"
+				type: "command"
+			}]
+			tasks: [{
+				id: "494C1FF6F295F917"
+				type: "checkmark"
+			}]
+			x: 0.5d
+			y: -2.5d
+		}
+	]
+}

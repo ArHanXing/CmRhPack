@@ -1,0 +1,182 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "tier_1_4B0E94BED93B19C2"
+	group: "31D997DA5FF8E05D"
+	icon: {
+		id: "minecraft:crimson_fungus"
+	}
+	id: "4B0E94BED93B19C2"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6E1669D1F8246C1B"]
+			id: "587515186DECFBD6"
+			rewards: [{
+				count: 10
+				id: "620B4BC010843A8C"
+				item: {
+					count: 1
+					id: "minecraft:cooked_porkchop"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "366B1FFB50121367"
+				type: "dimension"
+			}]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["587515186DECFBD6"]
+			dependency_requirement: "one_completed"
+			id: "217D36A6EECA52F6"
+			rewards: [{
+				id: "133CE3C2548C62E6"
+				item: {
+					count: 1
+					id: "minecraft:saddle"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "6B323AF1E9EBD58B"
+				item: { count: 1, id: "minecraft:warped_fungus_on_a_stick" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["587515186DECFBD6"]
+			id: "30CE4267C956EB97"
+			rewards: [{
+				count: 3
+				id: "62AB39D1DFE648B5"
+				item: {
+					count: 1
+					id: "minecraft:ancient_debris"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "3492E318E4232189"
+				item: { count: 1, id: "minecraft:ancient_debris" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["587515186DECFBD6"]
+			id: "311C7A96A4ED555E"
+			size: 1.5d
+			tasks: [{
+				id: "5895B6ABC175C138"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:quartz)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: -6.75d
+			y: 5.25d
+		}
+		{
+			dependencies: ["587515186DECFBD6"]
+			icon: {
+				id: "minecraft:nether_bricks"
+			}
+			id: "2CDC44A53B482712"
+			rewards: [
+				{
+					id: "353B7EBB6BCB6B81"
+					item: {
+						count: 1
+						id: "minecraft:mooshroom_spawn_egg"
+					}
+					type: "item"
+				}
+				{
+					id: "73D0AB5F942DC47B"
+					item: {
+						count: 1
+						id: "minecraft:powder_snow_bucket"
+					}
+					type: "item"
+				}
+			]
+			size: 2.0d
+			tasks: [{
+				id: "72A37F36E11C3FCD"
+				structure: "minecraft:fortress"
+				type: "structure"
+			}]
+			x: -3.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["2CDC44A53B482712"]
+			id: "36768EA9D9A34536"
+			tasks: [{
+				id: "14BEFEA28C885832"
+				item: { count: 1, id: "minecraft:blaze_rod" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["2CDC44A53B482712"]
+			id: "1893944CD7081F4E"
+			rewards: [{
+				id: "4388CFB89922E252"
+				item: {
+					components: {
+						"minecraft:unbreakable": {
+							show_in_tooltip: 0b
+						}
+					}
+					count: 1
+					id: "avaritia:skullfire_sword"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "433070273A5BF1E8"
+				item: { count: 1, id: "minecraft:wither_skeleton_skull" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["36768EA9D9A34536"]
+			id: "1DC9A7917B6632C3"
+			size: 2.0d
+			tasks: [{
+				id: "70532EF0F5F9CFDB"
+				item: { count: 1, id: "explorerscompass:explorerscompass" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1893944CD7081F4E"]
+			id: "286CD72906096559"
+			size: 1.5d
+			tasks: [{
+				id: "299B9DDA6A7343EA"
+				item: { count: 1, id: "minecraft:nether_star" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.5d
+		}
+	]
+}

@@ -1,0 +1,34 @@
+{
+  "requirePermission": false,
+  "useCurrentWorld": true,
+  "useStrictTeleportCheck": false,
+  "defaultDimension": "minecraft:overworld",
+  "radius": 10000,
+  "minRadius": 0,
+  "safetyCheckRadius": 1,
+  "cooldown": 30,
+  "blackListedBiomes": [
+    "minecraft:the_end",
+    "minecraft:small_end_islands",
+    "minecraft:the_void"
+  ],
+  "blackListedBiomeTags": [
+    "minecraft:is_beach",
+    "minecraft:is_ocean",
+    "minecraft:is_deep_ocean",
+    "minecraft:is_river"
+  ],
+  "messages": {
+    "rtpStartSearch": "<yellow>正在搜索安全位置...",
+    "rtpLocFound": "<yellow>在 ${seconds} 秒内找到了安全位置",
+    "rtpTeleportPlayer": "<dark_aqua>传送到 <green>${x} ${y} ${z} <dark_aqua>在 <green>${world}",
+    "rtpLocNotFound": "<red>[✖] 找不到安全位置！",
+    "rtpOnCooldown": "<red>[✖] <gold>请等待 <yellow>${seconds} <gold>秒后再次使用 RTP！",
+    "preventedRtp": "<red>[✖] 无法开始随机传送。\n原因：${reason}",
+    "rtpBackSuccess": "<dark_aqua>传送回您上次的随机传送位置！",
+    "rtpBackLocNotFound": "<red>[✖] 您没有最近的随机传送。",
+    "preventedRtpBack": "<red>[✖] 无法传送回您的上一个 RTP 位置。\n原因：${reason}",
+    "tpSecondsLeft": "<yellow>${seconds} 秒后传送...",
+    "tpCancelled": "<red>[✖] 传送已取消。"
+  }
+}
