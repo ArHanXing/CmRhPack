@@ -1,6 +1,6 @@
-# CmRhPack 开发笔记（CrT / Json-Registered / 材质生成 / GTOreVein）
+# CmRhPack Agent笔记（CrT / Json-Registered / 材质生成 / GTOreVein）
 
-> 面向本整合包内容制作的速查与流程文档。一切以仓库内现状为准，官方文档为辅。
+> 面向LLM的本整合包内容制作的速查与流程文档。一切以仓库内现状为准，官方文档为辅。
 
 ## 参考文档
 
@@ -22,10 +22,11 @@
 
 这是 **CraftTweaker 21（MC 1.21.1 / Fabric）** 的 ZenCode 脚本集。与老式 CrT 最大的区别：
 
-1. **不用 `mods.xxx.addRecipe(...)`**（全库 0 处），不用事件（`onXxx` 0 处）。
+1. **不用 `mods.xxx.addRecipe(...)`**（全库 0 处），因为这版本根本没有模组去适配CrT，必须使用数据包写法。
 2. 机器配方统一走 **`<recipetype:xxx>.addJsonRecipe(name, {...})`**：第二个参数是**该 mod 数据包 JSON 的字面量**（ZenCode MapData），必须自带 `type` 字段。全库共 326 处 `addJsonRecipe`，而 fluent 式 `addRecipe` 只有 3 处（原版熔炉/高炉）。
 3. 官方依据：所有 `<recipetype>` 都实现 `IRecipeManager`，只要 mod 支持数据包就能用 `addJsonRecipe(name as string, mapData as MapData)`；**每个 mod 的 JSON 格式各不相同**，以 mod 自带的 `data/<mod>/recipe/` 里现成 JSON 为准。
 4. 删除/查询用 `IRecipeManager` 公共方法：`removeByName(names)`、`remove(output)`、`removeByInput(input)`、`removeByModid`、`removeByRegex`、`removeAll()`、`getRecipeByName`、`recipeMap()`。
+5. 作者不会 onEvent 逻辑，如果LLM会可以写一些仅服务端逻辑。
 
 原版配方有快捷全局对象（等价于对应 recipetype）：
 
@@ -100,7 +101,7 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 
 本包大量使用 ZenCode 编程能力批量生成配方：
 
-- `function _rodRecipe(...) as void`（wiremill2lathe.zs）：`<recipetype:techreborn:wire_mill>.removeAll()` 后把线材轧机改造成"车床"，函数化产出棒材。
+- `function _rodRecipe(...) as void`（wiremill2lathe.zs）：`<recipetype:techreborn:wire_mill>.removeAll()` 后曾把线材轧机改造成"车床"，函数化产出棒材。注意：现在已经有了真正的车床，不再需要这一项修改，但是wiremill依旧没有配方。
 - `misc.zs`：`vanillaNodes` / `customNodes` 两张表 + `for` 循环，批量生成深钻节点配方、装配器节点配方、标签收录、`destroySpeed` 修改。
 - `oil_chemistry.zs`：4 种发电机 `removeAll()` 后重建石化燃料体系（155 条配方）。
 - `t1/t2/t3.zs` 里的 `_smd_assembler` / `_reactor` / `_fuelrod` 等函数。
@@ -118,7 +119,7 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 | `uni.zs` | 材料统一化 + 修复（钢、硅、硫酸、机器核心） | 13 |
 | `misc.zs` | 杂项 + 深钻/资源节点生成器 | 8 |
 | `etst&magic.zs` | 永恒星光 + Affinity/Botania 魔法线 | 24 |
-| `wiremill2lathe.zs` | 线材轧机→车床改造 | 5 |
+| `wiremill2lathe.zs` | 车床配方 | 5 |
 | `tooltip.zs` | 元素符号/化学式/梗 tooltip | 0 |
 | `material_tags.zs` | 把 jsonreg 物品收编进 `c:` 标签 | 0 |
 | `ctgui_generated.zs` | CTGUI 导出（**不要手改**） | 0（108 处 craftingTable 修改） |
@@ -170,19 +171,20 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 
 `config/jsonreg_entries.json.md` 是配套设计稿：流体/材料的色号表、富集硅岩线/超能硅岩线/石化产线说明、T1~T3 材料分级。
 
+添加新的材料**必须为其指定色号**。
+
 ### 2.2 自动生成的资源
 
-Json-Registered（`jsonreg` 0.4，基于 ARRP）会自动生成：
+Json-Registered（`jsonreg` 0.6，基于 YARRP）会自动生成：
 
 - 物品模型：`minecraft:item/generated` → `jsonreg:item/<id>` 材质
 - 方块模型 / 方块 blockstate / 方块物品模型（`cube_all` → `jsonreg:block/<id>` 材质）
 - 桶模型、流体方块模型 / blockstate
 
-所以**手动只需要提供材质**，特殊方块状态用 blockstate 覆盖：
+所以**手动只需要提供材质**：
 
 ```
 config/openloader/packs/languageadd/assets/jsonreg/
-├── blockstates/<id>.json      # 需要特殊 state 时才写（makestate.py 生成）
 ├── textures/
 │   ├── block/<id>.png         # 方块/矿石贴图
 │   ├── item/<id>.png          # 物品贴图
