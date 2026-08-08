@@ -266,7 +266,7 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.polyethylene", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "jsonreg:polyethylene_pellets", count: 1}
+        {id: "jsonreg:polyethylene_pellets", count: 2}
     ],
     power: 30,
     ingredients: [

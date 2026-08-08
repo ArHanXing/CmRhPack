@@ -42,6 +42,17 @@ import crafttweaker.api.recipe.type.Recipe;
         {item: "techreborn:tin_plate"}
     ]
 });
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("t2.tr.pa.duratium_coil", {type: "techreborn:precise_assembler", 
+    outputs: [
+        {id: "techreborn:coil_molybdenum_disilicide", count: 1},
+    ],
+    time: 600, power: 128,
+    ingredients: [
+        {count: 2, item:"techreborn:tin_cable"},
+        {count: 1, item:"techreborn:titanium_plate"},
+        {count: 2, item:"jsonreg:duratium_rod"}
+    ]
+});
 //铬锭
 <recipetype:techreborn:blast_furnace>.removeByName("techreborn:blast_furnace/chrome_ingot");
 <recipetype:techreborn:blast_furnace>.removeByName("techreborn:blast_furnace/chrome_ingot_from_small_dust");

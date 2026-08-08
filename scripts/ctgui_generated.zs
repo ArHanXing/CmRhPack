@@ -647,9 +647,9 @@ craftingTable.addShaped("ctgui/new/crafting/small_iron_dust_from_iron_dust", <it
     [<item:oritech:iron_dust>]]);
 
 craftingTable.addShaped("ctgui/new/crafting/multiblock_builder", <item:techreborn:multiblock_builder>, [
-    [IIngredientEmpty.getInstance(), <item:minecraft:dirt>],
-    [IIngredientEmpty.getInstance(), <item:minecraft:iron_ingot>],
-    [IIngredientEmpty.getInstance(), <item:farmersdelight:iron_knife>]]);
+    [<item:minecraft:dirt>],
+    [<item:minecraft:iron_ingot>],
+    [<item:farmersdelight:iron_knife>]]);
 
 craftingTable.addShaped("ctgui/new/crafting/large_compressor", <item:techreborn:large_compressor>, [
     [<item:techreborn:aluminum_plate>, <item:techreborn:compressor>, <item:techreborn:aluminum_plate>],
@@ -670,4 +670,6 @@ craftingTable.addShaped("ctgui/new/crafting/precise_assembler", <item:techreborn
     [<item:jsonreg:mv_robot_arm>, <item:techreborn:assembly_machine>, <item:jsonreg:mv_robot_arm>],
     [<item:oritech:processing_unit>, <item:oritech:assembler_block>, <item:oritech:processing_unit>],
     [<item:jsonreg:duratium_rod>, <item:techreborn:advanced_machine_frame>, <item:jsonreg:duratium_rod>]]);
+
+<recipetype:minecraft:crafting>.removeByName("botania:wand_of_the_forest");
 

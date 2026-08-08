@@ -179,6 +179,7 @@
 				"5433466C47A1067D"
 				"780BFCEBE50C1576"
 			]
+			dependency_requirement: "one_completed"
 			id: "18982C95A36D7767"
 			tasks: [{
 				id: "746726C5AF3E97E5"
@@ -237,6 +238,42 @@
 			}]
 			x: 6.0d
 			y: 6.5d
+		}
+		{
+			dependencies: ["1AD4B94F3C6CDEA3"]
+			id: "3828208ACBBFA5CD"
+			tasks: [{
+				id: "7AE9E66E400D25EB"
+				item: { count: 1, id: "techreborn:coil_molybdenum_disilicide" }
+				type: "item"
+			}]
+			x: 12.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["3828208ACBBFA5CD"]
+			id: "772610A3E275BB52"
+			tasks: [{
+				id: "6DA02E6DF3F64422"
+				item: { count: 1, id: "techreborn:iridium_ingot" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["1AD4B94F3C6CDEA3"]
+			icon_scale: 1.5d
+			id: "67AC8EFAAD62D3C1"
+			shape: "none"
+			size: 1.5d
+			tasks: [{
+				id: "4A84759453D8E472"
+				item: { count: 1, id: "oritech:atomic_forge_block" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 9.0d
 		}
 	]
 }

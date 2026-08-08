@@ -4,6 +4,26 @@
 	filename: "38546AE68836D0E9"
 	group: "31D997DA5FF8E05D"
 	id: "38546AE68836D0E9"
+	images: [
+		{
+			alpha: 125
+			height: 4.0d
+			image: "oritech:item/still_oil_bucket"
+			rotation: -30.0d
+			width: 4.0d
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			alpha: 125
+			height: 4.0d
+			image: "oritech:item/biomass"
+			rotation: 0.0d
+			width: 4.0d
+			x: 18.5d
+			y: 0.0d
+		}
+	]
 	order_index: 2
 	quest_links: [ ]
 	quests: [
@@ -554,6 +574,60 @@
 			}]
 			x: 0.0d
 			y: 4.0d
+		}
+		{
+			dependencies: ["10D435BDE9D65C39"]
+			id: "17A55FB3BBBC2FFE"
+			tasks: [{
+				id: "599BE5FAF002249B"
+				item: { count: 1, id: "oritech:raw_biopolymer" }
+				type: "item"
+			}]
+			x: 17.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["10D86260E8BE9E61"]
+			id: "67596060B28775A2"
+			tasks: [
+				{
+					id: "0A169F59E7136431"
+					item: { components: { "techreborn:fluid": "jsonreg:fermented_mash" }, count: 1, id: "techreborn:cell" }
+					type: "item"
+				}
+				{
+					id: "5BF570A069A746E7"
+					item: { components: { "techreborn:fluid": "jsonreg:ethanol" }, count: 1, id: "techreborn:cell" }
+					type: "item"
+				}
+			]
+			x: 17.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"0518AD89AAEE82A3"
+				"67596060B28775A2"
+				"17A55FB3BBBC2FFE"
+			]
+			dependency_requirement: "one_completed"
+			id: "765000FBDF968C2B"
+			rewards: [{
+				count: 16
+				id: "52FCA7958A19708C"
+				item: {
+					count: 1
+					id: "oritech:plastic_sheet"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "61DCE94F57032928"
+				item: { count: 1, id: "oritech:plastic_sheet" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 0.0d
 		}
 	]
 }

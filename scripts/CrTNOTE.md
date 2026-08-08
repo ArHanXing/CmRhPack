@@ -95,7 +95,7 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 | Botania 魔力灌注 | `botania:mana_infusion` | `input` / `output` / `catalyst` / `mana` | example.md |
 | Affinity 杜鹃灌注 | `affinity:aspen_infusion` | `primary_input` / `inputs` / `output` / `duration` / `flux_cost_per_tick` / `transfer_components` | etst&magic.zs |
 | Avaritia 无尽工作台 | `avaritia:extreme_crafting`（`type: "avaritia:extreme_shaped"`） | **9 行 pattern** 字符串 + `key` | t2/t3.zs |
-| Lychee | `lychee:block_interacting` / `block_clicking` / `item_inside` | JSON 原样 | refinedstorage.zs / misc.zs |
+| Lychee | `lychee:block_interacting` / `block_clicking` / `item_inside` | JSON 原样；`item_inside` 的 `time` 单位是 **tick**（20/s） | refinedstorage.zs / misc.zs / bio_chemistry.zs |
 
 ### 1.5 脚本即"配方生成器"
 
@@ -114,6 +114,7 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 |---|---|---|
 | `t0.zs` / `t1.zs` / `t2.zs` / `t3.zs` | 科技树分阶段 | 0 / 15 / 37 / 24 |
 | `oil_chemistry.zs` | 石油化工（最大） | 155 |
+| `bio_chemistry.zs` | 生物化工（发酵制乙烯 + 生物塑料） | 4 |
 | `process_naquadah.zs` | 硅岩/超能硅岩处理线 | 37 |
 | `refinedstorage.zs` | RS 线（处理器、机壳、创造控制器） | 8 |
 | `uni.zs` | 材料统一化 + 修复（钢、硅、硫酸、机器核心） | 13 |
@@ -124,7 +125,7 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 | `material_tags.zs` | 把 jsonreg 物品收编进 `c:` 标签 | 0 |
 | `ctgui_generated.zs` | CTGUI 导出（**不要手改**） | 0（108 处 craftingTable 修改） |
 
-配方 ID 前缀：`t0.` / `t1.` / `t2.` / `t3.` / `oil.` / `nqdh.` / `rs.` / `uni.` / `misc.` / `fix.` / `magic.` / `etst.` / `ctgui/`。
+配方 ID 前缀：`t0.` / `t1.` / `t2.` / `t3.` / `oil.` / `bio.` / `nqdh.` / `rs.` / `uni.` / `misc.` / `fix.` / `magic.` / `etst.` / `ctgui/`。
 
 ### 1.7 Tooltip 与物品组件
 
@@ -146,6 +147,10 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 - `<recipetype:minecraft:blasting_extra>` 是本包特例（t0.zs，1 次），不是标准管理器名。 注：该配方类型源自 EarlyStage mod，具体定义的是具有两个输入的原版高炉配方。没有用处
 - `craftingTable.remove(<item>)` 删的是"以该物品为输出的所有工作台配方"，机器配方要上对应 recipetype。
 - 注意：空气的注册名是 *低氧氮气*（来自jsonreg），氧气的注册名是 *压缩空气*（来自TR）。
+- Lychee 1.21 坑（实测/源码确认）：
+  - `item_inside` 的 `time` 单位是 **tick** 不是秒（`LycheeCounter` 每 tick +1，`count >= time` 触发）。
+  - 本版本 `execute` 等 post_action 有 bug，**只用 `drop_item`**（`{type, id, count, components}`，Fabric 组件可直接写 `techreborn:fluid`）。
+  - `item_in` 只支持 item/tag 精确匹配，**不支持 components 匹配**；要限带流体单元输入只能用桶/专用物品，或用 `count` 做批量。
 
 ---
 
