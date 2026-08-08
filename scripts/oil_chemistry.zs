@@ -271,7 +271,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 30,
     ingredients: [
         {count: 1, components: {"techreborn:fluid": "jsonreg:ethylene"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {item: "techreborn:chrome_small_dust", count: 1}
+        {item: "oritech:small_iron_dust", count: 1}
     ]
 });
 

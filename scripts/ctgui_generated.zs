@@ -611,8 +611,6 @@ craftingTable.addShaped("ctgui/new/crafting/assembly_augment", <item:affinity:as
 
 <recipetype:minecraft:crafting>.removeByName("botania:runic_altar");
 
-<recipetype:minecraft:crafting>.removeByName("botania:runic_altar_alt");
-
 <recipetype:minecraft:crafting>.removeByName("botania:terrestrial_agglomeration_plate");
 craftingTable.addShaped("ctgui/new/botania/terrestrial_agglomeration_plate", <item:botania:terrestrial_agglomeration_plate>, [
     [<item:techreborn:lazurite_plate>, <item:techreborn:lazurite_plate>, <item:techreborn:lazurite_plate>],
@@ -628,15 +626,48 @@ craftingTable.addShaped("ctgui/new/avaritia/extreme_crafting_table", <item:avari
     [<item:minecraft:crafting_table>, <item:justarod:redstone_rod>, <item:minecraft:crafting_table>],
     [<item:techreborn:refined_iron_plate>, <item:techreborn:diamond_plate>, <item:techreborn:refined_iron_plate>]]);
 
-craftingTable.addShaped("ctgui/new/crafting/distillation_tower", <item:techreborn:distillation_tower>, [
-    [<item:techreborn:steel_plate>, <item:techreborn:electronic_circuit>, <item:techreborn:steel_plate>],
-    [<item:techreborn:extractor>, <item:techreborn:basic_machine_frame>, <item:techreborn:extractor>],
-    [<item:techreborn:steel_plate>, <item:techreborn:electronic_circuit>, <item:techreborn:steel_plate>]]);
-
 <recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine/distillation_tower");
 
 craftingTable.addShaped("ctgui/new/crafting/lathe", <item:techreborn:lathe>, [
     [<item:techreborn:electronic_circuit>, <item:jsonreg:lv_electric_piston>, <item:techreborn:electronic_circuit>],
     [<item:jsonreg:iron_rod>, <item:techreborn:basic_machine_frame>, <item:jsonreg:iron_rod>],
     [<item:oritech:motor>, IIngredientEmpty.getInstance(), <item:oritech:motor>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/distillation_tower", <item:techreborn:distillation_tower>, [
+    [<item:techreborn:steel_plate>, <item:oritech:processing_unit>, <item:techreborn:steel_plate>],
+    [<item:techreborn:extractor>, <item:techreborn:basic_machine_frame>, <item:techreborn:extractor>],
+    [<item:techreborn:steel_plate>, <item:oritech:processing_unit>, <item:techreborn:steel_plate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/primitive_distillation_tower", <item:techreborn:primitive_distillation_tower>, [
+    [<item:oritech:fluid_pipe>, <item:jsonreg:lv_electric_piston>, <item:oritech:fluid_pipe>],
+    [<item:oritech:fluid_pipe>, <item:techreborn:basic_machine_frame>, <item:oritech:fluid_pipe>],
+    [<item:techreborn:invar_plate>, <item:techreborn:solid_fuel_generator>, <item:techreborn:invar_plate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/small_iron_dust_from_iron_dust", <item:oritech:small_iron_dust> * 9, [
+    [<item:oritech:iron_dust>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/multiblock_builder", <item:techreborn:multiblock_builder>, [
+    [IIngredientEmpty.getInstance(), <item:minecraft:dirt>],
+    [IIngredientEmpty.getInstance(), <item:minecraft:iron_ingot>],
+    [IIngredientEmpty.getInstance(), <item:farmersdelight:iron_knife>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/large_compressor", <item:techreborn:large_compressor>, [
+    [<item:techreborn:aluminum_plate>, <item:techreborn:compressor>, <item:techreborn:aluminum_plate>],
+    [IIngredientEmpty.getInstance(), <item:techreborn:basic_machine_frame>, IIngredientEmpty.getInstance()],
+    [<item:techreborn:aluminum_plate>, <item:techreborn:compressor>, <item:techreborn:aluminum_plate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/large_lathe", <item:techreborn:large_lathe>, [
+    [<item:techreborn:aluminum_plate>, <item:oritech:motor>, <item:techreborn:aluminum_plate>],
+    [IIngredientEmpty.getInstance(), <item:techreborn:lathe>, IIngredientEmpty.getInstance()],
+    [<item:techreborn:aluminum_plate>, <item:jsonreg:refined_iron_rod>, <item:techreborn:aluminum_plate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/large_wire_mill", <item:techreborn:large_wire_mill>, [
+    [<item:techreborn:aluminum_plate>, <item:jsonreg:steel_rod>, <item:techreborn:aluminum_plate>],
+    [<item:oritech:motor>, <item:techreborn:wire_mill>, <item:oritech:motor>],
+    [<item:techreborn:aluminum_plate>, <item:jsonreg:steel_rod>, <item:techreborn:aluminum_plate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/precise_assembler", <item:techreborn:precise_assembler>, [
+    [<item:jsonreg:mv_robot_arm>, <item:techreborn:assembly_machine>, <item:jsonreg:mv_robot_arm>],
+    [<item:oritech:processing_unit>, <item:oritech:assembler_block>, <item:oritech:processing_unit>],
+    [<item:jsonreg:duratium_rod>, <item:techreborn:advanced_machine_frame>, <item:jsonreg:duratium_rod>]]);
 

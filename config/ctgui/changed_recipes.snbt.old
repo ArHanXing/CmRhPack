@@ -27,22 +27,22 @@
             recipe: {
                 category: "misc",
                 key: {
-                    c: {
+                    d: {
                         tag: "c:stripped_woods"
                     },
                     f: {
                         item: "minecraft:flint"
                     },
-                    o: {
-                        item: "farmersdelight:flint_knife"
-                    },
                     s: {
                         tag: "c:stripped_woods"
+                    },
+                    u: {
+                        item: "farmersdelight:flint_knife"
                     }
                 },
                 pattern: [
-                    "sc ",
-                    "fo ",
+                    "sd ",
+                    "fu ",
                     "   "
                 ],
                 result: {
@@ -131,7 +131,7 @@
                     i: {
                         item: "techreborn:iron_furnace"
                     },
-                    k: {
+                    l: {
                         item: "techreborn:refined_iron_ingot"
                     },
                     r: {
@@ -144,7 +144,7 @@
                 pattern: [
                     " r ",
                     " i ",
-                    "ksk"
+                    "lsl"
                 ],
                 result: {
                     count: 1,
@@ -202,20 +202,20 @@
                     c: {
                         tag: "c:ingots/copper"
                     },
-                    d: {
-                        item: "oritech:small_tank_block"
-                    },
                     m: {
                         item: "oritech:metal_beam_block"
                     },
                     s: {
                         item: "minecraft:slime_ball"
+                    },
+                    z: {
+                        item: "oritech:small_tank_block"
                     }
                 },
                 pattern: [
                     "ccc",
                     "cmc",
-                    "sds"
+                    "szs"
                 ],
                 result: {
                     count: 1,
@@ -362,7 +362,7 @@
             recipe: {
                 category: "misc",
                 key: {
-                    a: {
+                    c: {
                         item: "techreborn:obsidian_plate"
                     },
                     e: {
@@ -384,7 +384,7 @@
                 pattern: [
                     "lol",
                     "rey",
-                    "lal"
+                    "lcl"
                 ],
                 result: {
                     count: 1,
@@ -464,7 +464,7 @@
                     c: {
                         item: "advanced_reborn:cardboard_sheet"
                     },
-                    e: {
+                    m: {
                         item: "advanced_reborn:cardboard_sheet"
                     },
                     v: {
@@ -474,7 +474,7 @@
                 pattern: [
                     "c  ",
                     "v  ",
-                    "e  "
+                    "m  "
                 ],
                 result: {
                     count: 1,
@@ -500,13 +500,13 @@
                     f: {
                         item: "oritech:flux_gate"
                     },
-                    g: {
+                    o: {
                         item: "minecraft:dropper"
                     }
                 },
                 pattern: [
                     "ddd",
-                    "dgd",
+                    "dod",
                     "faf"
                 ],
                 result: {
@@ -525,16 +525,16 @@
                 category: "misc",
                 key: {
                     d: {
-                        item: "oritech:superconductor"
+                        item: "oritech:duratium_ingot"
                     },
                     e: {
                         tag: "c:ingots/electrum"
                     },
+                    h: {
+                        item: "oritech:superconductor"
+                    },
                     i: {
                         item: "oritech:ion_thruster"
-                    },
-                    j: {
-                        item: "oritech:duratium_ingot"
                     },
                     s: {
                         item: "oritech:superconductor"
@@ -542,8 +542,8 @@
                 },
                 pattern: [
                     " s ",
-                    "ede",
-                    "iji"
+                    "ehe",
+                    "idi"
                 ],
                 result: {
                     count: 4,
@@ -747,17 +747,17 @@
                     i: {
                         item: "techreborn:iron_plate"
                     },
+                    n: {
+                        item: "techreborn:iron_plate"
+                    },
                     p: {
                         tag: "c:plates/plastic"
-                    },
-                    y: {
-                        item: "techreborn:iron_plate"
                     }
                 },
                 pattern: [
                     " p ",
                     "eae",
-                    "iay"
+                    "ian"
                 ],
                 result: {
                     count: 1,
@@ -829,7 +829,7 @@
             recipe: {
                 category: "misc",
                 key: {
-                    b: {
+                    c: {
                         tag: "oritech:plating"
                     },
                     g: {
@@ -848,7 +848,7 @@
                 pattern: [
                     "ggg",
                     "msm",
-                    "pbp"
+                    "pcp"
                 ],
                 result: {
                     count: 1,
@@ -865,6 +865,9 @@
             recipe: {
                 category: "misc",
                 key: {
+                    b: {
+                        item: "minecraft:crafting_table"
+                    },
                     c: {
                         item: "toneko:catnip"
                     },
@@ -879,14 +882,11 @@
                     },
                     s: {
                         item: "minecraft:smithing_table"
-                    },
-                    z: {
-                        item: "minecraft:crafting_table"
                     }
                 },
                 pattern: [
                     "cnc",
-                    "zes",
+                    "bes",
                     "cic"
                 ],
                 result: {
@@ -985,19 +985,16 @@
             recipe: {
                 category: "misc",
                 key: {
+                    a: {
+                        item: "jsonreg:tiny_naquadah_dust"
+                    },
                     d: {
                         item: "jsonreg:tiny_naquadah_dust"
                     },
-                    e: {
+                    h: {
                         item: "jsonreg:tiny_naquadah_dust"
                     },
                     l: {
-                        item: "jsonreg:tiny_naquadah_dust"
-                    },
-                    o: {
-                        item: "jsonreg:tiny_naquadah_dust"
-                    },
-                    q: {
                         item: "jsonreg:tiny_naquadah_dust"
                     },
                     r: {
@@ -1006,14 +1003,17 @@
                     t: {
                         item: "jsonreg:tiny_naquadah_dust"
                     },
+                    u: {
+                        item: "jsonreg:tiny_naquadah_dust"
+                    },
                     z: {
                         item: "jsonreg:tiny_naquadah_dust"
                     }
                 },
                 pattern: [
-                    "tql",
-                    "zdo",
-                    "red"
+                    "tud",
+                    "hza",
+                    "rlz"
                 ],
                 result: {
                     count: 1,
@@ -1058,10 +1058,10 @@
             recipe: {
                 category: "misc",
                 key: {
-                    i: {
+                    a: {
                         item: "techreborn:refined_iron_plate"
                     },
-                    j: {
+                    f: {
                         item: "techreborn:refined_iron_plate"
                     },
                     m: {
@@ -1070,14 +1070,14 @@
                     r: {
                         item: "techreborn:refined_iron_plate"
                     },
-                    y: {
+                    z: {
                         item: "techreborn:refined_iron_plate"
                     }
                 },
                 pattern: [
                     " r ",
-                    "ymi",
-                    " j "
+                    "zmf",
+                    " a "
                 ],
                 result: {
                     count: 1,
@@ -1123,34 +1123,34 @@
                 category: "misc",
                 key: {
                     b: {
-                        item: "minecraft:bucket"
-                    },
-                    e: {
-                        item: "techreborn:invar_plate"
+                        item: "techreborn:steel_plate"
                     },
                     f: {
+                        item: "minecraft:bucket"
+                    },
+                    g: {
                         item: "techreborn:invar_plate"
                     },
                     i: {
                         item: "techreborn:invar_plate"
                     },
-                    j: {
-                        item: "oritech:basic_generator_block"
-                    },
                     l: {
-                        item: "techreborn:steel_plate"
+                        item: "oritech:basic_generator_block"
                     },
                     m: {
                         item: "oritech:magnetic_coil"
+                    },
+                    n: {
+                        item: "techreborn:invar_plate"
                     },
                     s: {
                         item: "techreborn:steel_plate"
                     }
                 },
                 pattern: [
-                    "sil",
-                    "fbe",
-                    "mjm"
+                    "sib",
+                    "gfn",
+                    "mlm"
                 ],
                 result: {
                     count: 1,
@@ -1178,14 +1178,14 @@
                     f: {
                         item: "oritech:fluxite"
                     },
-                    i: {
+                    y: {
                         item: "oritech:flux_gate"
                     }
                 },
                 pattern: [
                     "fff",
                     "faf",
-                    "ibi"
+                    "yby"
                 ],
                 result: {
                     count: 1,
@@ -1195,38 +1195,38 @@
             recipe: {
                 category: "misc",
                 key: {
+                    a: {
+                        item: "oritech:framed_energy_pipe"
+                    },
                     b: {
                         item: "oritech:basic_generator_block"
-                    },
-                    e: {
-                        item: "oritech:motor"
                     },
                     f: {
                         item: "oritech:framed_energy_pipe"
                     },
-                    k: {
+                    g: {
+                        item: "techreborn:lithium_ion_battery"
+                    },
+                    h: {
                         item: "techreborn:silicon_plate"
                     },
                     l: {
-                        item: "techreborn:lithium_ion_battery"
-                    },
-                    m: {
                         item: "techreborn:silicon_plate"
                     },
-                    r: {
-                        item: "oritech:framed_energy_pipe"
+                    m: {
+                        item: "oritech:motor"
+                    },
+                    p: {
+                        item: "techreborn:lithium_ion_battery"
                     },
                     s: {
                         item: "techreborn:silicon_plate"
-                    },
-                    w: {
-                        item: "techreborn:lithium_ion_battery"
                     }
                 },
                 pattern: [
-                    "smk",
-                    "fer",
-                    "lbw"
+                    "slh",
+                    "fma",
+                    "pbg"
                 ],
                 result: {
                     count: 1,
@@ -1392,7 +1392,7 @@
                     g: {
                         item: "techreborn:steel_plate"
                     },
-                    j: {
+                    i: {
                         item: "techreborn:steel_plate"
                     },
                     m: {
@@ -1408,7 +1408,7 @@
                 pattern: [
                     " m ",
                     "rsr",
-                    "gbj"
+                    "gbi"
                 ],
                 result: {
                     count: 1,
@@ -1453,29 +1453,29 @@
             recipe: {
                 category: "misc",
                 key: {
+                    b: {
+                        item: "techreborn:electronic_circuit"
+                    },
                     e: {
                         item: "techreborn:electronic_circuit"
                     },
                     i: {
                         tag: "c:plates/invar"
                     },
-                    k: {
-                        item: "techreborn:extractor"
+                    j: {
+                        item: "jsonreg:lv_conveyor_module"
                     },
                     l: {
                         item: "jsonreg:lv_robot_arm"
                     },
-                    r: {
-                        item: "techreborn:electronic_circuit"
-                    },
-                    s: {
-                        item: "jsonreg:lv_conveyor_module"
+                    v: {
+                        item: "techreborn:extractor"
                     }
                 },
                 pattern: [
                     "ili",
-                    "esr",
-                    "iki"
+                    "ejb",
+                    "ivi"
                 ],
                 result: {
                     count: 1,
@@ -1520,29 +1520,29 @@
                     b: {
                         item: "techreborn:basic_machine_frame"
                     },
-                    d: {
-                        item: "oritech:motor"
-                    },
                     e: {
                         item: "techreborn:electronic_circuit"
-                    },
-                    f: {
-                        item: "techreborn:refined_iron_ingot"
                     },
                     m: {
                         item: "oritech:motor"
                     },
+                    n: {
+                        item: "techreborn:refined_iron_ingot"
+                    },
+                    o: {
+                        item: "techreborn:refined_iron_ingot"
+                    },
                     r: {
                         item: "techreborn:refined_iron_ingot"
                     },
-                    x: {
-                        item: "techreborn:refined_iron_ingot"
+                    v: {
+                        item: "oritech:motor"
                     }
                 },
                 pattern: [
                     " r ",
-                    "med",
-                    "fbx"
+                    "mev",
+                    "obn"
                 ],
                 result: {
                     count: 1,
@@ -1590,13 +1590,13 @@
                     e: {
                         item: "techreborn:electronic_circuit"
                     },
+                    f: {
+                        item: "jsonreg:lv_robot_arm"
+                    },
                     l: {
                         item: "jsonreg:lv_robot_arm"
                     },
                     m: {
-                        item: "jsonreg:lv_robot_arm"
-                    },
-                    s: {
                         item: "oritech:motor"
                     },
                     t: {
@@ -1604,9 +1604,9 @@
                     }
                 },
                 pattern: [
-                    "lem",
+                    "lef",
                     " b ",
-                    "tst"
+                    "tmt"
                 ],
                 result: {
                     count: 1,
@@ -1626,26 +1626,26 @@
                     b: {
                         item: "techreborn:basic_machine_frame"
                     },
-                    f: {
-                        item: "techreborn:refined_iron_ingot"
-                    },
                     h: {
                         item: "jsonreg:holy_wooden_bucket"
                     },
                     m: {
                         item: "oritech:motor"
                     },
-                    n: {
-                        item: "oritech:motor"
+                    p: {
+                        item: "techreborn:refined_iron_ingot"
                     },
                     r: {
                         item: "techreborn:refined_iron_ingot"
+                    },
+                    y: {
+                        item: "oritech:motor"
                     }
                 },
                 pattern: [
                     " h ",
-                    "mbn",
-                    "r f"
+                    "mby",
+                    "r p"
                 ],
                 result: {
                     count: 1,
@@ -1693,11 +1693,11 @@
                     e: {
                         item: "techreborn:electronic_circuit"
                     },
-                    h: {
-                        item: "techreborn:refined_iron_ingot"
-                    },
                     m: {
                         item: "oritech:motor"
+                    },
+                    p: {
+                        item: "techreborn:refined_iron_ingot"
                     },
                     r: {
                         item: "techreborn:refined_iron_ingot"
@@ -1709,7 +1709,7 @@
                 pattern: [
                     " b ",
                     "tet",
-                    "rmh"
+                    "rmp"
                 ],
                 result: {
                     count: 1,
@@ -1731,11 +1731,11 @@
                     c: {
                         tag: "c:ingots/copper"
                     },
-                    f: {
-                        item: "oritech:small_tank_block"
-                    },
                     m: {
                         item: "oritech:metal_beam_block"
+                    },
+                    r: {
+                        item: "oritech:small_tank_block"
                     },
                     s: {
                         item: "oritech:silicon"
@@ -1744,7 +1744,7 @@
                 pattern: [
                     "ccc",
                     "cmc",
-                    "sfs"
+                    "srs"
                 ],
                 result: {
                     count: 1,
@@ -1757,11 +1757,8 @@
                     b: {
                         item: "techreborn:basic_tank_unit"
                     },
-                    d: {
+                    c: {
                         item: "techreborn:reinforced_glass"
-                    },
-                    g: {
-                        item: "techreborn:invar_ingot"
                     },
                     i: {
                         item: "techreborn:invar_ingot"
@@ -1775,13 +1772,16 @@
                     s: {
                         item: "oritech:silicon"
                     },
-                    u: {
+                    y: {
                         item: "techreborn:reinforced_glass"
+                    },
+                    z: {
+                        item: "techreborn:invar_ingot"
                     }
                 },
                 pattern: [
-                    "irg",
-                    "umd",
+                    "irz",
+                    "ymc",
                     "sbs"
                 ],
                 result: {
@@ -1833,8 +1833,8 @@
                     e: {
                         item: "techreborn:electronic_circuit"
                     },
-                    l: {
-                        item: "oritech:motor"
+                    g: {
+                        item: "jsonreg:steel_rod"
                     },
                     m: {
                         item: "oritech:motor"
@@ -1842,17 +1842,17 @@
                     s: {
                         item: "jsonreg:steel_rod"
                     },
-                    t: {
+                    u: {
                         item: "jsonreg:steel_rod"
                     },
-                    v: {
-                        item: "jsonreg:steel_rod"
+                    z: {
+                        item: "oritech:motor"
                     }
                 },
                 pattern: [
-                    "mbl",
-                    "sev",
-                    " t "
+                    "mbz",
+                    "seg",
+                    " u "
                 ],
                 result: {
                     count: 1,
@@ -1877,19 +1877,19 @@
                     e: {
                         item: "techreborn:extractor"
                     },
-                    k: {
+                    j: {
                         item: "techreborn:electronic_circuit"
-                    },
-                    o: {
-                        item: "techreborn:basic_machine_frame"
                     },
                     p: {
                         item: "minecraft:piston"
+                    },
+                    y: {
+                        item: "techreborn:basic_machine_frame"
                     }
                 },
                 pattern: [
                     "beb",
-                    "kok",
+                    "jyj",
                     "bpb"
                 ],
                 result: {
@@ -1903,26 +1903,26 @@
                     b: {
                         tag: "c:plates/brass"
                     },
+                    d: {
+                        item: "techreborn:basic_machine_frame"
+                    },
                     e: {
                         item: "techreborn:extractor"
                     },
                     m: {
                         item: "oritech:motor"
                     },
-                    o: {
-                        item: "techreborn:basic_machine_frame"
-                    },
                     s: {
-                        item: "techreborn:electronic_circuit"
+                        item: "oritech:motor"
                     },
                     u: {
-                        item: "oritech:motor"
+                        item: "techreborn:electronic_circuit"
                     }
                 },
                 pattern: [
                     "beb",
-                    "sos",
-                    "m u"
+                    "udu",
+                    "m s"
                 ],
                 result: {
                     count: 1,
@@ -1939,7 +1939,7 @@
             recipe: {
                 category: "misc",
                 key: {
-                    m: {
+                    e: {
                         item: "techreborn:refined_iron_ingot"
                     },
                     r: {
@@ -1948,7 +1948,7 @@
                 },
                 pattern: [
                     "r  ",
-                    "m  ",
+                    "e  ",
                     "   "
                 ],
                 result: {
@@ -1966,16 +1966,16 @@
             recipe: {
                 category: "misc",
                 key: {
-                    i: {
+                    h: {
                         item: "minecraft:iron_ingot"
                     },
-                    j: {
+                    i: {
                         item: "minecraft:iron_ingot"
                     }
                 },
                 pattern: [
                     "i  ",
-                    "j  ",
+                    "h  ",
                     "   "
                 ],
                 result: {
@@ -1996,13 +1996,13 @@
                     b: {
                         item: "techreborn:bronze_ingot"
                     },
-                    x: {
+                    y: {
                         item: "techreborn:bronze_ingot"
                     }
                 },
                 pattern: [
                     "b  ",
-                    "x  ",
+                    "y  ",
                     "   "
                 ],
                 result: {
@@ -2044,7 +2044,7 @@
             recipe: {
                 category: "misc",
                 key: {
-                    r: {
+                    o: {
                         item: "techreborn:steel_ingot"
                     },
                     s: {
@@ -2053,7 +2053,7 @@
                 },
                 pattern: [
                     "s  ",
-                    "r  ",
+                    "o  ",
                     "   "
                 ],
                 result: {
@@ -2071,16 +2071,16 @@
             recipe: {
                 category: "misc",
                 key: {
-                    i: {
+                    f: {
                         item: "techreborn:invar_ingot"
                     },
-                    m: {
+                    i: {
                         item: "techreborn:invar_ingot"
                     }
                 },
                 pattern: [
                     "i  ",
-                    "m  ",
+                    "f  ",
                     "   "
                 ],
                 result: {
@@ -2101,13 +2101,13 @@
                     c: {
                         item: "minecraft:copper_ingot"
                     },
-                    m: {
+                    x: {
                         item: "minecraft:copper_ingot"
                     }
                 },
                 pattern: [
                     "c  ",
-                    "m  ",
+                    "x  ",
                     "   "
                 ],
                 result: {
@@ -2150,7 +2150,7 @@
                     c: {
                         item: "jsonreg:copper_rod"
                     },
-                    h: {
+                    j: {
                         item: "jsonreg:copper_rod"
                     },
                     n: {
@@ -2159,14 +2159,14 @@
                     s: {
                         tag: "c:ingots/steel"
                     },
-                    u: {
+                    y: {
                         item: "jsonreg:copper_rod"
                     }
                 },
                 pattern: [
                     "ncn",
-                    "shs",
-                    "nun"
+                    "sjs",
+                    "nyn"
                 ],
                 result: {
                     count: 3,
@@ -2183,22 +2183,22 @@
             recipe: {
                 category: "misc",
                 key: {
-                    b: {
-                        item: "jsonreg:tiny_photon_dust"
-                    },
-                    d: {
+                    p: {
                         item: "jsonreg:tiny_photon_dust"
                     },
                     t: {
                         item: "jsonreg:tiny_photon_dust"
                     },
-                    w: {
+                    x: {
+                        item: "jsonreg:tiny_photon_dust"
+                    },
+                    z: {
                         item: "jsonreg:tiny_photon_dust"
                     }
                 },
                 pattern: [
-                    "td ",
-                    "bw ",
+                    "tp ",
+                    "zx ",
                     "   "
                 ],
                 result: {
@@ -2216,13 +2216,13 @@
             recipe: {
                 category: "misc",
                 key: {
-                    d: {
+                    f: {
                         item: "jsonreg:small_photon_dust"
                     },
-                    i: {
+                    k: {
                         item: "jsonreg:small_photon_dust"
                     },
-                    o: {
+                    m: {
                         item: "jsonreg:small_photon_dust"
                     },
                     s: {
@@ -2230,8 +2230,8 @@
                     }
                 },
                 pattern: [
-                    "sd ",
-                    "oi ",
+                    "sf ",
+                    "km ",
                     "   "
                 ],
                 result: {
@@ -2257,17 +2257,17 @@
                     e: {
                         tag: "c:ingots/electrum"
                     },
-                    f: {
-                        tag: "oritech:plating"
-                    },
                     m: {
                         item: "oritech:magnetic_coil"
+                    },
+                    s: {
+                        tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     "eee",
                     "eme",
-                    "fbf"
+                    "sbs"
                 ],
                 result: {
                     count: 1,
@@ -2277,38 +2277,38 @@
             recipe: {
                 category: "misc",
                 key: {
-                    a: {
-                        item: "techreborn:electrum_plate"
-                    },
                     b: {
-                        item: "techreborn:basic_tank_unit"
+                        item: "techreborn:electrum_plate"
                     },
                     e: {
                         item: "techreborn:electronic_circuit"
                     },
-                    l: {
-                        item: "oritech:basic_generator_block"
+                    h: {
+                        item: "techreborn:electrum_plate"
+                    },
+                    j: {
+                        item: "techreborn:steel_plate"
                     },
                     m: {
                         item: "oritech:magnetic_coil"
                     },
-                    q: {
-                        item: "techreborn:steel_plate"
+                    r: {
+                        item: "oritech:basic_generator_block"
                     },
                     s: {
                         item: "techreborn:steel_plate"
                     },
-                    v: {
-                        item: "techreborn:electrum_plate"
-                    },
-                    w: {
+                    u: {
                         item: "oritech:magnetic_coil"
+                    },
+                    z: {
+                        item: "techreborn:basic_tank_unit"
                     }
                 },
                 pattern: [
-                    "seq",
-                    "abv",
-                    "mlw"
+                    "sej",
+                    "bzh",
+                    "mru"
                 ],
                 result: {
                     count: 1,
@@ -2362,11 +2362,8 @@
                     d: {
                         item: "jsonreg:duratium_plate"
                     },
-                    n: {
-                        item: "techreborn:tungstensteel_plate"
-                    },
                     r: {
-                        item: "jsonreg:rotor"
+                        item: "techreborn:steel_plate"
                     },
                     s: {
                         item: "techreborn:steel_plate"
@@ -2375,13 +2372,16 @@
                         item: "techreborn:tungstensteel_plate"
                     },
                     u: {
-                        item: "techreborn:steel_plate"
+                        item: "techreborn:tungstensteel_plate"
+                    },
+                    v: {
+                        item: "jsonreg:rotor"
                     }
                 },
                 pattern: [
-                    "tdn",
-                    "sau",
-                    "brb"
+                    "tdu",
+                    "sar",
+                    "bvb"
                 ],
                 result: {
                     count: 1,
@@ -2459,10 +2459,10 @@
                     b: {
                         item: "techreborn:basic_tank_unit"
                     },
-                    g: {
-                        item: "techreborn:solid_fuel_generator"
+                    d: {
+                        item: "techreborn:steel_plate"
                     },
-                    n: {
+                    i: {
                         item: "oritech:processing_unit"
                     },
                     p: {
@@ -2474,14 +2474,14 @@
                     s: {
                         item: "techreborn:steel_plate"
                     },
-                    z: {
-                        item: "techreborn:steel_plate"
+                    t: {
+                        item: "techreborn:solid_fuel_generator"
                     }
                 },
                 pattern: [
                     "ara",
-                    "sbz",
-                    "pgn"
+                    "sbd",
+                    "pti"
                 ],
                 result: {
                     count: 1,
@@ -2565,9 +2565,6 @@
                     e: {
                         item: "techreborn:electronic_circuit"
                     },
-                    h: {
-                        item: "techreborn:reinforced_glass"
-                    },
                     i: {
                         tag: "c:plates/iron"
                     },
@@ -2576,11 +2573,14 @@
                     },
                     s: {
                         item: "techreborn:solid_fuel_generator"
+                    },
+                    u: {
+                        item: "techreborn:reinforced_glass"
                     }
                 },
                 pattern: [
                     "iri",
-                    "ihi",
+                    "iui",
                     "ese"
                 ],
                 result: {
@@ -2638,20 +2638,20 @@
                     a: {
                         tag: "c:plates/aluminum"
                     },
+                    i: {
+                        item: "techreborn:advanced_circuit"
+                    },
                     r: {
                         item: "techreborn:reinforced_glass"
                     },
                     w: {
                         item: "techreborn:wind_mill"
-                    },
-                    x: {
-                        item: "techreborn:advanced_circuit"
                     }
                 },
                 pattern: [
-                    "axa",
+                    "aia",
                     "wrw",
-                    "axa"
+                    "aia"
                 ],
                 result: {
                     count: 1,
@@ -2665,9 +2665,6 @@
                     a: {
                         tag: "c:plates/aluminum"
                     },
-                    m: {
-                        item: "oritech:processing_unit"
-                    },
                     p: {
                         item: "oritech:processing_unit"
                     },
@@ -2676,12 +2673,15 @@
                     },
                     w: {
                         item: "techreborn:wind_mill"
+                    },
+                    y: {
+                        item: "oritech:processing_unit"
                     }
                 },
                 pattern: [
                     "apa",
                     "wrw",
-                    "ama"
+                    "aya"
                 ],
                 result: {
                     count: 1,
@@ -2698,38 +2698,38 @@
             recipe: {
                 category: "misc",
                 key: {
-                    d: {
-                        item: "techreborn:insulated_copper_cable"
+                    b: {
+                        item: "techreborn:steel_plate"
                     },
-                    h: {
+                    c: {
+                        item: "techreborn:steel_plate"
+                    },
+                    g: {
                         item: "jsonreg:steel_rod"
                     },
                     i: {
-                        item: "techreborn:steel_plate"
+                        item: "techreborn:insulated_copper_cable"
                     },
                     m: {
                         item: "oritech:motor"
                     },
-                    r: {
-                        item: "jsonreg:steel_rod"
-                    },
                     s: {
                         item: "techreborn:steel_plate"
                     },
-                    w: {
-                        item: "techreborn:steel_plate"
+                    u: {
+                        item: "jsonreg:steel_rod"
+                    },
+                    v: {
+                        item: "jsonreg:steel_rod"
                     },
                     y: {
                         item: "techreborn:insulated_copper_cable"
-                    },
-                    z: {
-                        item: "jsonreg:steel_rod"
                     }
                 },
                 pattern: [
-                    "swi",
-                    "drz",
-                    "ymh"
+                    "sbc",
+                    "ivu",
+                    "ymg"
                 ],
                 result: {
                     count: 1,
@@ -2746,38 +2746,38 @@
             recipe: {
                 category: "misc",
                 key: {
-                    b: {
-                        item: "jsonreg:rubber_plate"
-                    },
-                    d: {
-                        item: "jsonreg:rubber_plate"
-                    },
-                    e: {
-                        item: "jsonreg:rubber_plate"
-                    },
                     i: {
                         item: "techreborn:insulated_copper_cable"
+                    },
+                    l: {
+                        item: "jsonreg:rubber_plate"
                     },
                     m: {
                         item: "oritech:motor"
                     },
-                    n: {
+                    o: {
+                        item: "jsonreg:rubber_plate"
+                    },
+                    q: {
                         item: "jsonreg:rubber_plate"
                     },
                     r: {
                         item: "jsonreg:rubber_plate"
                     },
-                    u: {
+                    t: {
+                        item: "jsonreg:rubber_plate"
+                    },
+                    w: {
                         item: "oritech:motor"
                     },
-                    v: {
+                    x: {
                         item: "jsonreg:rubber_plate"
                     }
                 },
                 pattern: [
-                    "rnb",
-                    "miu",
-                    "dve"
+                    "rql",
+                    "miw",
+                    "xot"
                 ],
                 result: {
                     count: 1,
@@ -2794,17 +2794,14 @@
             recipe: {
                 category: "misc",
                 key: {
+                    d: {
+                        item: "techreborn:insulated_copper_cable"
+                    },
                     e: {
                         item: "techreborn:electronic_circuit"
                     },
-                    g: {
-                        item: "techreborn:insulated_copper_cable"
-                    },
                     i: {
                         item: "techreborn:insulated_copper_cable"
-                    },
-                    j: {
-                        item: "jsonreg:steel_rod"
                     },
                     l: {
                         item: "jsonreg:lv_electric_piston"
@@ -2812,20 +2809,23 @@
                     m: {
                         item: "oritech:motor"
                     },
-                    s: {
-                        item: "techreborn:insulated_copper_cable"
-                    },
-                    t: {
+                    o: {
                         item: "oritech:motor"
                     },
-                    u: {
+                    s: {
+                        item: "jsonreg:steel_rod"
+                    },
+                    t: {
+                        item: "techreborn:insulated_copper_cable"
+                    },
+                    v: {
                         item: "jsonreg:steel_rod"
                     }
                 },
                 pattern: [
-                    "isg",
-                    "mjt",
-                    "leu"
+                    "idt",
+                    "mso",
+                    "lev"
                 ],
                 result: {
                     count: 1,
@@ -3050,7 +3050,7 @@
                 category: "misc",
                 group: "insulated_hv_cable",
                 key: {
-                    k: {
+                    b: {
                         item: "techreborn:refined_iron_ingot"
                     },
                     r: {
@@ -3059,7 +3059,7 @@
                 },
                 pattern: [
                     "rrr",
-                    "rkr",
+                    "rbr",
                     "rrr"
                 ],
                 result: {
@@ -3139,18 +3139,18 @@
             recipe: {
                 category: "misc",
                 key: {
-                    r: {
+                    j: {
+                        item: "techreborn:silver_ingot"
+                    },
+                    k: {
                         item: "techreborn:silver_ingot"
                     },
                     s: {
                         item: "techreborn:silver_ingot"
-                    },
-                    u: {
-                        item: "techreborn:silver_ingot"
                     }
                 },
                 pattern: [
-                    "sru",
+                    "skj",
                     "   ",
                     "   "
                 ],
@@ -3180,17 +3180,17 @@
                     m: {
                         item: "oritech:motor"
                     },
-                    t: {
-                        tag: "oritech:plating"
-                    },
-                    x: {
+                    q: {
                         item: "minecraft:chest"
+                    },
+                    s: {
+                        tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     "dcd",
-                    "mxm",
-                    "ttt"
+                    "mqm",
+                    "sss"
                 ],
                 result: {
                     count: 1,
@@ -3200,29 +3200,29 @@
             recipe: {
                 category: "misc",
                 key: {
+                    b: {
+                        item: "jsonreg:mv_robot_arm"
+                    },
                     c: {
                         tag: "c:carbon_fibre"
                     },
                     d: {
                         item: "oritech:dubios_container"
                     },
-                    g: {
-                        item: "jsonreg:mv_emitter"
-                    },
-                    h: {
+                    j: {
                         tag: "oritech:plating"
                     },
                     m: {
                         item: "jsonreg:mv_sensor"
                     },
-                    y: {
-                        item: "jsonreg:mv_robot_arm"
+                    q: {
+                        item: "jsonreg:mv_emitter"
                     }
                 },
                 pattern: [
                     "dcd",
-                    "myg",
-                    "hhh"
+                    "mbq",
+                    "jjj"
                 ],
                 result: {
                     count: 1,
@@ -3300,11 +3300,11 @@
             originalRecipe: {
                 category: "misc",
                 key: {
-                    d: {
-                        tag: "oritech:plating"
-                    },
                     f: {
                         item: "oritech:flux_gate"
+                    },
+                    l: {
+                        tag: "oritech:plating"
                     },
                     m: {
                         item: "oritech:motor"
@@ -3316,7 +3316,7 @@
                 pattern: [
                     "ppp",
                     "pfp",
-                    "mdm"
+                    "mlm"
                 ],
                 result: {
                     count: 1,
@@ -3329,35 +3329,35 @@
                     a: {
                         item: "techreborn:advanced_machine_casing"
                     },
-                    c: {
-                        item: "oritech:plastic_sheet"
-                    },
-                    d: {
+                    b: {
                         item: "jsonreg:mv_electric_motor"
                     },
                     f: {
-                        item: "oritech:flux_gate"
-                    },
-                    g: {
-                        item: "jsonreg:mv_robot_arm"
+                        item: "jsonreg:mv_conveyor_module"
                     },
                     j: {
-                        item: "jsonreg:mv_conveyor_module"
+                        item: "jsonreg:mv_electric_motor"
                     },
                     m: {
                         item: "jsonreg:mv_conveyor_module"
                     },
-                    o: {
-                        item: "jsonreg:mv_electric_motor"
-                    },
                     p: {
+                        item: "oritech:plastic_sheet"
+                    },
+                    r: {
+                        item: "oritech:flux_gate"
+                    },
+                    u: {
+                        item: "jsonreg:mv_robot_arm"
+                    },
+                    z: {
                         item: "oritech:plastic_sheet"
                     }
                 },
                 pattern: [
-                    "mgj",
-                    "pfc",
-                    "oad"
+                    "muf",
+                    "prz",
+                    "jab"
                 ],
                 result: {
                     count: 1,
@@ -3377,35 +3377,35 @@
                     a: {
                         item: "techreborn:aluminum_plate"
                     },
-                    g: {
+                    b: {
+                        item: "techreborn:aluminum_plate"
+                    },
+                    d: {
                         item: "jsonreg:aluminum_rod"
                     },
                     i: {
                         item: "techreborn:insulated_gold_cable"
                     },
-                    k: {
-                        item: "techreborn:insulated_gold_cable"
-                    },
                     m: {
                         item: "jsonreg:mv_electric_motor"
                     },
-                    o: {
-                        item: "techreborn:aluminum_plate"
+                    n: {
+                        item: "jsonreg:aluminum_rod"
+                    },
+                    t: {
+                        item: "techreborn:insulated_gold_cable"
                     },
                     u: {
                         item: "jsonreg:aluminum_rod"
                     },
-                    v: {
+                    w: {
                         item: "techreborn:aluminum_plate"
-                    },
-                    x: {
-                        item: "jsonreg:aluminum_rod"
                     }
                 },
                 pattern: [
-                    "avo",
-                    "ixu",
-                    "kmg"
+                    "awb",
+                    "ind",
+                    "tmu"
                 ],
                 result: {
                     count: 1,
@@ -3426,34 +3426,34 @@
                         item: "jsonreg:aluminum_rod"
                     },
                     b: {
-                        item: "techreborn:insulated_gold_cable"
+                        item: "jsonreg:mv_electric_piston"
+                    },
+                    g: {
+                        item: "jsonreg:aluminum_rod"
+                    },
+                    h: {
+                        item: "jsonreg:mv_electric_motor"
                     },
                     i: {
                         item: "techreborn:insulated_gold_cable"
                     },
-                    k: {
-                        item: "jsonreg:mv_electric_motor"
-                    },
                     m: {
                         item: "jsonreg:mv_electric_motor"
                     },
-                    p: {
-                        item: "jsonreg:aluminum_rod"
-                    },
-                    s: {
-                        item: "techreborn:advanced_circuit"
-                    },
-                    w: {
-                        item: "jsonreg:mv_electric_piston"
-                    },
-                    z: {
+                    t: {
                         item: "techreborn:insulated_gold_cable"
+                    },
+                    v: {
+                        item: "techreborn:insulated_gold_cable"
+                    },
+                    y: {
+                        item: "techreborn:advanced_circuit"
                     }
                 },
                 pattern: [
-                    "ibz",
-                    "mak",
-                    "wsp"
+                    "itv",
+                    "mah",
+                    "byg"
                 ],
                 result: {
                     count: 1,
@@ -3470,16 +3470,22 @@
             recipe: {
                 category: "misc",
                 key: {
+                    d: {
+                        item: "jsonreg:polyethylene_plate"
+                    },
+                    f: {
+                        item: "jsonreg:polyethylene_plate"
+                    },
+                    g: {
+                        item: "jsonreg:polyethylene_plate"
+                    },
                     i: {
                         item: "techreborn:insulated_gold_cable"
                     },
-                    j: {
-                        item: "jsonreg:polyethylene_plate"
-                    },
-                    m: {
+                    k: {
                         item: "jsonreg:mv_electric_motor"
                     },
-                    o: {
+                    m: {
                         item: "jsonreg:mv_electric_motor"
                     },
                     p: {
@@ -3488,20 +3494,14 @@
                     q: {
                         item: "jsonreg:polyethylene_plate"
                     },
-                    r: {
-                        item: "jsonreg:polyethylene_plate"
-                    },
                     v: {
-                        item: "jsonreg:polyethylene_plate"
-                    },
-                    z: {
                         item: "jsonreg:polyethylene_plate"
                     }
                 },
                 pattern: [
-                    "pvj",
-                    "mio",
-                    "qrz"
+                    "pdg",
+                    "mik",
+                    "fvq"
                 ],
                 result: {
                     count: 1,
@@ -3521,29 +3521,29 @@
                     a: {
                         item: "techreborn:aluminum_plate"
                     },
-                    c: {
-                        item: "techreborn:advanced_circuit"
-                    },
                     e: {
                         item: "jsonreg:electrum_rod"
                     },
                     g: {
                         item: "techreborn:aluminum_plate"
                     },
-                    m: {
+                    k: {
                         item: "techreborn:aluminum_plate"
                     },
-                    n: {
+                    l: {
                         item: "techreborn:aluminum_plate"
                     },
                     q: {
                         tag: "c:gems/quartz"
+                    },
+                    u: {
+                        item: "techreborn:advanced_circuit"
                     }
                 },
                 pattern: [
                     "a q",
-                    "ne ",
-                    "cmg"
+                    "ke ",
+                    "ugl"
                 ],
                 result: {
                     count: 1,
@@ -3563,35 +3563,35 @@
                     a: {
                         item: "techreborn:advanced_circuit"
                     },
-                    c: {
+                    d: {
                         item: "techreborn:insulated_gold_cable"
                     },
                     e: {
                         item: "jsonreg:electrum_rod"
                     },
-                    f: {
+                    h: {
                         item: "jsonreg:electrum_rod"
                     },
                     i: {
                         item: "techreborn:insulated_gold_cable"
                     },
-                    k: {
-                        item: "jsonreg:electrum_rod"
+                    l: {
+                        item: "techreborn:advanced_circuit"
                     },
-                    r: {
-                        item: "jsonreg:electrum_rod"
-                    },
-                    v: {
+                    o: {
                         item: "minecraft:emerald"
                     },
-                    x: {
-                        item: "techreborn:advanced_circuit"
+                    q: {
+                        item: "jsonreg:electrum_rod"
+                    },
+                    u: {
+                        item: "jsonreg:electrum_rod"
                     }
                 },
                 pattern: [
                     "iea",
-                    "kvf",
-                    "xrc"
+                    "qou",
+                    "lhd"
                 ],
                 result: {
                     count: 1,
@@ -3608,11 +3608,11 @@
             recipe: {
                 category: "misc",
                 key: {
-                    c: {
+                    d: {
                         item: "jsonreg:duratium_rod"
                     },
-                    d: {
-                        item: "jsonreg:naquadah_rod"
+                    g: {
+                        item: "jsonreg:naquadah_plate"
                     },
                     h: {
                         item: "jsonreg:hv_electric_motor"
@@ -3620,26 +3620,26 @@
                     i: {
                         item: "techreborn:insulated_hv_cable"
                     },
+                    m: {
+                        item: "jsonreg:naquadah_rod"
+                    },
                     n: {
                         item: "jsonreg:naquadah_plate"
                     },
-                    v: {
+                    r: {
                         item: "techreborn:insulated_hv_cable"
                     },
-                    x: {
+                    t: {
                         item: "jsonreg:naquadah_plate"
                     },
-                    y: {
+                    u: {
                         item: "jsonreg:naquadah_rod"
-                    },
-                    z: {
-                        item: "jsonreg:naquadah_plate"
                     }
                 },
                 pattern: [
-                    "nzx",
-                    "idy",
-                    "vhc"
+                    "ngt",
+                    "imu",
+                    "rhd"
                 ],
                 result: {
                     count: 1,
@@ -3656,8 +3656,11 @@
             recipe: {
                 category: "misc",
                 key: {
+                    b: {
+                        item: "techreborn:industrial_circuit"
+                    },
                     d: {
-                        item: "techreborn:insulated_hv_cable"
+                        item: "jsonreg:duratium_rod"
                     },
                     h: {
                         item: "jsonreg:hv_electric_motor"
@@ -3665,29 +3668,26 @@
                     i: {
                         item: "techreborn:insulated_hv_cable"
                     },
-                    j: {
-                        item: "jsonreg:hv_electric_motor"
-                    },
-                    l: {
-                        item: "techreborn:industrial_circuit"
-                    },
                     n: {
                         item: "jsonreg:naquadah_rod"
                     },
-                    t: {
-                        item: "jsonreg:duratium_rod"
+                    o: {
+                        item: "techreborn:insulated_hv_cable"
                     },
-                    v: {
+                    r: {
                         item: "jsonreg:hv_electric_piston"
                     },
-                    z: {
+                    s: {
+                        item: "jsonreg:hv_electric_motor"
+                    },
+                    t: {
                         item: "techreborn:insulated_hv_cable"
                     }
                 },
                 pattern: [
-                    "izd",
-                    "htj",
-                    "vln"
+                    "iot",
+                    "hds",
+                    "rbn"
                 ],
                 result: {
                     count: 1,
@@ -3704,38 +3704,38 @@
             recipe: {
                 category: "misc",
                 key: {
-                    f: {
+                    a: {
                         item: "jsonreg:pbi_plate"
                     },
                     g: {
-                        item: "jsonreg:pbi_plate"
+                        item: "jsonreg:hv_electric_motor"
                     },
                     h: {
                         item: "jsonreg:hv_electric_motor"
                     },
                     i: {
-                        item: "techreborn:insulated_hv_cable"
+                        item: "jsonreg:pbi_plate"
                     },
-                    o: {
-                        item: "jsonreg:hv_electric_motor"
+                    j: {
+                        item: "jsonreg:pbi_plate"
                     },
                     p: {
                         item: "jsonreg:pbi_plate"
                     },
-                    s: {
+                    q: {
                         item: "jsonreg:pbi_plate"
                     },
-                    w: {
+                    x: {
                         item: "jsonreg:pbi_plate"
                     },
                     y: {
-                        item: "jsonreg:pbi_plate"
+                        item: "techreborn:insulated_hv_cable"
                     }
                 },
                 pattern: [
-                    "pyw",
-                    "hio",
-                    "gfs"
+                    "piq",
+                    "hyg",
+                    "xaj"
                 ],
                 result: {
                     count: 1,
@@ -3783,19 +3783,19 @@
                     a: {
                         item: "oritech:adamant_ingot"
                     },
+                    d: {
+                        item: "oritech:enderic_lens"
+                    },
                     e: {
                         item: "oritech:enderic_lens"
                     },
-                    l: {
+                    h: {
                         item: "jsonreg:mv_electric_motor"
                     },
                     m: {
                         item: "jsonreg:mv_robot_arm"
                     },
                     o: {
-                        item: "oritech:enderic_lens"
-                    },
-                    p: {
                         item: "techreborn:steel_plate"
                     },
                     s: {
@@ -3804,8 +3804,8 @@
                 },
                 pattern: [
                     " m ",
-                    "eao",
-                    "lsp"
+                    "ead",
+                    "hso"
                 ],
                 result: {
                     count: 1,
@@ -3853,26 +3853,26 @@
                     a: {
                         item: "oritech:adamant_ingot"
                     },
-                    c: {
-                        item: "jsonreg:steel_rod"
-                    },
                     e: {
                         item: "oritech:enderic_lens"
+                    },
+                    i: {
+                        item: "jsonreg:mv_electric_motor"
                     },
                     m: {
                         item: "jsonreg:mv_robot_arm"
                     },
+                    r: {
+                        item: "jsonreg:steel_rod"
+                    },
                     s: {
                         item: "techreborn:steel_plate"
-                    },
-                    v: {
-                        item: "jsonreg:mv_electric_motor"
                     }
                 },
                 pattern: [
                     " em",
                     " a ",
-                    "vsc"
+                    "isr"
                 ],
                 result: {
                     count: 1,
@@ -3914,7 +3914,7 @@
                     c: {
                         item: "techreborn:carbon_plate"
                     },
-                    d: {
+                    g: {
                         item: "techreborn:carbon_plate"
                     },
                     l: {
@@ -3923,14 +3923,14 @@
                     m: {
                         item: "jsonreg:mv_electric_piston"
                     },
-                    q: {
+                    n: {
                         item: "techreborn:lead_plate"
                     }
                 },
                 pattern: [
                     " c ",
-                    "lmq",
-                    " d "
+                    "lmn",
+                    " g "
                 ],
                 result: {
                     count: 1,
@@ -3949,9 +3949,6 @@
             originalRecipe: {
                 category: "misc",
                 key: {
-                    a: {
-                        tag: "oritech:plating"
-                    },
                     i: {
                         item: "minecraft:iron_sword"
                     },
@@ -3960,12 +3957,15 @@
                     },
                     p: {
                         tag: "c:plates/plastic"
+                    },
+                    t: {
+                        tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     "ppp",
                     "pip",
-                    "mam"
+                    "mtm"
                 ],
                 result: {
                     count: 1,
@@ -3975,32 +3975,32 @@
             recipe: {
                 category: "misc",
                 key: {
-                    a: {
-                        item: "oritech:plastic_sheet"
+                    c: {
+                        item: "jsonreg:mv_electric_motor"
                     },
                     d: {
                         tag: "minecraft:swords"
                     },
+                    g: {
+                        item: "oritech:plastic_sheet"
+                    },
+                    l: {
+                        item: "oritech:plastic_sheet"
+                    },
                     m: {
                         item: "jsonreg:mv_sensor"
-                    },
-                    n: {
-                        item: "jsonreg:mv_electric_motor"
                     },
                     p: {
                         item: "oritech:plastic_sheet"
                     },
-                    q: {
-                        item: "oritech:plastic_sheet"
-                    },
-                    z: {
+                    t: {
                         item: "jsonreg:mv_electric_motor"
                     }
                 },
                 pattern: [
                     " m ",
-                    "pda",
-                    "zqn"
+                    "pdl",
+                    "tgc"
                 ],
                 result: {
                     count: 1,
@@ -4019,11 +4019,11 @@
             originalRecipe: {
                 category: "misc",
                 key: {
+                    b: {
+                        tag: "oritech:plating"
+                    },
                     c: {
                         tag: "c:carbon_fibre"
-                    },
-                    i: {
-                        tag: "oritech:plating"
                     },
                     m: {
                         item: "oritech:motor"
@@ -4035,7 +4035,7 @@
                 pattern: [
                     "ccc",
                     "cpc",
-                    "mim"
+                    "mbm"
                 ],
                 result: {
                     count: 1,
@@ -4045,32 +4045,32 @@
             recipe: {
                 category: "misc",
                 key: {
+                    a: {
+                        item: "jsonreg:mv_electric_motor"
+                    },
+                    b: {
+                        item: "techreborn:carbon_plate"
+                    },
                     c: {
                         item: "techreborn:carbon_plate"
                     },
-                    i: {
-                        item: "techreborn:carbon_plate"
+                    g: {
+                        item: "jsonreg:mv_electric_motor"
                     },
                     m: {
                         item: "jsonreg:mv_robot_arm"
                     },
-                    o: {
-                        item: "jsonreg:mv_electric_motor"
-                    },
-                    q: {
-                        tag: "oritech:plating"
-                    },
-                    t: {
-                        item: "jsonreg:mv_electric_motor"
-                    },
-                    y: {
+                    u: {
                         item: "jsonreg:mv_sensor"
+                    },
+                    z: {
+                        tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     " m ",
-                    "cyi",
-                    "tqo"
+                    "cub",
+                    "gza"
                 ],
                 result: {
                     count: 1,
@@ -4098,14 +4098,14 @@
                     m: {
                         item: "oritech:motor"
                     },
-                    w: {
+                    x: {
                         item: "minecraft:ice"
                     }
                 },
                 pattern: [
                     "iii",
                     "imi",
-                    "wcw"
+                    "xcx"
                 ],
                 result: {
                     count: 1,
@@ -4118,16 +4118,10 @@
                     c: {
                         item: "minecraft:cauldron"
                     },
-                    d: {
-                        item: "techreborn:iron_plate"
-                    },
-                    g: {
-                        item: "techreborn:iron_plate"
-                    },
                     i: {
                         item: "techreborn:iron_plate"
                     },
-                    l: {
+                    j: {
                         item: "techreborn:iron_plate"
                     },
                     m: {
@@ -4136,17 +4130,23 @@
                     n: {
                         item: "techreborn:nak_coolant_cell_180k"
                     },
-                    r: {
+                    p: {
+                        item: "techreborn:iron_plate"
+                    },
+                    t: {
                         item: "jsonreg:mv_electric_piston"
                     },
-                    v: {
+                    x: {
+                        item: "techreborn:iron_plate"
+                    },
+                    y: {
                         item: "jsonreg:mv_electric_piston"
                     }
                 },
                 pattern: [
-                    "ing",
-                    "lmd",
-                    "rcv"
+                    "inj",
+                    "xmp",
+                    "tcy"
                 ],
                 result: {
                     count: 1,
@@ -4166,7 +4166,7 @@
                     a: {
                         item: "oritech:advanced_computing_engine"
                     },
-                    i: {
+                    d: {
                         tag: "oritech:plating"
                     },
                     m: {
@@ -4182,7 +4182,7 @@
                 pattern: [
                     "aua",
                     "msm",
-                    "iii"
+                    "ddd"
                 ],
                 result: {
                     count: 1,
@@ -4204,8 +4204,8 @@
                     a: {
                         item: "oritech:advanced_computing_engine"
                     },
-                    d: {
-                        item: "oritech:superconductor"
+                    g: {
+                        tag: "oritech:plating"
                     },
                     m: {
                         item: "oritech:motor"
@@ -4213,14 +4213,14 @@
                     s: {
                         item: "oritech:super_ai_chip"
                     },
-                    u: {
-                        tag: "oritech:plating"
+                    x: {
+                        item: "oritech:superconductor"
                     }
                 },
                 pattern: [
                     "asa",
-                    "mdm",
-                    "uuu"
+                    "mxm",
+                    "ggg"
                 ],
                 result: {
                     count: 1,
@@ -4236,29 +4236,29 @@
                     b: {
                         item: "techreborn:bronze_plate"
                     },
-                    i: {
+                    c: {
+                        item: "techreborn:advanced_machine_casing"
+                    },
+                    d: {
                         item: "techreborn:bronze_plate"
                     },
-                    j: {
-                        item: "techreborn:advanced_machine_casing"
-                    },
-                    l: {
-                        item: "techreborn:advanced_machine_casing"
+                    e: {
+                        item: "jsonreg:mv_emitter"
                     },
                     m: {
                         item: "jsonreg:mv_electric_motor"
                     },
-                    q: {
+                    r: {
                         item: "jsonreg:mv_sensor"
                     },
-                    v: {
-                        item: "jsonreg:mv_emitter"
+                    y: {
+                        item: "techreborn:advanced_machine_casing"
                     }
                 },
                 pattern: [
                     "ama",
-                    "qlv",
-                    "bji"
+                    "rce",
+                    "byd"
                 ],
                 result: {
                     count: 1,
@@ -4283,20 +4283,20 @@
                     e: {
                         tag: "c:ingots/electrum"
                     },
+                    i: {
+                        tag: "oritech:plating"
+                    },
                     m: {
                         item: "oritech:motor"
                     },
                     u: {
                         item: "oritech:unholy_intelligence"
-                    },
-                    z: {
-                        tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     "mem",
                     "ucu",
-                    "zzz"
+                    "iii"
                 ],
                 result: {
                     count: 1,
@@ -4306,7 +4306,7 @@
             recipe: {
                 category: "misc",
                 key: {
-                    b: {
+                    a: {
                         tag: "oritech:plating"
                     },
                     e: {
@@ -4318,20 +4318,20 @@
                     m: {
                         item: "oritech:machine_burst_addon"
                     },
-                    o: {
-                        item: "techreborn:electrum_plate"
-                    },
                     s: {
                         item: "oritech:super_ai_chip"
                     },
-                    w: {
+                    u: {
+                        item: "techreborn:electrum_plate"
+                    },
+                    x: {
                         item: "jsonreg:hv_electric_motor"
                     }
                 },
                 pattern: [
-                    "hmw",
-                    "eso",
-                    "bbb"
+                    "hmx",
+                    "esu",
+                    "aaa"
                 ],
                 result: {
                     count: 1,
@@ -4356,13 +4356,13 @@
                     s: {
                         item: "oritech:superconductor"
                     },
-                    x: {
+                    w: {
                         item: "oritech:still_strange_matter_bucket"
                     }
                 },
                 pattern: [
                     "ddd",
-                    "sxs",
+                    "sws",
                     "ddd"
                 ],
                 result: {
@@ -4373,6 +4373,12 @@
             recipe: {
                 category: "misc",
                 key: {
+                    c: {
+                        item: "jsonreg:gravi_star"
+                    },
+                    d: {
+                        item: "jsonreg:hv_robot_arm"
+                    },
                     g: {
                         item: "botania:gaia_ingot"
                     },
@@ -4382,26 +4388,20 @@
                     i: {
                         item: "techreborn:industrial_machine_casing"
                     },
-                    o: {
-                        item: "jsonreg:hv_robot_arm"
+                    m: {
+                        item: "jsonreg:hv_conveyor_module"
                     },
                     s: {
-                        item: "jsonreg:hv_conveyor_module"
-                    },
-                    u: {
                         item: "oritech:superconductor"
                     },
-                    v: {
+                    w: {
                         item: "jsonreg:hv_conveyor_module"
-                    },
-                    x: {
-                        item: "jsonreg:gravi_star"
                     }
                 },
                 pattern: [
-                    "hgs",
-                    "uxu",
-                    "vio"
+                    "hgm",
+                    "scs",
+                    "wid"
                 ],
                 result: {
                     count: 1,
@@ -4449,32 +4449,32 @@
                     b: {
                         item: "minecraft:brewing_stand"
                     },
-                    d: {
-                        tag: "oritech:plating"
-                    },
                     e: {
                         item: "techreborn:electrum_plate"
                     },
                     m: {
                         item: "jsonreg:mv_robot_arm"
                     },
+                    o: {
+                        item: "techreborn:electrum_plate"
+                    },
                     q: {
                         item: "techreborn:electrum_plate"
                     },
                     r: {
+                        item: "techreborn:electrum_plate"
+                    },
+                    s: {
                         tag: "c:storage_blocks/redstone"
                     },
-                    t: {
-                        item: "techreborn:electrum_plate"
-                    },
-                    v: {
-                        item: "techreborn:electrum_plate"
+                    y: {
+                        tag: "oritech:plating"
                     }
                 },
                 pattern: [
-                    "emq",
-                    "vrt",
-                    "dbd"
+                    "emo",
+                    "rsq",
+                    "yby"
                 ],
                 result: {
                     count: 1,
@@ -4519,29 +4519,29 @@
             recipe: {
                 category: "misc",
                 key: {
+                    b: {
+                        item: "jsonreg:mv_electric_motor"
+                    },
                     e: {
                         item: "jsonreg:enriched_naquadah_rod"
                     },
                     f: {
                         item: "oritech:flux_gate"
                     },
-                    l: {
-                        item: "jsonreg:enriched_naquadah_rod"
-                    },
                     m: {
                         item: "jsonreg:mv_sensor"
                     },
                     n: {
-                        tag: "oritech:plating"
+                        item: "jsonreg:enriched_naquadah_rod"
                     },
-                    p: {
-                        item: "jsonreg:mv_electric_motor"
+                    u: {
+                        tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     " m ",
-                    "efl",
-                    "npn"
+                    "efn",
+                    "ubu"
                 ],
                 result: {
                     count: 1,
@@ -4598,7 +4598,7 @@
                     g: {
                         item: "jsonreg:gravi_star"
                     },
-                    n: {
+                    i: {
                         item: "techreborn:electrum_plate"
                     },
                     o: {
@@ -4608,7 +4608,7 @@
                 pattern: [
                     "oao",
                     "odo",
-                    "egn"
+                    "egi"
                 ],
                 result: {
                     count: 1,
@@ -4627,6 +4627,9 @@
             originalRecipe: {
                 category: "misc",
                 key: {
+                    k: {
+                        tag: "oritech:plating"
+                    },
                     m: {
                         item: "oritech:magnetic_coil"
                     },
@@ -4635,15 +4638,12 @@
                     },
                     s: {
                         tag: "c:ingots/steel"
-                    },
-                    u: {
-                        tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     "ppp",
                     "psp",
-                    "mum"
+                    "mkm"
                 ],
                 result: {
                     count: 1,
@@ -4653,7 +4653,7 @@
             recipe: {
                 category: "misc",
                 key: {
-                    c: {
+                    f: {
                         tag: "oritech:plating"
                     },
                     l: {
@@ -4672,7 +4672,7 @@
                 pattern: [
                     "plp",
                     "psp",
-                    "mcm"
+                    "mfm"
                 ],
                 result: {
                     count: 1,
@@ -4723,7 +4723,7 @@
                     e: {
                         item: "techreborn:electronic_circuit"
                     },
-                    k: {
+                    j: {
                         item: "techreborn:carbon_plate"
                     },
                     l: {
@@ -4739,7 +4739,7 @@
                 pattern: [
                     "plp",
                     "pep",
-                    "cmk"
+                    "cmj"
                 ],
                 result: {
                     count: 1,
@@ -4758,26 +4758,26 @@
             originalRecipe: {
                 category: "misc",
                 key: {
-                    a: {
-                        tag: "oritech:plating"
+                    f: {
+                        item: "oritech:machine_speed_addon"
                     },
                     h: {
                         item: "oritech:heisenberg_compensator"
+                    },
+                    k: {
+                        tag: "oritech:plating"
                     },
                     m: {
                         item: "oritech:machine_efficiency_addon"
                     },
                     o: {
                         item: "oritech:overcharged_crystal"
-                    },
-                    w: {
-                        item: "oritech:machine_speed_addon"
                     }
                 },
                 pattern: [
                     "omo",
-                    "hwh",
-                    "aaa"
+                    "hfh",
+                    "kkk"
                 ],
                 result: {
                     count: 1,
@@ -4787,13 +4787,7 @@
             recipe: {
                 category: "misc",
                 key: {
-                    d: {
-                        item: "oritech:machine_speed_addon"
-                    },
-                    e: {
-                        item: "jsonreg:mv_robot_arm"
-                    },
-                    g: {
+                    a: {
                         item: "jsonreg:mv_robot_arm"
                     },
                     h: {
@@ -4802,17 +4796,23 @@
                     i: {
                         item: "techreborn:industrial_circuit"
                     },
+                    k: {
+                        item: "jsonreg:mv_robot_arm"
+                    },
                     m: {
                         item: "oritech:machine_efficiency_addon"
                     },
                     o: {
                         item: "oritech:overcharged_crystal"
+                    },
+                    y: {
+                        item: "oritech:machine_speed_addon"
                     }
                 },
                 pattern: [
                     "omo",
-                    "hdh",
-                    "gie"
+                    "hyh",
+                    "aik"
                 ],
                 result: {
                     count: 1,
@@ -4831,6 +4831,9 @@
             originalRecipe: {
                 category: "misc",
                 key: {
+                    a: {
+                        tag: "oritech:plating"
+                    },
                     d: {
                         item: "minecraft:diamond_pickaxe"
                     },
@@ -4839,15 +4842,12 @@
                     },
                     p: {
                         tag: "c:plates/plastic"
-                    },
-                    u: {
-                        tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     "ppp",
                     "pdp",
-                    "mum"
+                    "mam"
                 ],
                 result: {
                     count: 1,
@@ -4869,14 +4869,14 @@
                     p: {
                         tag: "c:plates/plastic"
                     },
-                    u: {
+                    y: {
                         tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     "pep",
                     "pdp",
-                    "mum"
+                    "mym"
                 ],
                 result: {
                     count: 1,
@@ -4896,6 +4896,9 @@
                     f: {
                         item: "oritech:flux_gate"
                     },
+                    h: {
+                        tag: "oritech:plating"
+                    },
                     m: {
                         item: "oritech:motor"
                     },
@@ -4904,15 +4907,12 @@
                     },
                     s: {
                         item: "oritech:super_ai_chip"
-                    },
-                    v: {
-                        tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     "mpm",
                     "sfs",
-                    "vvv"
+                    "hhh"
                 ],
                 result: {
                     count: 1,
@@ -4960,9 +4960,6 @@
                     c: {
                         item: "techreborn:carbon_plate"
                     },
-                    d: {
-                        item: "oritech:fluid_pipe"
-                    },
                     e: {
                         tag: "c:ingots/electrum"
                     },
@@ -4972,13 +4969,16 @@
                     i: {
                         item: "techreborn:invar_plate"
                     },
-                    o: {
+                    j: {
                         item: "techreborn:invar_plate"
+                    },
+                    u: {
+                        item: "oritech:fluid_pipe"
                     }
                 },
                 pattern: [
                     " f ",
-                    "ido",
+                    "iuj",
                     "ece"
                 ],
                 result: {
@@ -5007,14 +5007,14 @@
                     p: {
                         tag: "c:plates/plastic"
                     },
-                    x: {
+                    v: {
                         tag: "c:ingots/electrum"
                     }
                 },
                 pattern: [
                     "ppp",
                     "pep",
-                    "xmx"
+                    "vmv"
                 ],
                 result: {
                     count: 1,
@@ -5024,32 +5024,32 @@
             recipe: {
                 category: "misc",
                 key: {
-                    d: {
-                        item: "techreborn:electrum_plate"
-                    },
                     e: {
                         item: "jsonreg:epoxy_resin_ingot"
                     },
-                    h: {
+                    f: {
                         item: "techreborn:electrum_plate"
-                    },
-                    j: {
-                        tag: "oritech:plating"
                     },
                     m: {
                         item: "jsonreg:mv_sensor"
                     },
-                    n: {
-                        item: "oritech:enderic_lens"
+                    o: {
+                        item: "techreborn:electrum_plate"
+                    },
+                    r: {
+                        tag: "oritech:plating"
                     },
                     t: {
                         item: "jsonreg:epoxy_resin_ingot"
+                    },
+                    w: {
+                        item: "oritech:enderic_lens"
                     }
                 },
                 pattern: [
                     " m ",
-                    "ent",
-                    "hjd"
+                    "ewt",
+                    "orf"
                 ],
                 result: {
                     count: 1,
@@ -5071,20 +5071,20 @@
                     e: {
                         item: "oritech:energite_ingot"
                     },
+                    k: {
+                        tag: "oritech:plating"
+                    },
                     m: {
                         item: "oritech:magnetic_coil"
                     },
                     p: {
                         tag: "c:plates/plastic"
-                    },
-                    y: {
-                        tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     "ppp",
                     "pmp",
-                    "eye"
+                    "eke"
                 ],
                 result: {
                     count: 1,
@@ -5094,26 +5094,26 @@
             recipe: {
                 category: "misc",
                 key: {
+                    a: {
+                        item: "jsonreg:mv_voltage_coil"
+                    },
+                    b: {
+                        tag: "oritech:plating"
+                    },
+                    c: {
+                        item: "jsonreg:mv_voltage_coil"
+                    },
                     e: {
                         item: "oritech:energite_ingot"
                     },
-                    g: {
-                        tag: "oritech:plating"
-                    },
-                    k: {
-                        item: "jsonreg:mv_voltage_coil"
-                    },
                     m: {
                         item: "techreborn:medium_voltage_su"
-                    },
-                    y: {
-                        item: "jsonreg:mv_voltage_coil"
                     }
                 },
                 pattern: [
                     " m ",
-                    "y k",
-                    "ege"
+                    "c a",
+                    "ebe"
                 ],
                 result: {
                     count: 1,
@@ -5135,11 +5135,11 @@
                     e: {
                         item: "oritech:energite_ingot"
                     },
+                    f: {
+                        tag: "c:ingots/electrum"
+                    },
                     m: {
                         tag: "oritech:plating"
-                    },
-                    n: {
-                        tag: "c:ingots/electrum"
                     },
                     p: {
                         tag: "c:plates/plastic"
@@ -5148,7 +5148,7 @@
                 pattern: [
                     "ppp",
                     "pep",
-                    "nmn"
+                    "fmf"
                 ],
                 result: {
                     count: 1,
@@ -5158,23 +5158,23 @@
             recipe: {
                 category: "misc",
                 key: {
+                    a: {
+                        item: "techreborn:electrum_plate"
+                    },
+                    d: {
+                        item: "techreborn:electrum_plate"
+                    },
                     e: {
                         item: "jsonreg:epoxy_resin_ingot"
+                    },
+                    i: {
+                        tag: "oritech:plating"
                     },
                     l: {
                         item: "techreborn:lsu_storage"
                     },
                     m: {
                         item: "oritech:machine_capacitor_addon"
-                    },
-                    n: {
-                        item: "techreborn:electrum_plate"
-                    },
-                    t: {
-                        item: "techreborn:electrum_plate"
-                    },
-                    v: {
-                        tag: "oritech:plating"
                     },
                     x: {
                         item: "jsonreg:epoxy_resin_ingot"
@@ -5183,7 +5183,7 @@
                 pattern: [
                     " l ",
                     "emx",
-                    "tvn"
+                    "dia"
                 ],
                 result: {
                     count: 1,
@@ -5244,14 +5244,14 @@
                     p: {
                         item: "oritech:processing_unit"
                     },
-                    u: {
+                    x: {
                         tag: "c:chests"
                     }
                 },
                 pattern: [
                     "ccc",
                     "cpc",
-                    "umu"
+                    "xmx"
                 ],
                 result: {
                     count: 1,
@@ -5267,6 +5267,9 @@
                     c: {
                         tag: "c:carbon_fibre"
                     },
+                    g: {
+                        item: "techreborn:bronze_plate"
+                    },
                     l: {
                         item: "jsonreg:lv_robot_arm"
                     },
@@ -5275,15 +5278,12 @@
                     },
                     p: {
                         item: "oritech:processing_unit"
-                    },
-                    y: {
-                        item: "techreborn:bronze_plate"
                     }
                 },
                 pattern: [
                     " l ",
                     "cpc",
-                    "bmy"
+                    "bmg"
                 ],
                 result: {
                     count: 1,
@@ -5343,14 +5343,14 @@
                     n: {
                         item: "oritech:advanced_computing_engine"
                     },
-                    y: {
+                    u: {
                         item: "oritech:advanced_computing_engine"
                     }
                 },
                 pattern: [
                     "fmf",
                     "fcf",
-                    "ayn"
+                    "aun"
                 ],
                 result: {
                     count: 1,
@@ -5398,10 +5398,16 @@
                     a: {
                         item: "techreborn:advanced_circuit"
                     },
-                    f: {
+                    b: {
                         item: "techreborn:advanced_circuit"
                     },
-                    h: {
+                    c: {
+                        tag: "oritech:plating"
+                    },
+                    g: {
+                        item: "jsonreg:titanium_rod"
+                    },
+                    k: {
                         item: "jsonreg:mv_robot_arm"
                     },
                     m: {
@@ -5409,18 +5415,12 @@
                     },
                     t: {
                         item: "jsonreg:titanium_rod"
-                    },
-                    v: {
-                        item: "jsonreg:titanium_rod"
-                    },
-                    z: {
-                        tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     " m ",
-                    "ahf",
-                    "tzv"
+                    "akb",
+                    "tcg"
                 ],
                 result: {
                     count: 1,
@@ -5451,14 +5451,14 @@
                     s: {
                         tag: "c:ingots/steel"
                     },
-                    z: {
+                    w: {
                         tag: "oritech:plating"
                     }
                 },
                 pattern: [
                     "rsr",
                     "eme",
-                    "zzz"
+                    "www"
                 ],
                 result: {
                     count: 1,
@@ -5472,25 +5472,25 @@
                         item: "techreborn:advanced_circuit"
                     },
                     c: {
-                        item: "techreborn:cell"
+                        item: "oritech:machine_speed_addon"
                     },
                     e: {
                         tag: "c:ingots/electrum"
                     },
-                    f: {
-                        item: "techreborn:advanced_circuit"
-                    },
-                    k: {
-                        item: "oritech:machine_speed_addon"
-                    },
                     m: {
                         item: "oritech:machine_speed_addon"
+                    },
+                    q: {
+                        item: "techreborn:advanced_circuit"
+                    },
+                    v: {
+                        item: "techreborn:cell"
                     }
                 },
                 pattern: [
                     " m ",
-                    "eke",
-                    "acf"
+                    "ece",
+                    "avq"
                 ],
                 result: {
                     count: 1,
@@ -5543,38 +5543,38 @@
             recipe: {
                 category: "misc",
                 key: {
-                    a: {
+                    c: {
                         item: "oritech:superconductor"
-                    },
-                    d: {
-                        item: "techreborn:tungstensteel_plate"
-                    },
-                    f: {
-                        item: "techreborn:industrial_circuit"
                     },
                     g: {
                         item: "jsonreg:gravi_star"
                     },
                     i: {
-                        item: "techreborn:industrial_circuit"
-                    },
-                    j: {
                         item: "oritech:superconductor"
                     },
-                    n: {
+                    l: {
                         item: "oritech:superconductor"
+                    },
+                    m: {
+                        item: "techreborn:tungstensteel_plate"
                     },
                     s: {
                         item: "oritech:superconductor"
                     },
                     t: {
                         item: "techreborn:tungstensteel_plate"
+                    },
+                    x: {
+                        item: "techreborn:industrial_circuit"
+                    },
+                    z: {
+                        item: "techreborn:industrial_circuit"
                     }
                 },
                 pattern: [
-                    "stj",
-                    "igf",
-                    "nda"
+                    "sti",
+                    "zgx",
+                    "lmc"
                 ],
                 result: {
                     count: 1,
@@ -5646,15 +5646,15 @@
                     l: {
                         item: "jsonreg:lv_robot_arm"
                     },
-                    p: {
+                    r: {
                         item: "jsonreg:refined_iron_rod"
                     },
-                    r: {
+                    v: {
                         item: "jsonreg:refined_iron_rod"
                     }
                 },
                 pattern: [
-                    "rlp",
+                    "rlv",
                     " b ",
                     "   "
                 ],
@@ -5710,10 +5710,10 @@
                     i: {
                         item: "techreborn:invar_plate"
                     },
-                    m: {
+                    l: {
                         item: "techreborn:invar_plate"
                     },
-                    o: {
+                    s: {
                         item: "techreborn:cupronickel_heating_coil"
                     },
                     t: {
@@ -5721,8 +5721,8 @@
                     }
                 },
                 pattern: [
-                    "icm",
-                    "oet",
+                    "icl",
+                    "tes",
                     " a "
                 ],
                 result: {
@@ -5771,20 +5771,20 @@
                     g: {
                         item: "techreborn:grinder"
                     },
-                    l: {
-                        item: "jsonreg:mv_electric_motor"
-                    },
                     m: {
                         item: "jsonreg:mv_robot_arm"
                     },
                     q: {
+                        item: "jsonreg:mv_electric_motor"
+                    },
+                    s: {
                         item: "jsonreg:mv_electric_motor"
                     }
                 },
                 pattern: [
                     " m ",
                     " g ",
-                    "qal"
+                    "qas"
                 ],
                 result: {
                     count: 1,
@@ -5827,7 +5827,7 @@
                 category: "misc",
                 key: {
                     a: {
-                        item: "jsonreg:mv_robot_arm"
+                        item: "techreborn:advanced_machine_frame"
                     },
                     c: {
                         item: "techreborn:cell"
@@ -5835,23 +5835,23 @@
                     e: {
                         item: "techreborn:extractor"
                     },
-                    h: {
+                    j: {
                         item: "jsonreg:mv_electric_piston"
                     },
                     m: {
                         item: "jsonreg:mv_electric_motor"
                     },
-                    n: {
-                        item: "techreborn:advanced_machine_frame"
-                    },
                     t: {
                         item: "techreborn:titanium_ingot"
+                    },
+                    v: {
+                        item: "jsonreg:mv_robot_arm"
                     }
                 },
                 pattern: [
                     "mc ",
                     "te ",
-                    "anh"
+                    "vaj"
                 ],
                 result: {
                     count: 1,
@@ -5899,19 +5899,19 @@
                     c: {
                         item: "techreborn:compressor"
                     },
-                    e: {
+                    d: {
                         item: "jsonreg:mv_electric_piston"
                     },
                     m: {
                         item: "jsonreg:mv_electric_motor"
                     },
-                    u: {
+                    t: {
                         item: "jsonreg:mv_electric_piston"
                     }
                 },
                 pattern: [
                     " m ",
-                    "uce",
+                    "tcd",
                     " a "
                 ],
                 result: {
@@ -5960,20 +5960,20 @@
                     e: {
                         item: "techreborn:electronic_circuit"
                     },
-                    k: {
-                        item: "techreborn:refined_iron_plate"
-                    },
                     l: {
                         item: "jsonreg:lv_electric_piston"
                     },
                     r: {
+                        item: "techreborn:refined_iron_plate"
+                    },
+                    v: {
                         item: "techreborn:refined_iron_plate"
                     }
                 },
                 pattern: [
                     " e ",
                     " b ",
-                    "rlk"
+                    "rlv"
                 ],
                 result: {
                     count: 1,
@@ -6004,13 +6004,13 @@
                     g: {
                         item: "techreborn:glassfiber_cable"
                     },
-                    i: {
+                    u: {
                         item: "techreborn:advanced_machine_casing"
                     }
                 },
                 pattern: [
                     "afa",
-                    "gig",
+                    "gug",
                     "ada"
                 ],
                 result: {
@@ -6024,25 +6024,25 @@
                     a: {
                         item: "techreborn:advanced_machine_casing"
                     },
-                    c: {
-                        item: "oritech:advanced_computing_engine"
-                    },
                     e: {
                         item: "oritech:enderic_lens"
                     },
-                    j: {
+                    g: {
                         item: "oritech:advanced_computing_engine"
+                    },
+                    k: {
+                        item: "jsonreg:mv_electric_motor"
                     },
                     m: {
                         item: "jsonreg:mv_sensor"
                     },
-                    n: {
-                        item: "jsonreg:mv_electric_motor"
-                    },
                     p: {
                         item: "jsonreg:mv_emitter"
                     },
-                    r: {
+                    q: {
+                        item: "oritech:advanced_computing_engine"
+                    },
+                    s: {
                         item: "jsonreg:mv_electric_motor"
                     },
                     t: {
@@ -6051,8 +6051,8 @@
                 },
                 pattern: [
                     "mtp",
-                    "nar",
-                    "jec"
+                    "kas",
+                    "geq"
                 ],
                 result: {
                     count: 1,
@@ -6125,11 +6125,11 @@
                     a: {
                         item: "techreborn:advanced_circuit"
                     },
-                    d: {
-                        item: "techreborn:advanced_machine_frame"
-                    },
                     e: {
                         item: "techreborn:extractor"
+                    },
+                    g: {
+                        item: "techreborn:advanced_machine_frame"
                     },
                     r: {
                         item: "techreborn:refined_iron_ingot"
@@ -6137,7 +6137,7 @@
                 },
                 pattern: [
                     "rar",
-                    "ded",
+                    "geg",
                     "rar"
                 ],
                 result: {
@@ -6163,13 +6163,13 @@
                     i: {
                         item: "techreborn:iron_alloy_furnace"
                     },
-                    l: {
+                    u: {
                         item: "techreborn:electric_furnace"
                     }
                 },
                 pattern: [
                     " e ",
-                    "lil",
+                    "uiu",
                     "   "
                 ],
                 result: {
@@ -6183,20 +6183,20 @@
                     e: {
                         item: "techreborn:electronic_circuit"
                     },
-                    i: {
+                    h: {
                         item: "oritech:magnetic_coil"
                     },
                     m: {
                         item: "oritech:magnetic_coil"
                     },
-                    v: {
+                    t: {
                         item: "techreborn:electric_furnace"
                     }
                 },
                 pattern: [
                     " e ",
-                    "vmv",
-                    " i "
+                    "tmt",
+                    " h "
                 ],
                 result: {
                     count: 1,
@@ -6256,7 +6256,7 @@
                     q: {
                         item: "jsonreg:lv_electric_piston"
                     },
-                    r: {
+                    v: {
                         item: "jsonreg:lv_electric_piston"
                     },
                     w: {
@@ -6264,9 +6264,9 @@
                     }
                 },
                 pattern: [
-                    "laq",
+                    "lav",
                     "cbc",
-                    "raw"
+                    "waq"
                 ],
                 result: {
                     count: 1,
@@ -6437,37 +6437,37 @@
                 category: "misc",
                 key: {
                     b: {
-                        item: "jsonreg:basic_circuit_board"
+                        item: "jsonreg:smd_resistor"
                     },
                     c: {
-                        item: "techreborn:copper_cable"
-                    },
-                    h: {
                         item: "jsonreg:smd_diode"
                     },
+                    e: {
+                        item: "jsonreg:basic_circuit_board"
+                    },
                     k: {
+                        item: "jsonreg:smd_inductor"
+                    },
+                    l: {
                         item: "techreborn:copper_cable"
                     },
-                    m: {
+                    q: {
                         item: "techreborn:tin_ingot"
-                    },
-                    r: {
-                        item: "jsonreg:smd_transistor"
                     },
                     s: {
                         item: "jsonreg:smd_capacitor"
                     },
                     t: {
-                        item: "jsonreg:smd_inductor"
+                        item: "jsonreg:smd_transistor"
                     },
-                    x: {
-                        item: "jsonreg:smd_resistor"
+                    w: {
+                        item: "techreborn:copper_cable"
                     }
                 },
                 pattern: [
-                    "sxr",
-                    "tbh",
-                    "cmk"
+                    "sbt",
+                    "kec",
+                    "lqw"
                 ],
                 result: {
                     count: 1,
@@ -6484,28 +6484,28 @@
             recipe: {
                 category: "misc",
                 key: {
+                    b: {
+                        item: "techreborn:copper_cable"
+                    },
                     c: {
                         item: "techreborn:copper_cable"
                     },
-                    h: {
+                    i: {
                         item: "techreborn:copper_cable"
                     },
-                    j: {
-                        item: "techreborn:copper_cable"
-                    },
-                    m: {
+                    n: {
                         item: "techreborn:copper_cable"
                     },
                     p: {
                         item: "oritech:plastic_sheet"
                     },
+                    q: {
+                        item: "techreborn:copper_cable"
+                    },
                     r: {
                         item: "techreborn:copper_cable"
                     },
-                    u: {
-                        item: "techreborn:copper_cable"
-                    },
-                    x: {
+                    w: {
                         item: "techreborn:copper_cable"
                     },
                     y: {
@@ -6513,9 +6513,9 @@
                     }
                 },
                 pattern: [
-                    "cjy",
-                    "hpr",
-                    "mux"
+                    "cwn",
+                    "qpb",
+                    "ryi"
                 ],
                 result: {
                     count: 1,
@@ -6563,26 +6563,26 @@
                     a: {
                         item: "refinedstorage:advanced_processor"
                     },
-                    h: {
-                        item: "refinedstorage:advanced_processor"
-                    },
                     i: {
                         item: "techreborn:insulated_copper_cable"
                     },
                     m: {
                         item: "refinedstorage:machine_casing"
                     },
+                    o: {
+                        item: "techreborn:insulated_copper_cable"
+                    },
                     q: {
                         item: "refinedstorage:quartz_enriched_iron"
                     },
-                    t: {
-                        item: "techreborn:insulated_copper_cable"
+                    w: {
+                        item: "refinedstorage:advanced_processor"
                     }
                 },
                 pattern: [
                     "qaq",
-                    "imt",
-                    "qhq"
+                    "imo",
+                    "qwq"
                 ],
                 result: {
                     count: 1,
@@ -6602,32 +6602,32 @@
                     a: {
                         item: "affinity:azalea_slab"
                     },
-                    b: {
+                    f: {
                         item: "affinity:azalea_log"
                     },
-                    c: {
-                        item: "affinity:azalea_log"
+                    h: {
+                        item: "affinity:azalea_slab"
                     },
                     i: {
                         tag: "affinity:wisp_matter"
                     },
                     k: {
-                        item: "minecraft:amethyst_shard"
-                    },
-                    l: {
                         item: "affinity:azalea_slab"
+                    },
+                    n: {
+                        item: "affinity:azalea_log"
                     },
                     r: {
-                        item: "affinity:azalea_slab"
+                        item: "minecraft:amethyst_shard"
                     },
-                    t: {
+                    u: {
                         item: "minecraft:amethyst_shard"
                     }
                 },
                 pattern: [
-                    "arl",
-                    "tik",
-                    "b c"
+                    "ahk",
+                    "uir",
+                    "f n"
                 ],
                 result: {
                     count: 1,
@@ -6647,14 +6647,14 @@
                     a: {
                         item: "affinity:azalea_log"
                     },
-                    q: {
+                    v: {
                         item: "minecraft:amethyst_shard"
                     }
                 },
                 pattern: [
-                    "aqa",
-                    "q q",
-                    "aqa"
+                    "ava",
+                    "v v",
+                    "ava"
                 ],
                 result: {
                     count: 1,
@@ -6726,42 +6726,17 @@
         },
         {
             exported: 1b,
-            originalId: "botania:runic_altar_alt",
-            recipe: {
-                category: "misc",
-                group: "botania:runic_altar",
-                key: {
-                    l: {
-                        item: "botania:livingrock"
-                    },
-                    m: {
-                        tag: "c:gems/mana_diamond"
-                    }
-                },
-                pattern: [
-                    "lll",
-                    "lml",
-                    "   "
-                ],
-                result: {
-                    count: 1,
-                    id: "botania:runic_altar"
-                }
-            },
-            recipeType: "minecraft:crafting",
-            serializer: "minecraft:crafting_shaped",
-            type: "REMOVED"
-        },
-        {
-            exported: 1b,
             id: "ctgui/new/botania/terrestrial_agglomeration_plate",
             oldSerializer: "minecraft:crafting_shaped",
             originalId: "botania:terrestrial_agglomeration_plate",
             originalRecipe: {
                 category: "misc",
                 key: {
-                    h: {
-                        item: "botania:rune_of_air"
+                    e: {
+                        item: "botania:rune_of_earth"
+                    },
+                    i: {
+                        item: "botania:rune_of_mana"
                     },
                     l: {
                         tag: "c:storage_blocks/lapis"
@@ -6770,22 +6745,19 @@
                         item: "botania:mana_quartz_block"
                     },
                     n: {
-                        item: "botania:rune_of_fire"
-                    },
-                    q: {
-                        item: "botania:rune_of_earth"
+                        item: "botania:rune_of_air"
                     },
                     r: {
                         item: "botania:rune_of_water"
                     },
-                    v: {
-                        item: "botania:rune_of_mana"
+                    w: {
+                        item: "botania:rune_of_fire"
                     }
                 },
                 pattern: [
                     "lll",
-                    "rmn",
-                    "qvh"
+                    "rmw",
+                    "ein"
                 ],
                 result: {
                     count: 1,
@@ -6796,13 +6768,10 @@
                 category: "misc",
                 key: {
                     d: {
-                        item: "botania:rune_of_mana"
-                    },
-                    e: {
                         item: "techreborn:lazurite_plate"
                     },
-                    h: {
-                        item: "botania:rune_of_fire"
+                    k: {
+                        item: "botania:rune_of_air"
                     },
                     l: {
                         item: "techreborn:lazurite_plate"
@@ -6810,23 +6779,26 @@
                     m: {
                         item: "botania:mana_quartz_block"
                     },
-                    o: {
-                        item: "botania:rune_of_air"
+                    p: {
+                        item: "techreborn:lazurite_plate"
                     },
                     q: {
-                        item: "techreborn:lazurite_plate"
+                        item: "botania:rune_of_mana"
                     },
                     r: {
                         item: "botania:rune_of_water"
                     },
-                    t: {
+                    x: {
                         item: "botania:rune_of_earth"
+                    },
+                    z: {
+                        item: "botania:rune_of_fire"
                     }
                 },
                 pattern: [
-                    "lqe",
-                    "rmh",
-                    "tdo"
+                    "lpd",
+                    "rmz",
+                    "xqk"
                 ],
                 result: {
                     count: 1,
@@ -6916,38 +6888,38 @@
             recipe: {
                 category: "misc",
                 key: {
+                    a: {
+                        item: "justarod:redstone_rod"
+                    },
                     c: {
                         item: "minecraft:crafting_table"
                     },
                     d: {
                         item: "techreborn:diamond_plate"
                     },
-                    e: {
-                        item: "techreborn:diamond_plate"
-                    },
-                    f: {
-                        item: "justarod:redstone_rod"
-                    },
-                    h: {
-                        item: "techreborn:refined_iron_plate"
-                    },
-                    i: {
-                        item: "techreborn:refined_iron_plate"
-                    },
-                    n: {
-                        item: "minecraft:crafting_table"
-                    },
                     r: {
                         item: "techreborn:refined_iron_plate"
                     },
+                    s: {
+                        item: "techreborn:refined_iron_plate"
+                    },
+                    t: {
+                        item: "minecraft:crafting_table"
+                    },
+                    u: {
+                        item: "techreborn:diamond_plate"
+                    },
                     w: {
+                        item: "techreborn:refined_iron_plate"
+                    },
+                    x: {
                         item: "techreborn:refined_iron_plate"
                     }
                 },
                 pattern: [
-                    "rdi",
-                    "cfn",
-                    "hew"
+                    "rds",
+                    "cat",
+                    "xuw"
                 ],
                 result: {
                     count: 1,
@@ -6960,6 +6932,87 @@
         },
         {
             exported: 1b,
+            originalId: "techreborn:crafting_table/machine/distillation_tower",
+            recipe: {
+                category: "misc",
+                key: {
+                    b: {
+                        item: "techreborn:extractor"
+                    },
+                    e: {
+                        item: "techreborn:energy_flow_chip"
+                    },
+                    h: {
+                        item: "techreborn:industrial_machine_frame"
+                    },
+                    i: {
+                        item: "techreborn:industrial_centrifuge"
+                    },
+                    j: {
+                        item: "techreborn:industrial_electrolyzer"
+                    }
+                },
+                pattern: [
+                    "iei",
+                    "bhb",
+                    "jej"
+                ],
+                result: {
+                    count: 1,
+                    id: "techreborn:distillation_tower"
+                }
+            },
+            recipeType: "minecraft:crafting",
+            serializer: "minecraft:crafting_shaped",
+            type: "REMOVED"
+        },
+        {
+            exported: 1b,
+            id: "ctgui/new/crafting/lathe",
+            recipe: {
+                category: "misc",
+                key: {
+                    b: {
+                        item: "techreborn:basic_machine_frame"
+                    },
+                    e: {
+                        item: "techreborn:electronic_circuit"
+                    },
+                    h: {
+                        item: "techreborn:electronic_circuit"
+                    },
+                    i: {
+                        item: "jsonreg:iron_rod"
+                    },
+                    l: {
+                        item: "jsonreg:lv_electric_piston"
+                    },
+                    m: {
+                        item: "oritech:motor"
+                    },
+                    s: {
+                        item: "oritech:motor"
+                    },
+                    z: {
+                        item: "jsonreg:iron_rod"
+                    }
+                },
+                pattern: [
+                    "elh",
+                    "ibz",
+                    "m s"
+                ],
+                result: {
+                    count: 1,
+                    id: "techreborn:lathe"
+                }
+            },
+            recipeType: "minecraft:crafting",
+            serializer: "minecraft:crafting_shaped",
+            type: "ADDED"
+        },
+        {
+            exported: 1b,
             id: "ctgui/new/crafting/distillation_tower",
             recipe: {
                 category: "misc",
@@ -6967,35 +7020,35 @@
                     b: {
                         item: "techreborn:basic_machine_frame"
                     },
-                    c: {
-                        item: "techreborn:steel_plate"
-                    },
                     e: {
-                        item: "techreborn:electronic_circuit"
+                        item: "techreborn:extractor"
                     },
-                    f: {
-                        item: "techreborn:electronic_circuit"
-                    },
-                    i: {
+                    g: {
                         item: "techreborn:steel_plate"
                     },
-                    q: {
-                        item: "techreborn:steel_plate"
+                    l: {
+                        item: "oritech:processing_unit"
+                    },
+                    p: {
+                        item: "oritech:processing_unit"
                     },
                     s: {
                         item: "techreborn:steel_plate"
                     },
-                    w: {
+                    v: {
                         item: "techreborn:extractor"
                     },
                     x: {
-                        item: "techreborn:extractor"
+                        item: "techreborn:steel_plate"
+                    },
+                    y: {
+                        item: "techreborn:steel_plate"
                     }
                 },
                 pattern: [
-                    "sec",
-                    "xbw",
-                    "ifq"
+                    "spg",
+                    "ebv",
+                    "xly"
                 ],
                 result: {
                     count: 1,
@@ -7008,39 +7061,285 @@
         },
         {
             exported: 1b,
-            originalId: "techreborn:crafting_table/machine/distillation_tower",
+            id: "ctgui/new/crafting/primitive_distillation_tower",
             recipe: {
                 category: "misc",
                 key: {
+                    b: {
+                        item: "techreborn:basic_machine_frame"
+                    },
+                    d: {
+                        item: "techreborn:invar_plate"
+                    },
                     e: {
-                        item: "techreborn:energy_flow_chip"
+                        item: "oritech:fluid_pipe"
+                    },
+                    f: {
+                        item: "oritech:fluid_pipe"
                     },
                     i: {
-                        item: "techreborn:industrial_centrifuge"
+                        item: "techreborn:invar_plate"
                     },
-                    m: {
-                        item: "techreborn:industrial_machine_frame"
+                    l: {
+                        item: "jsonreg:lv_electric_piston"
                     },
-                    r: {
-                        item: "techreborn:industrial_electrolyzer"
+                    n: {
+                        item: "oritech:fluid_pipe"
                     },
                     s: {
-                        item: "techreborn:extractor"
+                        item: "techreborn:solid_fuel_generator"
+                    },
+                    w: {
+                        item: "oritech:fluid_pipe"
                     }
                 },
                 pattern: [
-                    "iei",
-                    "sms",
-                    "rer"
+                    "flw",
+                    "ebn",
+                    "isd"
                 ],
                 result: {
                     count: 1,
-                    id: "techreborn:distillation_tower"
+                    id: "techreborn:primitive_distillation_tower"
                 }
             },
             recipeType: "minecraft:crafting",
             serializer: "minecraft:crafting_shaped",
-            type: "REMOVED"
+            type: "ADDED"
+        },
+        {
+            exported: 1b,
+            id: "ctgui/new/crafting/small_iron_dust_from_iron_dust",
+            recipe: {
+                category: "misc",
+                key: {
+                    i: {
+                        item: "oritech:iron_dust"
+                    }
+                },
+                pattern: [
+                    "i  ",
+                    "   ",
+                    "   "
+                ],
+                result: {
+                    count: 9,
+                    id: "oritech:small_iron_dust"
+                }
+            },
+            recipeType: "minecraft:crafting",
+            serializer: "minecraft:crafting_shaped",
+            type: "ADDED"
+        },
+        {
+            exported: 1b,
+            id: "ctgui/new/crafting/multiblock_builder",
+            recipe: {
+                category: "misc",
+                key: {
+                    b: {
+                        item: "farmersdelight:iron_knife"
+                    },
+                    d: {
+                        item: "minecraft:dirt"
+                    },
+                    i: {
+                        item: "minecraft:iron_ingot"
+                    }
+                },
+                pattern: [
+                    " d ",
+                    " i ",
+                    " b "
+                ],
+                result: {
+                    count: 1,
+                    id: "techreborn:multiblock_builder"
+                }
+            },
+            recipeType: "minecraft:crafting",
+            serializer: "minecraft:crafting_shaped",
+            type: "ADDED"
+        },
+        {
+            exported: 1b,
+            id: "ctgui/new/crafting/large_compressor",
+            recipe: {
+                category: "misc",
+                key: {
+                    a: {
+                        item: "techreborn:aluminum_plate"
+                    },
+                    b: {
+                        item: "techreborn:aluminum_plate"
+                    },
+                    c: {
+                        item: "techreborn:compressor"
+                    },
+                    f: {
+                        item: "techreborn:aluminum_plate"
+                    },
+                    m: {
+                        item: "techreborn:basic_machine_frame"
+                    },
+                    p: {
+                        item: "techreborn:aluminum_plate"
+                    },
+                    u: {
+                        item: "techreborn:compressor"
+                    }
+                },
+                pattern: [
+                    "acb",
+                    " m ",
+                    "fup"
+                ],
+                result: {
+                    count: 1,
+                    id: "techreborn:large_compressor"
+                }
+            },
+            recipeType: "minecraft:crafting",
+            serializer: "minecraft:crafting_shaped",
+            type: "ADDED"
+        },
+        {
+            exported: 1b,
+            id: "ctgui/new/crafting/large_lathe",
+            recipe: {
+                category: "misc",
+                key: {
+                    a: {
+                        item: "techreborn:aluminum_plate"
+                    },
+                    b: {
+                        item: "techreborn:aluminum_plate"
+                    },
+                    k: {
+                        item: "techreborn:aluminum_plate"
+                    },
+                    l: {
+                        item: "techreborn:lathe"
+                    },
+                    m: {
+                        item: "oritech:motor"
+                    },
+                    q: {
+                        item: "techreborn:aluminum_plate"
+                    },
+                    r: {
+                        item: "jsonreg:refined_iron_rod"
+                    }
+                },
+                pattern: [
+                    "amb",
+                    " l ",
+                    "qrk"
+                ],
+                result: {
+                    count: 1,
+                    id: "techreborn:large_lathe"
+                }
+            },
+            recipeType: "minecraft:crafting",
+            serializer: "minecraft:crafting_shaped",
+            type: "ADDED"
+        },
+        {
+            exported: 1b,
+            id: "ctgui/new/crafting/large_wire_mill",
+            recipe: {
+                category: "misc",
+                key: {
+                    a: {
+                        item: "techreborn:aluminum_plate"
+                    },
+                    b: {
+                        item: "techreborn:aluminum_plate"
+                    },
+                    d: {
+                        item: "oritech:motor"
+                    },
+                    e: {
+                        item: "techreborn:aluminum_plate"
+                    },
+                    m: {
+                        item: "oritech:motor"
+                    },
+                    p: {
+                        item: "jsonreg:steel_rod"
+                    },
+                    s: {
+                        item: "jsonreg:steel_rod"
+                    },
+                    w: {
+                        item: "techreborn:wire_mill"
+                    },
+                    y: {
+                        item: "techreborn:aluminum_plate"
+                    }
+                },
+                pattern: [
+                    "asy",
+                    "mwd",
+                    "bpe"
+                ],
+                result: {
+                    count: 1,
+                    id: "techreborn:large_wire_mill"
+                }
+            },
+            recipeType: "minecraft:crafting",
+            serializer: "minecraft:crafting_shaped",
+            type: "ADDED"
+        },
+        {
+            exported: 1b,
+            id: "ctgui/new/crafting/precise_assembler",
+            recipe: {
+                category: "misc",
+                key: {
+                    a: {
+                        item: "techreborn:assembly_machine"
+                    },
+                    c: {
+                        item: "oritech:assembler_block"
+                    },
+                    d: {
+                        item: "jsonreg:duratium_rod"
+                    },
+                    e: {
+                        item: "jsonreg:mv_robot_arm"
+                    },
+                    f: {
+                        item: "techreborn:advanced_machine_frame"
+                    },
+                    m: {
+                        item: "jsonreg:mv_robot_arm"
+                    },
+                    p: {
+                        item: "oritech:processing_unit"
+                    },
+                    v: {
+                        item: "jsonreg:duratium_rod"
+                    },
+                    x: {
+                        item: "oritech:processing_unit"
+                    }
+                },
+                pattern: [
+                    "mae",
+                    "pcx",
+                    "dfv"
+                ],
+                result: {
+                    count: 1,
+                    id: "techreborn:precise_assembler"
+                }
+            },
+            recipeType: "minecraft:crafting",
+            serializer: "minecraft:crafting_shaped",
+            type: "ADDED"
         }
     ]
 }

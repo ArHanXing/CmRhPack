@@ -116,10 +116,10 @@ craftingTable.remove(<item:techreborn:carbon_mesh>);
 time: 60, fluidInput: {fluid: "minecraft:empty", amount: 0}, 
 ingredients: [{item: "oritech:iron_dust"}, {item: "oritech:carbon_fibre_strands"}, {item: "techreborn:refined_iron_plate"}, {item: "oritech:carbon_fibre_strands"}]});
 
-//高级合金锭固定为(Cu₃Zn)(Fe₃Ni)(AgAu)也就是黄铜x殷钢x琥珀金
+//高级合金锭固定为(Cu₃Zn)(Fe₃Ni)(AgAu)也就是青铜x殷钢x琥珀金
 craftingTable.remove(<item:techreborn:mixed_metal_ingot>);
 craftingTable.addShaped("t1.techreborn.crafting/mixed_metal", <item:techreborn:mixed_metal_ingot> * 2, 
-    [[<item:techreborn:brass_ingot>, <item:techreborn:brass_ingot>, <item:techreborn:brass_ingot>], 
+    [[<item:techreborn:bronze_ingot>, <item:techreborn:bronze_ingot>, <item:techreborn:bronze_ingot>], 
     [<item:techreborn:invar_ingot>, <item:techreborn:invar_ingot>, <item:techreborn:invar_ingot>], 
     [<item:techreborn:electrum_ingot>,<item:techreborn:electrum_ingot>, <item:techreborn:electrum_ingot>]]);
 
@@ -194,3 +194,10 @@ craftingTable.remove(<item:oritech:polymer_resin>);
 
 //风电和它的转子
 <recipetype:techreborn:assembling_machine>.removeByName("techreborn:assembling_machine/wind_mill");
+//铁粉...
+<recipetype:techreborn:grinder>.addJsonRecipe("t1.tr.grinder.iron_dust", {type: "techreborn:grinder",
+    time: 20,
+    outputs: [{id: "oritech:iron_dust", count: 1}],
+    power: 5,
+    ingredients: [{tag: "c:ingots/iron"}]
+});

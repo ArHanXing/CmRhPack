@@ -61,12 +61,12 @@
 	quest.04BE2AA5CA1285F7.quest_desc: ["&m你会发现这个章节短的要死&r"]
 	quest.04BE2AA5CA1285F7.title: "迈出初始"
 	quest.0513456A03A7D7AC.quest_desc: [
-		"&b...于是，我们重新定义了自动化。&r"
+		"&b...于是，我们重新实现了自动化。&r"
 		""
 		"&e本章的内容大多是介绍性，如果你熟悉 AE2 或者 RS，可以酌情跳过余下的任务。&r"
 	]
 	quest.0513456A03A7D7AC.quest_subtitle: "&o借由他人，寻找自我。"
-	quest.0518AD89AAEE82A3.quest_desc: ["其实铬也不是不能催化乙烯加聚，才不是作者偷懒不想加内容了！"]
+	quest.0518AD89AAEE82A3.quest_desc: [""]
 	quest.05822A9D300D74B1.title: "青金石-金矿脉"
 	quest.05CAD6B57D03221F.quest_desc: [
 		"防爆玻璃，红石电池，提取硫 "
@@ -116,6 +116,7 @@
 		""
 		"这个&b岩石切割机&r自带精准采集，你可以用它来存下很多珍稀矿石的原矿形态，等到科技发展后增产"
 	]
+	quest.0ABE56D6D1BF1808.quest_desc: ["获得你第一个真正服役的线圈，&a镍铬合金线圈&r"]
 	quest.0B79CCECAB548F7D.quest_desc: ["迈出Tier2！"]
 	quest.0BA077008BA4B3A0.quest_desc: [
 		"这是一个&l完全虚空&r的维度。"
@@ -307,6 +308,11 @@
 		"&m没想到吧，不是光之将军&r"
 	]
 	quest.1AABE3F55FDD6E11.title: "光之女皇"
+	quest.1AD4B94F3C6CDEA3.quest_desc: [
+		"多方块结构！此外，多方块结构和主机之间有一格距离！"
+		""
+		"这里只给出了部分材料"
+	]
 	quest.1AE25A3A14FDF70D.title: "生灵通量节点"
 	quest.1B09CA94F5B33F05.quest_desc: ["因此你需要大量囤积资源"]
 	quest.1B09CA94F5B33F05.quest_subtitle: "将一切的一切压缩成没有体积的小东西"
@@ -456,6 +462,11 @@
 		"1粒中子素=21uu"
 		"1中子素尘埃=2uu"
 	]
+	quest.29A8B822A402D9B3.quest_desc: [
+		"你可能需要使用命名仪防堆叠等方法来保证物品不会堆在一起。"
+		""
+		"&c接下来的线圈会快速迭代，也推荐手搓。&r"
+	]
 	quest.29A8B822A402D9B3.quest_subtitle: "自动化的小小挑战"
 	quest.29B5B0D1165617FE.quest_subtitle: "暂无作用，用于燃烧"
 	quest.2A11311F264F457B.quest_desc: [
@@ -480,9 +491,8 @@
 	quest.2CDC44A53B482712.title: "地狱堡垒"
 	quest.2D222CFAFFEB4E09.quest_desc: [
 		"&bT1&r 发电机"
-		"我们 Oritech 也有自己的瓜聚变！"
 		""
-		"输出 &a32&r EU/t"
+		"&a64 EU/t(2A LV)&r"
 	]
 	quest.2D9BCE6EA20323A7.quest_subtitle: "二级产能花"
 	quest.2E4063A2B2A13391.title: "末地橄榄石宝石矿脉"
@@ -562,7 +572,8 @@
 		"也就是说它和 AE2 的样板供应器不太一样："
 		"- 进行&b工作台合成&r，随便放即可，这时就可以进行合成。"
 		"- 进行&b处理样板合成&r，把圆圈面对准设备，原料会从圆圈面给出。"
-		"成品不一定要经过合成仓返回。"
+		"当然成品也不一定要经过合成仓返回。"
+		"- &e没有缓存！&r也就是没有“物品返回槽”，必须搭配接口。"
 		""
 		"此外扩展其样板空间需要&b连锁搭建&r如下图："
 		""
@@ -604,6 +615,7 @@
 	]
 	quest.35A10886E56D4317.title: "铝土"
 	quest.36768EA9D9A34536.quest_subtitle: "酿造和火焰"
+	quest.367BD0454CCD7ED9.quest_subtitle: "必须机器 #3"
 	quest.36D7C55001F950C7.quest_desc: ["解锁了不少好东西"]
 	quest.36D7C55001F950C7.quest_subtitle: "人工施加辐射"
 	quest.3707F170CBC2ACCB.quest_desc: ["可控核聚变"]
@@ -739,7 +751,7 @@
 	quest.461E8E7E0C621B41.title: "生魂的森林"
 	quest.46CB897538236020.quest_desc: [
 		"&bT1&r 发电机"
-		"似乎有点小透明的发电手段，&a32 EU/t&r"
+		"&a64 EU/t(2A LV)&r"
 		"Oritech和TR的泵都可以抽空&a相连流体&r，可以去抽干&c地狱&r，也可以去抽&7油&r"
 		"TR泵的一个好处就是会把岩浆回填，但是对于岩浆海似乎只会抽一根柱"
 	]
@@ -845,7 +857,6 @@
 	]
 	quest.4D2930FC45C012F6.quest_desc: [
 		"产能速率 &a32 EU/t&r，雷雨天气&a 128 EU/t&r"
-		"在能堆量时的不错选择"
 		"&bT1&r 发电机"
 	]
 	quest.4D4B021B01FBA1D5.title: "回收能源"
@@ -887,6 +898,7 @@
 	]
 	quest.521C076C63ECABCD.title: "富石英金属"
 	quest.5379FE7751110E87.quest_desc: ["需要2500J，11个基础外壳，23个高级外壳。鉴于你有了一些，所以这肯定不是难事，难事是打龙"]
+	quest.53AA2049025E385C.quest_subtitle: "解锁部分大型机器"
 	quest.5432B1C3D573BB14.quest_desc: [
 		"加水获得1->2"
 		""
@@ -894,6 +906,7 @@
 		""
 		"不加水获得副产"
 	]
+	quest.5433466C47A1067D.quest_subtitle: "这时的钛需要从铝土中微量提取"
 	quest.5433CFF8D40149C8.quest_desc: [""]
 	quest.5433CFF8D40149C8.quest_subtitle: "暂无作用，用于燃烧"
 	quest.5461A3423C7F3FAC.quest_desc: ["你知道它的modid有多长吗？？！！！这正好赋予了它的跨纬度特性耶！！！"]
@@ -1068,7 +1081,7 @@
 	quest.698B4A8348B194CB.quest_subtitle: "环氧树脂产线"
 	quest.6AF5A95F3333FEFA.quest_desc: [
 		"&e&lT2 &r发电机"
-		"高达 &a512 EU/t&r，它将会是你后期发电的&e绝对主力&r！"
+		"高达 &a1A HV(512EU/t)&r，它将会是你后期发电的&e绝对主力&r！"
 	]
 	quest.6AF5A95F3333FEFA.quest_subtitle: "化学能吞噬者"
 	quest.6B4DADE2E38CAF2A.quest_desc: [
@@ -1201,8 +1214,6 @@
 	quest.77769AA1A6C16B9C.quest_subtitle: "最为高贵的......"
 	quest.77D3A1F0B414940E.quest_desc: ["比较一般"]
 	quest.77D3A1F0B414940E.title: "TR单方块太阳能系列"
-	quest.77D699357961FFE8.quest_desc: [""]
-	quest.77D699357961FFE8.quest_subtitle: "烯烃组分"
 	quest.77FA50402C836C59.quest_desc: [
 		"依旧是大件，有了它就可以造出很多东西了"
 		""
@@ -1216,7 +1227,13 @@
 	quest.794D548CD7E2F74A.quest_subtitle: "产出 &b生魂"
 	quest.79514903FB21A9F3.quest_desc: [""]
 	quest.79514903FB21A9F3.title: "解放末地"
-	quest.79A2E147283EF347.quest_desc: ["去除&e原油&r中的&b水和盐&r，避免&c设备腐蚀&r，是精炼的第一步。"]
+	quest.7984341B1F8A7D4F.quest_desc: ["一出三神力，接下来，欢迎12倍矿！"]
+	quest.7984341B1F8A7D4F.quest_subtitle: "哦，我的矿处事业啊！"
+	quest.79A2E147283EF347.quest_desc: [
+		"去除&e原油&r中的&b水和盐&r，避免&c设备腐蚀&r，是精炼的第一步。"
+		""
+		"你可以通过 &aTechReborn 的流体储罐&r 来实现自动将流体/单元互转，只需要将流体与空单元一起输入，空单元会自动装填液体。"
+	]
 	quest.7AA66A4C69622754.quest_subtitle: "太稳了"
 	quest.7AADC0FE68BF84C9.quest_desc: ["你也可以用它来简化钷的生产"]
 	quest.7AADC0FE68BF84C9.quest_subtitle: "亘古不变的力量"

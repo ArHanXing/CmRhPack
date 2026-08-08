@@ -3,6 +3,23 @@
 
 本数据包依赖模组 MoreDensityFunctions 和 Dynamic Ore Veins。
 
+---
+## 临时：星光维度金红石 feature（绕过 DOV）
+
+由于星光维度使用自定义区块生成器（ESChunkGenerator），DOV 的矿脉机制在该维度不生效。
+临时改用 vanilla ore feature 在星光维度生成 `jsonreg:voidstone_rutile_ore`：
+
+- `data/gt_veins/worldgen/configured_feature/voidstone_rutile_ore.json`
+- `data/gt_veins/worldgen/placed_feature/voidstone_rutile_ore.json`
+- `data/eternal_starlight/worldgen/biome/*.json`（21 个星光 biome，features[6] 追加了该 feature）
+
+移除方法：删除上述三个位置的文件/目录即可恢复原状。参数：size 10、每区块 count 10、Y -64~200、仅替换 `eternal_starlight:voidstone`。
+
+---
+MoreDensityFunctions wiki @ https://github.com/klinbee/More-Density-Functions/wiki
+Dynamic Ore Veins wiki @ https://github.com/TheBrewingMiner/DOV-Homepage/wiki
+请LLM自行取用。
+
 以下内容均由 DeepSeek 生成。
 
 ## 配置矿脉的间隔与生成频率

@@ -27,7 +27,7 @@
 3. 官方依据：所有 `<recipetype>` 都实现 `IRecipeManager`，只要 mod 支持数据包就能用 `addJsonRecipe(name as string, mapData as MapData)`；**每个 mod 的 JSON 格式各不相同**，以 mod 自带的 `data/<mod>/recipe/` 里现成 JSON 为准。
 4. 删除/查询用 `IRecipeManager` 公共方法：`removeByName(names)`、`remove(output)`、`removeByInput(input)`、`removeByModid`、`removeByRegex`、`removeAll()`、`getRecipeByName`、`recipeMap()`。
 5. 作者不会 onEvent 逻辑，如果LLM会可以写一些仅服务端逻辑。
-
+6. 一切机器都要考证其**最大输入输出槽位数**，例如蒸馏塔是4输入6输出；对其编写超过6个输出的配方不会有ZS显式编译错误，但是配方执行就 NPE 。
 原版配方有快捷全局对象（等价于对应 recipetype）：
 
 ```zenscript

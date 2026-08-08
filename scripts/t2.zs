@@ -14,6 +14,40 @@ import crafttweaker.api.recipe.type.Recipe;
  key: {A: { },}});
 
 */
+//EBF线圈
+<recipetype:oritech:assembler>.addJsonRecipe("t2.or.coil.cupronickel", {type: "oritech:assembler",
+    time: 80, results: [{id: "techreborn:coil_cupronickel", count: 1}],
+    ingredients: [
+        {item: "techreborn:cupronickel_heating_coil"},
+        {item: "techreborn:tin_plate"},
+        {item: "techreborn:cupronickel_heating_coil"},
+        {item: "techreborn:tin_plate"}
+    ]
+});
+<recipetype:oritech:assembler>.addJsonRecipe("t2.or.coil.kanthal", {type: "oritech:assembler",
+    time: 80, results: [{id: "techreborn:coil_kanthal", count: 1}],
+    ingredients: [
+        {item: "techreborn:kanthal_heating_coil"},
+        {item: "techreborn:tin_plate"},
+        {item: "techreborn:kanthal_heating_coil"},
+        {item: "techreborn:tin_plate"}
+    ]
+});
+<recipetype:oritech:assembler>.addJsonRecipe("t2.or.coil.nichrome", {type: "oritech:assembler",
+    time: 80, results: [{id: "techreborn:coil_nichrome", count: 1}],
+    ingredients: [
+        {item: "techreborn:nichrome_heating_coil"},
+        {item: "techreborn:tin_plate"},
+        {item: "techreborn:nichrome_heating_coil"},
+        {item: "techreborn:tin_plate"}
+    ]
+});
+//铬锭
+<recipetype:techreborn:blast_furnace>.removeByName("techreborn:blast_furnace/chrome_ingot");
+<recipetype:techreborn:blast_furnace>.removeByName("techreborn:blast_furnace/chrome_ingot_from_small_dust");
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("t2.techreborn.blast_furnace/chrome_ingot", {type: "techreborn:blast_furnace", outputs: [{id: "techreborn:chrome_ingot", count: 1}], time: 800, heat: 1000, power: 128, ingredients: [{item: "techreborn:chrome_dust"}]});
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("t2.techreborn.blast_furnace/chrome_ingot_from_small_dust", {type: "techreborn:blast_furnace", outputs: [{id: "techreborn:chrome_ingot", count: 1}], time: 800, heat: 1000, power: 128, ingredients: [{count: 4, item: "techreborn:chrome_small_dust"}]});
+
 //T2马达
 <recipetype:oritech:assembler>.addJsonRecipe("t2.or.t2coil", {type: "oritech:assembler",
     time: 40, results: [{id: "jsonreg:mv_voltage_coil", count: 4}],
@@ -73,7 +107,7 @@ craftingTable.addShaped("t2.techreborn/crafting_table/parts/diamond_grinding_hea
 <recipetype:oritech:foundry>.removeByName("oritech:foundry/alloy/duratium");
 <recipetype:oritech:atomic_forge>.removeByName("oritech:atomicforge/duratium");
 <recipetype:techreborn:blast_furnace>.addJsonRecipe("t2.techreborn.blast_furnace/duratium_ingot", {type: "techreborn:blast_furnace", 
-outputs: [{id: "oritech:duratium_ingot", count: 1}], time: 1200, heat: 2100, power: 128, ingredients: [{tag: "c:ingots/platinum"}, {item:"minecraft:netherite_ingot"}]});
+outputs: [{id: "oritech:duratium_ingot", count: 1}], time: 1200, heat: 2000, power: 128, ingredients: [{tag: "c:ingots/platinum"}, {item:"minecraft:netherite_ingot"}]});
 
 //虚空碎片
 <recipetype:techreborn:blast_furnace>.addJsonRecipe("t2.techreborn.blast_furnace/void_fragment", {type: "techreborn:blast_furnace", 
@@ -343,4 +377,66 @@ _fuelrod("t2.tr.assembling.fuelrod.nqdria", "jsonreg:naquadria_dust", "jsonreg:n
     outputs: [{id: "jsonreg:duratium_plate", count: 1}],
     power: 16,
     ingredients: [{item: "oritech:duratium_ingot"}]
+});
+
+// ============================================================
+// T2 金红石 → 钛 科学处理线（氯化法）
+// ============================================================
+
+// 1. 磨矿: 虚空石金红石矿 → 金红石粉（TiO2 精矿）
+<recipetype:techreborn:grinder>.addJsonRecipe("t2.tr.grinder.rutile_dust_from_ore", {type: "techreborn:grinder",
+    time: 100,
+    outputs: [
+        {id: "jsonreg:rutile_dust", count: 2}
+    ],
+    power: 32,
+    ingredients: [
+        {item: "jsonreg:voidstone_rutile_ore"}
+    ]
+});
+
+// 1b. 工业磨粉（水洗磨矿，带副产）: 1 矿石 → 2 金红石粉 + 铁杂质 + 伴生 malarite + 脉石
+<recipetype:techreborn:industrial_grinder>.addJsonRecipe("t2.tr.industrial_grinder.rutile_dust_from_ore", {type: "techreborn:industrial_grinder",
+    time: 200,
+    outputs: [
+        {id: "jsonreg:rutile_dust", count: 2},
+        {id: "oritech:iron_dust", count: 1},
+        {id: "eternal_starlight:malarite", count: 1},
+        {id: "eternal_starlight:cobbled_voidstone", count: 1}
+    ],
+    fluid: {fluid: {fluid: "minecraft:water"}, amount: {value: 81000}},
+    power: 64,
+    ingredients: [
+        {item: "jsonreg:voidstone_rutile_ore", count: 1}
+    ]
+});
+
+// 2. 加碳氯化（改为了大化反）
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("t2.tr.largechemreactor.chlorinate_rutile", {type: "techreborn:large_chemical_reactor",
+    time: 400,
+    power: 256,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:titanium_tetrachloride"}},
+        {id: "techreborn:cell", count: 1}
+    ],
+    ingredients: [
+        {item: "jsonreg:rutile_dust", count: 1},
+        {item: "techreborn:coal_dust", count: 1},
+        {count: 2, components: {"techreborn:fluid": "jsonreg:chlorine"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+// 3. Hunter 钠还原（化反, 1A MV）: TiCl4 + 4Na → Ti + 4NaCl
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("t2.tr.largechemreactor.hunter_reduction", {type: "techreborn:large_chemical_reactor",
+    time: 400,
+    outputs: [
+        {id: "techreborn:titanium_dust", count: 1},
+        {id: "jsonreg:salt_dust", count: 4},
+        {id: "techreborn:cell", count: 5}
+    ],
+    power: 128,
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:titanium_tetrachloride"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 4, components: {"techreborn:fluid": "techreborn:sodium"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
 });

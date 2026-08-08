@@ -178,12 +178,12 @@ import crafttweaker.api.item.IItemStack;
 
 <item:techreborn:magnalium_plate>.addTooltip("§e§lMgAl₂§r");
 
-<item:techreborn:mixed_metal_ingot>.addTooltip("§e§l(Cu₃Zn)(Fe₃Ni)(AgAu)§r");
-<item:techreborn:advanced_alloy_ingot>.addTooltip("§e§l(Cu₃Zn)(Fe₃Ni)(AgAu)§r");
-<item:techreborn:advanced_alloy_plate>.addTooltip("§e§l(Cu₃Zn)(Fe₃Ni)(AgAu)§r");
+<item:techreborn:mixed_metal_ingot>.addTooltip("§e§l(Cu₃Sn)(Fe₃Ni)(AgAu)§r");
+<item:techreborn:advanced_alloy_ingot>.addTooltip("§e§l(Cu₃Sn)(Fe₃Ni)(AgAu)§r");
+<item:techreborn:advanced_alloy_plate>.addTooltip("§e§l(Cu₃Sn)(Fe₃Ni)(AgAu)§r");
 
-<item:techreborn:iridium_alloy_ingot>.addTooltip("§e§l(Cu₃Zn)₄(Fe₃Ni)₄(AgAu)₄Ir₄Ti§r");
-<item:techreborn:iridium_alloy_plate>.addTooltip("§e§l(Cu₃Zn)₄(Fe₃Ni)₄(AgAu)₄Ir₄Ti§r");
+<item:techreborn:iridium_alloy_ingot>.addTooltip("§e§l(Cu₃Sn)₄(Fe₃Ni)₄(AgAu)₄Ir₄Ti§r");
+<item:techreborn:iridium_alloy_plate>.addTooltip("§e§l(Cu₃Sn)₄(Fe₃Ni)₄(AgAu)₄Ir₄Ti§r");
 
 <item:oritech:adamant_ingot>.addTooltip("§e§lAdNi§r");
 <item:oritech:adamant_dust>.addTooltip("§e§lAdNi§r");
