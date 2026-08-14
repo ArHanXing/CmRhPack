@@ -2,6 +2,74 @@ import crafttweaker.api.tag.MCTag;
 import crafttweaker.api.recipe.type.Recipe;
 
 //永恒星光的一些少量联动
+//激活传送门
+<recipetype:lychee:block_interacting>.addJsonRecipe("etst.lychee.active_voidstone",{
+  "type": "lychee:block_interacting",
+  "item_in": "botania:luminizer",
+  "block_in": "jsonreg:inactive_voidstone",
+  "post": [
+    "place eternal_starlight:chiseled_voidstone"
+  ]
+});
+
+//融合主机新配方
+<recipetype:affinity:aspen_infusion>.removeByName("affinity:aspen_infusion/spirit_integration_apparatus");
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/spirit_integration_apparatus", {
+    type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: { item: "oritech:duratium_block" },
+    output: { id: "affinity:spirit_integration_apparatus", count: 2 },
+    duration: 120,
+    inputs: [
+        { item: "minecraft:red_nether_bricks" },
+        { item: "affinity:vicious_wisp_matter" },
+        { item: "botania:mana_pearl" },
+        { item: "affinity:scintillant_anthracite_blend" },
+        { item: "affinity:wise_wisp_matter" },
+        { item: "affinity:scintillant_anthracite_blend" },
+        { item: "botania:mana_pearl" },
+        { item: "affinity:vicious_wisp_matter" }
+    ],
+    flux_cost_per_tick: 10
+});
+//生魂迷雾的填充配方
+<recipetype:techreborn:solid_canning_machine>.addJsonRecipe("magic.tr.solid_canning_machine/mist.inert", {type: "techreborn:solid_canning_machine", 
+    time: 20, outputs: [{id: "affinity:inert_wisp_mist"}], power: 1, 
+    ingredients: [{item:"minecraft:glass_bottle"}, {item:"affinity:inert_wisp_matter"}]});
+<recipetype:techreborn:solid_canning_machine>.addJsonRecipe("magic.tr.solid_canning_machine/mist.wise", {type: "techreborn:solid_canning_machine", 
+    time: 20, outputs: [{id: "affinity:wise_wisp_mist"}], power: 1, 
+    ingredients: [{item:"minecraft:glass_bottle"}, {item:"affinity:wise_wisp_matter"}]});
+<recipetype:techreborn:solid_canning_machine>.addJsonRecipe("magic.tr.solid_canning_machine/mist.vicious", {type: "techreborn:solid_canning_machine", 
+    time: 20, outputs: [{id: "affinity:vicious_wisp_mist"}], power: 1, 
+    ingredients: [{item:"minecraft:glass_bottle"}, {item:"affinity:vicious_wisp_matter"}]});
+//化反制作闪烁无烟煤混合物
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("magic.tr.chemical/scintillant_anthracite_blend", {type: "techreborn:chemical_reactor", time: 400, 
+    outputs: [{id: "affinity:scintillant_anthracite_blend", count: 2}], power: 40, 
+    ingredients: [{item: "minecraft:glowstone_dust"}, {item: "affinity:anthracite_powder", count:2}]});
+
+//更贵的Affinitea
+<recipetype:affinity:aspen_infusion>.removeByName("affinity:aspen_infusion/affinitea");
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/affinitea", {type: "affinity:aspen_infusion", transfer_components: false, 
+primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", count: 1}, duration: 200, 
+    inputs: [{item: "affinity:inert_wisp_matter"}, {item: "minecraft:sugar"}, {item: "minecraft:melon_slice"}, {item: "minecraft:glow_berries"}, 
+    {item: "minecraft:melon_slice"}, {item: "minecraft:sugar"}], flux_cost_per_tick: 20});
+/* 
+//我就是要在稳定刀里塞猫猫锭，你来打我啊（
+<recipetype:affinity:aspen_infusion>.removeByName("affinity:aspen_infusion/stabilized_artifact_blade");
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("t3.magic.affinity.aspen_infusion/stabilized_artifact_blade", {type: "affinity:aspen_infusion", 
+    transfer_components: true, primary_input: {item: "affinity:forgotten_artifact_blade"}, output: {id: "affinity:stabilized_artifact_blade", count: 1}, duration: 800, 
+    inputs: [{item: "toneko:neko_ingot"}, {item: "minecraft:diamond"}, {item: "affinity:vicious_wisp_matter"}, 
+        {item: "affinity:scintillant_anthracite_blend"}, {item: "affinity:vicious_wisp_matter"}, {item: "affinity:resonance_crystal"}, 
+        {item: "affinity:vicious_wisp_matter"}, {item: "affinity:scintillant_anthracite_blend"}, {item: "affinity:vicious_wisp_matter"}, 
+        {item: "minecraft:diamond"}], flux_cost_per_tick: 20});
+*/
+//时间瓶
+craftingTable.removeByName("tiab:time_in_a_bottle");
+craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, [
+    [<tag:item:c:ingots/gold>, <item:affinity:infused_stone>, <tag:item:c:ingots/gold>], 
+    [<item:techreborn:steel_plate>, <item:minecraft:clock>, <item:oritech:plastic_sheet>], 
+    [<tag:item:c:gems/lapis>, <item:minecraft:glass_bottle>, <tag:item:c:gems/lapis>]]);
+
 
 //试管速冷钨钢
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("etst.techreborn.tungstensteel_freeze", {type: "techreborn:chemical_reactor", time: 400, 
@@ -18,8 +86,24 @@ import crafttweaker.api.recipe.type.Recipe;
     output: {id:"affinity:ranthracite_dust",count:1},
     mana: 200
 });
+//下放热爆花和咀叶花
 
-//BOT符文
+//BOT符文：七宗罪配方现在需要别的配料，导致它们只能通过杜鹃仪式消耗符文制作
+<recipetype:botania:runic_altar>.removeByName("botania:runic_altar/rune_of_envy");
+<recipetype:botania:runic_altar>.removeByName("botania:runic_altar/rune_of_gluttony");
+<recipetype:botania:runic_altar>.removeByName("botania:runic_altar/rune_of_greed");
+<recipetype:botania:runic_altar>.removeByName("botania:runic_altar/rune_of_lust");
+<recipetype:botania:runic_altar>.removeByName("botania:runic_altar/rune_of_pride");
+<recipetype:botania:runic_altar>.removeByName("botania:runic_altar/rune_of_sloth");
+<recipetype:botania:runic_altar>.removeByName("botania:runic_altar/rune_of_wrath");
+<recipetype:botania:runic_altar>.addJsonRecipe("magic.botania.runic_altar/rune_of_envy", {type: "botania:runic_altar", catalysts: [{item: "botania:rune_of_winter"}, {item: "botania:rune_of_water"}], reagent: {item: "botania:terrasteel_nugget"}, output: {id: "botania:rune_of_envy", count: 1}, mana: 12000, ingredients: [{tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_quartz"}]});
+<recipetype:botania:runic_altar>.addJsonRecipe("magic.botania.runic_altar/rune_of_gluttony", {type: "botania:runic_altar", catalysts: [{item: "botania:rune_of_winter"}, {item: "botania:rune_of_fire"}], reagent: {item: "botania:terrasteel_nugget"}, output: {id: "botania:rune_of_gluttony", count: 1}, mana: 12000, ingredients: [{tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_quartz"}]});
+<recipetype:botania:runic_altar>.addJsonRecipe("magic.botania.runic_altar/rune_of_greed", {type: "botania:runic_altar", catalysts: [{item: "botania:rune_of_spring"}, {item: "botania:rune_of_water"}], reagent: {item: "botania:terrasteel_nugget"}, output: {id: "botania:rune_of_greed", count: 1}, mana: 12000, ingredients: [{tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_quartz"}]});
+<recipetype:botania:runic_altar>.addJsonRecipe("magic.botania.runic_altar/rune_of_lust", {type: "botania:runic_altar", catalysts: [{item: "botania:rune_of_summer"}, {item: "botania:rune_of_air"}], reagent: {item: "botania:terrasteel_nugget"}, output: {id: "botania:rune_of_lust", count: 1}, mana: 12000, ingredients: [{tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_quartz"}]});
+<recipetype:botania:runic_altar>.addJsonRecipe("magic.botania.runic_altar/rune_of_pride", {type: "botania:runic_altar", catalysts: [{item: "botania:rune_of_summer"}, {item: "botania:rune_of_fire"}], reagent: {item: "botania:terrasteel_nugget"}, output: {id: "botania:rune_of_pride", count: 1}, mana: 12000, ingredients: [{tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_quartz"}]});
+<recipetype:botania:runic_altar>.addJsonRecipe("magic.botania.runic_altar/rune_of_sloth", {type: "botania:runic_altar", catalysts: [{item: "botania:rune_of_autumn"}, {item: "botania:rune_of_air"}], reagent: {item: "botania:terrasteel_nugget"}, output: {id: "botania:rune_of_sloth", count: 1}, mana: 12000, ingredients: [{tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_quartz"}]});
+<recipetype:botania:runic_altar>.addJsonRecipe("magic.botania.runic_altar/rune_of_wrath", {type: "botania:runic_altar", catalysts: [{item: "botania:rune_of_winter"}, {item: "botania:rune_of_earth"}], reagent: {item: "botania:terrasteel_nugget"}, output: {id: "botania:rune_of_wrath", count: 1}, mana: 12000, ingredients: [{tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_quartz"}]});
+//BOT符文：添加杜鹃仪式配方
 <recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/botrune.air", {
     type: "affinity:aspen_infusion",
     transfer_components: false,
@@ -274,41 +358,3 @@ import crafttweaker.api.recipe.type.Recipe;
     flux_cost_per_tick: 10
 });
 
-//生魂迷雾的填充配方
-<recipetype:techreborn:solid_canning_machine>.addJsonRecipe("magic.tr.solid_canning_machine/mist.inert", {type: "techreborn:solid_canning_machine", 
-    time: 20, outputs: [{id: "affinity:inert_wisp_mist"}], power: 1, 
-    ingredients: [{item:"minecraft:glass_bottle"}, {item:"affinity:inert_wisp_matter"}]});
-<recipetype:techreborn:solid_canning_machine>.addJsonRecipe("magic.tr.solid_canning_machine/mist.wise", {type: "techreborn:solid_canning_machine", 
-    time: 20, outputs: [{id: "affinity:wise_wisp_mist"}], power: 1, 
-    ingredients: [{item:"minecraft:glass_bottle"}, {item:"affinity:wise_wisp_matter"}]});
-<recipetype:techreborn:solid_canning_machine>.addJsonRecipe("magic.tr.solid_canning_machine/mist.vicious", {type: "techreborn:solid_canning_machine", 
-    time: 20, outputs: [{id: "affinity:vicious_wisp_mist"}], power: 1, 
-    ingredients: [{item:"minecraft:glass_bottle"}, {item:"affinity:vicious_wisp_matter"}]});
-
-//化反制作闪烁无烟煤混合物
-<recipetype:techreborn:chemical_reactor>.addJsonRecipe("magic.tr.chemical/scintillant_anthracite_blend", {type: "techreborn:chemical_reactor", time: 400, 
-    outputs: [{id: "affinity:scintillant_anthracite_blend", count: 2}], power: 40, 
-    ingredients: [{item: "minecraft:glowstone_dust"}, {item: "affinity:anthracite_powder", count:2}]});
-
-//更贵的Affinitea
-<recipetype:affinity:aspen_infusion>.removeByName("affinity:aspen_infusion/affinitea");
-<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/affinitea", {type: "affinity:aspen_infusion", transfer_components: false, 
-primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", count: 1}, duration: 200, 
-    inputs: [{item: "affinity:inert_wisp_matter"}, {item: "minecraft:sugar"}, {item: "minecraft:melon_slice"}, {item: "minecraft:glow_berries"}, 
-    {item: "minecraft:melon_slice"}, {item: "minecraft:sugar"}], flux_cost_per_tick: 20});
-
-//我就是要在稳定刀里塞猫猫锭，你来打我啊（
-<recipetype:affinity:aspen_infusion>.removeByName("affinity:aspen_infusion/stabilized_artifact_blade");
-<recipetype:affinity:aspen_infusion>.addJsonRecipe("t3.magic.affinity.aspen_infusion/stabilized_artifact_blade", {type: "affinity:aspen_infusion", 
-    transfer_components: true, primary_input: {item: "affinity:forgotten_artifact_blade"}, output: {id: "affinity:stabilized_artifact_blade", count: 1}, duration: 800, 
-    inputs: [{item: "toneko:neko_ingot"}, {item: "minecraft:diamond"}, {item: "affinity:vicious_wisp_matter"}, 
-        {item: "affinity:scintillant_anthracite_blend"}, {item: "affinity:vicious_wisp_matter"}, {item: "affinity:resonance_crystal"}, 
-        {item: "affinity:vicious_wisp_matter"}, {item: "affinity:scintillant_anthracite_blend"}, {item: "affinity:vicious_wisp_matter"}, 
-        {item: "minecraft:diamond"}], flux_cost_per_tick: 20});
-
-//时间瓶
-craftingTable.removeByName("tiab:time_in_a_bottle");
-craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, [
-    [<tag:item:c:ingots/gold>, <item:affinity:infused_stone>, <tag:item:c:ingots/gold>], 
-    [<item:techreborn:steel_plate>, <item:minecraft:clock>, <item:oritech:plastic_sheet>], 
-    [<tag:item:c:gems/lapis>, <item:minecraft:glass_bottle>, <tag:item:c:gems/lapis>]]);

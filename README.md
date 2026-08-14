@@ -59,3 +59,5 @@ JDK: Temurin 26
 
 ### Also See...
 [HanXingReborn](https://github.com/ArHanXing/HanXingReborn), 为本整合包定制的 Tech Reborn 版本
+
+[cmrh-affinity](https://github.com/ArHanXing/cmrh-affinity), 为本整合包定制的 Affinity 版本

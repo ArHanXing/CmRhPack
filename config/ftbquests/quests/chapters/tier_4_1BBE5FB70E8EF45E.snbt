@@ -31,10 +31,13 @@
 				}
 			]
 			x: 0.0d
-			y: 0.0d
+			y: 0.5d
 		}
 		{
-			dependencies: ["5F1F6ED0A21FB05A"]
+			dependencies: [
+				"5F1F6ED0A21FB05A"
+				"1DB355E70CF7C333"
+			]
 			id: "151C349269CC0ED7"
 			rewards: [{
 				count: 5
@@ -298,6 +301,16 @@
 			}]
 			x: 8.5d
 			y: 0.0d
+		}
+		{
+			id: "1DB355E70CF7C333"
+			tasks: [{
+				id: "37DD30925564AE6E"
+				item: { count: 1, id: "botania:luminizer" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.5d
 		}
 	]
 }

@@ -38,7 +38,8 @@ import crafttweaker.api.recipe.type.Recipe;
     ],
     power: 30,
     ingredients: [
-        {count: 1, components: {"techreborn:fluid": "jsonreg:ethanol"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "jsonreg:ethanol"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, item:"oritech:small_copper_dust"}
     ]
 });
 

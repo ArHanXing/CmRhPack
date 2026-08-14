@@ -5,7 +5,32 @@
 	group: ""
 	id: "68D3B8D4284E4BF4"
 	order_index: 0
-	quest_links: [ ]
+	quest_links: [
+		{
+			id: "36432915FB2DD5AB"
+			linked_quest: "1F4CA5D86426B690"
+			x: -1.0d
+			y: -2.5d
+		}
+		{
+			id: "73DB235F0F5C6647"
+			linked_quest: "56A89A15C11A40E4"
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			id: "358ECE83B9858EF4"
+			linked_quest: "4FD51E244C767574"
+			x: 1.0d
+			y: -2.5d
+		}
+		{
+			id: "4406A151E42397F7"
+			linked_quest: "59DC44A709BC1EE4"
+			x: 3.0d
+			y: -1.0d
+		}
+	]
 	quests: [
 		{
 			icon: {
@@ -23,6 +48,14 @@
 					item: {
 						count: 1
 						id: "ftbquests:book"
+					}
+					type: "item"
+				}
+				{
+					id: "0A27B7EEB174A011"
+					item: {
+						count: 1
+						id: "homeostatic:book"
 					}
 					type: "item"
 				}
@@ -57,8 +90,8 @@
 				id: "5AB47975FA110A4F"
 				type: "checkmark"
 			}]
-			x: 3.0d
-			y: -2.5d
+			x: 0.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["1823AFCE9B178349"]
@@ -85,8 +118,8 @@
 				id: "178CA93EA997A319"
 				type: "checkmark"
 			}]
-			x: 1.0d
-			y: -4.5d
+			x: 0.0d
+			y: -6.75d
 		}
 		{
 			dependencies: ["0DF0E025CE6D100E"]
@@ -117,8 +150,8 @@
 				id: "51254A00122CA4AA"
 				type: "checkmark"
 			}]
-			x: -2.0d
-			y: -6.0d
+			x: 0.0d
+			y: -9.0d
 		}
 	]
 }

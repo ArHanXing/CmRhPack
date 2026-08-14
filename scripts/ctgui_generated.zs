@@ -673,3 +673,9 @@ craftingTable.addShaped("ctgui/new/crafting/precise_assembler", <item:techreborn
 
 <recipetype:minecraft:crafting>.removeByName("botania:wand_of_the_forest");
 
+craftingTable.addShapeless("ctgui/new/crafting/ender_air_bottle", <item:botania:ender_air_bottle>, [<item:techreborn:cell>.withJsonComponent(<componenttype:techreborn:fluid>, "jsonreg:end_air")]);
+
+craftingTable.addShapeless("ctgui/new/oritech/small_copper_dust", <item:oritech:small_copper_dust> * 9, [<item:oritech:copper_dust>]);
+
+craftingTable.addShapeless("ctgui/new/oritech/small_gold_dust", <item:oritech:small_gold_dust> * 9, [<item:oritech:gold_dust>]);
+

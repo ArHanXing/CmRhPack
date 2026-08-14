@@ -8,7 +8,13 @@
 	}
 	id: "12C4286EAF065AD7"
 	order_index: 0
-	quest_links: [ ]
+	quest_links: [{
+		id: "6270D36CD7340DAA"
+		linked_quest: "2DDD8825853DD58D"
+		size: 2.0d
+		x: -2.0d
+		y: 2.0d
+	}]
 	quests: [
 		{
 			dependencies: ["1EB8BCAC1496FD10"]
@@ -107,7 +113,7 @@
 					type: "item"
 				}
 			]
-			x: -1.0d
+			x: -3.0d
 			y: -3.5d
 		}
 		{
@@ -136,7 +142,7 @@
 					type: "item"
 				}
 			]
-			x: 1.0d
+			x: -1.0d
 			y: -3.5d
 		}
 		{
@@ -165,7 +171,7 @@
 					type: "item"
 				}
 			]
-			x: 1.0d
+			x: -1.0d
 			y: -4.5d
 		}
 		{
@@ -194,7 +200,7 @@
 					type: "item"
 				}
 			]
-			x: -1.0d
+			x: -3.0d
 			y: -4.5d
 		}
 		{
@@ -334,8 +340,8 @@
 				item: { count: 1, id: "justarod:lubricating_book" }
 				type: "item"
 			}]
-			x: -5.0d
-			y: -1.5d
+			x: -7.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["6CF78EACA3FCA269"]
@@ -380,7 +386,7 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
+			x: -2.0d
 			y: -3.5d
 		}
 		{
@@ -409,7 +415,7 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
+			x: -2.0d
 			y: -4.5d
 		}
 		{
@@ -430,7 +436,7 @@
 				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:ores/bauxite)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 				type: "item"
 			}]
-			x: -2.0d
+			x: -4.0d
 			y: -4.5d
 		}
 		{
@@ -458,7 +464,7 @@
 					type: "item"
 				}
 			]
-			x: -2.0d
+			x: -4.0d
 			y: -3.5d
 		}
 		{
@@ -487,7 +493,7 @@
 					type: "item"
 				}
 			]
-			x: -3.0d
+			x: -5.0d
 			y: -4.5d
 		}
 		{
@@ -516,7 +522,7 @@
 					type: "item"
 				}
 			]
-			x: -3.0d
+			x: -5.0d
 			y: -3.5d
 		}
 		{
@@ -548,17 +554,6 @@
 				}
 			]
 			x: 1.0d
-			y: 2.0d
-		}
-		{
-			id: "6BAF7EFB88892A6A"
-			size: 2.0d
-			tasks: [{
-				id: "7289119219488FC2"
-				item: { count: 1, id: "naturescompass:naturescompass" }
-				type: "item"
-			}]
-			x: -2.0d
 			y: 2.0d
 		}
 		{
@@ -698,6 +693,20 @@
 		{
 			dependencies: ["67DCA088B2ACE025"]
 			id: "1F4CA5D86426B690"
+			rewards: [{
+				id: "17FFD8FCF209EAD8"
+				item: {
+					components: {
+						"homeostatic:water_container": {
+							Amount: 0L
+							Fluid: "minecraft:empty"
+						}
+					}
+					count: 1
+					id: "homeostatic:leather_flask"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "78437C1A8A24696E"
 				item: { count: 1, id: "minecraft:glass_bottle" }
@@ -705,6 +714,28 @@
 			}]
 			x: 1.0d
 			y: -2.0d
+		}
+		{
+			dependencies: ["67DCA088B2ACE025"]
+			icon: {
+				id: "minecraft:candle"
+			}
+			id: "4FD51E244C767574"
+			rewards: [{
+				count: 3
+				id: "1EB58CDAD5A06EC4"
+				item: {
+					count: 1
+					id: "minecraft:candle"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "66D6CC91C9922A07"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: -1.0d
 		}
 	]
 }

@@ -6,21 +6,33 @@
 	id: "702EC7DEE2476DAC"
 	order_index: 2
 	quest_links: [ ]
-	quests: [{
-		dependencies: [
-			"794D548CD7E2F74A"
-			"272E90486E0DB82F"
-		]
-		icon_scale: 2.0d
-		id: "2518810854E3668B"
-		shape: "hexagon"
-		size: 1.5d
-		tasks: [{
-			id: "2CD34F4CFDF46DCD"
-			item: { count: 1, id: "affinity:spirit_integration_apparatus" }
-			type: "item"
-		}]
-		x: 0.5d
-		y: 0.5d
-	}]
+	quests: [
+		{
+			dependencies: [
+				"794D548CD7E2F74A"
+				"272E90486E0DB82F"
+			]
+			icon_scale: 2.0d
+			id: "2518810854E3668B"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "2CD34F4CFDF46DCD"
+				item: { count: 1, id: "affinity:spirit_integration_apparatus" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 0.5d
+		}
+		{
+			id: "5B46E8FFA0CD1FCC"
+			tasks: [{
+				id: "75F071151D26FA8D"
+				item: { count: 1, id: "botania:terrestrial_agglomeration_plate" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.5d
+		}
+	]
 }

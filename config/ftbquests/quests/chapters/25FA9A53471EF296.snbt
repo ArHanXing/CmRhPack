@@ -3,11 +3,15 @@
 	default_quest_shape: ""
 	filename: "25FA9A53471EF296"
 	group: "65B400649AF290A7"
+	icon: {
+		id: "techreborn:industrial_blast_furnace"
+	}
 	id: "25FA9A53471EF296"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["0B79CCECAB548F7D"]
 			id: "29A8B822A402D9B3"
 			tasks: [{
 				id: "23008FD7540426ED"
@@ -131,7 +135,7 @@
 				item: { count: 1, id: "techreborn:large_compressor" }
 				type: "item"
 			}]
-			x: 5.0d
+			x: 4.0d
 			y: 5.5d
 		}
 		{
@@ -144,7 +148,7 @@
 				item: { count: 1, id: "techreborn:large_wire_mill" }
 				type: "item"
 			}]
-			x: 7.0d
+			x: 2.0d
 			y: 5.5d
 		}
 		{
@@ -157,7 +161,7 @@
 				item: { count: 1, id: "techreborn:large_lathe" }
 				type: "item"
 			}]
-			x: 8.0d
+			x: 2.0d
 			y: 4.0d
 		}
 		{
@@ -274,6 +278,28 @@
 			}]
 			x: 10.0d
 			y: 9.0d
+		}
+		{
+			dependencies: ["19B129C75C1F02CE"]
+			id: "6481D0A994EA4306"
+			tasks: [{
+				id: "65FEE86DD4ABD667"
+				item: { count: 1, id: "transmog:void_fragment" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["18982C95A36D7767"]
+			id: "25DA21E1A23AFB66"
+			tasks: [{
+				id: "1D6518179430F60B"
+				item: { count: 1, id: "oritech:fragment_forge_block" }
+				type: "item"
+			}]
+			x: 12.5d
+			y: 2.0d
 		}
 	]
 }

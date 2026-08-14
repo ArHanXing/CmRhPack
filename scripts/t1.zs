@@ -201,3 +201,15 @@ craftingTable.remove(<item:oritech:polymer_resin>);
     power: 5,
     ingredients: [{tag: "c:ingots/iron"}]
 });
+<recipetype:techreborn:grinder>.addJsonRecipe("t1.tr.grinder.copper_dust", {type: "techreborn:grinder",
+    time: 20,
+    outputs: [{id: "oritech:copper_dust", count: 1}],
+    power: 5,
+    ingredients: [{tag: "c:ingots/copper"}]
+});
+<recipetype:techreborn:grinder>.addJsonRecipe("t1.tr.grinder.gold_dust", {type: "techreborn:grinder",
+    time: 20,
+    outputs: [{id: "oritech:gold_dust", count: 1}],
+    power: 5,
+    ingredients: [{tag: "c:ingots/gold"}]
+});

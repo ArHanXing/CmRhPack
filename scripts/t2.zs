@@ -126,17 +126,23 @@ outputs: [{id: "transmog:void_fragment", count: 1}], time: 600, heat: 1500, powe
 
 //原子锻炉
 craftingTable.removeByName("oritech:crafting/atomicforge");
-<recipetype:avaritia:extreme_crafting>.addJsonRecipe("t2.oritech.atomic_forge", {type: "avaritia:extreme_shaped", result: {id: "oritech:atomic_forge_block", count: 1}, pattern: 
- [
- "         ", 
- "         ", 
- "  AA AA  ", 
- "  EBCBE  ", 
- "EEDCDCDEE", 
- "   ACA   ", 
- "         ", 
- "         "], 
- key: {A:{item:"oritech:duratium_ingot"},B:{item:"oritech:flux_gate"},C:{item:"techreborn:advanced_machine_frame"},D:{item:"oritech:enderic_compound"},E:{item:"oritech:plastic_sheet"}}});
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("t2.tr.assembly/atomic_forge", {type: "techreborn:precise_assembler", 
+    outputs: [
+        {id: "oritech:atomic_forge_block", count: 1},
+        {id: "techreborn:cell", count: 2}
+    ],
+    time: 600, power: 128,
+    ingredients: [
+        {count: 16, item:"jsonreg:duratium_plate"},
+        {count: 4, item:"techreborn:advanced_machine_frame"},
+        {count: 4, item:"oritech:laser_arm_block"},
+        {count: 4, item:"techreborn:advanced_circuit"},
+        {count: 2, item:"jsonreg:mv_emitter"},
+        {count: 2, item:"jsonreg:mv_electric_piston"},
+        {count: 4, item:"oritech:plastic_sheet"},
+        {count: 2, components: {"techreborn:fluid": "techreborn:carbon"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
 
 //堕落智能
 <recipetype:oritech:atomic_forge>.addJsonRecipe("t2.oritech.atomicforge/unholy_intelligence", {type: "oritech:atomic_forge", 
@@ -181,7 +187,9 @@ craftingTable.addShaped("t2.oritech.crafting/particlecontroller_alt", <item:orit
 fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:prometheum_ingot", count: 1}], time: 2500, 
 fluidInput: {fluid: "minecraft:empty", amount: 0}, ingredients: [{item: "oritech:overcharged_crystal"}, {item: "oritech:heisenberg_compensator"}]});
 
-//ai芯片，t3电路
+//t2/t3大电路
+<recipetype:oritech:centrifuge_fluid>.removeByName("oritech:centrifuge/fluid/siliconwafers");
+<recipetype:oritech:atomic_forge>.removeByName("oritech:atomicforge/wafer");
 <recipetype:oritech:atomic_forge>.removeByName("oritech:atomicforge/aicomputer");
 <recipetype:oritech:atomic_forge>.addJsonRecipe("t2.oritech.atomicforge/aicomputer", {type: "oritech:atomic_forge", 
 fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:super_ai_chip", count: 2}], time: 100, 

@@ -975,6 +975,21 @@ import crafttweaker.api.ingredient.IIngredient;
       {"type":"drop_item",id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:starlight_air"}}
     ]
 });
+// 反向制造末地空气 & BOT末地气瓶
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("oil.tr.largechemical.nonoseparation_end", {type: "techreborn:large_chemical_reactor",
+    time: 200,
+    outputs: [
+        {id: "techreborn:cell", count: 3, components: {"techreborn:fluid": "jsonreg:end_air"}},
+        {id: "techreborn:cell", count: 3}
+    ],
+    power: 32,
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "techreborn:helium3"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 3, components: {"techreborn:fluid": "techreborn:nitrogen_dioxide"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 2, components: {"techreborn:fluid": "techreborn:helium"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+    ]
+});
+
 // 3NO2+H2O=2HNO3 一氧化氮被我吃了
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.other.nitric_acid",{ 
     type: "techreborn:chemical_reactor",

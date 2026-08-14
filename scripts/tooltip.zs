@@ -389,6 +389,8 @@ import crafttweaker.api.item.IItemStack;
 <item:advanced_reborn:singularity_compressor>.addTooltip("可用配方类型：TR 压缩机");
 <item:advanced_reborn:centrifugal_extractor>.addTooltip("可用配方类型：TR 提取机，具有§b2x产出§r");
 
+<item:techreborn:industrial_blast_furnace>.addTooltip("实际热量每高于配方热量 §e1000K§r， 具有 §e0.8x§r 耗时倍率");
+
 <item:oritech:black_hole_block>.addTooltip("§b单个§r粒子以§b>15000§r的速度撞击§b传送门方块§r（末地/地狱/折跃）时产生");
 <item:oritech:black_hole_block>.addTooltip("吸收方块产生§b速子§r，是后期的强大、极不可控发电");
 

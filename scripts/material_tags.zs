@@ -30,3 +30,9 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:block:c:ores>.add(<block:jsonreg:end_naquadah_ore>);
 <tag:block:c:ores>.add(<block:jsonreg:end_enriched_naquadah_ore>);
 <tag:block:c:ores>.add(<block:jsonreg:voidstone_rutile_ore>);
+
+<tag:item:c:small_dusts>.add(<item:oritech:small_platinum_dust>);
+<tag:item:c:small_dusts/platinum>.add(<item:oritech:small_platinum_dust>);
+
+<tag:item:c:small_dusts>.add(<item:oritech:small_nickel_dust>);
+<tag:item:c:small_dusts/nickel>.add(<item:oritech:small_nickel_dust>);
