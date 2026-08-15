@@ -3,9 +3,25 @@
 	default_quest_shape: ""
 	filename: "pt2"
 	group: "65B400649AF290A7"
+	icon: {
+		id: "botania:natura_pylon"
+	}
 	id: "702EC7DEE2476DAC"
 	order_index: 2
-	quest_links: [ ]
+	quest_links: [
+		{
+			id: "3FE80E11E85A1672"
+			linked_quest: "1DB355E70CF7C333"
+			x: 12.5d
+			y: 0.5d
+		}
+		{
+			id: "7489F460F1EBD29E"
+			linked_quest: "151C349269CC0ED7"
+			x: 15.0d
+			y: 0.5d
+		}
+	]
 	quests: [
 		{
 			dependencies: [
@@ -25,6 +41,7 @@
 			y: 0.5d
 		}
 		{
+			dependencies: ["2518810854E3668B"]
 			id: "5B46E8FFA0CD1FCC"
 			tasks: [{
 				id: "75F071151D26FA8D"
@@ -33,6 +50,90 @@
 			}]
 			x: 3.0d
 			y: 0.5d
+		}
+		{
+			dependencies: ["5B46E8FFA0CD1FCC"]
+			icon_scale: 1.5d
+			id: "2F02AB0C7E94FF4B"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "480CE66EFB8769DA"
+				item: { count: 1, id: "botania:terrasteel_ingot" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["2518810854E3668B"]
+			id: "4258970782B0209D"
+			tasks: [{
+				id: "6D09891FEDCD72DC"
+				item: { count: 1, id: "affinity:graviton_transducer" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2F02AB0C7E94FF4B"]
+			id: "2BD0B63C43E6EE90"
+			tasks: [{
+				id: "5423E4EEA2B94D7C"
+				item: { count: 1, id: "botania:elven_gateway_core" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["2F02AB0C7E94FF4B"]
+			id: "1EC82D8384297FFF"
+			tasks: [{
+				id: "7D6740E5D2E0D5E3"
+				item: { count: 1, id: "botania:natura_pylon" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"2BD0B63C43E6EE90"
+				"1EC82D8384297FFF"
+			]
+			id: "2C453E81D0B53296"
+			tasks: [
+				{
+					id: "6023BB0AE905A022"
+					item: { count: 1, id: "botania:elementium_ingot" }
+					type: "item"
+				}
+				{
+					id: "7AA316CB66904BEE"
+					item: { count: 1, id: "botania:dragonstone" }
+					type: "item"
+				}
+				{
+					id: "06BEB715D2D211C0"
+					item: { count: 1, id: "botania:pixie_dust" }
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["2C453E81D0B53296"]
+			id: "3CF9D9D2E007578A"
+			tasks: [{
+				id: "029E978CFBF3EBB9"
+				item: { count: 1, id: "botania:elven_mana_spreader" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: -1.5d
 		}
 	]
 }

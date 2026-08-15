@@ -356,6 +356,15 @@
 		{
 			dependencies: ["6C0B2DD4D4FC1C90"]
 			id: "794D548CD7E2F74A"
+			rewards: [{
+				count: 4
+				id: "0B3AD21206308009"
+				item: {
+					count: 1
+					id: "affinity:sundial"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "4B8EF1FF2E35DF11"
 				item: { count: 1, id: "affinity:matter_harvesting_hearth" }
@@ -469,6 +478,80 @@
 			}]
 			x: 10.0d
 			y: 9.0d
+		}
+		{
+			dependencies: ["794D548CD7E2F74A"]
+			icon_scale: 2.0d
+			id: "660BFCC3F8EB4523"
+			shape: "none"
+			tasks: [{
+				id: "0FAB377A181A9B98"
+				item: { count: 1, id: "affinity:crystalline_wisp_matter_composite" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["660BFCC3F8EB4523"]
+			icon_scale: 2.0d
+			id: "5210E77FC05E3158"
+			rewards: [{
+				count: 3
+				id: "253F0E5044CC9EC9"
+				item: {
+					count: 1
+					id: "affinity:field_coherence_modulator"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "73E1F96AEAE6892F"
+				item: { count: 1, id: "affinity:field_coherence_modulator" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["794D548CD7E2F74A"]
+			id: "48C9A5294052ED4A"
+			tasks: [
+				{
+					id: "7E8A3580CB20ED1F"
+					item: { count: 1, id: "affinity:affine_infuser" }
+					type: "item"
+				}
+				{
+					id: "3C1DF4D05E4D7080"
+					item: { count: 1, id: "affinity:affinitea" }
+					type: "item"
+				}
+			]
+			x: 16.0d
+			y: 9.5d
+		}
+		{
+			dependencies: ["794D548CD7E2F74A"]
+			id: "3FCA902CE71CFAD6"
+			tasks: [{
+				id: "7F9E7AE49432FD3E"
+				item: { count: 1, id: "affinity:arboreal_annihilation_apparatus" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["794D548CD7E2F74A"]
+			id: "17FED51116C03499"
+			tasks: [{
+				id: "0605B23E9FBBAB70"
+				item: { count: 1, id: "affinity:crop_reaper" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 9.5d
 		}
 	]
 }
