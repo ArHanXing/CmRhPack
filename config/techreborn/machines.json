@@ -187,6 +187,16 @@
       "value": 20000
     }
   },
+  "large_centrifuge": {
+    "LargeCentrifugeMaxInput": {
+      "comment": "Large Centrifuge Max Input (Energy per tick)",
+      "value": 128
+    },
+    "LargeCentrifugeMaxEnergy": {
+      "comment": "Large Centrifuge Max Energy",
+      "value": 10000
+    }
+  },
   "matter_fabricator": {
     "MatterFabricatorEnergyPerAmp": {
       "comment": "Matter Fabricator EU per amplifier unit, multiply this with the rate for total Energy",
@@ -295,6 +305,16 @@
     "ChargeBenchMaxOutput": {
       "comment": "Charge Bench Max Output (Energy per tick)",
       "value": 512
+    }
+  },
+  "large_extractor": {
+    "LargeExtractorMaxInput": {
+      "comment": "Large Extractor Max Input (Energy per tick)",
+      "value": 128
+    },
+    "LargeExtractorMaxEnergy": {
+      "comment": "Large Extractor Max Energy",
+      "value": 10000
     }
   },
   "precise_assembler": {
@@ -544,6 +564,26 @@
       "value": 32
     }
   },
+  "large_electrolyzer": {
+    "LargeElectrolyzerMaxInput": {
+      "comment": "Large Electrolyzer Max Input (Energy per tick)",
+      "value": 128
+    },
+    "LargeElectrolyzerMaxEnergy": {
+      "comment": "Large Electrolyzer Max Energy",
+      "value": 10000
+    }
+  },
+  "industrial_alloy_smelter": {
+    "IndustrialAlloySmelterMaxEnergy": {
+      "comment": "Industrial Alloy Smelter Max Energy",
+      "value": 10000
+    },
+    "IndustrialAlloySmelterMaxInput": {
+      "comment": "Industrial Alloy Smelter Max Input (Energy per tick)",
+      "value": 128
+    }
+  },
   "drain": {
     "TicksUntilNextDrainAttempt": {
       "comment": "How many ticks should go between two drain attempts. 0 or negative will disable drain.",
@@ -560,6 +600,16 @@
       "value": 128
     }
   },
+  "large_greenhouse": {
+    "LargeGreenhouseMaxEnergy": {
+      "comment": "Large Greenhouse Max Energy",
+      "value": 10000
+    },
+    "LargeGreenhouseMaxInput": {
+      "comment": "Large Greenhouse Max Input (Energy per tick)",
+      "value": 128
+    }
+  },
   "scrapboxinator": {
     "ScrapboxinatorMaxEnergy": {
       "comment": "Scrapboxinator Max Energy",
@@ -568,6 +618,16 @@
     "ScrapboxinatorMaxInput": {
       "comment": "Scrapboxinator Max Input (Energy per tick)",
       "value": 32
+    }
+  },
+  "large_ranch": {
+    "LargeRanchMaxInput": {
+      "comment": "Large Ranch Max Input (Energy per tick)",
+      "value": 128
+    },
+    "LargeRanchMaxEnergy": {
+      "comment": "Large Ranch Max Energy",
+      "value": 10000
     }
   },
   "large_wire_mill": {

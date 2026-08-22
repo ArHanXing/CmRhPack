@@ -1,20 +1,32 @@
-filename = 'oritech-fabric-1.21.1-1.2.8.jar'
+filename = 'oritech-fabric-1.21.1-1.2.10.jar'
 name = 'Oritech'
 side = ''
 x-prismlauncher-loaders = [ 'fabric' ]
 x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '1.2.8'
+x-prismlauncher-version-number = '1.2.10'
 
 [download]
-hash = '3b277544523815c77c53565ad6aa3cea92b5934df8f64bad8c168e3ece915bad6641aa49c489f0d976597bf83e2efebf9f46b347c91ce597167821940c733a9b'
+hash = '700f997e801c6a06e9b945782829b834db13d36d2e3411ffc21d70d8affd820651238814f6b1c51b2da9724350766f75df420ea964b76bf0fe1c30a90ac17469'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/4sYI62kA/versions/nryT8a1E/oritech-fabric-1.21.1-1.2.8.jar'
+url = 'https://cdn.modrinth.com/data/4sYI62kA/versions/QKdI8Kxf/oritech-fabric-1.21.1-1.2.10.jar'
 
 [update.modrinth]
 mod-id = '4sYI62kA'
-version = 'nryT8a1E'
+version = 'QKdI8Kxf'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'P7dR8mSH'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'J8MMsNrL'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'ohNO6lps'
+type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
 addonId = '8BmcQJ2H'
@@ -25,17 +37,5 @@ addonId = 'lhGA9TYQ'
 type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
-addonId = 'P7dR8mSH'
-type = 'REQUIRED'
-
-[[x-prismlauncher-dependencies]]
 addonId = 'b1ZV3DIJ'
-type = 'REQUIRED'
-
-[[x-prismlauncher-dependencies]]
-addonId = 'J8MMsNrL'
-type = 'OPTIONAL'
-
-[[x-prismlauncher-dependencies]]
-addonId = 'ohNO6lps'
 type = 'REQUIRED'
