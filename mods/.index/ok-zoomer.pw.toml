@@ -1,0 +1,25 @@
+filename = 'ok_zoomer-fabric-10.0.0-beta.13.jar'
+name = "Ok Zoomer - It's Zoom!"
+side = 'client'
+x-prismlauncher-loaders = [ 'quilt', 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '10.0.0-beta.13+fabric'
+
+[download]
+hash = 'd284739843f2caaefcac09d7894906521c0e515ca03b4d949e8135c885d0e7e96e24471c24e8efb4df3aca1c59432ef0730af3667fc486e13ca7c3bda794fefd'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/aXf2OSFU/versions/UX8lfoRm/ok_zoomer-fabric-10.0.0-beta.13.jar'
+
+[update.modrinth]
+mod-id = 'aXf2OSFU'
+version = 'UX8lfoRm'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'P7dR8mSH'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'mOgUt4GM'
+type = 'OPTIONAL'
