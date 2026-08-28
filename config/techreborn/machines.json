@@ -235,6 +235,20 @@
       "value": 1000
     }
   },
+  "space_elevator": {
+    "SpaceElevatorMaxInput": {
+      "comment": "Space Elevator Max Input (Energy per tick)",
+      "value": 2048
+    },
+    "SpaceElevatorEnergyPerTick": {
+      "comment": "Space Elevator energy consumption while running (Energy per tick)",
+      "value": 2048
+    },
+    "SpaceElevatorMaxEnergy": {
+      "comment": "Space Elevator Max Energy",
+      "value": 10000000
+    }
+  },
   "fishing_station": {
     "FishingStationInterval": {
       "comment": "Fishing Station Catch Interval in Ticks \u003e 0",
@@ -291,6 +305,16 @@
     "FluidReplicatorMaxInput": {
       "comment": "Fluid Replicator Max Input (Energy per tick)",
       "value": 256
+    }
+  },
+  "space_elevator_assembler": {
+    "SpaceElevatorAssemblerMaxInput": {
+      "comment": "Space Elevator Assembler Max Input (Energy per tick)",
+      "value": 128
+    },
+    "SpaceElevatorAssemblerMaxEnergy": {
+      "comment": "Space Elevator Assembler Max Energy",
+      "value": 10000
     }
   },
   "charge_bench": {
@@ -666,6 +690,16 @@
     "solidCanningMachineMaxInput": {
       "comment": "Solid Canning Machine Max Input (Energy per tick)",
       "value": 32
+    }
+  },
+  "space_elevator_miner": {
+    "SpaceElevatorMinerMaxEnergy": {
+      "comment": "Space Elevator Miner Max Energy",
+      "value": 10000
+    },
+    "SpaceElevatorMinerMaxInput": {
+      "comment": "Space Elevator Miner Max Input (Energy per tick)",
+      "value": 128
     }
   },
   "extractor": {
