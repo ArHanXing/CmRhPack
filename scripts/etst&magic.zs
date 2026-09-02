@@ -96,6 +96,16 @@ primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", c
     mana: 250000,
     ingredients: [{tag: "c:ingots/elementium"}, {tag: "c:gems/dragonstone"}, {tag: "c:dusts/pixie"}]});
 
+//盖亚水晶
+<recipetype:lychee:item_inside>.addJsonRecipe("magic.botania.gaia_pylon", {
+    type: "lychee:item_inside",
+    item_in: [{"item": "botania:mana_pylon"},{"item":"botania:pixie_dust", "count": 2},{"item":"botania:elementium_ingot", "count": 2}],
+    block_in: {"blocks": ["eternal_starlight:ether"]},
+    time: 50,
+    post: [
+        {"type": "drop_item", "id": "botania:gaia_pylon", "count": 1}
+    ]
+});
 //时间瓶
 craftingTable.removeByName("tiab:time_in_a_bottle");
 craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, [

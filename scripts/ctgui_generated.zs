@@ -736,3 +736,68 @@ craftingTable.addShaped("ctgui/new/crafting/upgrade_battery_creative", <item:min
     [<item:jsonreg:epoxy_resin_plate>, <item:mininggadgets:upgrade_battery_3>, <item:jsonreg:epoxy_resin_plate>],
     [IIngredientEmpty.getInstance(), <item:oritech:advanced_battery>, IIngredientEmpty.getInstance()]]);
 
+<recipetype:minecraft:crafting>.removeByName("mininggadgets:mininggadget_fancy");
+craftingTable.addShaped("ctgui/new/mininggadgets/mininggadget_fancy", <item:mininggadgets:mininggadget_fancy>, [
+    [IIngredientEmpty.getInstance(), <item:techreborn:steel_plate>, <item:jsonreg:lv_robot_arm>],
+    [<item:oritech:laser_arm_block>, <item:mininggadgets:upgrade_empty>, IIngredientEmpty.getInstance()],
+    [IIngredientEmpty.getInstance(), <item:techreborn:steel_plate>, <item:jsonreg:lv_robot_arm>]]);
+
+<recipetype:minecraft:crafting>.removeByName("mininggadgets:mininggadget");
+craftingTable.addShaped("ctgui/new/mininggadgets/mininggadget", <item:mininggadgets:mininggadget>, [
+    [IIngredientEmpty.getInstance(), <item:jsonreg:mv_robot_arm>, IIngredientEmpty.getInstance()],
+    [<item:jsonreg:mv_emitter>, <item:mininggadgets:mininggadget_fancy>, <item:jsonreg:mv_sensor>],
+    [<item:techreborn:titanium_plate>, IIngredientEmpty.getInstance(), <item:techreborn:titanium_plate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/ore_crusher", <item:techreborn:ore_crusher>, [
+    [IIngredientEmpty.getInstance(), <item:oritech:motor>, IIngredientEmpty.getInstance()],
+    [<item:oritech:fluid_pipe>, <item:techreborn:basic_machine_frame>, <item:oritech:fluid_pipe>],
+    [IIngredientEmpty.getInstance(), <item:jsonreg:steel_rod>, IIngredientEmpty.getInstance()]]);
+
+craftingTable.addShaped("ctgui/new/crafting/large_ore_crusher", <item:techreborn:large_ore_crusher>, [
+    [<item:techreborn:advanced_circuit>, <item:jsonreg:mv_robot_arm>, <item:techreborn:advanced_circuit>],
+    [IIngredientEmpty.getInstance(), <item:techreborn:ore_crusher>, IIngredientEmpty.getInstance()],
+    [<item:jsonreg:aluminum_rod>, <item:techreborn:advanced_machine_casing>, <item:jsonreg:aluminum_rod>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/large_grinder", <item:techreborn:large_grinder>, [
+    [<item:techreborn:advanced_circuit>, <item:techreborn:advanced_machine_casing>, <item:techreborn:advanced_circuit>],
+    [<item:jsonreg:aluminum_rod>, <item:techreborn:grinder>, <item:jsonreg:aluminum_rod>],
+    [<item:jsonreg:mv_electric_motor>, <item:jsonreg:aluminum_rod>, <item:jsonreg:mv_electric_motor>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/urinary_catheter", <item:urinarycatheter:urinary_catheter>, [
+    [IIngredientEmpty.getInstance(), <item:oritech:fluid_pipe>],
+    [IIngredientEmpty.getInstance(), <item:botania:hydroangeas>],
+    [IIngredientEmpty.getInstance(), <item:jsonreg:rubber_plate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/infinite_pie", <item:infinite_pie:infinite_pie>, [
+    [<item:minecraft:pumpkin_pie>, <item:farmersdelight:apple_pie>, <item:farmersdelight:sweet_berry_cheesecake>],
+    [<item:farmersdelight:shepherds_pie_block>, <item:minecraft:cake>, <item:mysticsbiomes:cherry_pie>],
+    [<item:techreborn:advanced_circuit>, <item:mysticsbiomes:peach_pie>, <item:techreborn:advanced_circuit>]]);
+
+<recipetype:minecraft:crafting>.removeByName("botania:gaia_pylon");
+
+craftingTable.addShaped("ctgui/new/crafting/large_centrifuge", <item:techreborn:large_centrifuge>, [
+    [<item:techreborn:advanced_circuit>, <item:jsonreg:aluminum_rod>, <item:techreborn:advanced_circuit>],
+    [<item:jsonreg:mv_electric_motor>, <item:techreborn:industrial_centrifuge>, <item:jsonreg:mv_electric_motor>],
+    [<item:techreborn:aluminum_plate>, <item:jsonreg:mv_electric_motor>, <item:techreborn:aluminum_plate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/large_extractor", <item:techreborn:large_extractor>, [
+    [IIngredientEmpty.getInstance(), <item:jsonreg:mv_electric_motor>, IIngredientEmpty.getInstance()],
+    [<item:techreborn:aluminum_plate>, <item:advanced_reborn:centrifugal_extractor>, <item:techreborn:aluminum_plate>],
+    [IIngredientEmpty.getInstance(), <item:techreborn:advanced_machine_casing>, IIngredientEmpty.getInstance()]]);
+
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine/greenhouse_controller");
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/greenhouse_controller", <item:techreborn:greenhouse_controller>, [
+    [<item:techreborn:refined_iron_ingot>, <item:techreborn:electronic_circuit>, <item:techreborn:refined_iron_ingot>],
+    [<item:jsonreg:lv_robot_arm>, IIngredientEmpty.getInstance(), <item:jsonreg:lv_robot_arm>],
+    [<item:techreborn:electronic_circuit>, <item:techreborn:basic_machine_frame>, <item:techreborn:electronic_circuit>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/large_greenhouse", <item:techreborn:large_greenhouse>, [
+    [<item:techreborn:aluminum_plate>, <item:techreborn:advanced_machine_casing>, <item:techreborn:aluminum_plate>],
+    [<item:jsonreg:mv_robot_arm>, <item:techreborn:greenhouse_controller>, <item:jsonreg:mv_robot_arm>],
+    [<item:techreborn:advanced_circuit>, <item:techreborn:aluminum_plate>, <item:techreborn:advanced_circuit>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/large_ranch", <item:techreborn:large_ranch>, [
+    [<item:oritech:processing_unit>, <item:easy_mob_farm:tier1_mob_farm_template>, <item:oritech:processing_unit>],
+    [<item:jsonreg:mv_robot_arm>, <item:techreborn:advanced_circuit>, <item:jsonreg:mv_robot_arm>],
+    [<item:techreborn:aluminum_plate>, <item:techreborn:advanced_machine_casing>, <item:techreborn:aluminum_plate>]]);
+

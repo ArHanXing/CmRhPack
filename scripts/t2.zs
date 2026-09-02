@@ -144,6 +144,14 @@ craftingTable.removeByName("oritech:crafting/atomicforge");
     ]
 });
 
+//单晶硅
+<recipetype:oritech:refinery>.removeByName("oritech:refinery/siliconwashing");
+<recipetype:oritech:refinery>.addJsonRecipe("t2.oritech.refinery/siliconwashing", {type: "oritech:refinery",
+    results: [{id: "jsonreg:silicon_boule", count: 1}], time: 160,
+    fluidInput: {fluid: "oritech:still_silicon_wash"}, ingredients: [item:"oritech:silicon"}]
+});
+
+
 //堕落智能
 <recipetype:oritech:atomic_forge>.addJsonRecipe("t2.oritech.atomicforge/unholy_intelligence", {type: "oritech:atomic_forge", 
     fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:unholy_intelligence", count: 1}], 
@@ -446,7 +454,7 @@ _fuelrod("t2.tr.assembling.fuelrod.nqdria", "jsonreg:naquadria_dust", "jsonreg:n
 });
 
 // 3. Hunter 钠还原（化反, 1A MV）: TiCl4 + 4Na → Ti + 4NaCl
-<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("t2.tr.largechemreactor.hunter_reduction", {type: "techreborn:large_chemical_reactor",
+<recipetype:techreborn:hunter_process_reactor>.addJsonRecipe("t2.tr.hunter_reduction", {type: "techreborn:hunter_process_reactor",
     time: 400,
     outputs: [
         {id: "techreborn:titanium_dust", count: 1},
@@ -457,5 +465,20 @@ _fuelrod("t2.tr.assembling.fuelrod.nqdria", "jsonreg:naquadria_dust", "jsonreg:n
     ingredients: [
         {count: 1, components: {"techreborn:fluid": "jsonreg:titanium_tetrachloride"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
         {count: 4, components: {"techreborn:fluid": "techreborn:sodium"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+// 3. Kroll 镁还原（化反, 1A MV）: TiCl4 + 2Mg → Ti + MgCl2
+// 无需镁！
+<recipetype:techreborn:kroll_reduction_vessel>.addJsonRecipe("t2.tr.kroll_reduction", {type: "techreborn:kroll_reduction_vessel",
+    time: 400,
+    outputs: [
+        {id: "techreborn:titanium_ingot", count: 1},
+        {id: "techreborn:cell", count: 4, components: {"techreborn:fluid": "jsonreg:chlorine"}}
+    ],
+    power: 128,
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:titanium_tetrachloride"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "techreborn:cell", count: 4}
     ]
 });

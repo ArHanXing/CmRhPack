@@ -574,6 +574,11 @@
       "id": "rock_salt_dust",
       "name": "岩盐粉",
       "max_count": 64
+    },
+    {
+      "id": "silicon_boule",
+      "name": "单晶硅",
+      "max_count": 64
     }
   ],
   "blocks": [
@@ -728,6 +733,15 @@
       "resistance": 3.0,
       "requires_tool": false,
       "has_item": true
+    },
+    {
+      "id": "steel_frame",
+      "name": "钢框架",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true,
+      "render_layer": "translucent"
     }
   ],
   "fluids": [

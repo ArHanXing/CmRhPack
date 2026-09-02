@@ -8,7 +8,12 @@
 	}
 	id: "25FA9A53471EF296"
 	order_index: 0
-	quest_links: [ ]
+	quest_links: [{
+		id: "4DED5C4D15414715"
+		linked_quest: "0A79DDBB3E3642EC"
+		x: 15.0d
+		y: 9.0d
+	}]
 	quests: [
 		{
 			dependencies: ["0B79CCECAB548F7D"]
@@ -60,6 +65,15 @@
 		{
 			dependencies: ["3550797BAAC154E3"]
 			id: "0ABE56D6D1BF1808"
+			rewards: [{
+				count: 16
+				id: "6C5B10050FD79EDB"
+				item: {
+					count: 1
+					id: "techreborn:chrome_ingot"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "5ED45747E203F5D8"
 				item: { count: 1, id: "techreborn:chrome_ingot" }
@@ -82,6 +96,15 @@
 		{
 			dependencies: ["19B129C75C1F02CE"]
 			id: "53AA2049025E385C"
+			rewards: [{
+				count: 16
+				id: "4D06AA4CA071D8C3"
+				item: {
+					count: 1
+					id: "techreborn:aluminum_ingot"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "4D0F06B208F7EC8E"
 				item: { count: 1, id: "techreborn:aluminum_ingot" }
@@ -136,7 +159,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 5.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["53AA2049025E385C"]
@@ -148,8 +171,8 @@
 				item: { count: 1, id: "techreborn:large_wire_mill" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 5.5d
+			x: 3.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["53AA2049025E385C"]
@@ -161,7 +184,7 @@
 				item: { count: 1, id: "techreborn:large_lathe" }
 				type: "item"
 			}]
-			x: 2.0d
+			x: 3.0d
 			y: 4.0d
 		}
 		{
@@ -262,8 +285,8 @@
 				item: { count: 1, id: "techreborn:iridium_ingot" }
 				type: "item"
 			}]
-			x: 12.5d
-			y: 9.0d
+			x: 15.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["1AD4B94F3C6CDEA3"]
@@ -298,8 +321,60 @@
 				item: { count: 1, id: "oritech:fragment_forge_block" }
 				type: "item"
 			}]
-			x: 12.5d
-			y: 2.0d
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["53AA2049025E385C"]
+			icon_scale: 1.5d
+			id: "21EBE9C287EE68FB"
+			shape: "none"
+			tasks: [{
+				id: "2A4BDAF8F7BE1DB9"
+				item: { count: 1, id: "techreborn:large_centrifuge" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["53AA2049025E385C"]
+			icon_scale: 1.5d
+			id: "60EC5A140300B229"
+			shape: "none"
+			tasks: [{
+				id: "08C15CC745A2215D"
+				item: { count: 1, id: "techreborn:large_ore_crusher" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["53AA2049025E385C"]
+			icon_scale: 1.5d
+			id: "22B33A0AD7F536C6"
+			shape: "none"
+			tasks: [{
+				id: "4412EDD3D939744C"
+				item: { count: 1, id: "techreborn:large_greenhouse" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["53AA2049025E385C"]
+			icon_scale: 1.5d
+			id: "285B731B937DD6A2"
+			shape: "none"
+			tasks: [{
+				id: "2597DBC32D580559"
+				item: { count: 1, id: "techreborn:large_ranch" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 7.0d
 		}
 	]
 }
