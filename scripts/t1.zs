@@ -141,7 +141,7 @@ function _smd_assembler(nm as string, i1 as string, i2 as string, i3 as string, 
         {item: i3}
     ]});
 }
-_smd_assembler("t1.ori.assembler/capacitor","jsonreg:aluminum_rod","techreborn:aluminum_plate","jsonreg:polyethylene_plate","jsonreg:smd_capacitor");
+_smd_assembler("t1.ori.assembler/capacitor","jsonreg:iron_rod","techreborn:iron_plate","jsonreg:polyethylene_plate","jsonreg:smd_capacitor");
 _smd_assembler("t1.ori.assembler/diode","techreborn:copper_cable","minecraft:glass","techreborn:tin_ingot","jsonreg:smd_diode");
 _smd_assembler("t1.ori.assembler/inductor","techreborn:copper_cable","techreborn:steel_ingot","jsonreg:polyethylene_ingot","jsonreg:smd_inductor");
 _smd_assembler("t1.ori.assembler/resistor","techreborn:sap","minecraft:paper","techreborn:coal_dust","jsonreg:smd_resistor");
@@ -212,4 +212,12 @@ craftingTable.remove(<item:oritech:polymer_resin>);
     outputs: [{id: "oritech:gold_dust", count: 1}],
     power: 5,
     ingredients: [{tag: "c:ingots/gold"}]
+});
+
+// 硅 板
+<recipetype:techreborn:compressor>.addJsonRecipe("t1.techreborn.compressor/silicon_plate", {type: "techreborn:compressor",
+    time: 300,
+    outputs: [{id: "techreborn:silicon_plate", count: 1}],
+    power: 10,
+    ingredients: [{item:"oritech:silicon"}]
 });

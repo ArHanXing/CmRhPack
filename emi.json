@@ -120,9 +120,67 @@
     },
     {
       "stack": "item:oritech:target_designator"
+    },
+    {
+      "stack": "item:jsonreg:smd_capacitor"
+    },
+    {
+      "stack": "item:jsonreg:smd_diode"
+    },
+    {
+      "stack": "item:jsonreg:smd_inductor"
+    },
+    {
+      "stack": "item:jsonreg:smd_resistor"
+    },
+    {
+      "stack": "item:jsonreg:smd_transistor"
     }
   ],
   "lookup_history": [
+    "item:jsonreg:smd_capacitor",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:pyrolysis_gas_mix\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"oritech:still_naphtha\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:desalted_crude\"}",
+    "item:oritech:silicon",
+    "item:techreborn:silicon_plate",
+    "item:techreborn:iridium_plate",
+    "item:jsonreg:epoxy_resin_plate",
+    {
+      "type": "item",
+      "id": "techreborn:cell",
+      "nbt": "{\"techreborn:fluid\":\"techreborn:silicon\"}",
+      "amount": 2
+    },
+    "item:jsonreg:smd_transistor",
+    "item:jsonreg:smd_resistor",
+    "item:jsonreg:smd_inductor",
+    "item:jsonreg:smd_diode",
+    "item:techreborn:aluminum_ingot",
+    "item:jsonreg:aluminum_rod",
+    "item:oritech:plastic_sheet",
+    "item:jsonreg:polyethylene_plate",
+    "item:jsonreg:polyethylene_ingot",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:propylene\"}",
+    {
+      "type": "fluid",
+      "id": "jsonreg:propylene",
+      "amount": 0
+    },
+    "item:techreborn:industrial_grinder",
+    "item:jsonreg:polyethylene_pellets",
+    "item:techreborn:basic_machine_frame",
+    "item:techreborn:cell",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:atmospheric_residue\"}",
+    "item:oritech:machine_core_2",
+    "item:techreborn:copper_cable",
+    "item:oritech:magnetic_coil",
+    "item:techreborn:zinc_dust",
+    "item:techreborn:zinc_ingot",
+    "item:techreborn:brass_ingot",
+    "item:techreborn:brass_plate",
+    "item:oritech:motor",
+    "item:oritech:foundry_block",
     "item:easy_mob_farm:tier0_mob_farm_template",
     "item:techreborn:energy_crystal",
     "item:botania:gaia_pylon",
@@ -219,29 +277,14 @@
     "item:jsonreg:tetraaminobiphenyl_dust",
     "item:jsonreg:isophthalic_acid_dust",
     "item:jsonreg:pbi_dust",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:aniline_mix\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:phenol\"}",
     "item:jsonreg:bisphenol_a",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:benzidine_mix\"}",
-    {
-      "type": "fluid",
-      "id": "jsonreg:benzidine_mix",
-      "amount": 81000
-    },
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:nitrobenzene_mix\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:pyrolysis_dry_gas\"}",
     "item:oritech:target_designator",
     "item:botania:ender_overseer",
     "item:oritech:laser_arm_block",
     "item:oritech:resource_node_iron",
     "item:oritech:deep_drill_block",
-    {
-      "type": "fluid",
-      "id": "jsonreg:pyrolysis_dry_gas",
-      "amount": 0
-    },
     "item:oritech:heisenberg_compensator",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:phenol_acetone_mix\"}",
     "item:botania:flugel_tiara",
     {
       "type": "item",
@@ -249,10 +292,6 @@
       "amount": 2
     },
     "item:avaritia:infinity_ingot",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:isophthalic_acid_mix\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:tetraaminobiphenyl_mix\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:dinitrobenzidine_mix\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:pyrolysis_gas_mix\"}",
     "item:techreborn:distillation_tower",
     "item:techreborn:large_chemical_reactor",
     {
@@ -260,7 +299,6 @@
       "id": "jsonreg:atmospheric_residue",
       "amount": 81000
     },
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:atmospheric_residue\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:heavy_diesel\"}",
     "item:techreborn:dyson_swarm_host",
     "item:oritech:reactor_condenser",
@@ -277,7 +315,6 @@
     "item:jsonreg:dual_naquadria_fuel_rod",
     "item:oritech:reactor_controller",
     "item:oritech:big_solar_panel_block",
-    "item:neko-technology:neko_tail",
     "item:techreborn:superconductor",
     "item:techreborn:coil_superconductor",
     {
@@ -303,7 +340,6 @@
       "id": "techreborn:titanium_small_dust",
       "amount": 4
     },
-    "item:neko-technology:pig_iron_ingot",
     {
       "type": "item",
       "id": "techreborn:cell",
@@ -313,25 +349,6 @@
     "item:oritech:pipe_booster_block",
     "item:techreborn:fusion_control_computer",
     "item:techreborn:overclocker_upgrade",
-    "item:neko-technology:green_neko_goggles",
-    "item:neko-technology:hammer",
-    "item:neko-technology:slag",
-    "item:neko-technology:small_handful_of_slag",
-    "item:neko-technology:fish_can",
-    "item:neko-technology:tin_can",
-    "item:neko-technology:neko_feather",
-    "item:neko-technology:enhanced_neko_hair",
-    "item:neko-technology:neko_silk",
-    "item:neko-technology:brass_ingot",
-    "item:neko-technology:brass_block",
-    "item:neko-technology:neko_copper_block",
-    "item:neko-technology:neko_copper_nugget",
-    "item:neko-technology:neko_copper_ingot",
-    "item:neko-technology:pig_iron_nugget",
-    "item:neko-technology:pig_iron_block",
-    "item:neko-technology:tin_block",
-    "item:neko-technology:tin_ingot",
-    "item:neko-technology:aluminum_ingot",
     "item:earlystage:rock",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:toluene\"}",
     {
@@ -345,7 +362,6 @@
     "item:jsonreg:coin",
     "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:electrolyzed_water\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"minecraft:water\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"oritech:still_naphtha\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ethylene\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ethanol\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:nitrogen_dioxide\"}",
@@ -353,7 +369,6 @@
     "fluid:jsonreg:desalted_crude",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ultra_low_sulfur_diesel\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ethyl_nitrate\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:desalted_crude\"}",
     "fluid:jsonreg:vacuum_residue",
     "item:jsonreg:petroleum_coke",
     "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:nitro_diesel\"}",
@@ -376,14 +391,6 @@
       "id": "oritech:still_heavy_oil",
       "amount": 81000
     },
-    {
-      "type": "item",
-      "id": "jsonreg:polyethylene_pellets",
-      "amount": 2
-    },
-    "item:jsonreg:polyethylene_ingot",
-    "item:jsonreg:polyethylene_plate",
-    "item:oritech:plastic_sheet",
     "item:techreborn:advanced_circuit",
     "item:techreborn:nano_leggings{\"minecraft:attribute_modifiers\":{modifiers:[{amount:8.0d,id:\"techreborn:nano_suit_armor/legs\",operation:\"add_value\",slot:\"legs\",type:\"minecraft:generic.armor\"},{amount:2.0d,id:\"techreborn:nano_suit_armor_toughness/legs\",operation:\"add_value\",slot:\"legs\",type:\"minecraft:generic.armor_toughness\"},{amount:0.1d,id:\"techreborn:nano_suit_knockback_resistance/legs\",operation:\"add_value\",slot:\"legs\",type:\"minecraft:generic.knockback_resistance\"}]},\"team_reborn_energy:energy\":1000000L}",
     {
@@ -435,7 +442,6 @@
     "item:techreborn:large_greenhouse",
     "item:transmog:void_fragment",
     "item:oritech:fragment_forge_block",
-    "item:oritech:foundry_block",
     "item:oritech:machine_fluid_addon",
     {
       "type": "fluid",
@@ -451,7 +457,6 @@
       "amount": 81000
     },
     "item:jsonreg:resource_node_naquadah",
-    "item:oritech:silicon",
     "item:oritech:raw_silicon",
     "item:techreborn:large_ranch",
     "item:easy_mob_farm:tier1_mob_farm_template",
@@ -543,7 +548,6 @@
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ammonium_fluoride_waste\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ammonia\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:steam_ammonia_mixture\"}",
-    "item:techreborn:cell",
     "item:botania:red_string",
     "item:botania:luminizer",
     "item:botania:terrasteel_chestplate",
@@ -553,12 +557,6 @@
     "item:botania:terra_truncator",
     "item:botania:terra_shatterer{\"botania:elementium_tipped\":{},\"botania:mana\":999999}",
     "item:botania:dragonstone",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:propylene\"}",
-    {
-      "type": "fluid",
-      "id": "jsonreg:propylene",
-      "amount": 81000
-    },
     "item:minecraft:cobblestone",
     "item:techreborn:space_elevator_assembler",
     {
@@ -589,7 +587,6 @@
     "item:mininggadgets:upgrade_size_2",
     "item:mininggadgets:upgrade_silk",
     "item:mininggadgets:upgrade_empty",
-    "item:oritech:motor",
     "item:techreborn:steel_plate",
     "item:jsonreg:lv_electric_piston",
     "item:jsonreg:rubber_plate",
@@ -665,7 +662,6 @@
     "item:techreborn:iridium_neutron_reflector",
     "item:techreborn:thick_neutron_reflector",
     "item:tesseract:tesseract",
-    "item:jsonreg:smd_transistor",
     "item:affinity:staff_pedestal",
     "item:affinity:staff_prototype",
     "item:affinity:swivel_staff",
@@ -875,23 +871,12 @@
     "item:techreborn:industrial_electrolyzer",
     "item:botania:teru_teru_bozu",
     "item:techreborn:bronze_ingot",
-    "item:techreborn:zinc_dust",
-    "item:techreborn:zinc_ingot",
-    "item:techreborn:brass_ingot",
     "item:techreborn:steel_ingot",
-    "item:techreborn:copper_cable",
-    "item:jsonreg:smd_inductor",
-    "item:jsonreg:smd_resistor",
-    "item:jsonreg:smd_capacitor",
     "item:techreborn:advanced_machine_casing",
     "item:botania:managlass",
     "item:botania:alfglass",
-    "item:oritech:machine_core_2",
-    "item:jsonreg:smd_diode",
     "item:techreborn:coil_kanthal",
-    "item:techreborn:aluminum_ingot",
     "item:techreborn:diamond_grinding_head",
-    "item:techreborn:industrial_grinder",
     "item:techreborn:nichrome_heating_coil",
     "item:techreborn:chrome_ingot",
     "item:constructionwand:diamond_wand",
@@ -923,17 +908,14 @@
     "item:techreborn:refined_iron_ingot",
     "item:oritech:industrial_glass_block",
     "item:jsonreg:iron_rod",
-    "item:techreborn:basic_machine_frame",
     "item:techreborn:basic_machine_casing",
     "item:jsonreg:holy_wooden_bucket",
     "item:oritech:enderic_lens",
     "item:jsonreg:steel_rod",
     "item:jsonreg:lv_conveyor_module",
     "item:techreborn:wire_mill",
-    "item:techreborn:brass_plate",
     "item:techreborn:extractor",
     "item:botania:mana_string",
-    "item:oritech:magnetic_coil",
     "item:jsonreg:rotor",
     "item:jsonreg:fuel_rod",
     "item:jsonreg:dual_mox_fuel_rod",
@@ -1341,16 +1323,6 @@
     },
     "item:techreborn:cell{\"techreborn:fluid\":\"affinity:arcane_fade\"}",
     "item:justarod:basic_electric_rod",
-    {
-      "type": "fluid",
-      "id": "jsonreg:isophthalic_acid_mix",
-      "amount": 0
-    },
-    {
-      "type": "fluid",
-      "id": "jsonreg:tetraaminobiphenyl_mix",
-      "amount": 0
-    },
     "item:techreborn:industrial_machine_casing",
     "item:techreborn:computer_cube",
     "item:techreborn:matter_fabricator",
@@ -1359,7 +1331,6 @@
     "item:oritech:resource_node_uranium",
     "item:oritech:resource_node_platinum",
     "item:jsonreg:resource_node_fossil",
-    "item:jsonreg:epoxy_resin_plate",
     "item:jsonreg:dual_thorium_fuel_rod",
     "item:jsonreg:thorium_fuel_rod",
     "item:easy_mob_farm:void_binding_chain",
@@ -1557,7 +1528,6 @@
       "amount": 0
     },
     "item:eternal_starlight:popped_nocturnal_millet_bucket",
-    "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:silicon\"}",
     {
       "type": "fluid",
       "id": "techreborn:silicon",
@@ -1566,6 +1536,15 @@
     "item:eternal_starlight:saltpeter_block"
   ],
   "craft_history": [
+    "crafttweaker:ctgui/new/crafting/plastic_sheet_from_polyethylene",
+    "crafttweaker:ctgui/new/crafting/small_iron_dust_from_iron_dust",
+    "techreborn:crafting_table/misc_block/reinforced_glass",
+    "minecraft:stone_bricks",
+    "crafttweaker:t1.oritech.crafting/foundry",
+    "crafttweaker:t1.or.t1motor",
+    "crafttweaker:t1.or.magnet",
+    "crafttweaker:t1.oritech.assembler/basic_machine_frame",
+    "techreborn:crafting_table/cable/copper_cable",
     "techreborn:/fluid_into_container/extra_mod_integrations_core/techreborn/techreborn/jsonreg/desalted_crude",
     "techreborn:large_chemical_reactor/refined_iron_ingot",
     "techreborn:crafting_table/tool/treetap",
@@ -1581,7 +1560,6 @@
     "minecraft:oak_planks",
     "minecraft:birch_planks",
     "oritech:crafting/pulverizer",
-    "techreborn:crafting_table/cable/copper_cable",
     "minecraft:copper_block",
     "oritech:crafting/centrifugealt",
     "minecraft:glass_bottle",
