@@ -138,14 +138,14 @@ import crafttweaker.api.ingredient.IIngredient;
     type: "techreborn:centrifuge",
     time: 300,
     outputs: [
-        {id: "jsonreg:refined_crushed_naquadria_ore", count: 10},
-        {id: "jsonreg:depleted_uranium_slag", count: 20},
-        {id: "techreborn:cell", count: 2}
+        {id: "jsonreg:refined_crushed_naquadria_ore", count: 4},
+        {id: "jsonreg:depleted_uranium_slag", count: 5},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 64,
     ingredients: [
-        {item: "jsonreg:crushed_naquadria_ore", count: 10},
-        {count: 2, components: {"techreborn:fluid": "jsonreg:fluorocarbon_heavy_liquid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {item: "jsonreg:crushed_naquadria_ore", count: 4},
+        {count: 1, components: {"techreborn:fluid": "jsonreg:fluorocarbon_heavy_liquid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 
@@ -491,5 +491,20 @@ import crafttweaker.api.ingredient.IIngredient;
     ingredients: [
         {count: 1, components: {"techreborn:fluid": "jsonreg:perfluorocarbon_mix"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
         {count: 2, item: "techreborn:cell"}
+    ]
+});
+
+
+//氨水
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("nqdria.ammonia_solution", {
+    type: "techreborn:chemical_reactor",
+    time: 300,
+    outputs: [
+        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:ammonia_solution"}}
+    ],
+    power: 64,
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:ammonia"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });

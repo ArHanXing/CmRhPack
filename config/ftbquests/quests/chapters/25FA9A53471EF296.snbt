@@ -8,20 +8,12 @@
 	}
 	id: "25FA9A53471EF296"
 	order_index: 0
-	quest_links: [
-		{
-			id: "4DED5C4D15414715"
-			linked_quest: "0A79DDBB3E3642EC"
-			x: 15.0d
-			y: 9.0d
-		}
-		{
-			id: "13F15D9A84FA430F"
-			linked_quest: "45E45ECA23073D45"
-			x: 0.0d
-			y: 0.0d
-		}
-	]
+	quest_links: [{
+		id: "13F15D9A84FA430F"
+		linked_quest: "45E45ECA23073D45"
+		x: 0.0d
+		y: 0.0d
+	}]
 	quests: [
 		{
 			dependencies: ["45E45ECA23073D45"]
@@ -49,6 +41,15 @@
 			]
 			icon_scale: 2.0d
 			id: "3550797BAAC154E3"
+			rewards: [{
+				count: 16
+				id: "623C65608BB2BE54"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			shape: "none"
 			size: 1.0d
 			tasks: [{
@@ -205,6 +206,15 @@
 			]
 			dependency_requirement: "one_completed"
 			id: "18982C95A36D7767"
+			rewards: [{
+				count: 16
+				id: "5D9E4B7A23DE352B"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "746726C5AF3E97E5"
 				item: { count: 1, id: "jsonreg:mv_electric_motor" }
@@ -236,6 +246,15 @@
 					item: {
 						count: 1
 						id: "techreborn:advanced_machine_casing"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "3B528CB00AE22E15"
+					item: {
+						count: 1
+						id: "jsonreg:coin"
 					}
 					type: "item"
 				}
@@ -289,6 +308,15 @@
 			dependencies: ["1AD4B94F3C6CDEA3"]
 			icon_scale: 1.5d
 			id: "67AC8EFAAD62D3C1"
+			rewards: [{
+				count: 16
+				id: "79E1A1F34683F076"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			shape: "none"
 			size: 1.5d
 			tasks: [{
@@ -372,6 +400,58 @@
 			}]
 			x: 4.0d
 			y: 7.0d
+		}
+		{
+			dependencies: ["772610A3E275BB52"]
+			icon_scale: 2.0d
+			id: "61FBB4A1F3670D1D"
+			rewards: [{
+				count: 16
+				id: "626C08A2D3F14A60"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
+			shape: "none"
+			size: 1.5d
+			tasks: [{
+				id: "62104047E50781DA"
+				item: { count: 1, id: "oritech:deep_drill_block" }
+				type: "item"
+			}]
+			x: 15.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7D6E4702A5CFB967"]
+			icon_scale: 1.5d
+			id: "0BFF16B441BBA833"
+			rewards: [{
+				count: 16
+				id: "325212C3E06B8737"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
+			shape: "none"
+			tasks: [
+				{
+					id: "34F0CC703DF5A3EC"
+					item: { components: { "minecraft:attribute_modifiers": { modifiers: [{ amount: 2.0d, id: "techreborn:nano_suit_armor/chest", operation: "add_value", slot: "chest", type: "minecraft:generic.armor" }] } }, count: 1, id: "techreborn:nano_chestplate" }
+					type: "item"
+				}
+				{
+					id: "5F1BD0722F4B6F2E"
+					item: { count: 1, id: "techreborn:energy_crystal" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 9.0d
 		}
 	]
 }

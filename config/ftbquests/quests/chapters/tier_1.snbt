@@ -30,15 +30,26 @@
 		{
 			dependencies: ["567F653815F3ACBB"]
 			id: "59DC44A709BC1EE4"
-			rewards: [{
-				count: 4
-				id: "5B8B2D4EE6802B0C"
-				item: {
-					count: 1
-					id: "minecraft:oak_log"
+			rewards: [
+				{
+					count: 4
+					id: "5B8B2D4EE6802B0C"
+					item: {
+						count: 1
+						id: "minecraft:oak_log"
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					count: 8
+					id: "4F57FA224A623936"
+					item: {
+						count: 1
+						id: "jsonreg:coin"
+					}
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "4961B66399251E91"
 				item: { count: 1, id: "minecraft:crafting_table" }
@@ -66,14 +77,6 @@
 					item: {
 						count: 1
 						id: "minecraft:coal"
-					}
-					type: "item"
-				}
-				{
-					id: "10069409941BD038"
-					item: {
-						count: 1
-						id: "homeostatic:book"
 					}
 					type: "item"
 				}
@@ -209,14 +212,6 @@
 				id: "minecraft:iron_pickaxe"
 			}
 			id: "67DCA088B2ACE025"
-			rewards: [{
-				id: "359BD69091625010"
-				item: {
-					count: 1
-					id: "minecraft:iron_pickaxe"
-				}
-				type: "item"
-			}]
 			tasks: [{
 				id: "0B1C9E01430797AB"
 				item: { count: 1, id: "minecraft:iron_ingot" }
@@ -250,8 +245,8 @@
 				item: { count: 1, id: "techreborn:iron_furnace" }
 				type: "item"
 			}]
-			x: 2.5d
-			y: -1.0d
+			x: 3.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["67DCA088B2ACE025"]
@@ -270,7 +265,7 @@
 				item: { count: 1, id: "minecraft:iron_chestplate" }
 				type: "item"
 			}]
-			x: 2.5d
+			x: 4.5d
 			y: 0.0d
 		}
 		{
@@ -593,7 +588,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -1.0d
+			y: 2.0d
 		}
 		{
 			id: "6687368EE271813C"

@@ -99,8 +99,6 @@ craftingTable.addShaped("ctgui/new/crafting/naquadah_dust", <item:jsonreg:naquad
     [<item:jsonreg:tiny_naquadah_dust>, <item:jsonreg:tiny_naquadah_dust>, <item:jsonreg:tiny_naquadah_dust>],
     [<item:jsonreg:tiny_naquadah_dust>, <item:jsonreg:tiny_naquadah_dust>, <item:jsonreg:tiny_naquadah_dust>]]);
 
-craftingTable.addShapeless("ctgui/new/nqdria.misc.craftthis", <item:techreborn:cell>.withJsonComponent(<componenttype:techreborn:fluid>, "jsonreg:ammonia_solution") * 3, [<item:techreborn:cell>, <item:techreborn:cell>, <item:techreborn:cell>]);
-
 craftingTable.addShaped("ctgui/new/crafting/rotor", <item:jsonreg:rotor>, [
     [IIngredientEmpty.getInstance(), <item:techreborn:refined_iron_plate>, IIngredientEmpty.getInstance()],
     [<item:techreborn:refined_iron_plate>, <item:techreborn:magnalium_plate>, <item:techreborn:refined_iron_plate>],
@@ -667,8 +665,6 @@ craftingTable.addShaped("ctgui/new/crafting/precise_assembler", <item:techreborn
 
 <recipetype:minecraft:crafting>.removeByName("botania:wand_of_the_forest");
 
-craftingTable.addShapeless("ctgui/new/crafting/ender_air_bottle", <item:botania:ender_air_bottle>, [<item:techreborn:cell>]);
-
 craftingTable.addShapeless("ctgui/new/oritech/small_copper_dust", <item:oritech:small_copper_dust> * 9, [<item:oritech:copper_dust>]);
 
 craftingTable.addShapeless("ctgui/new/oritech/small_gold_dust", <item:oritech:small_gold_dust> * 9, [<item:oritech:gold_dust>]);
@@ -810,4 +806,6 @@ craftingTable.addShaped("ctgui/new/techreborn/crafting_table/unit/storage/crude_
     [<tag:item:minecraft:planks>, <item:techreborn:iron_plate>, <tag:item:minecraft:planks>],
     [<tag:item:minecraft:planks>, <item:techreborn:cell>, <tag:item:minecraft:planks>],
     [<tag:item:minecraft:planks>, <item:techreborn:iron_plate>, <tag:item:minecraft:planks>]]);
+
+craftingTable.addShapeless("ctgui/new/crafting/rock_from_button", <item:earlystage:rock>, [<item:minecraft:stone_button>]);
 

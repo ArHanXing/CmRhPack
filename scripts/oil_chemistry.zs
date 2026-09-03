@@ -303,30 +303,17 @@ import crafttweaker.api.ingredient.IIngredient;
     ]
 });
 
-// ========== 19. 苯酚丙酮混合物 (TR 化反 → 单输出) ==========
-<recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.phenol_acetone_mix", {type: "techreborn:chemical_reactor",
-    time: 200,
-    outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:phenol_acetone_mix"}}
-    ],
-    power: 30,
-    ingredients: [
-        {count: 1, components: {"techreborn:fluid": "jsonreg:cumene"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, components: {"techreborn:fluid": "techreborn:compressed_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
-    ]
-});
-
-// ========== 19b. 苯酚丙酮分离 (TR 蒸馏塔) ==========
-<recipetype:techreborn:distillation_tower>.addJsonRecipe("oil.process.tr.phenol_acetone_separation", {type: "techreborn:distillation_tower",
+// ========== 19. 苯酚丙酮 (大化反: 异丙苯氧化, 六进四出单步完成) ==========
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("oil.process.tr.phenol_acetone", {type: "techreborn:large_chemical_reactor",
     time: 200,
     outputs: [
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:phenol"}},
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:acetone"}}
     ],
-    power: 32,
+    power: 30,
     ingredients: [
-        {count: 1, components: {"techreborn:fluid": "jsonreg:phenol_acetone_mix"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, item: "techreborn:cell"}
+        {count: 1, components: {"techreborn:fluid": "jsonreg:cumene"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "techreborn:compressed_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 
@@ -421,12 +408,13 @@ import crafttweaker.api.ingredient.IIngredient;
 // =================================================
 
 // --- 1. 硝基苯合成 ---
-// 苯 + 硝酸 → 硝基苯混合物
-<recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.pbi.nitrobenzene_mix", {
-    type: "techreborn:chemical_reactor",
+// 苯 + 硝酸 → 硝基苯 + 水
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("oil.pbi.nitrobenzene", {
+    type: "techreborn:large_chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:nitrobenzene_mix"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:nitrobenzene"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "minecraft:water"}}
     ],
     power: 30,
     ingredients: [
@@ -435,28 +423,14 @@ import crafttweaker.api.ingredient.IIngredient;
     ]
 });
 
-// 分离硝基苯 + 水
-<recipetype:techreborn:distillation_tower>.addJsonRecipe("oil.pbi.nitrobenzene_sep", {
-    type: "techreborn:distillation_tower",
-    time: 200,
-    outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:nitrobenzene"}},
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "minecraft:water"}}
-    ],
-    power: 32,
-    ingredients: [
-        {count: 1, components: {"techreborn:fluid": "jsonreg:nitrobenzene_mix"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, item: "techreborn:cell"}
-    ]
-});
-
 // --- 2. 苯胺合成 ---
-// 硝基苯 + 氢气 → 苯胺混合物
-<recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.pbi.aniline_mix", {
-    type: "techreborn:chemical_reactor",
+// 硝基苯 + 氢气 → 苯胺 + 水
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("oil.pbi.aniline", {
+    type: "techreborn:large_chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:aniline_mix"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:aniline"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "minecraft:water"}}
     ],
     power: 30,
     ingredients: [
@@ -465,28 +439,14 @@ import crafttweaker.api.ingredient.IIngredient;
     ]
 });
 
-// 分离苯胺 + 水
-<recipetype:techreborn:distillation_tower>.addJsonRecipe("oil.pbi.aniline_sep", {
-    type: "techreborn:distillation_tower",
-    time: 200,
-    outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:aniline"}},
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "minecraft:water"}}
-    ],
-    power: 32,
-    ingredients: [
-        {count: 1, components: {"techreborn:fluid": "jsonreg:aniline_mix"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, item: "techreborn:cell"}
-    ]
-});
-
 // --- 3. 联苯胺合成 (氧化偶联) ---
-// 苯胺 + 氧气(压缩空气) → 联苯胺混合物
-<recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.pbi.benzidine_mix", {
-    type: "techreborn:chemical_reactor",
+// 苯胺 + 氧气(压缩空气) → 联苯胺粉尘 + 水
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("oil.pbi.benzidine", {
+    type: "techreborn:large_chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:benzidine_mix"}}
+        {id: "jsonreg:benzidine_dust", count: 1},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "minecraft:water"}}
     ],
     power: 30,
     ingredients: [
@@ -495,28 +455,14 @@ import crafttweaker.api.ingredient.IIngredient;
     ]
 });
 
-// 联苯胺混合物蒸馏 → 联苯胺粉尘 + 废水
-<recipetype:techreborn:distillation_tower>.addJsonRecipe("oil.pbi.benzidine_sep", {
-    type: "techreborn:distillation_tower",
-    time: 200,
-    outputs: [
-        {id: "jsonreg:benzidine_dust", count: 1},
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "minecraft:water"}}
-    ],
-    power: 32,
-    ingredients: [
-        {count: 1, components: {"techreborn:fluid": "jsonreg:benzidine_mix"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, item: "techreborn:cell"}
-    ]
-});
-
 // --- 4. 二硝基联苯胺 (联苯胺硝化) ---
-// 联苯胺 + 硝酸 → 二硝基联苯胺混合物
-<recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.pbi.dinitrobenzidine_mix", {
-    type: "techreborn:chemical_reactor",
+// 联苯胺粉尘 + 硝酸 → 二硝基联苯胺粉尘 + 水
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("oil.pbi.dinitrobenzidine", {
+    type: "techreborn:large_chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:dinitrobenzidine_mix"}}
+        {id: "jsonreg:dinitrobenzidine_dust", count: 1},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "minecraft:water"}}
     ],
     power: 30,
     ingredients: [
@@ -525,28 +471,14 @@ import crafttweaker.api.ingredient.IIngredient;
     ]
 });
 
-// 分离二硝基联苯胺粉尘 + 水
-<recipetype:techreborn:distillation_tower>.addJsonRecipe("oil.pbi.dinitrobenzidine_sep", {
-    type: "techreborn:distillation_tower",
-    time: 200,
-    outputs: [
-        {id: "jsonreg:dinitrobenzidine_dust", count: 1},
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "minecraft:water"}}
-    ],
-    power: 32,
-    ingredients: [
-        {count: 1, components: {"techreborn:fluid": "jsonreg:dinitrobenzidine_mix"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, item: "techreborn:cell"}
-    ]
-});
-
 // --- 5. 联苯四胺 (还原) ---
-// 二硝基联苯胺 + 氢气 → 联苯四胺混合物
-<recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.pbi.tetraaminobiphenyl_mix", {
-    type: "techreborn:chemical_reactor",
+// 二硝基联苯胺粉尘 + 氢气 → 联苯四胺粉尘 + 水
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("oil.pbi.tetraaminobiphenyl", {
+    type: "techreborn:large_chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:tetraaminobiphenyl_mix"}}
+        {id: "jsonreg:tetraaminobiphenyl_dust", count: 1},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "minecraft:water"}}
     ],
     power: 30,
     ingredients: [
@@ -555,48 +487,19 @@ import crafttweaker.api.ingredient.IIngredient;
     ]
 });
 
-// 分离联苯四胺粉尘 + 水
-<recipetype:techreborn:distillation_tower>.addJsonRecipe("oil.pbi.tetraaminobiphenyl_sep", {
-    type: "techreborn:distillation_tower",
-    time: 200,
-    outputs: [
-        {id: "jsonreg:tetraaminobiphenyl_dust", count: 1},
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "minecraft:water"}}
-    ],
-    power: 32,
-    ingredients: [
-        {count: 1, components: {"techreborn:fluid": "jsonreg:tetraaminobiphenyl_mix"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, item: "techreborn:cell"}
-    ]
-});
-
 // --- 6. 间苯二甲酸 (间二甲苯氧化) ---
-// 间二甲苯 + 氧气 → 间苯二甲酸混合物
-<recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.pbi.isophthalic_acid_mix", {
-    type: "techreborn:chemical_reactor",
-    time: 200,
-    outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:isophthalic_acid_mix"}}
-    ],
-    power: 30,
-    ingredients: [
-        {count: 1, components: {"techreborn:fluid": "jsonreg:xylene"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, components: {"techreborn:fluid": "techreborn:compressed_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
-    ]
-});
-
-// 分离间苯二甲酸粉尘 + 水
-<recipetype:techreborn:distillation_tower>.addJsonRecipe("oil.pbi.isophthalic_acid_sep", {
-    type: "techreborn:distillation_tower",
+// 间二甲苯 + 氧气 → 间苯二甲酸粉尘 + 水
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("oil.pbi.isophthalic_acid", {
+    type: "techreborn:large_chemical_reactor",
     time: 200,
     outputs: [
         {id: "jsonreg:isophthalic_acid_dust", count: 1},
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "minecraft:water"}}
     ],
-    power: 32,
+    power: 30,
     ingredients: [
-        {count: 1, components: {"techreborn:fluid": "jsonreg:isophthalic_acid_mix"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, item: "techreborn:cell"}
+        {count: 1, components: {"techreborn:fluid": "jsonreg:xylene"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "techreborn:compressed_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 
@@ -736,30 +639,12 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:gas_generator>.addJsonRecipe("oil.burn.trgas/coke_gas", {type: "techreborn:gas_generator", power: 35, fluid: "jsonreg:coke_gas"});
 // ========== PBI 副产物燃烧配方 ==========
 
-// --- 硝基苯混合物 (nitrobenzene_mix) ---
-<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/nitrobenzene_mix", {type: "oritech:fuel_generator", results: [], time: 17, fluidInput: {fluid: "jsonreg:nitrobenzene_mix", amount: 8100}, ingredients: []});
-<recipetype:techreborn:semi_fluid_generator>.addJsonRecipe("oil.burn.trsemi_fluid/nitrobenzene_mix", {type: "techreborn:semi_fluid_generator", power: 85, fluid: "jsonreg:nitrobenzene_mix"});
 // --- 纯硝基苯 (nitrobenzene) ---
 <recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/nitrobenzene", {type: "oritech:fuel_generator", results: [], time: 18, fluidInput: {fluid: "jsonreg:nitrobenzene", amount: 8100}, ingredients: []});
 <recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/nitrobenzene", {type: "techreborn:diesel_generator", power: 90, fluid: "jsonreg:nitrobenzene"});
-// --- 苯胺混合物 (aniline_mix) ---
-<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/aniline_mix", {type: "oritech:fuel_generator", results: [], time: 15, fluidInput: {fluid: "jsonreg:aniline_mix", amount: 8100}, ingredients: []});
-<recipetype:techreborn:semi_fluid_generator>.addJsonRecipe("oil.burn.trsemi_fluid/aniline_mix", {type: "techreborn:semi_fluid_generator", power: 75, fluid: "jsonreg:aniline_mix"});
 // --- 纯苯胺 (aniline) ---
 <recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/aniline", {type: "oritech:fuel_generator", results: [], time: 16, fluidInput: {fluid: "jsonreg:aniline", amount: 8100}, ingredients: []});
 <recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/aniline", {type: "techreborn:diesel_generator", power: 80, fluid: "jsonreg:aniline"});
-// --- 联苯胺混合物 (benzidine_mix) ---
-<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/benzidine_mix", {type: "oritech:fuel_generator", results: [], time: 14, fluidInput: {fluid: "jsonreg:benzidine_mix", amount: 8100}, ingredients: []});
-<recipetype:techreborn:semi_fluid_generator>.addJsonRecipe("oil.burn.trsemi_fluid/benzidine_mix", {type: "techreborn:semi_fluid_generator", power: 70, fluid: "jsonreg:benzidine_mix"});
-// --- 二硝基联苯胺混合物 (dinitrobenzidine_mix) ---
-<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/dinitrobenzidine_mix", {type: "oritech:fuel_generator", results: [], time: 12, fluidInput: {fluid: "jsonreg:dinitrobenzidine_mix", amount: 8100}, ingredients: []});
-<recipetype:techreborn:semi_fluid_generator>.addJsonRecipe("oil.burn.trsemi_fluid/dinitrobenzidine_mix", {type: "techreborn:semi_fluid_generator", power: 60, fluid: "jsonreg:dinitrobenzidine_mix"});
-// --- 联苯四胺混合物 (tetraaminobiphenyl_mix) ---
-<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/tetraaminobiphenyl_mix", {type: "oritech:fuel_generator", results: [], time: 10, fluidInput: {fluid: "jsonreg:tetraaminobiphenyl_mix", amount: 8100}, ingredients: []});
-<recipetype:techreborn:semi_fluid_generator>.addJsonRecipe("oil.burn.trsemi_fluid/tetraaminobiphenyl_mix", {type: "techreborn:semi_fluid_generator", power: 50, fluid: "jsonreg:tetraaminobiphenyl_mix"});
-// --- 间苯二甲酸混合物 (isophthalic_acid_mix) ---
-<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/isophthalic_acid_mix", {type: "oritech:fuel_generator", results: [], time: 8, fluidInput: {fluid: "jsonreg:isophthalic_acid_mix", amount: 8100}, ingredients: []});
-<recipetype:techreborn:semi_fluid_generator>.addJsonRecipe("oil.burn.trsemi_fluid/isophthalic_acid_mix", {type: "techreborn:semi_fluid_generator", power: 40, fluid: "jsonreg:isophthalic_acid_mix"});
 
 //其他配方
 

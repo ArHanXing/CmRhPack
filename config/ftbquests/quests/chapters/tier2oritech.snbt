@@ -225,6 +225,15 @@
 					}
 					type: "item"
 				}
+				{
+					count: 16
+					id: "1FDC726A5B4381E2"
+					item: {
+						count: 1
+						id: "jsonreg:coin"
+					}
+					type: "item"
+				}
 			]
 			shape: "gear"
 			size: 2.5d
@@ -526,10 +535,11 @@
 			]
 			id: "111F443B54D65577"
 			rewards: [{
-				id: "065790F084893FE8"
+				count: 8
+				id: "2BC6E11F350C6831"
 				item: {
 					count: 1
-					id: "sophisticatedbackpacks:backpack"
+					id: "jsonreg:coin"
 				}
 				type: "item"
 			}]
@@ -772,15 +782,26 @@
 			dependency_requirement: "one_completed"
 			icon_scale: 2.0d
 			id: "34DC636661FFBF62"
-			rewards: [{
-				count: 16
-				id: "79837A5955B670AA"
-				item: {
-					count: 1
-					id: "oritech:plastic_sheet"
+			rewards: [
+				{
+					count: 16
+					id: "79837A5955B670AA"
+					item: {
+						count: 1
+						id: "oritech:plastic_sheet"
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					count: 32
+					id: "2EB7B55746E682BC"
+					item: {
+						count: 1
+						id: "jsonreg:coin"
+					}
+					type: "item"
+				}
+			]
 			shape: "none"
 			tasks: [{
 				id: "66818E6EACD2455D"
@@ -1211,6 +1232,15 @@
 		{
 			dependencies: ["46F75A6339B74160"]
 			id: "56FCDA45D436EA27"
+			rewards: [{
+				count: 16
+				id: "4C31345FCF043B21"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "49422A6052BB27D8"
 				item: { count: 1, id: "techreborn:electronic_circuit" }

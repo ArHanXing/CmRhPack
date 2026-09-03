@@ -72,14 +72,8 @@
 | `tetraaminobiphenyl_dust` | 联苯四胺粉 | `#85929E` | 暗灰紫 |
 | `isophthalic_acid_dust` | 间苯二甲酸粉 | `#FDEBD0` | 暖淡蜜瓜色 |
 ---
-| `nitrobenzene_mix` | 硝基苯混合物 | `#F9E79F` | 浊亮琥珀黄 |
 | `nitrobenzene` | 硝基苯 | `#D4AC0D` | 深亮琥珀金 |
-| `aniline_mix` | 苯胺混合物 | `#E59866` | 明亮锈橙 |
 | `aniline` | 苯胺 | `#EDBB99` | 暖棕杏色 |
-| `benzidine_mix` | 联苯胺混合物 | `#E74C3C` | 暗锈红 |
-| `dinitrobenzidine_mix` | 二硝基联苯胺混合物 | `#6E2C00` | 深焦茶色 |
-| `tetraaminobiphenyl_mix` | 联苯四胺混合物 | `#5B2C6F` | 深暗紫 |
-| `isophthalic_acid_mix` | 间苯二甲酸混合物 | `#FCF3CF` | 浅柠檬奶油色 |
 
 石油焦 2b2b2b
 聚乙烯 e6eae3 dull

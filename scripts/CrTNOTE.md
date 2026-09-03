@@ -113,7 +113,7 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 | 文件 | 职责 | addJsonRecipe 数 |
 |---|---|---|
 | `t0.zs` / `t1.zs` / `t2.zs` / `t3.zs` | 科技树分阶段 | 0 / 15 / 37 / 24 |
-| `oil_chemistry.zs` | 石油化工（最大） | 155 |
+| `oil_chemistry.zs` | 石油化工（最大） | 136 |
 | `bio_chemistry.zs` | 生物化工（发酵制乙烯 + 生物塑料） | 4 |
 | `process_naquadah.zs` | 硅岩/超能硅岩处理线 | 37 |
 | `refinedstorage.zs` | RS 线（处理器、机壳、创造控制器） | 8 |
