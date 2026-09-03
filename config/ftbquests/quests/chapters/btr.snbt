@@ -1,10 +1,371 @@
 {
-	default_hide_dependency_lines: false
+	default_hide_dependency_lines: true
 	default_quest_shape: ""
 	filename: "btr"
 	group: ""
+	icon: {
+		id: "techreborn:basic_solar_panel"
+	}
 	id: "41E7BFAA3F10C45F"
 	order_index: 4
-	quest_links: [ ]
-	quests: [ ]
+	quest_links: [
+		{
+			id: "1793927317D85B48"
+			linked_quest: "1D13E85E3CD27E05"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			id: "1FC2D2319EE90233"
+			linked_quest: "08CCE022E6C6F185"
+			x: 2.0d
+			y: 2.0d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["117BA2558CF77A05"]
+			hide_dependency_lines: true
+			id: "10D7B266D4EF8B0E"
+			rewards: [{
+				id: "2DA53715FE455513"
+				item: {
+					count: 1
+					id: "techreborn:industrial_solar_panel"
+				}
+				type: "item"
+			}]
+			size: 1.0d
+			tasks: [{
+				id: "4D10601A90E510CE"
+				item: { count: 1, id: "techreborn:basic_solar_panel" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			id: "2F9F25139040F9F3"
+			rewards: [{
+				id: "4B803D6E1252BED6"
+				item: {
+					count: 1
+					id: "advanced_reborn:ray_solar_panel_3"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "08653CCECA7F40F2"
+				item: { count: 1, id: "advanced_reborn:ray_solar_panel" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			id: "30A353841DCF3E21"
+			tasks: [{
+				id: "10678D35AE9AFA6A"
+				item: { count: 1, id: "advanced_reborn:ray_generator_5" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			id: "53BA29B818CE6008"
+			tasks: [{
+				id: "16335F32206F5111"
+				item: { count: 1, id: "techreborn:lightning_rod" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["14200FFB1A5DDE4F"]
+			id: "3FC433447F442349"
+			tasks: [{
+				id: "1C66184FC763518B"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3FC433447F442349"
+				"44FE44D3341C0C03"
+			]
+			hide_dependency_lines: false
+			id: "117BA2558CF77A05"
+			tasks: [{
+				id: "4B5B59B76F5FDFEB"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"18982C95A36D7767"
+				"117BA2558CF77A05"
+			]
+			hide_dependency_lines: false
+			id: "08A105909CB62D75"
+			tasks: [{
+				id: "6469298600020636"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			hide_dependency_lines: false
+			id: "48EF0BFF453B1B5B"
+			tasks: [{
+				id: "2555A105E0834412"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			id: "71FB4A1FAFDAF7C4"
+			tasks: [{
+				id: "5E85D75CFEBF9321"
+				item: { count: 1, id: "techreborn:wind_mill" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			id: "7B7F70797B1D4B07"
+			tasks: [{
+				id: "72A49BFF7C20A021"
+				item: { count: 1, id: "techreborn:thermal_generator" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			id: "658F8C6C833151B5"
+			tasks: [{
+				id: "7CBB3341C7FC4FB3"
+				item: { count: 1, id: "techreborn:semi_fluid_generator" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			id: "787B1896EACFB8F1"
+			tasks: [{
+				id: "43038369ADC8288E"
+				item: { count: 1, id: "techreborn:diesel_generator" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			id: "5CA9DF1C3DBA08EA"
+			tasks: [{
+				id: "2575C8594A786F9B"
+				item: { count: 1, id: "techreborn:gas_turbine" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["48EF0BFF453B1B5B"]
+			id: "23C53E257570E711"
+			tasks: [{
+				id: "2AA761A9B7ADB987"
+				item: { count: 1, id: "techreborn:plasma_generator" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			id: "24C8C3BBFE29EB7B"
+			rewards: [{
+				id: "38A4BA7310CED202"
+				item: {
+					count: 1
+					id: "oritech:pump_block"
+				}
+				type: "item"
+			}]
+			size: 1.5d
+			tasks: [{
+				id: "1903D0AFC9BE75E7"
+				item: { count: 1, id: "oritech:lava_generator_block" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			id: "2F5C90C76C79D1D9"
+			tasks: [
+				{
+					id: "11CA79579BAF075B"
+					item: { count: 1, id: "oritech:steam_engine_block" }
+					type: "item"
+				}
+				{
+					id: "4F31E15E86413022"
+					item: { count: 1, id: "oritech:steam_boiler_addon" }
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			id: "259E7530AED81D4A"
+			size: 1.5d
+			tasks: [{
+				id: "4DB34D0C94D07D8D"
+				item: { count: 1, id: "oritech:fuel_generator_block" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 9.5d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			id: "4EF215E1DA2A7331"
+			size: 1.5d
+			tasks: [{
+				id: "075513384BE08873"
+				item: { count: 1, id: "oritech:bio_generator_block" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			id: "27CC1F8FFD597BD5"
+			rewards: [{
+				count: 15
+				id: "159E14E2297E1F0D"
+				item: {
+					count: 1
+					id: "oritech:machine_core_3"
+				}
+				type: "item"
+			}]
+			size: 1.5d
+			tasks: [{
+				id: "2AE029B0028AE5B1"
+				item: { count: 1, id: "oritech:big_solar_panel_block" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			id: "047219C2D3981C40"
+			size: 1.5d
+			tasks: [{
+				id: "387D14E2D9C18C68"
+				item: { count: 1, id: "oritech:reactor_controller" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 11.0d
+		}
+		{
+			dependencies: ["48EF0BFF453B1B5B"]
+			id: "5CD334B14687D45B"
+			rewards: [{
+				count: 64
+				id: "68BE0F0C7E874772"
+				item: {
+					count: 1
+					id: "oritech:accelerator_motor"
+				}
+				type: "item"
+			}]
+			size: 1.5d
+			tasks: [{
+				id: "0FD5F99FB07E2DDE"
+				item: { count: 1, id: "oritech:particle_collector_block" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 13.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			id: "1621E86CE1EAE71E"
+			tasks: [{
+				id: "05266B94190EA6C9"
+				item: { count: 1, id: "techreborn:large_gas_turbine" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 9.5d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			id: "7A320E74338034BD"
+			tasks: [{
+				id: "297EABEF25667903"
+				item: { count: 1, id: "techreborn:large_combustion_engine" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: 9.5d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			id: "2550F9C0740F2B06"
+			tasks: [{
+				id: "5B7269C92F3ACB88"
+				item: { count: 1, id: "techreborn:universal_chemical_fuel_engine" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["48EF0BFF453B1B5B"]
+			id: "3F87CE644D11CFA2"
+			tasks: [
+				{
+					id: "077A3374E98E3DDE"
+					item: { count: 1, id: "techreborn:dyson_swarm_receiver" }
+					type: "item"
+				}
+				{
+					id: "019D2822DD81B7D6"
+					item: { count: 1, id: "techreborn:dyson_swarm_host" }
+					type: "item"
+				}
+			]
+			x: 5.0d
+			y: 13.0d
+		}
+	]
 }

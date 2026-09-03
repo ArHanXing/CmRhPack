@@ -153,15 +153,26 @@
 		}
 		{
 			id: "3252DD4E9EABB90F"
-			rewards: [{
-				count: 16
-				id: "0FCC74F8A82C531E"
-				item: {
-					count: 1
-					id: "techreborn:refined_iron_ingot"
+			rewards: [
+				{
+					count: 16
+					id: "0FCC74F8A82C531E"
+					item: {
+						count: 1
+						id: "techreborn:refined_iron_ingot"
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					count: 8
+					id: "287C1F01E27AA0EE"
+					item: {
+						count: 1
+						id: "jsonreg:coin"
+					}
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "40E68EFE6F6D76D2"
 				item: { count: 1, id: "techreborn:refined_iron_nugget" }
@@ -228,6 +239,15 @@
 		{
 			dependencies: ["78D244C0BD67EBFC"]
 			id: "44FE44D3341C0C03"
+			rewards: [{
+				count: 16
+				id: "09381E1A5419C8B6"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
@@ -236,7 +256,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			id: "6CCACA2361AB8337"
@@ -450,7 +470,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 3.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -469,15 +489,26 @@
 		{
 			dependencies: ["10D435BDE9D65C39"]
 			id: "34D94F7929BACA2D"
-			rewards: [{
-				count: 16
-				id: "2FBF807C8DFF9BE2"
-				item: {
-					count: 1
-					id: "oritech:enderic_compound"
+			rewards: [
+				{
+					count: 16
+					id: "2FBF807C8DFF9BE2"
+					item: {
+						count: 1
+						id: "oritech:enderic_compound"
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					count: 8
+					id: "58D94527A0D8575B"
+					item: {
+						count: 1
+						id: "jsonreg:coin"
+					}
+					type: "item"
+				}
+			]
 			shape: "square"
 			size: 1.5d
 			tasks: [{
@@ -486,7 +517,7 @@
 				type: "item"
 			}]
 			x: 7.0d
-			y: 3.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -508,7 +539,7 @@
 				type: "item"
 			}]
 			x: 7.0d
-			y: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["2A28943AFB868811"]
@@ -529,7 +560,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 6.0d
+			y: 4.0d
 		}
 		{
 			id: "0D8FB309D1A46FF0"
@@ -559,7 +590,7 @@
 				type: "item"
 			}]
 			x: 1.0d
-			y: -5.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["0D8FB309D1A46FF0"]
@@ -578,7 +609,7 @@
 				type: "item"
 			}]
 			x: 1.0d
-			y: -3.5d
+			y: -4.0d
 		}
 		{
 			dependencies: ["74B3F05A776743A7"]
@@ -608,12 +639,21 @@
 				item: { count: 1, id: "techreborn:extractor" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 0.0d
+			x: 6.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["44FE44D3341C0C03"]
 			id: "10D86260E8BE9E61"
+			rewards: [{
+				count: 8
+				id: "41A93A9ED85FC91E"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "492258679F19C20A"
 				item: { count: 1, id: "techreborn:grinder" }
@@ -628,6 +668,15 @@
 				"56FCDA45D436EA27"
 			]
 			id: "2A28943AFB868811"
+			rewards: [{
+				count: 8
+				id: "54492EC96D773678"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "2A4D13410A7FF8B0"
 				item: { count: 1, id: "techreborn:compressor" }
@@ -655,13 +704,13 @@
 				}
 			]
 			x: 9.5d
-			y: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["5F4BC0C1D5FDB23C"]
 			id: "49F6976676887C24"
 			rewards: [{
-				count: 16
+				count: 8
 				id: "34518F4CB3292ED0"
 				item: {
 					count: 1
@@ -680,15 +729,26 @@
 		{
 			dependencies: ["2E97961B9F196F48"]
 			id: "5F4BC0C1D5FDB23C"
-			rewards: [{
-				count: 8
-				id: "7665E3661BE0E77A"
-				item: {
-					count: 1
-					id: "oritech:processing_unit"
+			rewards: [
+				{
+					count: 8
+					id: "7665E3661BE0E77A"
+					item: {
+						count: 1
+						id: "oritech:processing_unit"
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					count: 32
+					id: "43696E090163F9A7"
+					item: {
+						count: 1
+						id: "jsonreg:coin"
+					}
+					type: "item"
+				}
+			]
 			tasks: [
 				{
 					id: "4411026EEA4FFC02"
@@ -705,8 +765,12 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0518AD89AAEE82A3"]
+			dependencies: [
+				"0518AD89AAEE82A3"
+				"34D94F7929BACA2D"
+			]
 			dependency_requirement: "one_completed"
+			icon_scale: 2.0d
 			id: "34DC636661FFBF62"
 			rewards: [{
 				count: 16
@@ -717,13 +781,14 @@
 				}
 				type: "item"
 			}]
+			shape: "none"
 			tasks: [{
 				id: "66818E6EACD2455D"
 				item: { count: 1, id: "oritech:plastic_sheet" }
 				type: "item"
 			}]
-			x: 12.0d
-			y: 0.0d
+			x: 9.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -775,18 +840,30 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -4.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["44FE44D3341C0C03"]
+			icon_scale: 1.5d
 			id: "575E13AE20CC0EC1"
+			rewards: [{
+				count: 16
+				id: "39E331112C34EE4E"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
+			shape: "none"
+			size: 1.5d
 			tasks: [{
 				id: "4E1BCB14710D979C"
 				item: { count: 1, id: "oritech:foundry_block" }
 				type: "item"
 			}]
 			x: 7.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["36D7C55001F950C7"]
@@ -872,150 +949,28 @@
 			y: -1.5d
 		}
 		{
-			id: "77D3A1F0B414940E"
-			rewards: [{
-				id: "4B5A16E1C5278A85"
-				item: {
-					count: 1
-					id: "techreborn:industrial_solar_panel"
-				}
-				type: "item"
-			}]
-			size: 1.0d
-			tasks: [{
-				id: "5E016ACF8F817BD7"
-				item: { count: 1, id: "techreborn:basic_solar_panel" }
-				type: "item"
-			}]
-			x: 12.0d
-			y: -6.0d
-		}
-		{
-			id: "761EC4FAE03B97F9"
-			tasks: [{
-				id: "53366C4C19DC31DC"
-				item: { count: 1, id: "techreborn:thermal_generator" }
-				type: "item"
-			}]
-			x: 12.0d
-			y: -5.0d
-		}
-		{
-			id: "43E08B7C2096AE05"
-			rewards: [{
-				id: "53F1E9A5A7B70753"
-				item: {
-					count: 1
-					id: "advanced_reborn:ray_solar_panel_3"
-				}
-				type: "item"
-			}]
-			tasks: [{
-				id: "7439E64DE61869F2"
-				item: { count: 1, id: "advanced_reborn:ray_solar_panel" }
-				type: "item"
-			}]
-			x: 13.0d
-			y: -6.0d
-		}
-		{
-			id: "4843538720BA5869"
-			rewards: [{
-				id: "6509E1EFB444465E"
-				item: {
-					count: 1
-					id: "advanced_reborn:ray_generator_6"
-				}
-				type: "item"
-			}]
-			tasks: [{
-				id: "6D9D33EE59BAB8BA"
-				item: { count: 1, id: "advanced_reborn:ray_generator_5" }
-				type: "item"
-			}]
-			x: 14.0d
-			y: -6.0d
-		}
-		{
-			id: "1F5E36ED98E53C11"
-			tasks: [{
-				id: "4D979BE383AA62D5"
-				item: { count: 1, id: "techreborn:semi_fluid_generator" }
-				type: "item"
-			}]
-			x: 13.0d
-			y: -5.0d
-		}
-		{
-			id: "4D2930FC45C012F6"
-			tasks: [{
-				id: "1D66B452E37DFBA0"
-				item: { count: 1, id: "techreborn:wind_mill" }
-				type: "item"
-			}]
-			x: 16.0d
-			y: -6.0d
-		}
-		{
-			id: "14D2B15143E7238A"
-			tasks: [{
-				id: "3D705B9111437F3D"
-				type: "checkmark"
-			}]
-			x: 11.0d
-			y: -5.5d
-		}
-		{
-			id: "4A84A3502A883CFE"
-			tasks: [{
-				id: "02510477C5993E57"
-				item: { count: 1, id: "techreborn:diesel_generator" }
-				type: "item"
-			}]
-			x: 14.0d
-			y: -5.0d
-		}
-		{
-			id: "7D064BA3BB371AA9"
-			tasks: [{
-				id: "1DF8866656C3A001"
-				item: { count: 1, id: "techreborn:gas_turbine" }
-				type: "item"
-			}]
-			x: 15.0d
-			y: -5.0d
-		}
-		{
-			id: "3707F170CBC2ACCB"
-			rewards: [{
-				count: 3
-				id: "44C82566AEABB2E9"
-				item: {
-					count: 1
-					id: "techreborn:plasma_generator"
-				}
-				type: "item"
-			}]
-			tasks: [{
-				id: "0B55E94D910F001B"
-				item: { count: 1, id: "techreborn:plasma_generator" }
-				type: "item"
-			}]
-			x: 16.0d
-			y: -5.0d
-		}
-		{
 			dependencies: ["0E1580E4F4173877"]
 			id: "0B79CCECAB548F7D"
-			rewards: [{
-				count: 10
-				id: "164D0D365DE70CD6"
-				item: {
-					count: 1
-					id: "techreborn:advanced_circuit"
+			rewards: [
+				{
+					count: 10
+					id: "164D0D365DE70CD6"
+					item: {
+						count: 1
+						id: "techreborn:advanced_circuit"
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					count: 32
+					id: "5D0256440D955272"
+					item: {
+						count: 1
+						id: "jsonreg:coin"
+					}
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
@@ -1035,7 +990,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -1044,6 +999,15 @@
 			]
 			hide_dependency_lines: true
 			id: "47614B42FB9C45AB"
+			rewards: [{
+				count: 16
+				id: "228BFFCECDA6EDB1"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			size: 2.0d
 			tasks: [{
@@ -1180,31 +1144,7 @@
 				type: "item"
 			}]
 			x: 2.5d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"2A28943AFB868811"
-				"5F4BC0C1D5FDB23C"
-			]
-			id: "070BA520A5425340"
-			rewards: [{
-				id: "10391E14FE12B0F8"
-				item: {
-					count: 1
-					id: "toneko:neko_potion"
-				}
-				type: "item"
-			}]
-			shape: "octagon"
-			size: 1.5d
-			tasks: [{
-				id: "615BBBADF0DDD725"
-				item: { count: 1, id: "justarod:redstone_rod" }
-				type: "item"
-			}]
-			x: 8.25d
-			y: 0.75d
+			y: -4.0d
 		}
 		{
 			dependencies: ["2A28943AFB868811"]
@@ -1225,8 +1165,8 @@
 				item: { count: 1, id: "tesseract:tesseract" }
 				type: "item"
 			}]
-			x: 7.0d
-			y: -2.0d
+			x: 6.0d
+			y: -4.0d
 		}
 		{
 			id: "15C60FCCD5E7A678"
@@ -1267,16 +1207,6 @@
 			}]
 			x: 15.0d
 			y: 2.0d
-		}
-		{
-			id: "1803F508EECF5BA4"
-			tasks: [{
-				id: "3BE094A13F3784A1"
-				item: { count: 1, id: "techreborn:lightning_rod" }
-				type: "item"
-			}]
-			x: 15.0d
-			y: -6.0d
 		}
 		{
 			dependencies: ["46F75A6339B74160"]
@@ -1372,6 +1302,15 @@
 		{
 			dependencies: ["2A28943AFB868811"]
 			id: "6567DA830D557C34"
+			rewards: [{
+				count: 8
+				id: "453DA4AC2B15A91F"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "0D031AB163B4E4DE"
 				item: { count: 1, id: "techreborn:lathe" }

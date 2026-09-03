@@ -178,11 +178,11 @@
     },
     "BasicTankUnitCapacity": {
       "comment": "How much liquid a Basic Tank Unit can take (Value in buckets, 1000 Mb)",
-      "value": 1280
+      "value": 256
     },
     "IndustrialTankUnitCapacity": {
       "comment": "How much liquid an Industrial Tank Unit can take (Value in buckets, 1000 Mb)",
-      "value": 10240
+      "value": 4096
     },
     "QuantumTankUnitCapacity": {
       "comment": "How much liquid a Quantum Tank Unit can take (Value in buckets, 1000 Mb)(Compat: \u003d\u003d MAX_VALUE)",
@@ -194,7 +194,11 @@
     },
     "AdvancedTankUnitMaxStorage": {
       "comment": "How much liquid an Advanced Tank Unit can take (Value in buckets, 1000 Mb)",
-      "value": 5120
+      "value": 1024
+    },
+    "CrudeTankUnitCapacity": {
+      "comment": "How much liquid a Crude Tank Unit can take (Value in buckets, 1000 Mb)",
+      "value": 16
     }
   },
   "primitive_distillation_tower": {
@@ -215,6 +219,12 @@
     "LargeCentrifugeMaxEnergy": {
       "comment": "Large Centrifuge Max Energy",
       "value": 10000
+    }
+  },
+  "dyson_swarm_host": {
+    "DysonHostLaunchIntervalTicks": {
+      "comment": "Dyson Swarm Host: ticks between two launched solar sails",
+      "value": 10
     }
   },
   "matter_fabricator": {
@@ -266,6 +276,20 @@
     },
     "SpaceElevatorMaxEnergy": {
       "comment": "Space Elevator Max Energy",
+      "value": 10000000
+    }
+  },
+  "dyson_swarm_receiver": {
+    "DysonReceiverMaxOutput": {
+      "comment": "Dyson Swarm Receiver Max Output (Energy per tick)",
+      "value": 2048
+    },
+    "DysonReceiverEuPerSail": {
+      "comment": "Dyson Swarm Receiver: energy per tick generated per solar sail of the bound player",
+      "value": 16
+    },
+    "DysonReceiverMaxEnergy": {
+      "comment": "Dyson Swarm Receiver Max Energy",
       "value": 10000000
     }
   },

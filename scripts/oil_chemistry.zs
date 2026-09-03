@@ -3,6 +3,8 @@ import crafttweaker.api.ingredient.type.IIngredientEmpty;
 import crafttweaker.api.ingredient.IIngredient;
 
 <recipetype:oritech:fuel_generator>.removeAll();
+<recipetype:oritech:refinery>.removeByName("oritech:refinery/oilbase");
+<recipetype:oritech:refinery>.removeByName("oritech:refinery/oilalt");
 <recipetype:techreborn:gas_generator>.removeAll();
 <recipetype:techreborn:semi_fluid_generator>.removeAll();
 <recipetype:techreborn:diesel_generator>.removeAll();
@@ -49,8 +51,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.removeByName("techreborn:chemical_reactor/nitro_diesel");
 <recipetype:techreborn:chemical_reactor>.removeByName("techreborn:chemical_reactor/nitrocoal_fuel");
 
-// ========== 1. 原油脱盐 (OR 离心流体) ==========
-<recipetype:oritech:centrifuge_fluid>.addJsonRecipe("oil.process.or.desalt.crude.tr", {type: "oritech:centrifuge_fluid",
+// ========== 1. 原油脱盐 ==========
+<recipetype:oritech:refinery>.addJsonRecipe("oil.process.or.desalt.crude.tr", {type: "oritech:refinery",
     results: [],
     fluidOutputs: [
         {fluid: "jsonreg:desalted_crude", amount: 81000},
@@ -61,7 +63,7 @@ import crafttweaker.api.ingredient.IIngredient;
     ingredients: []
 });
 
-<recipetype:oritech:centrifuge_fluid>.addJsonRecipe("oil.process.or.desalt.crude.or", {type: "oritech:centrifuge_fluid",
+<recipetype:oritech:refinery>.addJsonRecipe("oil.process.or.desalt.crude.or", {type: "oritech:refinery",
     results: [],
     fluidOutputs: [
         {fluid: "jsonreg:desalted_crude", amount: 81000},

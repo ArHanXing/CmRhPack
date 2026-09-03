@@ -764,9 +764,9 @@ craftingTable.addShaped("ctgui/new/crafting/large_grinder", <item:techreborn:lar
     [<item:jsonreg:mv_electric_motor>, <item:jsonreg:aluminum_rod>, <item:jsonreg:mv_electric_motor>]]);
 
 craftingTable.addShaped("ctgui/new/crafting/urinary_catheter", <item:urinarycatheter:urinary_catheter>, [
-    [IIngredientEmpty.getInstance(), <item:oritech:fluid_pipe>],
-    [IIngredientEmpty.getInstance(), <item:botania:hydroangeas>],
-    [IIngredientEmpty.getInstance(), <item:jsonreg:rubber_plate>]]);
+    [<item:oritech:fluid_pipe>],
+    [<item:botania:hydroangeas>],
+    [<item:jsonreg:rubber_plate>]]);
 
 craftingTable.addShaped("ctgui/new/crafting/infinite_pie", <item:infinite_pie:infinite_pie>, [
     [<item:minecraft:pumpkin_pie>, <item:farmersdelight:apple_pie>, <item:farmersdelight:sweet_berry_cheesecake>],
@@ -800,4 +800,14 @@ craftingTable.addShaped("ctgui/new/crafting/large_ranch", <item:techreborn:large
     [<item:oritech:processing_unit>, <item:easy_mob_farm:tier1_mob_farm_template>, <item:oritech:processing_unit>],
     [<item:jsonreg:mv_robot_arm>, <item:techreborn:advanced_circuit>, <item:jsonreg:mv_robot_arm>],
     [<item:techreborn:aluminum_plate>, <item:techreborn:advanced_machine_casing>, <item:techreborn:aluminum_plate>]]);
+
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/unit/tank/quantum_tank_unit_upgrade", <item:techreborn:crude_tank_unit> * 2, [
+    [IIngredientEmpty.getInstance(), <item:techreborn:cell>, IIngredientEmpty.getInstance()],
+    [<item:techreborn:rubber>, <item:techreborn:crude_storage_unit>, <item:techreborn:rubber>],
+    [IIngredientEmpty.getInstance(), <item:techreborn:cell>, IIngredientEmpty.getInstance()]]);
+
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/unit/storage/crude_tank_unit", <item:techreborn:crude_storage_unit>, [
+    [<tag:item:minecraft:planks>, <item:techreborn:iron_plate>, <tag:item:minecraft:planks>],
+    [<tag:item:minecraft:planks>, <item:techreborn:cell>, <tag:item:minecraft:planks>],
+    [<tag:item:minecraft:planks>, <item:techreborn:iron_plate>, <tag:item:minecraft:planks>]]);
 

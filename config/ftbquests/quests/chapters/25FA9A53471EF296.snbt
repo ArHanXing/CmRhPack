@@ -8,26 +8,23 @@
 	}
 	id: "25FA9A53471EF296"
 	order_index: 0
-	quest_links: [{
-		id: "4DED5C4D15414715"
-		linked_quest: "0A79DDBB3E3642EC"
-		x: 15.0d
-		y: 9.0d
-	}]
-	quests: [
+	quest_links: [
 		{
-			dependencies: ["0B79CCECAB548F7D"]
-			id: "29A8B822A402D9B3"
-			tasks: [{
-				id: "23008FD7540426ED"
-				item: { count: 1, id: "techreborn:rolling_machine" }
-				type: "item"
-			}]
+			id: "4DED5C4D15414715"
+			linked_quest: "0A79DDBB3E3642EC"
+			x: 15.0d
+			y: 9.0d
+		}
+		{
+			id: "13F15D9A84FA430F"
+			linked_quest: "45E45ECA23073D45"
 			x: 0.0d
 			y: 0.0d
 		}
+	]
+	quests: [
 		{
-			dependencies: ["29A8B822A402D9B3"]
+			dependencies: ["45E45ECA23073D45"]
 			id: "62E7FB0860345BFA"
 			tasks: [
 				{

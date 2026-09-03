@@ -223,7 +223,7 @@
   },
   "upgrades": {
     "overclocker_speed": {
-      "comment": "Overclocker behavior speed multiplier",
+      "comment": "Overclocker craft time multiplier per upgrade (0.5 \u003d half the time, stacks multiplicatively)",
       "value": 0.25
     },
     "super_conductor": {
@@ -231,12 +231,8 @@
       "value": 1.0
     },
     "overclocker_power": {
-      "comment": "Overclocker behavior power multiplier",
+      "comment": "Overclocker power usage increase as a fraction per upgrade (0.25 \u003d 1.25x power, stacks multiplicatively)",
       "value": 0.75
-    },
-    "energy_storage": {
-      "comment": "Energy storage behavior extra power",
-      "value": 32768.0
     }
   }
 }

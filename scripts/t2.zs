@@ -148,7 +148,7 @@ craftingTable.removeByName("oritech:crafting/atomicforge");
 <recipetype:oritech:refinery>.removeByName("oritech:refinery/siliconwashing");
 <recipetype:oritech:refinery>.addJsonRecipe("t2.oritech.refinery/siliconwashing", {type: "oritech:refinery",
     results: [{id: "jsonreg:silicon_boule", count: 1}], time: 160,
-    fluidInput: {fluid: "oritech:still_silicon_wash"}, ingredients: [item:"oritech:silicon"}]
+    fluidInput: {fluid: "oritech:still_silicon_wash"}, ingredients: [{item:"oritech:silicon"}]
 });
 
 
