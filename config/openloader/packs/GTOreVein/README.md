@@ -22,86 +22,68 @@ Dynamic Ore Veins wiki @ https://github.com/TheBrewingMiner/DOV-Homepage/wiki
 
 以下内容均由 DeepSeek 生成。
 
-## 配置矿脉的间隔与生成频率
+## 矿脉布局：球状网格（当前实现）
 
-### 1. 控制矿脉中心间距（网格步长）
+### 中心区块判定公式
 
-核心参数是 `denominator`（网格单元尺寸）和对应的 `subtract` 值。当前配置中：
+- 网格步长 **192 格 = 12 区块**。矿球球心（方块坐标）：`x = 192k + 96`、`z = 192m + 96`，即满足 `x ≡ 96 (mod 192)` 且 `z ≡ 96 (mod 192)` 的点。
+- **用区块坐标（Cx, Cz）判定**：`Cx mod 12 ∈ {5, 6}` 且 `Cz mod 12 ∈ {5, 6}` 的 2×2 区块就是矿球所在（R=16 恰好 = 1 区块，球占满这 2×2）。球心位于其中 (6,6) 区块的最小角（块坐标 192k+96, 192m+96）。
+- 取模为数学取模（floor mod），负坐标安全：如 Cx = −7 → −7 mod 12 = 5 ✓。
+- 球心高度 Y 由矿种决定，见下表；同格只有一种矿脉（见下）。
 
-```json
-"denominator": 48.0,
-"argument2": 24.0
-```
+### 每格矿种判定（确定性，与种子无关）
 
-- `denominator` 表示每隔多少格划出一个网格单元。例如 `48.0` 意味着矿脉中心每 48 格（3 区块）出现一个。
-- `argument2` **必须等于 `denominator / 2`**，才能将网格原点对齐到每个单元的中心。修改举例：
-  - 想要更稀疏的矿脉：改为 `96.0` 和 `48.0`，矿脉间距变为 6 区块。
-  - 想要更密集的矿脉：改为 `32.0` 和 `16.0`，每 2 区块一个中心。
+1. 格子编号 `k = floor(x/192)`、`m = floor(z/192)`（中心区块等价于 `k = (Cx−6)/12`、`m = (Cz−6)/12`）。
+2. 哈希 `v = 42·frac(sin(127.1k + 311.7m)·43758.5453) − 21 ∈ [-21, 21)`。
+3. 矿种 = 该维度切片表中 `v` 所落区间对应的矿脉（每维度把 [-21,21] 均分成 N 段，N=矿脉数，一格恰好一种）。
+4. 实现文件：`data/gt_veins/worldgen/density_function/cell_shuffle.json`（供 DOV shuffle_source 引用）+ 每条矿脉 `conditions` 内的 `dynamic_veins:density_threshold` 门（内联同一函数，两者必须保持一致）。
 
-> 注意：修改间距时，请保持 `argument2 = denominator / 2`，否则矿脉会偏离网格中心，造成分布不均。
+> **配套工具**：浏览器直接打开本目录下的 [`vein_map.html`](vein_map.html) —— 交互式矿脉地图（平移/缩放/悬停查询/按矿种定位最近矿脉），内置与数据包一致的判定算法。
 
----
+### 调参入口
 
-### 2. 控制单个矿团尺寸
+| 想改什么 | 改哪里 |
+|---|---|
+| 球大小 | `vein_toggle.max_exclusive`（R）+ `conditions.height_range`（Yc±R） |
+| 网格间距 | 所有 `vein_toggle` 的 `mod.denominator`(192)/`subtract`(96) + `cell_shuffle.json` 的 `div.denominator`(192) |
+| 球体致密度 | `vein_settings.vein_solidness`（0.7 = 球内 70% 方块成矿，30% 保留原石孔） |
+| 次矿占比 | `secondary_ore_chance` |
+| 球心高度 | `vein_toggle.point1[1].argument2`（Yc）+ `height_range` |
+| 矿种轮换随机性 | `cell_shuffle.json`（哈希系数 127.1/311.7/43758.5453；与矿脉门内联 input 同步） |
 
-在你的矩形 `vein_toggle` 中，激活区域由 `range_choice` 的边界决定：
+### 全部矿脉总表
 
-```json
-"min_exclusive": -5.0,
-"max_inclusive": 5.0
-```
-
-这产生了一个 **11×11 格**的方形矿团（中心 5 格，向四个方向各延伸 5 格，加上中心本身共 11 格）。  
-- 想要更大矿团：扩大范围，如 `-8.0` 到 `8.0` → 17×17。
-- 想要更小矿团：缩小范围，如 `-3.0` 到 `3.0` → 7×7。
-
-**重要**：矿团尺寸必须小于网格间距，否则相邻矿团会粘连在一起。建议 **矿团边长 ≤ 网格步长的 1/2**。
-
----
-
-### 3. 控制生成频率（特定区域是否一定有矿脉）
-
-共享相同 `vein_toggle`（相同网格）的多个矿脉，会在每个网格单元中**随机抽选一个**符合条件的生成。  
-如果希望某些网格单元**完全不生成矿脉**，可以添加一个概率条件。例如，让只有 70% 的网格单元有矿脉：
-
-```json
-"conditions": [
-  ...,
-  {
-    "type": "dynamic_veins:density_threshold",
-    "input": {
-      "type": "minecraft:noise",
-      "noise": "minecraft:ore_veininess",
-      "xz_scale": 10.0,
-      "y_scale": 10.0
-    },
-    "max_threshold": 0.7
-  }
-]
-```
-
-原理：用低频噪声采样，小于 0.7 才生成，等效于 70% 的矿脉出现概率。
-
----
-
-### 4. 按高度段分层
-
-通过 `height_range` 条件，可以将不同矿脉限制在特定 Y 层。例如：
-
-```json
-"min_inclusive": { "absolute": -64 },
-"max_inclusive": { "absolute": -1 }
-```
-
-高度段不相交的矿脉之间**不会发生冲突**，因为它们永远不会在同一位置同时满足条件。这让你可以在一个网格单元内，根据高度放置不同种类的矿脉（如浅层铜、深层铁）。
+| 矿脉 | 维度 | 主矿石 | 次矿石 (占比) | 球心 Y | 半径 R | Y 范围 | 类型切片 |
+|---|---|---|---|---|---|---|---|
+| _test_starlight_ore *(测试)* | 星光 | uranium (`deepslate_uranium_ore`) | lead `deepslate_lead_ore` (40%) | 68 | 16 | 52~84 | [-21.00, 0.00) |
+| bauxite_iron | 主世界 | bauxite (`deepslate_bauxite_ore`) | iron `deepslate_iron_ore` (40%) | -32.5 | 16 | -49~-16 | [-21.00, -18.53) |
+| chalcopyrite | 主世界 | copper (`copper_ore`) | tin `tin_ore` (40%) | 40 | 16 | 24~56 | [-18.53, -16.06) |
+| coal | 主世界 | coal (`coal_ore`) | diamond `diamond_ore` (10%) | 30 | 16 | 14~46 | [-16.06, -13.59) |
+| corundum | 主世界 | ruby (`ruby_ore`) | sapphire `sapphire_ore` (40%) | 60 | 16 | 44~76 | [-13.59, -11.12) |
+| emerald_gold | 主世界 | emerald (`emerald_ore`) | gold `gold_ore` (40%) | 60 | 16 | 44~76 | [-11.12, -8.65) |
+| end_naquadah_ore | 末地 | end_naquadah (`end_naquadah_ore`) | end_enriched_naquadah `end_enriched_naquadah_ore` (30%) | 30 | 16 | 14~46 | [-21.00, -7.00) |
+| end_peridot_ore | 末地 | sodalite (`sodalite_ore`) | peridot `peridot_ore` (50%) | 30 | 16 | 14~46 | [-7.00, 7.00) |
+| end_sheldonite_ore | 末地 | sheldonite (`sheldonite_ore`) | tungsten `tungsten_ore` (50%) | 30 | 16 | 14~46 | [7.00, 21.00) |
+| galena_silver | 主世界 | galena (`deepslate_galena_ore`) | silver `deepslate_silver_ore` (30%) | -20 | 16 | -36~-4 | [-8.65, -6.18) |
+| iridium_iron | 主世界 | iridium (`deepslate_iridium_ore`) | iron `deepslate_iron_ore` (30%) | -32.5 | 16 | -49~-16 | [-6.18, -3.71) |
+| kimberlite | 主世界 | diamond (`deepslate_diamond_ore`) | redstone `deepslate_redstone_ore` (40%) | -32.5 | 16 | -49~-16 | [-3.71, -1.24) |
+| lapis_gold | 主世界 | lapis (`deepslate_lapis_ore`) | gold `deepslate_gold_ore` (30%) | -32.5 | 16 | -49~-16 | [-1.24, 1.24) |
+| lead_silver | 主世界 | lead (`deepslate_lead_ore`) | silver `deepslate_silver_ore` (40%) | -32.5 | 16 | -49~-16 | [1.24, 3.71) |
+| magnetite | 主世界 | iron (`iron_ore`) | gold `gold_ore` (30%) | 40 | 16 | 24~56 | [3.71, 6.18) |
+| nether_cinnabar | 下界 | cinnabar (`cinnabar_ore`) | sulfur `sulfur_ore` (30%) | 35 | 16 | 19~51 | [-21.00, -12.60) |
+| nether_pyrite | 下界 | pyrite (`pyrite_ore`) | nether_gold `nether_gold_ore` (40%) | 35 | 16 | 19~51 | [-12.60, -4.20) |
+| nether_quartz | 下界 | nether_quartz (`nether_quartz_ore`) | sulfur_quartz `sulfur_quartz_ore` (30%) | 35 | 16 | 19~51 | [-4.20, 4.20) |
+| nether_rose_quartz | 下界 | rose_quartz (`rose_quartz_ore`) | smoky_quartz `smoky_quartz_ore` (50%) | 35 | 16 | 19~51 | [4.20, 12.60) |
+| nether_sphalerite | 下界 | sphalerite (`sphalerite_ore`) | sulfur `sulfur_ore` (30%) | 35 | 16 | 19~51 | [12.60, 21.00) |
+| nickel_copper | 主世界 | nickel (`deepslate_nickel_ore`) | copper `deepslate_copper_ore` (30%) | -32.5 | 16 | -49~-16 | [6.18, 8.65) |
+| oil_sand | 主世界 | oil_sand (`oil_sand_ore`) | oil_sand `oil_sand_ore` (40%) | 60 | 16 | 44~76 | [8.65, 11.12) |
+| redstone_copper | 主世界 | redstone (`deepslate_redstone_ore`) | copper `deepslate_copper_ore` (30%) | -32.5 | 16 | -49~-16 | [11.12, 13.59) |
+| salt | 主世界 | salt (`salt_ore`) | rock_salt `rock_salt_ore` (40%) | 60 | 16 | 44~76 | [13.59, 16.06) |
+| starlight_rutile | 星光 | voidstone_rutile (`voidstone_rutile_ore`) | voidstone_malarite `voidstone_malarite_ore` (40%) | -32 | 16 | -48~-16 | [0.00, 21.00) |
+| tin_copper | 主世界 | tin (`tin_ore`) | copper `copper_ore` (50%) | 40 | 16 | 24~56 | [16.06, 18.53) |
+| uranium_lead | 主世界 | uranium (`deepslate_uranium_ore`) | lead `deepslate_lead_ore` (40%) | -15.5 | 13 | -29~-2 | [18.53, 21.00) |
 
 ---
-
-### 5. 实际调整流程示例
-
-1. **确定想要的矿脉密度**：假设希望每 4 区块出现一个矿脉，设置 `denominator: 64`、`argument2: 32`。
-2. **确定矿团尺寸**：希望矿团为 15×15，设置 `min_exclusive: -7.0`、`max_inclusive: 7.0`。
-3. **检查尺寸与间距比例**：15 / 64 ≈ 0.23，小于 0.5，安全。
 
 严肃注意：原版噪声矿脉高度上限 y=+51
 

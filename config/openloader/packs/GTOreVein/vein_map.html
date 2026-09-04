@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>GTOreVein 矿脉分布计算器</title>
+<style>
+  :root { --bg:#14161a; --panel:#1d2026; --line:#2c313a; --fg:#d8dce2; --dim:#8b93a0; --acc:#5eb0ff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.5 "Segoe UI","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--fg); height:100vh; display:flex; flex-direction:column; }
+  header { padding:10px 16px; border-bottom:1px solid var(--line); display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; }
+  header h1 { font-size:17px; margin:0; }
+  header .note { color:var(--dim); font-size:12px; }
+  main { flex:1; display:flex; min-height:0; }
+  #panel { width:330px; overflow-y:auto; padding:12px; border-right:1px solid var(--line); flex-shrink:0; }
+  #mapwrap { flex:1; position:relative; min-width:0; }
+  canvas { position:absolute; inset:0; width:100%; height:100%; display:block; cursor:grab; }
+  canvas.drag { cursor:grabbing; }
+  #hud { position:absolute; left:10px; bottom:10px; background:rgba(20,22,26,.88); border:1px solid var(--line);
+         padding:6px 10px; font-size:12px; border-radius:6px; pointer-events:none; white-space:pre; }
+  fieldset { border:1px solid var(--line); border-radius:8px; margin:0 0 12px; padding:10px; }
+  legend { color:var(--acc); font-size:12px; padding:0 6px; }
+  label { display:block; color:var(--dim); font-size:12px; margin:6px 0 2px; }
+  input, select, button { background:#12141a; color:var(--fg); border:1px solid var(--line); border-radius:6px;
+        padding:5px 8px; font:inherit; width:100%; }
+  button { cursor:pointer; margin-top:8px; }
+  button:hover { border-color:var(--acc); color:var(--acc); }
+  .row { display:flex; gap:8px; } .row > * { flex:1; }
+  #result { background:#12141a; border:1px solid var(--line); border-radius:8px; padding:10px; font-size:13px; white-space:pre-wrap; }
+  #legend { display:flex; flex-direction:column; gap:2px; }
+  .li { display:flex; align-items:center; gap:8px; padding:3px 6px; border-radius:6px; cursor:pointer; font-size:12.5px; }
+  .li:hover, .li.sel { background:#262b34; }
+  .sw { width:14px; height:14px; border-radius:4px; flex-shrink:0; border:1px solid rgba(255,255,255,.25); }
+  .li small { color:var(--dim); margin-left:auto; }
+  details { color:var(--dim); font-size:12px; margin-top:10px; }
+  details summary { cursor:pointer; color:var(--acc); }
+  b { color:#fff; }
+  .warn { color:#e8b34b; }
+</style>
+</head>
+<body>
+<header>
+  <h1>GTOreVein 矿脉分布计算器</h1>
+  <span class="note">网格 192 格（12 区块）· 球心 x≡96, z≡96 (mod 192) · 布局确定性（与种子无关）· 仅对<strong>新生成区块</strong>有效</span>
+</header>
+<main>
+  <div id="panel">
+    <fieldset>
+      <legend>维度</legend>
+      <select id="dim"></select>
+    </fieldset>
+    <fieldset>
+      <legend>坐标查询</legend>
+      <label>输入模式</label>
+      <select id="cmode"><option value="block">方块坐标</option><option value="chunk">区块坐标</option></select>
+      <div class="row">
+        <div><label>X</label><input id="qx" type="number" value="0"></div>
+        <div><label>Z</label><input id="qz" type="number" value="0"></div>
+      </div>
+      <label>Y 层（用于显示该层是否能挖到）</label>
+      <input id="qy" type="number" value="-32">
+      <button id="btnQuery">查询该位置矿脉</button>
+      <div id="result" style="margin-top:10px">点击查询或在地图上悬停。</div>
+    </fieldset>
+    <fieldset>
+      <legend>图例（点击定位最近的矿脉）</legend>
+      <div id="legend"></div>
+    </fieldset>
+    <details>
+      <summary>判定公式（与 README 一致）</summary>
+      <p>格子编号 k = floor(x/192)，m = floor(z/192)；<br>
+      哈希 v = 42·frac(sin(127.1k + 311.7m)·43758.5453) − 21 ∈ [-21,21)；<br>
+      矿种 = 当前维度切片表中 v 落入的区间（等宽切 N 段）；<br>
+      球心 = (192k+96, Yc, 192m+96)，半径 R；<br>
+      中心区块（区块坐标）: Cx mod 12 ∈ {5,6} 且 Cz mod 12 ∈ {5,6}。</p>
+      <p class="warn">注意：星光维度使用自定义区块生成器，DOV 矿脉实际不生效（表中仅列出配置）。<br>
+      哈希值恰好落在切片边界的格子（概率~0）可能因 JS/Java 浮点实现差异与游戏内结果不同。<br>
+      修改过矿脉 JSON 的话，本页内置数据需要手动同步。</p>
+    </details>
+  </div>
+  <div id="mapwrap">
+    <canvas id="map"></canvas>
+    <div id="hud"></div>
+  </div>
+</main>
+<script>
+"use strict";
+// ---------- 数据（与 data/gt_veins/worldgen/ore_vein/*.json 的切片顺序一致） ----------
+const GRID = 192, HALF = 96;
+const DIMS = {
+  overworld: { label: "主世界", veins: [
+    { n:"bauxite_iron",    ore:"铝土 bauxite",      sec:"铁 40%",       yc:-32.5, r:16 },
+    { n:"chalcopyrite",    ore:"铜 chalcopyrite",   sec:"锡 40%",       yc:40,    r:16 },
+    { n:"coal",            ore:"煤 coal",           sec:"钻石 10%",     yc:30,    r:16 },
+    { n:"corundum",        ore:"红宝石 ruby",       sec:"蓝宝石 40%",   yc:60,    r:16 },
+    { n:"emerald_gold",    ore:"绿宝石 emerald",    sec:"金 40%",       yc:60,    r:16 },
+    { n:"galena_silver",   ore:"方铅矿 galena",     sec:"银 30%",       yc:-20,   r:16 },
+    { n:"iridium_iron",    ore:"铱 iridium",        sec:"铁 30%",       yc:-32.5, r:16 },
+    { n:"kimberlite",      ore:"钻石 kimberlite",   sec:"红石 40%",     yc:-32.5, r:16 },
+    { n:"lapis_gold",      ore:"青金石 lapis",      sec:"金 30%",       yc:-32.5, r:16 },
+    { n:"lead_silver",     ore:"铅 lead",           sec:"银 40%",       yc:-32.5, r:16 },
+    { n:"magnetite",       ore:"铁 magnetite",      sec:"金 30%",       yc:40,    r:16 },
+    { n:"nickel_copper",   ore:"镍 nickel",         sec:"铜 30%",       yc:-32.5, r:16 },
+    { n:"oil_sand",        ore:"油砂 oil_sand",     sec:"油砂 40%",     yc:60,    r:16 },
+    { n:"redstone_copper", ore:"红石 redstone",     sec:"铜 30%",       yc:-32.5, r:16 },
+    { n:"salt",            ore:"盐 salt",           sec:"岩盐 40%",     yc:60,    r:16 },
+    { n:"tin_copper",      ore:"锡 tin",            sec:"铜 50%",       yc:40,    r:16 },
+    { n:"uranium_lead",    ore:"铀 uranium",        sec:"铅 40%",       yc:-15.5, r:13 },
+  ]},
+  nether: { label: "下界", veins: [
+    { n:"nether_cinnabar",    ore:"辰砂 cinnabar",    sec:"硫 30%",     yc:35, r:16 },
+    { n:"nether_pyrite",      ore:"黄铁矿 pyrite",    sec:"下界金 40%", yc:35, r:16 },
+    { n:"nether_quartz",      ore:"下界石英 quartz",  sec:"硫石英 30%", yc:35, r:16 },
+    { n:"nether_rose_quartz", ore:"玫瑰石英",         sec:"烟晶 50%",   yc:35, r:16 },
+    { n:"nether_sphalerite",  ore:"闪锌矿 sphalerite",sec:"硫 30%",     yc:35, r:16 },
+  ]},
+  end: { label: "末地", veins: [
+    { n:"end_naquadah_ore",   ore:"奈夸 naquadah",    sec:"富集奈夸 30%", yc:30, r:16 },
+    { n:"end_peridot_ore",    ore:"方钠石 sodalite",  sec:"橄榄石 50%",   yc:30, r:16 },
+    { n:"end_sheldonite_ore", ore:"谢尔登石 sheldonite", sec:"钨 50%",    yc:30, r:16 },
+  ]},
+  starlight: { label: "星光（DOV 不生效，仅参考）", veins: [
+    { n:"_test_starlight_ore", ore:"铀 uranium",          sec:"铅 40%",    yc:68,  r:16 },
+    { n:"starlight_rutile",    ore:"空石金红石 rutile",   sec:"malarite 40%", yc:-32, r:16 },
+  ]},
+};
+// ---------- 核心算法（与 cell_shuffle.json / density_threshold 门完全一致） ----------
+function hashCell(k, m) {
+  const s = Math.sin(127.1 * k + 311.7 * m) * 43758.5453;
+  return (s - Math.floor(s)) * 42 - 21;           // ∈ [-21, 21)
+}
+function veinOf(dim, k, m) {
+  const list = DIMS[dim].veins, w = 42 / list.length;
+  let i = Math.floor((hashCell(k, m) + 21) / w);
+  if (i >= list.length) i = list.length - 1; if (i < 0) i = 0;
+  return { i, v: list[i] };
+}
+function colorOf(dim, i) {
+  const N = DIMS[dim].veins.length;
+  const h = (i * 137.508 + 40) % 360;
+  return { fill:`hsla(${h},72%,62%,.13)`, ball:`hsla(${h},72%,58%,.45)`, line:`hsl(${h},72%,62%)` };
+}
+function yRange(v) { return [Math.floor(v.yc - v.r), Math.ceil(v.yc + v.r)]; }
+// ---------- 相机与渲染 ----------
+const cv = document.getElementById("map"), ctx = cv.getContext("2d");
+let cam = { x: 96, z: 96, ppb: 0.30 };            // 视野中心(方块坐标), 每块像素
+let dim = "overworld", selType = -1, hover = null;
+function resize() { cv.width = cv.clientWidth * devicePixelRatio; cv.height = cv.clientHeight * devicePixelRatio; }
+new ResizeObserver(resize).observe(cv); resize();
+function w2s(x, z) { return [(x - cam.x) * cam.ppb * devicePixelRatio + cv.width/2, (z - cam.z) * cam.ppb * devicePixelRatio + cv.height/2]; }
+function s2w(sx, sz) { return [(sx - cv.width/2) / (cam.ppb*devicePixelRatio) + cam.x, (sz - cv.height/2) / (cam.ppb*devicePixelRatio) + cam.z]; }
+function draw() {
+  const W = cv.width, H = cv.height;
+  ctx.fillStyle = "#101216"; ctx.fillRect(0, 0, W, H);
+  const [x0, z0] = s2w(0, 0), [x1, z1] = s2w(W, H);
+  const k0 = Math.floor(x0/GRID)-1, k1 = Math.floor(x1/GRID)+1;
+  const m0 = Math.floor(z0/GRID)-1, m1 = Math.floor(z1/GRID)+1;
+  for (let k = k0; k <= k1; k++) for (let m = m0; m <= m1; m++) {
+    const { i, v } = veinOf(dim, k, m);
+    const c = colorOf(dim, i);
+    const [cx, cz] = w2s(k*GRID+HALF, m*GRID+HALF);
+    const rad = v.r * cam.ppb * devicePixelRatio;
+    const [ax, az] = w2s(k*GRID, m*GRID);
+    const csz = GRID * cam.ppb * devicePixelRatio;
+    ctx.fillStyle = (selType < 0 || selType === i) ? c.fill : "rgba(0,0,0,.25)";
+    ctx.fillRect(ax, az, csz, csz);
+    if (selType < 0 || selType === i) {
+      ctx.beginPath(); ctx.arc(cx, cz, rad, 0, 7);
+      ctx.fillStyle = c.ball; ctx.fill();
+      ctx.lineWidth = 1.4 * devicePixelRatio; ctx.strokeStyle = c.line; ctx.stroke();
+      ctx.beginPath(); ctx.arc(cx, cz, 2.2*devicePixelRatio, 0, 7);
+      ctx.fillStyle = c.line; ctx.fill();
+    }
+    if (csz > 130) {
+      ctx.fillStyle = "rgba(255,255,255,.82)"; ctx.font = `${13*devicePixelRatio}px sans-serif`;
+      ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillText(v.n, cx, cz - rad - 12*devicePixelRatio);
+    }
+  }
+  // 区块网格 (16 块) 与格网格 (192 块)
+  if (cam.ppb*devicePixelRatio >= 2.5) {
+    ctx.strokeStyle = "rgba(255,255,255,.06)"; ctx.lineWidth = 1; ctx.beginPath();
+    for (let x = Math.floor(x0/16)*16; x < x1; x += 16) { const [sx] = w2s(x,0); ctx.moveTo(sx,0); ctx.lineTo(sx,H); }
+    for (let z = Math.floor(z0/16)*16; z < z1; z += 16) { const [,sz] = w2s(0,z); ctx.moveTo(0,sz); ctx.lineTo(W,sz); }
+    ctx.stroke();
+  }
+  ctx.strokeStyle = "rgba(255,255,255,.20)"; ctx.lineWidth = 1.2; ctx.beginPath();
+  for (let x = Math.floor(x0/GRID)*GRID; x < x1; x += GRID) { const [sx] = w2s(x,0); ctx.moveTo(sx,0); ctx.lineTo(sx,H); }
+  for (let z = Math.floor(z0/GRID)*GRID; z < z1; z += GRID) { const [,sz] = w2s(0,z); ctx.moveTo(0,sz); ctx.lineTo(W,sz); }
+  ctx.stroke();
+  if (hover) {
+    const [hx, hz] = w2s(hover.x, hover.z);
+    ctx.strokeStyle = "#5eb0ff"; ctx.lineWidth = 2; ctx.beginPath();
+    ctx.moveTo(hx-10*devicePixelRatio, hz); ctx.lineTo(hx+10*devicePixelRatio, hz);
+    ctx.moveTo(hx, hz-10*devicePixelRatio); ctx.lineTo(hx, hz+10*devicePixelRatio); ctx.stroke();
+  }
+}
+// ---------- 交互 ----------
+let drag = null;
+cv.addEventListener("mousedown", e => { drag = { sx: e.clientX, sz: e.clientY, cx: cam.x, cz: cam.z }; cv.classList.add("drag"); });
+window.addEventListener("mouseup", () => { drag = null; cv.classList.remove("drag"); });
+cv.addEventListener("mousemove", e => {
+  const [wx, wz] = s2w(e.offsetX*devicePixelRatio, e.offsetY*devicePixelRatio);
+  if (drag) { cam.x = drag.cx - (e.clientX-drag.sx)/cam.ppb; cam.z = drag.cz - (e.clientY-drag.sz)/cam.ppb; }
+  const k = Math.floor(wx/GRID), m = Math.floor(wz/GRID);
+  const { i, v } = veinOf(dim, k, m);
+  const [yr0, yr1] = yRange(v);
+  const Cx = Math.floor(wx/16), Cz = Math.floor(wz/16);
+  const onC = mod(Cx,12) >= 5 && mod(Cx,12) <= 6 && mod(Cz,12) >= 5 && mod(Cz,12) <= 6;
+  hover = { x: wx, z: wz };
+  document.getElementById("hud").textContent =
+    `方块 ${wx.toFixed(0)}, ${wz.toFixed(0)}  区块 ${Cx}, ${Cz}${onC ? "  ◆中心区块" : ""}\n` +
+    `格子 (${k}, ${m}) → ${v.n}   主: ${v.ore}  次: ${v.sec}\n` +
+    `球心 Y=${v.yc}  范围 Y ${yr0}~${yr1}`;
+  draw();
+});
+cv.addEventListener("wheel", e => {
+  e.preventDefault();
+  const f = Math.exp(-e.deltaY * 0.0012);
+  const [wx, wz] = s2w(e.offsetX*devicePixelRatio, e.offsetY*devicePixelRatio);
+  cam.ppb = Math.min(4, Math.max(0.02, cam.ppb * f));
+  const [nx, nz] = s2w(e.offsetX*devicePixelRatio, e.offsetY*devicePixelRatio);
+  cam.x += wx - nx; cam.z += wz - nz; draw();
+}, { passive: false });
+function mod(a, b) { return ((a % b) + b) % b; }
+// ---------- 查询 ----------
+function queryStr(x, z, y) {
+  const k = Math.floor(x/GRID), m = Math.floor(z/GRID);
+  const { i, v } = veinOf(dim, k, m);
+  const [yr0, yr1] = yRange(v);
+  const cx = k*GRID+HALF, cz = m*GRID+HALF;
+  const dx = cx - x, dz = cz - z, dist = Math.hypot(dx, dz);
+  const dir = (dz < -1 ? "北" : dz > 1 ? "南" : "") + (dx < -1 ? "西" : dx > 1 ? "东" : "") || "就在脚下";
+  const Cx = Math.floor(x/16), Cz = Math.floor(z/16);
+  const onC = mod(Cx,12) >= 5 && mod(Cx,12) <= 6 && mod(Cz,12) >= 5 && mod(Cz,12) <= 6;
+  const inY = y !== undefined && y >= yr0 && y <= yr1;
+  return `格子 (${k}, ${m})   ${DIMS[dim].veins.length} 选 ${i+1} 号\n` +
+    `<b>${v.n}</b>\n主矿: ${v.ore}\n次矿: ${v.sec}\n` +
+    `球心: X=${cx}, Z=${cz}, Y=${v.yc}   半径 R=${v.r}\n` +
+    `Y 范围: ${yr0} ~ ${yr1}${y !== undefined ? (inY ? "  ✓当前 Y 在球内" : "  ✗当前 Y 在球外") : ""}\n` +
+    `${onC ? "◆ 当前在中心区块 (2×2) 内" : `中心区块: Cx mod 12∈{5,6}, Cz mod 12∈{5,6}`}\n` +
+    `到球心: ${dist.toFixed(0)} 格 ${dir} (Δx=${dx}, Δz=${dz})`;
+}
+document.getElementById("btnQuery").onclick = () => {
+  const x = +document.getElementById("qx").value, z = +document.getElementById("qz").value;
+  const y = +document.getElementById("qy").value;
+  let bx = x, bz = z;
+  if (document.getElementById("cmode").value === "chunk") { bx = x*16+8; bz = z*16+8; }
+  dim = document.getElementById("dim").value; rebuildLegend();
+  cam.x = bx; cam.z = bz; draw();
+  document.getElementById("result").innerHTML = queryStr(bx, bz, y);
+};
+// ---------- 图例 ----------
+function rebuildLegend() {
+  const el = document.getElementById("legend"); el.innerHTML = "";
+  DIMS[dim].veins.forEach((v, i) => {
+    const c = colorOf(dim, i), [y0, y1] = yRange(v);
+    const d = document.createElement("div");
+    d.className = "li" + (selType === i ? " sel" : "");
+    d.innerHTML = `<span class="sw" style="background:${c.line}"></span>${v.n}<small>Y ${y0}~${y1}</small>`;
+    d.title = `主: ${v.ore}  次: ${v.sec}`;
+    d.onclick = () => { selType = (selType === i ? -1 : i); rebuildLegend(); draw(); };
+    d.ondblclick = () => locateNearest(i);
+    el.appendChild(d);
+  });
+}
+// 双击图例 → 把视野带到离当前视野中心最近的该矿脉格子
+function locateNearest(i) {
+  const k0 = Math.floor(cam.x/GRID), m0 = Math.floor(cam.z/GRID);
+  for (let rad = 0; rad < 300; rad++)
+    for (let k = k0-rad; k <= k0+rad; k++) for (let m = m0-rad; m <= m0+rad; m++) {
+      if (Math.max(Math.abs(k-k0), Math.abs(m-m0)) !== rad) continue;
+      if (veinOf(dim, k, m).i === i) { cam.x = k*GRID+HALF; cam.z = m*GRID+HALF; draw(); return; }
+    }
+}
+// ---------- 初始化 ----------
+const dimSel = document.getElementById("dim");
+for (const [key, d] of Object.entries(DIMS)) {
+  const o = document.createElement("option"); o.value = key; o.textContent = d.label; dimSel.appendChild(o);
+}
+dimSel.onchange = () => { dim = dimSel.value; selType = -1; rebuildLegend(); draw(); };
+rebuildLegend(); draw();
+</script>
+</body>
+</html>

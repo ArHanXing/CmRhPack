@@ -18,7 +18,10 @@
 - 许多自定义材质来源于 [GT Leisure](https://www.mcmod.cn/modpack/769.html)！
 - 本包使用了来自 `That_DogNugget` 大佬的 Affinity 汉化包！
 - 本包默认使用 `wil` 佬的 AE2 GUI 材质包，部分新AE风格UI材质亦来源于 `Xingluo` 的 AE2 1.21 GUI Expansion 材质包！
-- 本包部分外来数据包经由 OpenLoader 全局加载，分别是 Village Nullifier（作者 `TBM Studios`）和 「更改试炼密室生成维度：永恒星光」（作者 `如果`）！
+- 本包部分外来数据包经由 OpenLoader 全局加载，目前包含「更改试炼密室生成维度：永恒星光」（作者 `如果`）！
+- 出于作者癖好，盖亚守护者的音频被替换了：
+盖亚1: Nuclear Fusion Redux, By SSJ3
+盖亚2: Explore the Core, By DJVI
 ## Bug
 - 由于Fabric和RS的indev特性，一切关于存储与传输内容都可能会比较不稳定。~~已经使用[某暴力防崩mod](https://www.mcmod.cn/class/10051.html)优化~~
 - **服务器玩家，对cpu0有信心的可以移除 `c2me-engine` 游玩，并建议减少不同mod之间在存储上的混用**

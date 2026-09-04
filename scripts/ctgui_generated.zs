@@ -817,3 +817,8 @@ craftingTable.addShaped("ctgui/new/oritech/crafting/basicjetpack", <item:oritech
 
 craftingTable.addShapeless("ctgui/new/paper_from_barks_earlystage", <item:minecraft:paper>, [<tag:item:earlystage:bark_items>, <tag:item:earlystage:bark_items>, <tag:item:earlystage:bark_items>]);
 
+craftingTable.addShaped("ctgui/new/crafting/furnace_wo_flint", <item:minecraft:furnace>, [
+    [<item:minecraft:cobblestone>, <item:minecraft:raw_iron>, <item:minecraft:cobblestone>],
+    [<item:minecraft:cobblestone>, IIngredientEmpty.getInstance(), <item:minecraft:cobblestone>],
+    [<item:minecraft:cobblestone>, <item:minecraft:coal>, <item:minecraft:cobblestone>]]);
+

@@ -187,6 +187,7 @@
 	quest.0FDECA34A66033E4.quest_subtitle: "浓缩的猫猫素"
 	quest.10D7B266D4EF8B0E.title: "TR单方块太阳能系列"
 	quest.10D86260E8BE9E61.quest_subtitle: "并不能完美替代"
+	quest.111F443B54D65577.quest_desc: ["可以解锁&aOritech的外骨骼套装&r了，不过喷气背包耗电惊人"]
 	quest.114D35F007DB908D.quest_desc: [
 		"这是一个莫名奇妙的科技向整合包...."
 		"....意在&bFabric 1.21.1&r中橄榄toNeko作者的服务器"
@@ -213,6 +214,7 @@
 	quest.11AB5F1C4C084820.title: "方铅矿-辉银矿脉"
 	quest.11CE6F7FB2FAC460.title: "铝土-铁矿脉"
 	quest.1201528AC28E6572.title: "T2 电路板"
+	quest.121DA993D15FB27F.title: "夜视药水"
 	quest.12B8B94B2B7FC702.title: "固定管道和线缆"
 	quest.130EE19AF4BBB088.quest_desc: ["这个位置是基岩池子的中心"]
 	quest.130EE19AF4BBB088.title: "进入末地"
@@ -1007,11 +1009,18 @@
 		"{image:minecraft:textures/16.png width:200 height:100 align:center}"
 		""
 		"地下偶尔会发现的巨型矿脉"
-		"储存你可以用到游戏结束的&e大量矿石&r"
+		"储存你可以用到游戏结束的&e大量矿石&r。"
 		""
+		"矿脉的分布是&a严格网状分布&r的，每一个矿脉 x/z±192m的位置都会产生下一个矿脉。如果你希望有迹可循，矿脉中心坐标满足 x,z ≡ 96 (mod 192)"
 		"本页面是一个总结页面。非常有b格的矿脉命名来自AI。"
 		""
 		"当然，使用 Advanced Xray 寻找矿脉是被&a允许&r的"
+		"{@pagebreak}"
+		"偷偷告诉你，每一个存档的矿脉位置和种类不会变化，你可以开一个单人世界然后在里面寻找你想要的矿脉，也可以访问 openloader/packs/GTOreVein/vein_map.html 来搜索"
+		""
+		"比如 x=1502, z=4509 是金伯利岩筒矿脉"
+		"{@pagebreak}"
+		"不过事实上离出生点最近的金伯利岩筒矿脉是 -675 -290"
 	]
 	quest.56A89A15C11A40E4.title: "找矿的艺术"
 	quest.56FCDA45D436EA27.quest_desc: ["这是唯一一个不需要做出对应级别的大电路的电路板"]
@@ -1360,6 +1369,7 @@
 		""
 		"你可以通过 &aTechReborn 的流体储罐&r 来实现自动将流体/单元互转，只需要将流体与空单元一起输入，空单元会自动装填液体。"
 	]
+	quest.7A17C4E91C429C0D.quest_desc: ["散落在地表"]
 	quest.7A320E74338034BD.quest_desc: [
 		"&e&lT2 &r发电机"
 		"高达 1A &6HV&r (&a512EU/t&r)"

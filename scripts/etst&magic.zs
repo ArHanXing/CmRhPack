@@ -106,6 +106,15 @@ primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", c
         {"type": "drop_item", "id": "botania:gaia_pylon", "count": 1}
     ]
 });
+
+//盖亚魂复制
+<recipetype:botania:runic_altar>.addJsonRecipe("magic.botania.runic_altar/gaia_spirit_replication", {type: "botania:runic_altar",
+    catalysts: [{item: "gaia_spirit"}],
+    ingredients: [{item: "affinity:inert_wisp_matter"}, {item: "affinity:wise_wisp_matter"}, {item: "affinity:vicious_wisp_matter"}],
+    reagent: {item: "affinity:crystalline_wisp_matter_composite"},
+    output: {id: "botania:gaia_spirit", count: 3},
+    mana: 24000
+});
 //时间瓶
 craftingTable.removeByName("tiab:time_in_a_bottle");
 craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, [
@@ -129,7 +138,6 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
     output: {id:"affinity:ranthracite_dust",count:1},
     mana: 200
 });
-//下放热爆花和咀叶花
 
 //BOT符文：七宗罪配方现在需要别的配料，导致它们只能通过杜鹃仪式消耗符文制作
 <recipetype:botania:runic_altar>.removeByName("botania:runic_altar/rune_of_envy");
