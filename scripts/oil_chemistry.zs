@@ -85,7 +85,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 32,
     ingredients: [
         {count: 1, components: {"techreborn:fluid": "jsonreg:desalted_crude"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 2, item: "techreborn:cell"}
+        {count: 2, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 
@@ -117,7 +117,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.steam_cracking", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:pyrolysis_gas_mix"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:pyrolysis_gas_mix"}},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 32,
     ingredients: [
@@ -139,7 +140,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 32,
     ingredients: [
         {count: 1, components: {"techreborn:fluid": "jsonreg:pyrolysis_gas_mix"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 3, item: "techreborn:cell"}
+        {count: 3, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 
@@ -154,7 +155,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 32,
     ingredients: [
         {count: 1, components: {"techreborn:fluid": "jsonreg:pyrolysis_gasoline"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 2, item: "techreborn:cell"}
+        {count: 2, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 
@@ -164,7 +165,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.ammonia_synthesis", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:ammonia"}}
+        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:ammonia"}},
+        {id: "techreborn:cell", count: 2}
     ],
     power: 30,
     ingredients: [
@@ -177,7 +179,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.ammonia_oxidation", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:nitrous_gas"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:nitrous_gas"}},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 30,
     ingredients: [
@@ -203,7 +206,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.ethanol", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:ethanol"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:ethanol"}},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 30,
     ingredients: [
@@ -216,7 +220,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.ethyl_nitrate", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:ethyl_nitrate"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:ethyl_nitrate"}},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 30,
     ingredients: [
@@ -229,7 +234,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.hydrodesulfurization", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:ultra_low_sulfur_diesel"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:ultra_low_sulfur_diesel"}},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 30,
     ingredients: [
@@ -242,7 +248,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.nitrodiesel", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "techreborn:nitro_diesel"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "techreborn:nitro_diesel"}},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 30,
     ingredients: [
@@ -268,7 +275,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.polyethylene", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "jsonreg:polyethylene_pellets", count: 2}
+        {id: "jsonreg:polyethylene_pellets", count: 2},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 30,
     ingredients: [
@@ -281,7 +289,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.gasoline", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:gasoline"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:gasoline"}},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 30,
     ingredients: [
@@ -294,7 +303,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.cumene", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:cumene"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:cumene"}},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 30,
     ingredients: [
@@ -321,7 +331,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.bisphenol_a", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "jsonreg:bisphenol_a", count: 1}
+        {id: "jsonreg:bisphenol_a", count: 1},
+        {id: "techreborn:cell", count: 2}
     ],
     power: 30,
     ingredients: [
@@ -341,7 +352,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 32,
     ingredients: [
         {count: 1, components: {"techreborn:fluid": "jsonreg:brine"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 2, item: "techreborn:cell"}
+        {count: 2, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_electrolyzer>.addJsonRecipe("oil.process.tr.chloralkali.saline_waste_water", {type: "techreborn:industrial_electrolyzer",
@@ -354,7 +365,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 32,
     ingredients: [
         {count: 1, components: {"techreborn:fluid": "jsonreg:saline_water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 2, item: "techreborn:cell"}
+        {count: 2, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 
@@ -362,7 +373,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.chloropropanol", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:chloropropanol"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:chloropropanol"}},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 30,
     ingredients: [
@@ -375,7 +387,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.epichlorohydrin", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:epichlorohydrin"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:epichlorohydrin"}},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 30,
     ingredients: [
@@ -388,7 +401,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("oil.process.tr.epoxy_resin", {type: "techreborn:chemical_reactor",
     time: 200,
     outputs: [
-        {id: "jsonreg:epoxy_resin", count: 1}
+        {id: "jsonreg:epoxy_resin", count: 1},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 30,
     ingredients: [
@@ -709,7 +723,8 @@ import crafttweaker.api.ingredient.IIngredient;
   type:"techreborn:chemical_reactor",
   time:100,
   outputs:[
-    {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:sulfurous_acid"}}
+    {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:sulfurous_acid"}},
+    {id: "techreborn:cell", count: 3}
   ],
   power:16,
   ingredients:[
@@ -722,7 +737,8 @@ import crafttweaker.api.ingredient.IIngredient;
   type:"techreborn:chemical_reactor",
   time:100,
   outputs:[
-    {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}}
+    {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}},
+    {id: "techreborn:cell", count: 1}
   ],
   power:16,
   ingredients:[
@@ -748,7 +764,8 @@ import crafttweaker.api.ingredient.IIngredient;
   type:"techreborn:chemical_reactor",
   time:200,
   outputs:[
-    {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:sulfur_trioxide"}}
+    {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:sulfur_trioxide"}},
+    {id: "techreborn:cell", count: 1}
   ],
   power:16,
   ingredients:[
@@ -761,7 +778,8 @@ import crafttweaker.api.ingredient.IIngredient;
   type:"techreborn:chemical_reactor",
   time:200,
   outputs:[
-    {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}}
+    {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}},
+    {id: "techreborn:cell", count: 1}
   ],
   power:16,
   ingredients:[
@@ -783,7 +801,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 32,
     ingredients: [
         {count: 3, components: {"techreborn:fluid": "jsonreg:low_oxygen_nitrogen"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 4, item: "techreborn:cell"}
+        {count: 4, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:distillation_tower>.addJsonRecipe("oil.process.tr.air_separation_nether", {type: "techreborn:distillation_tower",
@@ -796,7 +814,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 32,
     ingredients: [
         {count: 3, components: {"techreborn:fluid": "jsonreg:nether_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 3, item: "techreborn:cell"}
+        {count: 3, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:distillation_tower>.addJsonRecipe("oil.process.tr.air_separation_end", {type: "techreborn:distillation_tower",
@@ -809,7 +827,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 32,
     ingredients: [
         {count: 3, components: {"techreborn:fluid": "jsonreg:end_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 3, item: "techreborn:cell"}
+        {count: 3, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:distillation_tower>.addJsonRecipe("oil.process.tr.air_separation_starlight", {type: "techreborn:distillation_tower",
@@ -822,7 +840,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 32,
     ingredients: [
         {count: 3, components: {"techreborn:fluid": "jsonreg:starlight_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 4, item: "techreborn:cell"}
+        {count: 4, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 //制造
@@ -883,7 +901,8 @@ import crafttweaker.api.ingredient.IIngredient;
     time:80,
     power:16,
     outputs:[
-        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:nitric_acid"}}
+        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:nitric_acid"}},
+        {id: "techreborn:cell", count: 2}
     ],
     ingredients:[
         {count: 3, components: {"techreborn:fluid": "techreborn:nitrogen_dioxide"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
@@ -901,7 +920,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 32,
     ingredients: [
         {count: 2, components: {"techreborn:fluid": "techreborn:chlorite"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 2, item: "techreborn:cell"}
+        {count: 2, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 
@@ -981,7 +1000,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 32,
     ingredients: [
         {count: 1, item: "jsonreg:salt_dust"},
-        {count: 2, item: "techreborn:cell"}
+        {count: 2, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_electrolyzer>.addJsonRecipe("oil.other.tr.electrolyze_rocksalt", {type: "techreborn:industrial_electrolyzer",
@@ -993,7 +1012,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 32,
     ingredients: [
         {count: 1, item: "jsonreg:rock_salt_dust"},
-        {count: 2, item: "techreborn:cell"}
+        {count: 2, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 

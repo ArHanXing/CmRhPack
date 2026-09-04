@@ -28,6 +28,7 @@
 4. 删除/查询用 `IRecipeManager` 公共方法：`removeByName(names)`、`remove(output)`、`removeByInput(input)`、`removeByModid`、`removeByRegex`、`removeAll()`、`getRecipeByName`、`recipeMap()`。
 5. 作者不会 onEvent 逻辑，如果LLM会可以写一些仅服务端逻辑。
 6. 一切机器都要考证其**最大输入输出槽位数**，例如蒸馏塔是4输入6输出；对其编写超过6个输出的配方不会有ZS显式编译错误，但是配方执行就 NPE 。
+7. **空流体单元作为输入，一定要写 `components: {"techreborn:fluid": "minecraft:empty"}`**。也就是 `{count: 2, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}`。否则会导致数据匹配的 Bug
 原版配方有快捷全局对象（等价于对应 recipetype）：
 
 ```zenscript

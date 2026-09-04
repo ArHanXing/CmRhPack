@@ -1,20 +1,24 @@
-filename = 'Opticores-1.1.0-fabric-mc1.21.1.jar'
-name = 'Opticores'
-side = 'client'
+filename = 'Opticores-1.1.1+1.21.1.jar'
+name = 'OptiCore'
+side = ''
 x-prismlauncher-loaders = [ 'fabric' ]
 x-prismlauncher-mc-versions = [ '1.21.1', '1.21.2', '1.21.3', '1.21.4', '1.21.5', '1.21.6', '1.21.7', '1.21.8', '1.21.9', '1.21.10', '1.21.11' ]
-x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '1.1.0'
+x-prismlauncher-release-type = 'beta'
+x-prismlauncher-version-number = '1.1.1'
 
 [download]
-hash = 'd9f2afe875c8976e19cdead8b3981104e0246e42b0a911c1b9054703adee713851e70f6f3f4fcab2d424eb2180691b9e0d83555682fa54671c6b1f64f45a709f'
+hash = '42fe679437915894e6d384f795e79fcbbf17e7e92f5f5ad60d6db812ee19a13bbff44c929e6a7162789800aa277492a88344f43e31a87a754036af02cc234768'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/5zhn04Hy/versions/fhigdo72/Opticores-1.1.0-fabric-mc1.21.1.jar'
+url = 'https://cdn.modrinth.com/data/5zhn04Hy/versions/tpXamHyq/Opticores-1.1.1%2B1.21.1.jar'
 
 [update.modrinth]
 mod-id = '5zhn04Hy'
-version = 'fhigdo72'
+version = 'tpXamHyq'
+
+[[x-prismlauncher-dependencies]]
+addonId = '9s6osm5g'
+type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
 addonId = 'AANobbMI'

@@ -371,7 +371,8 @@ import crafttweaker.api.ingredient.IIngredient;
     time:20,
     power:8,
     outputs:[
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:hydrofluoric_acid"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:hydrofluoric_acid"}},
+        {id: "techreborn:cell", count: 1}
     ],
     ingredients:[
         {count: 1, components: {"techreborn:fluid": "jsonreg:fluorine"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
@@ -454,7 +455,8 @@ import crafttweaker.api.ingredient.IIngredient;
     type: "techreborn:chemical_reactor",
     time: 300,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:tetrafluoroethylene"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:tetrafluoroethylene"}},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 64,
     ingredients: [
@@ -469,7 +471,8 @@ import crafttweaker.api.ingredient.IIngredient;
     type: "techreborn:chemical_reactor",
     time: 400,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:perfluorocarbon_mix"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:perfluorocarbon_mix"}},
+        {id: "techreborn:cell", count: 1}
     ],
     power: 128,
     ingredients: [
@@ -490,7 +493,7 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 64,
     ingredients: [
         {count: 1, components: {"techreborn:fluid": "jsonreg:perfluorocarbon_mix"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 2, item: "techreborn:cell"}
+        {count: 2, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}
     ]
 });
 

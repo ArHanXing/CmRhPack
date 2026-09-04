@@ -797,15 +797,23 @@ craftingTable.addShaped("ctgui/new/crafting/large_ranch", <item:techreborn:large
     [<item:jsonreg:mv_robot_arm>, <item:techreborn:advanced_circuit>, <item:jsonreg:mv_robot_arm>],
     [<item:techreborn:aluminum_plate>, <item:techreborn:advanced_machine_casing>, <item:techreborn:aluminum_plate>]]);
 
-craftingTable.addShaped("ctgui/new/techreborn/crafting_table/unit/tank/quantum_tank_unit_upgrade", <item:techreborn:crude_tank_unit> * 2, [
+craftingTable.addShapeless("ctgui/new/crafting/rock_from_button", <item:earlystage:rock>, [<item:minecraft:stone_button>]);
+
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/unit/tank/quantum_tank_unit_upgrade", <item:techreborn:crude_tank_unit>, [
     [IIngredientEmpty.getInstance(), <item:techreborn:cell>, IIngredientEmpty.getInstance()],
     [<item:techreborn:rubber>, <item:techreborn:crude_storage_unit>, <item:techreborn:rubber>],
     [IIngredientEmpty.getInstance(), <item:techreborn:cell>, IIngredientEmpty.getInstance()]]);
 
-craftingTable.addShaped("ctgui/new/techreborn/crafting_table/unit/storage/crude_tank_unit", <item:techreborn:crude_storage_unit>, [
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/unit/storage/crude_tank_unit", <item:techreborn:crude_tank_unit>, [
     [<tag:item:minecraft:planks>, <item:techreborn:iron_plate>, <tag:item:minecraft:planks>],
     [<tag:item:minecraft:planks>, <item:techreborn:cell>, <tag:item:minecraft:planks>],
     [<tag:item:minecraft:planks>, <item:techreborn:iron_plate>, <tag:item:minecraft:planks>]]);
 
-craftingTable.addShapeless("ctgui/new/crafting/rock_from_button", <item:earlystage:rock>, [<item:minecraft:stone_button>]);
+<recipetype:minecraft:crafting>.removeByName("oritech:crafting/basicjetpack");
+craftingTable.addShaped("ctgui/new/oritech/crafting/basicjetpack", <item:oritech:jetpack>, [
+    [IIngredientEmpty.getInstance(), <item:jsonreg:lv_electric_piston>, IIngredientEmpty.getInstance()],
+    [<item:techreborn:steel_plate>, <item:techreborn:steel_plate>, <item:techreborn:steel_plate>],
+    [<item:techreborn:cell>, <item:techreborn:red_cell_battery>, <item:techreborn:cell>]]);
+
+craftingTable.addShapeless("ctgui/new/paper_from_barks_earlystage", <item:minecraft:paper>, [<tag:item:earlystage:bark_items>, <tag:item:earlystage:bark_items>, <tag:item:earlystage:bark_items>]);
 
