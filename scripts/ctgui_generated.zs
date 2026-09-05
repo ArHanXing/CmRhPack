@@ -99,11 +99,6 @@ craftingTable.addShaped("ctgui/new/crafting/naquadah_dust", <item:jsonreg:naquad
     [<item:jsonreg:tiny_naquadah_dust>, <item:jsonreg:tiny_naquadah_dust>, <item:jsonreg:tiny_naquadah_dust>],
     [<item:jsonreg:tiny_naquadah_dust>, <item:jsonreg:tiny_naquadah_dust>, <item:jsonreg:tiny_naquadah_dust>]]);
 
-craftingTable.addShaped("ctgui/new/crafting/rotor", <item:jsonreg:rotor>, [
-    [IIngredientEmpty.getInstance(), <item:techreborn:refined_iron_plate>, IIngredientEmpty.getInstance()],
-    [<item:techreborn:refined_iron_plate>, <item:techreborn:magnalium_plate>, <item:techreborn:refined_iron_plate>],
-    [IIngredientEmpty.getInstance(), <item:techreborn:refined_iron_plate>, IIngredientEmpty.getInstance()]]);
-
 <recipetype:minecraft:crafting>.removeByName("oritech:crafting/biogen");
 craftingTable.addShaped("ctgui/new/oritech/crafting/biogen", <item:oritech:bio_generator_block>, [
     [<item:techreborn:steel_plate>, <item:techreborn:invar_plate>, <item:techreborn:steel_plate>],
@@ -817,8 +812,37 @@ craftingTable.addShaped("ctgui/new/oritech/crafting/basicjetpack", <item:oritech
 
 craftingTable.addShapeless("ctgui/new/paper_from_barks_earlystage", <item:minecraft:paper>, [<tag:item:earlystage:bark_items>, <tag:item:earlystage:bark_items>, <tag:item:earlystage:bark_items>]);
 
-craftingTable.addShaped("ctgui/new/crafting/furnace_wo_flint", <item:minecraft:furnace>, [
-    [<item:minecraft:cobblestone>, <item:minecraft:raw_iron>, <item:minecraft:cobblestone>],
-    [<item:minecraft:cobblestone>, IIngredientEmpty.getInstance(), <item:minecraft:cobblestone>],
+craftingTable.addShaped("ctgui/new/crafting/rotor", <item:jsonreg:rotor>, [
+    [IIngredientEmpty.getInstance(), <item:techreborn:refined_iron_plate>, IIngredientEmpty.getInstance()],
+    [<item:techreborn:refined_iron_plate>, <item:jsonreg:refined_iron_rod>, <item:techreborn:refined_iron_plate>],
+    [IIngredientEmpty.getInstance(), <item:techreborn:refined_iron_plate>, IIngredientEmpty.getInstance()]]);
+
+craftingTable.addShaped("ctgui/new/crafting/furnace_wo_flint", <item:minecraft:furnace> * 2, [
+    [<item:minecraft:cobblestone>, <item:techreborn:iron_plate>, <item:minecraft:cobblestone>],
+    [<item:minecraft:cobblestone>, <item:minecraft:cobblestone>, <item:minecraft:cobblestone>],
     [<item:minecraft:cobblestone>, <item:minecraft:coal>, <item:minecraft:cobblestone>]]);
+
+<recipetype:minecraft:crafting>.removeByName("refinedstorage:processor_binding");
+craftingTable.addShaped("ctgui/new/refinedstorage/processor_binding", <item:refinedstorage:processor_binding> * 8, [
+    [<item:techreborn:copper_cable>, <item:oritech:fluxite>, <item:techreborn:copper_cable>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/neutron_collector_mv", <item:avaritia:neutron_collector> * 4, [
+    [<item:jsonreg:holy_wooden_bucket>, IIngredientEmpty.getInstance(), <item:jsonreg:holy_wooden_bucket>],
+    [<item:jsonreg:mv_electric_piston>, <item:techreborn:advanced_machine_casing>, <item:jsonreg:mv_electric_piston>],
+    [IIngredientEmpty.getInstance(), <item:techreborn:aluminum_plate>, IIngredientEmpty.getInstance()]]);
+
+<recipetype:minecraft:crafting>.removeByName("botania:elven_gateway_core");
+
+<recipetype:minecraft:crafting>.removeByName("botania:gaia_ingot");
+
+<recipetype:minecraft:crafting>.removeByName("botania:life_aggregator");
+craftingTable.addShaped("ctgui/new/botania/life_aggregator", <item:botania:life_aggregator>, [
+    [IIngredientEmpty.getInstance(), <tag:item:c:ingots/elementium>, <item:botania:spark>],
+    [<item:botania:gaia_ingot>, <tag:item:c:gems/dragonstone>, <item:botania:gaia_ingot>],
+    [<item:botania:spark>, <tag:item:c:ingots/elementium>, IIngredientEmpty.getInstance()]]);
+
+craftingTable.addShaped("ctgui/new/crafting/neko_aggregator", <item:toneko:neko_aggregator>, [
+    [IIngredientEmpty.getInstance(), <item:jsonreg:mv_electric_piston>, IIngredientEmpty.getInstance()],
+    [<item:toneko:neko_ingot>, <item:botania:life_aggregator>, <item:toneko:neko_ingot>],
+    [<item:techreborn:aluminum_plate>, <item:advanced_reborn:singularity_compressor>, <item:techreborn:aluminum_plate>]]);
 

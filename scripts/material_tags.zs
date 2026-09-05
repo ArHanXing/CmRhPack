@@ -25,6 +25,22 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:item:c:dusts>.add(<item:jsonreg:naquadria_dust>);
 <tag:item:c:dusts>.add(<item:jsonreg:sponge_naquadria>);
 
+<tag:item:c:ingots>.add(<item:jsonreg:naquadah_ingot>);
+<tag:item:c:ingots/naquadah>.add(<item:jsonreg:naquadah_ingot>);
+<tag:item:c:ingots>.add(<item:jsonreg:hot_enriched_naquadah_ingot>);
+<tag:item:c:ingots/hot>.add(<item:jsonreg:hot_enriched_naquadah_ingot>);
+<tag:item:c:ingots/hot>.add(<item:techreborn:hot_tungstensteel_ingot>);
+<tag:item:c:ingots/hot/enriched_naquadah>.add(<item:jsonreg:hot_enriched_naquadah_ingot>);
+<tag:item:c:ingots>.add(<item:jsonreg:enriched_naquadah_ingot>);
+<tag:item:c:ingots/enriched_naquadah>.add(<item:jsonreg:enriched_naquadah_ingot>);
+<tag:item:c:ingots>.add(<item:jsonreg:naquadria_ingot>);
+<tag:item:c:ingots/naquadria>.add(<item:jsonreg:naquadria_ingot>);
+<tag:item:c:ingots>.add(<item:jsonreg:hot_naquadria_ingot>);
+<tag:item:c:ingots/hot>.add(<item:jsonreg:hot_naquadria_ingot>);
+<tag:item:c:ingots/hot/naquadria>.add(<item:jsonreg:hot_naquadria_ingot>);
+<tag:item:c:ingots>.add(<item:toneko:neko_ingot>);
+<tag:item:c:ingots/neko>.add(<item:toneko:neko_ingot>);
+
 <tag:block:c:ores>.add(<block:jsonreg:salt_ore>);
 <tag:block:c:ores>.add(<block:jsonreg:rock_salt_ore>);
 <tag:block:c:ores>.add(<block:jsonreg:end_naquadah_ore>);

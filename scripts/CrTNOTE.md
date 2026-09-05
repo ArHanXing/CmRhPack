@@ -181,7 +181,7 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 
 ### 2.2 自动生成的资源
 
-Json-Registered（`jsonreg` 0.6，基于 YARRP）会自动生成：
+Json-Registered（`jsonreg` 0.8，基于 YARRP）会自动生成：
 
 - 物品模型：`minecraft:item/generated` → `jsonreg:item/<id>` 材质
 - 方块模型 / 方块 blockstate / 方块物品模型（`cube_all` → `jsonreg:block/<id>` 材质）

@@ -150,12 +150,6 @@ craftingTable.remove(<item:justarod:industrial_electric_rod>);
         I: {item: "techreborn:lapotron_crystal"}, N: {item: "justarod:golden_leaves"}, X: {item: "justarod:bremelanotide"},
         U:{item:"eternal_starlight:tenacious_vine"},O:{item:"affinity:affinitea"}}});
 
-//猫猫锭
-<recipetype:techreborn:fusion_reactor>.addJsonRecipe("t3.techreborn.fusion_reactor/neko_ingot", 
-    {type: "techreborn:fusion_reactor", time: 512, 
-    outputs: [{id: "toneko:neko_ingot", count: 1}], 
-    power: -2048, minSize: 1, 
-    ingredients: [{item:"toneko:neko_potion"}, {item:"eternal_starlight:deepsilver_ingot"}], startEnergy: 60000000});
 
 //龙素循环
 //龙息

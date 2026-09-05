@@ -355,7 +355,7 @@ import crafttweaker.api.item.IItemStack;
 <item:jsonreg:polyethylene_ingot>.addTooltip("§e§l(C₂H₄)n§r");
 <item:jsonreg:polyethylene_plate>.addTooltip("§e§l(C₂H₄)n§r");
 //杂物
-<item:justarod:bremelanotide>.addTooltip("§e§lC₅₀H₆₈N₁₄O₁₀§c❤§r");
+<item:justarod:bremelanotide>.addTooltip("§e§lC₅₀H₆₈N₁₄O₁₀§r");
 
 <item:oritech:processing_unit>.addTooltip("Tier-§71§r");
 <item:techreborn:electronic_circuit>.addTooltip("Tier-§71§r-SoC");
@@ -393,7 +393,5 @@ import crafttweaker.api.item.IItemStack;
 
 <item:oritech:black_hole_block>.addTooltip("§b单个§r粒子以§b>15000§r的速度撞击§b传送门方块§r（末地/地狱/折跃）时产生");
 <item:oritech:black_hole_block>.addTooltip("吸收方块产生§b速子§r，是后期的强大、极不可控发电");
-
-<item:affinity:resonance_crystal>.addTooltip("使用§d神灵之锋§r击杀§b坚守者§r掉落");
 
 <item:jsonreg:holy_wooden_bucket>.addTooltip("§b奇迹和魔法§r都是真实§c存在§r的！");

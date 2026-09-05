@@ -27,6 +27,18 @@
 			x: 15.0d
 			y: 3.0d
 		}
+		{
+			id: "0C29FB9B1F03E529"
+			linked_quest: "660BFCC3F8EB4523"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			id: "46270BAB233BD03E"
+			linked_quest: "5F1F6ED0A21FB05A"
+			x: 17.5d
+			y: 0.5d
+		}
 	]
 	quests: [
 		{
@@ -47,7 +59,10 @@
 			y: 0.5d
 		}
 		{
-			dependencies: ["2518810854E3668B"]
+			dependencies: [
+				"2518810854E3668B"
+				"660BFCC3F8EB4523"
+			]
 			id: "5B46E8FFA0CD1FCC"
 			tasks: [{
 				id: "75F071151D26FA8D"
@@ -61,6 +76,15 @@
 			dependencies: ["5B46E8FFA0CD1FCC"]
 			icon_scale: 1.5d
 			id: "2F02AB0C7E94FF4B"
+			rewards: [{
+				count: 16
+				id: "1B8051616A287AF7"
+				item: {
+					count: 1
+					id: "botania:blacker_lotus"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -96,7 +120,9 @@
 		}
 		{
 			dependencies: ["2F02AB0C7E94FF4B"]
+			icon_scale: 2.0d
 			id: "1EC82D8384297FFF"
+			shape: "none"
 			tasks: [{
 				id: "7D6740E5D2E0D5E3"
 				item: { count: 1, id: "botania:natura_pylon" }
@@ -164,6 +190,97 @@
 			}]
 			x: 12.5d
 			y: 5.5d
+		}
+		{
+			dependencies: ["58DBCB4CFF40BAA9"]
+			id: "53CC9BE921A55D4F"
+			tasks: [{
+				id: "57801047880D12E9"
+				item: { components: { "techreborn:fluid": "jsonreg:end_air" }, count: 1, id: "techreborn:cell" }
+				type: "item"
+			}]
+			x: 12.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2F02AB0C7E94FF4B"]
+			id: "7FECE2BF1B5BBEAA"
+			tasks: [{
+				id: "3D149CB901ED1D80"
+				item: { count: 1, id: "jsonreg:terrasteel_casing" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"7FECE2BF1B5BBEAA"
+				"3E52BE64FFDF510A"
+				"739CE27B6CC460C5"
+			]
+			icon_scale: 2.0d
+			id: "560DB46580F76E0E"
+			rewards: [{
+				count: 16
+				id: "4FEEDA2D0D9F699F"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
+			shape: "none"
+			tasks: [{
+				id: "4042A33120AFB260"
+				item: { count: 1, id: "eternal_starlight:alloy_furnace" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"0A79DDBB3E3642EC"
+				"2C453E81D0B53296"
+			]
+			icon_scale: 2.0d
+			id: "3E52BE64FFDF510A"
+			rewards: [{
+				count: 16
+				id: "041B60C35D1B1DE3"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
+			shape: "none"
+			size: 1.0d
+			tasks: [{
+				id: "5D9CD2B63035CEA0"
+				item: { components: { "techreborn:fluid": "jsonreg:soul_injection_catalyst" }, count: 1, id: "techreborn:cell" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"560DB46580F76E0E"
+				"1556CDBF6CCEDA3A"
+			]
+			icon_scale: 1.5d
+			id: "6342348252027BEF"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "1AFFCD728E221721"
+				item: { count: 1, id: "botania:gaia_ingot" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 8.0d
 		}
 	]
 }

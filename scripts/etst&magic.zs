@@ -12,6 +12,38 @@ import crafttweaker.api.recipe.type.Recipe;
   ]
 });
 
+//复合体
+<recipetype:affinity:aspen_infusion>.removeByName("affinity:aspen_infusion/crystalline_wisp_matter_composite");
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/crystalline_wisp_matter_composite", {type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: {item: "affinity:scintillant_anthracite_blend"},
+    output: {id: "affinity:crystalline_wisp_matter_composite", count: 1},
+    duration: 400,
+    inputs: [
+        {item: "affinity:inert_wisp_matter"},
+        {item: "botania:mana_powder"},
+        {item: "affinity:vicious_wisp_matter"},
+        {item: "botania:mana_powder"},
+        {item: "affinity:wise_wisp_matter"},
+        {item: "botania:mana_powder"}
+    ],
+    flux_cost_per_tick: 40
+});
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/crystalline_wisp_matter_composite/pixie_dust", {type: "affinity:aspen_infusion",
+    transfer_components: false,
+    primary_input: {item: "affinity:scintillant_anthracite_blend"},
+    output: {id: "affinity:crystalline_wisp_matter_composite", count: 1},
+    duration: 200,
+    inputs: [
+        {item: "affinity:inert_wisp_matter"},
+        {item: "botania:pixie_dust"},
+        {item: "affinity:vicious_wisp_matter"},
+        {item: "botania:pixie_dust"},
+        {item: "affinity:wise_wisp_matter"},
+        {item: "botania:pixie_dust"}
+    ],
+    flux_cost_per_tick: 40
+});
 //融合主机新配方
 <recipetype:affinity:aspen_infusion>.removeByName("affinity:aspen_infusion/spirit_integration_apparatus");
 <recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/spirit_integration_apparatus", {
@@ -47,13 +79,14 @@ import crafttweaker.api.recipe.type.Recipe;
     outputs: [{id: "affinity:scintillant_anthracite_blend", count: 2}], power: 40, 
     ingredients: [{item: "minecraft:glowstone_dust"}, {item: "affinity:anthracite_powder", count:2}]});
 
+/*
 //更贵的Affinitea
 <recipetype:affinity:aspen_infusion>.removeByName("affinity:aspen_infusion/affinitea");
 <recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/affinitea", {type: "affinity:aspen_infusion", transfer_components: false, 
 primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", count: 1}, duration: 200, 
     inputs: [{item: "affinity:inert_wisp_matter"}, {item: "minecraft:sugar"}, {item: "minecraft:melon_slice"}, {item: "minecraft:glow_berries"}, 
     {item: "minecraft:melon_slice"}, {item: "minecraft:sugar"}], flux_cost_per_tick: 20});
-
+*/
 //泰拉凝聚板
 <recipetype:affinity:spirit_assimilation>.addJsonRecipe("affinity.spirit_assimilation/terrestrial_agglomeration", {
   type: "affinity:spirit_assimilation",
@@ -70,8 +103,8 @@ primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", c
   core_inputs: [
     {item: "minecraft:lapis_block"},
     {item: "affinity:crystalline_wisp_matter_composite"},
-    {item: "minecraft:lapis_block"},
-    {item: "botania:mana_quartz_block"}
+    {item: "botania:mana_quartz_block"},
+    {item: "minecraft:lapis_block"}
   ],
   flux_cost_per_tick: 20,
   entity: {id: "minecraft:player"}
@@ -82,7 +115,7 @@ primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", c
     primary_input: {item: "botania:mana_pylon"},
     output: {id: "botania:natura_pylon", count: 1}, duration: 100, 
     inputs: [
-        {item: "affinity:wise_wisp_matter"},
+        {item: "affinity:crystalline_wisp_matter_composite"},
         {item: "botania:terrasteel_nugget"},
         {item: "botania:mana_pearl"},
         {item: "botania:terrasteel_nugget"},
@@ -109,7 +142,7 @@ primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", c
 
 //盖亚魂复制
 <recipetype:botania:runic_altar>.addJsonRecipe("magic.botania.runic_altar/gaia_spirit_replication", {type: "botania:runic_altar",
-    catalysts: [{item: "gaia_spirit"}],
+    catalysts: [{item: "botania:gaia_spirit"}],
     ingredients: [{item: "affinity:inert_wisp_matter"}, {item: "affinity:wise_wisp_matter"}, {item: "affinity:vicious_wisp_matter"}],
     reagent: {item: "affinity:crystalline_wisp_matter_composite"},
     output: {id: "botania:gaia_spirit", count: 3},
@@ -122,12 +155,113 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
     [<item:techreborn:steel_plate>, <item:minecraft:clock>, <item:oritech:plastic_sheet>], 
     [<tag:item:c:gems/lapis>, <item:minecraft:glass_bottle>, <tag:item:c:gems/lapis>]]);
 
-
 //试管速冷钨钢
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("etst.techreborn.tungstensteel_freeze", {type: "techreborn:chemical_reactor", time: 400, 
     outputs: [{id: "techreborn:tungstensteel_ingot", count: 2}], power: 30, 
     ingredients: [{item: "eternal_starlight:frozen_tube"}, {item: "techreborn:hot_tungstensteel_ingot", count:2}]});
 
+//末地气瓶
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("magic.tr.chemical.end_air",{
+  type:"techreborn:chemical_reactor",
+  time:200,
+  outputs:[
+    {id: "techreborn:cell", count: 1},
+    {id: "techreborn:cell", count: 1}
+  ],
+  power:16,
+  ingredients:[
+    {count: 1, components: {"techreborn:fluid": "jsonreg:end_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+    {count: 1, item:"minecraft:glass_bottle"}
+  ]
+});
+//精灵门核心
+<recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/elven_gateway_core", {type: "affinity:aspen_infusion", transfer_components: false, 
+    primary_input: {item: "botania:mana_pearl"},
+    output: {id: "botania:elven_gateway_core", count: 1}, duration: 100, 
+    inputs: [
+        {tag: "botania:livingwood_logs"},
+        {item: "botania:terrasteel_nugget"},
+        {tag: "botania:livingwood_logs"},
+        {item: "botania:terrasteel_nugget"},
+        {tag: "botania:livingwood_logs"},
+        {item: "botania:terrasteel_nugget"},
+    ], flux_cost_per_tick: 40}
+);
+
+//泰拉钢外壳
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("magic.tr.assembly/terrasteel_casing", {type: "techreborn:precise_assembler", 
+    outputs: [
+        {id: "jsonreg:terrasteel_casing", count: 1}
+    ],
+    time: 300, power: 256,
+    ingredients: [
+        {count: 2, item:"botania:terrasteel_ingot"},
+        {count: 1, item:"jsonreg:steel_frame"},
+        {count: 2, item:"affinity:crystalline_wisp_matter_composite"}
+    ]
+});
+
+//灵魂注入催化剂
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("etst.tr.lcr/soul_injection", {type: "techreborn:large_chemical_reactor", 
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}},
+        {id: "techreborn:cell", count: 7}
+    ],
+    time: 128, power: 256,
+    ingredients: [
+        {count: 8, components: {"techreborn:fluid": "eternal_starlight:ether"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 4, item:"affinity:crystalline_wisp_matter_composite"},
+        {count: 4, item:"botania:pixie_dust"}
+    ]
+});
+
+//合金炉
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("etst.tr.assembly/etst_alloy_furnace", {type: "techreborn:precise_assembler", 
+    outputs: [
+        {id: "eternal_starlight:alloy_furnace", count: 1},
+        {id: "techreborn:cell", count: 2}
+    ],
+    time: 128, power: 256,
+    ingredients: [
+        {item: "jsonreg:terrasteel_casing", count: 16},
+        {item: "jsonreg:steel_frame", count: 8},
+        {item: "eternal_starlight:golem_steel_ingot", count: 4},
+        {item: "jsonreg:mv_voltage_coil", count: 4},
+        {item: "eternal_starlight:frozen_tube", count: 4},
+        {item: "jsonreg:mv_robot_arm", count: 2},
+        {count: 2, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+//盖亚魂锭
+<recipetype:eternal_starlight:alloy>.addJsonRecipe("magic.etst.alloy/gaia_ingot", {type: "eternal_starlight:alloy",
+    burn_time: 400,
+    results: [
+        {amount: 1, item: {id: "botania:gaia_ingot"}},
+        {amount: {min_inclusive: 0, max_inclusive: 6, type: "minecraft:uniform"}, item: {id: "eternal_starlight:aethersent_nugget"}},
+        {amount: {max_inclusive: 3, min_inclusive: 0, type: "minecraft:uniform"}, item: {id: "botania:gaia_spirit"}}
+    ],ingredients: [
+        {item: "botania:gaia_spirit"},
+        {item: "botania:gaia_spirit"},
+        {item: "botania:gaia_spirit"},
+        {item: "botania:gaia_spirit"},
+        {item: "botania:terrasteel_ingot"},
+        {item: "affinity:crystalline_wisp_matter_composite"}
+    ]});
+
+//猫猫锭
+<recipetype:eternal_starlight:alloy>.addJsonRecipe("magic.etst.alloy/neko_ingot", 
+    burn_time: 400,
+    results: [
+        {amount: 1, item: {id: "toneko:neko_ingot"}},
+        {amount: {min_inclusive: 0, max_inclusive: 3, type: "minecraft:uniform"}, item: {id: "eternal_starlight:dimslag"}},
+        {amount: {max_inclusive: 3, min_inclusive: 0, type: "minecraft:uniform"}, item: {id: "toneko:neko_ingot"}}
+    ],ingredients: [
+        {item: "toneko:neko_potion"},
+        {item: "affinity:crystalline_wisp_matter_composite"},
+        {item: "eternal_starlight:deepsilver_ingot"},
+        {item: "eternal_starlight:deepsilver_ingot"},
+        {item: "eternal_starlight:deepsilver_ingot"}
+    ]});
 //Affinity的一些魔改
 // ====      mod的杜鹃灌注必须用数据包        ====
 // ==== 可在 OpenLoader/LanguageAdd包 里查看 ====

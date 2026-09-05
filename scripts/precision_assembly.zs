@@ -4,6 +4,17 @@ import crafttweaker.api.recipe.type.Recipe;
 <item:techreborn:precise_assembler>.addTooltip("可用配方类型：§e精密组装机§r，§eOritech装配机§r");
 <item:techreborn:precise_assembler>.addTooltip("执行§eOritech装配机§r配方时，具有0.8x耗时");
 
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("ps_framework.steel", {type: "techreborn:precise_assembler", 
+    outputs: [
+        {id: "jsonreg:steel_frame", count: 1},
+    ],
+    time: 128, power: 64,
+    ingredients: [
+        {item: "jsonreg:steel_rod", count: 4},
+        {item: "techreborn:steel_ingot", count: 1}
+    ]
+});
+
 /*
 <recipetype:techreborn:precise_assembler>.addJsonRecipe("test", {type: "techreborn:precise_assembler", 
     outputs: [

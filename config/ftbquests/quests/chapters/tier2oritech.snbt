@@ -1068,6 +1068,15 @@
 		{
 			dependencies: ["47614B42FB9C45AB"]
 			id: "487A744D02414E1E"
+			rewards: [{
+				count: 16
+				id: "15571A859180A791"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "798F6724FF5D61CB"
 				item: { count: 1, id: "techreborn:industrial_centrifuge" }
@@ -1079,6 +1088,15 @@
 		{
 			dependencies: ["47614B42FB9C45AB"]
 			id: "6918E9CFDCD55DF6"
+			rewards: [{
+				count: 16
+				id: "25EB4BEF17F3607D"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "1EE5B3AF6BAB20D2"
 				item: { count: 1, id: "techreborn:industrial_electrolyzer" }
@@ -1090,6 +1108,15 @@
 		{
 			dependencies: ["47614B42FB9C45AB"]
 			id: "77003865DB5C6BEB"
+			rewards: [{
+				count: 16
+				id: "2D960DFC2A17D33F"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "784ECB2D7CFA7356"
 				item: { count: 1, id: "techreborn:distillation_tower" }
@@ -1097,17 +1124,6 @@
 			}]
 			x: 7.0d
 			y: 9.0d
-		}
-		{
-			dependencies: ["0B79CCECAB548F7D"]
-			id: "54DBA4BC65C11671"
-			tasks: [{
-				id: "13449AEA9C34CC45"
-				item: { count: 1, id: "techreborn:chemical_reactor" }
-				type: "item"
-			}]
-			x: 6.0d
-			y: 16.5d
 		}
 		{
 			id: "26B4FFB213E39E1D"
@@ -1298,6 +1314,15 @@
 					}
 					type: "item"
 				}
+				{
+					count: 2
+					id: "64A38F631752A913"
+					item: {
+						count: 1
+						id: "techreborn:overclocker_upgrade"
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -1459,6 +1484,28 @@
 			}]
 			x: 1.0d
 			y: 4.0d
+		}
+		{
+			dependencies: ["0B79CCECAB548F7D"]
+			icon_scale: 2.0d
+			id: "58DBCB4CFF40BAA9"
+			rewards: [{
+				count: 16
+				id: "026B5B0F42E72A42"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
+			shape: "none"
+			tasks: [{
+				id: "373E450880936EBB"
+				item: { count: 1, id: "techreborn:large_chemical_reactor" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 16.5d
 		}
 	]
 }

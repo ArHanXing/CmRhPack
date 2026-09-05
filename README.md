@@ -3,7 +3,7 @@
 
 核心：Minecraft 1.21.1, **Fabric 0.19.3**。
 ## 开发或游玩
-在PCL中下载一个命名为`CmRhPack`的1.21.1+Fabric 0.19.3版本，然后直接将本仓库(或者release的source-code.zip)复制过去。
+在PCL中下载一个命名为`CmRhPack`的1.21.1+Fabric 0.19.3版本，然后直接将本仓库复制过去。
 
 同时你也可以导入 release 中的稳定版本 mrpack 包
 ## 阶段与内容
@@ -22,6 +22,7 @@
 - 出于作者癖好，盖亚守护者的音频被替换了：
 盖亚1: Nuclear Fusion Redux, By SSJ3
 盖亚2: Explore the Core, By DJVI
+- 部分材质出自 [光谱世界](https://github.com/DaFuqs/Spectrum)
 ## Bug
 - 由于Fabric和RS的indev特性，一切关于存储与传输内容都可能会比较不稳定。~~已经使用[某暴力防崩mod](https://www.mcmod.cn/class/10051.html)优化~~
 - **服务器玩家，对cpu0有信心的可以移除 `c2me-engine` 游玩，并建议减少不同mod之间在存储上的混用**

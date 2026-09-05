@@ -151,7 +151,6 @@ craftingTable.removeByName("oritech:crafting/atomicforge");
     fluidInput: {fluid: "oritech:still_silicon_wash"}, ingredients: [{item:"oritech:silicon"}]
 });
 
-
 //堕落智能
 <recipetype:oritech:atomic_forge>.addJsonRecipe("t2.oritech.atomicforge/unholy_intelligence", {type: "oritech:atomic_forge", 
     fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:unholy_intelligence", count: 1}], 
