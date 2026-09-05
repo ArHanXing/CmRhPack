@@ -291,6 +291,11 @@
       "max_count": 1024
     },
     {
+      "id": "unrealium_plate",
+      "name": "虚素板",
+      "max_count": 1024
+    },
+    {
       "id": "lv_electric_piston",
       "name": "§7低压§r电力活塞",
       "max_count": 1024
@@ -493,6 +498,11 @@
     {
       "id": "electrum_rod",
       "name": "琥珀金杆",
+      "max_count": 1024
+    },
+    {
+      "id": "unrealium_rod",
+      "name": "虚素杆",
       "max_count": 1024
     },
     {
@@ -740,8 +750,199 @@
       "has_item": true
     },
     {
+      "id": "large_scale_assembling_casing",
+      "name": "组装机外壳",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "stress_proof_casing",
+      "name": "耐高压机械外壳",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "high_power_casing",
+      "name": "高能机械外壳",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "crushing_wheels",
+      "name": "粉碎轮",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "machine_casing_turbine_titanium",
+      "name": "增强钛机械外壳",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "space_elevator_mechanical_casing",
+      "name": "太空电梯机械外壳",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "structure_concrete",
+      "name": "结构支撑混凝土",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "sps_casing",
+      "name": "耐超临界聚合外壳",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "molecular_casing",
+      "name": "分子机械外壳",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "electrolytic_cell",
+      "name": "电解单元外壳",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "vibration_safe_casing",
+      "name": "抗震动机械外壳",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "reaction_safe_mixing_casing",
+      "name": "化学惰性机械外壳",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "machine_casing_robust_tungstensteel",
+      "name": "强化钨钢机械外壳",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "machine_casing_pipe_tungstensteel",
+      "name": "钨钢机械管道",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "machine_casing_pipe_steel",
+      "name": "钢机械管道",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "machine_casing_gearbox_steel",
+      "name": "钢齿轮箱",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "reinforced_glass",
+      "name": "增强玻璃",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true,
+      "render_layer": "translucent"
+    },
+    {
       "id": "steel_frame",
       "name": "钢框架",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true,
+      "render_layer": "translucent"
+    },
+    {
+      "id": "titanium_frame",
+      "name": "钛框架",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true,
+      "render_layer": "translucent"
+    },
+    {
+      "id": "aluminum_frame",
+      "name": "铝框架",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true,
+      "render_layer": "translucent"
+    },
+    {
+      "id": "bronze_frame",
+      "name": "青铜框架",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true,
+      "render_layer": "translucent"
+    },
+    {
+      "id": "naquadah_frame",
+      "name": "硅岩框架",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true,
+      "render_layer": "translucent"
+    },
+    {
+      "id": "duratium_frame",
+      "name": "昶铂框架",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true,
+      "render_layer": "translucent"
+    },
+    {
+      "id": "unrealium_frame",
+      "name": "虚素框架",
       "hardness": 1.0,
       "resistance": 3.0,
       "requires_tool": false,
@@ -1130,6 +1331,6 @@
     {"id": "titanium_tetrachloride", "name": "四氯化钛", "has_bucket_item": false, "has_block": true},
     {"id": "fermented_mash", "name": "发酵液", "has_bucket_item": false, "has_block": true},
     {"id": "soul_injection_catalyst", "name": "灵魂注入催化剂", "has_bucket_item": false, "has_block": true},
-    {"id": "shiny_soul_injection_catalyst", "name": "光辉灵魂注入催化剂", "has_bucket_item": false, "has_block": true}
+    {"id": "shine_soul_injection_catalyst", "name": "光辉灵魂注入催化剂", "has_bucket_item": false, "has_block": true}
   ]
 }

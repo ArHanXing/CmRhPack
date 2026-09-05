@@ -4,17 +4,20 @@ import crafttweaker.api.recipe.type.Recipe;
 <item:techreborn:precise_assembler>.addTooltip("可用配方类型：§e精密组装机§r，§eOritech装配机§r");
 <item:techreborn:precise_assembler>.addTooltip("执行§eOritech装配机§r配方时，具有0.8x耗时");
 
-<recipetype:techreborn:precise_assembler>.addJsonRecipe("ps_framework.steel", {type: "techreborn:precise_assembler", 
-    outputs: [
-        {id: "jsonreg:steel_frame", count: 1},
-    ],
-    time: 128, power: 64,
-    ingredients: [
-        {item: "jsonreg:steel_rod", count: 4},
-        {item: "techreborn:steel_ingot", count: 1}
-    ]
-});
-
+function _frameworkRecipe(_recipe as string, _output as string, _inputA as string, _inputB as string, _time as int) as void{
+    <recipetype:techreborn:precise_assembler>.addJsonRecipe(_recipe, {type: "techreborn:precise_assembler", 
+        time: _time,
+        outputs: [{id: _output, count: 1}],
+        power: 64,
+        ingredients: [{item: _inputA, count:4},{item: _inputB, count:1}]
+    });
+}
+_frameworkRecipe("ps_framework.titanium", "jsonreg:titanium_frame", "jsonreg:titanium_rod", "techreborn:titanium_ingot", 128);
+_frameworkRecipe("ps_framework.aluminum", "jsonreg:aluminum_frame", "jsonreg:aluminum_rod", "techreborn:aluminum_ingot", 128);
+_frameworkRecipe("ps_framework.bronze", "jsonreg:bronze_frame", "jsonreg:bronze_rod", "techreborn:bronze_ingot", 128);
+_frameworkRecipe("ps_framework.naquadah", "jsonreg:naquadah_frame", "jsonreg:naquadah_rod", "jsonreg:naquadah_ingot", 256);
+_frameworkRecipe("ps_framework.duratium", "jsonreg:duratium_frame", "jsonreg:duratium_rod", "oritech:duratium_ingot", 256);
+_frameworkRecipe("ps_framework.unrealium", "jsonreg:unrealium_frame", "jsonreg:unrealium_rod", "eternal_starlight:unrealium_ingot", 256);
 /*
 <recipetype:techreborn:precise_assembler>.addJsonRecipe("test", {type: "techreborn:precise_assembler", 
     outputs: [

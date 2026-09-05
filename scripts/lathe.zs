@@ -40,6 +40,7 @@ _rodRecipe("lathe.naquadria", "jsonreg:naquadria_rod", "jsonreg:naquadria_ingot"
 _rodRecipe("lathe.titanium", "jsonreg:titanium_rod", "techreborn:titanium_ingot", 20);
 _rodRecipe("lathe.duratium", "jsonreg:duratium_rod", "oritech:duratium_ingot", 40);
 _rodRecipe("lathe.electrum", "jsonreg:electrum_rod", "techreborn:electrum_ingot", 20);
+_rodRecipe("lathe.unrealium", "jsonreg:unrealium_rod", "eternal_starlight:unrealium_ingot", 40);
 
 //部分具有工作台配方的：铜，铁，钢，殷钢，青铜，精炼铁。
 //由ctgui管理了，累了

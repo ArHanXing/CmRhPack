@@ -249,7 +249,7 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
     ]});
 
 //猫猫锭
-<recipetype:eternal_starlight:alloy>.addJsonRecipe("magic.etst.alloy/neko_ingot", 
+<recipetype:eternal_starlight:alloy>.addJsonRecipe("magic.etst.alloy/neko_ingot", {
     burn_time: 400,
     results: [
         {amount: 1, item: {id: "toneko:neko_ingot"}},
@@ -262,6 +262,27 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
         {item: "eternal_starlight:deepsilver_ingot"},
         {item: "eternal_starlight:deepsilver_ingot"}
     ]});
+
+//猫猫万能工具
+<recipetype:toneko:neko_aggregator>.removeByName("toneko:neko_aggregator/neko_multi_tool");
+<recipetype:toneko:neko_aggregator>.addJsonRecipe("etst.toneko.neko_aggregator/neko_multi_tool", {type: "toneko:neko_aggregator",
+    energy: 114.0, result: {id: "toneko:neko_multi_tool", count: 1},
+    pattern: [
+        " X ",
+        " I ",
+        "   "
+    ], key: {I: {item: "toneko:neko_energy_storage_large"}, X: {item: "techreborn:omni_tool"}}
+});
+
+//超临界合成
+<recipetype:lychee:block_interacting>.addJsonRecipe("magic.lychee.sps",{
+  "type": "lychee:block_interacting",
+  "item_in": "toneko:neko_ingot",
+  "block_in": "toneko:neko_aggregator",
+  "post": [
+    "place techreborn:supercritical_polymerization_chamber"
+  ]
+});
 //Affinity的一些魔改
 // ====      mod的杜鹃灌注必须用数据包        ====
 // ==== 可在 OpenLoader/LanguageAdd包 里查看 ====

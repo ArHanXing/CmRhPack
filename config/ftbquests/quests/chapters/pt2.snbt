@@ -172,6 +172,15 @@
 		{
 			dependencies: ["0A79DDBB3E3642EC"]
 			id: "2DE6A16633CD9EB3"
+			rewards: [{
+				count: 16
+				id: "3D0DE9B55F953C89"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "34C5F105DF0F6213"
 				item: { count: 1, id: "botania:gaia_pylon" }
@@ -183,6 +192,25 @@
 		{
 			dependencies: ["2DE6A16633CD9EB3"]
 			id: "1556CDBF6CCEDA3A"
+			rewards: [
+				{
+					count: 16
+					id: "549E0933A8F83049"
+					item: {
+						count: 1
+						id: "jsonreg:coin"
+					}
+					type: "item"
+				}
+				{
+					id: "1BB8B79F93E4A7E1"
+					item: {
+						count: 1
+						id: "botania:will_of_karil"
+					}
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "558E77E8A593A2FA"
 				item: { count: 1, id: "botania:gaia_spirit" }
@@ -204,7 +232,9 @@
 		}
 		{
 			dependencies: ["2F02AB0C7E94FF4B"]
+			icon_scale: 1.5d
 			id: "7FECE2BF1B5BBEAA"
+			shape: "none"
 			tasks: [{
 				id: "3D149CB901ED1D80"
 				item: { count: 1, id: "jsonreg:terrasteel_casing" }
@@ -280,6 +310,20 @@
 				type: "item"
 			}]
 			x: 10.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["560DB46580F76E0E"]
+			icon_scale: 1.5d
+			id: "5832A5A495B7763D"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "1EA75A3D578E39BF"
+				item: { count: 1, id: "toneko:neko_ingot" }
+				type: "item"
+			}]
+			x: 5.0d
 			y: 8.0d
 		}
 	]

@@ -173,8 +173,11 @@ craftingTable.remove(<item:oritech:deep_drill_block>);
  " EDC CDE ", 
  "HDABCBADH", 
  " AHGGGHA "], 
- key: {A: {item:"techreborn:steel_plate"},B:{item:"oritech:duratium_block"},C:{item:"techreborn:advanced_machine_frame"},D:{item:"techreborn:advanced_alloy_plate"},E:{item:"oritech:motor"},F:{item:"oritech:heisenberg_compensator"},G:{item:"techreborn:diamond_grinding_head"},H:{tag:"oritech:plating"}}});
-
+key: {
+    A: {item:"techreborn:steel_plate"},B:{item:"oritech:duratium_block"},C:{item:"techreborn:advanced_machine_frame"},
+    D:{item:"techreborn:advanced_alloy_plate"},E:{item:"oritech:motor"},F:{item:"oritech:heisenberg_compensator"},
+    G:{item:"techreborn:diamond_grinding_head"},H:{tag:"oritech:plating"}
+}});
 
 //过充水晶
 craftingTable.removeByName("oritech:motor/overchargedcrystal");
@@ -404,6 +407,12 @@ _fuelrod("t2.tr.assembling.fuelrod.nqdria", "jsonreg:naquadria_dust", "jsonreg:n
     power: 16,
     ingredients: [{item: "oritech:duratium_ingot"}]
 });
+<recipetype:techreborn:compressor>.addJsonRecipe("t2.tr.unrealium_plate", {type: "techreborn:compressor",
+    time: 600,
+    outputs: [{id: "jsonreg:unrealium_plate", count: 1}],
+    power: 16,
+    ingredients: [{item: "eternal_starlight:unrealium_ingot"}]
+});
 
 // ============================================================
 // T2 金红石 → 钛 科学处理线（氯化法）
@@ -421,14 +430,12 @@ _fuelrod("t2.tr.assembling.fuelrod.nqdria", "jsonreg:naquadria_dust", "jsonreg:n
     ]
 });
 
-// 1b. 工业磨粉（水洗磨矿，带副产）: 1 矿石 → 2 金红石粉 + 铁杂质 + 伴生 malarite + 脉石
+// 1b. 工业磨粉（水洗磨矿，带副产）: 1 矿石 → 2 金红石粉 + 铁杂
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("t2.tr.industrial_grinder.rutile_dust_from_ore", {type: "techreborn:industrial_grinder",
     time: 200,
     outputs: [
-        {id: "jsonreg:rutile_dust", count: 2},
-        {id: "oritech:iron_dust", count: 1},
-        {id: "eternal_starlight:malarite", count: 1},
-        {id: "eternal_starlight:cobbled_voidstone", count: 1}
+        {id: "jsonreg:rutile_dust", count: 3},
+        {id: "oritech:iron_dust", count: 1}
     ],
     fluid: {fluid: {fluid: "minecraft:water"}, amount: {value: 81000}},
     power: 64,
