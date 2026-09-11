@@ -249,6 +249,8 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
     ]});
 
 //猫猫锭
+<recipetype:toneko:neko_aggregator>.removeByName("toneko:neko_aggregator/resource/neko_ingot");
+<recipetype:toneko:neko_aggregator>.removeByName("toneko:neko_aggregator/resource/neko_ingot_1");
 <recipetype:eternal_starlight:alloy>.addJsonRecipe("magic.etst.alloy/neko_ingot", {
     burn_time: 400,
     results: [

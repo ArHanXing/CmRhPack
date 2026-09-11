@@ -1,16 +1,16 @@
 {
   "translate": [
-    -9,
-    -1,
+    2,
+    0,
     -3
   ],
   "layers": [
     [
       "         ",
       " C C C C ",
-      "ADDDDDDDB",
-      "ABBBBBBBB",
-      "ADDDDDDDB",
+      "BDDDDDDDA",
+      "BBBBBBBBA",
+      "BDDDDDDDA",
       " C C C C ",
       "         "
     ],
@@ -18,7 +18,7 @@
       "         ",
       " E E E E ",
       "BBBBBBBBB",
-      "A       B",
+      "B       A",
       "BBBBBBBBB",
       " E E E E ",
       "         "
@@ -26,29 +26,29 @@
     [
       "         ",
       " C C C C ",
-      "ADDDDDDDB",
+      "BDDDDDDDA",
       "BBBBBBBBB",
-      "ADDDDDDDB",
+      "BDDDDDDDA",
       " C C C C ",
       "         "
     ],
     [
       "         ",
-      "AA A A A ",
+      " A A A AA",
       " C C C C ",
-      " E E E E ",
-      " C C C C ",
-      "AA A A A ",
-      "         "
-    ],
-    [
       " F F F F ",
+      " C C C C ",
+      " A A A AA",
+      "         "
+    ],
+    [
+      " G G G G ",
       " A A A A ",
       "         ",
       "         ",
       "         ",
       " A A A A ",
-      " F F F F "
+      " G G G G "
     ],
     [
       " A A A A ",
@@ -61,14 +61,14 @@
     ]
   ],
   "keys": {
-    "F": {
-      "block": "jsonreg:duratium_frame"
+    "C": {
+      "block": "jsonreg:steel_frame"
     },
     "D": {
       "block": "jsonreg:titanium_frame"
     },
-    "C": {
-      "block": "jsonreg:steel_frame"
+    "F": {
+      "block": "jsonreg:machine_casing_pipe_tungstensteel"
     },
     "A": {
       "block": "jsonreg:machine_casing_robust_tungstensteel"
@@ -78,6 +78,9 @@
     },
     "B": {
       "block": "jsonreg:machine_casing_turbine_titanium"
+    },
+    "G": {
+      "block": "jsonreg:duratium_frame"
     }
   }
 }

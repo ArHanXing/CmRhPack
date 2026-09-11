@@ -835,12 +835,6 @@ craftingTable.addShaped("ctgui/new/crafting/neutron_collector_mv", <item:avariti
 
 <recipetype:minecraft:crafting>.removeByName("botania:gaia_ingot");
 
-<recipetype:minecraft:crafting>.removeByName("botania:life_aggregator");
-craftingTable.addShaped("ctgui/new/botania/life_aggregator", <item:botania:life_aggregator>, [
-    [IIngredientEmpty.getInstance(), <tag:item:c:ingots/elementium>, <item:botania:spark>],
-    [<item:botania:gaia_ingot>, <tag:item:c:gems/dragonstone>, <item:botania:gaia_ingot>],
-    [<item:botania:spark>, <tag:item:c:ingots/elementium>, IIngredientEmpty.getInstance()]]);
-
 craftingTable.addShaped("ctgui/new/crafting/neko_aggregator", <item:toneko:neko_aggregator>, [
     [IIngredientEmpty.getInstance(), <item:jsonreg:mv_electric_piston>, IIngredientEmpty.getInstance()],
     [<item:toneko:neko_ingot>, <item:botania:life_aggregator>, <item:toneko:neko_ingot>],

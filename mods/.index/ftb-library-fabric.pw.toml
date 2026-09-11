@@ -1,19 +1,19 @@
-filename = 'ftb-library-fabric-2101.1.32.jar'
+filename = 'ftb-library-fabric-2101.1.35.jar'
 name = 'FTB Library'
 side = 'server'
 x-prismlauncher-loaders = [ 'fabric' ]
 x-prismlauncher-mc-versions = [ '1.21.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '[FABRIC][1.21.1] FTB Library 2101.1.32'
+x-prismlauncher-version-number = '[FABRIC][1.21.1] FTB Library 2101.1.35'
 
 [download]
-hash = '210a6a2ba23231d883230e6d0c8713ca6c1773cd'
+hash = '5fe04b22a76dd1c9ff0000c2b31af8c73682dc8c'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8226922
+file-id = 8569580
 project-id = 438495
 
 [[x-prismlauncher-dependencies]]
@@ -21,13 +21,13 @@ addonId = '310111'
 type = 'OPTIONAL'
 
 [[x-prismlauncher-dependencies]]
+addonId = '306612'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
 addonId = '238222'
 type = 'OPTIONAL'
 
 [[x-prismlauncher-dependencies]]
 addonId = '419699'
-type = 'REQUIRED'
-
-[[x-prismlauncher-dependencies]]
-addonId = '306612'
 type = 'REQUIRED'

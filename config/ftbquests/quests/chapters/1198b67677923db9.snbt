@@ -1,0 +1,837 @@
+{
+	consume_items: true
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	default_repeatable_quest: true
+	filename: "1198b67677923db9"
+	group: ""
+	icon: {
+		id: "oritech:electrum_ingot"
+	}
+	id: "1198B67677923DB9"
+	images: [ ]
+	order_index: 1
+	quest_links: [
+		{
+			id: "2CEEBAE62DEA5A52"
+			linked_quest: "3FC433447F442349"
+			x: -4.5d
+			y: 5.5d
+		}
+		{
+			id: "4880DC1D1039100D"
+			linked_quest: "08A105909CB62D75"
+			x: -4.5d
+			y: 10.5d
+		}
+		{
+			id: "2B444B64BA2F1DF2"
+			linked_quest: "117BA2558CF77A05"
+			x: -4.5d
+			y: 8.0d
+		}
+	]
+	quests: [
+		{
+			can_repeat: true
+			id: "615372D614B5E7C5"
+			rewards: [{
+				id: "698421A0C0D2EC26"
+				item: {
+					count: 1
+					id: "techreborn:electrum_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				id: "61DDF646E46D4DA2"
+				item: { count: 1, id: "oritech:electrum_ingot" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			id: "55A3F14F0F69BD34"
+			rewards: [{
+				id: "20AD0D39DAC60311"
+				item: {
+					count: 1
+					id: "techreborn:steel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				id: "4D818626485E6BF3"
+				item: { count: 1, id: "oritech:steel_ingot" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			id: "591DC2312D34D538"
+			rewards: [{
+				id: "55994C76635D905F"
+				item: {
+					count: 1
+					id: "techreborn:platinum_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				id: "250BDCC3DC2D4DD0"
+				item: { count: 1, id: "oritech:platinum_ingot" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			id: "11BBBEC0F31A9764"
+			rewards: [{
+				id: "4C2729A19C83C521"
+				item: {
+					count: 1
+					id: "techreborn:nickel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				id: "05FA1497FEC470BB"
+				item: { count: 1, id: "oritech:nickel_ingot" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: -2.0d
+		}
+		{
+			id: "4DD8DE3B45126136"
+			tasks: [{
+				id: "4B06A202B63E2D0C"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: -1.5d
+		}
+		{
+			can_repeat: true
+			id: "1058B8EE9DBC7BD3"
+			rewards: [{
+				id: "2313F416B4ABD7D9"
+				item: {
+					count: 1
+					id: "techreborn:electrum_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				id: "3C4F0DF8EC510D0A"
+				item: { count: 1, id: "oritech:electrum_ingot" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			id: "2A2F770A9BC611AB"
+			rewards: [{
+				count: 10
+				id: "75354D70123AB98E"
+				item: {
+					count: 1
+					id: "techreborn:electrum_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 10L
+				id: "3B3BE75C8A593E01"
+				item: { count: 1, id: "oritech:electrum_ingot" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: -1.0d
+		}
+		{
+			can_repeat: true
+			id: "5B6C7F53AB52BCD3"
+			rewards: [{
+				id: "466F8881127C15C1"
+				item: {
+					count: 1
+					id: "techreborn:steel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				id: "13042E54E20CB32D"
+				item: { count: 1, id: "oritech:steel_ingot" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			id: "62C4718910527DBE"
+			rewards: [{
+				count: 10
+				id: "258D41A1691697AB"
+				item: {
+					count: 1
+					id: "techreborn:steel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 10L
+				id: "38E24E8DD1D56851"
+				item: { count: 1, id: "oritech:steel_ingot" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -1.0d
+		}
+		{
+			can_repeat: true
+			id: "627AE5EA883A624B"
+			rewards: [{
+				count: 10
+				id: "3C190445FA29B623"
+				item: {
+					count: 1
+					id: "techreborn:platinum_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 10L
+				id: "2C1015295BEC6502"
+				item: { count: 1, id: "oritech:platinum_ingot" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.0d
+		}
+		{
+			can_repeat: true
+			id: "18B2E835E4551B42"
+			rewards: [{
+				count: 10
+				id: "77ADE669C4A426B4"
+				item: {
+					count: 1
+					id: "techreborn:nickel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 10L
+				id: "2FD379A89A68B5C5"
+				item: { count: 1, id: "oritech:nickel_ingot" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: -1.0d
+		}
+		{
+			can_repeat: true
+			icon: {
+				id: "minecraft:sponge"
+			}
+			id: "192D0A4334200F2F"
+			rewards: [{
+				count: 8
+				id: "3F8098A4366727C3"
+				item: {
+					count: 1
+					id: "minecraft:sponge"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "14BD9FBF2AC7E9A4"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: 3.0d
+		}
+		{
+			can_repeat: true
+			icon: {
+				id: "minecraft:wet_sponge"
+			}
+			id: "28D366BAE6D24049"
+			rewards: [{
+				count: 8
+				id: "35D0688EF72F0E40"
+				item: {
+					count: 1
+					id: "minecraft:sponge"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					consume_items: true
+					count: 8L
+					id: "14AF1B7A8F618BF2"
+					item: { count: 1, id: "minecraft:wet_sponge" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "2764D2B32348C73F"
+					item: { count: 1, id: "jsonreg:coin" }
+					type: "item"
+				}
+			]
+			x: 0.5d
+			y: 3.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["08A105909CB62D75"]
+			icon: {
+				id: "eternal_starlight:mana_crystal"
+			}
+			id: "2CB1B3EA63706836"
+			rewards: [{
+				count: 6
+				id: "2F7B2AEB2A27C46D"
+				item: {
+					count: 1
+					id: "eternal_starlight:mana_crystal"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 8L
+				id: "3B364A83D01D21A8"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: 10.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["117BA2558CF77A05"]
+			icon: {
+				id: "affinity:inert_wisp_matter"
+			}
+			id: "7603EAAC2705757C"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "0F5FBE9A877AA9E2"
+				table_id: 8675871334219024754L
+				type: "choice"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 8L
+				id: "7A385273192ED724"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: 8.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["117BA2558CF77A05"]
+			icon: {
+				id: "techreborn:glassfiber_cable"
+			}
+			id: "09A2C0E83E15AA85"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "0626540432E52742"
+				table_id: 4546332219407215214L
+				type: "random"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 8L
+				id: "1CEC690853808F39"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3FC433447F442349"]
+			icon: {
+				components: {
+					"minecraft:custom_data": {
+						stellarity.special_item: "soaring_insignia"
+					}
+					"minecraft:custom_model_data": 90001
+					"minecraft:enchantment_glint_override": 1b
+					"minecraft:fire_resistant": { }
+					"minecraft:item_name": "{\"color\":\"#FF76D0\",\"fallback\":\"Soaring Insignia\",\"italic\":false,\"translate\":\"stellarity.items.trinkets.soaring_insignia\"}"
+					"minecraft:lore": [
+						"\"\""
+						"{\"color\":\"#EEEEEE\",\"fallback\":\"Grants infinite flight but with\",\"italic\":false,\"translate\":\"stellarity.items.trinkets.soaring_insignia.description.1\"}"
+						"{\"color\":\"#EEEEEE\",\"fallback\":\"limited speed and agility\",\"italic\":false,\"translate\":\"stellarity.items.trinkets.soaring_insignia.description.2\"}"
+						"{\"color\":\"#EEEEEE\",\"fallback\":\"Look up or down while sneaking to\",\"italic\":false,\"translate\":\"stellarity.items.trinkets.soaring_insignia.description.3\"}"
+						"{\"color\":\"#EEEEEE\",\"fallback\":\"ascend or descend respectively\",\"italic\":false,\"translate\":\"stellarity.items.trinkets.soaring_insignia.description.4\"}"
+						"\"\""
+						"{\"color\":\"#CC26FF\",\"italic\":true,\"translate\":\"Stellarity\"}"
+					]
+					"minecraft:max_stack_size": 1
+					"minecraft:rarity": "epic"
+				}
+				id: "minecraft:gold_nugget"
+			}
+			id: "047B17015CDBDFFE"
+			rewards: [{
+				id: "631F3797A99939FF"
+				item: {
+					components: {
+						"minecraft:custom_data": {
+							stellarity.special_item: "soaring_insignia"
+						}
+						"minecraft:custom_model_data": 90001
+						"minecraft:enchantment_glint_override": 1b
+						"minecraft:fire_resistant": { }
+						"minecraft:item_name": "{\"color\":\"#FF76D0\",\"fallback\":\"Soaring Insignia\",\"italic\":false,\"translate\":\"stellarity.items.trinkets.soaring_insignia\"}"
+						"minecraft:lore": [
+							"\"\""
+							"{\"color\":\"#EEEEEE\",\"fallback\":\"Grants infinite flight but with\",\"italic\":false,\"translate\":\"stellarity.items.trinkets.soaring_insignia.description.1\"}"
+							"{\"color\":\"#EEEEEE\",\"fallback\":\"limited speed and agility\",\"italic\":false,\"translate\":\"stellarity.items.trinkets.soaring_insignia.description.2\"}"
+							"{\"color\":\"#EEEEEE\",\"fallback\":\"Look up or down while sneaking to\",\"italic\":false,\"translate\":\"stellarity.items.trinkets.soaring_insignia.description.3\"}"
+							"{\"color\":\"#EEEEEE\",\"fallback\":\"ascend or descend respectively\",\"italic\":false,\"translate\":\"stellarity.items.trinkets.soaring_insignia.description.4\"}"
+							"\"\""
+							"{\"color\":\"#CC26FF\",\"italic\":true,\"translate\":\"Stellarity\"}"
+						]
+						"minecraft:max_stack_size": 1
+						"minecraft:rarity": "epic"
+					}
+					count: 1
+					id: "minecraft:gold_nugget"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 16L
+				id: "4A813BD5CD17B85A"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: 5.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["08A105909CB62D75"]
+			icon: {
+				id: "eternal_starlight:energy_transmitter"
+			}
+			id: "6982B13681B9D727"
+			rewards: [{
+				id: "68ED9386612C9622"
+				item: {
+					components: {
+						"team_reborn_energy:energy": 1000000L
+					}
+					count: 1
+					id: "oritech:small_storage_block"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 32L
+				id: "0040D6C3F89CA6F4"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 10.5d
+		}
+		{
+			can_repeat: false
+			id: "1A751CC5B4C05EDA"
+			rewards: [{
+				count: 16
+				id: "69D7CA578B424E11"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "minecraft:story/mine_stone"
+				criterion: ""
+				id: "5AD79FD1509C4AF9"
+				type: "advancement"
+			}]
+			x: -4.5d
+			y: 3.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["3FC433447F442349"]
+			icon: {
+				id: "farmersdelight:steak_and_potatoes"
+			}
+			id: "513218436C2937E0"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "417C58ECB330DBFC"
+				table_id: 8597952621322821527L
+				type: "random"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 16L
+				id: "3E92642AF8DDD881"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 5.5d
+		}
+		{
+			can_repeat: true
+			icon: {
+				id: "oritech:biosteel_ingot"
+			}
+			id: "16FC8BF255EB3284"
+			rewards: [{
+				count: 64
+				id: "1409331740956BF3"
+				item: {
+					count: 1
+					id: "oritech:biosteel_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					id: "390CEEEA91F350B8"
+					item: { count: 1, id: "techreborn:steel_ingot" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "461A9C166868C571"
+					item: { count: 1, id: "oritech:raw_biopolymer" }
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			icon: {
+				id: "oritech:transparent_item_pipe"
+			}
+			id: "12B8B94B2B7FC702"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2ECA3925ABE93D90"
+				table_id: 4546332219407215214L
+				type: "choice"
+			}]
+			tasks: [{
+				count: 16L
+				id: "33A6FFB16C846DA3"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			icon: {
+				id: "techreborn:electronic_circuit"
+			}
+			id: "33642948B34A816B"
+			rewards: [{
+				id: "266621AFE5636028"
+				item: {
+					count: 1
+					id: "techreborn:electronic_circuit"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 4L
+				id: "29BAF4CB60E203BF"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon: {
+				id: "techreborn:advanced_circuit"
+			}
+			id: "1201528AC28E6572"
+			rewards: [{
+				id: "23103BBBA07D969C"
+				item: {
+					count: 1
+					id: "techreborn:advanced_circuit"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "769DE2B39D9BC096"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["3FC433447F442349"]
+			icon: {
+				id: "urinarycatheter:urinary_catheter"
+			}
+			id: "0C00450479A7070D"
+			rewards: [{
+				id: "161436F0F39BB66D"
+				item: {
+					count: 1
+					id: "urinarycatheter:urinary_catheter"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "2D5A7D210FA730A7"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon: {
+				components: {
+					"botania:tiara_variant": 4
+				}
+				id: "botania:flugel_tiara"
+			}
+			id: "29F74F12D6F3C729"
+			rewards: [{
+				id: "1F715E73634857F5"
+				item: {
+					components: {
+						"botania:tiara_variant": 3
+					}
+					count: 1
+					id: "botania:flugel_tiara"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 32L
+				id: "29110BA9C72464F0"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["3FC433447F442349"]
+			icon: {
+				id: "sophisticatedbackpacks:gold_backpack"
+			}
+			id: "0FB5E67C09910ECD"
+			rewards: [{
+				id: "5D5E30089DC470F3"
+				item: {
+					count: 1
+					id: "sophisticatedbackpacks:gold_backpack"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "6D49D3A5E6D4BBA0"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			icon: {
+				id: "immersive_aircraft:biplane"
+			}
+			id: "3D1632E1A5C84366"
+			rewards: [{
+				id: "059A7D9A2FE42EA9"
+				item: {
+					count: 1
+					id: "immersive_aircraft:biplane"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 32L
+				id: "53906CCA33D68CF9"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3FC433447F442349"]
+			icon: {
+				id: "sophisticatedstorage:basic_tier_upgrade"
+			}
+			id: "52F041D4C617FEE3"
+			rewards: [{
+				id: "69F74E642ACF54E5"
+				item: {
+					count: 1
+					id: "sophisticatedstorage:basic_tier_upgrade"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7E847E0EEE1A9C66"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["3FC433447F442349"]
+			icon: {
+				components: {
+					"team_reborn_energy:energy": 100000L
+				}
+				id: "techreborn:advanced_ore_prospector"
+			}
+			id: "51354A47E6666F0D"
+			rewards: [{
+				id: "3BBD29C1B7F6E484"
+				item: {
+					components: {
+						"team_reborn_energy:energy": 100000L
+					}
+					count: 1
+					id: "techreborn:advanced_ore_prospector"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 16L
+				id: "41CE799E4DD8792D"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			icon: {
+				id: "techreborn:crude_storage_unit"
+			}
+			id: "648F10F7575F879D"
+			rewards: [{
+				id: "318A2F63A59CA458"
+				item: {
+					count: 1
+					id: "techreborn:crude_storage_unit"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "644354CEA50C8278"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["117BA2558CF77A05"]
+			icon: {
+				id: "techreborn:crude_tank_unit"
+			}
+			id: "74D10058A92E488F"
+			rewards: [{
+				id: "6E70DF8B4556E204"
+				item: {
+					count: 1
+					id: "techreborn:crude_tank_unit"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "33F688CC55385027"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 9.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3FC433447F442349"]
+			icon: {
+				id: "techreborn:cell"
+			}
+			id: "7245D5352D5702A2"
+			rewards: [{
+				count: 8
+				id: "6B2332AC94DC9F45"
+				item: {
+					count: 1
+					id: "techreborn:cell"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "626DA106E7AE46B6"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 9.5d
+			y: 5.5d
+		}
+	]
+}

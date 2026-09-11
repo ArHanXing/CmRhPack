@@ -1,17 +1,33 @@
-filename = 'FarmersDelight-1.21.1-3.3.3+refabricated.jar'
+filename = 'FarmersDelight-1.21.1-3.3.6+refabricated.jar'
 name = "Farmer's Delight"
 side = ''
 x-prismlauncher-loaders = [ 'fabric' ]
-x-prismlauncher-mc-versions = [ '1.21', '1.21', '1.21.1', '1.21.1' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '1.21.1-3.3.3'
+x-prismlauncher-version-number = '1.21.1-3.3.6'
 
 [download]
-hash = '9e6adc3c6b0b840a29634105c7c5fb0c46d2b0281a5807a1deb5a5093fbf190815d8b16031313d17eb71ecf736f06338da10bf4388ae900d77b883641fbcf7c9'
+hash = '2667773f31494a1f3e8f6adf2308406fd35f5f05572ef23709fd5450489ff85f789a57b036c1650d1b4b292b9b5ca5c93d2d5d8dc0cb686a6c5831ef872b1f5b'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/7vxePowz/versions/NCLOIK5z/FarmersDelight-1.21.1-3.3.3%2Brefabricated.jar'
+url = 'https://cdn.modrinth.com/data/7vxePowz/versions/wbVXT4Ua/FarmersDelight-1.21.1-3.3.6%2Brefabricated.jar'
 
 [update.modrinth]
 mod-id = '7vxePowz'
-version = 'NCLOIK5z'
+version = 'wbVXT4Ua'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'nfn13YXA'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'u6dRKJwZ'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'fRiHVvU7'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'P7dR8mSH'
+type = 'REQUIRED'

@@ -1,50 +1,61 @@
 {
   "translate": [
-    -3,
-    -1,
-    -6
+    2,
+    0,
+    -2
   ],
   "layers": [
     [
-      "ABA",
-      "BBB",
-      "BBB",
-      "BBB",
-      "BBB",
-      "AAA",
-      "CCC",
-      "AAA"
+      " AAA ",
+      "ABBBA",
+      "ABBBA",
+      "ABBBA",
+      " AAA "
     ],
     [
-      "ABA",
-      "C C",
-      "C C",
-      "C C",
-      "C C",
-      "A A",
-      "BBB",
-      "A A"
+      "     ",
+      " CDC ",
+      " D D ",
+      " CDC ",
+      "     "
     ],
     [
-      "AAA",
-      "CCC",
-      "CCC",
-      "CCC",
-      "CCC",
-      "AAA",
-      "BBB",
-      "AAA"
+      "     ",
+      " CDC ",
+      " D D ",
+      " CDC ",
+      "     "
+    ],
+    [
+      "     ",
+      " CDC ",
+      " D D ",
+      " CDC ",
+      "     "
+    ],
+    [
+      " AAA ",
+      "AEEEA",
+      "AEEEA",
+      "AEEEA",
+      " AAA "
     ]
   ],
   "keys": {
-    "A": {
-      "block": "jsonreg:aluminum_frame"
+    "C": {
+      "block": "jsonreg:steel_frame"
     },
-    "B": {
+    "D": {
+      "block": "jsonreg:electrolytic_cell"
+    },
+    "A": {
       "block": "techreborn:advanced_machine_casing"
     },
-    "C": {
-      "block": "jsonreg:machine_casing_turbine_titanium"
+    "B": {
+      "block": "techreborn:basic_machine_casing"
+    },
+    "E": {
+      "block": "jsonreg:large_scale_assembling_casing"
     }
   }
 }

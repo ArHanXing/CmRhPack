@@ -1,69 +1,66 @@
 {
   "translate": [
-    -5,
+    2,
     0,
     -2
   ],
   "layers": [
     [
-      "AACA ",
+      " ACAA",
       "ADDDA",
       "ADDDA",
       "ADDDA",
-      "AACA "
+      " ACAA"
     ],
     [
-      "BACA ",
-      "CDDDA",
-      "CDDDA",
-      "CDDDA",
-      "BACA "
+      " ACAB",
+      "ADDDC",
+      "ADDDA",
+      "ADDDC",
+      " ACAB"
     ],
     [
-      "BACA ",
-      "A E  ",
-      "AEEE ",
-      "A E  ",
-      "BACA "
+      " ACAB",
+      "  E C",
+      " EEEA",
+      "  E C",
+      " ACAB"
     ],
     [
-      "BAA  ",
-      "C F  ",
-      "CFEF ",
-      "C F  ",
-      "BAA  "
+      "  AAB",
+      "  F C",
+      " FEFA",
+      "  F C",
+      "  AAB"
     ],
     [
-      "BA   ",
-      "A F  ",
-      "AFEF ",
-      "A F  ",
-      "BA   "
+      "   AB",
+      "  F C",
+      " FEFA",
+      "  FCC",
+      "   AB"
     ],
     [
-      "BBBB ",
-      "C E  ",
-      "CEEE ",
-      "C E  ",
-      "BBBB "
+      " BBBB",
+      "  E C",
+      " EEEC",
+      "  E C",
+      " BBBB"
     ],
     [
-      "CCCC ",
+      " CCCC",
       "CGGGC",
+      "CGHGC",
       "CGGGC",
-      "CGGGC",
-      "CCCC "
+      " CCCC"
     ]
   ],
   "keys": {
-    "A": {
-      "block": "jsonreg:stress_proof_casing"
-    },
-    "C": {
-      "block": "techreborn:advanced_machine_casing"
-    },
     "E": {
       "block": "techreborn:coil_molybdenum_disilicide"
+    },
+    "H": {
+      "block": "jsonreg:machine_casing_pipe_steel"
     },
     "G": {
       "block": "jsonreg:machine_casing_turbine_titanium"
@@ -71,11 +68,17 @@
     "B": {
       "block": "jsonreg:titanium_frame"
     },
-    "D": {
-      "block": "techreborn:basic_machine_casing"
+    "A": {
+      "block": "jsonreg:stress_proof_casing"
     },
     "F": {
       "block": "jsonreg:reinforced_glass"
+    },
+    "D": {
+      "block": "techreborn:basic_machine_casing"
+    },
+    "C": {
+      "block": "techreborn:advanced_machine_casing"
     }
   }
 }

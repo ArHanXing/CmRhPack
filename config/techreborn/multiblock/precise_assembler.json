@@ -1,18 +1,18 @@
 {
   "translate": [
-    -6,
+    2,
     0,
     -3
   ],
   "layers": [
     [
-      "ABBBA",
+      "ADBDA",
       "ACBCA",
       "ACBCA",
       "ACBCA",
       "ACBCA",
       "ACBCA",
-      "ADBDA"
+      "ABBBA"
     ],
     [
       " CBC ",
@@ -24,13 +24,13 @@
       " CBC "
     ],
     [
-      " CBC ",
+      " CEC ",
       " E E ",
       " E E ",
       " E E ",
       " E E ",
       " E E ",
-      " CEC "
+      " CBC "
     ],
     [
       " CBC ",
@@ -52,11 +52,11 @@
     ]
   ],
   "keys": {
-    "B": {
-      "block": "jsonreg:large_scale_assembling_casing"
-    },
     "C": {
       "block": "jsonreg:steel_frame"
+    },
+    "A": {
+      "block": "techreborn:basic_machine_casing"
     },
     "E": {
       "block": "techreborn:reinforced_glass"
@@ -64,8 +64,8 @@
     "D": {
       "block": "techreborn:advanced_machine_frame"
     },
-    "A": {
-      "block": "techreborn:basic_machine_casing"
+    "B": {
+      "block": "jsonreg:large_scale_assembling_casing"
     }
   }
 }

@@ -7,6 +7,7 @@
 		id: "oritech:assembler_block"
 	}
 	id: "339025C1A8162A38"
+	images: [ ]
 	order_index: 0
 	quest_links: [ ]
 	quests: [
@@ -701,6 +702,15 @@
 				id: "minecraft:budding_amethyst"
 			}
 			id: "2FC60C5844351CA2"
+			rewards: [{
+				count: 4
+				id: "508F3FD3EE5C8861"
+				item: {
+					count: 1
+					id: "minecraft:end_rod"
+				}
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "143D5660E71C97DA"
@@ -1042,15 +1052,6 @@
 			id: "26B4FFB213E39E1D"
 			rewards: [
 				{
-					count: 64
-					id: "6AE0F91D6C4637C9"
-					item: {
-						count: 1
-						id: "minecraft:oak_log"
-					}
-					type: "item"
-				}
-				{
 					id: "2A12DBCFE726DA98"
 					item: {
 						components: {
@@ -1060,6 +1061,22 @@
 						}
 						count: 1
 						id: "minecraft:potion"
+					}
+					type: "item"
+				}
+				{
+					id: "1A179E5C8A510642"
+					item: {
+						count: 1
+						id: "constructionwand:infinity_wand"
+					}
+					type: "item"
+				}
+				{
+					id: "6439313D5A44298D"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:packing_tape"
 					}
 					type: "item"
 				}
@@ -1116,7 +1133,7 @@
 			id: "0BA077008BA4B3A0"
 			optional: true
 			rewards: [{
-				command: "/execute in d4r4_dimension:void_dimension run tp @p 0 100 0"
+				command: "/execute in d4r4_dimension:void_dimension run tp @p 0 102 0"
 				id: "6305BE1AFE93205B"
 				type: "command"
 			}]
