@@ -79,6 +79,14 @@ import crafttweaker.api.recipe.type.Recipe;
     outputs: [{id: "affinity:scintillant_anthracite_blend", count: 2}], power: 40, 
     ingredients: [{item: "minecraft:glowstone_dust"}, {item: "affinity:anthracite_powder", count:2}]});
 
+//原石也可以转化活石
+<recipetype:botania:pure_daisy>.removeByName("botania:pure_daisy/cobblestone");
+<recipetype:botania:pure_daisy>.addJsonRecipe("magic.botania.pure_daisy/livingrock_alt", {
+    type: "botania:pure_daisy",
+    input: {block: "minecraft:cobblestone", type: "botania:block"},
+    time: 170,
+    output: {type: "botania:state", state: {Name: "botania:livingrock"}}
+});
 /*
 //更贵的Affinitea
 <recipetype:affinity:aspen_infusion>.removeByName("affinity:aspen_infusion/affinitea");

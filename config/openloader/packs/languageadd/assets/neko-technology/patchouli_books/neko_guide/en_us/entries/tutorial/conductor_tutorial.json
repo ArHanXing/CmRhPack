@@ -1,0 +1,108 @@
+{
+  "name": "Components & Circuit System",
+  "icon": "neko-technology:circuit_breaker",
+  "category": "neko-technology:tutorial",
+  "pages": [
+    {
+      "type": "text",
+      "text": "The Component System is a signature feature of Neko Technology. Machines don't come with built-in input/output ports — instead, you craft Components to customize your machines. Right-click a machine face with a Component to install it. To remove one, sneak-right-click with a Hammer.$(br2)A machine with Components installed will interact with nearby circuits and containers — but only if it has a managing cat assigned."
+    },
+    {
+      "type": "text",
+      "text": "Neko Technology's circuit system works differently from other tech mods, and it goes hand-in-hand with the Component System. Adjacent $(l)conductive blocks$() (such as casings with cores, $(l)machines$(), $(l)generators$(), and $(l)batteries$()) form a single $(l)Conductor$(). Conductors can also be linked remotely using Wire Poles. Machines draw Neko Flux directly from generators and batteries within the same conductor, making the system efficient.$(br2)Let's go over the Components."
+    },
+    {
+      "type": "spotlight",
+      "title": "Flux Input Component",
+      "link_recipe": true,
+      "item": "neko-technology:brass_flux_inputer",
+      "scale": 1.2,
+      "text": "The Flux Input Component pulls Neko Flux from the conductor into the machine. A machine with this component installed will drain flux from any generator or battery in the same conductor that has a Flux Output Component installed.$(br2)The installation face doesn't matter — any face works the same way."
+    },
+    {
+      "type": "spotlight",
+      "title": "Flux Output Component",
+      "link_recipe": true,
+      "item": "neko-technology:brass_flux_outputer",
+      "scale": 1.2,
+      "text": "The Flux Output Component exports Neko Flux from the machine into the conductor. A machine with this component can supply flux to other machines in the same conductor that have a Flux Input Component installed.$(br2)The installation face doesn't matter — any face works the same way."
+    },
+    {
+      "type": "spotlight",
+      "title": "Item Input Component",
+      "link_recipe": true,
+      "item": "neko-technology:brass_item_inputer",
+      "scale": 1.2,
+      "text": "The Item Input Component pulls items from an adjacent container on the installation face into the machine's inventory."
+    },
+    {
+      "type": "spotlight",
+      "title": "Item Output Component",
+      "link_recipe": true,
+      "item": "neko-technology:brass_item_outputer",
+      "scale": 1.2,
+      "text": "The Item Output Component pushes items from the machine's inventory into an adjacent container on the installation face."
+    },
+    {
+      "type": "spotlight",
+      "title": "Wire Pole",
+      "link_recipe": true,
+      "item": "neko-technology:wire_pole",
+      "scale": 1.2,
+      "text": "The Wire Pole is a special component that can be installed on any conductive block. Right-click two Wire Poles with a Wire Bundle to link them. Use a Hammer to break the connection. Linked Wire Poles merge their conductors into one, allowing you to transmit Neko Flux over long distances."
+    },
+    {
+      "type": "image",
+      "title": "Two Conductors Linked by Wire Poles",
+      "border": true,
+      "images": [
+        "neko-technology:textures/gui/entries/conductor_tutorial1.png"
+      ],
+      "text": ""
+    },
+    {
+      "type": "text",
+      "text": "Now let's look at some circuit system blocks."
+    },
+    {
+      "type": "spotlight",
+      "title": "Conductive Wooden Casing",
+      "link_recipe": true,
+      "item": "neko-technology:wooden_casing",
+      "scale": 1.2,
+      "text": "The Conductive Wooden Casing is both a basic crafting material and a conductive block. It can form a conductor on its own, or serve as a short-range bridge within a conductor network."
+    },
+    {
+      "type": "spotlight",
+      "title": "Circuit Breaker",
+      "link_recipe": true,
+      "item": "neko-technology:circuit_breaker",
+      "scale": 1.2,
+      "text": "The Circuit Breaker is a special conductive block. It can be activated by redstone or toggled manually. When closed, it conducts electricity and connects conductors. When open, it breaks the connection."
+    },
+    {
+      "type": "spotlight",
+      "title": "Machine (Appliance)",
+      "link_recipe": true,
+      "item": "neko-technology:beacon_diffuser",
+      "scale": 1.2,
+      "text": "Machines are the heart of any conductor — without them, you can't progress. A machine needs a Flux Input Component installed to draw Neko Flux from the conductor. Without it, the machine won't function.$(br2)Most machines also require a managing cat to operate."
+    },
+    {
+      "type": "spotlight",
+      "title": "Battery (Flux Storage)",
+      "link_recipe": true,
+      "item": "neko-technology:flux_storage",
+      "scale": 1.2,
+      "text": "When your generator produces excess power, a Battery stores it for later use. A Battery needs both a Flux Input and a Flux Output Component installed — so it can receive flux from generators and supply it to machines.$(br2)Batteries don't need a managing cat."
+    },
+    {
+      "type": "spotlight",
+      "title": "Generator",
+      "link_recipe": true,
+      "item": "neko-technology:cat_generator",
+      "scale": 1.2,
+      "text": "Generators produce Neko Flux — the lifeblood of your factory. A generator needs a Flux Output Component to export its power into the conductor. Without it, the generator will still run, but no other machine can draw from it.$(br2)Generators don't need a managing cat."
+    }
+  ]
+}

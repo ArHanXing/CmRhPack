@@ -7,11 +7,12 @@ import crafttweaker.api.recipe.type.Recipe;
 function _frameworkRecipe(_recipe as string, _output as string, _inputA as string, _inputB as string, _time as int) as void{
     <recipetype:techreborn:precise_assembler>.addJsonRecipe(_recipe, {type: "techreborn:precise_assembler", 
         time: _time,
-        outputs: [{id: _output, count: 1}],
+        outputs: [{id: _output, count: 2}],
         power: 64,
         ingredients: [{item: _inputA, count:4},{item: _inputB, count:1}]
     });
 }
+_frameworkRecipe("ps_framework.steel", "jsonreg:steel_frame", "jsonreg:steel_rod", "techreborn:steel_ingot", 64);
 _frameworkRecipe("ps_framework.titanium", "jsonreg:titanium_frame", "jsonreg:titanium_rod", "techreborn:titanium_ingot", 128);
 _frameworkRecipe("ps_framework.aluminum", "jsonreg:aluminum_frame", "jsonreg:aluminum_rod", "techreborn:aluminum_ingot", 128);
 _frameworkRecipe("ps_framework.bronze", "jsonreg:bronze_frame", "jsonreg:bronze_rod", "techreborn:bronze_ingot", 128);

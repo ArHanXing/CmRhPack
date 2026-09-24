@@ -1,0 +1,77 @@
+{
+    "name": "Alloy System",
+    "icon": "neko-technology:neko_copper_ingot",
+    "category": "neko-technology:tutorial",
+    "pages": [
+        {
+            "type": "text",
+            "text": "In Neko Technology, your main quest is to continuously craft new materials, advancing through the tech tree to unlock better machines, tools, and equipment. To obtain advanced materials, you'll need to use Alloy recipes — fusing two substances together to create something greater."
+        },
+        {
+            "type": "multiblock",
+            "name": "Alloy Pot Setup",
+            "multiblock": {
+                "mapping": {
+                    "H": "neko-technology:heater",
+                    "A": "neko-technology:alloy_pot"
+                },
+                "pattern":[
+                    ["A"],
+                    ["H"],
+                    ["0"]
+                ],
+                "symmetrical":true,
+                "offset": [0,1,0]
+            },
+            "enable_visualize": true,
+            "text": "To process alloys, you'll need to build a multiblock structure consisting of an Alloy Pot atop a Heater."
+        },
+        {
+            "type": "spotlight",
+            "title": "Alloy Pot",
+            "link_recipe": true,
+            "item": "neko-technology:alloy_pot",
+            "scale": 1.2,
+            "text": "The Alloy Pot is the core of the alloy system. Use it to process alloy recipes. Right-click to insert items, or sneak-right-click to remove all items at once. The Alloy Pot requires heat from below — every alloy recipe needs a certain temperature to proceed. Raising the temperature is one of your main objectives.$(br2)The Alloy Pot also needs a managing cat to function."
+        },
+        {
+            "type": "spotlight",
+            "title": "Heater",
+            "link_recipe": true,
+            "item": "neko-technology:heater",
+            "scale": 1.2,
+            "text": "The Heater provides heat to the Alloy Pot above it. Early on, you can fuel it with coal. Later, you can use Coil Blocks for faster heating. The Heater has a $(l)maximum temperature$(), which starts at 400. You can increase this cap by placing Bricks around it, attaching a Bellows, or adding Coil Blocks underneath.$(br2)Use a Dried Fish Thermometer to check the current and maximum temperature. Later, you can use Neko Goggles instead."
+        },
+        {
+            "type": "image",
+            "title": "Increasing Temperature with Bricks",
+            "border": true,
+            "images": [
+                "neko-technology:textures/gui/entries/alloy_tutorial1.png"
+            ],
+            "text": "Place Bricks around the Heater. Each Brick increases the maximum temperature by 50."
+        },
+        {
+            "type": "image",
+            "title": "Increasing Temperature with a Bellows",
+            "border": true,
+            "images": [
+                "neko-technology:textures/gui/entries/alloy_tutorial2.png"
+            ],
+            "text": "Place a Bellows next to the Heater with its nozzle facing the Heater. Assign a managing cat to the Bellows, and it will boost the Heater's maximum temperature by 20%."
+        },
+        {
+            "type": "image",
+            "title": "Increasing Temperature with Coil Blocks",
+            "border": true,
+            "images": [
+                "neko-technology:textures/gui/entries/alloy_tutorial3.png"
+            ],
+            "text": "Place a Coil Block beneath the Heater and equip it with Pig Iron Coils and Copper Coils. The temperature increase depends on the number of each coil installed."
+        },
+        {
+            "type": "text",
+            "text": "If you have 'a' Pig Iron Coils and 'b' Copper Coils installed, the maximum temperature increase is: a × b × 180.$(br2)Of course, the Coil Block also needs Neko Flux and a managing cat to operate."
+        }
+    ]
+}

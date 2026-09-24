@@ -1,16 +1,19 @@
+# 本整合包由 AI 生成。
+作者宣布自己几乎没有在开发中提供正向内容。
+
 # CmRhPack
 不会告诉你`CmRh`是`锔铑`的意思。嗯，玩了这个包并吃下了这一坨， ~~你就变成了赤石界巨佬~~
 
 核心：Minecraft 1.21.1, **Fabric 0.19.5**。
 ## 开发或游玩
-在PCL中下载一个命名为`CmRhPack`的1.21.1+Fabric 0.19.5版本，然后直接将本仓库复制过去。
+在 PCL 中下载一个命名为`CmRhPack`的 1.21.1+Fabric 0.19.5 版本，然后直接将本仓库复制过去。
 
-同时你也可以导入 release 中的稳定版本 mrpack 包
+同时你也可以导入 release 中的稳定版本 mrpack 包（if exist）
 ## 阶段与内容
 这个整合包是基于 Oritech 和 TechReborn 的 ~~超稀有高版本 Fabric 科技包！~~（
 - **Tier1** EarlyStage，TR炼钢，Oritech末影化合物，TR基础机器，TR石油线，T1主机，T2电路板，精致存储，Botania符文祭坛，Affinity物质收获炉，杜鹃仪式。
 - **Tier2** 白铜线圈，工业高炉，T2马达，镍铬合金线圈，精密组装，改良并行机器，昶铂线圈，虚空矿机，Aff生魂融合，Bot泰拉钢，精灵门，泰拉钢机器外壳，永恒星光，金红石/钨处理，原子锻炉，硅晶圆，环氧树脂，T2电路主机，T3电路板。
-- **Tier3** 末地，硅岩处理，硅岩/凯金线圈，硅岩反应堆，太空电梯，三钛线圈，聚苯并咪唑，异星生物培养，盖亚魂锭 -> 盖亚魂灵处理，戴森云，海森堡补偿器，稳定盖亚魂锭，DTPF，无尽锭，超导线圈，Tier3主机。
+- **Tier3** 末地，硅岩处理，硅岩/凯金线圈，太空电梯，三钛线圈，聚苯并咪唑，异星生物培养，盖亚魂锭 -> 盖亚魂灵处理，戴森云，海森堡补偿器，稳定盖亚魂锭，DTPF，无尽锭，超导线圈，Tier3主机，**Neko Technology**，**无尽贪婪**。
 ## 鸣谢
 - 猫窝翻转宇宙服务器的大家，发现了大量随着时间出现的bug！
 - `CrystalNeko` 开发的 `JustARod`
@@ -46,3 +49,6 @@ JDK: Temurin 26
 
 [cmrh-affinity](https://github.com/ArHanXing/cmrh-affinity), 为本整合包定制的 Affinity 版本
 
+打包：删除 fuji/backup fuji/cache fuji/modules/home
+调回快捷键 N 和 Q
+移除 ctgui

@@ -28,13 +28,3 @@ craftingTable.addShapeless("t0.esteel", <item:earlystage:steel_ingot>, [
 craftingTable.addShapeless("t0.esteel_turinglove", <item:techreborn:steel_ingot>, [
     <item:earlystage:steel_ingot>
 ]);
-
-//更快捷的工作台配方
-<recipetype:lychee:block_interacting>.addJsonRecipe("t0.lychee.workbench_better",{
-  "type": "lychee:block_interacting",
-  "item_in": "minecraft:iron_nugget",
-  "block_in": "#minecraft:logs",
-  "post": [
-    "place minecraft:crafting_table"
-  ]
-});

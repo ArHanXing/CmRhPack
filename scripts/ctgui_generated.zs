@@ -668,77 +668,6 @@ craftingTable.addShapeless("ctgui/new/oritech/small_gold_dust", <item:oritech:sm
 
 <recipetype:minecraft:crafting>.removeByName("botania:natura_pylon");
 
-<recipetype:minecraft:crafting>.removeByName("mininggadgets:mininggadget_simple");
-craftingTable.addShaped("ctgui/new/mininggadgets/mininggadget_simple", <item:mininggadgets:mininggadget_simple>, [
-    [IIngredientEmpty.getInstance(), <tag:item:c:gems>, IIngredientEmpty.getInstance()],
-    [<item:techreborn:red_cell_battery>, <item:mininggadgets:upgrade_empty>, <item:jsonreg:lv_robot_arm>],
-    [IIngredientEmpty.getInstance(), <item:techreborn:iron_plate>, IIngredientEmpty.getInstance()]]);
-
-<recipetype:minecraft:crafting>.removeByName("mininggadgets:upgrade_empty");
-craftingTable.addShaped("ctgui/new/mininggadgets/upgrade_empty", <item:mininggadgets:upgrade_empty>, [
-    [<tag:item:c:dusts/redstone>, <item:techreborn:iron_plate>, <tag:item:c:dusts/redstone>],
-    [IIngredientEmpty.getInstance(), <tag:item:c:glass_panes>, IIngredientEmpty.getInstance()],
-    [<tag:item:c:dusts/redstone>, <item:techreborn:iron_plate>, <tag:item:c:dusts/redstone>]]);
-
-<recipetype:minecraft:crafting>.removeByName("mininggadgets:upgrade_size_2");
-craftingTable.addShaped("ctgui/new/mininggadgets/upgrade_size_2", <item:mininggadgets:upgrade_size_2>, [
-    [<item:botania:mana_pearl>, <item:botania:manasteel_pickaxe>, <item:botania:mana_pearl>],
-    [IIngredientEmpty.getInstance(), <item:mininggadgets:upgrade_size_1>, IIngredientEmpty.getInstance()],
-    [<item:botania:mana_pearl>, <item:botania:mana_powder>, <item:botania:mana_pearl>]]);
-
-<recipetype:minecraft:crafting>.removeByName("mininggadgets:upgrade_size_3");
-craftingTable.addShaped("ctgui/new/mininggadgets/upgrade_size_3", <item:mininggadgets:upgrade_size_3>, [
-    [<item:botania:pixie_dust>, <item:botania:elementium_pickaxe>, <item:botania:pixie_dust>],
-    [IIngredientEmpty.getInstance(), <item:mininggadgets:upgrade_size_2>, IIngredientEmpty.getInstance()],
-    [<item:botania:elementium_ingot>, <item:botania:pixie_dust>, <item:botania:elementium_ingot>]]);
-
-<recipetype:minecraft:crafting>.removeByName("mininggadgets:upgrade_battery_1");
-craftingTable.addShaped("ctgui/new/mininggadgets/upgrade_battery_1", <item:mininggadgets:upgrade_battery_1>, [
-    [<item:minecraft:quartz>, <item:techreborn:red_cell_battery>, <item:minecraft:quartz>],
-    [IIngredientEmpty.getInstance(), <item:mininggadgets:upgrade_empty>, IIngredientEmpty.getInstance()],
-    [<item:minecraft:quartz>, IIngredientEmpty.getInstance(), <item:minecraft:quartz>]]);
-
-<recipetype:minecraft:crafting>.removeByName("mininggadgets:upgrade_battery_2");
-craftingTable.addShaped("ctgui/new/mininggadgets/upgrade_battery_2", <item:mininggadgets:upgrade_battery_2>, [
-    [<item:minecraft:quartz>, <item:techreborn:lithium_ion_battery>, <item:minecraft:quartz>],
-    [IIngredientEmpty.getInstance(), <item:mininggadgets:upgrade_battery_1>, IIngredientEmpty.getInstance()],
-    [<item:minecraft:quartz>, IIngredientEmpty.getInstance(), <item:minecraft:quartz>]]);
-
-<recipetype:minecraft:crafting>.removeByName("mininggadgets:upgrade_void_junk");
-craftingTable.addShaped("ctgui/new/mininggadgets/upgrade_void_junk_0", <item:mininggadgets:upgrade_void_junk>, [
-    [<tag:item:c:dusts/redstone>, IIngredientEmpty.getInstance(), <tag:item:c:dusts/redstone>],
-    [<tag:item:c:ender_pearls>, <item:mininggadgets:upgrade_empty>, <tag:item:c:ender_pearls>],
-    [<tag:item:c:dusts/redstone>, <item:tesseract:tesseract>, <tag:item:c:dusts/redstone>]]);
-
-<recipetype:minecraft:crafting>.removeByName("mininggadgets:upgrade_battery_3");
-craftingTable.addShaped("ctgui/new/mininggadgets/upgrade_battery_3_0", <item:mininggadgets:upgrade_battery_3>, [
-    [IIngredientEmpty.getInstance(), <item:techreborn:lead_plate>, IIngredientEmpty.getInstance()],
-    [<item:techreborn:lithium_ion_battery>, <item:mininggadgets:upgrade_battery_2>, <item:techreborn:lithium_ion_battery>],
-    [<item:minecraft:quartz_block>, IIngredientEmpty.getInstance(), <item:minecraft:quartz_block>]]);
-
-<recipetype:minecraft:crafting>.removeByName("mininggadgets:upgrade_light_placer");
-craftingTable.addShaped("ctgui/new/mininggadgets/upgrade_light_placer", <item:mininggadgets:upgrade_light_placer>, [
-    [IIngredientEmpty.getInstance(), <item:techreborn:lamp_led>, IIngredientEmpty.getInstance()],
-    [<item:minecraft:glowstone>, <item:mininggadgets:upgrade_empty>, <item:minecraft:glowstone>],
-    [<item:minecraft:glowstone_dust>, IIngredientEmpty.getInstance(), <item:minecraft:glowstone_dust>]]);
-
-craftingTable.addShaped("ctgui/new/crafting/upgrade_battery_creative", <item:mininggadgets:upgrade_battery_creative>, [
-    [IIngredientEmpty.getInstance(), <item:oritech:advanced_battery>, IIngredientEmpty.getInstance()],
-    [<item:jsonreg:epoxy_resin_plate>, <item:mininggadgets:upgrade_battery_3>, <item:jsonreg:epoxy_resin_plate>],
-    [IIngredientEmpty.getInstance(), <item:oritech:advanced_battery>, IIngredientEmpty.getInstance()]]);
-
-<recipetype:minecraft:crafting>.removeByName("mininggadgets:mininggadget_fancy");
-craftingTable.addShaped("ctgui/new/mininggadgets/mininggadget_fancy", <item:mininggadgets:mininggadget_fancy>, [
-    [IIngredientEmpty.getInstance(), <item:techreborn:steel_plate>, <item:jsonreg:lv_robot_arm>],
-    [<item:oritech:laser_arm_block>, <item:mininggadgets:upgrade_empty>, IIngredientEmpty.getInstance()],
-    [IIngredientEmpty.getInstance(), <item:techreborn:steel_plate>, <item:jsonreg:lv_robot_arm>]]);
-
-<recipetype:minecraft:crafting>.removeByName("mininggadgets:mininggadget");
-craftingTable.addShaped("ctgui/new/mininggadgets/mininggadget", <item:mininggadgets:mininggadget>, [
-    [IIngredientEmpty.getInstance(), <item:jsonreg:mv_robot_arm>, IIngredientEmpty.getInstance()],
-    [<item:jsonreg:mv_emitter>, <item:mininggadgets:mininggadget_fancy>, <item:jsonreg:mv_sensor>],
-    [<item:techreborn:titanium_plate>, IIngredientEmpty.getInstance(), <item:techreborn:titanium_plate>]]);
-
 craftingTable.addShaped("ctgui/new/crafting/ore_crusher", <item:techreborn:ore_crusher>, [
     [IIngredientEmpty.getInstance(), <item:oritech:motor>, IIngredientEmpty.getInstance()],
     [<item:oritech:fluid_pipe>, <item:techreborn:basic_machine_frame>, <item:oritech:fluid_pipe>],
@@ -839,4 +768,36 @@ craftingTable.addShaped("ctgui/new/crafting/neko_aggregator", <item:toneko:neko_
     [IIngredientEmpty.getInstance(), <item:jsonreg:mv_electric_piston>, IIngredientEmpty.getInstance()],
     [<item:toneko:neko_ingot>, <item:botania:life_aggregator>, <item:toneko:neko_ingot>],
     [<item:techreborn:aluminum_plate>, <item:advanced_reborn:singularity_compressor>, <item:techreborn:aluminum_plate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/large_scale_assembling_casing", <item:jsonreg:large_scale_assembling_casing> * 4, [
+    [<item:techreborn:aluminum_plate>, IIngredientEmpty.getInstance(), <item:techreborn:aluminum_plate>],
+    [IIngredientEmpty.getInstance(), <item:techreborn:advanced_machine_frame>, IIngredientEmpty.getInstance()],
+    [<item:techreborn:aluminum_plate>, IIngredientEmpty.getInstance(), <item:techreborn:aluminum_plate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/stress_proof_casing", <item:jsonreg:stress_proof_casing> * 4, [
+    [<item:techreborn:steel_plate>, IIngredientEmpty.getInstance(), <item:techreborn:steel_plate>],
+    [IIngredientEmpty.getInstance(), <item:techreborn:iridium_plate>, IIngredientEmpty.getInstance()],
+    [<item:techreborn:steel_plate>, <item:techreborn:advanced_machine_casing>, <item:techreborn:steel_plate>]]);
+
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine_block/basic_machine_casing_alt_alt");
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine_block/basic_machine_casing_alt_alt", <item:techreborn:basic_machine_casing> * 8, [
+    [<tag:item:c:plates/aluminum>, <tag:item:c:plates/aluminum>, <tag:item:c:plates/aluminum>],
+    [<item:techreborn:electronic_circuit>, <item:techreborn:basic_machine_frame>, <item:techreborn:electronic_circuit>],
+    [<tag:item:c:plates/aluminum>, <tag:item:c:plates/aluminum>, <tag:item:c:plates/aluminum>]]);
+
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine_block/basic_machine_casing");
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine_block/basic_machine_casing", <item:techreborn:basic_machine_casing> * 6, [
+    [<item:techreborn:refined_iron_plate>, <item:techreborn:refined_iron_plate>, <item:techreborn:refined_iron_plate>],
+    [<item:techreborn:electronic_circuit>, <item:techreborn:basic_machine_frame>, <item:techreborn:electronic_circuit>],
+    [<item:techreborn:refined_iron_plate>, <item:techreborn:refined_iron_plate>, <item:techreborn:refined_iron_plate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/crushing_wheels", <item:jsonreg:crushing_wheels> * 4, [
+    [IIngredientEmpty.getInstance(), <item:techreborn:diamond_grinding_head>, IIngredientEmpty.getInstance()],
+    [<item:jsonreg:stress_proof_casing>, <item:techreborn:diamond_grinding_head>, <item:jsonreg:stress_proof_casing>],
+    [IIngredientEmpty.getInstance(), <item:jsonreg:mv_electric_motor>, IIngredientEmpty.getInstance()]]);
+
+craftingTable.addShaped("ctgui/new/crafting/steel_frame", <item:jsonreg:steel_frame>, [
+    [IIngredientEmpty.getInstance(), <item:jsonreg:steel_rod>, IIngredientEmpty.getInstance()],
+    [<item:jsonreg:steel_rod>, <item:techreborn:steel_ingot>, <item:jsonreg:steel_rod>],
+    [IIngredientEmpty.getInstance(), <item:jsonreg:steel_rod>, IIngredientEmpty.getInstance()]]);
 
