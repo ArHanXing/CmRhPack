@@ -18,7 +18,7 @@ version = 3
 # 
 defaultGlobalExecutorParallelismExpression = "default"
 # ================================================================
-# (Default: 5) Configures the parallelism of global executor
+# (Default: 9) Configures the parallelism of global executor
 globalExecutorParallelism = "default"
 # ================================================================
 # (Default: LOW) Sets the thread priority preset for worker threads
@@ -92,7 +92,7 @@ threadPoolPriorityPreset = "default"
 
 [noTickViewDistance]
 	# ================================================================
-	# (Default: 15) No-tick view distance max concurrent chunk loads 
+	# (Default: 27) No-tick view distance max concurrent chunk loads 
 	#  Lower this for a better latency and higher this for a faster loading
 	maxConcurrentChunkLoads = "default"
 	# ================================================================

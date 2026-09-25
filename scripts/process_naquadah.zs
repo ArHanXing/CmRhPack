@@ -110,6 +110,53 @@ import crafttweaker.api.ingredient.IIngredient;
     ]
 });
 
+// ========== 普通硅岩：粉 → 锭 → 板 ==========
+// 这里补的是一个断点：
+//   · jsonreg:naquadah_dust  —— 由 nqdh.2.centrifuge（副产 4）与深钻节点产出，但此前**没有任何消费者**；
+//   · jsonreg:naquadah_ingot —— 只有车床、精密装配在消耗，但此前**没有来源**。
+//
+// 两条烧锭路线，取舍在「炉温 vs 催化剂」：
+//   · 直接烧   ：需要 5000K（线圈等级要求高），不耗催化剂。
+//   · 催化烧   ：只要 4000K，但每锭多吃 1 单元灵魂注入催化剂。
+// 催化剂只作反应介质，**空单元必须还回来**（输出里的 {id: "techreborn:cell", count: 1} 就是它）。
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("nqdh.smelt.naquadah_ingot", {type: "techreborn:blast_furnace",
+    outputs: [
+        {id: "jsonreg:naquadah_ingot", count: 1}
+    ],
+    time: 400,
+    heat: 5000,
+    power: 128,
+    ingredients: [
+        {item: "jsonreg:naquadah_dust", count: 1}
+    ]
+});
+
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("nqdh.smelt.naquadah_ingot_catalyzed", {type: "techreborn:blast_furnace",
+    outputs: [
+        {id: "jsonreg:naquadah_ingot", count: 1},
+        {id: "techreborn:cell", count: 1}
+    ],
+    time: 200,
+    heat: 4000,
+    power: 128,
+    ingredients: [
+        {item: "jsonreg:naquadah_dust", count: 1},
+        {count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+// 硅岩锭 → 硅岩板（资源节点配方等在消耗此板）
+<recipetype:techreborn:compressor>.addJsonRecipe("nqdh.naquadah_plate", {type: "techreborn:compressor",
+    outputs: [
+        {id: "jsonreg:naquadah_plate", count: 1}
+    ],
+    time: 300,
+    power: 10,
+    ingredients: [
+        {item: "jsonreg:naquadah_ingot", count: 1}
+    ]
+});
+
 // 超能硅岩
 // ========== 阶段一：控爆粉碎 — 工业磨粉机 (HV, 氩气保护) ==========
 /*

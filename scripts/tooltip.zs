@@ -395,3 +395,5 @@ import crafttweaker.api.item.IItemStack;
 <item:oritech:black_hole_block>.addTooltip("吸收方块产生§b速子§r，是后期的强大、极不可控发电");
 
 <item:jsonreg:holy_wooden_bucket>.addTooltip("§b奇迹和魔法§r都是真实§c存在§r的！");
+
+<item:dream-stone:dream_stone>.addTooltip("在§b铁砧§r中与工具§a融合§r在一起，使其变得§e坚不可摧§r");

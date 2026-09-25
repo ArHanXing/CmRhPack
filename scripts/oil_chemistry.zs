@@ -50,7 +50,6 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:chemical_reactor>.removeByName("techreborn:chemical_reactor/nitrofuel");
 <recipetype:techreborn:chemical_reactor>.removeByName("techreborn:chemical_reactor/nitro_diesel");
 <recipetype:techreborn:chemical_reactor>.removeByName("techreborn:chemical_reactor/nitrocoal_fuel");
-// OR 遗留油品链 (still_biofuel / still_diesel / still_fuel) 与 TR 生物燃料不在本包产线设计中，移除其全部配方
 <recipetype:oritech:centrifuge_fluid>.removeByName("oritech:centrifuge/fluid/biofuel");
 <recipetype:oritech:refinery>.removeByName("oritech:refinery/biodiesel");
 <recipetype:oritech:refinery>.removeByName("oritech:refinery/heavyoil");
@@ -558,13 +557,29 @@ import crafttweaker.api.ingredient.IIngredient;
 
 //烧起来！
 //配方燃料定义
+//
+// ── 热值标定原则 ────────────────────────────────────────────────────────────
+//   产物热值 = 上一级原料热值 + 本步机器能耗 + 余量
+//   余量：0 ~ 小亏 = 「不亏」标定；约 +4k = 「小赚」标定。两者都是合法的，
+//   不要求每步都 +4k。禁止的是「倒亏」（Δ < 0）出现在燃料产线上。
+//
+// ── 两族发电机的热值换算（已从字节码/配置实测定标，改配方时按此对齐）───────
+//   TR 流体发电机：每桶恒定烧 1000 tick，故 每桶能量 = power × 1000 EU
+//       （BaseFluidGeneratorBlockEntity.tick()：每 tick 抽取 = euTick×81/power，
+//         与机器 euTick 相消 ⇒ 总能量只与 power 有关）
+//   OR 燃油发电机：每桶能量 = time × 5120 FE
+//       （oritech-common.toml generators.fuelGeneratorData.energyPerTick = 512，
+//         配方 amount=8100 即 100 mB，81000 = 1000 mB）
+//   ⇒ 两族等价条件：**power = 5.12 × time**。改一侧务必同步另一侧。
+//
+//   核算工具：scripts/tools/fuel_ledger.py（解析全部配方并逐步复算 Δ）
+//
 // ========== OR 燃油发电机配方 (消耗 100mB, amount=8100) ==========
-// 热值标定：不亏/小亏 = 上一级原料烧值 + 本步能耗；小赚 = 在此基础上约 +4k
 // 原油 (双 ID)
 <recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/crude_oil_tr", {type: "oritech:fuel_generator", results: [], time: 3, fluidInput: {fluid: "techreborn:oil", amount: 8100}, ingredients: []});
 <recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/crude_oil_or", {type: "oritech:fuel_generator", results: [], time: 3, fluidInput: {fluid: "oritech:still_oil", amount: 8100}, ingredients: []});
 // 脱盐原油
-<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/desalted_crude", {type: "oritech:fuel_generator", results: [], time: 8, fluidInput: {fluid: "jsonreg:desalted_crude", amount: 8100}, ingredients: []});
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/desalted_crude", {type: "oritech:fuel_generator", results: [], time: 4, fluidInput: {fluid: "jsonreg:desalted_crude", amount: 8100}, ingredients: []});
 // 常压渣油
 <recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/atmospheric_residue", {type: "oritech:fuel_generator", results: [], time: 10, fluidInput: {fluid: "jsonreg:atmospheric_residue", amount: 8100}, ingredients: []});
 // 减压柴油
@@ -582,15 +597,15 @@ import crafttweaker.api.ingredient.IIngredient;
 // 超低硫柴油
 <recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/ultra_low_sulfur_diesel", {type: "oritech:fuel_generator", results: [], time: 25, fluidInput: {fluid: "jsonreg:ultra_low_sulfur_diesel", amount: 8100}, ingredients: []});
 // 硝基柴油
-<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/nitro_diesel", {type: "oritech:fuel_generator", results: [], time: 86, fluidInput: {fluid: "techreborn:nitro_diesel", amount: 8100}, ingredients: []});
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/nitro_diesel", {type: "oritech:fuel_generator", results: [], time: 42, fluidInput: {fluid: "techreborn:nitro_diesel", amount: 8100}, ingredients: []});
 // 硝基碳燃油
-<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/nitrocoal_fuel", {type: "oritech:fuel_generator", results: [], time: 117, fluidInput: {fluid: "techreborn:nitrocoal_fuel", amount: 8100}, ingredients: []});
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/nitrocoal_fuel", {type: "oritech:fuel_generator", results: [], time: 48, fluidInput: {fluid: "techreborn:nitrocoal_fuel", amount: 8100}, ingredients: []});
 // 汽油
 <recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/gasoline", {type: "oritech:fuel_generator", results: [], time: 28, fluidInput: {fluid: "jsonreg:gasoline", amount: 8100}, ingredients: []});
 // 乙醇
 <recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/ethanol", {type: "oritech:fuel_generator", results: [], time: 12, fluidInput: {fluid: "jsonreg:ethanol", amount: 8100}, ingredients: []});
 // 硝酸乙酯
-<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/ethyl_nitrate", {type: "oritech:fuel_generator", results: [], time: 59, fluidInput: {fluid: "jsonreg:ethyl_nitrate", amount: 8100}, ingredients: []});
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/ethyl_nitrate", {type: "oritech:fuel_generator", results: [], time: 14, fluidInput: {fluid: "jsonreg:ethyl_nitrate", amount: 8100}, ingredients: []});
 // 裂解汽油
 <recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/pyrolysis_gasoline", {type: "oritech:fuel_generator", results: [], time: 16, fluidInput: {fluid: "jsonreg:pyrolysis_gasoline", amount: 8100}, ingredients: []});
 // 苯
@@ -605,7 +620,7 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:semi_fluid_generator>.addJsonRecipe("oil.burn.trsemi_fluid/crude_oil_tr", {type: "techreborn:semi_fluid_generator", power: 16, fluid: "techreborn:oil"});
 <recipetype:techreborn:semi_fluid_generator>.addJsonRecipe("oil.burn.trsemi_fluid/crude_oil_or", {type: "techreborn:semi_fluid_generator", power: 16, fluid: "oritech:still_oil"});
 // 脱盐原油
-<recipetype:techreborn:semi_fluid_generator>.addJsonRecipe("oil.burn.trsemi_fluid/desalted_crude", {type: "techreborn:semi_fluid_generator", power: 40, fluid: "jsonreg:desalted_crude"});
+<recipetype:techreborn:semi_fluid_generator>.addJsonRecipe("oil.burn.trsemi_fluid/desalted_crude", {type: "techreborn:semi_fluid_generator", power: 20, fluid: "jsonreg:desalted_crude"});
 // 常压渣油
 <recipetype:techreborn:semi_fluid_generator>.addJsonRecipe("oil.burn.trsemi_fluid/atmospheric_residue", {type: "techreborn:semi_fluid_generator", power: 50, fluid: "jsonreg:atmospheric_residue"});
 // 减压渣油
@@ -625,13 +640,13 @@ import crafttweaker.api.ingredient.IIngredient;
 // 超低硫柴油
 <recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/ultra_low_sulfur_diesel", {type: "techreborn:diesel_generator", power: 130, fluid: "jsonreg:ultra_low_sulfur_diesel"});
 // 硝基柴油
-<recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/nitro_diesel", {type: "techreborn:diesel_generator", power: 440, fluid: "techreborn:nitro_diesel"});
+<recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/nitro_diesel", {type: "techreborn:diesel_generator", power: 214, fluid: "techreborn:nitro_diesel"});
 // 硝基碳燃油
-<recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/nitrocoal_fuel", {type: "techreborn:diesel_generator", power: 600, fluid: "techreborn:nitrocoal_fuel"});
+<recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/nitrocoal_fuel", {type: "techreborn:diesel_generator", power: 244, fluid: "techreborn:nitrocoal_fuel"});
 // 汽油
 <recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/gasoline", {type: "techreborn:diesel_generator", power: 140, fluid: "jsonreg:gasoline"});
 // 硝酸乙酯
-<recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/ethyl_nitrate", {type: "techreborn:diesel_generator", power: 300, fluid: "jsonreg:ethyl_nitrate"});
+<recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/ethyl_nitrate", {type: "techreborn:diesel_generator", power: 74, fluid: "jsonreg:ethyl_nitrate"});
 // 裂解汽油
 <recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/pyrolysis_gasoline", {type: "techreborn:diesel_generator", power: 80, fluid: "jsonreg:pyrolysis_gasoline"});
 // 苯
@@ -649,7 +664,7 @@ import crafttweaker.api.ingredient.IIngredient;
 // 氢气
 <recipetype:techreborn:gas_generator>.addJsonRecipe("oil.burn.trgas/hydrogen", {type: "techreborn:gas_generator", power: 15, fluid: "techreborn:hydrogen"});
 // 甲烷
-<recipetype:techreborn:gas_generator>.addJsonRecipe("oil.burn.trgas/methane", {type: "techreborn:gas_generator", power: 40, fluid: "techreborn:methane"});
+<recipetype:techreborn:gas_generator>.addJsonRecipe("oil.burn.trgas/methane", {type: "techreborn:gas_generator", power: 25, fluid: "techreborn:methane"});
 // 燃料气
 <recipetype:techreborn:gas_generator>.addJsonRecipe("oil.burn.trgas/fuel_gas", {type: "techreborn:gas_generator", power: 40, fluid: "jsonreg:fuel_gas"});
 // 乙烯
@@ -662,6 +677,20 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:gas_generator>.addJsonRecipe("oil.burn.trgas/ammonia", {type: "techreborn:gas_generator", power: 20, fluid: "jsonreg:ammonia"});
 // 焦化气
 <recipetype:techreborn:gas_generator>.addJsonRecipe("oil.burn.trgas/coke_gas", {type: "techreborn:gas_generator", power: 35, fluid: "jsonreg:coke_gas"});
+
+// ========== 气体燃料的 OR 端补齐 ==========
+// 上面这些气体原先只有 TR 燃气发电机配方，OR 燃油发电机没有对应条目 ⇒ 玩家用 OR
+// 发电机时这些气体完全烧不了。此处按 power = 5.12 × time 补齐（time = round(power/5.12)）。
+// 焦炉气/燃料气等属于副产尾气，热值刻意压在轻石脑油(60)以下，作为「不浪费」的兜底燃料。
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/hydrogen",     {type: "oritech:fuel_generator", results: [], time: 3,  fluidInput: {fluid: "techreborn:hydrogen",        amount: 8100}, ingredients: []});
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/methane",      {type: "oritech:fuel_generator", results: [], time: 5,  fluidInput: {fluid: "techreborn:methane",         amount: 8100}, ingredients: []});
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/fuel_gas",     {type: "oritech:fuel_generator", results: [], time: 8,  fluidInput: {fluid: "jsonreg:fuel_gas",           amount: 8100}, ingredients: []});
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/coke_gas",     {type: "oritech:fuel_generator", results: [], time: 7,  fluidInput: {fluid: "jsonreg:coke_gas",           amount: 8100}, ingredients: []});
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/ethylene",     {type: "oritech:fuel_generator", results: [], time: 10, fluidInput: {fluid: "jsonreg:ethylene",           amount: 8100}, ingredients: []});
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/propylene",    {type: "oritech:fuel_generator", results: [], time: 9,  fluidInput: {fluid: "jsonreg:propylene",          amount: 8100}, ingredients: []});
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/butadiene",    {type: "oritech:fuel_generator", results: [], time: 9,  fluidInput: {fluid: "jsonreg:butadiene",          amount: 8100}, ingredients: []});
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/ammonia",      {type: "oritech:fuel_generator", results: [], time: 4,  fluidInput: {fluid: "jsonreg:ammonia",            amount: 8100}, ingredients: []});
+
 // ========== PBI 副产物燃烧配方 ==========
 
 // --- 纯硝基苯 (nitrobenzene) ---

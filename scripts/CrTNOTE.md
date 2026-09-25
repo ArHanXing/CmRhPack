@@ -13,6 +13,7 @@
   - `scripts/!recipedump.txt` —— `/ct` 导出的全量配方 dump（addJsonRecipe 形式，可当字典查）
   - `config/jsonreg_entries.json.md` —— jsonreg 注册内容设计稿（色号、产线、材料分级）
   - `config/openloader/packs/GTOreVein/README.md` —— 矿脉参数说明
+  - `scripts/tools/fuel_ledger.py` —— 燃料热值账本（燃料平衡专用，见 §6）
 
 ---
 
@@ -28,6 +29,11 @@
 4. 删除/查询用 `IRecipeManager` 公共方法：`removeByName(names)`、`remove(output)`、`removeByInput(input)`、`removeByModid`、`removeByRegex`、`removeAll()`、`getRecipeByName`、`recipeMap()`。
 5. 作者不会 onEvent 逻辑，如果LLM会可以写一些仅服务端逻辑。
 6. 一切机器都要考证其**最大输入输出槽位数**，例如蒸馏塔是4输入6输出；对其编写超过6个输出的配方不会有ZS显式编译错误，但是配方执行就 NPE 。
+   - **TR 磨粉机只有 1 个输出槽** ⇒ 输出数 > 1 的配方执行必 NPE。`oritech:pulverizer` 原有 5 条
+     双输出原矿配方（`raw/{iron,copper,gold,nickel,platinum}` → 主粉 + 小撮粉），一旦被移植到
+     TR 磨粉机就是埋雷，故在 `grinder_parity.zs` 开头把这 5 条全部 `removeByName`。
+   - 这类问题是**执行期炸弹**：编译期不报错，`/ct` 配方 dump 里也看不出异常，只有玩家真跑那条
+     配方时才崩。写任何配方前先确认目标机器的槽位数。
 7. **空流体单元作为输入，一定要写 `components: {"techreborn:fluid": "minecraft:empty"}`**。也就是 `{count: 2, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}`。否则会导致数据匹配的 Bug
 原版配方有快捷全局对象（等价于对应 recipetype）：
 
@@ -96,7 +102,7 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 | Botania 魔力灌注 | `botania:mana_infusion` | `input` / `output` / `catalyst` / `mana` | example.md |
 | Affinity 杜鹃灌注 | `affinity:aspen_infusion` | `primary_input` / `inputs` / `output` / `duration` / `flux_cost_per_tick` / `transfer_components` | etst&magic.zs |
 | Avaritia 无尽工作台 | `avaritia:extreme_crafting`（`type: "avaritia:extreme_shaped"`） | **9 行 pattern** 字符串 + `key` | t2/t3.zs |
-| Lychee | `lychee:block_interacting` / `block_clicking` / `item_inside` | JSON 原样；`item_inside` 的 `time` 单位是 **tick**（20/s） | refinedstorage.zs / misc.zs / bio_chemistry.zs |
+| Lychee | `lychee:block_interacting` / `block_clicking` / `item_inside` | JSON 原样；`item_inside` 的 `time` 单位是 **秒**（每秒判一次） | refinedstorage.zs / misc.zs / bio_chemistry.zs |
 
 ### 1.5 脚本即"配方生成器"
 
@@ -125,6 +131,8 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 | `tooltip.zs` | 元素符号/化学式/梗 tooltip | 0 |
 | `material_tags.zs` | 把 jsonreg 物品收编进 `c:` 标签 | 0 |
 | `ctgui_generated.zs` | CTGUI 导出（**不要手改**） | 0（108 处 craftingTable 修改） |
+| `no_bio_methane.zs` | 移除农作物产甲烷（37 移除 + 16 重建），生物线重做时整份删除 | 16 |
+| `grinder_parity.zs` | 小磨粉 OR↔TR 配方互通，仅 1 输出（由 `tools/grind_parity_gen.py` 生成） | 154 |
 
 配方 ID 前缀：`t0.` / `t1.` / `t2.` / `t3.` / `oil.` / `bio.` / `nqdh.` / `rs.` / `uni.` / `misc.` / `fix.` / `magic.` / `etst.` / `ctgui/`。
 
@@ -148,8 +156,15 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 - `<recipetype:minecraft:blasting_extra>` 是本包特例（t0.zs，1 次），不是标准管理器名。 注：该配方类型源自 EarlyStage mod，具体定义的是具有两个输入的原版高炉配方。没有用处
 - `craftingTable.remove(<item>)` 删的是"以该物品为输出的所有工作台配方"，机器配方要上对应 recipetype。
 - 注意：空气的注册名是 *低氧氮气*（来自jsonreg），氧气的注册名是 *压缩空气*（来自TR）。
-- Lychee 1.21 坑（实测/源码确认）：
-  - `item_inside` 的 `time` 单位是 **tick** 不是秒（`LycheeCounter` 每 tick +1，`count >= time` 触发）。
+- Lychee 1.21 坑（反编译 vineflower 核实）：
+  - `item_inside` 的 `time` 单位是 **秒**，不是 tick。`LycheeCounter` 每次调用 +1，
+    但调用点被 `mixin/recipes/iteminside/EntityMixin` 卡在 `entity.tickCount % 20 == 10`，
+    即**每秒判一次**（`snownee.lychee.recipes.ItemInsideRecipe#tickOrApply` 里 `count >= time` 触发）。
+    ⇒ `time: 200` 是 200 秒。早期文档写成 tick（20/s）会让所有时长差 20 倍，已订正。
+  - **`time` 有 300 秒硬上限**。进度计数器存在掉落物实体自己身上
+    （`ItemEntityMixin implements LycheeCounter`），而原版 `ItemEntity` 在 `age >= 6000` tick
+    （=300 秒）时 `discard()`，包内无 mod 修改该计时 ⇒ **`time >= 300` 的配方永远无法完成**。
+    写长时发酵一律留余量（当前用 240s）。
   - 本版本 `execute` 等 post_action 有 bug，**只用 `drop_item`**（`{type, id, count, components}`，Fabric 组件可直接写 `techreborn:fluid`）。
   - `item_in` 只支持 item/tag 精确匹配，**不支持 components 匹配**；要限带流体单元输入只能用桶/专用物品，或用 `count` 做批量。
 
@@ -342,3 +357,60 @@ GTOreVein/
 - `/ct dump recipetype` —— 列出全部可用 recipetype（官方文档确认所有 `<recipetype>` 由此得到）。
 - `/ct recipes` 类导出 —— 输出每个 recipetype 的现成配方为 `addJsonRecipe` 形式（`scripts/!recipedump.txt` 即此产物，可全文检索配方名与 JSON 结构）。
 - `/reload` —— 重载数据包/脚本；多人下 CrT tooltip 不显示属已知限制。
+
+---
+
+## 6. 燃料热值体系（`oil_chemistry.zs` + `bio_chemistry.zs`）
+
+### 6.1 标定原则
+
+**产物热值 = 上一级原料热值 + 本步机器能耗 + 余量**
+
+- 余量 0 ~ 小亏 ⇒「不亏」标定；余量约 +4k ⇒「小赚」标定。**两者都合法**，不要求每步都 +4k。
+- 唯一禁止的是**倒亏**（Δ < 0）出现在燃料产线上。
+- 例外：把燃料转成化工原料的「材料步」允许倒亏（PBI 线、塑料线），那是买材料的代价。
+
+### 6.2 两族发电机的热值换算（实测定标，勿凭感觉改）
+
+| | 每桶能量 | 依据 |
+|---|---|---|
+| TR 流体发电机 | `power × 1000` EU | `BaseFluidGeneratorBlockEntity.tick()`：每 tick 抽取 `euTick×81/power`，与机器 `euTick` 相消 |
+| OR 燃油发电机 | `time × 5120` FE | `oritech-common.toml` → `generators.fuelGeneratorData.energyPerTick = 512`；配方 `amount=8100` 即 100 mB |
+
+⇒ **等价条件 `power = 5.12 × time`**。改一侧必须同步另一侧，否则同一燃料在两族里热值不一致。
+
+> 另：TR 蒸馏塔的 cell 约定是 `1 桶流体 + N 个空单元 → (N+1) 桶产物`（原版 16 油 + 16 空 → 32 满）。
+> 本包常压蒸馏 `1 桶脱盐原油 + 3 空单元 → 4 桶产物` 就是靠这个 **×4 体积放大**，
+> 也是整条石化链净赚热值的主要来源，不是配错。
+
+### 6.3 核算工具
+
+```bash
+python scripts/tools/fuel_ledger.py            # 热值表 + 逐步 Δ + 问题清单
+python scripts/tools/fuel_ledger.py --fluid X  # 查某流体所有出处
+```
+
+账本会解析全部 `.zs`（自动剔除注释块里的旧 dump，避免把历史配方当真），
+对不可燃中间体用**残值分摊**推定账面热值（否则裂解气分离之类会显示假利润）。
+退出码非 0 表示存在**燃料产线**倒亏。改完配方务必跑一遍。
+
+### 6.4 生物线封锁（临时文件）
+
+`scripts/no_bio_methane.zs`：TR 工业离心机原本有 **37 条**配方能把任意农作物变成甲烷，
+其中 `methan_cell_from_kelp`（`time:100 power:5`）让 1 个海带 → 1 桶甲烷，
+成本 500 EU，而甲烷热值 25,000 EU/桶 —— **50 倍回报且完全可再生**。
+砍热值治不了（要让甲烷低于 500 EU/桶即 `power < 0.5`，整数做不到），只能移除配方本身。
+
+其中 16 条同时是材料回收配方（橡胶原木→8 树脂、诡异疣块→2 末影珍珠粉、菌光体→4 萤石粉、
+金苹果→金锭、珊瑚块→染料…），已在同文件内按原样重建、**仅摘掉甲烷产物**，避免连带砍掉材料线。
+**生物线重做时，整个文件删掉即可。**
+
+生物乙醇：已注册 `jsonreg:bio_ethanol`（**不可燃**），生物线产它，定位为本线自用化工原料
+（→乙烯→生物塑料）；燃料乙醇只有石化线 `oil.process.tr.ethanol`（乙烯 + 水）能出。
+
+> **遗留漏洞**：生物线仍可经 `bio_ethanol → 乙烯 → 烧/制乙醇` 绕回燃料（乙烯可燃，50 EU/mB）。
+> 量化下来它**不构成大不平衡**：9 小麦（1 干草块）→16 生物质→4 桶乙烯 = 200,000 EU，
+> 而粉碎 + 离心 + 脱水共耗 78,400 EU ⇒ 净 +121,600 EU（EROI ≈ 2.6×），
+> 远低于石化线（1 桶原油经蒸馏 ×4 体积放大即得 250,000 EU）。且受 300 秒发酵上限限制吞吐。
+> 它是一条**可再生但低效的备用电源**，替代不了石化。若日后要彻底切断，需再注册不可燃的
+> `bio_ethylene` 并把生物塑料原料一并换过去。

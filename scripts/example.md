@@ -2,7 +2,8 @@
 注意：工业磨粉机的流体输入格式很特别。
 注意：TR机器配方中描述流体单元，输入中的方法和输出的方法中不一样。
 - 输入中的方法： {count: 16, components: {"techreborn:fluid": "命名空间:你的流体"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
-- 输出中的方法： {id: "techreborn:cell", count: 15, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}},
+由于匹配问题，
+- 输出中的方法： {id: "techreborn:cell", count: 15, components: {"techreborn:fluid": "命名空间:你的流体"}},
 
 # 工业磨粉机 TR
 ```
