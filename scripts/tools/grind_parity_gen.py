@@ -25,6 +25,24 @@ RATE = 32                     # OR 粉碎机 FE/t
 OR_M, TR_M = "oritech:pulverizer", "techreborn:grinder"
 SKIP = re.compile(r"^(oritech:recyclable/)|(_material|_template)$")
 
+# 与 general_ore_process.zs 的 T1 冲突的条目：矿石入口已由 T1 统一接管，
+# OR 粉碎机的矿石处理属于 T1.5，故这些镜像配方不再生成。
+# （油砂 / 金红石属特殊线，保留其镜像，不在此列。）
+SKIP_GENERATED = {
+    "grind.parity.pulverizer_ore_platinum",          # T1 general.t1.raw_platinum 接管
+    "grind.parity.pulverizer_uraniumore",            # T1 general.t1.raw_uranium 接管
+    "grind.parity.grinder_emerald",                  # T1 general.t1.emerald 接管
+    "grind.parity.grinder_sulfur_dust",              # T1 general.t1.sulfur 接管
+    "grind.parity.oil_other_tr_normalgrind_salt",    # T1 general.t1.salt 接管
+    "grind.parity.oil_other_tr_normalgrind_rocksalt",# T1 general.t1.rock_salt 接管
+    # 末影珍珠：双向移植会让**同一台机器同时出** enderic_compound 与 ender_pearl_dust，
+    # 在 EMI 里两条配方并排、玩家不知道该用哪条。改为各机各管一物：
+    #   OR 粉碎机 → oritech:enderic_compound（本体配方 oritech:pulverizer/pearl_enderic）
+    #   TR 磨粉机 → techreborn:ender_pearl_dust（本体配方 techreborn:grinder/ender_pearl）
+    "grind.parity.pulverizer_pearl_enderic",
+    "grind.parity.grinder_ender_pearl_dust",
+}
+
 
 def objs(seg):
     out, i = [], 1
@@ -81,20 +99,17 @@ for r in all_recs:
         coverage[r["machine"]][k].update(o[0] for o in r["outs"])
 
 lines, added = [], {"to_TR": 0, "to_OR": 0}
+skipped = set()
 
 # ── 机器输出槽限制 ────────────────────────────────────────────────────────────
-# TR 磨粉机只有 1 个输出槽：任何输出数 > 1 的配方在执行时都会 NPE
-# （CrTNOTE §1.1 第 6 条：超出槽位不会有编译错误，但配方执行就 NPE）。
-# 因此两台小磨粉上一律不允许存在多输出配方 —— 先全部移除，再按 1 输出规则互通。
+# TR 磨粉机只有 1 个输出槽：输出数 > 1 的配方在执行时都会 NPE。
+# 但这 5 条多输出配方（oritech:pulverizer/raw/*）**已由 general_ore_process.zs 清退** ——
+# 它按字母序先加载，且其清退正则会匹配 c:raw_materials/* 输入。
+# 若这里再 removeByName 一次，CrT 会刷 5 条
+#   [WARN]: No recipe with type: 'oritech:pulverizer' and name: '...'
+# 故此处**不再重复删除**，仅记录。
 # 注意：这条规则是"执行期炸弹"，编译期/RECIPE DUMP 都看不出来。
-removals = [r["name"] for r in ignored if r["machine"] in (OR_M, TR_M)]
-for r in ignored:
-    if r["machine"] in (OR_M, TR_M):
-        lines.append(
-            f'// 多输出配方，TR 磨粉机只有 1 个输出槽 → 执行必 NPE，移除。'
-            f'（输入 {" ".join(v for _, v in r["ins"])}）\n'
-            f'<recipetype:{r["machine"]}>.removeByName("{r["name"]}");'
-        )
+skipped_removals = [r["name"] for r in ignored if r["machine"] in (OR_M, TR_M)]
 
 for r in all_recs:
     other = TR_M if r["machine"] == OR_M else OR_M
@@ -105,6 +120,10 @@ for r in all_recs:
         cond = ", ".join(('{item: "%s"}' if kk == "item" else '{tag: "%s"}') % v for kk, v in r["ins"])
         out_txt = r["outs"][0][2]
         short = re.sub(r"[^a-z0-9_]+", "_", r["name"].split(":", 1)[-1])
+        if f"grind.parity.{short}" in SKIP_GENERATED:
+            coverage[other].setdefault(k, set()).update(mine)
+            skipped.add(short)
+            break
         if other == TR_M:
             head, extra = "outputs", f"power: 32, time: {r['time'] or 100}, "
             added["to_TR"] += 1
@@ -130,11 +149,18 @@ header = """// ============================================================
 // 规则：
 //   · 只做小磨粉对。工业研磨（TR 工业磨粉机 / OR 碎裂机）不参与互通。
 //   · **机器输出槽限制**：TR 磨粉机只有 1 个输出槽，输出数 > 1 的配方执行必 NPE
-//     （CrTNOTE §1.1 第 6 条），所以两台小磨粉上一律不允许有多输出配方 ——
-//     文件开头先把原有的多输出配方全部 removeByName，再按 1 输出规则互通。
+//     （CrTNOTE §1.1 第 6 条），所以本文件只生成单输出配方。
+//     原有那 5 条多输出的 oritech:pulverizer/raw/* 已由 **general_ore_process.zs 清退**，
+//     本文件不再重复 removeByName（重复删会让 CrT 刷 "No recipe" 警告）。
 //   · 只补"另一侧完全做不出来的产物"；仅产出**数量**不同不算缺口
 //     （uni.zs 已定 OR 为下位、TR 为上位，数量差是分层设计）。
+//   · **末影珍珠例外**：双向移植会让同一台机器同时出 enderic_compound 与 ender_pearl_dust，
+//     EMI 里两条并排、玩家不知选哪条。改为各机各管一物：
+//       OR 粉碎机 → enderic_compound ／ TR 磨粉机 → ender_pearl_dust。
 //   · 等能耗移植：移到 TR 用 power 32（对齐 OR 粉碎机），移到 OR 用 P×T/32 折算 time。
+//
+// ⚠ 本文件基于 !recipedump.txt 生成，而 dump 是**易变快照**（每次 /reload 后可重新导出，
+//   内容会随脚本改动而变）。重跑生成器前先确认 dump 是最新的，否则会按旧状态生成。
 //
 // 由 scripts/tools/grind_parity_gen.py 生成，改完原配方重跑即可。
 // ============================================================
@@ -149,8 +175,12 @@ print(f"  参与互通的 1 输出配方：OR 粉碎机 {sum(1 for r in all_recs
 print(f"  补齐：→ TR 磨粉机 {added['to_TR']} 条，→ OR 粉碎机 {added['to_OR']} 条，"
       f"合计 {added['to_TR'] + added['to_OR']}")
 print(f"  已写出 scripts/grinder_parity.zs（{len(lines)} 条配方）")
+if skipped:
+    print(f"  因与 general_ore_process.zs 的 T1 冲突而跳过 {len(skipped)} 条：")
+    for s in sorted(skipped):
+        print(f"    {s}")
 print()
-print(f"=== 已移除的多输出配方（{len(removals)} 条；TR 磨粉机只有 1 个输出槽，执行必 NPE）===")
+print(f"=== 已移除的多输出配方（{len(skipped_removals)} 条；由 general_ore_process.zs 负责清退，此处不重复删）===")
 for r in ignored:
     if r["machine"] in (OR_M, TR_M):
         ins = ", ".join(v for _, v in r["ins"])

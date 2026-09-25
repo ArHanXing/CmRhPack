@@ -52,3 +52,4 @@ JDK: Temurin 26
 打包：删除 fuji/backup fuji/cache fuji/modules/home
 调回快捷键 N 和 Q
 移除 ctgui
+移除 voxy 自编译版本

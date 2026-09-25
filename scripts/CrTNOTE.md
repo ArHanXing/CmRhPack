@@ -35,6 +35,27 @@
    - 这类问题是**执行期炸弹**：编译期不报错，`/ct` 配方 dump 里也看不出异常，只有玩家真跑那条
      配方时才崩。写任何配方前先确认目标机器的槽位数。
 7. **空流体单元作为输入，一定要写 `components: {"techreborn:fluid": "minecraft:empty"}`**。也就是 `{count: 2, base: {item: "techreborn:cell"}, components: {"techreborn:fluid": "minecraft:empty"},  "fabric:type": "fabric:components"}`。否则会导致数据匹配的 Bug
+8. **OR 离心机只支持大小为 1 的输入**（`oritech:centrifuge` 与 `oritech:centrifuge_fluid` 都是）。
+   物品 `count` 与流体桶数都必须是 **1**；写 `count: 3` 这类进料不会编译报错，但配方无法正常执行。
+   - 实测确认（2026-09 全库自查）：违反此条的只有基础矿处 t15c 的 17 条（已修）。
+   - **倍率不能靠进料侧堆叠**：离心机进料恒为 1，增产只能做在**产出侧**。
+     基础矿处 T1.5 的唯一倍增点因此是 `t15d`：1 石 → 3 粉。
+   - **精炼厂 `oritech:refinery` 不受此限**：naquadah 线（`nqdh.3` 等）在用 `count: 10 / 4 / 2`
+     且实际可跑，故浸出步 `粗矿 ×2` 是安全的。
+   - 写 OR 机器配方前，先确认该机器是"1 输入"还是"多输入"：**离心机 1，精炼厂多**。
+9. **配方名全局唯一**。CrT 的 `addJsonRecipe(name, ...)` 里 name 是全局 key（运行时前缀 `crafttweaker:`）。
+   两台不同机器用**同一个 name** 不会编译报错，但会让 `SynchronizeRecipesS2C` 抛
+   `IllegalArgumentException: Multiple entries with same key` —— **玩家直接连不上服务器**。
+   - 实际踩过：T1b 给 TR 磨粉机与 OR 粉碎机都写了 `general.t1b.grind_raw.<金属>`，11 组重名。
+     修法是加机器后缀（`.tr.` / `.or.`）。
+   - 这是**连接期炸弹**：单机 `/reload` 看不出问题，只有客户端加入时才炸。
+   - 每轮改完跑 `python scripts/tools/audit_recipes.py` 可一次查出重名 / 槽位越界 / 离心机超限 / 清退不一致。
+10. **`!recipedump.txt` 是易变快照，不能拿它当"待清退清单"的来源**。
+    dump 反映的是**当前生效**的配方；一旦脚本里的清退生效、dump 被重新导出，
+    被清退的旧配方就不在 dump 里了 → 再枚举会得到 0 条 → **整段清退静默丢失**。
+    - 实际踩过：dump 从 2026-09-04 更新到 09-25 后，清退从 142 条变 0 条（已从 git 旧 dump 恢复）。
+    - 正确做法：清退清单**冻结**在 `scripts/tools/frozen_removals.json`，
+      生成器读它而不是现场枚举；`audit_recipes.py` 会校验两者一致。
 原版配方有快捷全局对象（等价于对应 recipetype）：
 
 ```zenscript
@@ -132,9 +153,14 @@ TR 机器里的流体用 **单元（cell）+ 组件** 表示，且**输入和输
 | `material_tags.zs` | 把 jsonreg 物品收编进 `c:` 标签 | 0 |
 | `ctgui_generated.zs` | CTGUI 导出（**不要手改**） | 0（108 处 craftingTable 修改） |
 | `no_bio_methane.zs` | 移除农作物产甲烷（37 移除 + 16 重建），生物线重做时整份删除 | 16 |
-| `grinder_parity.zs` | 小磨粉 OR↔TR 配方互通，仅 1 输出（由 `tools/grind_parity_gen.py` 生成） | 154 |
+| `grinder_parity.zs` | 小磨粉 OR↔TR 配方互通，仅 1 输出（由 `tools/grind_parity_gen.py` 生成；清退已移交 general_ore_process.zs，本文件 0 条移除） | 148 |
+| `general_ore_process.zs` | **基础矿物处理重写**：T1 / T1b / T1.5 / T2 / T2.3 **全部实装**；含 142 条旧矿石配方清退 | 205 |
 
-配方 ID 前缀：`t0.` / `t1.` / `t2.` / `t3.` / `oil.` / `bio.` / `nqdh.` / `rs.` / `uni.` / `misc.` / `fix.` / `magic.` / `etst.` / `ctgui/`。
+**脚本加载顺序 = 文件名字母序**（`misc.zs` 声明 → `precision_assembly.zs` 转换就是这个依赖）。
+⇒ `removeByName` 只能删**已声明且名字更靠前**的配方。`general_ore_process.zs` 排在 `oil_chemistry.zs`、
+`grinder_parity.zs` 之前，**不能**用它反向删除这两个文件里的配方；要删必须去声明处删。
+
+配方 ID 前缀：`t0.` / `t1.` / `t2.` / `t3.` / `oil.` / `bio.` / `nqdh.` / `rs.` / `uni.` / `misc.` / `fix.` / `magic.` / `etst.` / `ctgui/` / `general.t1.` / `general.t15.` / `general.t2.` / `general.t23.`。
 
 ### 1.7 Tooltip 与物品组件
 
