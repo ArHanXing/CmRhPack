@@ -144,23 +144,6 @@ craftingTable.removeByName("oritech:crafting/atomicforge");
     ]
 });
 
-//单晶硅
-<recipetype:oritech:refinery>.removeByName("oritech:refinery/siliconwashing");
-<recipetype:oritech:refinery>.addJsonRecipe("t2.oritech.refinery/siliconwashing", {type: "oritech:refinery",
-    results: [{id: "jsonreg:silicon_boule", count: 1}], time: 160,
-    fluidInput: {fluid: "oritech:still_silicon_wash"}, ingredients: [{item:"oritech:silicon"}]
-});
-
-//堕落智能
-<recipetype:oritech:atomic_forge>.addJsonRecipe("t2.oritech.atomicforge/unholy_intelligence", {type: "oritech:atomic_forge", 
-    fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:unholy_intelligence", count: 1}], 
-    time: 60, fluidInput: {fluid: "minecraft:empty", amount: 0}, 
-    ingredients: [{item: "oritech:dubios_container"}, {item: "oritech:biomass_block"}, {item: "oritech:duratium_ingot"}]});
-<recipetype:oritech:atomic_forge>.addJsonRecipe("t2.oritech.atomicforge/unholy_intelligence_from_advc", {type: "oritech:atomic_forge", 
-    fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:unholy_intelligence", count: 1}], 
-    time: 60, fluidInput: {fluid: "minecraft:empty", amount: 0}, 
-    ingredients: [{item: "oritech:dubios_container"}, {item: "oritech:advanced_computing_engine"}, {item: "oritech:advanced_computing_engine"}]});
-
 //基岩钻机
 craftingTable.remove(<item:oritech:deep_drill_block>);
 <recipetype:avaritia:extreme_crafting>.addJsonRecipe("t2.oritech.deep_drill", {type: "avaritia:extreme_shaped", result: {id: "oritech:deep_drill_block", count: 2}, pattern: 
@@ -170,14 +153,75 @@ craftingTable.remove(<item:oritech:deep_drill_block>);
  " E     E ", 
  " E     E ", 
  " E FCF E ", 
- " EDC CDE ", 
- "HDABCBADH", 
- " AHGGGHA "], 
+ " EDCFCDE ", 
+ "HBHDCDHBH", 
+ "  HGGGH  "], 
 key: {
-    A: {item:"techreborn:steel_plate"},B:{item:"oritech:duratium_block"},C:{item:"techreborn:advanced_machine_frame"},
-    D:{item:"techreborn:advanced_alloy_plate"},E:{item:"oritech:motor"},F:{item:"oritech:heisenberg_compensator"},
+    B:{item:"techreborn:iridium_storage_block"},C:{item:"techreborn:advanced_machine_frame"},
+    D:{item:"techreborn:advanced_alloy_plate"},E:{item:"jsonreg:mv_electric_motor"},F:{item:"techreborn:advanced_circuit"},
     G:{item:"techreborn:diamond_grinding_head"},H:{tag:"oritech:plating"}
 }});
+
+//灵魂注入环氧树脂
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("t2.tr.chemical_reactor/soul_infused_epoxy_resin_plate", {
+    type: "techreborn:chemical_reactor",
+    time: 200,
+    outputs: [
+        {id: "jsonreg:soul_infused_epoxy_resin_plate", count: 1},
+        {id: "techreborn:cell", count: 1}
+    ],
+    power: 128,
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, item:"jsonreg:epoxy_resin_plate"}
+    ]
+});
+//进阶电路基板
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("t2.tr.assembly/advanced_circuit_board", {type: "techreborn:precise_assembler", 
+    outputs: [
+        {id: "jsonreg:advanced_circuit_board", count: 2},
+        {id: "techreborn:cell", count: 1}
+    ],
+    time: 200, power: 128,
+    ingredients: [
+        {count: 2, item:"jsonreg:soul_infused_epoxy_resin_plate"},
+        {count: 16, item:"techreborn:hv_cable"},
+        {count: 8, item:"jsonreg:smd_capacitor"},
+        {count: 8, item:"jsonreg:smd_diode"},
+        {count: 8, item:"jsonreg:smd_inductor"},
+        {count: 8, item:"jsonreg:smd_resistor"},
+        {count: 8, item:"jsonreg:smd_transistor"},
+        {count: 1, components: {"techreborn:fluid": "techreborn:sodium_persulfate"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+//单晶硅和硅晶圆
+<recipetype:oritech:centrifuge_fluid>.removeByName("oritech:centrifuge/fluid/siliconwafers");
+<recipetype:oritech:atomic_forge>.removeByName("oritech:atomicforge/wafer");
+<recipetype:oritech:refinery>.removeByName("oritech:refinery/siliconwashing");
+<recipetype:oritech:refinery>.addJsonRecipe("t2.oritech.refinery/siliconwashing", {type: "oritech:refinery",
+    results: [{id: "jsonreg:silicon_boule", count: 1}], time: 160,
+    fluidInput: {fluid: "oritech:still_silicon_wash"}, ingredients: [{item:"oritech:silicon"}]
+});
+<recipetype:techreborn:industrial_sawmill>.addJsonRecipe("t2.tr.industrial_sawmill/wafer", {type: "techreborn:industrial_sawmill",
+    outputs: [{id: "oritech:silicon_wafer", count: 2}],
+    time: 100,
+    fluid: {fluid: {fluid: "homeostatic:purified_water"}, amount: {value: 81000}},
+    power: 30,
+    ingredients: [{item: "jsonreg:silicon_boule"}]
+});
+//t2主机
+<recipetype:oritech:atomic_forge>.removeByName("oritech:atomicforge/advcomputer");
+<recipetype:oritech:atomic_forge>.addJsonRecipe("t2.or.atomicforge/advcomp", {type: "oritech:atomic_forge",
+    time: 50,
+    results: [
+        {id: "oritech:advanced_computing_engine", count: 1}
+    ],
+    ingredients: [
+        {item: "jsonreg:advanced_circuit_board"},
+        {item: "oritech:silicon_wafer"},
+        {item: "oritech:silicon_wafer"}
+    ]
+});
 
 //过充水晶
 craftingTable.removeByName("oritech:motor/overchargedcrystal");
@@ -197,9 +241,7 @@ craftingTable.addShaped("t2.oritech.crafting/particlecontroller_alt", <item:orit
 fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:prometheum_ingot", count: 1}], time: 2500, 
 fluidInput: {fluid: "minecraft:empty", amount: 0}, ingredients: [{item: "oritech:overcharged_crystal"}, {item: "oritech:heisenberg_compensator"}]});
 
-//t2/t3大电路
-<recipetype:oritech:centrifuge_fluid>.removeByName("oritech:centrifuge/fluid/siliconwafers");
-<recipetype:oritech:atomic_forge>.removeByName("oritech:atomicforge/wafer");
+//t3大电路
 <recipetype:oritech:atomic_forge>.removeByName("oritech:atomicforge/aicomputer");
 <recipetype:oritech:atomic_forge>.addJsonRecipe("t2.oritech.atomicforge/aicomputer", {type: "oritech:atomic_forge", 
 fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:super_ai_chip", count: 2}], time: 100, 

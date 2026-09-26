@@ -9,12 +9,20 @@
 	id: "25FA9A53471EF296"
 	images: [ ]
 	order_index: 0
-	quest_links: [{
-		id: "13F15D9A84FA430F"
-		linked_quest: "45E45ECA23073D45"
-		x: 0.0d
-		y: 0.0d
-	}]
+	quest_links: [
+		{
+			id: "13F15D9A84FA430F"
+			linked_quest: "45E45ECA23073D45"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "1D5391AEA92B5524"
+			linked_quest: "3E52BE64FFDF510A"
+			x: 6.0d
+			y: 12.5d
+		}
+	]
 	quests: [
 		{
 			dependencies: ["45E45ECA23073D45"]
@@ -124,27 +132,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["53AA2049025E385C"]
-			icon_scale: 1.5d
-			id: "7984341B1F8A7D4F"
-			rewards: [{
-				id: "5C8CD9CC2D25F797"
-				item: {
-					count: 1
-					id: "techreborn:drain"
-				}
-				type: "item"
-			}]
-			shape: "none"
-			tasks: [{
-				id: "4ACCE0618E263809"
-				item: { count: 1, id: "techreborn:industrial_grinder" }
-				type: "item"
-			}]
-			x: 4.0d
-			y: 4.0d
-		}
-		{
 			dependencies: [
 				"19B129C75C1F02CE"
 				"30CE4267C956EB97"
@@ -157,54 +144,6 @@
 			}]
 			x: 8.0d
 			y: 2.5d
-		}
-		{
-			dependencies: ["53AA2049025E385C"]
-			icon_scale: 1.5d
-			id: "4A83EC81A1F041BE"
-			shape: "none"
-			tasks: [{
-				id: "796E83163006F44D"
-				item: { count: 1, id: "techreborn:large_compressor" }
-				type: "item"
-			}]
-			x: 4.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["53AA2049025E385C"]
-			icon_scale: 1.5d
-			id: "263C783EF126D235"
-			shape: "none"
-			tasks: [{
-				id: "62D47ACD2F935AFE"
-				item: { count: 1, id: "techreborn:large_wire_mill" }
-				type: "item"
-			}]
-			x: 3.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["53AA2049025E385C"]
-			icon_scale: 1.5d
-			id: "7A4EAD81A7A7CB84"
-			rewards: [{
-				count: 5
-				id: "79367AFF38F4BE37"
-				item: {
-					count: 1
-					id: "techreborn:industrial_machine_casing"
-				}
-				type: "item"
-			}]
-			shape: "none"
-			tasks: [{
-				id: "1D63ABF618556DA6"
-				item: { count: 1, id: "techreborn:large_lathe" }
-				type: "item"
-			}]
-			x: 3.0d
-			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -249,7 +188,7 @@
 				"18982C95A36D7767"
 				"7D6E4702A5CFB967"
 			]
-			icon_scale: 1.5d
+			icon_scale: 2.0d
 			id: "1AD4B94F3C6CDEA3"
 			rewards: [
 				{
@@ -288,7 +227,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 6.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["53AA2049025E385C"]
@@ -301,7 +240,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 6.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1AD4B94F3C6CDEA3"]
@@ -311,8 +250,8 @@
 				item: { count: 1, id: "techreborn:coil_molybdenum_disilicide" }
 				type: "item"
 			}]
-			x: 12.5d
-			y: 6.5d
+			x: 13.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["3828208ACBBFA5CD"]
@@ -322,8 +261,8 @@
 				item: { count: 1, id: "techreborn:iridium_ingot" }
 				type: "item"
 			}]
-			x: 15.0d
-			y: 6.5d
+			x: 15.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1AD4B94F3C6CDEA3"]
@@ -346,7 +285,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 9.0d
+			y: 8.5d
 		}
 		{
 			dependencies: ["19B129C75C1F02CE"]
@@ -361,80 +300,42 @@
 		}
 		{
 			dependencies: ["18982C95A36D7767"]
+			icon_scale: 1.5d
 			id: "25DA21E1A23AFB66"
+			shape: "gear"
+			size: 1.5d
 			tasks: [{
 				id: "1D6518179430F60B"
 				item: { count: 1, id: "oritech:fragment_forge_block" }
 				type: "item"
 			}]
-			x: 10.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["53AA2049025E385C"]
-			icon_scale: 1.5d
-			id: "21EBE9C287EE68FB"
-			shape: "none"
-			tasks: [{
-				id: "2A4BDAF8F7BE1DB9"
-				item: { count: 1, id: "techreborn:large_centrifuge" }
-				type: "item"
-			}]
-			x: 3.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["53AA2049025E385C"]
-			icon_scale: 1.5d
-			id: "60EC5A140300B229"
-			shape: "none"
-			tasks: [{
-				id: "08C15CC745A2215D"
-				item: { count: 1, id: "techreborn:large_ore_crusher" }
-				type: "item"
-			}]
-			x: 4.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["53AA2049025E385C"]
-			icon_scale: 1.5d
-			id: "22B33A0AD7F536C6"
-			shape: "none"
-			tasks: [{
-				id: "4412EDD3D939744C"
-				item: { count: 1, id: "techreborn:large_greenhouse" }
-				type: "item"
-			}]
-			x: 3.0d
-			y: 7.0d
-		}
-		{
-			dependencies: ["53AA2049025E385C"]
-			icon_scale: 1.5d
-			id: "285B731B937DD6A2"
-			shape: "none"
-			tasks: [{
-				id: "2597DBC32D580559"
-				item: { count: 1, id: "techreborn:large_ranch" }
-				type: "item"
-			}]
-			x: 4.0d
-			y: 7.0d
+			x: 13.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["772610A3E275BB52"]
 			icon_scale: 2.0d
 			id: "61FBB4A1F3670D1D"
-			rewards: [{
-				count: 16
-				id: "626C08A2D3F14A60"
-				item: {
-					count: 1
-					id: "jsonreg:coin"
+			rewards: [
+				{
+					count: 16
+					id: "626C08A2D3F14A60"
+					item: {
+						count: 1
+						id: "jsonreg:coin"
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					count: 2
+					id: "1CA29CC6E6422E04"
+					item: {
+						count: 1
+						id: "oritech:resource_node_iron"
+					}
+					type: "item"
+				}
+			]
 			shape: "none"
 			size: 1.5d
 			tasks: [{
@@ -442,8 +343,8 @@
 				item: { count: 1, id: "oritech:deep_drill_block" }
 				type: "item"
 			}]
-			x: 15.0d
-			y: 9.0d
+			x: 15.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["7D6E4702A5CFB967"]
@@ -471,22 +372,154 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
-			y: 9.0d
+			x: 4.0d
+			y: 6.0d
 		}
 		{
-			dependencies: [
-				"67AC8EFAAD62D3C1"
-				"1EAFAB5DA9A8EB5C"
-			]
+			dependencies: ["1EAFAB5DA9A8EB5C"]
 			id: "0DB4A12135FBEF20"
+			rewards: [{
+				count: 16
+				id: "797434FA8185BBC1"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "62005C8A4AA070F0"
 				item: { count: 1, id: "jsonreg:epoxy_resin_plate" }
 				type: "item"
 			}]
-			x: 12.5d
-			y: 9.0d
+			x: 6.0d
+			y: 8.5d
+		}
+		{
+			dependencies: [
+				"0DB4A12135FBEF20"
+				"3E52BE64FFDF510A"
+			]
+			icon_scale: 2.0d
+			id: "377429EAD7EA8691"
+			rewards: [{
+				count: 16
+				id: "5FE905CDAA2A911A"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
+			shape: "pentagon"
+			tasks: [{
+				id: "07F971DAEA2E66E7"
+				item: { count: 1, id: "jsonreg:soul_infused_epoxy_resin_plate" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"67AC8EFAAD62D3C1"
+				"377429EAD7EA8691"
+			]
+			icon_scale: 2.0d
+			id: "0521285CB1A813C8"
+			tasks: [{
+				id: "639B7849565EF59C"
+				item: { count: 1, id: "jsonreg:advanced_circuit_board" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"0521285CB1A813C8"
+				"502833704772CF94"
+			]
+			icon_scale: 2.0d
+			id: "3B19660470751464"
+			rewards: [{
+				count: 32
+				id: "01AEBDE042141F45"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "0B5690E8921CC000"
+				item: { count: 1, id: "oritech:advanced_computing_engine" }
+				type: "item"
+			}]
+			x: 13.0d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"41F233339A75610C"
+				"0D8BC8155C168250"
+				"576F587D27E372F8"
+			]
+			id: "502833704772CF94"
+			tasks: [{
+				id: "6675E3C165BE8D17"
+				item: { count: 1, id: "oritech:silicon_wafer" }
+				type: "item"
+			}]
+			x: 13.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["6F9FE141CA2BC2FA"]
+			id: "41F233339A75610C"
+			tasks: [{
+				id: "12E3AC36DD37D689"
+				item: { count: 1, id: "jsonreg:silicon_boule" }
+				type: "item"
+			}]
+			x: 11.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["42E203F6AFEDD132"]
+			id: "6F9FE141CA2BC2FA"
+			tasks: [{
+				id: "050210DB8773C39B"
+				item: { components: { "techreborn:fluid": "oritech:still_silicon_wash" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["0B79CCECAB548F7D"]
+			id: "0D8BC8155C168250"
+			tasks: [{
+				id: "0CE29652990DAD0C"
+				item: { count: 1, id: "techreborn:industrial_sawmill" }
+				type: "item"
+			}]
+			x: 15.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["56A37FB3BDD63D29"]
+			id: "576F587D27E372F8"
+			tasks: [{
+				id: "4C06699FCEEC9866"
+				item: { components: { "techreborn:fluid": "homeostatic:purified_water" }, count: 1, id: "techreborn:cell" }
+				type: "item"
+			}]
+			x: 13.0d
+			y: 14.0d
 		}
 	]
 }

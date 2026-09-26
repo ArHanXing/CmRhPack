@@ -1,16 +1,296 @@
 {
-	default_hide_dependency_lines: false
+	default_hide_dependency_lines: true
 	default_quest_shape: ""
 	filename: "br"
 	group: "65B400649AF290A7"
+	icon: {
+		id: "techreborn:distillation_tower"
+	}
 	id: "7185BE617E154297"
 	images: [ ]
 	order_index: 6
-	quest_links: [{
-		id: "274C60B7EADA109F"
-		linked_quest: "7A4EAD81A7A7CB84"
-		x: 0.0d
-		y: 0.0d
-	}]
-	quests: [ ]
+	quest_links: [
+		{
+			id: "1D0A59B84B005261"
+			linked_quest: "3FC433447F442349"
+			x: -1.0d
+			y: -4.0d
+		}
+		{
+			id: "192A5713224F241A"
+			linked_quest: "117BA2558CF77A05"
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			id: "196D8B2EE99F1F47"
+			linked_quest: "367BD0454CCD7ED9"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			id: "071226BA953C2BB8"
+			linked_quest: "08A105909CB62D75"
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			id: "720ACE2CA09A24A1"
+			linked_quest: "48EF0BFF453B1B5B"
+			x: -1.0d
+			y: 8.0d
+		}
+		{
+			id: "0A728EAC88AB7C96"
+			linked_quest: "1621E86CE1EAE71E"
+			x: 9.0d
+			y: 4.0d
+		}
+		{
+			id: "7ED64EF92837AF30"
+			linked_quest: "7A320E74338034BD"
+			x: 10.5d
+			y: 4.0d
+		}
+		{
+			id: "33A9102E9C0A99E1"
+			linked_quest: "3550797BAAC154E3"
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			id: "356494545A09A72F"
+			linked_quest: "1AD4B94F3C6CDEA3"
+			x: -2.0d
+			y: 5.0d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "320D02399630E3EB"
+			shape: "none"
+			tasks: [{
+				id: "76774AAFB41C04A9"
+				item: { count: 1, id: "techreborn:large_chemical_reactor" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "630D08436E3486F9"
+			rewards: [{
+				count: 9
+				id: "21FCE9A486A1D74B"
+				item: {
+					count: 1
+					id: "jsonreg:vibration_safe_casing"
+				}
+				type: "item"
+			}]
+			shape: "none"
+			tasks: [{
+				id: "45D5AB011C357ECD"
+				item: { count: 1, id: "techreborn:large_compressor" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "14950AC139FA11FE"
+			shape: "none"
+			tasks: [{
+				id: "7F7C5C57FFCFC06D"
+				item: { count: 1, id: "techreborn:large_wire_mill" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "321A5DCCA832D59B"
+			shape: "none"
+			tasks: [{
+				id: "71A139B3597CD497"
+				item: { count: 1, id: "techreborn:large_ore_crusher" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			hide_dependency_lines: false
+			id: "6DA3B7CD304AEC06"
+			tasks: [{
+				id: "09F724A15CB6F556"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "336932363EF640A4"
+			shape: "none"
+			tasks: [{
+				id: "63299CC491CB1807"
+				item: { count: 1, id: "techreborn:large_grinder" }
+				type: "item"
+			}]
+			x: 9.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "1A46F3E050402AA8"
+			shape: "none"
+			tasks: [{
+				id: "3CE486266A8A02B0"
+				item: { count: 1, id: "techreborn:large_lathe" }
+				type: "item"
+			}]
+			x: 10.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "4B9FE3C5F3D39274"
+			shape: "none"
+			tasks: [{
+				id: "56A2AFD7F420B7D2"
+				item: { count: 1, id: "techreborn:large_centrifuge" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "2AB36BD2420D0BDA"
+			shape: "none"
+			tasks: [{
+				id: "58CBE5818CDF1A0D"
+				item: { count: 1, id: "techreborn:large_electrolyzer" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "382378FAD6AC281C"
+			shape: "none"
+			tasks: [{
+				id: "6C66A2CC3F19CEBA"
+				item: { count: 1, id: "techreborn:large_extractor" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "636CD13607D93847"
+			shape: "none"
+			tasks: [{
+				id: "7B2656809A09870C"
+				item: { count: 1, id: "techreborn:large_greenhouse" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "5FD94D965F0304C6"
+			shape: "none"
+			tasks: [{
+				id: "74A746F25C91E1B4"
+				item: { count: 1, id: "techreborn:distillation_tower" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			hide_dependency_lines: false
+			id: "5522B14279B35A7B"
+			tasks: [{
+				id: "76C5BCE71EE58C1B"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "4B9CDCC905FD9DB9"
+			shape: "none"
+			tasks: [{
+				id: "7A50D57A75853BC4"
+				item: { count: 1, id: "techreborn:large_ranch" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "047B81224237D1B8"
+			shape: "none"
+			tasks: [{
+				id: "2528F644FB4D8133"
+				item: { count: 1, id: "techreborn:industrial_grinder" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "3271A3DD4975D907"
+			shape: "none"
+			tasks: [{
+				id: "5838EE258964EAA5"
+				item: { count: 1, id: "techreborn:industrial_alloy_smelter" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["08A105909CB62D75"]
+			icon_scale: 2.0d
+			id: "53CBB99B1D299155"
+			shape: "none"
+			tasks: [{
+				id: "7F4DF3F0532D4CD8"
+				item: { count: 1, id: "techreborn:hunter_process_reactor" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 6.0d
+		}
+	]
 }

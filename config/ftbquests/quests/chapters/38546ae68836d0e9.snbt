@@ -569,7 +569,13 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["2A28943AFB868811"]
+			dependencies: [
+				"2A28943AFB868811"
+				"117BA2558CF77A05"
+			]
+			dependency_requirement: "one_completed"
+			hide_dependency_lines: true
+			icon_scale: 2.0d
 			id: "367BD0454CCD7ED9"
 			rewards: [
 				{
@@ -590,6 +596,7 @@
 					type: "item"
 				}
 			]
+			shape: "none"
 			tasks: [{
 				id: "2DA61966DC6FBEBA"
 				item: { count: 1, id: "techreborn:primitive_distillation_tower" }

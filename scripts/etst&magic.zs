@@ -213,13 +213,13 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
 <recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("etst.tr.lcr/soul_injection", {type: "techreborn:large_chemical_reactor", 
     outputs: [
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}},
-        {id: "techreborn:cell", count: 7}
+        {id: "techreborn:cell", count: 3}
     ],
     time: 128, power: 256,
     ingredients: [
-        {count: 8, components: {"techreborn:fluid": "eternal_starlight:ether"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 4, item:"affinity:crystalline_wisp_matter_composite"},
-        {count: 4, item:"botania:pixie_dust"}
+        {count: 4, components: {"techreborn:fluid": "eternal_starlight:ether"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 2, item:"affinity:crystalline_wisp_matter_composite"},
+        {count: 2, item:"botania:pixie_dust"}
     ]
 });
 

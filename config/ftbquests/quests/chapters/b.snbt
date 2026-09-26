@@ -1,0 +1,163 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "b"
+	group: "31D997DA5FF8E05D"
+	id: "43E68DA38CB524C7"
+	images: [ ]
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:iron_ore"
+			}
+			id: "78316D0856A13101"
+			tasks: [
+				{
+					id: "0A9374C23467DA83"
+					item: { count: 1, id: "minecraft:iron_ore" }
+					type: "item"
+				}
+				{
+					id: "044B89DA34609E18"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["78316D0856A13101"]
+			id: "18F7A0366FBCDA5B"
+			tasks: [{
+				id: "5837D1CE90C0228C"
+				item: { count: 1, id: "minecraft:raw_iron" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["18F7A0366FBCDA5B"]
+			id: "3A1033CCF8C23447"
+			tasks: [
+				{
+					id: "35135658F19C1DD5"
+					item: { count: 1, id: "techreborn:tin_nugget" }
+					type: "item"
+				}
+				{
+					id: "4E1232237EB6791A"
+					item: { count: 1, id: "techreborn:nickel_nugget" }
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["18F7A0366FBCDA5B"]
+			id: "7CA6587FBCD74202"
+			tasks: [{
+				id: "2D6DFA1845F860FD"
+				item: { components: { "techreborn:fluid": "jsonreg:iron_solution" }, count: 1, id: "techreborn:cell" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"18F7A0366FBCDA5B"
+				"1DB97E7E138120C8"
+				"6D9F3B41944AE64D"
+			]
+			hide_dependency_lines: true
+			icon_scale: 2.0d
+			id: "0F60F275C1AE6E25"
+			shape: "octagon"
+			size: 2.0d
+			tasks: [{
+				id: "3258D0B552DBCFBF"
+				item: { count: 1, id: "oritech:iron_dust" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["7CA6587FBCD74202"]
+			id: "456361CAAC149552"
+			tasks: [{
+				id: "6C412E58137F1CE6"
+				item: { count: 1, id: "oritech:iron_clump" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["456361CAAC149552"]
+			id: "1DB97E7E138120C8"
+			tasks: [{
+				id: "05E508D088D800EA"
+				item: { count: 1, id: "oritech:iron_gem" }
+				type: "item"
+			}]
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["456361CAAC149552"]
+			id: "6D9F3B41944AE64D"
+			tasks: [{
+				id: "34463B0329529AAD"
+				item: { count: 1, id: "jsonreg:iron_concentrate" }
+				type: "item"
+			}]
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6D9F3B41944AE64D"]
+			id: "6456FE271D53CB4B"
+			tasks: [{
+				id: "06375D52B3DDB1FB"
+				item: { components: { "techreborn:fluid": "minecraft:water" }, count: 1, id: "techreborn:cell" }
+				type: "item"
+			}]
+			x: 11.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["6D9F3B41944AE64D"]
+			id: "22BC14444C27D4F3"
+			tasks: [
+				{
+					id: "00B7444C5FD8F1E2"
+					item: { components: { "techreborn:fluid": "techreborn:mercury" }, count: 1, id: "techreborn:cell" }
+					type: "item"
+				}
+				{
+					id: "12E2BFDE708D1AAD"
+					item: { components: { "techreborn:fluid": "techreborn:sodium_persulfate" }, count: 1, id: "techreborn:cell" }
+					type: "item"
+				}
+			]
+			x: 11.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6D9F3B41944AE64D"]
+			id: "3D18AC6A98093DA5"
+			tasks: [{
+				id: "30BC4C5E78D7ACEC"
+				item: { components: { "techreborn:fluid": "jsonreg:soul_injection_catalyst" }, count: 1, id: "techreborn:cell" }
+				type: "item"
+			}]
+			x: 11.0d
+			y: -0.5d
+		}
+	]
+}

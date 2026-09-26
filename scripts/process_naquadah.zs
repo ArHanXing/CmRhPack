@@ -2,6 +2,38 @@ import crafttweaker.api.tag.MCTag;
 import crafttweaker.api.ingredient.type.IIngredientEmpty;
 import crafttweaker.api.ingredient.IIngredient;
 
+// ========== 末地矿石预处理（硅岩系入口）==========
+// 末地矿脉产出两个自定义矿石方块，此前都**没有任何用途**，这里补上入口：
+//   · 普通硅岩矿石 —— 磨粉出粗硅岩 ×2，随后接 nqdh.1.crushed 进富集线
+//   · 富集硅岩矿石 —— 硫酸直接溶出，**跳过「粗矿 → 粉碎 → 离心」三步**，直入 nqdh.4
+//     故富集矿石是更划算的入口：2 矿石 + 1B 硫酸 → 1B 含杂溶液
+//     （对照 nqdh.3：10 含杂粉 + 2B 硫酸 → 2B 含杂溶液，即 5 粉/B；矿石是 2 个/B，
+//       但矿石不需要经过 nqdh.1/nqdh.2 两道工序，总账更省）
+//
+// 槽位：TR 磨粉机只有 1 个输出槽（这里单输出）；OR 精炼厂允许 count>1 的进料
+//       （naquadah 线本身在用 count 10/4/2，已实测可跑）。
+// 注：raw_naquadria 仍无产出者，超能线入口留待太空电梯。
+
+// 普通硅岩矿石 → 2 粗硅岩
+<recipetype:techreborn:grinder>.addJsonRecipe("nqdh.0a.grind_end_naquadah_ore", {type: "techreborn:grinder",
+    time: 200,
+    power: 32,
+    outputs: [{id: "jsonreg:raw_naquadah", count: 2}],
+    ingredients: [{item: "jsonreg:end_naquadah_ore"}]
+});
+
+// 富集硅岩矿石酸溶：2 矿石 + 1B 硫酸 → 1B 含杂富集硅岩溶液
+// 精炼厂第 1 个流体输出位 = 主产物；这里只用 1 个输出位（放弃第 2/3 位会让第 1 位增产）。
+<recipetype:oritech:refinery>.addJsonRecipe("nqdh.0b.leach_enriched_naquadah_ore", {type: "oritech:refinery",
+    results: [],
+    fluidOutputs: [
+        {fluid: "jsonreg:impure_enriched_naquadah_solution", amount: 81000}
+    ],
+    time: 160,
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 81000},
+    ingredients: [{item: "jsonreg:end_enriched_naquadah_ore", count: 2}]
+});
+
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("nqdh.1.crushed", {type: "techreborn:industrial_grinder",
         outputs: [{id: "jsonreg:crushed_naquadah_ore", count: 1}, {id: "jsonreg:tiny_naquadah_dust", count: 2}, {id: "oritech:small_gold_dust", count: 2}], 
         time: 200, 
@@ -468,13 +500,13 @@ import crafttweaker.api.ingredient.IIngredient;
         {item: "oritech:silicon_wafer"}
     ]
 });
-<recipetype:oritech:atomic_forge>.addJsonRecipe("nqdria.msic.germanium_wafer_advcomp_alt_wip", {type: "oritech:atomic_forge",
-    time: 5,
+<recipetype:oritech:atomic_forge>.addJsonRecipe("nqdria.msic.germanium_wafer_advcomp_alt", {type: "oritech:atomic_forge",
+    time: 50,
     results: [
         {id: "oritech:advanced_computing_engine", count: 2}
     ],
     ingredients: [
-        {item: "oritech:processing_unit"},
+        {item: "jsonreg:advanced_circuit_board"},
         {item: "jsonreg:germanium_wafer"},
         {item: "jsonreg:germanium_wafer"}
     ]

@@ -126,8 +126,8 @@ val customNodes = [
     ["gem","jsonreg","techreborn:ruby_dust",6,"techreborn:ruby_plate","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:ruby_plate"],
     ["tin","jsonreg","techreborn:raw_tin",2,"techreborn:tin_plate","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:tin_plate"],
     ["silver","jsonreg","techreborn:raw_silver",4,"techreborn:silver_plate","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:silver_plate"],
-    ["sphalerite","jsonreg","techreborn:sphalerite_dust",6,"techreborn:zinc_storage_block","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:zinc_storage_block"],
-    ["naquadah","jsonreg","jsonreg:naquadah_dust",3,"jsonreg:naquadah_plate","tesseract:tesseract","oritech:advanced_computing_engine","jsonreg:naquadah_plate"]
+    ["sphalerite","jsonreg","techreborn:sphalerite_ore",6,"techreborn:zinc_storage_block","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:zinc_storage_block"],
+    ["naquadah","jsonreg","jsonreg:raw_naquadah",3,"jsonreg:naquadah_plate","tesseract:tesseract","oritech:advanced_computing_engine","jsonreg:naquadah_plate"]
 ];
 
 // 1. 深钻配方（先清空所有原配方）
@@ -174,18 +174,23 @@ for node in customNodes {
     tagResourceNodes.add(blockRef);
 }
 
-// 3. 修改所有资源节点的硬度
+// 3. 让所有资源节点「可挖掘、可掉落」：硬度 2.5、抗爆炸 10
+//    注意两个属性挂在**不同的 CrT expand 类**上，不能写在一处：
+//      · destroySpeed        在**方块状态**上（ExpandBlockState.setDestroySpeed）
+//      · explosionResistance 在**方块**上（ExpandBlock.setExplosionResistance）
+//    OR 原版节点的默认硬度极高（相当于不可挖），此前设成 10 仍然很硬，现统一降到 2.5。
+//    掉落不需要额外处理：节点没有独立 loot table，挖掉即掉落自身（jsonreg 侧已声明 has_item: true）。
 for node in vanillaNodes {
     val nodeName = node[0] as string;
     val nodeNamespace = node[1] as string;
-    val blockState = <blockstate:${nodeNamespace}:resource_node_${nodeName}>;
-    blockState.destroySpeed = 10;
+    <blockstate:${nodeNamespace}:resource_node_${nodeName}>.destroySpeed = 2.5;
+    <block:${nodeNamespace}:resource_node_${nodeName}>.explosionResistance = 10.0;
 }
 for node in customNodes {
     val nodeName = node[0] as string;
     val nodeNamespace = node[1] as string;
-    val blockState = <blockstate:${nodeNamespace}:resource_node_${nodeName}>;
-    blockState.destroySpeed = 10;
+    <blockstate:${nodeNamespace}:resource_node_${nodeName}>.destroySpeed = 2.5;
+    <block:${nodeNamespace}:resource_node_${nodeName}>.explosionResistance = 10.0;
 }
 
 // 4. 装配器合成配方

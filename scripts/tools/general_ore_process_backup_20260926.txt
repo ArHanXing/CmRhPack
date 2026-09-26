@@ -503,13 +503,8 @@
 // 每个矿石走五步，浓缩物必须有明确来源：
 //   a 浸出      OR 精炼厂    粗矿 ×2 + 硫酸 → X盐溶液[主] + 矿物浆液[副]
 //   b 选择性析出 OR 流体离心  X盐溶液(1桶) + 盐粉 ×1 → X碎块 ×1
-//   c 重结晶    OR 流体离心  X碎块 ×1 + 水 → X石(gem) ×1 + 矿物浆液
+//   c 重结晶    OR 流体离心  X碎块 ×1 + 硫酸 → X石(gem) ×1 + 矿物浆液
 //   d 石磨粉    TR 磨粉机    X石 ×1 → X高纯粉 ×3
-//
-// ⚠ **试剂分工**：硫酸只出现在 a 步「酸浸」—— 那才是它化学上该在的位置。
-//   c 步是重结晶，用**水**；T2a 是浮选浓缩，用**氢氧化钠溶液**。
-//   若 c 与 T2a 都用硫酸，两条支路就只差产量，T2(5粉) 会完全支配 T1.5(3粉)，
-//   gem 路线永远无人问津。拆开水/碱之后「低门槛低产 vs 高门槛高产」才成立。
 //
 // ⚠ **OR 离心机只支持大小为 1 的输入**（物品 count 与流体桶数都必须是 1，见 CrTNOTE）。
 //   所以 b/c 的进料恒为 1 桶溶液 / 1 个碎块，倍率只能靠产出侧：d 步 1 石 → 3 粉是唯一倍增点。
@@ -548,7 +543,7 @@
     results: [{id: "oritech:copper_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "oritech:copper_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.copper", {type: "techreborn:grinder",
@@ -578,7 +573,7 @@
     results: [{id: "oritech:gold_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "oritech:gold_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.gold", {type: "techreborn:grinder",
@@ -608,7 +603,7 @@
     results: [{id: "oritech:iron_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "oritech:iron_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.iron", {type: "techreborn:grinder",
@@ -638,7 +633,7 @@
     results: [{id: "oritech:nickel_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "oritech:nickel_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.nickel", {type: "techreborn:grinder",
@@ -668,7 +663,7 @@
     results: [{id: "oritech:platinum_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "oritech:platinum_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.platinum", {type: "techreborn:grinder",
@@ -698,7 +693,7 @@
     results: [{id: "jsonreg:lead_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "jsonreg:lead_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.lead", {type: "techreborn:grinder",
@@ -728,7 +723,7 @@
     results: [{id: "jsonreg:silver_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "jsonreg:silver_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.silver", {type: "techreborn:grinder",
@@ -758,7 +753,7 @@
     results: [{id: "jsonreg:tin_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "jsonreg:tin_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.tin", {type: "techreborn:grinder",
@@ -788,7 +783,7 @@
     results: [{id: "jsonreg:tungsten_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "jsonreg:tungsten_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.tungsten", {type: "techreborn:grinder",
@@ -818,7 +813,7 @@
     results: [{id: "jsonreg:iridium_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "jsonreg:iridium_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.iridium", {type: "techreborn:grinder",
@@ -848,7 +843,7 @@
     results: [{id: "jsonreg:uranium_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "jsonreg:uranium_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.uranium", {type: "techreborn:grinder",
@@ -878,7 +873,7 @@
     results: [{id: "jsonreg:aluminum_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "jsonreg:aluminum_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.aluminum", {type: "techreborn:grinder",
@@ -908,7 +903,7 @@
     results: [{id: "jsonreg:galena_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "jsonreg:galena_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.galena", {type: "techreborn:grinder",
@@ -938,7 +933,7 @@
     results: [{id: "jsonreg:sphalerite_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "jsonreg:sphalerite_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.sphalerite", {type: "techreborn:grinder",
@@ -968,7 +963,7 @@
     results: [{id: "jsonreg:cinnabar_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "jsonreg:cinnabar_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.cinnabar", {type: "techreborn:grinder",
@@ -998,7 +993,7 @@
     results: [{id: "jsonreg:pyrite_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "jsonreg:pyrite_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.pyrite", {type: "techreborn:grinder",
@@ -1028,7 +1023,7 @@
     results: [{id: "jsonreg:sodalite_gem", count: 1}],
     fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
     time: 200,
-    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 40500},
     ingredients: [{item: "jsonreg:sodalite_clump", count: 1}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.sodalite", {type: "techreborn:grinder",
@@ -1043,11 +1038,8 @@
 // 前提：**dust 是永远的最终产物** —— 中间产物与加工链条只决定一个矿石最终能产出多少粉。
 // 所以 T2 不是「比 dust 更高一级的产物」，而是把产粉量从 T1.5 的 3 倍推到 5 倍。
 //
-//   T2a 浓缩化  TR 化反(2进2出)  X碎块 ×1 + 氢氧化钠溶液单元 → X浓缩物 ×1 + 空单元
+//   T2a 浓缩化  TR 化反(2进2出)  X碎块 ×1 + 硫酸单元 → X浓缩物 ×1 + 空单元
 //   T2b 高纯粉  TR 工业磨粉机     X浓缩物 + 流体 → X粉 ×N + 0~2 副产
-//
-// T2a 试剂用**氢氧化钠溶液**（氯碱电解：盐水单元 ×1 + 空单元 ×2 → 氯气 + 氢气 + 氢氧化钠溶液），
-// 需要工业电解机，构成相对 T1.5c（只用水）的门槛；硫酸专属 T1.5a 酸浸，不再重复出现。
 //
 // 注：T2a 在 **TR 化反**上，不受「OR 离心机只支持 1 输入」的限制；
 //     碎块取 1 个，使 1 矿石 → 1 碎块 → 1 浓缩物 → 5 粉（水支路）成立。
@@ -1075,7 +1067,7 @@
     ],
     ingredients: [
         {item: "oritech:copper_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.copper", {type: "techreborn:industrial_grinder",
@@ -1119,7 +1111,7 @@
     ],
     ingredients: [
         {item: "oritech:gold_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.gold", {type: "techreborn:industrial_grinder",
@@ -1163,7 +1155,7 @@
     ],
     ingredients: [
         {item: "oritech:iron_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.iron", {type: "techreborn:industrial_grinder",
@@ -1207,7 +1199,7 @@
     ],
     ingredients: [
         {item: "oritech:nickel_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.nickel", {type: "techreborn:industrial_grinder",
@@ -1251,7 +1243,7 @@
     ],
     ingredients: [
         {item: "oritech:platinum_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.platinum", {type: "techreborn:industrial_grinder",
@@ -1295,7 +1287,7 @@
     ],
     ingredients: [
         {item: "jsonreg:lead_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.lead", {type: "techreborn:industrial_grinder",
@@ -1339,7 +1331,7 @@
     ],
     ingredients: [
         {item: "jsonreg:silver_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.silver", {type: "techreborn:industrial_grinder",
@@ -1383,7 +1375,7 @@
     ],
     ingredients: [
         {item: "jsonreg:tin_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.tin", {type: "techreborn:industrial_grinder",
@@ -1427,7 +1419,7 @@
     ],
     ingredients: [
         {item: "jsonreg:tungsten_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.tungsten", {type: "techreborn:industrial_grinder",
@@ -1471,7 +1463,7 @@
     ],
     ingredients: [
         {item: "jsonreg:iridium_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.iridium", {type: "techreborn:industrial_grinder",
@@ -1514,7 +1506,7 @@
     ],
     ingredients: [
         {item: "jsonreg:uranium_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.uranium", {type: "techreborn:industrial_grinder",
@@ -1557,7 +1549,7 @@
     ],
     ingredients: [
         {item: "jsonreg:aluminum_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.aluminum", {type: "techreborn:industrial_grinder",
@@ -1601,7 +1593,7 @@
     ],
     ingredients: [
         {item: "jsonreg:galena_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.galena", {type: "techreborn:industrial_grinder",
@@ -1645,7 +1637,7 @@
     ],
     ingredients: [
         {item: "jsonreg:sphalerite_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.sphalerite", {type: "techreborn:industrial_grinder",
@@ -1689,7 +1681,7 @@
     ],
     ingredients: [
         {item: "jsonreg:cinnabar_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.cinnabar", {type: "techreborn:industrial_grinder",
@@ -1732,7 +1724,7 @@
     ],
     ingredients: [
         {item: "jsonreg:pyrite_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.pyrite", {type: "techreborn:industrial_grinder",
@@ -1775,7 +1767,7 @@
     ],
     ingredients: [
         {item: "jsonreg:sodalite_clump", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.sodalite", {type: "techreborn:industrial_grinder",
