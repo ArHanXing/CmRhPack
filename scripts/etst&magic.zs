@@ -223,7 +223,7 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
     ]
 });
 
-//合金炉
+//星光合金炉
 <recipetype:techreborn:precise_assembler>.addJsonRecipe("etst.tr.assembly/etst_alloy_furnace", {type: "techreborn:precise_assembler", 
     outputs: [
         {id: "eternal_starlight:alloy_furnace", count: 1},
@@ -240,6 +240,7 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
         {count: 2, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
+
 //盖亚魂锭
 <recipetype:eternal_starlight:alloy>.addJsonRecipe("magic.etst.alloy/gaia_ingot", {type: "eternal_starlight:alloy",
     burn_time: 400,
@@ -293,6 +294,7 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
     "place techreborn:supercritical_polymerization_chamber"
   ]
 });
+
 //Affinity的一些魔改
 // ====      mod的杜鹃灌注必须用数据包        ====
 // ==== 可在 OpenLoader/LanguageAdd包 里查看 ====

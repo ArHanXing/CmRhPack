@@ -442,15 +442,26 @@
 			]
 			icon_scale: 2.0d
 			id: "3B19660470751464"
-			rewards: [{
-				count: 32
-				id: "01AEBDE042141F45"
-				item: {
-					count: 1
-					id: "jsonreg:coin"
+			rewards: [
+				{
+					count: 32
+					id: "01AEBDE042141F45"
+					item: {
+						count: 1
+						id: "jsonreg:coin"
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					count: 16
+					id: "6D05FCC7D716C164"
+					item: {
+						count: 1
+						id: "oritech:advanced_computing_engine"
+					}
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -484,7 +495,7 @@
 				item: { count: 1, id: "jsonreg:silicon_boule" }
 				type: "item"
 			}]
-			x: 11.0d
+			x: 10.0d
 			y: 12.5d
 		}
 		{
@@ -496,8 +507,8 @@
 				match_components: "strict"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 12.5d
+			x: 10.0d
+			y: 14.0d
 		}
 		{
 			dependencies: ["0B79CCECAB548F7D"]
@@ -507,7 +518,7 @@
 				item: { count: 1, id: "techreborn:industrial_sawmill" }
 				type: "item"
 			}]
-			x: 15.0d
+			x: 15.5d
 			y: 12.5d
 		}
 		{

@@ -46,6 +46,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:block:c:ores>.add(<block:jsonreg:end_naquadah_ore>);
 <tag:block:c:ores>.add(<block:jsonreg:end_enriched_naquadah_ore>);
 <tag:block:c:ores>.add(<block:jsonreg:voidstone_rutile_ore>);
+<tag:block:c:ores>.add(<block:jsonreg:nether_fluorite_ore>);
+<tag:block:c:ores/fluorite>.add(<block:jsonreg:nether_fluorite_ore>);
 
 <tag:item:c:small_dusts>.add(<item:oritech:small_platinum_dust>);
 <tag:item:c:small_dusts/platinum>.add(<item:oritech:small_platinum_dust>);
@@ -117,3 +119,14 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:item:c:concentrates>.add(<item:jsonreg:iron_concentrate>);
 <tag:item:c:concentrates>.add(<item:jsonreg:nickel_concentrate>);
 <tag:item:c:concentrates>.add(<item:jsonreg:platinum_concentrate>);
+
+// ===== 氟石 / 石膏（下界氟石矿脉，唯一的独立氟源）=====
+// 氟石走 T1 / T1.5（general_ore_process.zs），与其它非 raw 矿同层，
+// 故需要 c:ores/fluorite 让 T1 磨粉与 T1.5a 浸出用 tag 统一书写。
+<tag:item:c:ores/fluorite>.add(<item:jsonreg:nether_fluorite_ore>);
+<tag:item:c:clumps/fluorite>.add(<item:jsonreg:fluorite_clump>);
+<tag:item:c:gems/fluorite>.add(<item:jsonreg:fluorite_gem>);
+<tag:item:c:dusts>.add(<item:jsonreg:fluorite_dust>);
+<tag:item:c:dusts/fluorite>.add(<item:jsonreg:fluorite_dust>);
+<tag:item:c:dusts>.add(<item:jsonreg:calcium_sulfate_dust>);
+<tag:item:c:dusts/calcium_sulfate>.add(<item:jsonreg:calcium_sulfate_dust>);

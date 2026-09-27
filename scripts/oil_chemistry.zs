@@ -702,19 +702,6 @@ import crafttweaker.api.ingredient.IIngredient;
 
 //其他配方
 
-//蒸馏海水出盐水，4:1
-<recipetype:techreborn:distillation_tower>.addJsonRecipe("oil.process.tr.water_distill", {type: "techreborn:distillation_tower",
-    time: 100,
-    outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:brine"}},
-    ],
-    power:32,
-    ingredients:[
-      {count: 5, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
-    ]
-});
-
-
 //各大有机产物压板配方
 <recipetype:techreborn:compressor>.addJsonRecipe("oil.other.eopxy_ingot", {type: "techreborn:compressor",
     time: 200,

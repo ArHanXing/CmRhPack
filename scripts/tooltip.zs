@@ -244,6 +244,12 @@ import crafttweaker.api.item.IItemStack;
 <item:jsonreg:depleted_uranium_slag>.addTooltip("§e§l?§r");
 <item:jsonreg:calcium_oxide_slag>.addTooltip("§e§l(CaO)§r");
 
+// —— 氟石 → 氟线（下界氟石矿脉）——
+<item:jsonreg:fluorite_clump>.addTooltip("§e§lCaF₂§r");
+<item:jsonreg:fluorite_gem>.addTooltip("§e§lCaF₂§r");
+<item:jsonreg:fluorite_dust>.addTooltip("§e§lCaF₂§r");
+<item:jsonreg:calcium_sulfate_dust>.addTooltip("§e§lCaSO₄§r");
+
 <item:jsonreg:enriched_naquadah_dust>.addTooltip("§e§lNq+§r");
 <item:jsonreg:enriched_naquadah_ingot>.addTooltip("§e§lNq+§r");
 <item:jsonreg:hot_enriched_naquadah_ingot>.addTooltip("§e§lNq+§r");

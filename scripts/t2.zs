@@ -149,9 +149,9 @@ craftingTable.remove(<item:oritech:deep_drill_block>);
 <recipetype:avaritia:extreme_crafting>.addJsonRecipe("t2.oritech.deep_drill", {type: "avaritia:extreme_shaped", result: {id: "oritech:deep_drill_block", count: 2}, pattern: 
  [
  "         ", 
- "         ", 
  " E     E ", 
  " E     E ", 
+ " E HHH E ", 
  " E FCF E ", 
  " EDCFCDE ", 
  "HBHDCDHBH", 
@@ -179,18 +179,18 @@ key: {
 //进阶电路基板
 <recipetype:techreborn:precise_assembler>.addJsonRecipe("t2.tr.assembly/advanced_circuit_board", {type: "techreborn:precise_assembler", 
     outputs: [
-        {id: "jsonreg:advanced_circuit_board", count: 2},
+        {id: "jsonreg:advanced_circuit_board", count: 1},
         {id: "techreborn:cell", count: 1}
     ],
     time: 200, power: 128,
     ingredients: [
         {count: 2, item:"jsonreg:soul_infused_epoxy_resin_plate"},
-        {count: 16, item:"techreborn:hv_cable"},
-        {count: 8, item:"jsonreg:smd_capacitor"},
-        {count: 8, item:"jsonreg:smd_diode"},
-        {count: 8, item:"jsonreg:smd_inductor"},
-        {count: 8, item:"jsonreg:smd_resistor"},
-        {count: 8, item:"jsonreg:smd_transistor"},
+        {count: 32, item:"techreborn:hv_cable"},
+        {count: 16, item:"jsonreg:smd_capacitor"},
+        {count: 16, item:"jsonreg:smd_diode"},
+        {count: 16, item:"jsonreg:smd_inductor"},
+        {count: 16, item:"jsonreg:smd_resistor"},
+        {count: 16, item:"jsonreg:smd_transistor"},
         {count: 1, components: {"techreborn:fluid": "techreborn:sodium_persulfate"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
@@ -260,7 +260,27 @@ craftingTable.removeByName("techreborn:crafting_table/machine_block/industrial_m
 {type: "oritech:assembler", fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "techreborn:industrial_machine_frame", count: 2}], 
 time: 60, fluidInput: {fluid: "minecraft:empty", amount: 0}, 
 ingredients: [{item: "techreborn:advanced_machine_frame"}, {item: "techreborn:iridium_alloy_plate"}, {item: "techreborn:advanced_circuit"}, {item: "oritech:flux_gate"}]});
-  
+
+//纳米剑配方easier
+craftingTable.remove(<item:techreborn:nanosaber>);
+craftingTable.addShaped("t2.techreborn.crafting_table/tool/nanosaber", <item:techreborn:nanosaber>, [
+    [<tag:item:c:plates/diamond>, <item:techreborn:carbon_plate>, <item:minecraft:air>], 
+    [<tag:item:c:plates/diamond>, <item:techreborn:carbon_plate>, <item:minecraft:air>], 
+    [<item:techreborn:glowstone_small_dust>, <item:techreborn:energy_crystal>, <item:techreborn:glowstone_small_dust>]]);
+
+//便宜的兰波顿
+craftingTable.remove(<item:techreborn:lapotron_crystal>);
+<recipetype:oritech:assembler>.addJsonRecipe("t2.oritech.assembler/lapotron", 
+{type: "oritech:assembler", fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "techreborn:lapotron_crystal"}], 
+time: 60, fluidInput: {fluid: "minecraft:empty", amount: 0}, 
+ingredients: [{item: "techreborn:lazurite_plate"}, {item: "techreborn:industrial_circuit"}, {item: "techreborn:lazurite_plate"}, {item: "techreborn:energy_crystal"}]});
+
+//便宜的红石水晶
+<recipetype:techreborn:chemical_reactor>.removeByName("techreborn:chemical_reactor/synthetic_redstone_crystal");
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("t2.techreborn.chemical_reactor/synthetic_redstone_crystal", {type: "techreborn:chemical_reactor", 
+  time: 1200, outputs: [{id: "techreborn:synthetic_redstone_crystal", count: 1}], power: 50, 
+  ingredients: [{item: "minecraft:redstone", count: 16}, {item: "minecraft:diamond"}]});
+
 //uu物质
 craftingTable.removeByName("techreborn:crafting_table/machine/recycler");
 <recipetype:techreborn:blast_furnace>.addJsonRecipe("t2.techreborn.blast_furnace/scrap", {type: "techreborn:blast_furnace", 
@@ -285,11 +305,6 @@ craftingTable.removeByName("techreborn:crafting_table/machine/matter_fabricator"
     time: 800, 
     fluidInput: {fluid: "oritech:still_strange_matter", amount: 81000}, 
     ingredients: [{item: "jsonreg:naquadah_rod",count: 1}]});
-//便宜的红石水晶
-<recipetype:techreborn:chemical_reactor>.removeByName("techreborn:chemical_reactor/synthetic_redstone_crystal");
-<recipetype:techreborn:chemical_reactor>.addJsonRecipe("t2.techreborn.chemical_reactor/synthetic_redstone_crystal", {type: "techreborn:chemical_reactor", 
-  time: 1200, outputs: [{id: "techreborn:synthetic_redstone_crystal", count: 1}], power: 50, 
-  ingredients: [{item: "minecraft:redstone", count: 16}, {item: "minecraft:diamond"}]});
 
 //T2末地烛
 craftingTable.remove(<item:justarod:basic_electric_rod>);
@@ -298,49 +313,6 @@ craftingTable.remove(<item:justarod:basic_electric_rod>);
 time: 60, fluidInput: {fluid: "minecraft:empty", amount: 0}, 
 ingredients: [{item: "justarod:redstone_rod"}, {item: "oritech:advanced_computing_engine"}, {item: "affinity:fairly_attuned_amethyst_shard"}, {item: "techreborn:lithium_ion_battery"}]});
 
-//纳米剑配方easier
-craftingTable.remove(<item:techreborn:nanosaber>);
-craftingTable.addShaped("t2.techreborn.crafting_table/tool/nanosaber", <item:techreborn:nanosaber>, [
-    [<tag:item:c:plates/diamond>, <item:techreborn:carbon_plate>, <item:minecraft:air>], 
-    [<tag:item:c:plates/diamond>, <item:techreborn:carbon_plate>, <item:minecraft:air>], 
-    [<item:techreborn:glowstone_small_dust>, <item:techreborn:energy_crystal>, <item:techreborn:glowstone_small_dust>]]);
-
-//便宜的兰波顿
-craftingTable.remove(<item:techreborn:lapotron_crystal>);
-<recipetype:oritech:assembler>.addJsonRecipe("t2.oritech.assembler/lapotron", 
-{type: "oritech:assembler", fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "techreborn:lapotron_crystal"}], 
-time: 60, fluidInput: {fluid: "minecraft:empty", amount: 0}, 
-ingredients: [{item: "techreborn:lazurite_plate"}, {item: "techreborn:industrial_circuit"}, {item: "techreborn:lazurite_plate"}, {item: "techreborn:energy_crystal"}]});
-
-//创造能源
-<recipetype:avaritia:extreme_crafting>.addJsonRecipe("t2.oritech/creative_storage", {type: "avaritia:extreme_shaped", result: {id: "oritech:creative_storage_block", count: 1}, pattern: 
- [
- "PP  O  PP", 
- "P   Z   P", 
- "   Z Z   ", 
- "  X E X  ", 
- "OX BAB XO", 
- "  X A X  ", 
- "   D D   ", 
- "P   D   P", 
- "PP  O  PP"], 
- key: {A: {item:"oritech:machine_core_7"},E:{item:"techreborn:lapotronic_orbpack"},B:{item:"techreborn:iridium_reinforced_tungstensteel_storage_block"},X:{item:"techreborn:superconductor"},
-       D: {item:"oritech:dubios_container"},Z:{item:"oritech:large_storage_block"},P:{item:"oritech:carbon_plating_block"},O:{item:"transmog:void_fragment"}}});
-
-//T3电路第二配方
-//移除磷粉配方
-craftingTable.remove(<item:techreborn:phosphorous_dust>);
-<recipetype:techreborn:scrapbox>.remove(<item:techreborn:phosphorous_dust>);
-craftingTable.remove(<item:techreborn:phosphorous_small_dust>);
-<recipetype:techreborn:scrapbox>.remove(<item:techreborn:phosphorous_small_dust>);
-
-//电路基板配方
-<recipetype:oritech:atomic_forge>.addJsonRecipe("t2.oritech.atomicforge/aicomputer_alt", {type: "oritech:atomic_forge", 
-    fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:super_ai_chip", count: 1}], time: 240, 
-    fluidInput: {fluid: "minecraft:empty", amount: 0}, ingredients: [{item: "techreborn:phosphorous_dust"}, {item: "oritech:heisenberg_compensator"}, {item: "oritech:advanced_computing_engine"}]});
-<recipetype:oritech:atomic_forge>.addJsonRecipe("t2.oritech.atomicforge/aicomputer_printboard", {type: "oritech:atomic_forge", 
-    fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "techreborn:phosphorous_dust", count: 4}], time: 100, 
-    fluidInput: {fluid: "minecraft:empty", amount: 0}, ingredients: [{item: "oritech:prometheum_ingot"}, {item: "minecraft:netherite_scrap"}, {item: "techreborn:bronze_plate"}]});
 
 //创造存储
 <recipetype:avaritia:extreme_crafting>.addJsonRecipe("t2.rs/creative_storage/item", {type: "avaritia:extreme_shaped", result: {id: "refinedstorage:creative_storage_block", count: 1}, pattern: 
@@ -369,7 +341,6 @@ craftingTable.remove(<item:techreborn:phosphorous_small_dust>);
  "PP  O  PP"], 
  key: {A: {item:"techreborn:quantum_tank_unit"},E:{item:"techreborn:data_storage_core"},X:{item:"techreborn:superconductor"},
        P:{item:"oritech:carbon_plating_block"},O:{item:"transmog:void_fragment"}}});
-
 //避雷针
 <recipetype:avaritia:extreme_crafting>.addJsonRecipe("t2.techreborn.lightning_rod", {type: "avaritia:extreme_shaped",
 result: {id: "techreborn:lightning_rod", count: 1}, pattern: 
@@ -456,10 +427,7 @@ _fuelrod("t2.tr.assembling.fuelrod.nqdria", "jsonreg:naquadria_dust", "jsonreg:n
     ingredients: [{item: "eternal_starlight:unrealium_ingot"}]
 });
 
-// ============================================================
 // T2 金红石 → 钛 科学处理线（氯化法）
-// ============================================================
-
 // 1. 磨矿: 虚空石金红石矿 → 金红石粉（TiO2 精矿）
 <recipetype:techreborn:grinder>.addJsonRecipe("t2.tr.grinder.rutile_dust_from_ore", {type: "techreborn:grinder",
     time: 100,
@@ -528,5 +496,39 @@ _fuelrod("t2.tr.assembling.fuelrod.nqdria", "jsonreg:naquadria_dust", "jsonreg:n
     ingredients: [
         {count: 1, components: {"techreborn:fluid": "jsonreg:titanium_tetrachloride"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
         {item: "techreborn:cell", count: 4}
+    ]
+});
+
+// 氟石处理
+// 工艺链（两步，并让硫闭环）：
+//   ① 氟石粉 + 硫酸 → 氢氟酸 + 石膏粉              CaF₂ + H₂SO₄ → 2HF + CaSO₄
+//   ② 石膏粉 →(电高炉煅烧)→ 氧化钙渣 + 三氧化硫     CaSO₄ → CaO + SO₃
+//      SO₃ 再走既有的 oil.other.so3_to_h2so4 回到硫酸，抵消 ① 的硫酸消耗。
+// ① 氢氟酸 (TR 化反, 2 进 2 出)
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("t2.tr.chemical_reactor/hf_from_fluorite", {type: "techreborn:chemical_reactor",
+    time: 200,
+    power: 128,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:hydrofluoric_acid"}},
+        {id: "jsonreg:calcium_sulfate_dust", count: 1}
+    ],
+    ingredients: [
+        {item: "jsonreg:fluorite_dust", count: 1},
+        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+// ② 石膏煅烧 (TR 电高炉)
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("t2.tr.blast_furnace/gypsum_calcination", {type: "techreborn:blast_furnace",
+    time: 400,
+    heat: 1500,
+    power: 128,
+    outputs: [
+        {id: "jsonreg:calcium_oxide_slag", count: 1},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:sulfur_trioxide"}}
+    ],
+    ingredients: [
+        {item: "jsonreg:calcium_sulfate_dust", count: 1},
+        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });

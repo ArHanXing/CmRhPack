@@ -1,3 +1,10 @@
+/*
+    AI 真的好好用。
+    崭新矿处 plan 来自 GPT-6-sol，实现来自 v4.1f。
+
+    不要 sonnet 个！
+*/
+
 // ============================================================
 // 基础矿物处理链路（general_ore_process.zs）
 // ============================================================
@@ -29,7 +36,7 @@
 // 命名约定：
 //   general.t1.*  / general.t15.*  / general.t2.*  / general.t23.*
 //
-// 当前进度：T1 已实现；T1.5 / T2 / T2.3 见文件末尾的规划占位。
+// 当前进度：结束了。
 // ============================================================
 
 // ============================================================
@@ -370,6 +377,20 @@
     ingredients: [{item: "jsonreg:rock_salt_ore"}]
 });
 
+// —— 氟石（jsonreg 自定义矿，产氟）——
+// 化学定位：氟石 = CaF₂，本包唯一的**独立氟源**。
+// 在此之前氟 / 氢氟酸只能从超能硅岩线自身的副产里回收（nqdria.4a、nqdh.5b），
+// 而 nqdria.3 的氢氟酸浸出一次就要 10B —— 属于鸡生蛋死锁，氟石线就是为解开它而加。
+// 矿脉见 GTOreVein 的 nether_fluorite（下界，主矿氟石 + 副矿岩盐 40%）。
+// 注：与 salt/rock_salt 一样**用直接物品引用而非 c:ores/fluorite 标签** ——
+//   本文件(g) 比 material_tags.zs(m) 先加载，靠后者定义的标签不安全。
+//   标签仍照常登记，供 EMI 归类使用。
+<recipetype:techreborn:grinder>.addJsonRecipe("general.t1.fluorite", {type: "techreborn:grinder",
+    time: 80, power: 8,
+    outputs: [{id: "jsonreg:fluorite_dust", count: 2}],
+    ingredients: [{item: "jsonreg:nether_fluorite_ore"}]
+});
+
 // ============================================================
 // T1b：粗矿制粉（早期干法路线）
 // ============================================================
@@ -505,6 +526,7 @@
 //   b 选择性析出 OR 流体离心  X盐溶液(1桶) + 盐粉 ×1 → X碎块 ×1
 //   c 重结晶    OR 流体离心  X碎块 ×1 + 水 → X石(gem) ×1 + 矿物浆液
 //   d 石磨粉    TR 磨粉机    X石 ×1 → X高纯粉 ×3
+//   e 副产回收  OR 精炼厂    矿物浆液 1B → 石膏粉 ×2（**共用步**，见本段末尾）
 //
 // ⚠ **试剂分工**：硫酸只出现在 a 步「酸浸」—— 那才是它化学上该在的位置。
 //   c 步是重结晶，用**水**；T2a 是浮选浓缩，用**氢氧化钠溶液**。
@@ -519,6 +541,10 @@
 //   1 矿 --T1--> 粗矿 ×2 --a--> 1 桶盐溶液 --b--> 碎块 ×1 --c--> 石 ×1 --d--> **粉 ×3**
 //   ⇒ T1.5 终点为 **3 倍**矿物产出。
 //
+// 收录矿物：17 种金属（铜金铁镍铂铅银锡钨铱铀铝 / 方铅闪锌朱砂黄铁方钠）
+//   + **氟石**（非金属，只走到 T1.5 为止，不进 T2/T2.3 —— 它的下游是 t2.zs 的
+//     氟化学，而不是金属锭）。
+//
 // 槽位：精炼厂 1流体+1物品→2流体；流体离心 1流体+1物品→1流体+1物品；
 //       TR 磨粉机 1 进 1 出（**只有 1 个输出槽，绝不能多输出**）。
 // 精炼厂只用 2 个流体输出位：放弃第 3 位会让第 1 位增产，与「浸出率」设定方向一致，
@@ -526,6 +552,33 @@
 //
 // 浓缩物（jsonreg:*_concentrate）留待 T2 —— 它是 dust 之上的进一步提纯产物，
 // 不在 T1.5 出现。
+
+// ---------- e 副产回收（共用步，不属于任一矿物）----------
+/*
+    矿物浆液回收石膏，哇哦，免费的硫酸根（还有花不完的钙）。
+*/
+// T1.5 的 a/c 两步都会副产 oritech:still_mineral_slurry（浸出 20250 + 重结晶 8100
+// = 每次 0.35B）。在本条写出来之前它是**死输出** —— Oritech 原本消费浆液的
+// `centrifuge/fluid/clumpacid/*` 配方已被本文件开头的清退段删掉，
+// 而 T1.5 自己还在产（全库 36 处全是产出、零消费）。
+//
+// 化学上正好对口：酸浸时矿石里的钙会进入渣相生成石膏
+//   CaCO₃ + H₂SO₄ → CaSO₄ + H₂O + CO₂
+// 所以浆液可以回收成石膏粉，再走 t2.zs 的 t2.tr.blast_furnace/gypsum_calcination
+// （CaSO₄ → CaO + SO₃）与既有的 oil.other.so3_to_h2so4 回到硫酸，
+// 把 T1.5 的酸耗闭掉一部分。
+//
+// 回收率核算（以每次浸出计）：耗酸 1B、副产浆液 0.35B
+//   0.35B 浆液 → 0.7 石膏粉 → 0.7 SO₃ → 0.7B 硫酸   ⇒ **回收约 70%**
+// 即本配方为 1B 浆液 : 2 石膏粉（1 石膏 → 1 SO₃ → 1B 硫酸）。
+//
+// 配方形态照抄 Oritech 自带的 refinery/quartz.json：只有 results，不写 fluidOutputs。
+<recipetype:oritech:refinery>.addJsonRecipe("general.t15e.byproduct.gypsum", {type: "oritech:refinery",
+    results: [{id: "jsonreg:calcium_sulfate_dust", count: 2}],
+    time: 160,
+    fluidInput: {fluid: "oritech:still_mineral_slurry", amount: 81000},
+    ingredients: []
+});
 
 // ---------- 铜 ----------
 <recipetype:oritech:refinery>.addJsonRecipe("general.t15a.leach.copper", {type: "oritech:refinery",
@@ -1035,6 +1088,37 @@
     time: 200, power: 32,
     outputs: [{id: "techreborn:sodalite_dust", count: 3}],
     ingredients: [{item: "jsonreg:sodalite_gem"}]
+});
+
+// ---------- 氟石 ----------
+// 非 raw 矿物，与黄铁/方钠同型：a 步直接吃矿石（不是粗矿），终点同样是 ×3 粉。
+<recipetype:oritech:refinery>.addJsonRecipe("general.t15a.leach.fluorite", {type: "oritech:refinery",
+    results: [],
+    fluidOutputs: [
+        {fluid: "jsonreg:fluorite_solution", amount: 81000},
+        {fluid: "oritech:still_mineral_slurry", amount: 20250}
+    ],
+    time: 160,
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 81000},
+    ingredients: [{item: "jsonreg:nether_fluorite_ore", count: 1}]
+});
+<recipetype:oritech:centrifuge_fluid>.addJsonRecipe("general.t15b.precipitate.fluorite", {type: "oritech:centrifuge_fluid",
+    results: [{id: "jsonreg:fluorite_clump", count: 1}],
+    time: 150,
+    fluidInput: {fluid: "jsonreg:fluorite_solution", amount: 81000},
+    ingredients: [{item: "jsonreg:salt_dust", count: 1}]
+});
+<recipetype:oritech:centrifuge_fluid>.addJsonRecipe("general.t15c.recrystallize.fluorite", {type: "oritech:centrifuge_fluid",
+    results: [{id: "jsonreg:fluorite_gem", count: 1}],
+    fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
+    time: 200,
+    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    ingredients: [{item: "jsonreg:fluorite_clump", count: 1}]
+});
+<recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.fluorite", {type: "techreborn:grinder",
+    time: 200, power: 32,
+    outputs: [{id: "jsonreg:fluorite_dust", count: 3}],
+    ingredients: [{item: "jsonreg:fluorite_gem"}]
 });
 
 // ============================================================

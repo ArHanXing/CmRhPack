@@ -834,6 +834,26 @@
       "id": "iridium_dust",
       "name": "铱粉",
       "max_count": 1024
+    },
+    {
+      "id": "fluorite_dust",
+      "name": "氟石粉",
+      "max_count": 1024
+    },
+    {
+      "id": "fluorite_clump",
+      "name": "氟石碎块",
+      "max_count": 1024
+    },
+    {
+      "id": "fluorite_gem",
+      "name": "氟石晶体",
+      "max_count": 1024
+    },
+    {
+      "id": "calcium_sulfate_dust",
+      "name": "石膏粉",
+      "max_count": 1024
     }
   ],
   "blocks": [
@@ -1196,6 +1216,14 @@
       "requires_tool": false,
       "has_item": true,
       "render_layer": "translucent"
+    },
+    {
+      "id": "nether_fluorite_ore",
+      "name": "下界氟石矿石",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
     }
   ],
   "fluids": [
@@ -1685,6 +1713,12 @@
     {
       "id": "sodalite_solution",
       "name": "方钠盐溶液",
+      "has_bucket_item": false,
+      "has_block": true
+    },
+    {
+      "id": "fluorite_solution",
+      "name": "氟石盐溶液",
       "has_bucket_item": false,
       "has_block": true
     }
