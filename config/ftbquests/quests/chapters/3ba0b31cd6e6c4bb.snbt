@@ -702,5 +702,32 @@
 			x: 8.5d
 			y: -1.0d
 		}
+		{
+			dependencies: ["56A89A15C11A40E4"]
+			icon: {
+				id: "jsonreg:nether_fluorite_ore"
+			}
+			id: "1FB326D404C03399"
+			shape: "pentagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "3BC48B9B116A90FD"
+					item: { count: 1, id: "jsonreg:rock_salt_ore" }
+					type: "item"
+				}
+				{
+					id: "217523D5CA8063E8"
+					item: { count: 1, id: "jsonreg:nether_fluorite_ore" }
+					type: "item"
+				}
+				{
+					id: "0663E7B4F4856A77"
+					type: "checkmark"
+				}
+			]
+			x: -5.0d
+			y: -1.0d
+		}
 	]
 }

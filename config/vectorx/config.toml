@@ -1,0 +1,16 @@
+# Don't change this! Version used to track needed updates.
+version = 0
+# Force every kernel to the scalar backend, regardless of the settings below. Overridden at runtime by the vectorized.forceScalar system property.
+backendForcedScalar = false
+# Backend for DensityFunctions.Mapped. auto = vector if it loads and passes its self-test, scalar fallback otherwise; scalar = force scalar; off = disable the hook.
+densityFunctionMap = "AUTO"
+# Backend for DensityFunctions.Clamp. Same auto/scalar/off semantics as densityFunctionMap.
+densityFunctionClamp = "AUTO"
+# Backend for SimpleBitStorage/PalettedContainer unpacking. Same auto/scalar/off semantics as densityFunctionMap.
+packedStorageUnpack = "AUTO"
+# Backend for CanyonWorldCarver's ellipsoid skip test during cave/canyon generation. Same auto/scalar/off semantics as densityFunctionMap.
+canyonCarverSkip = "AUTO"
+# Run the scalar-vs-vector differential self-test at startup before trusting a kernel's vector backend. Leave this on unless you have a specific reason not to.
+selfTest = true
+# Log a full diagnostics block at startup (module resolution, per-kernel backend and fallback reason, known mod conflicts). Takes effect immediately.
+diagnostics = true

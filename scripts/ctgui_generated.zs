@@ -801,3 +801,8 @@ craftingTable.addShaped("ctgui/new/crafting/steel_frame", <item:jsonreg:steel_fr
     [<item:jsonreg:steel_rod>, <item:techreborn:steel_ingot>, <item:jsonreg:steel_rod>],
     [IIngredientEmpty.getInstance(), <item:jsonreg:steel_rod>, IIngredientEmpty.getInstance()]]);
 
+craftingTable.addShaped("ctgui/new/crafting/digital_miner", <item:techreborn:digital_miner>, [
+    [IIngredientEmpty.getInstance(), <item:jsonreg:lv_robot_arm>, <item:techreborn:red_cell_battery>],
+    [<item:techreborn:basic_drill>, <item:refinedstorage:machine_casing>, <item:techreborn:red_cell_battery>],
+    [<item:oritech:processing_unit>, <item:techreborn:iron_plate>, <item:oritech:processing_unit>]]);
+

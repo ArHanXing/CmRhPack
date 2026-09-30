@@ -237,6 +237,7 @@
 				{
 					id: "2A0490140270F8B0"
 					item: { count: 1, id: "botania:mana_pearl" }
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -376,11 +377,18 @@
 				}
 				type: "item"
 			}]
-			tasks: [{
-				id: "4B8EF1FF2E35DF11"
-				item: { count: 1, id: "affinity:matter_harvesting_hearth" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "4B8EF1FF2E35DF11"
+					item: { count: 1, id: "affinity:matter_harvesting_hearth" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0E82B2F755345AB1"
+					type: "checkmark"
+				}
+			]
 			x: 14.0d
 			y: 7.5d
 		}

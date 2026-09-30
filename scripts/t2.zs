@@ -532,3 +532,17 @@ _fuelrod("t2.tr.assembling.fuelrod.nqdria", "jsonreg:naquadria_dust", "jsonreg:n
         {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
+
+// HF -> H2+F2
+<recipetype:techreborn:industrial_electrolyzer>.addJsonRecipe("t2.tr.electrolyzer/fluorine_from_hf", {type: "techreborn:industrial_electrolyzer",
+    time: 2000,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "techreborn:hydrogen"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:fluorine"}}
+    ],
+    power: 60,
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "jsonreg:hydrofluoric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});

@@ -144,6 +144,11 @@ import crafttweaker.api.item.IItemStack;
 <item:oritech:prometheum_ingot>.addTooltip("§e§lPm(AdEcDr)§r");
 <item:oritech:prometheum_ingot>.addTooltip("§9§l手握星辰§r");
 
+<item:jsonreg:lead_dust>.addTooltip("§e§lPb§r");
+<item:jsonreg:silver_dust>.addTooltip("§e§lAg§r");
+<item:jsonreg:tin_dust>.addTooltip("§e§lSn§r");
+<item:jsonreg:tungsten_dust>.addTooltip("§e§lW§r");
+<item:jsonreg:iridium_dust>.addTooltip("§e§lIr§r");
 //mod 合金
 <item:techreborn:steel_ingot>.addTooltip("§e§lFe₁₀₀C§r");
 <item:techreborn:steel_dust>.addTooltip("§e§lFe₁₀₀C§r");
@@ -244,9 +249,8 @@ import crafttweaker.api.item.IItemStack;
 <item:jsonreg:depleted_uranium_slag>.addTooltip("§e§l?§r");
 <item:jsonreg:calcium_oxide_slag>.addTooltip("§e§l(CaO)§r");
 
-// —— 氟石 → 氟线（下界氟石矿脉）——
-<item:jsonreg:fluorite_clump>.addTooltip("§e§lCaF₂§r");
-<item:jsonreg:fluorite_gem>.addTooltip("§e§lCaF₂§r");
+//<item:jsonreg:fluorite_clump>.addTooltip("§e§lCaF₂§r");
+//<item:jsonreg:fluorite_gem>.addTooltip("§e§lCaF₂§r");
 <item:jsonreg:fluorite_dust>.addTooltip("§e§lCaF₂§r");
 <item:jsonreg:calcium_sulfate_dust>.addTooltip("§e§lCaSO₄§r");
 
@@ -374,19 +378,19 @@ import crafttweaker.api.item.IItemStack;
 
 <item:techreborn:fusion_control_computer>.addTooltip("战斗力超过9000！！！");
 
-//DCYH里面取的tooltip
-<item:justarod:redstone_rod>.addTooltip("§7§o“我的母星吗?虽然我是来自河外星系的，不过，我们民族的文化传统和你们叫做§5淫魔§7的种族的风俗习惯非常相近哦！”§r");
-<item:justarod:redstone_rod>.addTooltip("§7§o“看到这个银河有和我的同胞那么像的物种，我当时可高兴了呢~？”§r");
+//其他
+<item:justarod:redstone_rod>.addTooltip("§7§o「我的母星吗?虽然我是来自河外星系的，不过，我们民族的文化传统和你们叫做§5淫魔§7的种族的风俗习惯非常相近哦！」§r");
+<item:justarod:redstone_rod>.addTooltip("§7§o「看到这个银河有和我的同胞那么像的物种，我当时可高兴了呢~？」§r");
 
-<item:justarod:basic_electric_rod>.addTooltip("§7§o“那天不小心吸入孢子的科学家最近表现的有些怪异。她时常在各种场合发情，在工作时突然自慰，”§r");
-<item:justarod:basic_electric_rod>.addTooltip("§7§o“并且要经过数个高潮才能慢慢平息下去。大多数人觉得她大概是发情期到了，不过也有人怀疑会不会是某些奇怪的东西正影响着她……”§r");
+<item:justarod:basic_electric_rod>.addTooltip("§7§o「那天不小心吸入孢子的科学家最近表现的有些怪异。她时常在各种场合发情，在工作时突然自慰，」§r");
+<item:justarod:basic_electric_rod>.addTooltip("§7§o「并且要经过数个高潮才能慢慢平息下去。大多数人觉得她大概是发情期到了，不过也有人怀疑会不会是某些奇怪的东西正影响着她……」§r");
 
-<item:justarod:advanced_electric_rod>.addTooltip("§7§o“由于受害者尚未稳定的精神状态与播种者精液的特性，我们需要集中隔离，避免她们自发堕落成为播种者的生育工具或者内应。”§r");
-<item:justarod:advanced_electric_rod>.addTooltip("§7§o“可那......又有什么关系呢？§5♥§7”§r");
+<item:justarod:advanced_electric_rod>.addTooltip("§7§o「由于受害者尚未稳定的精神状态与播种者精液的特性，我们需要集中隔离，」§r");
+<item:justarod:advanced_electric_rod>.addTooltip("§7§o「避免她们自发堕落成为播种者的生育工具或者内应。」§r");
 
-<item:justarod:industrial_electric_rod>.addTooltip("§7§o“...她们终将以这种方式探寻到淫能以及淫欲天神§5阿姆洛兹§7的本质。”§r");
-<item:justarod:industrial_electric_rod>.addTooltip("§7§o“但性爱学家们的研究结果并非都是对于性爱学的发展有帮助的，往往反倒是推动了其他学科的进步。”§r");
-<item:justarod:industrial_electric_rod>.addTooltip("§7§o“同时新加入的她们也走上了向外扩张之路。历史一向如此。”§r");
+<item:justarod:industrial_electric_rod>.addTooltip("§7§o「...她们终将以这种方式探寻到淫能以及淫欲天神§5阿姆洛兹§7的本质。」§r");
+<item:justarod:industrial_electric_rod>.addTooltip("§7§o「但性爱学家们的研究结果并非都是对于性爱学的发展和扩张有帮助的，往往反倒是推动了其他学科的进步。」§r");
+<item:justarod:industrial_electric_rod>.addTooltip("§7§o「同时新加入的她们也走上了向外扩张之路。历史一向如此。」§r");
 
 <item:minecraft:nether_star>.addTooltip("§7§o拥有唤醒凋零的远古宿敌的力量。§r");
 
@@ -403,3 +407,30 @@ import crafttweaker.api.item.IItemStack;
 <item:jsonreg:holy_wooden_bucket>.addTooltip("§b奇迹和魔法§r都是真实§c存在§r的！");
 
 <item:dream-stone:dream_stone>.addTooltip("在§b铁砧§r中与工具§a融合§r在一起，使其变得§e坚不可摧§r");
+
+//只有紫铜和生铁有板
+//bgm:反转宇宙
+<item:neko-technology:tin_ingot>.addTooltip("- 说着§c「初次见面」§r这样的话 -");
+<item:neko-technology:tin_ingot>.addTooltip("- 装满§b整整一杯§r的§d「心」§r -");
+<item:neko-technology:tin_ingot>.addTooltip("- 仿佛§6坠入爱河§r一样 §b啦哒哒§r -");
+<item:neko-technology:tin_ingot>.addTooltip("- 想让人们§a载歌载舞§r的 §edays§r -");
+
+<item:neko-technology:brass_ingot>.addTooltip("- 对你说道§6 「You are my lovely」§r -");
+<item:neko-technology:brass_ingot>.addTooltip("- 甜甜的§b巧克力§r 也像§e是要融化一样§r -");
+<item:neko-technology:brass_ingot>.addTooltip("- §c「胡思乱想」§r的§c暴走模式§r -");
+<item:neko-technology:brass_ingot>.addTooltip("- 仿佛能§9冲向宇宙§r -");
+
+<item:neko-technology:pig_iron_ingot>.addTooltip("- §e脑浆§r也好 §d妄想§r也好 大家都保持 §cFreely§r 就好啦 -");
+<item:neko-technology:pig_iron_ingot>.addTooltip("- 前往§b海底§r 走向§9深海§r 就算是被§e独自留下§r -");
+<item:neko-technology:pig_iron_ingot>.addTooltip("- §z真想听听那声音啊§r 就算要走到§c「最终之所」§r -");
+<item:neko-technology:pig_iron_ingot>.addTooltip("- 那也是§a最前线的故事§r   §6好像是这样呢§r -");
+
+<item:neko-technology:aluminum_ingot>.addTooltip("- §eStep by step §b未来§r就是§b「Future」§r -");
+<item:neko-technology:aluminum_ingot>.addTooltip("- §aReverse  §bReverse  §eUniverse§r -");
+<item:neko-technology:aluminum_ingot>.addTooltip("- 当然会§c突然反转§r -");
+<item:neko-technology:aluminum_ingot>.addTooltip("-  就是说§6你§r和§b整个世界§r -");
+
+<item:neko-technology:neko_copper_ingot>.addTooltip("- §9无论转了几十回 §r也果然是§b最棒§r的 -");
+<item:neko-technology:neko_copper_ingot>.addTooltip("- 说道§6Lovers§r的§eBirth§r 那就只有§c你§r！ -");
+<item:neko-technology:neko_copper_ingot>.addTooltip("- 请将§b它§r传达到§6流星群§r那里 -");
+<item:neko-technology:neko_copper_ingot>.addTooltip("- 就这样§e拜托§d你§r了！ -");

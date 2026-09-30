@@ -151,17 +151,7 @@ craftingTable.addShaped("fix.oritech.crafting/exojetpack", <item:oritech:exo_jet
 <recipetype:oritech:grinder>.removeByName("oritech:grinder/coal");
 <recipetype:oritech:grinder>.addJsonRecipe("uni.oritech.grinder/coal", {type: "oritech:grinder", time: 40, results: [{id: "techreborn:coal_dust", count: 1}], ingredients: [{tag: "minecraft:coals"}]});
 
-// ============================================================
 // 基础矿物新粉的配套配方（jsonreg:*_dust）
-// ============================================================
-// 背景：lead / silver / tin / tungsten / iridium 这 5 种金属在 TechReborn 里
-// **只有贴图、没有 dust 物品**（无物品模型、无 lang 条目，属无用遗留），
-// 而 general_ore_process.zs 的 T1.5 需要「石磨粉」的产出目标，
-// 故在 jsonreg 注册了这 5 个粉。这里补齐它们作为「粉」应有的全部配套：
-//   熔炉烧锭 / 锭磨粉 / c: 标签 / 化学式 tooltip
-//
-// dust 在本包是**最终产物**：中间产物与加工链条只决定一个矿石最终能产出多少粉。
-
 // —— 1) 粉 → 锭 ——
 // 铅/银/锡 熔点低，走原版熔炉（与 TR 自家粉同规格：0.7 经验 / 200 tick）。
 furnace.addRecipe("uni.furnace.lead_ingot", <item:techreborn:lead_ingot>, <item:jsonreg:lead_dust>, 0.7, 200);
@@ -210,22 +200,3 @@ furnace.addRecipe("uni.furnace.tin_ingot", <item:techreborn:tin_ingot>, <item:js
     outputs: [{id: "jsonreg:iridium_dust", count: 1}],
     ingredients: [{item: "techreborn:iridium_ingot"}]
 });
-
-// —— 3) c: 标签（与 TR 自家粉同层级），供 tag 化配方与检索使用 ——
-<tag:item:c:dusts>.add(<item:jsonreg:lead_dust>);
-<tag:item:c:dusts/lead>.add(<item:jsonreg:lead_dust>);
-<tag:item:c:dusts>.add(<item:jsonreg:silver_dust>);
-<tag:item:c:dusts/silver>.add(<item:jsonreg:silver_dust>);
-<tag:item:c:dusts>.add(<item:jsonreg:tin_dust>);
-<tag:item:c:dusts/tin>.add(<item:jsonreg:tin_dust>);
-<tag:item:c:dusts>.add(<item:jsonreg:tungsten_dust>);
-<tag:item:c:dusts/tungsten>.add(<item:jsonreg:tungsten_dust>);
-<tag:item:c:dusts>.add(<item:jsonreg:iridium_dust>);
-<tag:item:c:dusts/iridium>.add(<item:jsonreg:iridium_dust>);
-
-// —— 4) 化学式 tooltip（沿用包内 §e§l...§r 格式）——
-<item:jsonreg:lead_dust>.addTooltip("§e§lPb§r");
-<item:jsonreg:silver_dust>.addTooltip("§e§lAg§r");
-<item:jsonreg:tin_dust>.addTooltip("§e§lSn§r");
-<item:jsonreg:tungsten_dust>.addTooltip("§e§lW§r");
-<item:jsonreg:iridium_dust>.addTooltip("§e§lIr§r");

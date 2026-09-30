@@ -55,10 +55,7 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:item:c:small_dusts>.add(<item:oritech:small_nickel_dust>);
 <tag:item:c:small_dusts/nickel>.add(<item:oritech:small_nickel_dust>);
 
-
 // ===== basic ore concentrates (general_ore_process.zs T1.5) =====
-// clump/gem 命名与 Oritech 既有标签对齐（c:clumps/iron 等），
-// 使新链的配方可以用 tag 统一书写，不必逐个矿物写死 item。
 <tag:item:c:clumps/lead>.add(<item:jsonreg:lead_clump>);
 <tag:item:c:gems/lead>.add(<item:jsonreg:lead_gem>);
 <tag:item:c:concentrates/lead>.add(<item:jsonreg:lead_concentrate>);
@@ -101,7 +98,6 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:item:c:concentrates/nickel>.add(<item:jsonreg:nickel_concentrate>);
 <tag:item:c:concentrates/platinum>.add(<item:jsonreg:platinum_concentrate>);
 
-// 泛化标签：便于「任意浓缩物」类配方与 EMI 归类
 <tag:item:c:concentrates>.add(<item:jsonreg:lead_concentrate>);
 <tag:item:c:concentrates>.add(<item:jsonreg:silver_concentrate>);
 <tag:item:c:concentrates>.add(<item:jsonreg:tin_concentrate>);
@@ -120,9 +116,6 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:item:c:concentrates>.add(<item:jsonreg:nickel_concentrate>);
 <tag:item:c:concentrates>.add(<item:jsonreg:platinum_concentrate>);
 
-// ===== 氟石 / 石膏（下界氟石矿脉，唯一的独立氟源）=====
-// 氟石走 T1 / T1.5（general_ore_process.zs），与其它非 raw 矿同层，
-// 故需要 c:ores/fluorite 让 T1 磨粉与 T1.5a 浸出用 tag 统一书写。
 <tag:item:c:ores/fluorite>.add(<item:jsonreg:nether_fluorite_ore>);
 <tag:item:c:clumps/fluorite>.add(<item:jsonreg:fluorite_clump>);
 <tag:item:c:gems/fluorite>.add(<item:jsonreg:fluorite_gem>);
@@ -130,3 +123,14 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:item:c:dusts/fluorite>.add(<item:jsonreg:fluorite_dust>);
 <tag:item:c:dusts>.add(<item:jsonreg:calcium_sulfate_dust>);
 <tag:item:c:dusts/calcium_sulfate>.add(<item:jsonreg:calcium_sulfate_dust>);
+
+<tag:item:c:dusts>.add(<item:jsonreg:lead_dust>);
+<tag:item:c:dusts/lead>.add(<item:jsonreg:lead_dust>);
+<tag:item:c:dusts>.add(<item:jsonreg:silver_dust>);
+<tag:item:c:dusts/silver>.add(<item:jsonreg:silver_dust>);
+<tag:item:c:dusts>.add(<item:jsonreg:tin_dust>);
+<tag:item:c:dusts/tin>.add(<item:jsonreg:tin_dust>);
+<tag:item:c:dusts>.add(<item:jsonreg:tungsten_dust>);
+<tag:item:c:dusts/tungsten>.add(<item:jsonreg:tungsten_dust>);
+<tag:item:c:dusts>.add(<item:jsonreg:iridium_dust>);
+<tag:item:c:dusts/iridium>.add(<item:jsonreg:iridium_dust>);
