@@ -33,6 +33,14 @@ OUT_SLOTS = {
     "techreborn:industrial_grinder": 4,
     "techreborn:large_chemical_reactor": 4,
     "techreborn:distillation_tower": 6,
+    # TR 5.12.13 新增的两台多方块机器（都继承 FourInSixOutMachineBlockEntity）
+    "techreborn:large_mixer": 6,
+    "techreborn:large_refinery": 6,
+}
+# 输入槽上限（只列已考证过的机器）
+IN_SLOTS = {
+    "techreborn:large_mixer": 4,
+    "techreborn:large_refinery": 4,
 }
 FLUID_SLOTS = {"oritech:refinery": 3}
 CENTRIFUGE = ("oritech:centrifuge", "oritech:centrifuge_fluid")
@@ -70,6 +78,11 @@ def main() -> int:
 
             if ty in OUT_SLOTS and n_out > OUT_SLOTS[ty]:
                 problems.append(f"[槽位] {f.name}::{n} 输出 {n_out} > {ty} 上限 {OUT_SLOTS[ty]}")
+            if ty in IN_SLOTS:
+                isp = L.array_span(b, "ingredients")
+                n_in = len(objs(b[isp[0]:isp[1] + 1])) if isp else 0
+                if n_in > IN_SLOTS[ty]:
+                    problems.append(f"[槽位] {f.name}::{n} 输入 {n_in} > {ty} 上限 {IN_SLOTS[ty]}")
             if ty in FLUID_SLOTS and (n_fluid > FLUID_SLOTS[ty] or n_out > 1):
                 problems.append(f"[槽位] {f.name}::{n} 流体 {n_fluid}/{ty} 上限 {FLUID_SLOTS[ty]}")
             if ty in CENTRIFUGE:

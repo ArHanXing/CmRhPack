@@ -43,7 +43,12 @@ SCRIPTS = HERE.parent
 FILES = ["oil_chemistry.zs", "bio_chemistry.zs", "uni.zs", "misc.zs",
          "process_naquada.zs", "process_naquadah.zs", "etst&magic.zs",
          "t1.zs", "t2.zs", "t3.zs", "refinedstorage.zs", "lathe.zs",
-         "precision_assembly.zs", "multiblock_casing.zs"]
+         "precision_assembly.zs", "multiblock_casing.zs",
+         # 2026-09-26 补全：此前这 4 个文件不在白名单里，
+         # 导致 --fluid 查询漏掉 general_ore_process.zs 的 211 条配方
+         # （含全包最大的硫酸消耗方 T1.5a 浸出 ×18）。
+         "general_ore_process.zs", "grinder_parity.zs",
+         "no_bio_methane.zs", "water.zs"]
 
 BUCKET = 81000
 OR_FUELGEN_FE_PER_TICK = 512

@@ -154,9 +154,41 @@
     }
   ],
   "lookup_history": [
+    {
+      "type": "item",
+      "id": "jsonreg:petroleum_coke",
+      "amount": 5
+    },
+    "item:techreborn:large_refinery",
+    "item:techreborn:digital_miner",
+    {
+      "type": "fluid",
+      "id": "jsonreg:nitric_acid",
+      "amount": 81000
+    },
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:nitric_acid\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ethyl_nitrate\"}",
+    "item:techreborn:large_mixer",
+    "item:eternal_starlight:tangled_skull",
+    "item:minecraft:end_stone",
+    "item:techreborn:endstone_dust",
+    "item:techreborn:ore_crusher",
+    "item:jsonreg:iridium_dust",
+    "item:techreborn:iridium_ingot",
+    "item:jsonreg:fluorite_gem",
+    "item:oritech:centrifuge_block",
+    {
+      "type": "fluid",
+      "id": "homeostatic:purified_water",
+      "amount": 81000
+    },
+    "item:homeostatic:purified_water_bucket",
+    "item:sophisticatedstorage:chest{\"sophisticatedstorage:wood_type\":\"birch\"}",
+    "item:sophisticatedstorage:chest{\"sophisticatedstorage:wood_type\":\"bamboo\"}",
+    "item:sophisticatedstorage:chest{\"sophisticatedcore:accent_color\":-393218,\"sophisticatedcore:main_color\":-393218}",
+    "item:sophisticatedstorage:chest{\"sophisticatedcore:accent_color\":-12930086,\"sophisticatedcore:main_color\":-12930086}",
     "item:minecraft:ancient_debris",
     "item:techreborn:coil_molybdenum_disilicide",
-    "item:techreborn:digital_miner",
     "item:oritech:fragment_forge_block",
     "item:techreborn:lead_ingot",
     "item:jsonreg:lv_electric_piston",
@@ -185,7 +217,6 @@
     "item:affinity:scintillant_anthracite_blend",
     "item:affinity:anthracite_powder",
     "item:affinity:the_sky",
-    "item:jsonreg:iridium_dust",
     "item:techreborn:rotary_hearth_furnace",
     "item:techreborn:fusion_control_computer",
     "item:affinity:wand_of_inquiry",
@@ -218,7 +249,6 @@
     "item:techreborn:basic_drill",
     "item:techreborn:digital_display",
     "item:toneko:legwear_workbench",
-    "item:techreborn:ore_crusher",
     "item:oritech:iron_dust",
     {
       "type": "fluid",
@@ -233,7 +263,6 @@
     },
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:iron_solution\"}",
     "item:oritech:iron_gem",
-    "item:jsonreg:fluorite_gem",
     "item:jsonreg:fluorite_clump",
     {
       "type": "fluid",
@@ -293,7 +322,6 @@
     "item:jsonreg:smd_diode",
     "item:jsonreg:smd_resistor",
     "item:jsonreg:smd_transistor",
-    "fluid:homeostatic:purified_water",
     "item:oritech:advanced_computing_engine",
     "item:toneko:neko_ingot",
     "item:justarod:advanced_electric_rod",
@@ -364,7 +392,6 @@
     "item:techreborn:precise_assembler",
     "item:techreborn:diamond_saw_blade",
     "item:techreborn:cell{\"techreborn:fluid\":\"oritech:still_silicon_wash\"}",
-    "item:homeostatic:purified_water_bucket",
     "item:homeostatic:water_filter",
     "item:jsonreg:germanium_wafer",
     {
@@ -592,7 +619,6 @@
       "id": "jsonreg:galena_clump",
       "amount": 3
     },
-    "item:oritech:centrifuge_block",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:titanium_tetrachloride\"}",
     {
       "type": "item",
@@ -635,7 +661,6 @@
     "item:jsonreg:salt_dust",
     "item:techreborn:tungsten_ingot",
     "item:jsonreg:tungsten_dust",
-    "item:techreborn:iridium_ingot",
     "item:jsonreg:pyrite_gem",
     "item:techreborn:pyrite_dust",
     {
@@ -915,7 +940,6 @@
     "item:botania:petal_apothecary",
     "item:techreborn:steel_ingot",
     "item:minecraft:iron_ingot",
-    "item:jsonreg:petroleum_coke",
     "item:affinity:azalea_planks",
     "item:affinity:azalea_slab",
     "item:affinity:assembly_augment",
@@ -1037,7 +1061,6 @@
     "item:techreborn:coal_dust",
     "item:techreborn:coal_small_dust",
     "item:jsonreg:bronze_frame",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ethyl_nitrate\"}",
     {
       "type": "fluid",
       "id": "jsonreg:ethyl_nitrate",
@@ -1212,7 +1235,6 @@
         "remainder": "item:botania:floating_pure_daisy"
       }
     ],
-    "item:minecraft:end_stone",
     "item:botania:gaia_ingot",
     "item:botania:life_imbuer",
     "item:botania:mana_spark",
@@ -1575,7 +1597,6 @@
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:perfluorocarbon_mix\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:nitrobenzene\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:aniline\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:nitric_acid\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:hydrogen\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:pyrolysis_gasoline\"}",
     "item:botania:ender_overseer",
@@ -1705,20 +1726,7 @@
     "item:affinity:void_beacon",
     "item:affinity:sunshine_monolith",
     "item:affinity:crop_reaper",
-    "item:botania:elven_quartz",
-    {
-      "type": "item",
-      "id": "botania:terrasteel_nugget",
-      "amount": 9
-    },
-    "item:botania:creative_mana_pool",
-    "item:botania:gaia_mana_spreader",
-    "item:botania:wand_of_the_elven_forest{\"botania:wand_color1\":\"purple\",\"botania:wand_color2\":\"blue\"}",
-    "item:botania:heisei_dream",
-    "item:explorerscompass:explorerscompass",
-    "item:affinity:vicious_wisp_mist",
-    "item:affinity:arboreal_annihilation_apparatus",
-    "item:affinity:mildly_attuned_amethyst_shard"
+    "item:botania:elven_quartz"
   ],
   "craft_history": [
     "crafttweaker:ctgui/new/crafting/lv_electric_piston",
@@ -1919,9 +1927,9 @@
   ],
   "recipe_defaults": {
     "added": [
-      "farmersdelight:flint_knife",
       "techreborn:wire_mill/copper_cable",
-      "minecraft:crafter"
+      "minecraft:crafter",
+      "farmersdelight:flint_knife"
     ],
     "tags": {},
     "resolutions": {},

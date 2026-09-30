@@ -394,10 +394,10 @@ import crafttweaker.api.item.IItemStack;
 
 <item:minecraft:nether_star>.addTooltip("§7§o拥有唤醒凋零的远古宿敌的力量。§r");
 
-<item:advanced_reborn:induction_furnace>.addTooltip("可用配方类型：电炉");
-<item:advanced_reborn:rotary_grinder>.addTooltip("可用配方类型：TR 磨粉机");
-<item:advanced_reborn:singularity_compressor>.addTooltip("可用配方类型：TR 压缩机");
-<item:advanced_reborn:centrifugal_extractor>.addTooltip("可用配方类型：TR 提取机，具有§b2x产出§r");
+<item:advanced_reborn:induction_furnace>.addTooltip("可用配方类型：§e电炉§r");
+<item:advanced_reborn:rotary_grinder>.addTooltip("可用配方类型：§eTR 磨粉机§r");
+<item:advanced_reborn:singularity_compressor>.addTooltip("可用配方类型：§eTR 压缩机§r");
+<item:advanced_reborn:centrifugal_extractor>.addTooltip("可用配方类型：§eTR 提取机§r，具有§b2x产出§r");
 
 <item:techreborn:industrial_blast_furnace>.addTooltip("实际热量每高于配方热量 §e1000K§r， 具有 §e0.8x§r 耗时倍率");
 
@@ -408,6 +408,13 @@ import crafttweaker.api.item.IItemStack;
 
 <item:dream-stone:dream_stone>.addTooltip("在§b铁砧§r中与工具§a融合§r在一起，使其变得§e坚不可摧§r");
 
+<item:techreborn:large_mixer>.addTooltip("可用配方类型：§eOR 离心机§r");
+<item:techreborn:large_mixer>.addTooltip("具有 §e0.8x§r 耗时倍率");
+
+<item:techreborn:large_refinery>.addTooltip("可用配方类型：§eOR 精炼厂§r");
+<item:techreborn:large_refinery>.addTooltip("具有 §e0.8x§r 耗时倍率");
+
+<item:techreborn:digital_miner>.addTooltip("它是§b多方块§r机器！！");
 //只有紫铜和生铁有板
 //bgm:反转宇宙
 <item:neko-technology:tin_ingot>.addTooltip("- 说着§c「初次见面」§r这样的话 -");
@@ -422,7 +429,7 @@ import crafttweaker.api.item.IItemStack;
 
 <item:neko-technology:pig_iron_ingot>.addTooltip("- §e脑浆§r也好 §d妄想§r也好 大家都保持 §cFreely§r 就好啦 -");
 <item:neko-technology:pig_iron_ingot>.addTooltip("- 前往§b海底§r 走向§9深海§r 就算是被§e独自留下§r -");
-<item:neko-technology:pig_iron_ingot>.addTooltip("- §z真想听听那声音啊§r 就算要走到§c「最终之所」§r -");
+<item:neko-technology:pig_iron_ingot>.addTooltip("- §a真想听听那声音啊§r 就算要走到§c「最终之所」§r -");
 <item:neko-technology:pig_iron_ingot>.addTooltip("- 那也是§a最前线的故事§r   §6好像是这样呢§r -");
 
 <item:neko-technology:aluminum_ingot>.addTooltip("- §eStep by step §b未来§r就是§b「Future」§r -");
