@@ -365,21 +365,24 @@ result: {id: "techreborn:lightning_rod", count: 1}, pattern:
   <recipetype:oritech:reactor>.addJsonRecipe("oritech:reactorgen/smallplutoniumpellet", {type: "oritech:reactor", time: 4000, results: [], ingredients: [{item: "oritech:small_plutonium_pellet"}]});
 */
 <recipetype:oritech:reactor>.removeAll();
-//铀 T1 原版铀*0.5
-//钍/MOX T2 原版铀*3
-//超能硅岩 T3 原版钚*1.5
+// 注：反应堆配方里的 time 是**燃料丸的燃料容量**，不是燃烧时长。
+//   实际燃烧时长 = time ÷ 棒数；能量 = P × 64 RF/t × 堆叠高度；热量 = ⌊P/2⌋ × P + 4。
+//   容量随棒数线性（单:双 = 1:2），使匹配棒型下烧一颗丸的时长一致；
+//   差异只体现在能效（单联 64 / 双联 128 / 四联 192 EU per 容量）。
+//   基准：四联棒 + 6 邻（P=36，2304 RF/t）下铀丸烧 7.5 分钟 ⇒ 36000；梯级 铀1× / 钍2× / MOX3× / 超能硅岩10×。
+//   反应堆只输出能量、不产出物品 ⇒ 本包做不了燃料循环。详见 scripts/nuclear_balance.md。
 function _reactor(_recipe as string, _id as string, _time as int) as void { 
     <recipetype:oritech:reactor>.addJsonRecipe(_recipe, {type: "oritech:reactor", time: _time, results: [], ingredients: [{item: _id}]});
 }
 
-_reactor("t2.ori.reactor.uranium", "jsonreg:uranium_fuel_rod", 2000);
-_reactor("t2.ori.reactor.uraniumx2", "jsonreg:dual_uranium_fuel_rod", 5000);
-_reactor("t2.ori.reactor.thorium", "jsonreg:thorium_fuel_rod", 12000);
-_reactor("t2.ori.reactor.thoriumx2", "jsonreg:dual_thorium_fuel_rod", 25000);
-_reactor("t2.ori.reactor.mox", "jsonreg:mox_fuel_rod",16000);
-_reactor("t2.ori.reactor.moxx2", "jsonreg:dual_mox_fuel_rod", 33000);
-_reactor("t2.ori.reactor.nqdria", "jsonreg:naquadria_fuel_rod", 60000);
-_reactor("t2.ori.reactor.nqdriamx2", "jsonreg:dual_naquadria_fuel_rod", 130000);
+_reactor("t2.ori.reactor.uranium", "jsonreg:uranium_fuel_rod", 36000);
+_reactor("t2.ori.reactor.uraniumx2", "jsonreg:dual_uranium_fuel_rod", 72000);
+_reactor("t2.ori.reactor.thorium", "jsonreg:thorium_fuel_rod", 72000);
+_reactor("t2.ori.reactor.thoriumx2", "jsonreg:dual_thorium_fuel_rod", 144000);
+_reactor("t2.ori.reactor.mox", "jsonreg:mox_fuel_rod", 108000);
+_reactor("t2.ori.reactor.moxx2", "jsonreg:dual_mox_fuel_rod", 216000);
+_reactor("t2.ori.reactor.nqdria", "jsonreg:naquadria_fuel_rod", 360000);
+_reactor("t2.ori.reactor.nqdriamx2", "jsonreg:dual_naquadria_fuel_rod", 720000);
 
 //燃料棒制作
 <recipetype:techreborn:assembling_machine>.addJsonRecipe("t2.tr.assembling.empty_fuel_rod", {type: "techreborn:assembling_machine",
