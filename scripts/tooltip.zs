@@ -249,6 +249,13 @@ import crafttweaker.api.item.IItemStack;
 <item:jsonreg:depleted_uranium_slag>.addTooltip("§e§l?§r");
 <item:jsonreg:calcium_oxide_slag>.addTooltip("§e§l(CaO)§r");
 
+// —— 核燃料产线 ——
+<item:jsonreg:enriched_uranium_dust>.addTooltip("§e§lU§r");
+<item:jsonreg:uranium_dioxide_dust>.addTooltip("§e§lUO₂§r");
+<item:jsonreg:mox_blend_dust>.addTooltip("§e§l(U,Pu)O₂§r");
+<item:jsonreg:mox_green_pellet>.addTooltip("§e§l(U,Pu)O₂§r");
+<item:jsonreg:mox_ceramic_pellet>.addTooltip("§e§l(U,Pu)O₂§r");
+
 //<item:jsonreg:fluorite_clump>.addTooltip("§e§lCaF₂§r");
 //<item:jsonreg:fluorite_gem>.addTooltip("§e§lCaF₂§r");
 <item:jsonreg:fluorite_dust>.addTooltip("§e§lCaF₂§r");

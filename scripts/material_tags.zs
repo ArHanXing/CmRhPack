@@ -134,3 +134,13 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:item:c:dusts/tungsten>.add(<item:jsonreg:tungsten_dust>);
 <tag:item:c:dusts>.add(<item:jsonreg:iridium_dust>);
 <tag:item:c:dusts/iridium>.add(<item:jsonreg:iridium_dust>);
+
+// ===== 核燃料产线（见 scripts/nuclear_design.md）=====
+<tag:item:c:dusts>.add(<item:jsonreg:enriched_uranium_dust>);
+<tag:item:c:dusts/enriched_uranium>.add(<item:jsonreg:enriched_uranium_dust>);
+<tag:item:c:dusts>.add(<item:jsonreg:uranium_dioxide_dust>);
+<tag:item:c:dusts/uranium_dioxide>.add(<item:jsonreg:uranium_dioxide_dust>);
+<tag:item:c:dusts>.add(<item:jsonreg:mox_blend_dust>);
+<tag:item:c:dusts/mox>.add(<item:jsonreg:mox_blend_dust>);
+<tag:item:c:plates>.add(<item:jsonreg:depleted_uranium_dense_plate>);
+<tag:item:c:plates/depleted_uranium>.add(<item:jsonreg:depleted_uranium_dense_plate>);
