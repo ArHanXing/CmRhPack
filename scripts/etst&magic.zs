@@ -295,15 +295,24 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
   ]
 });
 
+
+craftingTable.removeByName("botania:mana_fluxfield");
+
 //Affinity的一些魔改
 // ====      mod的杜鹃灌注必须用数据包        ====
 // ==== 可在 OpenLoader/LanguageAdd包 里查看 ====
 
+//紫珀块
+<recipetype:botania:mana_infusion>.addJsonRecipe("magic.bot.mana_infusion/purpur_block", {type: "botania:mana_infusion",
+    input: {item:"minecraft:amethyst_block"},
+    output: {id:"minecraft:purpur_block",count:1},
+    mana: 1000
+});
 //无烟煤粉
 <recipetype:botania:mana_infusion>.addJsonRecipe("magic.bot.mana_infusion/ranthracite_dust", {type: "botania:mana_infusion",
     input: {item:"affinity:anthracite_powder"},
     output: {id:"affinity:ranthracite_dust",count:1},
-    mana: 200
+    mana: 400
 });
 
 //BOT符文：七宗罪配方现在需要别的配料，导致它们只能通过杜鹃仪式消耗符文制作
