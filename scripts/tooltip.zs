@@ -427,8 +427,8 @@ import crafttweaker.api.item.IItemStack;
 <item:techreborn:isotope_separator>.addTooltip("===============");
 <item:techreborn:isotope_separator>.addTooltip("运行时需要§a转子和转速§r");
 <item:techreborn:isotope_separator>.addTooltip("转速 §ar§r 的计算方式为 §amin(红石信号/15，转子上限)§r");
-<item:techreborn:isotope_separator>.addTooltip("这时具有 §a(1 − 0.75r) 耗时倍率§r与§a(1 + 3r) 耗能倍率§r");
-<item:techreborn:isotope_separator>.addTooltip("且 §br > 0.6§r 时，§c产品降级§r，产出低一级的六氟化铀");
+<item:techreborn:isotope_separator>.addTooltip("这时具有 §a(1 − 0.5r) 耗时倍率§r与§a(1 + 3r) 耗能倍率§r");
+<item:techreborn:isotope_separator>.addTooltip("也就是§a高转速可获得更低耗时和更高耗能§r，例如 r=100% 时快 §a2×§r、每轮耗电 §c2×§r");
 <item:techreborn:isotope_separator>.addTooltip("===============");
 <item:techreborn:isotope_separator>.addTooltip("转子速率表（转子槽是第二个槽）");
 <item:techreborn:isotope_separator>.addTooltip("§b无转子§r ── 最大转速 §a25%§r");
@@ -437,6 +437,7 @@ import crafttweaker.api.item.IItemStack;
 <item:techreborn:isotope_separator>.addTooltip("§b钨钢转子§r ── 最大转速 §a90%§r");
 <item:techreborn:isotope_separator>.addTooltip("§b盖亚合金转子§r ── 最大转速 §a100%§r");
 <item:techreborn:isotope_separator>.addTooltip("§b光辉合金转子§r ── 最大转速 §a100%§r，且具有§a额外 30% 耗能减成§r");
+
 //只有紫铜和生铁有板
 //bgm:反转宇宙
 <item:neko-technology:tin_ingot>.addTooltip("- 说着§c「初次见面」§r这样的话 -");

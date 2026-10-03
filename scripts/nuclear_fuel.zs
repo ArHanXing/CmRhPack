@@ -6,7 +6,7 @@
 //
 // 槽位上限已核对：
 //   TR 化反 2 出 / 大化反 4 出 / 磨粉机 1 出 / 压缩机 1 出 / 装配机 1 出 / 离心机 ≥3 出
-//   同位素分离机 2 进 2 出（新机器，规格见 scripts/isotope_separator_spec.md）
+//   同位素分离机 2 进 2 出（新机器，机制见 scripts/nuclear_design.md §2.4）
 //
 // ⚠ ④⑤⑥ 三条级联配方依赖新机器 techreborn:isotope_separator。
 //   该机器尚在 TR 源码侧实现中；机器落地前这三条会让 CrT 报「未知 recipetype」。
@@ -21,13 +21,15 @@
 // A 转化段
 // ============================================================
 
-// ① 酸浸溶出：铀粉 ×8 + 硫酸 -> 铀酰硫酸溶液
+// ① 酸浸溶出：铀粉 ×8 + 硫酸 -> 铀盐溶液
 //   1 铀矿 --T1.5--> 3 铀粉，故 1 颗燃料棒 ≈ 2.67 铀矿
+//   复用 T1.5 铀线既有的 jsonreg:uranium_solution —— 同为「铀的硫酸溶液」，
+//   故不再单独注册铀酰硫酸溶液，两条线共享该中间体。
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("nuclear.0.leach", {type: "techreborn:chemical_reactor",
     time: 400,
     power: 128,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:uranyl_sulfate_solution"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:uranium_solution"}}
     ],
     ingredients: [
         {item: "oritech:uranium_dust", count: 8},
@@ -35,7 +37,7 @@
     ]
 });
 
-// ② 氟化：铀酰硫酸溶液 + 氢氟酸 -> 天然六氟化铀 + 硫酸（酸回流，闭环）
+// ② 氟化：铀盐溶液 + 氢氟酸 -> 天然六氟化铀 + 硫酸（酸回流，闭环）
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("nuclear.1.fluorinate", {type: "techreborn:chemical_reactor",
     time: 400,
     power: 128,
@@ -44,7 +46,7 @@
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}}
     ],
     ingredients: [
-        {count: 1, components: {"techreborn:fluid": "jsonreg:uranyl_sulfate_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "jsonreg:uranium_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
         {count: 1, components: {"techreborn:fluid": "jsonreg:hydrofluoric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
@@ -68,42 +70,44 @@
 // ============================================================
 // 分离比 2:1（每级浓度翻倍）：0.70% -> 1.40% -> 2.80% -> 5.60%
 // 机器数量比 ④:⑤:⑥ = 4:2:1；启动需先向回路预充 7 份尾料UF₆
-// degraded_output：转速 > 60% 时产品降一级（由机器在运行时替换 outputs[0]）
+// 转速机制（r = min(红石信号/15, 转子上限)）：
+//   耗时 × (1 − 0.5r)   耗能 × (1 + 3r)
+//   ⇒ 每轮耗电 = 基准 × (1−0.5r)(1+3r)，从 1.0 升到约 2.0（峰值 2.04 在 r≈0.83）
+//   ⇒ r=100% 快 2×、每轮贵 2×，是纯速度/能耗取舍
+
+//可惜降级被删掉了，现在变成纯可调机器了。
 
 <recipetype:techreborn:isotope_separator>.addJsonRecipe("nuclear.3.stage1", {type: "techreborn:isotope_separator",
-    time: 6000,
+    time: 3000,
     power: 128,
     outputs: [
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:low_uf6"}},
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:tails_uf6"}}
     ],
-    degraded_output: {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:natural_uf6"}},
     ingredients: [
         {count: 2, components: {"techreborn:fluid": "jsonreg:cascade_feed_uf6"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 
 <recipetype:techreborn:isotope_separator>.addJsonRecipe("nuclear.4.stage2", {type: "techreborn:isotope_separator",
-    time: 6000,
+    time: 3000,
     power: 128,
     outputs: [
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:mid_uf6"}},
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:tails_uf6"}}
     ],
-    degraded_output: {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:low_uf6"}},
     ingredients: [
         {count: 2, components: {"techreborn:fluid": "jsonreg:low_uf6"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 
 <recipetype:techreborn:isotope_separator>.addJsonRecipe("nuclear.5.stage3", {type: "techreborn:isotope_separator",
-    time: 6000,
+    time: 3000,
     power: 128,
     outputs: [
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:high_uf6"}},
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:tails_uf6"}}
     ],
-    degraded_output: {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:mid_uf6"}},
     ingredients: [
         {count: 2, components: {"techreborn:fluid": "jsonreg:mid_uf6"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
