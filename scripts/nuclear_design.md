@@ -1,7 +1,6 @@
 # 核能设计文档
 
-> 合并自 `nuclear_balance.md`（反应堆平衡调研）+ `nuclear_fuel_design.md`（燃料产线设计）。
-> 机器实现规格另见 **`isotope_separator_spec.md`**（交给实现 Agent 的自包含文档）。
+by DS4.1F
 
 ---
 

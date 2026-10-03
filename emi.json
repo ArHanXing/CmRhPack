@@ -154,6 +154,30 @@
     }
   ],
   "lookup_history": [
+    "item:techreborn:isotope_separator",
+    {
+      "type": "item",
+      "id": "techreborn:cell",
+      "nbt": "{\"techreborn:fluid\":\"jsonreg:cascade_feed_uf6\"}",
+      "amount": 2
+    },
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:natural_uf6\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:uranyl_sulfate_solution\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:tails_uf6\"}",
+    "item:jsonreg:uranium_fuel_rod",
+    "item:jsonreg:enriched_uranium_dust",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:high_uf6\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:mid_uf6\"}",
+    {
+      "type": "fluid",
+      "id": "jsonreg:mid_uf6",
+      "amount": 81000
+    },
+    {
+      "type": "fluid",
+      "id": "jsonreg:cascade_feed_uf6",
+      "amount": 81000
+    },
     "item:botania:mana_quartz",
     "item:botania:mana_quartz_block",
     "item:botania:terrestrial_agglomeration_plate",
@@ -1715,26 +1739,11 @@
       "id": "jsonreg:ammonium_fluoride_waste",
       "amount": 81000
     },
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ammonium_fluoride_waste\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ammonia\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:steam_ammonia_mixture\"}",
-    "item:botania:red_string",
-    "item:botania:terra_blade",
-    "item:botania:terra_truncator",
-    "item:botania:terra_shatterer{\"botania:elementium_tipped\":{},\"botania:mana\":999999}",
-    "item:jsonreg:rubber_plate",
-    "#item:c:gems",
-    "item:oritech:enchantment_catalyst_block",
-    "item:affinity:affine_candle",
-    "item:affinity:forgotten_artifact_blade"
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ammonium_fluoride_waste\"}"
   ],
   "craft_history": [
     "affinity:assembly/infused_stone",
-    "crafttweaker:ctgui/new/crafting/lv_electric_piston",
-    "crafttweaker:ctgui/new/crafting/lv_robot_arm",
-    "crafttweaker:ctgui/new/crafting/digital_miner",
     "oritech:duratium_blockblock",
-    "crafttweaker:magic.affinity.aspen_infusion/spirit_integration_apparatus",
     "minecraft:nether_brick",
     "minecraft:red_nether_bricks",
     "cmrhpack:assembly/runic_altar",
@@ -1742,7 +1751,6 @@
     "minecraft:stonecutter",
     "affinity:assembly/copper_plated_aethum_flux_node",
     "minecraft:polished_deepslate",
-    "crafttweaker:magic.tr.chemical/scintillant_anthracite_blend",
     "refinedstorage:wireless_transmitter",
     "refinedstorage:wireless_grid",
     "oritech:assembler/fluxgate",
@@ -1927,9 +1935,9 @@
   ],
   "recipe_defaults": {
     "added": [
-      "farmersdelight:flint_knife",
       "minecraft:crafter",
-      "techreborn:wire_mill/copper_cable"
+      "techreborn:wire_mill/copper_cable",
+      "farmersdelight:flint_knife"
     ],
     "tags": {},
     "resolutions": {},

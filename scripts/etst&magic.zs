@@ -299,7 +299,7 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
 craftingTable.removeByName("botania:mana_fluxfield");
 
 //Affinity的一些魔改
-// ====      mod的杜鹃灌注必须用数据包        ====
+// ====      mod的强化合成必须用数据包        ====
 // ==== 可在 OpenLoader/LanguageAdd包 里查看 ====
 
 //紫珀块

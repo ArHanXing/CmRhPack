@@ -61,6 +61,28 @@
       "value": 256
     }
   },
+  "isotope_separator": {
+    "IsotopeSeparatorTimeReduction": {
+      "comment": "Isotope Separator process time reduction at full speed (0.75 \u003d full speed takes 25% of the time)",
+      "value": 0.75
+    },
+    "IsotopeSeparatorRotorWearInterval": {
+      "comment": "Ticks of processing per point of rotor wear at full speed (scales inversely with speed)",
+      "value": 200
+    },
+    "IsotopeSeparatorMaxEnergy": {
+      "comment": "Isotope Separator Max Energy",
+      "value": 100000
+    },
+    "IsotopeSeparatorEnergyPenalty": {
+      "comment": "Isotope Separator extra energy multiplier at full speed (3.0 \u003d 4x power)",
+      "value": 3.0
+    },
+    "IsotopeSeparatorMaxInput": {
+      "comment": "Isotope Separator Max Input (Energy per tick)",
+      "value": 8192
+    }
+  },
   "block_placer": {
     "BlockPlacerMaxEnergy": {
       "comment": "Block Placer Max Energy",

@@ -129,7 +129,7 @@
 });
 
 // ⑩ 制棒：浓缩铀粉 + 空棒 -> 铀燃料棒
-<recipetype:techreborn:assembling_machine>.addJsonRecipe("nuclear.7.rod_uranium", {type: "techreborn:assembling_machine",
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("nuclear.7.rod_uranium", {type: "techreborn:precise_assembler",
     time: 200,
     power: 64,
     outputs: [
@@ -156,7 +156,7 @@
     ]
 });
 
-// ⑫ 贫铀利用：贫铀废渣 -> 贫铀合金坚固板（此前是零配方死注册）
+// ⑫ 贫铀利用：贫铀废渣 -> 贫铀合金坚固板
 <recipetype:techreborn:compressor>.addJsonRecipe("nuclear.9.depleted_plate", {type: "techreborn:compressor",
     time: 300,
     power: 32,
@@ -239,8 +239,7 @@
 });
 
 // ⑥ 装壳：MOX 陶瓷芯块 + 空棒 + 铅板 -> MOX 燃料棒
-//   包壳用铅板（辐射屏蔽），本包无锆矿，不为此新增材料
-<recipetype:techreborn:precision_assembly>.addJsonRecipe("nuclear.mox.5.rod", {type: "techreborn:assembling_machine",
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("nuclear.mox.5.rod", {type: "techreborn:precise_assembler",
     time: 300,
     power: 64,
     outputs: [
@@ -271,7 +270,7 @@
 });
 
 // ② 制棒：钍粉 + 空棒 -> 钍燃料棒
-<recipetype:techreborn:assembling_machine>.addJsonRecipe("nuclear.th.1.rod", {type: "techreborn:assembling_machine",
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("nuclear.th.1.rod", {type: "techreborn:precise_assembler",
     time: 200,
     power: 64,
     outputs: [
