@@ -51,7 +51,7 @@ furnace.removeByName("refinedstorage:silicon");
 <recipetype:oritech:foundry>.removeByName("oritech:foundry/alloy/netherite");
 
 //移除错误配方
-<recipetype:techreborn:distillation_tower>.removeByName("oritech:compat/techreborn/distillation/oil");
+//<recipetype:techreborn:distillation_tower>.removeByName("oritech:compat/techreborn/distillation/oil");
 <recipetype:techreborn:industrial_electrolyzer>.removeByName("techreborn:industrial_electrolyzer/cell_7");
 <recipetype:techreborn:industrial_electrolyzer>.addJsonRecipe("fix.techreborn.industrial_electrolyzer/cell_7", {type: "techreborn:industrial_electrolyzer", time: 1400, 
 outputs: [
