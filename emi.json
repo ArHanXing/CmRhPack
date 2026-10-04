@@ -154,20 +154,21 @@
     }
   ],
   "lookup_history": [
-    "item:techreborn:isotope_separator",
-    {
-      "type": "item",
-      "id": "techreborn:cell",
-      "nbt": "{\"techreborn:fluid\":\"jsonreg:cascade_feed_uf6\"}",
-      "amount": 2
-    },
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:natural_uf6\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:uranyl_sulfate_solution\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:tails_uf6\"}",
+    "item:techreborn:refined_iron_plate",
+    "item:oritech:processing_unit",
+    "item:minecraft:redstone",
+    "item:oritech:assembler_block",
+    "item:oritech:reactor_recovery",
     "item:jsonreg:uranium_fuel_rod",
+    "item:oritech:reactor_controller",
     "item:jsonreg:enriched_uranium_dust",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:high_uf6\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:mid_uf6\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:low_uf6\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:cascade_feed_uf6\"}",
+    "item:techreborn:isotope_separator",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:natural_uf6\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:tails_uf6\"}",
     {
       "type": "fluid",
       "id": "jsonreg:mid_uf6",
@@ -406,7 +407,6 @@
     "item:techreborn:cell{\"techreborn:fluid\":\"homeostatic:purified_water\"}",
     "item:minecraft:crafting_table",
     "item:sophisticatedstorage:upgrade_base",
-    "item:oritech:processing_unit",
     {
       "type": "fluid",
       "id": "jsonreg:sodium_hydroxide_solution",
@@ -809,7 +809,6 @@
     },
     "item:eternal_starlight:ether_bucket",
     "item:neko-technology:neko_copper_ingot",
-    "item:oritech:reactor_controller",
     "item:minecraft:cobblestone",
     "item:techreborn:space_elevator_assembler",
     "item:techreborn:space_elevator",
@@ -906,8 +905,6 @@
     },
     "item:oritech:small_iron_dust",
     "item:techreborn:electronic_circuit",
-    "item:techreborn:refined_iron_plate",
-    "item:minecraft:redstone",
     "item:cabletiers:creative_exporter",
     "item:cabletiers:creative_importer",
     "item:cabletiers:ultra_interface",
@@ -1155,7 +1152,6 @@
     "item:techreborn:platinum_ingot",
     "item:jsonreg:duratium_rod",
     "item:oritech:adamant_ingot",
-    "item:oritech:assembler_block",
     "item:oritech:machine_plating_block",
     "#item:oritech:plating",
     "item:minecraft:crafter",
@@ -1738,8 +1734,7 @@
       "type": "fluid",
       "id": "jsonreg:ammonium_fluoride_waste",
       "amount": 81000
-    },
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ammonium_fluoride_waste\"}"
+    }
   ],
   "craft_history": [
     "affinity:assembly/infused_stone",
@@ -1935,9 +1930,9 @@
   ],
   "recipe_defaults": {
     "added": [
-      "minecraft:crafter",
       "techreborn:wire_mill/copper_cable",
-      "farmersdelight:flint_knife"
+      "farmersdelight:flint_knife",
+      "minecraft:crafter"
     ],
     "tags": {},
     "resolutions": {},

@@ -490,7 +490,7 @@ _fuelrod("t2.tr.assembling.fuelrod.nqdria", "jsonreg:naquadria_dust", "jsonreg:n
 // 3. Kroll 镁还原（化反, 1A MV）: TiCl4 + 2Mg → Ti + MgCl2
 // 无需镁！
 <recipetype:techreborn:kroll_reduction_vessel>.addJsonRecipe("t2.tr.kroll_reduction", {type: "techreborn:kroll_reduction_vessel",
-    time: 400,
+    time: 200,
     outputs: [
         {id: "techreborn:titanium_ingot", count: 1},
         {id: "techreborn:cell", count: 4, components: {"techreborn:fluid": "jsonreg:chlorine"}}
@@ -538,7 +538,7 @@ _fuelrod("t2.tr.assembling.fuelrod.nqdria", "jsonreg:naquadria_dust", "jsonreg:n
 
 // HF -> H2+F2
 <recipetype:techreborn:industrial_electrolyzer>.addJsonRecipe("t2.tr.electrolyzer/fluorine_from_hf", {type: "techreborn:industrial_electrolyzer",
-    time: 2000,
+    time: 200,
     outputs: [
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "techreborn:hydrogen"}},
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:fluorine"}}
@@ -549,3 +549,19 @@ _fuelrod("t2.tr.assembling.fuelrod.nqdria", "jsonreg:naquadria_dust", "jsonreg:n
         {count: 1, components: {"techreborn:fluid": "jsonreg:hydrofluoric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
+
+//化工TNT
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("t2.tr.lcr.tnt_synthesis", {type: "techreborn:large_chemical_reactor",
+    time: 20,
+    power: 128,
+    outputs: [
+        {id: "minecraft:tnt", count: 2},
+        {id: "techreborn:cell", count: 6, components: {"techreborn:fluid": "minecraft:water"}},
+        {id: "techreborn:cell", count: 2}
+    ],
+    ingredients: [
+        {count: 2, components: {"techreborn:fluid": "jsonreg:toluene"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 6, components: {"techreborn:fluid": "jsonreg:nitric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+

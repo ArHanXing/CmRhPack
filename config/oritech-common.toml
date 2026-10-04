@@ -489,6 +489,18 @@
 	maxUnstableTicks = 600
 	#Disable fancy reactor explosion effects
 	boringNukes = false
+	#Heat recovery port heat extraction rate per neighboring component
+	# Default: 8
+	# Range: > 0
+	recoveryRate = 8
+	#RF generated per heat removed by a heat recovery port. Keep this at or below 128 / (max rod pulse count) to avoid heat farming
+	# Default: 2
+	# Range: > 0
+	rfPerHeat = 2
+	#Additional heat generated per reactor layer. 0 keeps the old behavior (height is heat neutral), higher values make taller reactors need more cooling
+	# Default: 0.0
+	# Range: 0.0 ~ 10.0
+	heatHeightSlope = 0.0
 
 [arcane]
 	#Enchanter soul cost multiplier
