@@ -213,7 +213,7 @@
 			# Default: 50000
 			# Range: 0 ~ 9223372036854775807
 			maxEnergyExtraction = 65536
-			#Applies to generators with the steam addon. Droplets of steam produced per the usual RF.
+			#Applies to generators with the steam addon. Droplets of steam produced per the usual EU.
 			# Default: 2.0
 			# Range: 0.0 ~ 1000.0
 			rfToSteamRatio = 2.0
@@ -254,7 +254,7 @@
 		# Default: 128
 		# Range: 0 ~ 9223372036854775807
 		energyPerTick = 64
-		#Base RF cost to break a block
+		#Base EU cost to break a block
 		# Default: 1024
 		# Range: > 0
 		blockBreakEnergyBase = 512
@@ -275,7 +275,7 @@
 		# Default: 20
 		# Range: > 1
 		stepsPerOre = 20
-		#RF consumed per work step
+		#EU consumed per work step
 		# Default: 1024
 		# Range: > 0
 		energyPerStep = 1536
@@ -335,7 +335,7 @@
 		# Default: 1.2
 		# Range: 0.0 ~ 100.0
 		burstAddonThrottleMultiplier = 1.2
-		#Addon splicer RF storage capacity
+		#Addon splicer EU storage capacity
 		# Default: 50000000
 		# Range: 0 ~ 9223372036854775807
 		addonShrinkerRF = 50000000
@@ -345,7 +345,7 @@
 	# Default: 256
 	# Range: > 1
 	portableTankCapacityBuckets = 256
-	#Overcharged crystal energy generation rate in RF/t
+	#Overcharged crystal energy generation rate in EU/t
 	# Default: 10
 	# Range: > 1
 	overchargedCrystalChargeRate = 10
@@ -399,17 +399,17 @@
 	# Default: 2.0
 	# Range: 0.0 ~ 1000.0
 	fluidPipeInternalStorageBuckets = 2
-	#Energy pipe transfer rate in RF/t
+	#Energy pipe transfer rate in EU/t
 	# Default: 10000
 	# Range: 0 ~ 9223372036854775807
 	energyPipeTransferRate = 4096
-	#Superconductor cable transfer rate in RF/t
+	#Superconductor cable transfer rate in EU/t
 	# Default: 4194304
 	# Range: 0 ~ 9223372036854775807
 	superConductorTransferRate = 4194304
 
 	[logistics.poleConfig]
-		#Energy transmission rate and capacity in RF/t
+		#Energy transmission rate and capacity in EU/t
 		# Default: 1000000
 		# Range: 0 ~ 9223372036854775807
 		energyCapacity = 1048576
@@ -455,15 +455,15 @@
 	# Default: 64
 	# Range: > 1
 	maxSize = 64
-	#Maximum energy stored in the reactor in RF
+	#Maximum energy stored in the reactor in EU
 	# Default: 50000000
 	# Range: > 0
 	reactorMaxEnergyStored = 67108864
-	#Maximum energy output in RF/t per energy port
+	#Maximum energy output in EU/t per energy port
 	# Default: 25000
 	# Range: > 0
 	reactorMaxEnergyOutput = 32768
-	#RF generated per reactor pulse
+	#EU generated per reactor pulse
 	# Default: 64
 	# Range: > 0
 	rfPerPulse = 64
@@ -493,7 +493,7 @@
 	# Default: 8
 	# Range: > 0
 	recoveryRate = 8
-	#RF generated per heat removed by a heat recovery port. Keep this at or below 128 / (max rod pulse count) to avoid heat farming
+	#EU generated per heat removed by a heat recovery port. Keep this at or below 128 / (max rod pulse count) to avoid heat farming
 	# Default: 2
 	# Range: > 0
 	rfPerHeat = 2
@@ -511,7 +511,7 @@
 	# Default: 50
 	# Range: > 0
 	catalystBaseSouls = 10
-	#RF/t per catalyst soul capacity level increase
+	#EU/t per catalyst soul capacity level increase
 	# Default: 20
 	# Range: > 0
 	catalystRFPerSoul = 64
@@ -541,11 +541,11 @@
 	# Default: 2.5
 	# Range: 0.0 ~ 100.0
 	bendFactor = 2.5
-	#Base RF cost per particle acceleration step
+	#Base EU cost per particle acceleration step
 	# Default: 10
 	# Range: > 0
 	accelerationRFCost = 10
-	#Accelerator motor RF storage capacity
+	#Accelerator motor EU storage capacity
 	# Default: 5000000
 	# Range: 0 ~ 9223372036854775807
 	acceleratorMotorRFCapacity = 5000000
@@ -561,11 +561,11 @@
 	# Default: 15000
 	# Range: > 0
 	blackHoleRequiredSpeed = 15000
-	#Tachyon collector energy capacity in RF
+	#Tachyon collector energy capacity in EU
 	# Default: 1000000
 	# Range: > 0
 	collectorEnergyStorage = 1048576
-	#Particle collision tachyon RF multiplier
+	#Particle collision tachyon EU multiplier
 	# Default: 1.0
 	# Range: 0.0 ~ 100.0
 	tachyonCollisionEnergyFactor = 0.5
@@ -587,7 +587,7 @@
 	# Default: 50000
 	# Range: > 0
 	blackHoleTachyonEnergy = 50000
-	#Unstable container base RF storage capacity
+	#Unstable container base EU storage capacity
 	# Default: 20000000
 	# Range: 0 ~ 9223372036854775807
 	unstableContainerBaseCapacity = 20000000

@@ -154,13 +154,40 @@
     }
   ],
   "lookup_history": [
+    {
+      "type": "fluid",
+      "id": "eternal_starlight:ether",
+      "amount": 81000
+    },
+    {
+      "type": "item",
+      "id": "techreborn:cell",
+      "nbt": "{\"techreborn:fluid\":\"eternal_starlight:ether\"}",
+      "amount": 4
+    },
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:soul_injection_catalyst\"}",
+    {
+      "type": "item",
+      "id": "jsonreg:soul_infused_epoxy_resin_plate",
+      "amount": 2
+    },
+    "item:jsonreg:advanced_circuit_board",
+    {
+      "type": "item",
+      "id": "jsonreg:germanium_wafer",
+      "amount": 2
+    },
+    "item:oritech:silicon_wafer",
+    "item:oritech:reactor_controller",
+    "item:oritech:reactor_wall",
+    "item:oritech:reactor_absorber_port",
+    "item:oritech:reactor_energy_port",
     "item:techreborn:refined_iron_plate",
     "item:oritech:processing_unit",
     "item:minecraft:redstone",
     "item:oritech:assembler_block",
     "item:oritech:reactor_recovery",
     "item:jsonreg:uranium_fuel_rod",
-    "item:oritech:reactor_controller",
     "item:jsonreg:enriched_uranium_dust",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:high_uf6\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:mid_uf6\"}",
@@ -183,7 +210,6 @@
     "item:botania:mana_quartz_block",
     "item:botania:terrestrial_agglomeration_plate",
     "item:jsonreg:silicon_boule",
-    "item:oritech:silicon_wafer",
     "item:techreborn:superconductor_upgrade",
     "item:affinity:wand_of_inquiry",
     "item:affinity:uncanny_rod",
@@ -336,7 +362,6 @@
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:sulfur_trioxide\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:sodium_hydroxide_solution\"}",
     "item:jsonreg:iron_concentrate",
-    "item:jsonreg:advanced_circuit_board",
     "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:sodium_sulfide\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:sodium_persulfate\"}",
     {
@@ -357,8 +382,6 @@
     "item:jsonreg:stress_proof_casing",
     "item:jsonreg:smd_inductor",
     "item:jsonreg:epoxy_resin_plate",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:soul_injection_catalyst\"}",
-    "item:jsonreg:soul_infused_epoxy_resin_plate",
     "item:techreborn:hv_cable",
     "item:jsonreg:smd_capacitor",
     "item:jsonreg:smd_diode",
@@ -434,7 +457,6 @@
     "item:techreborn:diamond_saw_blade",
     "item:techreborn:cell{\"techreborn:fluid\":\"oritech:still_silicon_wash\"}",
     "item:homeostatic:water_filter",
-    "item:jsonreg:germanium_wafer",
     {
       "type": "fluid",
       "id": "jsonreg:end_air",
@@ -800,12 +822,6 @@
       "type": "fluid",
       "id": "jsonreg:shine_soul_injection_catalyst",
       "amount": 0
-    },
-    "item:techreborn:cell{\"techreborn:fluid\":\"eternal_starlight:ether\"}",
-    {
-      "type": "fluid",
-      "id": "eternal_starlight:ether",
-      "amount": 81000
     },
     "item:eternal_starlight:ether_bucket",
     "item:neko-technology:neko_copper_ingot",
@@ -1640,9 +1656,7 @@
     },
     "item:avaritia:infinity_ingot",
     "item:techreborn:dyson_swarm_host",
-    "item:oritech:reactor_absorber_port",
     "item:oritech:reactor_fuel_port",
-    "item:oritech:reactor_energy_port",
     "item:jsonreg:naquadria_fuel_rod",
     "item:jsonreg:dual_naquadria_fuel_rod",
     "item:techreborn:superconductor",
@@ -1729,12 +1743,7 @@
     "item:affinity:dragon_drop",
     "item:affinity:synthetic_dragon_heart",
     "item:minecraft:sculk_catalyst",
-    "item:jsonreg:sublimation_residue",
-    {
-      "type": "fluid",
-      "id": "jsonreg:ammonium_fluoride_waste",
-      "amount": 81000
-    }
+    "item:jsonreg:sublimation_residue"
   ],
   "craft_history": [
     "affinity:assembly/infused_stone",
@@ -1931,8 +1940,8 @@
   "recipe_defaults": {
     "added": [
       "techreborn:wire_mill/copper_cable",
-      "farmersdelight:flint_knife",
-      "minecraft:crafter"
+      "minecraft:crafter",
+      "farmersdelight:flint_knife"
     ],
     "tags": {},
     "resolutions": {},
