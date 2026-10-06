@@ -23,12 +23,6 @@ craftingTable.removeByName("immersive_aircraft:engine");
     [<item:oritech:motor>, <item:techreborn:iron_furnace>, <item:oritech:motor>], 
     [<item:techreborn:iron_plate>, <item:immersive_aircraft:boiler>, <item:techreborn:iron_plate>]]);
 
-//末影之眼
-craftingTable.removeByName("minecraft:ender_eye");
-<recipetype:techreborn:chemical_reactor>.removeByName("techreborn:chemical_reactor/ender_eye");
-<recipetype:techreborn:chemical_reactor>.addJsonRecipe("misc.techreborn.chemical_reactor/ender_eye", {type: "techreborn:chemical_reactor", time: 400, 
-outputs: [{id: "minecraft:ender_eye", count: 6}], power: 50, ingredients: [{item: "oritech:overcharged_crystal"}, {item: "eternal_starlight:seeking_eye", count:4}]});
-
 //移除便宜喷气背包哈哈哈
 craftingTable.removeByName("oritech:crafting/basicjetpackalt");
 
@@ -175,11 +169,6 @@ for node in customNodes {
 }
 
 // 3. 让所有资源节点「可挖掘、可掉落」：硬度 2.5、抗爆炸 10
-//    注意两个属性挂在**不同的 CrT expand 类**上，不能写在一处：
-//      · destroySpeed        在**方块状态**上（ExpandBlockState.setDestroySpeed）
-//      · explosionResistance 在**方块**上（ExpandBlock.setExplosionResistance）
-//    OR 原版节点的默认硬度极高（相当于不可挖），此前设成 10 仍然很硬，现统一降到 2.5。
-//    掉落不需要额外处理：节点没有独立 loot table，挖掉即掉落自身（jsonreg 侧已声明 has_item: true）。
 for node in vanillaNodes {
     val nodeName = node[0] as string;
     val nodeNamespace = node[1] as string;
@@ -230,6 +219,7 @@ for node in customNodes {
     });
 }
 
+/*
 //虚空维度进入 //TODO
 <recipetype:lychee:block_clicking>.addJsonRecipe("misc.enter_void_dimension",{
   "type": "lychee:block_clicking",
@@ -261,4 +251,4 @@ for node in customNodes {
     
   ]
 });
-
+*/

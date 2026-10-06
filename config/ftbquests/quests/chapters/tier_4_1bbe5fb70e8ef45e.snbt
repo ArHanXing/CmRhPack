@@ -140,29 +140,6 @@
 			y: 1.5d
 		}
 		{
-			can_repeat: true
-			dependencies: ["13CA8EFCCCD5BB9E"]
-			id: "073CBBEB4B3AFFA7"
-			optional: true
-			rewards: [{
-				id: "78EC2AAE3C6E378E"
-				item: {
-					count: 1
-					id: "eternal_starlight:starlight_golem_spawner"
-				}
-				type: "item"
-			}]
-			tasks: [{
-				consume_items: true
-				count: 32L
-				id: "1873A62BBD7D5CD9"
-				item: { count: 1, id: "eternal_starlight:frozen_tube" }
-				type: "item"
-			}]
-			x: 4.5d
-			y: -1.5d
-		}
-		{
 			dependencies: ["2E5EBD89875B28CF"]
 			id: "3CF28111121E6B75"
 			tasks: [{
@@ -172,29 +149,6 @@
 			}]
 			x: 6.5d
 			y: 3.5d
-		}
-		{
-			can_repeat: true
-			dependencies: ["3CF28111121E6B75"]
-			id: "26F8F2E98AA9F792"
-			optional: true
-			rewards: [{
-				id: "0349BE2A45348C24"
-				item: {
-					count: 1
-					id: "eternal_starlight:lunar_monstrosity_spawner"
-				}
-				type: "item"
-			}]
-			tasks: [{
-				consume_items: true
-				count: 16L
-				id: "42A813A4682AFF28"
-				item: { count: 1, id: "eternal_starlight:tangled_skull" }
-				type: "item"
-			}]
-			x: 8.5d
-			y: 4.5d
 		}
 		{
 			dependencies: ["2E5EBD89875B28CF"]
@@ -307,10 +261,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"2C453E81D0B53296"
-				"53CC9BE921A55D4F"
-			]
+			dependencies: ["6760F7F7FF05F333"]
 			id: "1DB355E70CF7C333"
 			tasks: [{
 				id: "37DD30925564AE6E"

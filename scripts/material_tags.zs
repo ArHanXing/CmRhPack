@@ -42,11 +42,16 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:item:c:ingots/neko>.add(<item:toneko:neko_ingot>);
 
 <tag:block:c:ores>.add(<block:jsonreg:salt_ore>);
+<tag:block:c:ores/salt>.add(<block:jsonreg:salt_ore>);
 <tag:block:c:ores>.add(<block:jsonreg:rock_salt_ore>);
+<tag:block:c:ores/rock_salt>.add(<block:jsonreg:rock_salt_ore>);
 <tag:block:c:ores>.add(<block:jsonreg:end_naquadah_ore>);
+<tag:block:c:ores/naquadah>.add(<block:jsonreg:end_naquadah_ore>);
 <tag:block:c:ores>.add(<block:jsonreg:end_enriched_naquadah_ore>);
+<tag:block:c:ores/enriched_naquadah>.add(<block:jsonreg:end_enriched_naquadah_ore>);
 <tag:block:c:ores>.add(<block:jsonreg:voidstone_rutile_ore>);
-<tag:block:c:ores>.add(<block:jsonreg:nether_fluorite_ore>);
+<tag:block:c:ores/rutile>.add(<block:jsonreg:voidstone_rutile_ore>);
+<tag:block:c:ores>.add(<block:jsonreg:nether_fluorite_ore>); 
 <tag:block:c:ores/fluorite>.add(<block:jsonreg:nether_fluorite_ore>);
 
 <tag:item:c:small_dusts>.add(<item:oritech:small_platinum_dust>);

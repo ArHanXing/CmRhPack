@@ -131,11 +131,16 @@ primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", c
         {item: "botania:terrasteel_nugget"},
     ], flux_cost_per_tick: 20}
 );
-//精灵优化泰拉钢
+//(精灵优化)泰拉钢
+<recipetype:botania:terrestrial_agglomeration_plate>.removeByName("botania:terrestrial_agglomeration_plate/terrasteel_ingot");
+<recipetype:botania:terrestrial_agglomeration_plate>.addJsonRecipe("magic.botania.terrestrial_agglomeration_plate/terrasteel_ingot", {type: "botania:terrestrial_agglomeration_plate",
+    result: {id: "botania:terrasteel_ingot", count: 1},
+    mana: 500000,
+    ingredients: [{tag: "c:ingots/manasteel"}, {tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_pearl"}, {item:"botania:rune_of_earth"}]});
 <recipetype:botania:terrestrial_agglomeration_plate>.addJsonRecipe("magic.botania.terrestrial_agglomeration_plate/better_terrasteel_ingot", {type: "botania:terrestrial_agglomeration_plate",
     result: {id: "botania:terrasteel_ingot", count: 1},
     mana: 250000,
-    ingredients: [{tag: "c:ingots/elementium"}, {tag: "c:gems/dragonstone"}, {tag: "c:dusts/pixie"}]});
+    ingredients: [{tag: "c:ingots/elementium"}, {tag: "c:gems/dragonstone"}, {tag: "c:dusts/pixie"}, {item:"botania:rune_of_earth"}]});
 
 //盖亚水晶
 <recipetype:lychee:item_inside>.addJsonRecipe("magic.botania.gaia_pylon", {
@@ -168,20 +173,6 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
     outputs: [{id: "techreborn:tungstensteel_ingot", count: 2}], power: 30, 
     ingredients: [{item: "eternal_starlight:frozen_tube"}, {item: "techreborn:hot_tungstensteel_ingot", count:2}]});
 
-//末地气瓶
-<recipetype:techreborn:chemical_reactor>.addJsonRecipe("magic.tr.chemical.end_air",{
-  type:"techreborn:chemical_reactor",
-  time:200,
-  outputs:[
-    {id: "techreborn:cell", count: 1},
-    {id: "techreborn:cell", count: 1}
-  ],
-  power:16,
-  ingredients:[
-    {count: 1, components: {"techreborn:fluid": "jsonreg:end_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-    {count: 1, item:"minecraft:glass_bottle"}
-  ]
-});
 //精灵门核心
 <recipetype:affinity:aspen_infusion>.addJsonRecipe("magic.affinity.aspen_infusion/elven_gateway_core", {type: "affinity:aspen_infusion", transfer_components: false, 
     primary_input: {item: "botania:mana_pearl"},
@@ -264,14 +255,15 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
     burn_time: 400,
     results: [
         {amount: 1, item: {id: "toneko:neko_ingot"}},
-        {amount: {min_inclusive: 0, max_inclusive: 3, type: "minecraft:uniform"}, item: {id: "eternal_starlight:dimslag"}},
+        {amount: 1, item: {id: "techreborn:cell"}},
         {amount: {max_inclusive: 3, min_inclusive: 0, type: "minecraft:uniform"}, item: {id: "toneko:neko_ingot"}}
     ],ingredients: [
         {item: "toneko:neko_potion"},
         {item: "affinity:crystalline_wisp_matter_composite"},
         {item: "eternal_starlight:deepsilver_ingot"},
         {item: "eternal_starlight:deepsilver_ingot"},
-        {item: "eternal_starlight:deepsilver_ingot"}
+        {item: "eternal_starlight:deepsilver_ingot"},
+        {count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]});
 
 //猫猫万能工具
@@ -295,6 +287,28 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
   ]
 });
 
+//光辉催化剂
+<recipetype:lychee:item_inside>.addJsonRecipe("magic.lychee.shine_catalyst",{
+  "type": "lychee:item_inside",
+  "item_in": "botania:gaia_ingot",
+  "block_in": "jsonreg:soul_injection_catalyst",
+  "post": [
+    "place jsonreg:shine_soul_injection_catalyst"
+  ]
+});
+
+//末影之眼
+craftingTable.removeByName("minecraft:ender_eye");
+<recipetype:techreborn:chemical_reactor>.removeByName("techreborn:chemical_reactor/ender_eye");
+<recipetype:lychee:item_inside>.addJsonRecipe("magic.lychee.ender_eye",{
+  "type": "lychee:item_inside",
+  "item_in": "eternal_starlight:seeking_eye",
+  "block_in": "jsonreg:shine_soul_injection_catalyst",
+  "post": [
+    "drop minecraft:ender_eye",
+    "explode"
+  ]
+});
 
 craftingTable.removeByName("botania:mana_fluxfield");
 

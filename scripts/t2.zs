@@ -397,25 +397,6 @@ _reactor("t2.ori.reactor.nqdriamx2", "jsonreg:dual_naquadria_fuel_rod", 720000);
     ]
 });
 
-//装填
-function _fuelrod(_recipe as string, _idfrom as string, _idto as string) as string {
-<recipetype:techreborn:assembling_machine>.addJsonRecipe(_recipe, {type: "techreborn:assembling_machine",
-    time: 80,
-    outputs: [
-        {id: _idto, count: 1}
-    ],
-    power: 32,
-    ingredients: [
-        {item: "jsonreg:fuel_rod", count: 1},
-        {item: _idfrom, count: 1}
-    ]
-});
-}
-
-_fuelrod("t2.tr.assembling.fuelrod.uranium", "oritech:uranium_dust", "jsonreg:uranium_fuel_rod");
-_fuelrod("t2.tr.assembling.fuelrod.mox", "oritech:plutonium_dust", "jsonreg:mox_fuel_rod");
-_fuelrod("t2.tr.assembling.fuelrod.thorium", "jsonreg:thorium_dust", "jsonreg:thorium_fuel_rod");
-_fuelrod("t2.tr.assembling.fuelrod.nqdria", "jsonreg:naquadria_dust", "jsonreg:naquadria_fuel_rod");
 //cb板
 <recipetype:techreborn:compressor>.addJsonRecipe("t2.tr.duratium_plate", {type: "techreborn:compressor",
     time: 600,

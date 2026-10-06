@@ -8,7 +8,7 @@
 	}
 	id: "719CBB6C1474F513"
 	images: [ ]
-	order_index: 5
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
@@ -37,7 +37,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["116D5EEA76BAA2A4"]
+			dependencies: ["68030A556BD17717"]
 			icon: {
 				id: "minecraft:ender_eye"
 			}
@@ -239,22 +239,6 @@
 			]
 			x: 9.5d
 			y: -0.5d
-		}
-		{
-			can_repeat: true
-			dependencies: ["451388BDBFCFC6B9"]
-			id: "130EE19AF4BBB088"
-			rewards: [{
-				command: "/execute in minecraft:the_end run tp @s 0 67 0"
-				id: "5ABBD62FA7D0A07C"
-				type: "command"
-			}]
-			tasks: [{
-				id: "7554111C548B78C3"
-				type: "checkmark"
-			}]
-			x: 0.0d
-			y: 4.5d
 		}
 		{
 			dependencies: ["1383EEC462166A2F"]
