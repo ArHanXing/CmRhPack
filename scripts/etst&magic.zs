@@ -142,6 +142,21 @@ primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", c
     mana: 250000,
     ingredients: [{tag: "c:ingots/elementium"}, {tag: "c:gems/dragonstone"}, {tag: "c:dusts/pixie"}, {item:"botania:rune_of_earth"}]});
 
+//末地石
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("etst.tr.lcr/end_stone", {type: "techreborn:large_chemical_reactor", 
+    outputs: [
+        {id: "minecraft:end_stone", count: 1},
+        {id: "techreborn:cell", count: 2}
+    ],
+    time: 128, power: 256,
+    ingredients: [
+        {count: 2, components: {"techreborn:fluid": "jsonreg:end_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 4, item:"botania:pixie_dust"},
+        {count: 1, item:"affinity:crystalline_wisp_matter_composite"},
+        {count: 1, item:"botania:rune_of_winter"},
+        {count: 1, item:"minecraft:cobblestone"}
+    ]
+});
 //盖亚水晶
 <recipetype:lychee:item_inside>.addJsonRecipe("magic.botania.gaia_pylon", {
     type: "lychee:item_inside",

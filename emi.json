@@ -154,6 +154,32 @@
     }
   ],
   "lookup_history": [
+    "item:botania:pure_ender_essence",
+    "item:minecraft:end_stone",
+    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:end_air\"}",
+    "item:botania:mana_powder",
+    "item:botania:manufactory_halo",
+    "item:minecraft:cake",
+    "item:minecraft:ender_eye",
+    "item:minecraft:deepslate",
+    "item:minecraft:chiseled_deepslate",
+    "item:botania:rune_of_winter",
+    "item:botania:rune_of_wrath",
+    "item:botania:rune_of_sloth",
+    "item:botania:red_string",
+    "item:botania:luminizer",
+    "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:compressed_air\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:nitrogen\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:nitrogen_dioxide\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:helium\"}",
+    "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:helium3\"}",
+    {
+      "type": "fluid",
+      "id": "jsonreg:end_air",
+      "amount": 0
+    },
+    "item:botania:diluted_ender_essence",
+    "item:botania:alfglass_flask",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:chlorine\"}",
     "item:jsonreg:rutile_dust",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:titanium_tetrachloride\"}",
@@ -194,17 +220,11 @@
       "amount": 2
     },
     "item:jsonreg:raw_naquadah",
-    "item:botania:red_string",
-    "item:botania:luminizer",
-    "item:minecraft:ender_eye",
     "item:botania:shimmerrock",
     "item:botania:bifrost",
     "item:botania:mana_fluxfield",
     "item:botania:mana_in_a_bottle",
     "item:botania:extrapolated_bucket",
-    "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:end_air\"}",
-    "item:minecraft:end_stone",
-    "item:botania:pure_ender_essence",
     "item:eternal_starlight:seeking_eye",
     {
       "type": "fluid",
@@ -235,9 +255,7 @@
     "item:urinarycatheter:urinary_catheter",
     "item:botania:gaia_spirit",
     "item:botania:rune_of_fire",
-    "item:botania:rune_of_sloth",
     "item:botania:runic_altar",
-    "item:botania:diluted_ender_essence",
     {
       "type": "item",
       "id": "botania:vinculotus",
@@ -255,7 +273,6 @@
         "remainder": "item:botania:floating_vinculotus"
       }
     ],
-    "item:botania:alfglass_flask",
     {
       "type": "item",
       "id": "botania:soulscribe",
@@ -605,11 +622,6 @@
     "item:techreborn:diamond_saw_blade",
     "item:techreborn:cell{\"techreborn:fluid\":\"oritech:still_silicon_wash\"}",
     "item:homeostatic:water_filter",
-    {
-      "type": "fluid",
-      "id": "jsonreg:end_air",
-      "amount": 0
-    },
     {
       "type": "fluid",
       "id": "jsonreg:nether_air",
@@ -1454,7 +1466,6 @@
     "item:eternal_starlight:thermal_springstone_ingot",
     "item:botania:manastorm_charge",
     "item:botania:tiny_planet_block",
-    "item:botania:mana_powder",
     "item:eternal_starlight:pungency_fruit",
     "item:eternal_starlight:pungency_fruit_upgrade_smithing_template",
     "item:eternal_starlight:aethersent_nugget",
@@ -1506,10 +1517,6 @@
     "item:avaritia:neutron_collector",
     "item:techreborn:furnace_pro_max",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:low_oxygen_nitrogen\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:compressed_air\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:nitrogen_dioxide\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:helium3\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:helium\"}",
     "item:eternal_starlight:music_disc_fake_light",
     "#item:c:music_discs",
     "item:eternal_starlight:music_disc_ether_rain",
@@ -1547,7 +1554,6 @@
     "item:techreborn:semi_fluid_generator",
     "item:techreborn:compressed_plantball",
     "item:oritech:raw_biopolymer",
-    "item:botania:rune_of_wrath",
     "item:botania:flower_pouch",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:benzene\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:acetone\"}",
@@ -1755,21 +1761,7 @@
     "item:jsonreg:coin",
     "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:electrolyzed_water\"}",
     "item:techreborn:cell{\"techreborn:fluid\":\"jsonreg:ethanol\"}",
-    "fluid:jsonreg:ethanol",
-    "item:techreborn:cell{\"techreborn:fluid\":\"techreborn:nitro_diesel\"}",
-    "item:techreborn:cell{\"techreborn:fluid\":\"oritech:still_heavy_oil\"}",
-    {
-      "type": "fluid",
-      "id": "oritech:still_heavy_oil",
-      "amount": 81000
-    },
-    "item:techreborn:nano_leggings{\"minecraft:attribute_modifiers\":{modifiers:[{amount:8.0d,id:\"techreborn:nano_suit_armor/legs\",operation:\"add_value\",slot:\"legs\",type:\"minecraft:generic.armor\"},{amount:2.0d,id:\"techreborn:nano_suit_armor_toughness/legs\",operation:\"add_value\",slot:\"legs\",type:\"minecraft:generic.armor_toughness\"},{amount:0.1d,id:\"techreborn:nano_suit_knockback_resistance/legs\",operation:\"add_value\",slot:\"legs\",type:\"minecraft:generic.knockback_resistance\"}]},\"team_reborn_energy:energy\":1000000L}",
-    {
-      "type": "item",
-      "id": "techreborn:synthetic_redstone_crystal",
-      "amount": 2
-    },
-    "item:techreborn:nano_chestplate{\"minecraft:attribute_modifiers\":{modifiers:[{amount:6.0d,id:\"techreborn:nano_suit_armor/chest\",operation:\"add_value\",slot:\"chest\",type:\"minecraft:generic.armor\"},{amount:2.0d,id:\"techreborn:nano_suit_armor_toughness/chest\",operation:\"add_value\",slot:\"chest\",type:\"minecraft:generic.armor_toughness\"},{amount:0.1d,id:\"techreborn:nano_suit_knockback_resistance/chest\",operation:\"add_value\",slot:\"chest\",type:\"minecraft:generic.knockback_resistance\"}]},\"team_reborn_energy:energy\":1000000L}"
+    "fluid:jsonreg:ethanol"
   ],
   "craft_history": [
     "affinity:assembly/infused_stone",
@@ -1965,9 +1957,9 @@
   ],
   "recipe_defaults": {
     "added": [
-      "minecraft:crafter",
+      "farmersdelight:flint_knife",
       "techreborn:wire_mill/copper_cable",
-      "farmersdelight:flint_knife"
+      "minecraft:crafter"
     ],
     "tags": {},
     "resolutions": {},
