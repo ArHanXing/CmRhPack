@@ -148,12 +148,12 @@ primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", c
         {id: "minecraft:end_stone", count: 1},
         {id: "techreborn:cell", count: 2}
     ],
-    time: 128, power: 256,
+    time: 1280, power: 256,
     ingredients: [
-        {count: 2, components: {"techreborn:fluid": "jsonreg:end_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 4, item:"botania:pixie_dust"},
-        {count: 1, item:"affinity:crystalline_wisp_matter_composite"},
-        {count: 1, item:"botania:rune_of_winter"},
+        {count: 4, components: {"techreborn:fluid": "jsonreg:end_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 16, item:"botania:pixie_dust"},
+        {count: 8, item:"affinity:crystalline_wisp_matter_composite"},
+        {count: 4, item:"botania:rune_of_winter"},
         {count: 1, item:"minecraft:cobblestone"}
     ]
 });
@@ -310,6 +310,38 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
   "post": [
     "place jsonreg:shine_soul_injection_catalyst"
   ]
+});
+<recipetype:techreborn:irradiated_mutagensis_chamber>.addJsonRecipe("magic.tr.irradiated/shine_catalyst_mechanic", {type: "techreborn:irradiated_mutagensis_chamber", 
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:shine_soul_injection_catalyst"}}
+    ],
+    time: 100, power: 256,
+    ingredients: [
+        {item: "botania:gaia_ingot", count: 1},
+        {count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+//黄昏玻璃
+<recipetype:lychee:item_inside>.addJsonRecipe("magic.lychee.dusk_glass",{
+  "type": "lychee:item_inside",
+  "item_in": "botania:bifrost",
+  "block_in": "jsonreg:shine_soul_injection_catalyst",
+  "post": [
+    "drop eternal_starlight:dusk_glass",
+    "explode"
+  ]
+});
+<recipetype:techreborn:irradiated_mutagensis_chamber>.addJsonRecipe("magic.tr.irradiated/dusk_glass", {type: "techreborn:irradiated_mutagensis_chamber", 
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}},
+        {id: "eternal_starlight:dusk_glass", count: 1}
+    ],
+    time: 100, power: 256,
+    ingredients: [
+        {item: "botania:bifrost", count: 1},
+        {count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
 });
 
 //末影之眼

@@ -313,7 +313,7 @@ craftingTable.remove(<item:justarod:basic_electric_rod>);
 time: 60, fluidInput: {fluid: "minecraft:empty", amount: 0}, 
 ingredients: [{item: "justarod:redstone_rod"}, {item: "oritech:advanced_computing_engine"}, {item: "affinity:fairly_attuned_amethyst_shard"}, {item: "techreborn:lithium_ion_battery"}]});
 
-
+//TODO
 //创造存储
 <recipetype:avaritia:extreme_crafting>.addJsonRecipe("t2.rs/creative_storage/item", {type: "avaritia:extreme_shaped", result: {id: "refinedstorage:creative_storage_block", count: 1}, pattern: 
  [

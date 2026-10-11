@@ -403,8 +403,9 @@ import crafttweaker.api.ingredient.IIngredient;
 });
 //氨水来源
 //直接合成，哈哈哈
-//电解氟化铵废液
-<recipetype:techreborn:industrial_electrolyzer>.addJsonRecipe("nqdria.misc.nh3cl", {
+//分解氟化铵废液：NH₄F -> NH₃ + HF
+//（原配方误产氯气 Cl₂，氟化铵里没有氯；改为回收 HF，与阶段三的 HF 投料形成闭环，回收率约 30%）
+<recipetype:techreborn:industrial_electrolyzer>.addJsonRecipe("nqdria.misc.nh4f_decomposition", {
     type: "techreborn:industrial_electrolyzer",
     time:200,
     power:32,
@@ -413,7 +414,7 @@ import crafttweaker.api.ingredient.IIngredient;
     ],
     outputs: [
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:ammonia"}},
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:chlorine"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:hydrofluoric_acid"}}
     ]
 });
 
@@ -489,7 +490,7 @@ import crafttweaker.api.ingredient.IIngredient;
 });
 
 //锗掺杂
-<recipetype:oritech:atomic_forge>.addJsonRecipe("nqdria.msic.germanium_wafer", {type: "oritech:atomic_forge",
+<recipetype:oritech:atomic_forge>.addJsonRecipe("nqdria.misc.germanium_wafer", {type: "oritech:atomic_forge",
     time: 5,
     results: [
         {id: "jsonreg:germanium_wafer", count: 2}
@@ -500,7 +501,7 @@ import crafttweaker.api.ingredient.IIngredient;
         {item: "oritech:silicon_wafer"}
     ]
 });
-<recipetype:oritech:atomic_forge>.addJsonRecipe("nqdria.msic.germanium_wafer_advcomp_alt", {type: "oritech:atomic_forge",
+<recipetype:oritech:atomic_forge>.addJsonRecipe("nqdria.misc.germanium_wafer_advcomp_alt", {type: "oritech:atomic_forge",
     time: 50,
     results: [
         {id: "oritech:advanced_computing_engine", count: 2}

@@ -258,19 +258,6 @@ _frameworkRecipe("ps_framework.unrealium", "jsonreg:unrealium_frame", "jsonreg:u
     ]
 });
 
-<recipetype:techreborn:precise_assembler>.addJsonRecipe("converted.oritech.assembler/reactorplatingalt", {type: "techreborn:precise_assembler", 
-    outputs: [
-        {id: "oritech:reactor_wall", count: 3},
-    ],
-    time: 77, power: 128,
-    ingredients: [
-        {tag: "oritech:plating"},
-        {tag: "oritech:plating"},
-        {tag: "c:ingots/steel"},
-        {tag: "c:ingots/nickel"},
-    ]
-});
-
 <recipetype:techreborn:precise_assembler>.addJsonRecipe("converted.oritech.assembler/shroomlight", {type: "techreborn:precise_assembler", 
     outputs: [
         {id: "minecraft:shroomlight", count: 1},

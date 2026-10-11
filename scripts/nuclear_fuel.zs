@@ -160,18 +160,6 @@
     ]
 });
 
-// ⑫ 贫铀利用：贫铀废渣 -> 贫铀合金坚固板
-<recipetype:techreborn:compressor>.addJsonRecipe("nuclear.9.depleted_plate", {type: "techreborn:compressor",
-    time: 300,
-    power: 32,
-    outputs: [
-        {id: "jsonreg:depleted_uranium_dense_plate", count: 1}
-    ],
-    ingredients: [
-        {item: "jsonreg:depleted_uranium_slag", count: 4}
-    ]
-});
-
 // ============================================================
 // D MOX 线（吃铀线的贫铀废渣）
 // ============================================================

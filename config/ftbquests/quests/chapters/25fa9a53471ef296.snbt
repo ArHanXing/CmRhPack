@@ -22,6 +22,12 @@
 			x: 6.0d
 			y: 12.5d
 		}
+		{
+			id: "39043B76F10FECB6"
+			linked_quest: "3474E4508B2984D2"
+			x: 15.5d
+			y: 8.5d
+		}
 	]
 	quests: [
 		{
@@ -531,6 +537,20 @@
 			}]
 			x: 13.0d
 			y: 15.5d
+		}
+		{
+			dependencies: [
+				"3B19660470751464"
+				"3474E4508B2984D2"
+			]
+			id: "10EF31EF16C52DE5"
+			tasks: [{
+				id: "53B3D4352131998C"
+				item: { count: 1, id: "oritech:reactor_wall" }
+				type: "item"
+			}]
+			x: 15.5d
+			y: 10.5d
 		}
 	]
 }

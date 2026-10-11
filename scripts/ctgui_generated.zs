@@ -834,9 +834,19 @@ craftingTable.addShaped("ctgui/new/botania/terrasteel_chestplate", <item:botania
 
 <recipetype:minecraft:crafting>.removeByName("dream-stone:dream_stone");
 craftingTable.addShaped("ctgui/new/dream-stone/dream_stone", <item:dream-stone:dream_stone>, [
-    [<item:minecraft:iron_ingot>.withJsonComponent(<componenttype:minecraft:custom_data>, {"stellarity.special_item": "hallowed_ingot"}).withJsonComponent(<componenttype:minecraft:custom_model_data>, 90000).withJsonComponent(<componenttype:minecraft:item_name>, "{\"color\":\"#D9E3ED\",\"fallback\":\"Hallowed Ingot\",\"italic\":false,\"translate\":\"stellarity.items.materials.hallowed_ingot\"}").withJsonComponent(<componenttype:minecraft:lore>, ["\"\"", "{\"color\":\"#CC26FF\",\"italic\":true,\"translate\":\"Stellarity\"}"]), <item:botania:dreamwood>, <item:minecraft:iron_ingot>.withJsonComponent(<componenttype:minecraft:custom_data>, {"stellarity.special_item": "hallowed_ingot"}).withJsonComponent(<componenttype:minecraft:custom_model_data>, 90000).withJsonComponent(<componenttype:minecraft:item_name>, "{\"color\":\"#D9E3ED\",\"fallback\":\"Hallowed Ingot\",\"italic\":false,\"translate\":\"stellarity.items.materials.hallowed_ingot\"}").withJsonComponent(<componenttype:minecraft:lore>, ["\"\"", "{\"color\":\"#CC26FF\",\"italic\":true,\"translate\":\"Stellarity\"}"])],
+    [<item:minecraft:iron_ingot>, <item:botania:dreamwood>, <item:minecraft:iron_ingot>],
     [<item:botania:dreamwood>, IIngredientEmpty.getInstance(), <item:botania:dreamwood>],
-    [<item:minecraft:iron_ingot>.withJsonComponent(<componenttype:minecraft:custom_data>, {"stellarity.special_item": "hallowed_ingot"}).withJsonComponent(<componenttype:minecraft:custom_model_data>, 90000).withJsonComponent(<componenttype:minecraft:item_name>, "{\"color\":\"#D9E3ED\",\"fallback\":\"Hallowed Ingot\",\"italic\":false,\"translate\":\"stellarity.items.materials.hallowed_ingot\"}").withJsonComponent(<componenttype:minecraft:lore>, ["\"\"", "{\"color\":\"#CC26FF\",\"italic\":true,\"translate\":\"Stellarity\"}"]), <item:botania:dreamwood>, <item:minecraft:iron_ingot>.withJsonComponent(<componenttype:minecraft:custom_data>, {"stellarity.special_item": "hallowed_ingot"}).withJsonComponent(<componenttype:minecraft:custom_model_data>, 90000).withJsonComponent(<componenttype:minecraft:item_name>, "{\"color\":\"#D9E3ED\",\"fallback\":\"Hallowed Ingot\",\"italic\":false,\"translate\":\"stellarity.items.materials.hallowed_ingot\"}").withJsonComponent(<componenttype:minecraft:lore>, ["\"\"", "{\"color\":\"#CC26FF\",\"italic\":true,\"translate\":\"Stellarity\"}"])]]);
+    [<item:minecraft:iron_ingot>, <item:botania:dreamwood>, <item:minecraft:iron_ingot>]]);
 
 <recipetype:minecraft:crafting>.removeByName("botania:luminizer");
+
+<recipetype:minecraft:crafting>.removeByName("immersive_aircraft:industrial_gears");
+craftingTable.addShaped("ctgui/new/immersive_aircraft/industrial_gears", <item:immersive_aircraft:industrial_gears>, [
+    [IIngredientEmpty.getInstance(), <item:techreborn:iron_plate>, <item:techreborn:iron_plate>],
+    [<item:techreborn:copper_plate>, <item:jsonreg:invar_rod>, <item:techreborn:iron_plate>],
+    [<item:techreborn:copper_plate>, <item:techreborn:copper_plate>, IIngredientEmpty.getInstance()]]);
+
+<recipetype:minecraft:crafting>.removeByName("oritech:crafting/reactorplatingcrafting");
+
+<recipetype:minecraft:crafting>.removeByName("oritech:crafting/controller");
 
