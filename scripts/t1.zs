@@ -221,3 +221,14 @@ craftingTable.remove(<item:oritech:polymer_resin>);
     power: 10,
     ingredients: [{item:"oritech:silicon"}]
 });
+
+//辐照辐水晶
+<recipetype:techreborn:irradiated_mutagensis_chamber>.addJsonRecipe("t1.tr.irradiated/fluxite", {type: "techreborn:irradiated_mutagensis_chamber", 
+    outputs: [
+        {id: "oritech:fluxite", count: 4}
+    ],
+    time: 1, power: 16,
+    ingredients: [
+        {item: "minecraft:amethyst_shard", count: 4}
+    ]
+});

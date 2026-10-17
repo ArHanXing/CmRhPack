@@ -36,11 +36,14 @@ OUT_SLOTS = {
     # TR 5.12.13 新增的两台多方块机器（都继承 FourInSixOutMachineBlockEntity）
     "techreborn:large_mixer": 6,
     "techreborn:large_refinery": 6,
+    # 硅岩去共振机：2 入 / 4 出，呆板但必须按这个数卡死（NaquadahDeresonatorBlockEntity 常量）
+    "techreborn:naquadah_deresonator": 4,
 }
 # 输入槽上限（只列已考证过的机器）
 IN_SLOTS = {
     "techreborn:large_mixer": 4,
     "techreborn:large_refinery": 4,
+    "techreborn:naquadah_deresonator": 2,
 }
 FLUID_SLOTS = {"oritech:refinery": 3}
 CENTRIFUGE = ("oritech:centrifuge", "oritech:centrifuge_fluid")

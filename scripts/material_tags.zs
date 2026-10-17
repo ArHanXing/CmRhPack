@@ -15,6 +15,7 @@ import crafttweaker.api.ingredient.IIngredient;
 
 <tag:item:c:dusts>.add(<item:jsonreg:naquadah_dust>);
 <tag:item:c:dusts>.add(<item:jsonreg:enriched_naquadah_dust>);
+<tag:item:c:dusts>.add(<item:jsonreg:stabilized_enriched_naquadah_dust>);
 <tag:item:c:dusts>.add(<item:jsonreg:enriched_naquadah_sulfate_dust>);
 <tag:item:c:dusts>.add(<item:jsonreg:depleted_uranium_slag>);
 <tag:item:c:dusts>.add(<item:jsonreg:insoluble_residue>);

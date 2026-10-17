@@ -262,6 +262,7 @@ import crafttweaker.api.item.IItemStack;
 <item:jsonreg:calcium_sulfate_dust>.addTooltip("§e§lCaSO₄§r");
 
 <item:jsonreg:enriched_naquadah_dust>.addTooltip("§e§lNq+§r");
+<item:jsonreg:stabilized_enriched_naquadah_dust>.addTooltip("§d§lNq+ (稳定化)§r");
 <item:jsonreg:enriched_naquadah_ingot>.addTooltip("§e§lNq+§r");
 <item:jsonreg:hot_enriched_naquadah_ingot>.addTooltip("§e§lNq+§r");
 <item:jsonreg:impure_enriched_naquadah_dust>.addTooltip("§e§l(Nq+)(SO₄)??§r");
@@ -422,6 +423,7 @@ import crafttweaker.api.item.IItemStack;
 <item:techreborn:large_refinery>.addTooltip("具有 §e0.8x§r 耗时倍率");
 
 <item:techreborn:digital_miner>.addTooltip("它是§b多方块§r机器！！");
+<item:techreborn:digital_miner>.addTooltip("自带§b强加载§r");
 
 <item:techreborn:isotope_separator>.addTooltip("§b将特定的铀同位素离心出来§r");
 <item:techreborn:isotope_separator>.addTooltip("===============");
@@ -439,6 +441,7 @@ import crafttweaker.api.item.IItemStack;
 <item:techreborn:isotope_separator>.addTooltip("§b光辉合金转子§r ── 最大转速 §a100%§r，且具有§a额外 30% 耗能减成§r");
 
 <item:techreborn:naquadah_deresonator>.addTooltip("§b移除硅岩粉末的不稳定因素§r");
+<item:techreborn:naquadah_deresonator>.addTooltip("用于：§e含杂富集硅岩粉§r → §d稳定化富集硅岩粉§r（阻尼液 §b硫酸§r）");
 <item:techreborn:naquadah_deresonator>.addTooltip("===============");
 <item:techreborn:naquadah_deresonator>.addTooltip("运行时机器必须在§c下界§r维度，否则具有§e耗时 1.5x，耗能 0.8x§r");
 <item:techreborn:naquadah_deresonator>.addTooltip("配方§e有成功率§r，基础成功率为 §a10%§r");
@@ -446,6 +449,28 @@ import crafttweaker.api.item.IItemStack;
 <item:techreborn:naquadah_deresonator>.addTooltip("但是如果提供的流体量不是 §a10B§r 的整数倍，则成功率 §ex§r 变为 §ex*2^(-10*溢出比率)§r");
 <item:techreborn:naquadah_deresonator>.addTooltip("===============");
 <item:techreborn:naquadah_deresonator>.addTooltip("逻辑来自 GTNH 三级净化水");
+
+<item:techreborn:primitive_distillation_tower>.addTooltip("本机器具有§b不洁度§r");
+<item:techreborn:primitive_distillation_tower>.addTooltip("每次配方成功运行会增加§e5~10%§r的§b不洁度§r");
+<item:techreborn:primitive_distillation_tower>.addTooltip("§b不洁度§r超过§r90%§r时，机器§c停止工作§r并发出§a 15 级红石信号");
+<item:techreborn:primitive_distillation_tower>.addTooltip("在输出槽第三排第一个槽位输入§b洗涤溶剂单元§r，可以降低§e50%不洁度§r");
+
+<item:techreborn:void_drill>.addTooltip("§a从基岩之下钻出流体§r");
+<item:techreborn:void_drill>.addTooltip("===============");
+<item:techreborn:void_drill>.addTooltip("按照主机所在的§a生物群系§r产出流体");
+<item:techreborn:void_drill>.addTooltip("仅在部分生物群系具有产出，具体请查看 §dE§aM§bI§r");
+<item:techreborn:void_drill>.addTooltip("每个区块都有流体储量，注意有流体储量不一定代表有流体");
+<item:techreborn:void_drill>.addTooltip("插入§b超频升级§r来减少损耗");
+
+<item:techreborn:gas_collector>.addTooltip("§a暴~风~吸~入~！！§r");
+<item:techreborn:gas_collector>.addTooltip("===============");
+<item:techreborn:gas_collector>.addTooltip("按照主机所在的§a维度§r产出对应空气");
+<item:techreborn:gas_collector>.addTooltip("§a不会有损耗§r");
+
+// 生魂提取线路（wisp_extraction.zs）
+<item:affinity:inert_wisp_matter>.addTooltip("§7由 §e生魂原液§r + §a主世界空气§r 塑魂而成§r");
+<item:affinity:vicious_wisp_matter>.addTooltip("§7由 §e生魂原液§r + §c下界空气§r 塑魂而成§r");
+<item:affinity:wise_wisp_matter>.addTooltip("§7由 §e生魂原液§r + §b星光空气§r 塑魂而成§r");
 //只有紫铜和生铁有板
 //bgm:反转宇宙
 <item:neko-technology:tin_ingot>.addTooltip("- 说着§c「初次见面」§r这样的话 -");

@@ -202,18 +202,7 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
     ], flux_cost_per_tick: 40}
 );
 
-//泰拉钢外壳
-<recipetype:techreborn:precise_assembler>.addJsonRecipe("magic.tr.assembly/terrasteel_casing", {type: "techreborn:precise_assembler", 
-    outputs: [
-        {id: "jsonreg:terrasteel_casing", count: 1}
-    ],
-    time: 300, power: 256,
-    ingredients: [
-        {count: 2, item:"botania:terrasteel_ingot"},
-        {count: 1, item:"jsonreg:steel_frame"},
-        {count: 2, item:"affinity:crystalline_wisp_matter_composite"}
-    ]
-});
+
 
 //灵魂注入催化剂
 <recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("etst.tr.lcr/soul_injection", {type: "techreborn:large_chemical_reactor", 
@@ -358,6 +347,16 @@ craftingTable.removeByName("minecraft:ender_eye");
 });
 
 craftingTable.removeByName("botania:mana_fluxfield");
+
+//碎岩出彩虹桥方块
+//也就是彩虹桥方块是免费的，欸哟我
+<recipetype:techreborn:ore_crusher>.addJsonRecipe("magic.tr.ore_crusher/bifrost", {type: "techreborn:ore_crusher",
+    time: 2000,
+    outputs: [{id: "botania:bifrost"}],
+    power: 256,
+    ingredients: [{item: "botania:rod_of_the_bifrost"}]
+});
+
 
 //Affinity的一些魔改
 // ====      mod的强化合成必须用数据包        ====

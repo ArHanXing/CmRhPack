@@ -3,17 +3,11 @@ import crafttweaker.api.ingredient.type.IIngredientEmpty;
 import crafttweaker.api.ingredient.IIngredient;
 
 // ========== 末地矿石预处理（硅岩系入口）==========
-// 末地矿脉产出两个自定义矿石方块，此前都**没有任何用途**，这里补上入口：
+// 末地矿脉产出两个自定义矿石方块：
 //   · 普通硅岩矿石 —— 磨粉出粗硅岩 ×2，随后接 nqdh.1.crushed 进富集线
-//   · 富集硅岩矿石 —— 硫酸直接溶出，**跳过「粗矿 → 粉碎 → 离心」三步**，直入 nqdh.4
-//     故富集矿石是更划算的入口：2 矿石 + 1B 硫酸 → 1B 含杂溶液
-//     （对照 nqdh.3：10 含杂粉 + 2B 硫酸 → 2B 含杂溶液，即 5 粉/B；矿石是 2 个/B，
-//       但矿石不需要经过 nqdh.1/nqdh.2 两道工序，总账更省）
-//
-// 槽位：TR 磨粉机只有 1 个输出槽（这里单输出）；OR 精炼厂允许 count>1 的进料
-//       （naquadah 线本身在用 count 10/4/2，已实测可跑）。
-// 注：raw_naquadria 仍无产出者，超能线入口留待太空电梯。
+//   · 富集硅岩矿石 —— 工业磨粉直接出粉碎矿 + 含杂富集粉，省掉「磨粉 → 粗矿」一步
 
+// AI 这招太狠了
 // 普通硅岩矿石 → 2 粗硅岩
 <recipetype:techreborn:grinder>.addJsonRecipe("nqdh.0a.grind_end_naquadah_ore", {type: "techreborn:grinder",
     time: 200,
@@ -22,17 +16,20 @@ import crafttweaker.api.ingredient.IIngredient;
     ingredients: [{item: "jsonreg:end_naquadah_ore"}]
 });
 
-// 富集硅岩矿石酸溶：2 矿石 + 1B 硫酸 → 1B 含杂富集硅岩溶液
-// 精炼厂第 1 个流体输出位 = 主产物；这里只用 1 个输出位（放弃第 2/3 位会让第 1 位增产）。
-<recipetype:oritech:refinery>.addJsonRecipe("nqdh.0b.leach_enriched_naquadah_ore", {type: "oritech:refinery",
-    results: [],
-    fluidOutputs: [
-        {fluid: "jsonreg:impure_enriched_naquadah_solution", amount: 81000}
+// 富集硅岩矿石：工业磨粉（水）→ 粉碎矿 ×3 + 含杂富集粉 ×1
+// 对照普通矿石要走「磨粉 → 工业磨粉 → 离心」三道才拿到 0.5 个含杂粉；
+// 富集矿石一道就是 2.5 个（3 粉碎矿 = 1.5 个 + 直出 1 个），仍是最划算的入口。
+<recipetype:techreborn:industrial_grinder>.addJsonRecipe("nqdh.0b.grind_enriched_naquadah_ore", {type: "techreborn:industrial_grinder",
+    outputs: [
+        {id: "jsonreg:crushed_naquadah_ore", count: 3},
+        {id: "jsonreg:impure_enriched_naquadah_dust", count: 1}
     ],
-    time: 160,
-    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 81000},
-    ingredients: [{item: "jsonreg:end_enriched_naquadah_ore", count: 2}]
+    time: 300,
+    fluid: {fluid: {fluid: "minecraft:water"}, amount: {value: 81000}},
+    power: 64,
+    ingredients: [{item: "jsonreg:end_enriched_naquadah_ore", count: 1}]
 });
+
 
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("nqdh.1.crushed", {type: "techreborn:industrial_grinder",
         outputs: [{id: "jsonreg:crushed_naquadah_ore", count: 1}, {id: "jsonreg:tiny_naquadah_dust", count: 2}, {id: "oritech:small_gold_dust", count: 2}], 
@@ -58,6 +55,20 @@ import crafttweaker.api.ingredient.IIngredient;
     power: 64,
     ingredients: [{count: 2, item: "jsonreg:crushed_naquadah_ore"}]});
 
+
+// 含杂富集粉 → **稳定化**富集粉，是 nqdh.3 的唯一上游
+// 稳定化粉是新注册的独立物品（#8B5CF6 紫罗兰），与可以直接进高炉的「富集硅岩粉」分开：
+//   富集硅岩粉   → nqdh.smelt.enriched_ingot（快速短路，1 粉 → 1 热锭）
+//   稳定化富集粉 → nqdh.3 起的整条湿法线（10 粉 → 3 热锭，但吃硫酸/氢气并有废液回收）
+<recipetype:techreborn:naquadah_deresonator>.removeAll();
+<recipetype:techreborn:naquadah_deresonator>.addJsonRecipe("nqdh.2b.deresonate", {type: "techreborn:naquadah_deresonator",
+    power: 384,
+    time: 200,
+    fluid: "oritech:still_sulfuric_acid",
+    ingredients: [{item: "jsonreg:impure_enriched_naquadah_dust", count: 4}],
+    outputs: [{id: "jsonreg:stabilized_enriched_naquadah_dust", count: 4}]
+});
+
 <recipetype:oritech:refinery>.addJsonRecipe("nqdh.3.refinery", {type: "oritech:refinery",
     results: [],
     fluidOutputs: [
@@ -65,7 +76,7 @@ import crafttweaker.api.ingredient.IIngredient;
     ],
     time: 160,
     fluidInput: {fluid: "oritech:still_sulfuric_acid",amount: 162000},
-    ingredients: [{item:"jsonreg:impure_enriched_naquadah_dust",count:10}]
+    ingredients: [{item:"jsonreg:stabilized_enriched_naquadah_dust",count:10}]
 });
 
 <recipetype:techreborn:centrifuge>.addJsonRecipe("nqdh.4.centrifuge", {type: "techreborn:centrifuge",
@@ -110,7 +121,7 @@ import crafttweaker.api.ingredient.IIngredient;
         {id: "techreborn:cell", count: 6, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}}
     ],
     time: 1000,
-    heat: 2000,
+    heat: 3000,
     power: 128,
     ingredients: [
         {item: "jsonreg:enriched_naquadah_sulfate_dust", count: 3},
@@ -142,45 +153,95 @@ import crafttweaker.api.ingredient.IIngredient;
     ]
 });
 
-// ========== 普通硅岩：粉 → 锭 → 板 ==========
+// ========== 普通和富集硅岩：粉 → 锭 → 板，以及磨 ==========
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("nqdh.smelt.enriched_ingot", {type: "techreborn:blast_furnace",
+    outputs: [
+        {id: "jsonreg:hot_enriched_naquadah_ingot", count: 1}
+    ],
+    time: 400,
+    heat: 4000,
+    power: 128,
+    ingredients: [
+        {item: "jsonreg:enriched_naquadah_dust", count: 1}
+    ]
+});
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("nqdh.smelt.enriched_ingot_catalyzed", {type: "techreborn:blast_furnace",
+    outputs: [
+        {id: "jsonreg:hot_enriched_naquadah_ingot", count: 1},
+        {id: "techreborn:cell", count: 1}
+    ],
+    time: 200,
+    heat: 3000,
+    power: 128,
+    ingredients: [
+        {item: "jsonreg:enriched_naquadah_dust", count: 1},
+        {count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
 <recipetype:techreborn:blast_furnace>.addJsonRecipe("nqdh.smelt.naquadah_ingot", {type: "techreborn:blast_furnace",
     outputs: [
         {id: "jsonreg:naquadah_ingot", count: 1}
     ],
     time: 400,
-    heat: 5000,
+    heat: 4000,
     power: 128,
     ingredients: [
         {item: "jsonreg:naquadah_dust", count: 1}
     ]
 });
-
 <recipetype:techreborn:blast_furnace>.addJsonRecipe("nqdh.smelt.naquadah_ingot_catalyzed", {type: "techreborn:blast_furnace",
     outputs: [
         {id: "jsonreg:naquadah_ingot", count: 1},
         {id: "techreborn:cell", count: 1}
     ],
     time: 200,
-    heat: 4000,
+    heat: 3000,
     power: 128,
     ingredients: [
         {item: "jsonreg:naquadah_dust", count: 1},
         {count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
-
-// 硅岩锭 → 硅岩板（资源节点配方等在消耗此板）
 <recipetype:techreborn:compressor>.addJsonRecipe("nqdh.naquadah_plate", {type: "techreborn:compressor",
     outputs: [
         {id: "jsonreg:naquadah_plate", count: 1}
     ],
     time: 300,
-    power: 10,
+    power: 16,
     ingredients: [
         {item: "jsonreg:naquadah_ingot", count: 1}
     ]
 });
-
+<recipetype:techreborn:grinder>.addJsonRecipe("nqdh.grind.naquadah", {type: "techreborn:grinder",
+    outputs: [
+        {id: "jsonreg:naquadah_dust", count: 1}
+    ],
+    time: 150,
+    power: 32,
+    ingredients: [
+        {item: "jsonreg:naquadah_ingot", count: 1}
+    ]
+});
+<recipetype:techreborn:grinder>.addJsonRecipe("nqdh.grind.enriched", {type: "techreborn:grinder",
+    outputs: [
+        {id: "jsonreg:enriched_naquadah_dust", count: 1}
+    ],
+    time: 150,
+    power: 32,
+    ingredients: [
+        {item: "jsonreg:enriched_naquadah_ingot", count: 1}
+    ]
+});
+<recipetype:techreborn:grinder>.addJsonRecipe("nqdh.grind.naquadria", {type: "techreborn:grinder",
+    outputs: [
+        {id: "jsonreg:naquadria_dust", count: 1}
+    ],
+    time: 150,
+    power: 32,
+    ingredients: [
+        {item: "jsonreg:naquadria_ingot", count: 1}
+    ]
+});
 // 超能硅岩
 // ========== 阶段一：控爆粉碎 — 工业磨粉机 (HV, 氩气保护) ==========
 /*
@@ -315,7 +376,7 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:blast_furnace>.addJsonRecipe("nqdria.7.blast_furnace", {
     type: "techreborn:blast_furnace",
     time: 1200,
-    heat: 2400,
+    heat: 3000,
     power: 128,
     outputs: [
         {id: "jsonreg:sponge_naquadria", count: 1},
@@ -361,12 +422,12 @@ import crafttweaker.api.ingredient.IIngredient;
         {id: "techreborn:cell", count: 2}
     ],
     time: 1000,
-    heat: 2000,
+    heat: 4000,
     power: 128,
     ingredients: [
         {item: "jsonreg:naquadria_dust", count: 1},
         {count: 2, components: {"techreborn:fluid": "jsonreg:argon"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
-        ]
+    ]
 });
 
 <recipetype:techreborn:vacuum_freezer>.addJsonRecipe("nqdria.final.freeze", {type: "techreborn:vacuum_freezer",

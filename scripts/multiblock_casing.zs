@@ -129,18 +129,36 @@ import crafttweaker.api.recipe.type.Recipe;
         {count: 4, item:"techreborn:iron_plate"}
     ]
 });
-
+//泰拉钢外壳
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("magic.tr.assembly/terrasteel_casing", {type: "techreborn:precise_assembler", 
+    outputs: [
+        {id: "jsonreg:terrasteel_casing", count: 4}
+    ],
+    time: 300, power: 256,
+    ingredients: [
+        {count: 2, item:"botania:terrasteel_ingot"},
+        {count: 1, item:"jsonreg:steel_frame"},
+        {count: 2, item:"affinity:crystalline_wisp_matter_composite"}
+    ]
+});
 /* 核反应堆 */
 <recipetype:oritech:assembler>.removeByName("oritech:assembler/reactorplatingalt");
 <recipetype:techreborn:precise_assembler>.addJsonRecipe("mbcasing.reactor", {type: "techreborn:precise_assembler", 
     outputs: [
-        {id: "oritech:reactor_wall", count: 4}
+        {id: "oritech:reactor_controller", count: 1}
     ],
-    time: 200, power: 128,
+    time: 2000, power: 128,
     ingredients: [
-        {count: 2, item:"oritech:advanced_computing_engine"},
-        {count: 1, item:"jsonreg:duratium_frame"},
-        {count: 16, item:"techreborn:lead_plate"}
+        {count: 16, item:"oritech:advanced_computing_engine"},
+        {count: 4, item:"jsonreg:duratium_frame"},
+        {count: 64, item:"techreborn:lead_plate"},
+        {count: 64, item:"techreborn:lead_plate"},
+        {count: 64, item:"techreborn:steel_plate"},
+        {count: 16, item:"jsonreg:mv_robot_arm"},
+        {count: 16, item:"jsonreg:mv_sensor"},
+        {count: 32, item:"eternal_starlight:frozen_tube"},
+        {count: 4, item:"techreborn:computer_cube"},
+        {count: 2, item:"techreborn:universal_chemical_fuel_engine"}
     ]
 });
 <recipetype:techreborn:precise_assembler>.addJsonRecipe("mbcasing.reactor.wall/depleted_uranium_better", {type: "techreborn:precise_assembler", 

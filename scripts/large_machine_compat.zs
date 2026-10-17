@@ -13,7 +13,7 @@
 //     （例：oil.process.or.nitric_acid 的水单元），转换时保留其流体组件。
 //   奖励：耗时 ×0.8、耗能 ×0.5（FE→EU 按 1:1，基准见 precision_assembly.zs）。
 //
-// 共 70 条；OR 原配方保留不动，本文件只做「复制一份给 TR」。
+// 共 69 条；OR 原配方保留不动，本文件只做「复制一份给 TR」。
 // ============================================================
 
 <recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.bio.sep.ethanol", {type: "techreborn:large_mixer",
@@ -855,18 +855,6 @@
     ]
 });
 
-<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.nqdh.0b.leach_enriched_naquadah_ore", {type: "techreborn:large_refinery",
-    time: 128,
-    power: 64,
-    outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:impure_enriched_naquadah_solution"}}
-    ],
-    ingredients: [
-        {count: 1, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {item: "jsonreg:end_enriched_naquadah_ore", count: 2}
-    ]
-});
-
 <recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.nqdh.3.refinery", {type: "techreborn:large_refinery",
     time: 128,
     power: 64,
@@ -875,7 +863,7 @@
     ],
     ingredients: [
         {count: 2, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {item: "jsonreg:impure_enriched_naquadah_dust", count: 10}
+        {item: "jsonreg:stabilized_enriched_naquadah_dust", count: 10}
     ]
 });
 

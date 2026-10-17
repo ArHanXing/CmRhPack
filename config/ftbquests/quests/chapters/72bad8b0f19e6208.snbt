@@ -9,17 +9,30 @@
 	id: "72BAD8B0F19E6208"
 	images: [ ]
 	order_index: 5
-	quest_links: [ ]
+	quest_links: [{
+		id: "7A76AA8966DECD67"
+		linked_quest: "214C7D6BFE0BC942"
+		x: 4.0d
+		y: 4.0d
+	}]
 	quests: [
 		{
-			dependencies: ["1383EEC462166A2F"]
+			dependencies: [
+				"1383EEC462166A2F"
+				"2E431E845165D15F"
+				"79514903FB21A9F3"
+			]
+			dependency_requirement: "one_completed"
+			icon_scale: 1.5d
 			id: "43950E6605E3CB3E"
+			shape: "pentagon"
+			size: 1.5d
 			tasks: [{
 				id: "3D62FD230815F6B0"
 				item: { count: 1, id: "jsonreg:raw_naquadah" }
 				type: "item"
 			}]
-			x: 0.0d
+			x: -2.0d
 			y: -0.5d
 		}
 		{
@@ -30,7 +43,7 @@
 				item: { count: 1, id: "jsonreg:crushed_naquadah_ore" }
 				type: "item"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: -0.5d
 		}
 		{
@@ -41,25 +54,25 @@
 				item: { count: 1, id: "jsonreg:naquadah_dust" }
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: -2.0d
 		}
 		{
-			dependencies: ["6B67F1E553AB48BB"]
+			dependencies: [
+				"6B67F1E553AB48BB"
+				"15474D7B016E73B5"
+			]
 			id: "1CE9D2D88D4CAE6D"
 			tasks: [{
 				id: "2A6E5ACB32F3E1F7"
 				item: { count: 1, id: "jsonreg:impure_enriched_naquadah_dust" }
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"1CE9D2D88D4CAE6D"
-				"15474D7B016E73B5"
-			]
+			dependencies: ["2315DA816FF8B6C3"]
 			dependency_requirement: "one_completed"
 			id: "7678DDB79DD46B91"
 			tasks: [{
@@ -79,8 +92,8 @@
 				item: { count: 1, id: "jsonreg:end_enriched_naquadah_ore" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 4.0d
+			x: 0.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["7678DDB79DD46B91"]
@@ -134,7 +147,11 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["3314BF099E0C2B30"]
+			dependencies: [
+				"3314BF099E0C2B30"
+				"60C8D3DB63BAD1D0"
+			]
+			dependency_requirement: "one_completed"
 			icon_scale: 1.5d
 			id: "2CE434067E7D2FF7"
 			shape: "gear"
@@ -160,6 +177,21 @@
 			}]
 			x: 6.0d
 			y: -2.0d
+		}
+		{
+			dependencies: [
+				"1CE9D2D88D4CAE6D"
+				"214C7D6BFE0BC942"
+			]
+			dependency_requirement: "one_completed"
+			id: "2315DA816FF8B6C3"
+			tasks: [{
+				id: "10FE185045BBE14D"
+				item: { count: 1, id: "jsonreg:stabilized_enriched_naquadah_dust" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.5d
 		}
 	]
 }

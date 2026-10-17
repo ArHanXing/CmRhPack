@@ -311,6 +311,16 @@
       "value": 10000000
     }
   },
+  "void_drill": {
+    "VoidDrillMaxEnergy": {
+      "comment": "Void Drill Max Energy",
+      "value": 1000000
+    },
+    "VoidDrillMaxInput": {
+      "comment": "Void Drill Max Input (Energy per tick)",
+      "value": 512
+    }
+  },
   "dyson_swarm_receiver": {
     "DysonReceiverMaxOutput": {
       "comment": "Dyson Swarm Receiver Max Output (Energy per tick)",
@@ -836,6 +846,16 @@
       "value": 1000
     }
   },
+  "gas_collector": {
+    "GasCollectorMaxEnergy": {
+      "comment": "Gas Collector Max Energy",
+      "value": 1000000
+    },
+    "GasCollectorMaxInput": {
+      "comment": "Gas Collector Max Input (Energy per tick)",
+      "value": 2048
+    }
+  },
   "solid_canning_machine": {
     "solidCanningMachineMaxEnergy": {
       "comment": "Solid Canning Machine Max Energy",
@@ -900,6 +920,12 @@
     "AutoCrafterMaxEnergy": {
       "comment": "AutoCrafting Table Max Energy",
       "value": 10000
+    }
+  },
+  "cables": {
+    "CableIdleIntervalTicks": {
+      "comment": "How often (in ticks) an electrical network that moved no energy is re-checked anyway. A consumer can become able to accept power without any block event the cables can observe, so idle networks must still be probed. 1 disables the fast path.",
+      "value": 4
     }
   },
   "idsu": {

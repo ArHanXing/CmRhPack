@@ -64,6 +64,21 @@ import crafttweaker.api.recipe.type.Recipe;
         {count: 2, item:"jsonreg:tungsten_steel_rod"}
     ]
 });
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine/naquadah_deresonator");
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("t2.tr.pa.naquadah_deresonator", {type: "techreborn:precise_assembler", 
+    outputs: [
+        {id: "techreborn:naquadah_deresonator", count: 1}
+    ],
+    time: 800, power: 256,
+    ingredients: [
+        {count: 8, item:"techreborn:tungstensteel_plate"},
+        {count: 2, item:"techreborn:industrial_machine_frame"},
+        {count: 4, item:"jsonreg:aluminum_frame"},
+        {count: 4, item:"oritech:advanced_computing_engine"},
+        {count: 16, item:"jsonreg:mv_electric_motor"},
+        {count: 2, item:"techreborn:large_centrifuge"}
+    ]
+});
 //铬锭
 <recipetype:techreborn:blast_furnace>.removeByName("techreborn:blast_furnace/chrome_ingot");
 <recipetype:techreborn:blast_furnace>.removeByName("techreborn:blast_furnace/chrome_ingot_from_small_dust");
@@ -305,6 +320,41 @@ ingredients: [{item: "techreborn:lazurite_plate"}, {item: "techreborn:industrial
         {count: 8, item:"techreborn:steel_plate"},
         {count: 2, item:"jsonreg:steel_frame"}
     ]
+});
+
+//集气室的正义配方
+<recipetype:techreborn:gas_collector>.removeAll();
+<recipetype:techreborn:gas_collector>.addJsonRecipe("t2.tr.gas_collector/overworld", {type: "techreborn:gas_collector",
+    amount: 5000,
+    fluid: "jsonreg:low_oxygen_nitrogen",
+    time: 100,
+    power: 256,
+    dimension: "minecraft:overworld",
+    display: {id: "minecraft:grass_block", count: 1}
+});
+<recipetype:techreborn:gas_collector>.addJsonRecipe("t2.tr.gas_collector/nether", {type: "techreborn:gas_collector",
+    amount: 5000,
+    fluid: "jsonreg:nether_air",
+    time: 100,
+    power: 128,
+    dimension: "minecraft:the_nether",
+    display: {id: "minecraft:netherrack", count: 1}
+});
+<recipetype:techreborn:gas_collector>.addJsonRecipe("t2.tr.gas_collector/starlight", {type: "techreborn:gas_collector",
+    amount: 5000,
+    fluid: "jsonreg:starlight_air",
+    time: 100,
+    power: 256,
+    dimension: "eternal_starlight:starlight",
+    display: {id: "eternal_starlight:lunar_leaves", count: 1}
+});
+<recipetype:techreborn:gas_collector>.addJsonRecipe("t2.tr.gas_collector/end", {type: "techreborn:gas_collector",
+    amount: 5000,
+    fluid: "jsonreg:end_air",
+    time: 100,
+    power: 384,
+    dimension: "minecraft:the_end",
+    display: {id: "minecraft:end_stone", count: 1}
 });
 // ---- TODO ----
 //过充水晶
