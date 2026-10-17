@@ -46,11 +46,22 @@ import crafttweaker.api.recipe.type.Recipe;
     outputs: [
         {id: "techreborn:coil_molybdenum_disilicide", count: 1},
     ],
-    time: 600, power: 128,
+    time: 400, power: 128,
     ingredients: [
-        {count: 2, item:"techreborn:tin_cable"},
+        {count: 4, item:"techreborn:tin_cable"},
         {count: 1, item:"techreborn:titanium_plate"},
         {count: 2, item:"jsonreg:duratium_rod"}
+    ]
+});
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("t2.tr.pa.tungstensteel_coil", {type: "techreborn:precise_assembler", 
+    outputs: [
+        {id: "techreborn:coil_tungstensteel", count: 1},
+    ],
+    time: 400, power: 128,
+    ingredients: [
+        {count: 4, item:"techreborn:tin_cable"},
+        {count: 1, item:"techreborn:tungstensteel_plate"},
+        {count: 2, item:"jsonreg:tungsten_steel_rod"}
     ]
 });
 //铬锭
@@ -223,35 +234,6 @@ key: {
     ]
 });
 
-//过充水晶
-craftingTable.removeByName("oritech:motor/overchargedcrystal");
-craftingTable.removeByName("oritech:particle/overcharged_crystal");//变成了2kJ，但是必须对撞
-<recipetype:oritech:particle_collision>.addJsonRecipe("t2.oritech.particle/overcharged_crystal", {type: "oritech:particle_collision", 
-fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:overcharged_crystal", count: 1}], time: 2000, 
-fluidInput: {fluid: "minecraft:empty", amount: 0}, ingredients: [{item: "oritech:fluxite"}, {item: "oritech:energite_dust"}]});
-
-//粒子加速器的便宜配方
-craftingTable.addShaped("t2.oritech.crafting/particlecontroller_alt", <item:oritech:accelerator_controller>, [
-    [<tag:item:oritech:plating>, <item:oritech:duratium_ingot>, <tag:item:oritech:plating>], 
-    [<item:oritech:advanced_computing_engine>, <item:minecraft:dropper>, <item:oritech:advanced_computing_engine>], 
-    [<item:oritech:flux_gate>, <item:oritech:accelerator_motor>, <item:oritech:flux_gate>]]);
-//钷
-<recipetype:oritech:atomic_forge>.removeByName("oritech:atomicforge/prometheum");
-<recipetype:oritech:particle_collision>.addJsonRecipe("t2.oritech.particle/prometheum", {type: "oritech:particle_collision", 
-fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:prometheum_ingot", count: 1}], time: 2500, 
-fluidInput: {fluid: "minecraft:empty", amount: 0}, ingredients: [{item: "oritech:overcharged_crystal"}, {item: "oritech:heisenberg_compensator"}]});
-
-//t3大电路
-<recipetype:oritech:atomic_forge>.removeByName("oritech:atomicforge/aicomputer");
-<recipetype:oritech:atomic_forge>.addJsonRecipe("t2.oritech.atomicforge/aicomputer", {type: "oritech:atomic_forge", 
-fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:super_ai_chip", count: 2}], time: 100, 
-fluidInput: {fluid: "minecraft:empty", amount: 0}, ingredients: [{item: "oritech:prometheum_ingot"}, {item: "oritech:heisenberg_compensator"}, {item: "oritech:advanced_computing_engine"}]});
-//t3 soc
-<recipetype:techreborn:assembling_machine>.removeByName("techreborn:assembling_machine/industrial_circuit");
-<recipetype:oritech:assembler>.addJsonRecipe("t2.oritech.assembler/industrial_circuit/soc", 
-{type: "oritech:assembler", fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "techreborn:industrial_circuit", count: 8}], 
-time: 80, fluidInput: {fluid: "minecraft:empty", amount: 0}, 
-ingredients: [{item: "techreborn:platinum_plate"}, {item: "techreborn:platinum_plate"}, {item: "oritech:super_ai_chip"}, {item: "oritech:flux_gate"}]});
 
 //工业框架
 craftingTable.removeByName("techreborn:crafting_table/machine_block/industrial_machine_frame");
@@ -280,6 +262,71 @@ ingredients: [{item: "techreborn:lazurite_plate"}, {item: "techreborn:industrial
 <recipetype:techreborn:chemical_reactor>.addJsonRecipe("t2.techreborn.chemical_reactor/synthetic_redstone_crystal", {type: "techreborn:chemical_reactor", 
   time: 1200, outputs: [{id: "techreborn:synthetic_redstone_crystal", count: 1}], power: 50, 
   ingredients: [{item: "minecraft:redstone", count: 16}, {item: "minecraft:diamond"}]});
+
+//钨钢的简单法
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("t2.tr.lcr/tungstensteel_catalyzed", {type: "techreborn:large_chemical_reactor",
+    outputs: [
+        {id: "techreborn:hot_tungstensteel_ingot", count: 1},
+        {id: "techreborn:cell", count: 4}
+    ],
+    time: 800,
+    power: 128,
+    ingredients: [
+        {item: "techreborn:tungsten_ingot", count: 1},
+        {item: "techreborn:steel_ingot", count: 1},
+        {item: "botania:orechid_ignem", count: 1},
+        {count: 4, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+//大型柴油、燃气主机
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("t2.tr.pa.large_combustion_engine", {type: "techreborn:precise_assembler", 
+    outputs: [
+        {id: "techreborn:large_combustion_engine", count: 1},
+    ],
+    time: 400, power: 64,
+    ingredients: [
+        {count: 2, item:"techreborn:diesel_generator"},
+        {count: 4, item:"techreborn:advanced_circuit"},
+        {count: 8, item:"techreborn:aluminum_plate"},
+        {count: 8, item:"techreborn:steel_plate"},
+        {count: 2, item:"jsonreg:steel_frame"}
+    ]
+});
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("t2.tr.pa.large_gas_turbine", {type: "techreborn:precise_assembler", 
+    outputs: [
+        {id: "techreborn:large_gas_turbine", count: 1},
+    ],
+    time: 400, power: 64,
+    ingredients: [
+        {count: 2, item:"techreborn:gas_turbine"},
+        {count: 4, item:"techreborn:advanced_circuit"},
+        {count: 4, item:"techreborn:aluminum_plate"},
+        {count: 8, item:"techreborn:steel_plate"},
+        {count: 2, item:"jsonreg:steel_frame"}
+    ]
+});
+// ---- TODO ----
+//过充水晶
+craftingTable.removeByName("oritech:motor/overchargedcrystal");
+craftingTable.removeByName("oritech:particle/overcharged_crystal");//变成了2kJ，但是必须对撞
+<recipetype:oritech:particle_collision>.addJsonRecipe("t2.oritech.particle/overcharged_crystal", {type: "oritech:particle_collision", 
+fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:overcharged_crystal", count: 1}], time: 2000, 
+fluidInput: {fluid: "minecraft:empty", amount: 0}, ingredients: [{item: "oritech:fluxite"}, {item: "oritech:energite_dust"}]});
+
+//粒子加速器的便宜配方
+craftingTable.addShaped("t2.oritech.crafting/particlecontroller_alt", <item:oritech:accelerator_controller>, [
+    [<tag:item:oritech:plating>, <item:oritech:duratium_ingot>, <tag:item:oritech:plating>], 
+    [<item:oritech:advanced_computing_engine>, <item:minecraft:dropper>, <item:oritech:advanced_computing_engine>], 
+    [<item:oritech:flux_gate>, <item:oritech:accelerator_motor>, <item:oritech:flux_gate>]]);
+//钷
+<recipetype:oritech:atomic_forge>.removeByName("oritech:atomicforge/prometheum");
+<recipetype:oritech:particle_collision>.addJsonRecipe("t2.oritech.particle/prometheum", {type: "oritech:particle_collision", 
+fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "oritech:prometheum_ingot", count: 1}], time: 2500, 
+fluidInput: {fluid: "minecraft:empty", amount: 0}, ingredients: [{item: "oritech:overcharged_crystal"}, {item: "oritech:heisenberg_compensator"}]});
+
+//t3大电路
+<recipetype:oritech:atomic_forge>.removeByName("oritech:atomicforge/aicomputer");
 
 //uu物质
 craftingTable.removeByName("techreborn:crafting_table/machine/recycler");

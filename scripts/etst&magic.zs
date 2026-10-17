@@ -334,7 +334,7 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
 });
 <recipetype:techreborn:irradiated_mutagensis_chamber>.addJsonRecipe("magic.tr.irradiated/dusk_glass", {type: "techreborn:irradiated_mutagensis_chamber", 
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:shine_soul_injection_catalyst"}},
         {id: "eternal_starlight:dusk_glass", count: 1}
     ],
     time: 100, power: 256,

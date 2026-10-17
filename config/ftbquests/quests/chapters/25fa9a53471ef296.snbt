@@ -26,7 +26,7 @@
 			id: "39043B76F10FECB6"
 			linked_quest: "3474E4508B2984D2"
 			x: 15.5d
-			y: 8.5d
+			y: 10.5d
 		}
 	]
 	quests: [
@@ -256,7 +256,7 @@
 				item: { count: 1, id: "techreborn:coil_molybdenum_disilicide" }
 				type: "item"
 			}]
-			x: 13.0d
+			x: 15.5d
 			y: 6.0d
 		}
 		{
@@ -267,7 +267,7 @@
 				item: { count: 1, id: "techreborn:iridium_ingot" }
 				type: "item"
 			}]
-			x: 15.5d
+			x: 17.5d
 			y: 6.0d
 		}
 		{
@@ -349,7 +349,7 @@
 				item: { count: 1, id: "oritech:deep_drill_block" }
 				type: "item"
 			}]
-			x: 15.5d
+			x: 17.5d
 			y: 4.0d
 		}
 		{
@@ -549,8 +549,33 @@
 				item: { count: 1, id: "oritech:reactor_wall" }
 				type: "item"
 			}]
-			x: 15.5d
+			x: 17.5d
 			y: 10.5d
+		}
+		{
+			dependencies: [
+				"3474E4508B2984D2"
+				"3828208ACBBFA5CD"
+			]
+			id: "3F287A5CEB164771"
+			tasks: [{
+				id: "1529D8107EA49370"
+				item: { count: 1, id: "techreborn:tungstensteel_ingot" }
+				type: "item"
+			}]
+			x: 15.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["3F287A5CEB164771"]
+			id: "2E431E845165D15F"
+			tasks: [{
+				id: "28B4C689E5464590"
+				item: { count: 1, id: "techreborn:coil_tungstensteel" }
+				type: "item"
+			}]
+			x: 17.5d
+			y: 8.5d
 		}
 	]
 }

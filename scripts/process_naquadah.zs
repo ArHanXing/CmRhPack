@@ -143,14 +143,6 @@ import crafttweaker.api.ingredient.IIngredient;
 });
 
 // ========== 普通硅岩：粉 → 锭 → 板 ==========
-// 这里补的是一个断点：
-//   · jsonreg:naquadah_dust  —— 由 nqdh.2.centrifuge（副产 4）与深钻节点产出，但此前**没有任何消费者**；
-//   · jsonreg:naquadah_ingot —— 只有车床、精密装配在消耗，但此前**没有来源**。
-//
-// 两条烧锭路线，取舍在「炉温 vs 催化剂」：
-//   · 直接烧   ：需要 5000K（线圈等级要求高），不耗催化剂。
-//   · 催化烧   ：只要 4000K，但每锭多吃 1 单元灵魂注入催化剂。
-// 催化剂只作反应介质，**空单元必须还回来**（输出里的 {id: "techreborn:cell", count: 1} 就是它）。
 <recipetype:techreborn:blast_furnace>.addJsonRecipe("nqdh.smelt.naquadah_ingot", {type: "techreborn:blast_furnace",
     outputs: [
         {id: "jsonreg:naquadah_ingot", count: 1}
@@ -404,7 +396,6 @@ import crafttweaker.api.ingredient.IIngredient;
 //氨水来源
 //直接合成，哈哈哈
 //分解氟化铵废液：NH₄F -> NH₃ + HF
-//（原配方误产氯气 Cl₂，氟化铵里没有氯；改为回收 HF，与阶段三的 HF 投料形成闭环，回收率约 30%）
 <recipetype:techreborn:industrial_electrolyzer>.addJsonRecipe("nqdria.misc.nh4f_decomposition", {
     type: "techreborn:industrial_electrolyzer",
     time:200,

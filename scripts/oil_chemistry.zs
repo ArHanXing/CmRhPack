@@ -999,10 +999,10 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:techreborn:centrifuge>.addJsonRecipe("oil.other.tr.centrifuge_oilsand", {type: "techreborn:centrifuge",
     time: 80,
     outputs: [
-        {id: "minecraft:sand", count: 8},
-        {id: "techreborn:cell", count: 8, components: {"techreborn:fluid": "techreborn:oil"}}],
+        {id: "minecraft:sand", count: 2},
+        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "techreborn:oil"}}],
     power: 16,
-    ingredients: [{count: 8, item: "jsonreg:oil_sand_dust"}]});
+    ingredients: [{count: 2, item: "jsonreg:oil_sand_dust"},{count: 2, item: "techreborn:cell"}]});
 //小离心，1->0.5B
 <recipetype:oritech:centrifuge_fluid>.addJsonRecipe("oil.other.or.centrifuge_oilsand_low", {type: "oritech:centrifuge_fluid",
     results: [{id: "minecraft:sand", count: 1}],
