@@ -249,6 +249,18 @@ import crafttweaker.api.item.IItemStack;
 <item:jsonreg:depleted_uranium_slag>.addTooltip("§e§l?§r");
 <item:jsonreg:calcium_oxide_slag>.addTooltip("§e§l(CaO)§r");
 
+// —— 硅岩合金 / 高速钢-G（T2.4 收尾的两档 EBF 线圈材料，见 scripts/t2.zs 末尾）——
+<item:jsonreg:naquadah_alloy_dust>.addTooltip("§5§l(Nq+₂W₇Ni)§r");
+<item:jsonreg:hot_naquadah_alloy_ingot>.addTooltip("§5§l(Nq+₂W₇Ni)§r");
+<item:jsonreg:naquadah_alloy_ingot>.addTooltip("§5§l(Nq+₂W₇Ni)§r");
+<item:jsonreg:naquadah_alloy_plate>.addTooltip("§5§l(Nq+₂W₇Ni)§r");
+<item:jsonreg:naquadah_alloy_rod>.addTooltip("§5§l(Nq+₂W₇Ni)§r");
+<item:jsonreg:hssg_dust>.addTooltip("§7§l(Fe₂WCrMn)§r");
+<item:jsonreg:hot_hssg_ingot>.addTooltip("§7§l(Fe₂WCrMn)§r");
+<item:jsonreg:hssg_ingot>.addTooltip("§7§l(Fe₂WCrMn)§r");
+<item:jsonreg:hssg_plate>.addTooltip("§7§l(Fe₂WCrMn)§r");
+<item:jsonreg:hssg_rod>.addTooltip("§7§l(Fe₂WCrMn)§r");
+
 // —— 核燃料产线 ——
 <item:jsonreg:enriched_uranium_dust>.addTooltip("§e§lU§r");
 <item:jsonreg:uranium_dioxide_dust>.addTooltip("§e§lUO₂§r");

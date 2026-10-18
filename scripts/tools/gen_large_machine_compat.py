@@ -36,7 +36,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 SCRIPTS = ROOT / "scripts"
-OUT = SCRIPTS / "large_machine_compat.zs"
+OUT = SCRIPTS / "generated" / "large_machine_compat.zs"
 
 sys.path.insert(0, str(HERE))
 import fuel_ledger as L  # noqa: E402
@@ -259,6 +259,7 @@ def main() -> int:
 
 '''
 
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(head + "\n\n".join(b[1][1] for b in blocks) + "\n", encoding="utf-8")
 
     ms = Counter(b[1][2] for b in blocks)

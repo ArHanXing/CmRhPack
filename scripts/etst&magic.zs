@@ -358,9 +358,84 @@ craftingTable.removeByName("botania:mana_fluxfield");
 });
 
 
-//Affinity的一些魔改
-// ====      mod的强化合成必须用数据包        ====
-// ==== 可在 OpenLoader/LanguageAdd包 里查看 ====
+// 生魂提取线路 —— 把「主世界空气」变成可再生的三种生魂
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("wisp.1.absorb", {type: "techreborn:chemical_reactor",
+    time: 200,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 10, components: {"techreborn:fluid": "jsonreg:wisp_water"}}
+    ],
+    ingredients: [
+        {count: 8, components: {"techreborn:fluid": "jsonreg:low_oxygen_nitrogen"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 2, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:centrifuge>.addJsonRecipe("wisp.2.concentrate", {type: "techreborn:centrifuge",
+    time: 400,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:wisp_concentrate"}},
+        {id: "techreborn:cell", count: 9, components: {"techreborn:fluid": "techreborn:nitrogen"}}
+    ],
+    ingredients: [
+        {count: 10, components: {"techreborn:fluid": "jsonreg:wisp_water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("wisp.3.activate", {type: "techreborn:chemical_reactor",
+    time: 400,
+    power: 128,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:wisp_raw_liquid"}}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:wisp_concentrate"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 2, item: "affinity:scintillant_anthracite_blend"}
+    ]
+});
+
+// 主世界空气 → 惰性
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("wisp.4.soul.inert", {type: "techreborn:large_chemical_reactor",
+    time: 200,
+    power: 512,
+    outputs: [
+        {id: "affinity:inert_wisp_matter", count: 2},
+        {id: "techreborn:cell", count: 5}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:wisp_raw_liquid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 4, components: {"techreborn:fluid": "jsonreg:low_oxygen_nitrogen"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+// 下界空气 → 凶恶
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("wisp.4.soul.vicious", {type: "techreborn:large_chemical_reactor",
+    time: 200,
+    power: 512,
+    outputs: [
+        {id: "affinity:vicious_wisp_matter", count: 2},
+        {id: "techreborn:cell", count: 5}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:wisp_raw_liquid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 4, components: {"techreborn:fluid": "jsonreg:nether_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+// 星光空气 → 博识
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("wisp.4.soul.wise", {type: "techreborn:large_chemical_reactor",
+    time: 200,
+    power: 512,
+    outputs: [
+        {id: "affinity:wise_wisp_matter", count: 2},
+        {id: "techreborn:cell", count: 5}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:wisp_raw_liquid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 4, components: {"techreborn:fluid": "jsonreg:starlight_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
 
 //紫珀块
 <recipetype:botania:mana_infusion>.addJsonRecipe("magic.bot.mana_infusion/purpur_block", {type: "botania:mana_infusion",

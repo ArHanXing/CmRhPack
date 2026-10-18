@@ -167,14 +167,16 @@ header = """// ============================================================
 
 """
 
-Path("scripts/grinder_parity.zs").write_text(header + "\n".join(lines) + "\n", encoding="utf-8")
+OUT = Path("scripts/generated/grinder_parity.zs")
+OUT.parent.mkdir(parents=True, exist_ok=True)
+OUT.write_text(header + "\n".join(lines) + "\n", encoding="utf-8")
 
 print("=== 生成结果 ===")
 print(f"  参与互通的 1 输出配方：OR 粉碎机 {sum(1 for r in all_recs if r['machine']==OR_M)} 条 / "
       f"TR 磨粉机 {sum(1 for r in all_recs if r['machine']==TR_M)} 条")
 print(f"  补齐：→ TR 磨粉机 {added['to_TR']} 条，→ OR 粉碎机 {added['to_OR']} 条，"
       f"合计 {added['to_TR'] + added['to_OR']}")
-print(f"  已写出 scripts/grinder_parity.zs（{len(lines)} 条配方）")
+print(f"  已写出 {OUT}（{len(lines)} 条配方）")
 if skipped:
     print(f"  因与 general_ore_process.zs 的 T1 冲突而跳过 {len(skipped)} 条：")
     for s in sorted(skipped):

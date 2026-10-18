@@ -65,7 +65,7 @@ def main() -> int:
     problems = []
     names = []
     typed = 0
-    for f in sorted(SCRIPTS.glob("*.zs")):
+    for f in sorted(SCRIPTS.rglob("*.zs")):
         text = L.strip_comments(f.read_text(encoding="utf-8"))
         for n, b in L.iter_recipes(text):
             names.append((n, f.name))
@@ -113,7 +113,7 @@ def main() -> int:
             problems.append(f"[清退] general_ore_process.zs 有 {len(g_rem)} 条，"
                             f"冻结清单 {len(frozen)} 条 —— 不一致")
         # 跨文件重复删除会让 CrT 刷 "No recipe" 警告
-        for f in sorted(SCRIPTS.glob("*.zs")):
+        for f in sorted(SCRIPTS.rglob("*.zs")):
             if f.name == gen.name:
                 continue
             other = re.findall(r'removeByName\("([^"]+)"\)',

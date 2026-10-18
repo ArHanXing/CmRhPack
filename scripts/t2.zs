@@ -322,40 +322,6 @@ ingredients: [{item: "techreborn:lazurite_plate"}, {item: "techreborn:industrial
     ]
 });
 
-//集气室的正义配方
-<recipetype:techreborn:gas_collector>.removeAll();
-<recipetype:techreborn:gas_collector>.addJsonRecipe("t2.tr.gas_collector/overworld", {type: "techreborn:gas_collector",
-    amount: 5000,
-    fluid: "jsonreg:low_oxygen_nitrogen",
-    time: 100,
-    power: 256,
-    dimension: "minecraft:overworld",
-    display: {id: "minecraft:grass_block", count: 1}
-});
-<recipetype:techreborn:gas_collector>.addJsonRecipe("t2.tr.gas_collector/nether", {type: "techreborn:gas_collector",
-    amount: 5000,
-    fluid: "jsonreg:nether_air",
-    time: 100,
-    power: 128,
-    dimension: "minecraft:the_nether",
-    display: {id: "minecraft:netherrack", count: 1}
-});
-<recipetype:techreborn:gas_collector>.addJsonRecipe("t2.tr.gas_collector/starlight", {type: "techreborn:gas_collector",
-    amount: 5000,
-    fluid: "jsonreg:starlight_air",
-    time: 100,
-    power: 256,
-    dimension: "eternal_starlight:starlight",
-    display: {id: "eternal_starlight:lunar_leaves", count: 1}
-});
-<recipetype:techreborn:gas_collector>.addJsonRecipe("t2.tr.gas_collector/end", {type: "techreborn:gas_collector",
-    amount: 5000,
-    fluid: "jsonreg:end_air",
-    time: 100,
-    power: 384,
-    dimension: "minecraft:the_end",
-    display: {id: "minecraft:end_stone", count: 1}
-});
 // ---- TODO ----
 //过充水晶
 craftingTable.removeByName("oritech:motor/overchargedcrystal");
@@ -409,6 +375,21 @@ craftingTable.remove(<item:justarod:basic_electric_rod>);
 {type: "oritech:assembler", fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "justarod:basic_electric_rod"}], 
 time: 60, fluidInput: {fluid: "minecraft:empty", amount: 0}, 
 ingredients: [{item: "justarod:redstone_rod"}, {item: "oritech:advanced_computing_engine"}, {item: "affinity:fairly_attuned_amethyst_shard"}, {item: "techreborn:lithium_ion_battery"}]});
+
+//日冕核心
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("t2.tr.ebf.eclipsecore", {type: "techreborn:blast_furnace",
+    outputs: [
+        {id: "eternal_starlight:eclipse_core", count: 1},
+        {id: "techreborn:cell", count: 2}
+    ],
+    time: 1000,
+    heat: 5000,
+    power: 256,
+    ingredients: [
+        {item: "jsonreg:photon_dust", count: 16},
+        {count: 2, components: {"techreborn:fluid": "jsonreg:shine_soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
 
 //TODO
 //创造存储
@@ -640,6 +621,174 @@ _reactor("t2.ori.reactor.nqdriamx2", "jsonreg:dual_naquadria_fuel_rod", 720000);
     ingredients: [
         {count: 2, components: {"techreborn:fluid": "jsonreg:toluene"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
         {count: 6, components: {"techreborn:fluid": "jsonreg:nitric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+
+// =====================================================================
+// 硅岩合金 / 高速钢-G —— T2.4 收尾的两档合金 + 对应 EBF 线圈
+// =====================================================================
+// ---------- 1. 合金粉（大化反） ----------
+// 硅岩合金：7 钨 + 2 硅岩 + 1 镍 → 10 粉（质量 1:1，不额外放大）
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("t2.tr.lcr.naquadah_alloy_dust", {type: "techreborn:large_chemical_reactor",
+    time: 1000,
+    power: 128,
+    outputs: [
+        {id: "jsonreg:naquadah_alloy_dust", count: 10}
+    ],
+    ingredients: [
+        {item: "jsonreg:tungsten_dust", count: 7},
+        {item: "jsonreg:enriched_naquadah_dust", count: 2},
+        {item: "techreborn:nickel_dust", count: 1}
+    ]
+});
+// 高速钢-G：2 铁 + 1 钨 + 1 铬 + 1 锰 → 5 粉（同样 1:1）
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("t2.tr.lcr.hssg_dust", {type: "techreborn:large_chemical_reactor",
+    time: 600,
+    power: 128,
+    outputs: [
+        {id: "jsonreg:hssg_dust", count: 5}
+    ],
+    ingredients: [
+        {item: "oritech:iron_dust", count: 2},
+        {item: "jsonreg:tungsten_dust", count: 1},
+        {item: "techreborn:chrome_dust", count: 1},
+        {item: "techreborn:manganese_dust", count: 1}
+    ]
+});
+
+// ---------- 2. 粉 → 热锭（电高炉） ----------
+// 高速钢-G：heat 3000，钨钢线圈即可
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("t2.tr.ebf.hot_hssg_ingot", {type: "techreborn:blast_furnace",
+    outputs: [
+        {id: "jsonreg:hot_hssg_ingot", count: 1}
+    ],
+    time: 800,
+    heat: 3000,
+    power: 128,
+    ingredients: [
+        {item: "jsonreg:hssg_dust", count: 1}
+    ]
+});
+// 硅岩合金：heat 4500 裸烧（预留，见文件头注释）
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("t2.tr.ebf.hot_naquadah_alloy_ingot", {type: "techreborn:blast_furnace",
+    outputs: [
+        {id: "jsonreg:hot_naquadah_alloy_ingot", count: 1}
+    ],
+    time: 1200,
+    heat: 4500,
+    power: 256,
+    ingredients: [
+        {item: "jsonreg:naquadah_alloy_dust", count: 1}
+    ]
+});
+// 硅岩合金：2 单元灵魂注入催化剂把热量压到 3500（需要高速钢线圈），催化剂(cell)原样返还
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("t2.tr.ebf.hot_naquadah_alloy_ingot_catalyzed", {type: "techreborn:blast_furnace",
+    outputs: [
+        {id: "jsonreg:hot_naquadah_alloy_ingot", count: 1},
+        {id: "techreborn:cell", count: 2}
+    ],
+    time: 1200,
+    heat: 3500,
+    power: 256,
+    ingredients: [
+        {item: "jsonreg:naquadah_alloy_dust", count: 1},
+        {count: 2, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+// ---------- 3. 热锭 → 锭（真空冷冻机） ----------
+<recipetype:techreborn:vacuum_freezer>.addJsonRecipe("t2.tr.freeze.hssg_ingot", {type: "techreborn:vacuum_freezer",
+    time: 400,
+    power: 64,
+    outputs: [
+        {id: "jsonreg:hssg_ingot", count: 1}
+    ],
+    ingredients: [
+        {item: "jsonreg:hot_hssg_ingot", count: 1}
+    ]
+});
+<recipetype:techreborn:vacuum_freezer>.addJsonRecipe("t2.tr.freeze.naquadah_alloy_ingot", {type: "techreborn:vacuum_freezer",
+    time: 400,
+    power: 64,
+    outputs: [
+        {id: "jsonreg:naquadah_alloy_ingot", count: 1}
+    ],
+    ingredients: [
+        {item: "jsonreg:hot_naquadah_alloy_ingot", count: 1}
+    ]
+});
+
+// ---------- 4. 锭 → 板（压缩机） ----------
+<recipetype:techreborn:compressor>.addJsonRecipe("t2.tr.compress.hssg_plate", {type: "techreborn:compressor",
+    outputs: [
+        {id: "jsonreg:hssg_plate", count: 1}
+    ],
+    time: 300,
+    power: 16,
+    ingredients: [
+        {item: "jsonreg:hssg_ingot", count: 1}
+    ]
+});
+<recipetype:techreborn:compressor>.addJsonRecipe("t2.tr.compress.naquadah_alloy_plate", {type: "techreborn:compressor",
+    outputs: [
+        {id: "jsonreg:naquadah_alloy_plate", count: 1}
+    ],
+    time: 300,
+    power: 16,
+    ingredients: [
+        {item: "jsonreg:naquadah_alloy_ingot", count: 1}
+    ]
+});
+
+// ---------- 5. 锭 → 杆（车床） ----------
+// 注：lathe.zs 里有 <recipetype:techreborn:lathe>.removeAll()，
+//     但脚本按文件名字母序加载，lathe.zs 先于 t2.zs，所以这里追加安全。
+<recipetype:techreborn:lathe>.addJsonRecipe("t2.tr.lathe.hssg_rod", {type: "techreborn:lathe",
+    time: 40,
+    power: 8,
+    outputs: [
+        {id: "jsonreg:hssg_rod", count: 1}
+    ],
+    ingredients: [
+        {item: "jsonreg:hssg_ingot", count: 1}
+    ]
+});
+<recipetype:techreborn:lathe>.addJsonRecipe("t2.tr.lathe.naquadah_alloy_rod", {type: "techreborn:lathe",
+    time: 40,
+    power: 8,
+    outputs: [
+        {id: "jsonreg:naquadah_alloy_rod", count: 1}
+    ],
+    ingredients: [
+        {item: "jsonreg:naquadah_alloy_ingot", count: 1}
+    ]
+});
+
+// ---------- 6. EBF 线圈（精密装配） ----------
+// 沿用既有两档（昶铂线圈 2500 / 钨钢线圈 3000）的形制：4 锡线缆 + 板 + 杆
+// 高速钢线圈 → 3500K
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("t2.tr.pa.hssg_coil", {type: "techreborn:precise_assembler",
+    outputs: [
+        {id: "techreborn:coil_hssg", count: 1}
+    ],
+    time: 600, power: 256,
+    ingredients: [
+        {count: 4, item: "techreborn:tin_cable"},
+        {count: 2, item: "jsonreg:hssg_plate"},
+        {count: 2, item: "jsonreg:hssg_rod"}
+    ]
+});
+// 硅岩线圈 → 5000K
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("t2.tr.pa.naquadah_coil", {type: "techreborn:precise_assembler",
+    outputs: [
+        {id: "techreborn:coil_naquadah", count: 1}
+    ],
+    time: 800, power: 256,
+    ingredients: [
+        {count: 4, item: "techreborn:tin_cable"},
+        {count: 4, item: "jsonreg:naquadah_alloy_plate"},
+        {count: 2, item: "jsonreg:naquadah_alloy_rod"}
     ]
 });
 

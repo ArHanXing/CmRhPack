@@ -850,3 +850,6 @@ craftingTable.addShaped("ctgui/new/immersive_aircraft/industrial_gears", <item:i
 
 <recipetype:minecraft:crafting>.removeByName("oritech:crafting/controller");
 
+craftingTable.addShaped("ctgui/new/shine_tmp", <item:jsonreg:shine_ingot>, [
+    [<item:minecraft:iron_ingot>.withJsonComponent(<componenttype:minecraft:custom_data>, {"stellarity.special_item": "hallowed_ingot"}).withJsonComponent(<componenttype:minecraft:custom_model_data>, 90000).withJsonComponent(<componenttype:minecraft:item_name>, "{\"color\":\"#D9E3ED\",\"fallback\":\"Hallowed Ingot\",\"italic\":false,\"translate\":\"stellarity.items.materials.hallowed_ingot\"}").withJsonComponent(<componenttype:minecraft:lore>, ["\"\"", "{\"color\":\"#CC26FF\",\"italic\":true,\"translate\":\"Stellarity\"}"])]]);
+
