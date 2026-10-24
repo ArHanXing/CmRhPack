@@ -53,35 +53,39 @@ Dynamic Ore Veins wiki @ https://github.com/TheBrewingMiner/DOV-Homepage/wiki
 
 ### 全部矿脉总表
 
-| 矿脉 | 维度 | 主矿石 | 次矿石 (占比) | 球心 Y | 半径 R | Y 范围 | 类型切片 |
-|---|---|---|---|---|---|---|---|
-| _test_starlight_ore *(测试)* | 星光 | uranium (`deepslate_uranium_ore`) | lead `deepslate_lead_ore` (40%) | 68 | 16 | 52~84 | [-21.00, 0.00) |
-| bauxite_iron | 主世界 | bauxite (`deepslate_bauxite_ore`) | iron `deepslate_iron_ore` (40%) | -32.5 | 16 | -49~-16 | [-21.00, -18.53) |
-| chalcopyrite | 主世界 | copper (`copper_ore`) | tin `tin_ore` (40%) | 40 | 16 | 24~56 | [-18.53, -16.06) |
-| coal | 主世界 | coal (`coal_ore`) | diamond `diamond_ore` (10%) | 30 | 16 | 14~46 | [-16.06, -13.59) |
-| corundum | 主世界 | ruby (`ruby_ore`) | sapphire `sapphire_ore` (40%) | 60 | 16 | 44~76 | [-13.59, -11.12) |
-| emerald_gold | 主世界 | emerald (`emerald_ore`) | gold `gold_ore` (40%) | 60 | 16 | 44~76 | [-11.12, -8.65) |
-| end_naquadah_ore | 末地 | end_naquadah (`end_naquadah_ore`) | end_enriched_naquadah `end_enriched_naquadah_ore` (30%) | 30 | 16 | 14~46 | [-21.00, -7.00) |
-| end_peridot_ore | 末地 | sodalite (`sodalite_ore`) | peridot `peridot_ore` (50%) | 30 | 16 | 14~46 | [-7.00, 7.00) |
-| end_sheldonite_ore | 末地 | sheldonite (`sheldonite_ore`) | tungsten `tungsten_ore` (50%) | 30 | 16 | 14~46 | [7.00, 21.00) |
-| galena_silver | 主世界 | galena (`deepslate_galena_ore`) | silver `deepslate_silver_ore` (30%) | -20 | 16 | -36~-4 | [-8.65, -6.18) |
-| iridium_iron | 主世界 | iridium (`deepslate_iridium_ore`) | iron `deepslate_iron_ore` (30%) | -32.5 | 16 | -49~-16 | [-6.18, -3.71) |
-| kimberlite | 主世界 | diamond (`deepslate_diamond_ore`) | redstone `deepslate_redstone_ore` (40%) | -32.5 | 16 | -49~-16 | [-3.71, -1.24) |
-| lapis_gold | 主世界 | lapis (`deepslate_lapis_ore`) | gold `deepslate_gold_ore` (30%) | -32.5 | 16 | -49~-16 | [-1.24, 1.24) |
-| lead_silver | 主世界 | lead (`deepslate_lead_ore`) | silver `deepslate_silver_ore` (40%) | -32.5 | 16 | -49~-16 | [1.24, 3.71) |
-| magnetite | 主世界 | iron (`iron_ore`) | gold `gold_ore` (30%) | 40 | 16 | 24~56 | [3.71, 6.18) |
-| nether_cinnabar | 下界 | cinnabar (`cinnabar_ore`) | sulfur `sulfur_ore` (30%) | 35 | 16 | 19~51 | [-21.00, -12.60) |
-| nether_pyrite | 下界 | pyrite (`pyrite_ore`) | nether_gold `nether_gold_ore` (40%) | 35 | 16 | 19~51 | [-12.60, -4.20) |
-| nether_quartz | 下界 | nether_quartz (`nether_quartz_ore`) | sulfur_quartz `sulfur_quartz_ore` (30%) | 35 | 16 | 19~51 | [-4.20, 4.20) |
-| nether_rose_quartz | 下界 | rose_quartz (`rose_quartz_ore`) | smoky_quartz `smoky_quartz_ore` (50%) | 35 | 16 | 19~51 | [4.20, 12.60) |
-| nether_sphalerite | 下界 | sphalerite (`sphalerite_ore`) | sulfur `sulfur_ore` (30%) | 35 | 16 | 19~51 | [12.60, 21.00) |
-| nickel_copper | 主世界 | nickel (`deepslate_nickel_ore`) | copper `deepslate_copper_ore` (30%) | -32.5 | 16 | -49~-16 | [6.18, 8.65) |
-| oil_sand | 主世界 | oil_sand (`oil_sand_ore`) | oil_sand `oil_sand_ore` (40%) | 60 | 16 | 44~76 | [8.65, 11.12) |
-| redstone_copper | 主世界 | redstone (`deepslate_redstone_ore`) | copper `deepslate_copper_ore` (30%) | -32.5 | 16 | -49~-16 | [11.12, 13.59) |
-| salt | 主世界 | salt (`salt_ore`) | rock_salt `rock_salt_ore` (40%) | 60 | 16 | 44~76 | [13.59, 16.06) |
-| starlight_rutile | 星光 | voidstone_rutile (`voidstone_rutile_ore`) | voidstone_malarite `voidstone_malarite_ore` (40%) | -32 | 16 | -48~-16 | [0.00, 21.00) |
-| tin_copper | 主世界 | tin (`tin_ore`) | copper `copper_ore` (50%) | 40 | 16 | 24~56 | [16.06, 18.53) |
-| uranium_lead | 主世界 | uranium (`deepslate_uranium_ore`) | lead `deepslate_lead_ore` (40%) | -15.5 | 13 | -29~-2 | [18.53, 21.00) |
+| 矿脉 | 维度 | 主矿石 | 次矿石 (占比) | 球心 Y | R | Y 范围 | 类型切片 | 格占比 |
+|---|---|---|---|---|---|---|---|---|
+| bauxite_iron | 主世界 | bauxite (`deepslate_bauxite_ore`) | iron `deepslate_iron_ore` (40%) | -32.5 | 16 | -49~-16 | [-21.00, -18.53) | 5.9% |
+| chalcopyrite | 主世界 | copper (`copper_ore`) | tin `tin_ore` (40%) | 40 | 16 | 24~56 | [-18.53, -16.06) | 5.9% |
+| coal | 主世界 | coal (`coal_ore`) | diamond `diamond_ore` (10%) | 30 | 16 | 14~46 | [-16.06, -13.59) | 5.9% |
+| corundum | 主世界 | ruby (`ruby_ore`) | sapphire `sapphire_ore` (40%) | 60 | 16 | 44~76 | [-13.59, -11.12) | 5.9% |
+| emerald_gold | 主世界 | emerald (`emerald_ore`) | gold `gold_ore` (40%) | 60 | 16 | 44~76 | [-11.12, -8.65) | 5.9% |
+| galena_silver | 主世界 | galena (`deepslate_galena_ore`) | silver `deepslate_silver_ore` (30%) | -20 | 16 | -36~-4 | [-8.65, -6.18) | 5.9% |
+| iridium_iron | 主世界 | iridium (`deepslate_iridium_ore`) | iron `deepslate_iron_ore` (30%) | -32.5 | 16 | -49~-16 | [-6.18, -3.71) | 5.9% |
+| kimberlite | 主世界 | diamond (`deepslate_diamond_ore`) | redstone `deepslate_redstone_ore` (40%) | -32.5 | 16 | -49~-16 | [-3.71, -1.24) | 5.9% |
+| lapis_gold | 主世界 | lapis (`deepslate_lapis_ore`) | gold `deepslate_gold_ore` (30%) | -32.5 | 16 | -49~-16 | [-1.24, 1.24) | 5.9% |
+| lead_silver | 主世界 | lead (`deepslate_lead_ore`) | silver `deepslate_silver_ore` (40%) | -32.5 | 16 | -49~-16 | [1.24, 3.71) | 5.9% |
+| magnetite | 主世界 | iron (`iron_ore`) | gold `gold_ore` (30%) | 40 | 16 | 24~56 | [3.71, 6.18) | 5.9% |
+| nickel_copper | 主世界 | nickel (`deepslate_nickel_ore`) | copper `deepslate_copper_ore` (30%) | -32.5 | 16 | -49~-16 | [6.18, 8.65) | 5.9% |
+| oil_sand | 主世界 | oil_sand (`oil_sand_ore`) | oil_sand `oil_sand_ore` (40%) | 60 | 16 | 44~76 | [8.65, 11.12) | 5.9% |
+| redstone_copper | 主世界 | redstone (`deepslate_redstone_ore`) | copper `deepslate_copper_ore` (30%) | -32.5 | 16 | -49~-16 | [11.12, 13.59) | 5.9% |
+| salt | 主世界 | salt (`salt_ore`) | rock_salt `rock_salt_ore` (40%) | 60 | 16 | 44~76 | [13.59, 16.06) | 5.9% |
+| tin_copper | 主世界 | tin (`tin_ore`) | copper `copper_ore` (50%) | 40 | 16 | 24~56 | [16.06, 18.53) | 5.9% |
+| uranium_lead | 主世界 | uranium (`deepslate_uranium_ore`) | lead `deepslate_lead_ore` (40%) | -15.5 | 13 | -29~-2 | [18.53, 21.00) | 5.9% |
+| nether_cinnabar | 下界 | cinnabar (`cinnabar_ore`) | sulfur `sulfur_ore` (30%) | 35 | 16 | 19~51 | [-21.00, -15.75) | 12.5% |
+| nether_fluorite | 下界 | nether_fluorite (`nether_fluorite_ore`) | nether_rock_salt `nether_rock_salt_ore` (40%) | 35 | 16 | 19~51 | [-15.75, -10.50) | 12.5% |
+| nether_pyrite | 下界 | pyrite (`pyrite_ore`) | nether_gold `nether_gold_ore` (30%) | 35 | 16 | 19~51 | [-10.50, -5.25) | 12.5% |
+| nether_pyrolusite | 下界 | nether_pyrolusite (`nether_pyrolusite_ore`) | nether_hausmannite `nether_hausmannite_ore` (35%) | 35 | 16 | 19~51 | [-5.25, 0.00) | 12.5% |
+| nether_quartz | 下界 | nether_quartz (`nether_quartz_ore`) | sulfur_quartz `sulfur_quartz_ore` (30%) | 35 | 16 | 19~51 | [0.00, 5.25) | 12.5% |
+| nether_rose_quartz | 下界 | rose_quartz (`rose_quartz_ore`) | smoky_quartz `smoky_quartz_ore` (30%) | 35 | 16 | 19~51 | [5.25, 10.50) | 12.5% |
+| nether_sphalerite | 下界 | sphalerite (`sphalerite_ore`) | sulfur `sulfur_ore` (30%) | 35 | 16 | 19~51 | [10.50, 15.75) | 12.5% |
+| nether_vanadium_magnetite | 下界 | nether_vanadium_magnetite (`nether_vanadium_magnetite_ore`) | nether_chromite `nether_chromite_ore` (35%) | 35 | 16 | 19~51 | [15.75, 21.00) | 12.5% |
+| end_naquadah_ore | 末地 | end_naquadah (`end_naquadah_ore`) | end_enriched_naquadah `end_enriched_naquadah_ore` (30%) | 30 | 16 | 14~46 | [-21.00, -10.50) | 25.0% |
+| end_peridot_ore | 末地 | sodalite (`sodalite_ore`) | peridot `peridot_ore` (30%) | 30 | 16 | 14~46 | [-10.50, 0.00) | 25.0% |
+| end_rutile_ore | 末地 | end_rutile (`end_rutile_ore`) | tungsten `tungsten_ore` (25%) | 30 | 16 | 14~46 | [0.00, 10.50) | 25.0% |
+| end_sheldonite_ore | 末地 | sheldonite (`sheldonite_ore`) | tungsten `tungsten_ore` (30%) | 30 | 16 | 14~46 | [10.50, 21.00) | 25.0% |
+| _test_starlight_ore *(测试)* | 星光 | uranium (`deepslate_uranium_ore`) | lead `deepslate_lead_ore` (40%) | 68 | 16 | 52~84 | [-21.00, 0.00) | 50.0% |
+| starlight_rutile | 星光 | voidstone_rutile (`voidstone_rutile_ore`) | voidstone_malarite `voidstone_malarite_ore` (40%) | -32 | 16 | -48~-16 | [0.00, 21.00) | 50.0% |
 
 ---
 

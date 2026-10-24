@@ -516,6 +516,33 @@ _reactor("t2.ori.reactor.nqdriamx2", "jsonreg:dual_naquadria_fuel_rod", 720000);
     ]
 });
 
+// 1c. 末地金红石矿（末地石形态）走同一套精矿入口
+//     末地矿脉 nether→end 的产物与虚空石金红石矿等价，故复用 T1/T1.5 出口
+<recipetype:techreborn:grinder>.addJsonRecipe("t2.tr.grinder.rutile_dust_from_end_ore", {type: "techreborn:grinder",
+    time: 100,
+    outputs: [
+        {id: "jsonreg:rutile_dust", count: 2}
+    ],
+    power: 32,
+    ingredients: [
+        {item: "jsonreg:end_rutile_ore"}
+    ]
+});
+
+// 1d. 末地金红石矿工业磨粉（水洗，带铁杂）
+<recipetype:techreborn:industrial_grinder>.addJsonRecipe("t2.tr.industrial_grinder.rutile_dust_from_end_ore", {type: "techreborn:industrial_grinder",
+    time: 200,
+    outputs: [
+        {id: "jsonreg:rutile_dust", count: 3},
+        {id: "oritech:iron_dust", count: 1}
+    ],
+    fluid: {fluid: {fluid: "minecraft:water"}, amount: {value: 81000}},
+    power: 64,
+    ingredients: [
+        {item: "jsonreg:end_rutile_ore", count: 1}
+    ]
+});
+
 // 2. 加碳氯化（改为了大化反）
 <recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("t2.tr.largechemreactor.chlorinate_rutile", {type: "techreborn:large_chemical_reactor",
     time: 400,

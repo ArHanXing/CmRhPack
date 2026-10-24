@@ -221,7 +221,11 @@ def convert(name, body, rtype):
 
 def main() -> int:
     recipes, seen = [], set()
-    for f in sorted(SCRIPTS.glob("*.zs")):
+    # 注意：矿处已按 tier 拆到 scripts/ore_process/，单层 glob 会漏掉整个子目录
+    #（拆分前 general_ore_process.zs 在顶层，所以只需 glob；拆分后必须补上子目录）。
+    # 不递归到 generated/，避免生成器读自己的输出。
+    src_files = sorted(SCRIPTS.glob("*.zs")) + sorted((SCRIPTS / "ore_process").glob("*.zs"))
+    for f in src_files:
         if f.name == OUT.name:
             continue
         t = L.strip_comments(f.read_text(encoding="utf-8"))

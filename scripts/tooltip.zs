@@ -249,17 +249,17 @@ import crafttweaker.api.item.IItemStack;
 <item:jsonreg:depleted_uranium_slag>.addTooltip("§e§l?§r");
 <item:jsonreg:calcium_oxide_slag>.addTooltip("§e§l(CaO)§r");
 
-// —— 硅岩合金 / 高速钢-G（T2.4 收尾的两档 EBF 线圈材料，见 scripts/t2.zs 末尾）——
-<item:jsonreg:naquadah_alloy_dust>.addTooltip("§5§l(Nq+₂W₇Ni)§r");
-<item:jsonreg:hot_naquadah_alloy_ingot>.addTooltip("§5§l(Nq+₂W₇Ni)§r");
-<item:jsonreg:naquadah_alloy_ingot>.addTooltip("§5§l(Nq+₂W₇Ni)§r");
-<item:jsonreg:naquadah_alloy_plate>.addTooltip("§5§l(Nq+₂W₇Ni)§r");
-<item:jsonreg:naquadah_alloy_rod>.addTooltip("§5§l(Nq+₂W₇Ni)§r");
-<item:jsonreg:hssg_dust>.addTooltip("§7§l(Fe₂WCrMn)§r");
-<item:jsonreg:hot_hssg_ingot>.addTooltip("§7§l(Fe₂WCrMn)§r");
-<item:jsonreg:hssg_ingot>.addTooltip("§7§l(Fe₂WCrMn)§r");
-<item:jsonreg:hssg_plate>.addTooltip("§7§l(Fe₂WCrMn)§r");
-<item:jsonreg:hssg_rod>.addTooltip("§7§l(Fe₂WCrMn)§r");
+// —— 硅岩合金 / 高速钢-G ——
+<item:jsonreg:naquadah_alloy_dust>.addTooltip("§e§l(Nq+₂W₇Ni)§r");
+<item:jsonreg:hot_naquadah_alloy_ingot>.addTooltip("§e§l(Nq+₂W₇Ni)§r");
+<item:jsonreg:naquadah_alloy_ingot>.addTooltip("§e§l(Nq+₂W₇Ni)§r");
+<item:jsonreg:naquadah_alloy_plate>.addTooltip("§e§l(Nq+₂W₇Ni)§r");
+<item:jsonreg:naquadah_alloy_rod>.addTooltip("§e§l(Nq+₂W₇Ni)§r");
+<item:jsonreg:hssg_dust>.addTooltip("§e§l(Fe₂WCrMn)§r");
+<item:jsonreg:hot_hssg_ingot>.addTooltip("§e§l(Fe₂WCrMn)§r");
+<item:jsonreg:hssg_ingot>.addTooltip("§e§l(Fe₂WCrMn)§r");
+<item:jsonreg:hssg_plate>.addTooltip("§e§l(Fe₂WCrMn)§r");
+<item:jsonreg:hssg_rod>.addTooltip("§e§l(Fe₂WCrMn)§r");
 
 // —— 核燃料产线 ——
 <item:jsonreg:enriched_uranium_dust>.addTooltip("§e§lU§r");
@@ -439,18 +439,33 @@ import crafttweaker.api.item.IItemStack;
 
 <item:techreborn:isotope_separator>.addTooltip("§b将特定的铀同位素离心出来§r");
 <item:techreborn:isotope_separator>.addTooltip("===============");
-<item:techreborn:isotope_separator>.addTooltip("运行时需要§a转子和转速§r");
+<item:techreborn:isotope_separator>.addTooltip("运行时需要§a转子和转速§r，转子放在第二个槽");
 <item:techreborn:isotope_separator>.addTooltip("转速 §ar§r 的计算方式为 §amin(红石信号/15，转子上限)§r");
-<item:techreborn:isotope_separator>.addTooltip("这时具有 §a(1 − 0.5r) 耗时倍率§r与§a(1 + 3r) 耗能倍率§r");
-//<item:techreborn:isotope_separator>.addTooltip("也就是§a高转速可获得更低耗时和更高耗能§r，例如 r=100% 时快 §a2×§r、每轮耗电 §c2×§r");
+<item:techreborn:isotope_separator>.addTooltip("这时具有 §a(1 − 0.75r) 耗时倍率§r与§a(1 + 3r) 耗能倍率§r");
+<item:techreborn:isotope_separator>.addTooltip("§b无转子§r ── 最大转速 §a25%§r，此外有 5 种材质不同的转子");
 <item:techreborn:isotope_separator>.addTooltip("===============");
-<item:techreborn:isotope_separator>.addTooltip("转子速率表（转子槽是第二个槽）");
-<item:techreborn:isotope_separator>.addTooltip("§b无转子§r ── 最大转速 §a25%§r");
-<item:techreborn:isotope_separator>.addTooltip("§b钢转子§r ── 最大转速 §a50%§r");
-<item:techreborn:isotope_separator>.addTooltip("§b钛转子§r ── 最大转速 §a75%§r");
-<item:techreborn:isotope_separator>.addTooltip("§b钨钢转子§r ── 最大转速 §a90%§r");
-<item:techreborn:isotope_separator>.addTooltip("§b盖亚合金转子§r ── 最大转速 §a100%§r");
-<item:techreborn:isotope_separator>.addTooltip("§b光辉合金转子§r ── 最大转速 §a100%§r，且具有§a额外 30% 耗能减成§r");
+<item:techreborn:isotope_separator>.addTooltip("基础成功率为§a80%§r");
+<item:techreborn:isotope_separator>.addTooltip("成功率随转速变化，为 §a0.8-0.4*r§r");
+<item:techreborn:isotope_separator>.addTooltip("失败时§e输入原样从输出槽退回§r，只损失时间与电力");
+<item:techreborn:isotope_separator>.addTooltip("===============");
+<item:techreborn:isotope_separator>.addTooltip("灵感来自 DSP 重氢分馏");
+
+/*
+参照表（示例配方 200t / 128 EU/t，无超频，普通转子）
+r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
+0.00	200t	80%	128	25 600	1.00x	32 000	不磨损
+0.25	163t	70%	224	36 512	1.08x	52 160	800t
+0.50	125t	60%	320	40 000	1.20x	66 667	400t
+0.75	88t	50%	416	36 608	1.43x	73 216	267t
+1.00	50t	40%	512	25 600	2.00x	64 000	200t
+
+翻译：顶满是最好的。
+*/
+<item:techreborn:steel_rotor>.addTooltip("§b钢转子§r ── 最大转速 §a50%§r");
+<item:techreborn:titanium_rotor>.addTooltip("§b钛转子§r ── 最大转速 §a75%§r");
+<item:techreborn:tungstensteel_rotor>.addTooltip("§b钨钢转子§r ── 最大转速 §a90%§r");
+<item:techreborn:gaia_rotor>.addTooltip("§b盖亚合金转子§r ── 最大转速 §a100%§r");
+<item:techreborn:shine_rotor>.addTooltip("§b光辉合金转子§r ── 最大转速 §a100%§r，且具有§a额外 30% 耗能减成§r");
 
 <item:techreborn:naquadah_deresonator>.addTooltip("§b移除硅岩粉末的不稳定因素§r");
 <item:techreborn:naquadah_deresonator>.addTooltip("用于：§e含杂富集硅岩粉§r → §d稳定化富集硅岩粉§r（阻尼液 §b硫酸§r）");
@@ -509,3 +524,35 @@ import crafttweaker.api.item.IItemStack;
 <item:neko-technology:neko_copper_ingot>.addTooltip("- 说道§6Lovers§r的§eBirth§r 那就只有§c你§r！ -");
 <item:neko-technology:neko_copper_ingot>.addTooltip("- 请将§b它§r传达到§6流星群§r那里 -");
 <item:neko-technology:neko_copper_ingot>.addTooltip("- 就这样§e拜托§d你§r了！ -");
+// —— 下界钒磁铁 / 软锰矿 / 铬铁矿 / 硬锰矿 ——
+<item:jsonreg:vanadium_dust>.addTooltip("§e§lV§r");
+<item:jsonreg:vanadium_ingot>.addTooltip("§e§lV§r");
+<item:jsonreg:vanadium_plate>.addTooltip("§e§lV§r");
+<item:jsonreg:nether_vanadium_magnetite_ore>.addTooltip("§e§l(Fe,V)₃O₄§r");
+<item:jsonreg:vanadium_magnetite_clump>.addTooltip("§e§l(Fe,V)₃O₄§r");
+<item:jsonreg:vanadium_magnetite_gem>.addTooltip("§e§l(Fe,V)₃O₄§r");
+<item:jsonreg:vanadium_magnetite_concentrate>.addTooltip("§e§l(Fe,V)₃O₄§r");
+<item:jsonreg:nether_chromite_ore>.addTooltip("§e§lFeCr₂O₄§r");
+<item:jsonreg:chromite_clump>.addTooltip("§e§lFeCr₂O₄§r");
+<item:jsonreg:chromite_gem>.addTooltip("§e§lFeCr₂O₄§r");
+<item:jsonreg:chromite_concentrate>.addTooltip("§e§lFeCr₂O₄§r");
+<item:jsonreg:nether_pyrolusite_ore>.addTooltip("§e§lMnO₂§r");
+<item:jsonreg:pyrolusite_clump>.addTooltip("§e§lMnO₂§r");
+<item:jsonreg:pyrolusite_gem>.addTooltip("§e§lMnO₂§r");
+<item:jsonreg:pyrolusite_concentrate>.addTooltip("§e§lMnO₂§r");
+<item:jsonreg:nether_hausmannite_ore>.addTooltip("§e§lMn₃O₄§r");
+<item:jsonreg:hausmannite_clump>.addTooltip("§e§lMn₃O₄§r");
+<item:jsonreg:hausmannite_gem>.addTooltip("§e§lMn₃O₄§r");
+<item:jsonreg:hausmannite_concentrate>.addTooltip("§e§lMn₃O₄§r");
+<item:jsonreg:nether_rock_salt_ore>.addTooltip("§e§lKCl§r");
+<item:jsonreg:end_rutile_ore>.addTooltip("§e§lTiO₂§r");
+
+// —— 太空电梯：强化硅岩合金 / UHPC ——
+<item:jsonreg:reinforced_naquadah_alloy_dust>.addTooltip("§e§l(Nq₂W₇Ni)+Ti₄Cr₃SiC₃§r");
+<item:jsonreg:hot_reinforced_naquadah_alloy_ingot>.addTooltip("§e§l(Nq₂W₇Ni)+Ti₄Cr₃SiC₃§r");
+<item:jsonreg:reinforced_naquadah_alloy_ingot>.addTooltip("§e§l(Nq₂W₇Ni)+Ti₄Cr₃SiC₃§r");
+<item:jsonreg:reinforced_naquadah_alloy_plate>.addTooltip("§e§l(Nq₂W₇Ni)+Ti₄Cr₃SiC₃§r");
+<item:jsonreg:reinforced_naquadah_alloy_rod>.addTooltip("§e§l(Nq₂W₇Ni)+Ti₄Cr₃SiC₃§r");
+<item:jsonreg:cement_clinker>.addTooltip("§e§l3CaO·SiO₂§r");
+<item:jsonreg:cement>.addTooltip("§e§lC₃S+C₂S+C₃A+CaSO₄§r");
+<item:jsonreg:steel_fiber>.addTooltip("§e§l(Fe₁₀₀C)§r");

@@ -232,3 +232,13 @@ craftingTable.remove(<item:oritech:polymer_resin>);
         {item: "minecraft:amethyst_shard", count: 4}
     ]
 });
+
+//洗涤溶剂
+//虽然做不了但是送一组
+<recipetype:oritech:centrifuge_fluid>.addJsonRecipe("t1.oritech.centrifuge/fluid/cleaning_solvent", {type: "oritech:centrifuge_fluid",
+    time: 100,
+    results: [{id: "techreborn:cell",count:1}],
+    fluidInput: {fluid: "minecraft:water", amount: 2430000},
+    fluidOutputs: [{fluid: "techreborn:cleaning_solvent", amount: 2430000}],
+    ingredients: [{count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}]
+});

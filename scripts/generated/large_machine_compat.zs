@@ -13,7 +13,7 @@
 //     （例：oil.process.or.nitric_acid 的水单元），转换时保留其流体组件。
 //   奖励：耗时 ×0.8、耗能 ×0.5（FE→EU 按 1:1，基准见 precision_assembly.zs）。
 //
-// 共 69 条；OR 原配方保留不动，本文件只做「复制一份给 TR」。
+// 共 83 条；OR 原配方保留不动，本文件只做「复制一份给 TR」。
 // ============================================================
 
 <recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.bio.sep.ethanol", {type: "techreborn:large_mixer",
@@ -24,6 +24,198 @@
     ],
     ingredients: [
         {count: 1, components: {"techreborn:fluid": "jsonreg:fermented_mash"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.oil.process.or.desalt.crude.tr", {type: "techreborn:large_refinery",
+    time: 160,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:desalted_crude"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:saline_water"}}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "techreborn:oil"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.oil.process.or.desalt.crude.or", {type: "techreborn:large_refinery",
+    time: 160,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:desalted_crude"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:saline_water"}}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "oritech:still_oil"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.oil.process.or.vacuum_distillation", {type: "techreborn:large_refinery",
+    time: 1280,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 3, components: {"techreborn:fluid": "jsonreg:vacuum_diesel"}},
+        {id: "techreborn:cell", count: 5, components: {"techreborn:fluid": "jsonreg:vacuum_residue"}}
+    ],
+    ingredients: [
+        {count: 8, components: {"techreborn:fluid": "jsonreg:atmospheric_residue"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.oil.process.or.coking", {type: "techreborn:large_refinery",
+    time: 800,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:coke_gas"}},
+        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:coker_light_oil"}},
+        {id: "jsonreg:petroleum_coke", count: 5},
+        {id: "techreborn:cell", count: 2}
+    ],
+    ingredients: [
+        {count: 5, components: {"techreborn:fluid": "jsonreg:vacuum_residue"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.oil.process.or.nitric_acid", {type: "techreborn:large_refinery",
+    time: 160,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 1},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:nitric_acid"}}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:nitrous_gas"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.oil.other.or.centrifuge_oilsand_low", {type: "techreborn:large_mixer",
+    time: 128,
+    power: 32,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "techreborn:oil"}},
+        {id: "minecraft:sand", count: 2}
+    ],
+    ingredients: [
+        {item: "jsonreg:oil_sand_dust", count: 2},
+        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.nqdh.3.refinery", {type: "techreborn:large_refinery",
+    time: 128,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:impure_enriched_naquadah_solution"}}
+    ],
+    ingredients: [
+        {count: 2, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:stabilized_enriched_naquadah_dust", count: 10}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.nqdh.5a.refinery2", {type: "techreborn:large_refinery",
+    time: 80,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 1},
+        {id: "techreborn:cell", count: 3, components: {"techreborn:fluid": "jsonreg:acidic_enriched_naquadah_solution"}}
+    ],
+    ingredients: [
+        {count: 2, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "jsonreg:enriched_naquadah_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.nqdria.3.refinery", {type: "techreborn:large_refinery",
+    time: 480,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 8, components: {"techreborn:fluid": "jsonreg:crude_naquadria_acid_solution"}},
+        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:insoluble_slurry"}}
+    ],
+    ingredients: [
+        {count: 10, components: {"techreborn:fluid": "jsonreg:hydrofluoric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:refined_crushed_naquadria_ore", count: 10}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.nqdria.5.refinery", {type: "techreborn:large_refinery",
+    time: 400,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 3, components: {"techreborn:fluid": "jsonreg:ammonium_fluoride_waste"}},
+        {id: "jsonreg:naquadria_hydroxide_precipitate", count: 1},
+        {id: "techreborn:cell", count: 3}
+    ],
+    ingredients: [
+        {count: 2, components: {"techreborn:fluid": "jsonreg:purified_naquadria_acid_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 4, components: {"techreborn:fluid": "jsonreg:ammonia_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.space.concrete.steam_curing", {type: "techreborn:large_mixer",
+    time: 160,
+    power: 32,
+    outputs: [
+        {id: "jsonreg:structure_concrete", count: 1},
+        {id: "techreborn:cell", count: 1}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "oritech:still_steam"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:uhpc", count: 1}
+    ]
+});
+
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.t1.oritech.centrifuge/fluid/cleaning_solvent", {type: "techreborn:large_mixer",
+    time: 80,
+    power: 32,
+    outputs: [
+        {id: "techreborn:cell", count: 1},
+        {id: "techreborn:cell", count: 30, components: {"techreborn:fluid": "techreborn:cleaning_solvent"}}
+    ],
+    ingredients: [
+        {count: 30, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.t2.oritech.refinery/siliconwashing", {type: "techreborn:large_refinery",
+    time: 128,
+    power: 64,
+    outputs: [
+        {id: "jsonreg:silicon_boule", count: 1}
+    ],
+    ingredients: [
+        {item: "oritech:silicon", count: 1}
+    ]
+});
+
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.t2.oritech.centrifuge/uu", {type: "techreborn:large_mixer",
+    time: 640,
+    power: 32,
+    outputs: [
+        {id: "techreborn:uu_matter", count: 4},
+        {id: "techreborn:cell", count: 1}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "oritech:still_strange_matter"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:naquadah_rod", count: 1}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.water.0a.or.reverse_osmosis", {type: "techreborn:large_refinery",
+    time: 240,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "homeostatic:purified_water"}}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 
@@ -777,168 +969,166 @@
     ]
 });
 
-<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.oil.process.or.desalt.crude.tr", {type: "techreborn:large_refinery",
-    time: 160,
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.general.t15a.leach.vanadium_magnetite", {type: "techreborn:large_refinery",
+    time: 512,
     power: 64,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:desalted_crude"}},
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:saline_water"}}
+        {id: "techreborn:cell", count: 4, components: {"techreborn:fluid": "jsonreg:vanadium_magnetite_solution"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_mineral_slurry"}}
     ],
     ingredients: [
-        {count: 1, components: {"techreborn:fluid": "techreborn:oil"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 4, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:nether_vanadium_magnetite_ore", count: 4},
         {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 
-<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.oil.process.or.desalt.crude.or", {type: "techreborn:large_refinery",
-    time: 160,
-    power: 64,
-    outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:desalted_crude"}},
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:saline_water"}}
-    ],
-    ingredients: [
-        {count: 1, components: {"techreborn:fluid": "oritech:still_oil"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
-    ]
-});
-
-<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.oil.process.or.vacuum_distillation", {type: "techreborn:large_refinery",
-    time: 1280,
-    power: 64,
-    outputs: [
-        {id: "techreborn:cell", count: 3, components: {"techreborn:fluid": "jsonreg:vacuum_diesel"}},
-        {id: "techreborn:cell", count: 5, components: {"techreborn:fluid": "jsonreg:vacuum_residue"}}
-    ],
-    ingredients: [
-        {count: 8, components: {"techreborn:fluid": "jsonreg:atmospheric_residue"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
-    ]
-});
-
-<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.oil.process.or.coking", {type: "techreborn:large_refinery",
-    time: 800,
-    power: 64,
-    outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:coke_gas"}},
-        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:coker_light_oil"}},
-        {id: "jsonreg:petroleum_coke", count: 5},
-        {id: "techreborn:cell", count: 2}
-    ],
-    ingredients: [
-        {count: 5, components: {"techreborn:fluid": "jsonreg:vacuum_residue"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
-    ]
-});
-
-<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.oil.process.or.nitric_acid", {type: "techreborn:large_refinery",
-    time: 160,
-    power: 64,
-    outputs: [
-        {id: "techreborn:cell", count: 1},
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:nitric_acid"}}
-    ],
-    ingredients: [
-        {count: 1, components: {"techreborn:fluid": "jsonreg:nitrous_gas"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
-    ]
-});
-
-<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.oil.other.or.centrifuge_oilsand_low", {type: "techreborn:large_mixer",
-    time: 128,
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.general.t15b.precipitate.vanadium_magnetite", {type: "techreborn:large_mixer",
+    time: 120,
     power: 32,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "techreborn:oil"}},
-        {id: "minecraft:sand", count: 2}
-    ],
-    ingredients: [
-        {item: "jsonreg:oil_sand_dust", count: 2},
-        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
-    ]
-});
-
-<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.nqdh.3.refinery", {type: "techreborn:large_refinery",
-    time: 128,
-    power: 64,
-    outputs: [
-        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:impure_enriched_naquadah_solution"}}
-    ],
-    ingredients: [
-        {count: 2, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {item: "jsonreg:stabilized_enriched_naquadah_dust", count: 10}
-    ]
-});
-
-<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.nqdh.5a.refinery2", {type: "techreborn:large_refinery",
-    time: 80,
-    power: 64,
-    outputs: [
-        {id: "techreborn:cell", count: 1},
-        {id: "techreborn:cell", count: 3, components: {"techreborn:fluid": "jsonreg:acidic_enriched_naquadah_solution"}}
-    ],
-    ingredients: [
-        {count: 2, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:enriched_naquadah_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
-    ]
-});
-
-<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.nqdria.3.refinery", {type: "techreborn:large_refinery",
-    time: 480,
-    power: 64,
-    outputs: [
-        {id: "techreborn:cell", count: 8, components: {"techreborn:fluid": "jsonreg:crude_naquadria_acid_solution"}},
-        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:insoluble_slurry"}}
-    ],
-    ingredients: [
-        {count: 10, components: {"techreborn:fluid": "jsonreg:hydrofluoric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {item: "jsonreg:refined_crushed_naquadria_ore", count: 10}
-    ]
-});
-
-<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.nqdria.5.refinery", {type: "techreborn:large_refinery",
-    time: 400,
-    power: 64,
-    outputs: [
-        {id: "techreborn:cell", count: 3, components: {"techreborn:fluid": "jsonreg:ammonium_fluoride_waste"}},
-        {id: "jsonreg:naquadria_hydroxide_precipitate", count: 1},
-        {id: "techreborn:cell", count: 3}
-    ],
-    ingredients: [
-        {count: 2, components: {"techreborn:fluid": "jsonreg:purified_naquadria_acid_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {count: 4, components: {"techreborn:fluid": "jsonreg:ammonia_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
-    ]
-});
-
-<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.t2.oritech.refinery/siliconwashing", {type: "techreborn:large_refinery",
-    time: 128,
-    power: 64,
-    outputs: [
-        {id: "jsonreg:silicon_boule", count: 1}
-    ],
-    ingredients: [
-        {item: "oritech:silicon", count: 1}
-    ]
-});
-
-<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.t2.oritech.centrifuge/uu", {type: "techreborn:large_mixer",
-    time: 640,
-    power: 32,
-    outputs: [
-        {id: "techreborn:uu_matter", count: 4},
+        {id: "jsonreg:vanadium_magnetite_clump", count: 1},
         {id: "techreborn:cell", count: 1}
     ],
     ingredients: [
-        {count: 1, components: {"techreborn:fluid": "oritech:still_strange_matter"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
-        {item: "jsonreg:naquadah_rod", count: 1}
+        {count: 1, components: {"techreborn:fluid": "jsonreg:vanadium_magnetite_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:salt_dust", count: 1}
     ]
 });
 
-<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.water.0a.or.reverse_osmosis", {type: "techreborn:large_refinery",
-    time: 240,
-    power: 64,
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.general.t15c.recrystallize.vanadium_magnetite", {type: "techreborn:large_mixer",
+    time: 1600,
+    power: 32,
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "homeostatic:purified_water"}}
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_mineral_slurry"}},
+        {id: "jsonreg:vanadium_magnetite_gem", count: 10},
+        {id: "techreborn:cell", count: 4}
     ],
     ingredients: [
-        {count: 1, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 5, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:vanadium_magnetite_clump", count: 10}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.general.t15a.leach.pyrolusite", {type: "techreborn:large_refinery",
+    time: 512,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 4, components: {"techreborn:fluid": "jsonreg:pyrolusite_solution"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_mineral_slurry"}}
+    ],
+    ingredients: [
+        {count: 4, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:nether_pyrolusite_ore", count: 4},
+        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.general.t15b.precipitate.pyrolusite", {type: "techreborn:large_mixer",
+    time: 120,
+    power: 32,
+    outputs: [
+        {id: "jsonreg:pyrolusite_clump", count: 1},
+        {id: "techreborn:cell", count: 1}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:pyrolusite_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:salt_dust", count: 1}
+    ]
+});
+
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.general.t15c.recrystallize.pyrolusite", {type: "techreborn:large_mixer",
+    time: 1600,
+    power: 32,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_mineral_slurry"}},
+        {id: "jsonreg:pyrolusite_gem", count: 10},
+        {id: "techreborn:cell", count: 4}
+    ],
+    ingredients: [
+        {count: 5, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:pyrolusite_clump", count: 10}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.general.t15a.leach.chromite", {type: "techreborn:large_refinery",
+    time: 512,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 4, components: {"techreborn:fluid": "jsonreg:chromite_solution"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_mineral_slurry"}}
+    ],
+    ingredients: [
+        {count: 4, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:nether_chromite_ore", count: 4},
+        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.general.t15b.precipitate.chromite", {type: "techreborn:large_mixer",
+    time: 120,
+    power: 32,
+    outputs: [
+        {id: "jsonreg:chromite_clump", count: 1},
+        {id: "techreborn:cell", count: 1}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:chromite_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:salt_dust", count: 1}
+    ]
+});
+
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.general.t15c.recrystallize.chromite", {type: "techreborn:large_mixer",
+    time: 1600,
+    power: 32,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_mineral_slurry"}},
+        {id: "jsonreg:chromite_gem", count: 10},
+        {id: "techreborn:cell", count: 4}
+    ],
+    ingredients: [
+        {count: 5, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:chromite_clump", count: 10}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.general.t15a.leach.hausmannite", {type: "techreborn:large_refinery",
+    time: 512,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 4, components: {"techreborn:fluid": "jsonreg:hausmannite_solution"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_mineral_slurry"}}
+    ],
+    ingredients: [
+        {count: 4, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:nether_hausmannite_ore", count: 4},
+        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.general.t15b.precipitate.hausmannite", {type: "techreborn:large_mixer",
+    time: 120,
+    power: 32,
+    outputs: [
+        {id: "jsonreg:hausmannite_clump", count: 1},
+        {id: "techreborn:cell", count: 1}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:hausmannite_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:salt_dust", count: 1}
+    ]
+});
+
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.general.t15c.recrystallize.hausmannite", {type: "techreborn:large_mixer",
+    time: 1600,
+    power: 32,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_mineral_slurry"}},
+        {id: "jsonreg:hausmannite_gem", count: 10},
+        {id: "techreborn:cell", count: 4}
+    ],
+    ingredients: [
+        {count: 5, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:hausmannite_clump", count: 10}
     ]
 });

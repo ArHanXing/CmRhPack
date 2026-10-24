@@ -791,11 +791,6 @@ craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine_block/basic
     [<item:techreborn:electronic_circuit>, <item:techreborn:basic_machine_frame>, <item:techreborn:electronic_circuit>],
     [<item:techreborn:refined_iron_plate>, <item:techreborn:refined_iron_plate>, <item:techreborn:refined_iron_plate>]]);
 
-craftingTable.addShaped("ctgui/new/crafting/crushing_wheels", <item:jsonreg:crushing_wheels> * 4, [
-    [IIngredientEmpty.getInstance(), <item:techreborn:diamond_grinding_head>, IIngredientEmpty.getInstance()],
-    [<item:jsonreg:stress_proof_casing>, <item:techreborn:diamond_grinding_head>, <item:jsonreg:stress_proof_casing>],
-    [IIngredientEmpty.getInstance(), <item:jsonreg:mv_electric_motor>, IIngredientEmpty.getInstance()]]);
-
 craftingTable.addShaped("ctgui/new/crafting/steel_frame", <item:jsonreg:steel_frame>, [
     [IIngredientEmpty.getInstance(), <item:jsonreg:steel_rod>, IIngredientEmpty.getInstance()],
     [<item:jsonreg:steel_rod>, <item:techreborn:steel_ingot>, <item:jsonreg:steel_rod>],
@@ -851,5 +846,29 @@ craftingTable.addShaped("ctgui/new/immersive_aircraft/industrial_gears", <item:i
 <recipetype:minecraft:crafting>.removeByName("oritech:crafting/controller");
 
 craftingTable.addShaped("ctgui/new/shine_tmp", <item:jsonreg:shine_ingot>, [
-    [<item:minecraft:iron_ingot>.withJsonComponent(<componenttype:minecraft:custom_data>, {"stellarity.special_item": "hallowed_ingot"}).withJsonComponent(<componenttype:minecraft:custom_model_data>, 90000).withJsonComponent(<componenttype:minecraft:item_name>, "{\"color\":\"#D9E3ED\",\"fallback\":\"Hallowed Ingot\",\"italic\":false,\"translate\":\"stellarity.items.materials.hallowed_ingot\"}").withJsonComponent(<componenttype:minecraft:lore>, ["\"\"", "{\"color\":\"#CC26FF\",\"italic\":true,\"translate\":\"Stellarity\"}"])]]);
+    [<item:minecraft:iron_ingot>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/crushing_wheels", <item:jsonreg:crushing_wheels> * 4, [
+    [IIngredientEmpty.getInstance(), <item:techreborn:diamond_grinding_head>, IIngredientEmpty.getInstance()],
+    [<item:techreborn:advanced_machine_casing>, <item:techreborn:diamond_grinding_head>, <item:techreborn:advanced_machine_casing>],
+    [IIngredientEmpty.getInstance(), <item:jsonreg:mv_electric_motor>, IIngredientEmpty.getInstance()]]);
+
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine/large_refinery");
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/large_refinery", <item:techreborn:large_refinery>, [
+    [<item:techreborn:advanced_circuit>, <item:oritech:refinery_module_block>, <item:techreborn:advanced_circuit>],
+    [<item:techreborn:refined_iron_plate>, <item:oritech:tainted_refinery_block>, <item:techreborn:refined_iron_plate>],
+    [<item:jsonreg:mv_robot_arm>, <item:oritech:refinery_module_block>, <item:jsonreg:mv_electric_motor>]]);
+
+<recipetype:minecraft:crafting>.removeByName("oritech:crafting/catalyst");
+
+<recipetype:minecraft:crafting>.removeByName("oritech:crafting/catalyst_alt");
+craftingTable.addShaped("ctgui/new/oritech/crafting/enchament_catalyst", <item:oritech:enchantment_catalyst_block>, [
+    [<item:oritech:fluxite>, <item:affinity:crystalline_wisp_matter_composite>, <item:oritech:fluxite>],
+    [<item:techreborn:refined_iron_plate>, <item:affinity:crystalline_wisp_matter_composite>, <item:techreborn:refined_iron_plate>],
+    [<item:oritech:adamant_ingot>, <item:minecraft:enchanting_table>, <item:oritech:adamant_ingot>]]);
+
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/large_electrolyzer", <item:techreborn:large_electrolyzer>, [
+    [<item:jsonreg:mv_electric_motor>, <item:jsonreg:mv_robot_arm>, <item:jsonreg:mv_conveyor_module>],
+    [<item:techreborn:advanced_circuit>, <item:techreborn:advanced_machine_frame>, <item:techreborn:advanced_circuit>],
+    [<item:techreborn:titanium_plate>, <item:techreborn:industrial_electrolyzer>, <item:techreborn:titanium_plate>]]);
 

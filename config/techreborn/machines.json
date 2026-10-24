@@ -63,8 +63,12 @@
   },
   "isotope_separator": {
     "IsotopeSeparatorTimeReduction": {
-      "comment": "Isotope Separator process time reduction at full speed (0.5 \u003d full speed takes half the time)",
+      "comment": "Isotope Separator process time reduction at full speed (0.75 \u003d full speed takes a quarter of the time). Full-speed throughput is (1 - FailureSlope) / (1 - TimeReduction), i.e. 2x with the defaults",
       "value": 0.75
+    },
+    "IsotopeSeparatorFailureSlope": {
+      "comment": "Isotope Separator success chance lost per unit of speed (0.5 \u003d 40% left at full speed). Keep it below IsotopeSeparatorTimeReduction, otherwise spinning faster gives less output per second instead of more",
+      "value": 0.5
     },
     "IsotopeSeparatorRotorWearInterval": {
       "comment": "Ticks of processing per point of rotor wear at full speed (scales inversely with speed)",
@@ -81,6 +85,10 @@
     "IsotopeSeparatorMaxInput": {
       "comment": "Isotope Separator Max Input (Energy per tick)",
       "value": 8192
+    },
+    "IsotopeSeparatorBaseSuccess": {
+      "comment": "Isotope Separator success chance of one attempt at a standstill (0.8 \u003d 80%)",
+      "value": 0.8
     }
   },
   "block_placer": {
@@ -621,11 +629,11 @@
   "industrial_grinder": {
     "IndustrialGrinderMaxEnergy": {
       "comment": "Industrial Grinder Max Energy",
-      "value": 10000
+      "value": 100000
     },
     "IndustrialGrinderMaxInput": {
       "comment": "Industrial Grinder Max Input (Energy per tick)",
-      "value": 128
+      "value": 8192
     }
   },
   "supercritical_polymerization_chamber": {

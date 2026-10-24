@@ -1028,9 +1028,11 @@ import crafttweaker.api.ingredient.IIngredient;
 <recipetype:oritech:centrifuge_fluid>.removeByName("oritech:centrifuge/fluid/plasticoilbetter");
 <recipetype:oritech:centrifuge_fluid>.removeByName("oritech:centrifuge/fluid/naptharesin"); //OR作者把“石脑油”拼错了！
 
-//盐矿石处理已迁至 general_ore_process.zs 的 T1 统一入口（general.t1.salt / general.t1.rock_salt）。
+//盐矿石处理已迁至 scripts/ore_process/01_t1.zs 的 T1 统一入口（general.t1.salt / general.t1.rock_salt）。
 //此处原本的 oil.other.tr.normalgrind_salt / _rocksalt 已删除，避免与其重复。
-//注意：不要在 general_ore_process.zs 里用 removeByName 反向删除 —— 该文件按字母序先加载，会打空。
+//注意：矿处拆分到 ore_process/ 后，加载顺序已从「先于本文件」变为「晚于本文件」（o 前缀）。
+//   即 ore_process 里的 removeByName 现在**能**看到本文件新增的配方；
+//   但仍不要用它反向删除 oil.* 命名的配方 —— 谁新增谁清退，跨文件反向删除难以维护。
 //电解之
 <recipetype:techreborn:industrial_electrolyzer>.addJsonRecipe("oil.other.tr.electrolyze_salt", {type: "techreborn:industrial_electrolyzer",
     time: 200,

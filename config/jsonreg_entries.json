@@ -944,6 +944,131 @@
       "id": "hssg_rod",
       "name": "高速钢-G杆",
       "max_count": 1024
+    },
+    {
+      "id": "vanadium_dust",
+      "name": "钒粉",
+      "max_count": 1024
+    },
+    {
+      "id": "vanadium_ingot",
+      "name": "钒锭",
+      "max_count": 1024
+    },
+    {
+      "id": "vanadium_plate",
+      "name": "钒板",
+      "max_count": 1024
+    },
+    {
+      "id": "vanadium_magnetite_clump",
+      "name": "钒磁铁碎块",
+      "max_count": 1024
+    },
+    {
+      "id": "vanadium_magnetite_gem",
+      "name": "钒磁铁石",
+      "max_count": 1024
+    },
+    {
+      "id": "vanadium_magnetite_concentrate",
+      "name": "钒磁铁浓缩物",
+      "max_count": 1024
+    },
+    {
+      "id": "pyrolusite_clump",
+      "name": "软锰碎块",
+      "max_count": 1024
+    },
+    {
+      "id": "pyrolusite_gem",
+      "name": "软锰石",
+      "max_count": 1024
+    },
+    {
+      "id": "pyrolusite_concentrate",
+      "name": "软锰浓缩物",
+      "max_count": 1024
+    },
+    {
+      "id": "chromite_clump",
+      "name": "铬铁碎块",
+      "max_count": 1024
+    },
+    {
+      "id": "chromite_gem",
+      "name": "铬铁石",
+      "max_count": 1024
+    },
+    {
+      "id": "chromite_concentrate",
+      "name": "铬铁浓缩物",
+      "max_count": 1024
+    },
+    {
+      "id": "hausmannite_clump",
+      "name": "硬锰碎块",
+      "max_count": 1024
+    },
+    {
+      "id": "hausmannite_gem",
+      "name": "硬锰石",
+      "max_count": 1024
+    },
+    {
+      "id": "fluorite_concentrate",
+      "name": "氟石浓缩物",
+      "max_count": 1024
+    },
+    {
+      "id": "hausmannite_concentrate",
+      "name": "硬锰浓缩物",
+      "max_count": 1024
+    },
+    {
+      "id": "reinforced_naquadah_alloy_dust",
+      "name": "强化硅岩合金粉",
+      "max_count": 1024
+    },
+    {
+      "id": "hot_reinforced_naquadah_alloy_ingot",
+      "name": "热强化硅岩合金锭",
+      "max_count": 1024
+    },
+    {
+      "id": "reinforced_naquadah_alloy_ingot",
+      "name": "强化硅岩合金锭",
+      "max_count": 1024
+    },
+    {
+      "id": "reinforced_naquadah_alloy_plate",
+      "name": "强化硅岩合金板",
+      "max_count": 1024
+    },
+    {
+      "id": "reinforced_naquadah_alloy_rod",
+      "name": "强化硅岩合金杆",
+      "max_count": 1024
+    },
+    {
+      "id": "cement_clinker",
+      "name": "水泥熟料",
+      "max_count": 1024
+    },
+    {
+      "id": "cement",
+      "name": "水泥",
+      "max_count": 1024
+    },
+    {
+      "id": "steel_fiber",
+      "name": "钢纤维",
+      "max_count": 1024
+    },
+    {
+      "id": "uhpc",
+      "name": "超高强度混凝土拌合料",
+      "max_count": 1024
     }
   ],
   "blocks": [
@@ -1310,6 +1435,54 @@
     {
       "id": "nether_fluorite_ore",
       "name": "下界氟石矿石",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "nether_vanadium_magnetite_ore",
+      "name": "下界钒磁铁矿矿石",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "nether_pyrolusite_ore",
+      "name": "下界软锰矿矿石",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "nether_chromite_ore",
+      "name": "下界铬铁矿矿石",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "nether_hausmannite_ore",
+      "name": "下界硬锰矿矿石",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "nether_rock_salt_ore",
+      "name": "下界岩盐矿石",
+      "hardness": 1.0,
+      "resistance": 3.0,
+      "requires_tool": false,
+      "has_item": true
+    },
+    {
+      "id": "end_rutile_ore",
+      "name": "末地金红石矿石",
       "hardness": 1.0,
       "resistance": 3.0,
       "requires_tool": false,
@@ -1863,6 +2036,30 @@
     {
       "id": "wisp_raw_liquid",
       "name": "生魂原液",
+      "has_bucket_item": false,
+      "has_block": true
+    },
+    {
+      "id": "vanadium_magnetite_solution",
+      "name": "钒磁铁盐溶液",
+      "has_bucket_item": false,
+      "has_block": true
+    },
+    {
+      "id": "pyrolusite_solution",
+      "name": "软锰盐溶液",
+      "has_bucket_item": false,
+      "has_block": true
+    },
+    {
+      "id": "chromite_solution",
+      "name": "铬铁盐溶液",
+      "has_bucket_item": false,
+      "has_block": true
+    },
+    {
+      "id": "hausmannite_solution",
+      "name": "硬锰盐溶液",
       "has_bucket_item": false,
       "has_block": true
     }

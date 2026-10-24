@@ -61,7 +61,7 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:item:c:small_dusts>.add(<item:oritech:small_nickel_dust>);
 <tag:item:c:small_dusts/nickel>.add(<item:oritech:small_nickel_dust>);
 
-// ===== basic ore concentrates (general_ore_process.zs T1.5) =====
+// ===== basic ore concentrates (scripts/ore_process/02_t15.zs) =====
 <tag:item:c:clumps/lead>.add(<item:jsonreg:lead_clump>);
 <tag:item:c:gems/lead>.add(<item:jsonreg:lead_gem>);
 <tag:item:c:concentrates/lead>.add(<item:jsonreg:lead_concentrate>);
@@ -177,3 +177,48 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:item:c:rods/naquadah_alloy>.add(<item:jsonreg:naquadah_alloy_rod>);
 <tag:item:c:rods>.add(<item:jsonreg:hssg_rod>);
 <tag:item:c:rods/hssg>.add(<item:jsonreg:hssg_rod>);
+// ===== 下界钒磁铁 / 软锰矿 / 铬铁矿 / 硬锰矿（见 scripts/ore_process/ 各 tier 文件）=====
+// 钒：完整金属
+<tag:item:c:dusts>.add(<item:jsonreg:vanadium_dust>);
+<tag:item:c:dusts/vanadium>.add(<item:jsonreg:vanadium_dust>);
+<tag:item:c:ingots>.add(<item:jsonreg:vanadium_ingot>);
+<tag:item:c:ingots/vanadium>.add(<item:jsonreg:vanadium_ingot>);
+<tag:item:c:plates>.add(<item:jsonreg:vanadium_plate>);
+<tag:item:c:plates/vanadium>.add(<item:jsonreg:vanadium_plate>);
+
+// 中间体：碎块 / 石 / 浓缩物
+<tag:item:c:clumps>.add(<item:jsonreg:vanadium_magnetite_clump>);
+<tag:item:c:clumps>.add(<item:jsonreg:pyrolusite_clump>);
+<tag:item:c:clumps>.add(<item:jsonreg:chromite_clump>);
+<tag:item:c:clumps>.add(<item:jsonreg:hausmannite_clump>);
+<tag:item:c:gems>.add(<item:jsonreg:vanadium_magnetite_gem>);
+<tag:item:c:gems>.add(<item:jsonreg:pyrolusite_gem>);
+<tag:item:c:gems>.add(<item:jsonreg:chromite_gem>);
+<tag:item:c:gems>.add(<item:jsonreg:hausmannite_gem>);
+
+// 矿石方块（下界岩形态 + 末地金红石）
+<tag:item:c:ores>.add(<item:jsonreg:nether_vanadium_magnetite_ore>);
+<tag:item:c:ores/vanadium_magnetite>.add(<item:jsonreg:nether_vanadium_magnetite_ore>);
+<tag:item:c:ores>.add(<item:jsonreg:nether_pyrolusite_ore>);
+<tag:item:c:ores/pyrolusite>.add(<item:jsonreg:nether_pyrolusite_ore>);
+<tag:item:c:ores>.add(<item:jsonreg:nether_chromite_ore>);
+<tag:item:c:ores/chromite>.add(<item:jsonreg:nether_chromite_ore>);
+<tag:item:c:ores>.add(<item:jsonreg:nether_hausmannite_ore>);
+<tag:item:c:ores/hausmannite>.add(<item:jsonreg:nether_hausmannite_ore>);
+<tag:item:c:ores>.add(<item:jsonreg:nether_rock_salt_ore>);
+<tag:item:c:ores/rock_salt>.add(<item:jsonreg:nether_rock_salt_ore>);
+<tag:item:c:ores>.add(<item:jsonreg:end_rutile_ore>);
+<tag:item:c:ores/rutile>.add(<item:jsonreg:end_rutile_ore>);
+
+// ===== 太空电梯：强化硅岩合金 / UHPC 建材（见 scripts/space_elevator.zs 末段）=====
+<tag:item:c:dusts>.add(<item:jsonreg:reinforced_naquadah_alloy_dust>);
+<tag:item:c:dusts/reinforced_naquadah_alloy>.add(<item:jsonreg:reinforced_naquadah_alloy_dust>);
+<tag:item:c:ingots>.add(<item:jsonreg:hot_reinforced_naquadah_alloy_ingot>);
+<tag:item:c:ingots/hot>.add(<item:jsonreg:hot_reinforced_naquadah_alloy_ingot>);
+<tag:item:c:ingots/hot/reinforced_naquadah_alloy>.add(<item:jsonreg:hot_reinforced_naquadah_alloy_ingot>);
+<tag:item:c:ingots>.add(<item:jsonreg:reinforced_naquadah_alloy_ingot>);
+<tag:item:c:ingots/reinforced_naquadah_alloy>.add(<item:jsonreg:reinforced_naquadah_alloy_ingot>);
+<tag:item:c:plates>.add(<item:jsonreg:reinforced_naquadah_alloy_plate>);
+<tag:item:c:plates/reinforced_naquadah_alloy>.add(<item:jsonreg:reinforced_naquadah_alloy_plate>);
+<tag:item:c:rods>.add(<item:jsonreg:reinforced_naquadah_alloy_rod>);
+<tag:item:c:rods/reinforced_naquadah_alloy>.add(<item:jsonreg:reinforced_naquadah_alloy_rod>);

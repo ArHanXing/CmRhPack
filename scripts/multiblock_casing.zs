@@ -21,7 +21,7 @@ import crafttweaker.api.recipe.type.Recipe;
     time: 400, power: 128,
     ingredients: [
         {count: 4, item:"techreborn:advanced_alloy_plate"},
-        {count: 4, item:"jsonreg:titanium_frame"},
+        {count: 1, item:"jsonreg:titanium_frame"},
         {count: 2, item:"techreborn:advanced_machine_casing"}
     ]
 });
@@ -170,5 +170,43 @@ import crafttweaker.api.recipe.type.Recipe;
         {count: 2, item:"oritech:advanced_computing_engine"},
         {count: 1, item:"jsonreg:duratium_frame"},
         {count: 1, item:"jsonreg:depleted_uranium_dense_plate"}
+    ]
+});
+
+// ============================================================
+// 补齐：多方块结构里唯二「有方块、无配方」的外壳
+// ============================================================
+// 依据：config/techreborn/multiblock/*.json 的 keys 是结构权威，
+//   脚本应服从结构，而不是反过来改结构。全量审计后只剩这两个缺口。
+//
+//   high_power_casing   3 个结构：cultivation_vessel /
+//                       irradiated_mutagensis_chamber / space_elevator
+//                       （太空电梯要用 72 个）
+//   sps_casing          1 个结构：supercritical_polymerization_chamber
+
+// 高能机械外壳：钨钢 + 硅岩合金的高能腔体，配高级机框
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("mbcasing.high_power_casing", {type: "techreborn:precise_assembler",
+    outputs: [
+        {id: "jsonreg:high_power_casing", count: 1}
+    ],
+    time: 400, power: 128,
+    ingredients: [
+        {count: 4, item: "techreborn:tungstensteel_plate"},
+        {count: 2, item: "jsonreg:naquadah_alloy_plate"},
+        {count: 2, item: "techreborn:advanced_machine_casing"}
+    ]
+});
+
+// 耐超临界聚合外壳：氟聚合物内衬 + 化学惰性外壳 + 钨钢承压
+// 对应 SPS 超临界聚合腔（高温高压 + 强腐蚀环境）
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("mbcasing.sps_casing", {type: "techreborn:precise_assembler",
+    outputs: [
+        {id: "jsonreg:sps_casing", count: 1}
+    ],
+    time: 400, power: 128,
+    ingredients: [
+        {count: 4, item: "jsonreg:tetrafluoroethylene_plate"},
+        {count: 2, item: "jsonreg:reaction_safe_mixing_casing"},
+        {count: 2, item: "techreborn:tungstensteel_plate"}
     ]
 });
