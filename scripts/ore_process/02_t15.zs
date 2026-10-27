@@ -634,7 +634,7 @@
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.vanadium_magnetite", {type: "techreborn:grinder",
     time: 200, power: 32,
-    outputs: [{id: "oritech:iron_dust", count: 3}],
+    outputs: [{id: "jsonreg:vanadium_magnetite_dust", count: 3}],
     ingredients: [{item: "jsonreg:vanadium_magnetite_gem"}]
 });
 

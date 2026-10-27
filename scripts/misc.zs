@@ -48,12 +48,6 @@ craftingTable.addShaped("misc.easy_mob_farm.t3_mob_farm", <item:easy_mob_farm:ti
     [<item:techreborn:tungstensteel_ingot>, <item:easy_mob_farm:tier2_mob_farm_template>, <item:techreborn:tungstensteel_ingot>], 
     [<item:minecraft:glass>, <item:techreborn:industrial_circuit>, <item:minecraft:glass>]]);
 
-//便宜单元
-<recipetype:oritech:assembler>.addJsonRecipe("misc.oritech.assembler/cell", 
-{type: "oritech:assembler", fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "techreborn:cell", count: 8}], 
-time: 20, fluidInput: {fluid: "minecraft:empty", amount: 0}, 
-ingredients: [{item: "techreborn:tin_ingot"}, {item: "techreborn:tin_ingot"}, {item: "techreborn:tin_ingot"}, {item: "techreborn:tin_ingot"}]});
-
 //便携储罐有Bug
 craftingTable.remove(<item:oritech:small_tank_block>);
 craftingTable.remove(<item:techreborn:basic_storage_unit>);

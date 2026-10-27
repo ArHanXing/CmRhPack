@@ -24,12 +24,6 @@
 // 由 scripts/tools/grind_parity_gen.py 生成，改完原配方重跑即可。
 // ============================================================
 
-<recipetype:techreborn:grinder>.addJsonRecipe("grind.parity.grind_parity_grind_parity_pulverizer_uranium", {type: "techreborn:grinder",
-    outputs: [
-        {id: "oritech:uranium_dust", count: 2}
-    ],
-    power: 32, time: 100, ingredients: [{tag: "c:raw_materials/uranium"}]
-});
 <recipetype:techreborn:grinder>.addJsonRecipe("grind.parity.pulverizer_biobasic", {type: "techreborn:grinder",
     outputs: [
         {id: "oritech:biomass", count: 1}
@@ -282,11 +276,233 @@
     ],
     power: 32, time: 100, ingredients: [{tag: "minecraft:coals"}]
 });
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_bauxite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:bauxite_dust", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/bauxite"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_chromite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:chrome_dust", count: 2}
+    ],
+    time: 50, ingredients: [{item: "jsonreg:nether_chromite_ore"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_cinnabar", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:cinnabar_dust", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/cinnabar"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_coal", {type: "oritech:pulverizer",
+    results: [
+        {id: "minecraft:coal", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "minecraft:coal_ores"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_diamond", {type: "oritech:pulverizer",
+    results: [
+        {id: "minecraft:diamond", count: 1}
+    ],
+    time: 20, ingredients: [{tag: "minecraft:diamond_ores"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_emerald", {type: "oritech:pulverizer",
+    results: [
+        {id: "minecraft:emerald", count: 1}
+    ],
+    time: 20, ingredients: [{tag: "minecraft:emerald_ores"}]
+});
 <recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_fluorite", {type: "oritech:pulverizer",
     results: [
         {id: "jsonreg:fluorite_dust", count: 2}
     ],
     time: 20, ingredients: [{item: "jsonreg:nether_fluorite_ore"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_galena", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:galena_dust", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/galena"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_hausmannite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:manganese_dust", count: 2}
+    ],
+    time: 50, ingredients: [{item: "jsonreg:nether_hausmannite_ore"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_lapis", {type: "oritech:pulverizer",
+    results: [
+        {id: "minecraft:lapis_lazuli", count: 8}
+    ],
+    time: 20, ingredients: [{tag: "minecraft:lapis_ores"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_peridot", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:peridot_gem", count: 1}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/peridot"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_pyrite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:pyrite_dust", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/pyrite"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_pyrolusite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:manganese_dust", count: 2}
+    ],
+    time: 50, ingredients: [{item: "jsonreg:nether_pyrolusite_ore"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_raw_copper", {type: "oritech:pulverizer",
+    results: [
+        {id: "minecraft:raw_copper", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "minecraft:copper_ores"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_raw_gold", {type: "oritech:pulverizer",
+    results: [
+        {id: "minecraft:raw_gold", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "minecraft:gold_ores"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_raw_iridium", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:raw_iridium", count: 1}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/iridium"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_raw_iron", {type: "oritech:pulverizer",
+    results: [
+        {id: "minecraft:raw_iron", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "minecraft:iron_ores"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_raw_lead", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:raw_lead", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/lead"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_raw_nickel", {type: "oritech:pulverizer",
+    results: [
+        {id: "oritech:raw_nickel", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/nickel"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_raw_platinum", {type: "oritech:pulverizer",
+    results: [
+        {id: "oritech:raw_platinum", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/platinum"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_raw_silver", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:raw_silver", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/silver"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_raw_tin", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:raw_tin", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/tin"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_raw_tungsten", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:raw_tungsten", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/tungsten"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_raw_uranium", {type: "oritech:pulverizer",
+    results: [
+        {id: "oritech:raw_uranium", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/uranium"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_redstone", {type: "oritech:pulverizer",
+    results: [
+        {id: "minecraft:redstone", count: 8}
+    ],
+    time: 20, ingredients: [{tag: "minecraft:redstone_ores"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_rock_salt", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:rock_salt_dust", count: 4}
+    ],
+    time: 20, ingredients: [{item: "jsonreg:rock_salt_ore"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_ruby", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:ruby_gem", count: 1}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/ruby"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_salt", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:salt_dust", count: 4}
+    ],
+    time: 20, ingredients: [{item: "jsonreg:salt_ore"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_sapphire", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:sapphire_gem", count: 1}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/sapphire"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_sheldonite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:platinum_dust", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/sheldonite"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_sodalite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:sodalite_dust", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/sodalite"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_sphalerite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:sphalerite_dust", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/sphalerite"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_sulfur", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:sulfur_dust", count: 2}
+    ],
+    time: 20, ingredients: [{tag: "c:ores/sulfur"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t1_vanadium_magnetite", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:vanadium_magnetite_dust", count: 2}
+    ],
+    time: 50, ingredients: [{item: "jsonreg:nether_vanadium_magnetite_ore"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_aluminum", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:aluminum_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:aluminum_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_chromite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:chrome_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:chromite_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_cinnabar", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:cinnabar_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:cinnabar_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_copper", {type: "oritech:pulverizer",
+    results: [
+        {id: "oritech:copper_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "oritech:copper_gem"}]
 });
 <recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_fluorite", {type: "oritech:pulverizer",
     results: [
@@ -294,11 +510,107 @@
     ],
     time: 200, ingredients: [{item: "jsonreg:fluorite_gem"}]
 });
-<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.grind_parity_grind_parity_compat_techreborn_grinder_raw_nickel", {type: "oritech:pulverizer",
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_galena", {type: "oritech:pulverizer",
     results: [
-        {id: "techreborn:nickel_dust", count: 1}
+        {id: "techreborn:galena_dust", count: 3}
     ],
-    time: 31, ingredients: [{tag: "c:raw_materials/nickel"}]
+    time: 200, ingredients: [{item: "jsonreg:galena_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_gold", {type: "oritech:pulverizer",
+    results: [
+        {id: "oritech:gold_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "oritech:gold_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_hausmannite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:manganese_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:hausmannite_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_iridium", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:iridium_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:iridium_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_iron", {type: "oritech:pulverizer",
+    results: [
+        {id: "oritech:iron_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "oritech:iron_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_lead", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:lead_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:lead_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_nickel", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:nickel_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "oritech:nickel_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_platinum", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:platinum_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "oritech:platinum_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_pyrite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:pyrite_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:pyrite_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_pyrolusite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:manganese_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:pyrolusite_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_silver", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:silver_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:silver_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_sodalite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:sodalite_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:sodalite_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_sphalerite", {type: "oritech:pulverizer",
+    results: [
+        {id: "techreborn:sphalerite_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:sphalerite_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_tin", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:tin_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:tin_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_tungsten", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:tungsten_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:tungsten_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_uranium", {type: "oritech:pulverizer",
+    results: [
+        {id: "oritech:uranium_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:uranium_gem"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.general_t15d_grind_gem_vanadium_magnetite", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:vanadium_magnetite_dust", count: 3}
+    ],
+    time: 200, ingredients: [{item: "jsonreg:vanadium_magnetite_gem"}]
 });
 <recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.grinder_aluminum_dust_from_block", {type: "oritech:pulverizer",
     results: [
@@ -936,9 +1248,51 @@
     ],
     time: 20, ingredients: [{item: "jsonreg:oil_sand_ore"}]
 });
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.t2_tr_grinder_rutile_dust_from_end_ore", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:rutile_dust", count: 2}
+    ],
+    time: 100, ingredients: [{item: "jsonreg:end_rutile_ore"}]
+});
 <recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.t2_tr_grinder_rutile_dust_from_ore", {type: "oritech:pulverizer",
     results: [
         {id: "jsonreg:rutile_dust", count: 2}
     ],
     time: 100, ingredients: [{item: "jsonreg:voidstone_rutile_ore"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.uni_grinder_iridium_dust", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:iridium_dust", count: 1}
+    ],
+    time: 20, ingredients: [{item: "techreborn:iridium_ingot"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.uni_grinder_lead_dust", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:lead_dust", count: 1}
+    ],
+    time: 20, ingredients: [{item: "techreborn:lead_ingot"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.uni_grinder_silver_dust", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:silver_dust", count: 1}
+    ],
+    time: 20, ingredients: [{item: "techreborn:silver_ingot"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.uni_grinder_tin_dust", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:tin_dust", count: 1}
+    ],
+    time: 20, ingredients: [{item: "techreborn:tin_ingot"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.uni_grinder_tungsten_dust", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:tungsten_dust", count: 1}
+    ],
+    time: 20, ingredients: [{item: "techreborn:tungsten_ingot"}]
+});
+<recipetype:oritech:pulverizer>.addJsonRecipe("grind.parity.uni_grinder_vanadium_dust", {type: "oritech:pulverizer",
+    results: [
+        {id: "jsonreg:vanadium_dust", count: 1}
+    ],
+    time: 20, ingredients: [{item: "jsonreg:vanadium_ingot"}]
 });

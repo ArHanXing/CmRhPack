@@ -556,3 +556,7 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:jsonreg:cement_clinker>.addTooltip("§e§l3CaO·SiO₂§r");
 <item:jsonreg:cement>.addTooltip("§e§lC₃S+C₂S+C₃A+CaSO₄§r");
 <item:jsonreg:steel_fiber>.addTooltip("§e§l(Fe₁₀₀C)§r");
+
+// —— 钒杆 / 钒磁铁矿粉 ——
+<item:jsonreg:vanadium_rod>.addTooltip("§e§lV§r");
+<item:jsonreg:vanadium_magnetite_dust>.addTooltip("§e§l(Fe,V)₃O₄§r");

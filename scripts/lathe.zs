@@ -41,6 +41,8 @@ _rodRecipe("lathe.titanium", "jsonreg:titanium_rod", "techreborn:titanium_ingot"
 _rodRecipe("lathe.duratium", "jsonreg:duratium_rod", "oritech:duratium_ingot", 40);
 _rodRecipe("lathe.electrum", "jsonreg:electrum_rod", "techreborn:electrum_ingot", 20);
 _rodRecipe("lathe.unrealium", "jsonreg:unrealium_rod", "eternal_starlight:unrealium_ingot", 40);
+// 钒（1910°C 难熔金属，与钨钢/硅岩同档 40 tick）
+_rodRecipe("lathe.vanadium", "jsonreg:vanadium_rod", "jsonreg:vanadium_ingot", 40);
 
 //部分具有工作台配方的：铜，铁，钢，殷钢，青铜，精炼铁。
 //由ctgui管理了，累了

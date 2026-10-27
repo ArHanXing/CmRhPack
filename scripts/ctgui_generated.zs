@@ -872,3 +872,22 @@ craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/large_elect
     [<item:techreborn:advanced_circuit>, <item:techreborn:advanced_machine_frame>, <item:techreborn:advanced_circuit>],
     [<item:techreborn:titanium_plate>, <item:techreborn:industrial_electrolyzer>, <item:techreborn:titanium_plate>]]);
 
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/cable/glassfiber_cable_6");
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/cable/glassfiber_cable_6", <item:techreborn:glassfiber_cable> * 6, [
+    [<item:minecraft:glass>, <item:minecraft:glass>, <item:minecraft:glass>],
+    [<item:jsonreg:silver_dust>, <tag:item:c:dusts/diamond>, <item:jsonreg:silver_dust>],
+    [<item:minecraft:glass>, <item:minecraft:glass>, <item:minecraft:glass>]]);
+
+<recipetype:minecraft:crafting>.removeByName("constructionwand:infinity_wand");
+craftingTable.addShaped("ctgui/new/constructionwand/infinity_wand", <item:constructionwand:infinity_wand>, [
+    [IIngredientEmpty.getInstance(), IIngredientEmpty.getInstance(), <item:affinity:crystalline_wisp_matter_composite>],
+    [IIngredientEmpty.getInstance(), <item:minecraft:stick>, IIngredientEmpty.getInstance()],
+    [<item:minecraft:stick>, IIngredientEmpty.getInstance(), IIngredientEmpty.getInstance()]]);
+
+craftingTable.addShaped("ctgui/new/crafting/hunter_process_reactor", <item:techreborn:hunter_process_reactor>, [
+    [<item:jsonreg:tetrafluoroethylene_plate>, <item:advanced_reborn:centrifugal_extractor>, <item:jsonreg:tetrafluoroethylene_plate>],
+    [<item:jsonreg:mv_robot_arm>, <item:techreborn:large_chemical_reactor>, <item:jsonreg:mv_conveyor_module>],
+    [<item:techreborn:steel_plate>, <item:jsonreg:mv_electric_motor>, <item:techreborn:steel_plate>]]);
+
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/dust/titanium_dust_from_small");
+

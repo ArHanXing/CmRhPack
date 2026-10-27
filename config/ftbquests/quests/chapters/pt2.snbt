@@ -161,6 +161,15 @@
 				"1EC82D8384297FFF"
 			]
 			id: "2C453E81D0B53296"
+			rewards: [{
+				count: 16
+				id: "315BA53A9D122BFF"
+				item: {
+					count: 1
+					id: "minecraft:ender_pearl"
+				}
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "6023BB0AE905A022"
@@ -197,15 +206,25 @@
 			dependencies: ["0A79DDBB3E3642EC"]
 			icon_scale: 2.0d
 			id: "2DE6A16633CD9EB3"
-			rewards: [{
-				count: 16
-				id: "3D0DE9B55F953C89"
-				item: {
-					count: 1
-					id: "jsonreg:coin"
+			rewards: [
+				{
+					count: 16
+					id: "3D0DE9B55F953C89"
+					item: {
+						count: 1
+						id: "jsonreg:coin"
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "3FC764A6D52279FC"
+					item: {
+						count: 1
+						id: "minecraft:beacon"
+					}
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "34C5F105DF0F6213"
 				item: { count: 1, id: "botania:gaia_pylon" }

@@ -200,3 +200,34 @@ furnace.addRecipe("uni.furnace.tin_ingot", <item:techreborn:tin_ingot>, <item:js
     outputs: [{id: "jsonreg:iridium_dust", count: 1}],
     ingredients: [{item: "techreborn:iridium_ingot"}]
 });
+
+// ============================================================
+// 钒单质（V）—— 粉/锭/板/杆 四件套
+// ============================================================
+// 上游：下界钒磁铁矿 → 钒磁铁矿粉 →(工业离心 4→3Fe+1V) 钒粉
+// 钒熔点 1910°C，远超原版熔炉，走工业高炉（镍铬线圈 2000K 可用）。
+
+// —— 1) 粉 → 锭（工业高炉）——
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("uni.blast_furnace.vanadium_ingot", {type: "techreborn:blast_furnace",
+    outputs: [{id: "jsonreg:vanadium_ingot", count: 1}],
+    time: 400,
+    heat: 2000,
+    power: 128,
+    ingredients: [{item: "jsonreg:vanadium_dust"}]
+});
+
+// —— 2) 锭 → 粉（TR 磨粉机，1 输出）——
+<recipetype:techreborn:grinder>.addJsonRecipe("uni.grinder.vanadium_dust", {type: "techreborn:grinder",
+    time: 80, power: 8,
+    outputs: [{id: "jsonreg:vanadium_dust", count: 1}],
+    ingredients: [{item: "jsonreg:vanadium_ingot"}]
+});
+
+// —— 3) 锭 → 板（压缩机）——
+<recipetype:techreborn:compressor>.addJsonRecipe("uni.compressor.vanadium_plate", {type: "techreborn:compressor",
+    time: 300, power: 16,
+    outputs: [{id: "jsonreg:vanadium_plate", count: 1}],
+    ingredients: [{item: "jsonreg:vanadium_ingot"}]
+});
+
+// 4) 锭 → 杆（车床）见 scripts/lathe.zs 的 lathe.vanadium

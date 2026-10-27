@@ -76,6 +76,9 @@ ITEMS = [
     ("cement", "dull", "dust", "9a9490"),
     ("steel_fiber", "metallic", "rod", "8a9099"),
     ("uhpc", "dull", "crushed_purified", "8c867f"),
+    # ---- 钒单质与钒磁铁矿粉 ----
+    ("vanadium_rod", "metallic", "rod", "6b7f8c"),
+    ("vanadium_magnetite_dust", "metallic", "dust", "4a3f52"),
 ]
 
 # 溶液流体：（流体 id, 目标色）

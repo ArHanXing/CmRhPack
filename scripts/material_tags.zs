@@ -222,3 +222,9 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:item:c:plates/reinforced_naquadah_alloy>.add(<item:jsonreg:reinforced_naquadah_alloy_plate>);
 <tag:item:c:rods>.add(<item:jsonreg:reinforced_naquadah_alloy_rod>);
 <tag:item:c:rods/reinforced_naquadah_alloy>.add(<item:jsonreg:reinforced_naquadah_alloy_rod>);
+
+// ===== 钒单质 + 钒磁铁矿粉（见 scripts/uni.zs 末段）=====
+<tag:item:c:rods>.add(<item:jsonreg:vanadium_rod>);
+<tag:item:c:rods/vanadium>.add(<item:jsonreg:vanadium_rod>);
+<tag:item:c:dusts>.add(<item:jsonreg:vanadium_magnetite_dust>);
+<tag:item:c:dusts/vanadium_magnetite>.add(<item:jsonreg:vanadium_magnetite_dust>);

@@ -45,19 +45,6 @@ _frameworkRecipe("ps_framework.unrealium", "jsonreg:unrealium_frame", "jsonreg:u
     ]
 });
 
-<recipetype:techreborn:precise_assembler>.addJsonRecipe("converted.crafttweaker.misc.oritech.assembler/cell", {type: "techreborn:precise_assembler", 
-    outputs: [
-        {id: "techreborn:cell", count: 8},
-    ],
-    time: 16, power: 128,
-    ingredients: [
-        {item: "techreborn:tin_ingot"},
-        {item: "techreborn:tin_ingot"},
-        {item: "techreborn:tin_ingot"},
-        {item: "techreborn:tin_ingot"},
-    ]
-});
-
 <recipetype:techreborn:precise_assembler>.addJsonRecipe("converted.crafttweaker.misc.oritech.assembler/coal_node", {type: "techreborn:precise_assembler", 
     outputs: [
         {id: "oritech:resource_node_coal", count: 1},
@@ -375,8 +362,8 @@ _frameworkRecipe("ps_framework.unrealium", "jsonreg:unrealium_frame", "jsonreg:u
     ],
     time: 64, power: 128,
     ingredients: [
-        {item: "jsonreg:aluminum_rod"},
-        {item: "techreborn:aluminum_plate"},
+        {item: "jsonreg:iron_rod"},
+        {item: "techreborn:iron_plate"},
         {item: "jsonreg:polyethylene_plate"},
     ]
 });

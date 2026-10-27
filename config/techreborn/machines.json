@@ -476,11 +476,11 @@
   "precise_assembler": {
     "PreciseAssemblerMaxInput": {
       "comment": "Precise Assembler Max Input (Energy per tick)",
-      "value": 128
+      "value": 8192
     },
     "PreciseAssemblerMaxEnergy": {
       "comment": "Precise Assembler Max Energy",
-      "value": 10000
+      "value": 1000000
     }
   },
   "pump": {
@@ -490,11 +490,11 @@
     },
     "PumpEnergyToCollect": {
       "comment": "Base amount of Energy to collect a block of fluid",
-      "value": 1000
+      "value": 128
     },
     "PumpTicksToComplete": {
       "comment": "How many ticks it takes to pump a source block.",
-      "value": 100
+      "value": 20
     },
     "PumpMaxEnergy": {
       "comment": "Pump Max Energy",
@@ -536,7 +536,7 @@
   "kroll_reduction_vessel": {
     "KrollReductionVesselMaxInput": {
       "comment": "Kroll Reduction Vessel Max Input (Energy per tick)",
-      "value": 256
+      "value": 8192
     },
     "KrollReductionVesselMaxEnergy": {
       "comment": "Kroll Reduction Vessel Max Energy",
@@ -546,7 +546,7 @@
   "implosion_compressor": {
     "ImplosionCompressorMaxInput": {
       "comment": "Implosion Compressor Max Input (Energy per tick)",
-      "value": 64
+      "value": 256
     },
     "ImplosionCompressorMaxEnergy": {
       "comment": "Implosion Compressor Max Energy",
@@ -629,7 +629,7 @@
   "industrial_grinder": {
     "IndustrialGrinderMaxEnergy": {
       "comment": "Industrial Grinder Max Energy",
-      "value": 100000
+      "value": 1000000
     },
     "IndustrialGrinderMaxInput": {
       "comment": "Industrial Grinder Max Input (Energy per tick)",
@@ -639,11 +639,11 @@
   "supercritical_polymerization_chamber": {
     "SupercriticalPolymerizationChamberMaxInput": {
       "comment": "Supercritical Polymerization Chamber Max Input (Energy per tick)",
-      "value": 128
+      "value": 8192
     },
     "SupercriticalPolymerizationChamberMaxEnergy": {
       "comment": "Supercritical Polymerization Chamber Max Energy",
-      "value": 10000
+      "value": 1000000
     }
   },
   "furnace_pro_max": {
@@ -763,11 +763,11 @@
   "industrial_alloy_smelter": {
     "IndustrialAlloySmelterMaxEnergy": {
       "comment": "Industrial Alloy Smelter Max Energy",
-      "value": 10000
+      "value": 1000000
     },
     "IndustrialAlloySmelterMaxInput": {
       "comment": "Industrial Alloy Smelter Max Input (Energy per tick)",
-      "value": 128
+      "value": 8192
     }
   },
   "drain": {
@@ -779,11 +779,11 @@
   "industrial_sawmill": {
     "IndustrialSawmillMaxEnergy": {
       "comment": "Industrial Sawmill Max Energy",
-      "value": 10000
+      "value": 1000000
     },
     "IndustrialSawmillMaxInput": {
       "comment": "Industrial Sawmill Max Input (Energy per tick)",
-      "value": 128
+      "value": 1024
     }
   },
   "large_greenhouse": {
@@ -823,13 +823,13 @@
     },
     "NaquadahDeresonatorMaxInput": {
       "comment": "Naquadah Deresonator Max Input (Energy per tick)",
-      "value": 512
+      "value": 1024
     }
   },
   "large_wire_mill": {
     "LargeWireMillMaxEnergy": {
       "comment": "Large Wire Mill Max Energy",
-      "value": 10000
+      "value": 1000000
     },
     "LargeWireMillMaxInput": {
       "comment": "Large Wire Mill Max Input (Energy per tick)",
@@ -877,11 +877,11 @@
   "space_elevator_miner": {
     "SpaceElevatorMinerMaxEnergy": {
       "comment": "Space Elevator Miner Max Energy",
-      "value": 10000
+      "value": 1000000
     },
     "SpaceElevatorMinerMaxInput": {
       "comment": "Space Elevator Miner Max Input (Energy per tick)",
-      "value": 128
+      "value": 8192
     }
   },
   "irradiated_mutagensis_chamber": {

@@ -87,6 +87,14 @@ for name, body in L.iter_recipes(dump):
     ty = re.search(r'type:\s*"([^"]+)"', body)
     if not ty or ty.group(1) not in (OR_M, TR_M):
         continue
+    # ⚠ 必须跳过本生成器自己的产物。
+    # dump 是**全量快照**，会包含上一次生成的 grind.parity.*。若不过滤：
+    #   1) 它们会被计入 coverage，让生成器误判「对方机器已能产出」而少生成（曾导致 153→63）；
+    #   2) 名字会被反复加前缀，产出 grind.parity.grind_parity_... 这种多层嵌套，每次重跑都恶化。
+    # dump 里的名字带 crafttweaker: 命名空间前缀，所以要按“包含”判断
+    _bare = name.split(":", 1)[-1]
+    if _bare.startswith("grind.parity.") or "grind_parity" in _bare:
+        continue
     r = parse(name, body, ty.group(1))
     if len(r["outs"]) == 1:
         all_recs.append(r)

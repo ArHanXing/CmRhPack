@@ -788,9 +788,11 @@
         {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
+// 三条支路的产物统一是**钒磁铁矿粉**（不是铁粉），铁/钒的分离交给下面的离心步骤。
+// 副产给铬/镍 —— 与矿脉伴生关系自洽（钒磁铁矿的伴生矿就是下界铬铁矿）。
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.vanadium_magnetite", {type: "techreborn:industrial_grinder",
     outputs: [
-        {id: "oritech:iron_dust", count: 5}
+        {id: "jsonreg:vanadium_magnetite_dust", count: 5}
     ],
     time: 200,
     power: 128,
@@ -799,8 +801,8 @@
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.mercury.vanadium_magnetite", {type: "techreborn:industrial_grinder",
     outputs: [
-        {id: "oritech:iron_dust", count: 4},
-        {id: "jsonreg:vanadium_dust", count: 2}
+        {id: "jsonreg:vanadium_magnetite_dust", count: 4},
+        {id: "techreborn:chrome_dust", count: 1}
     ],
     time: 200,
     power: 128,
@@ -809,14 +811,28 @@
 });
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.persulfate.vanadium_magnetite", {type: "techreborn:industrial_grinder",
     outputs: [
-        {id: "oritech:iron_dust", count: 3},
-        {id: "jsonreg:vanadium_dust", count: 2},
-        {id: "techreborn:chrome_dust", count: 1}
+        {id: "jsonreg:vanadium_magnetite_dust", count: 3},
+        {id: "techreborn:chrome_dust", count: 1},
+        {id: "techreborn:nickel_dust", count: 1}
     ],
     time: 200,
     power: 128,
     fluid: {fluid: {fluid: "techreborn:sodium_persulfate"}, amount: {value: 81000}},
     ingredients: [{item: "jsonreg:vanadium_magnetite_concentrate"}]
+});
+
+// ---------- 钒磁铁矿 最终分离（工业离心机）----------
+// (Fe,V)₃O₄ 磨成粉后按磁铁矿体系分离：4 份矿粉 → 3 铁粉 + 1 钒粉
+// 铁:钒 = 3:1，对应真实钒磁铁矿里 V 约占 1~2% 被富集后的理想比例
+// 注：TR 离心机的配方类型是 techreborn:centrifuge，最多支持 4 个输出槽
+<recipetype:techreborn:centrifuge>.addJsonRecipe("general.t2c.centrifuge.vanadium_magnetite", {type: "techreborn:centrifuge",
+    ingredients: [{count: 4, item: "jsonreg:vanadium_magnetite_dust"}],
+    outputs: [
+        {count: 3, id: "oritech:iron_dust"},
+        {count: 1, id: "jsonreg:vanadium_dust"}
+    ],
+    power: 20,
+    time: 600
 });
 
 // ---------- 软锰矿：锰为主 ----------

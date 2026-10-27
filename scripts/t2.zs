@@ -588,6 +588,24 @@ _reactor("t2.ori.reactor.nqdriamx2", "jsonreg:dual_naquadria_fuel_rod", 720000);
     ]
 });
 
+// 钛粉 → 钛锭燃烧配方，时间砍一半还是
+<recipetype:techreborn:blast_furnace>.removeByName("techreborn:blast_furnace/titanium_ingot");
+<recipetype:techreborn:blast_furnace>.removeByName("techreborn:blast_furnace/titanium_ingot_from_small_dust");
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("t2.tr.blast_furnace/titanium_ingot_fast", {type: "techreborn:blast_furnace",
+    time: 200,
+    heat: 1500,
+    power: 128,
+    outputs: [{id: "techreborn:titanium_ingot", count: 1}],
+    ingredients: [{tag: "c:dusts/titanium"}]
+});
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("t2.tr.blast_furnace/titanium_ingot_from_small_dust_fast", {type: "techreborn:blast_furnace",
+    time: 1800,
+    heat: 1500,
+    power: 128,
+    outputs: [{id: "techreborn:titanium_ingot", count: 1}],
+    ingredients: [{item: "techreborn:titanium_small_dust", count: 4}]
+});
+
 // 氟石处理
 // 工艺链（两步，并让硫闭环）：
 //   ① 氟石粉 + 硫酸 → 氢氟酸 + 石膏粉              CaF₂ + H₂SO₄ → 2HF + CaSO₄
@@ -641,7 +659,7 @@ _reactor("t2.ori.reactor.nqdriamx2", "jsonreg:dual_naquadria_fuel_rod", 720000);
     time: 20,
     power: 128,
     outputs: [
-        {id: "minecraft:tnt", count: 2},
+        {id: "minecraft:tnt", count: 16},
         {id: "techreborn:cell", count: 6, components: {"techreborn:fluid": "minecraft:water"}},
         {id: "techreborn:cell", count: 2}
     ],

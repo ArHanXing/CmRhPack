@@ -214,8 +214,7 @@
 // ============================================================
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t23.catalyzed.vanadium_magnetite", {type: "techreborn:industrial_grinder",
     outputs: [
-        {id: "oritech:iron_dust", count: 6},
-        {id: "jsonreg:vanadium_dust", count: 2},
+        {id: "jsonreg:vanadium_magnetite_dust", count: 6},
         {id: "techreborn:chrome_dust", count: 1}
     ],
     time: 200,

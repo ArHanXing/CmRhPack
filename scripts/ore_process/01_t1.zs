@@ -570,9 +570,10 @@
 // ============================================================
 // T1：干法粗处理（矿石 → 粉 ×2）
 // ============================================================
+// 钒磁铁矿的终产物是**钒磁铁矿粉**（不是铁粉），再由离心机分离成铁 + 钒
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t1.vanadium_magnetite", {type: "techreborn:grinder",
     time: 100, power: 16,
-    outputs: [{id: "oritech:iron_dust", count: 2}],
+    outputs: [{id: "jsonreg:vanadium_magnetite_dust", count: 2}],
     ingredients: [{item: "jsonreg:nether_vanadium_magnetite_ore"}]
 });
 <recipetype:techreborn:grinder>.addJsonRecipe("general.t1.pyrolusite", {type: "techreborn:grinder",
