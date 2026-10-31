@@ -323,13 +323,13 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
 });
 <recipetype:techreborn:irradiated_mutagensis_chamber>.addJsonRecipe("magic.tr.irradiated/dusk_glass", {type: "techreborn:irradiated_mutagensis_chamber", 
     outputs: [
-        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:shine_soul_injection_catalyst"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}},
         {id: "eternal_starlight:dusk_glass", count: 1}
     ],
     time: 100, power: 256,
     ingredients: [
         {item: "botania:bifrost", count: 1},
-        {count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 1, components: {"techreborn:fluid": "jsonreg:shine_soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 
@@ -345,6 +345,29 @@ craftingTable.removeByName("minecraft:ender_eye");
     "explode"
   ]
 });
+
+//引力之星
+<recipetype:lychee:item_inside>.addJsonRecipe("magic.lychee.gravi_star",{
+  "type": "lychee:item_inside",
+  "item_in": "minecraft:nether_star",
+  "block_in": "jsonreg:shine_soul_injection_catalyst",
+  "post": [
+    "drop jsonreg:gravi_star",
+    "explode"
+  ]
+});
+<recipetype:techreborn:irradiated_mutagensis_chamber>.addJsonRecipe("magic.tr.irradiated/gravi_star", {type: "techreborn:irradiated_mutagensis_chamber", 
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}},
+        {id: "jsonreg:gravi_star", count: 4}
+    ],
+    time: 100, power: 256,
+    ingredients: [
+        {item: "minecraft:nether_star", count: 4},
+        {count: 1, components: {"techreborn:fluid": "jsonreg:shine_soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
 
 craftingTable.removeByName("botania:mana_fluxfield");
 

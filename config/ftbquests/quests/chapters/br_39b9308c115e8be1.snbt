@@ -8,12 +8,166 @@
 	}
 	id: "39B9308C115E8BE1"
 	images: [ ]
-	order_index: 7
-	quest_links: [{
-		id: "7168C05FD7A8A4FC"
-		linked_quest: "512130A9330064D9"
-		x: 0.0d
-		y: 0.0d
-	}]
-	quests: [ ]
+	order_index: 6
+	quest_links: [
+		{
+			id: "7168C05FD7A8A4FC"
+			linked_quest: "512130A9330064D9"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "2D31D99254E1FDEA"
+			linked_quest: "64C0F532AC652609"
+			x: -2.0d
+			y: -1.5d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["6D912152078E8FC4"]
+			id: "485DD8577DD5E14A"
+			tasks: [
+				{
+					id: "710A52C939D752AD"
+					item: { count: 1, id: "jsonreg:structure_concrete" }
+					type: "item"
+				}
+				{
+					id: "17230903E09A34AB"
+					item: { count: 1, id: "jsonreg:space_elevator_internal_concrete" }
+					type: "item"
+				}
+				{
+					id: "50C06B86531E2189"
+					item: { count: 1, id: "jsonreg:space_elevator_support_concrete" }
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2E339665118C90C3"]
+			id: "70E443F0AFF33C13"
+			tasks: [
+				{
+					id: "15DDE78FAEEE40CD"
+					item: { count: 1, id: "techreborn:space_elevator_casing" }
+					type: "item"
+				}
+				{
+					id: "7FB485699669907C"
+					item: { count: 1, id: "techreborn:space_elevator_power_module" }
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["36E7E625F2643AAD"]
+			id: "6D912152078E8FC4"
+			tasks: [{
+				id: "0A874D589FBB64E9"
+				item: { count: 1, id: "jsonreg:uhpc" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3B094068216DE7A6"]
+			id: "36E7E625F2643AAD"
+			tasks: [{
+				id: "05C858852AB4E94A"
+				item: { count: 1, id: "jsonreg:cement_clinker" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 1.5d
+		}
+		{
+			id: "3B094068216DE7A6"
+			tasks: [{
+				id: "762CF19DEE5A8CED"
+				item: { count: 1, id: "jsonreg:calcium_oxide_slag" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4287256506230B0B"]
+			id: "2E339665118C90C3"
+			tasks: [{
+				id: "693115D295A5AA74"
+				item: { count: 1, id: "jsonreg:reinforced_naquadah_alloy_plate" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2D44442859FE6B3F"]
+			id: "4287256506230B0B"
+			tasks: [{
+				id: "2DBF729CF03CC30E"
+				item: { count: 1, id: "jsonreg:reinforced_naquadah_alloy_dust" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2D44442859FE6B3F"]
+			id: "1EED60800E772D66"
+			tasks: [{
+				id: "7192B7CE158FA181"
+				item: { count: 1, id: "jsonreg:high_power_casing" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["68030A556BD17717"]
+			id: "77D8445EFB7AD595"
+			tasks: [{
+				id: "0BA40530D5444BE9"
+				item: { count: 1, id: "jsonreg:gravi_star" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"512130A9330064D9"
+				"5893FE9E0D0470BE"
+			]
+			id: "0986EEB2F41E391C"
+			tasks: [{
+				id: "5A9754695CF47C79"
+				item: { count: 1, id: "techreborn:space_elevator_assembler" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"512130A9330064D9"
+				"5893FE9E0D0470BE"
+			]
+			id: "660D138C14B7D1D3"
+			tasks: [{
+				id: "36FD36EFE95D619B"
+				item: { count: 1, id: "techreborn:space_elevator_miner" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.5d
+		}
+	]
 }

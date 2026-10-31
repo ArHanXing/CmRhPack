@@ -560,3 +560,4 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 // —— 钒杆 / 钒磁铁矿粉 ——
 <item:jsonreg:vanadium_rod>.addTooltip("§e§lV§r");
 <item:jsonreg:vanadium_magnetite_dust>.addTooltip("§e§l(Fe,V)₃O₄§r");
+

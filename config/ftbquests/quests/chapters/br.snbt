@@ -8,7 +8,7 @@
 	}
 	id: "7185BE617E154297"
 	images: [ ]
-	order_index: 6
+	order_index: 5
 	quest_links: [
 		{
 			id: "1D0A59B84B005261"
@@ -137,6 +137,29 @@
 			dependencies: ["08A105909CB62D75"]
 			hide_dependency_lines: false
 			id: "6DA3B7CD304AEC06"
+			rewards: [
+				{
+					count: 128
+					id: "2210ADD65E81CCF2"
+					item: {
+						components: {
+							"techreborn:fluid": "jsonreg:ethylene"
+						}
+						count: 1
+						id: "techreborn:cell"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "15300BE639E82654"
+					item: {
+						count: 1
+						id: "techreborn:titanium_dust"
+					}
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "09F724A15CB6F556"
 				type: "checkmark"

@@ -879,5 +879,57 @@
 			x: 7.5d
 			y: 10.5d
 		}
+		{
+			can_repeat: true
+			dependencies: ["08A105909CB62D75"]
+			icon: {
+				id: "minecraft:ender_pearl"
+			}
+			id: "08021E7DFFAADF64"
+			rewards: [{
+				count: 16
+				id: "67DCF9B0F44B848E"
+				item: {
+					count: 1
+					id: "minecraft:ender_pearl"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 16L
+				id: "0414DE4AA70AC82C"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 9.5d
+			y: 10.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["08A105909CB62D75"]
+			icon: {
+				id: "techreborn:cell"
+			}
+			id: "5F9580E1490E1C8E"
+			rewards: [{
+				count: 640
+				id: "206E3E31256A78FF"
+				item: {
+					count: 1
+					id: "techreborn:cell"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 16L
+				id: "18FE1C82C0EC16FF"
+				item: { count: 1, id: "jsonreg:coin" }
+				type: "item"
+			}]
+			x: 11.5d
+			y: 10.5d
+		}
 	]
 }

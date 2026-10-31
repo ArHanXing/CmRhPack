@@ -91,31 +91,31 @@ craftingTable.addShaped("misc.ctgui.crafting.trparts/thick_neutron_reflector_alt
 // ai
 // 节点数据格式: [名称, 命名空间, 产出物品, 产出数量, 材料1, 材料2, 材料3, 材料4]
 val vanillaNodes = [
-    ["coal",     "oritech", "minecraft:coal",        8, "minecraft:coal_block",          "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:coal_block"],
-    ["copper",   "oritech", "minecraft:raw_copper",  4, "minecraft:copper_block",        "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:copper_block"],
-    ["diamond",  "oritech", "minecraft:diamond",     4, "minecraft:diamond_block",       "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:diamond_block"],
-    ["emerald",  "oritech", "minecraft:emerald",     6, "minecraft:emerald_block",       "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:emerald_block"],
-    ["gold",     "oritech", "minecraft:raw_gold",    4, "minecraft:gold_block",          "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:gold_block"],
-    ["iron",     "oritech", "minecraft:raw_iron",    4, "minecraft:iron_block",          "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:iron_block"],
-    ["lapis",    "oritech", "minecraft:lapis_lazuli",8, "minecraft:lapis_block",         "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:lapis_block"],
-    ["nickel",   "oritech", "oritech:raw_nickel",    4, "techreborn:nickel_storage_block","tesseract:tesseract", "oritech:advanced_computing_engine", "techreborn:nickel_storage_block"],
-    ["platinum", "oritech", "oritech:raw_platinum",  4, "techreborn:platinum_storage_block","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:platinum_storage_block"],
-    ["redstone", "oritech", "minecraft:redstone",    8, "minecraft:redstone_block",      "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:redstone_block"],
-    ["uranium",  "oritech", "oritech:raw_uranium",   5, "oritech:deepslate_uranium_ore", "tesseract:tesseract", "oritech:advanced_computing_engine", "oritech:deepslate_uranium_ore"]
+    ["coal",     "oritech", "minecraft:coal",        64, "minecraft:coal_block",          "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:coal_block"],
+    ["copper",   "oritech", "minecraft:raw_copper",  32, "minecraft:copper_block",        "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:copper_block"],
+    ["diamond",  "oritech", "minecraft:diamond",     32, "minecraft:diamond_block",       "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:diamond_block"],
+    ["emerald",  "oritech", "minecraft:emerald",     48, "minecraft:emerald_block",       "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:emerald_block"],
+    ["gold",     "oritech", "minecraft:raw_gold",    32, "minecraft:gold_block",          "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:gold_block"],
+    ["iron",     "oritech", "minecraft:raw_iron",    32, "minecraft:iron_block",          "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:iron_block"],
+    ["lapis",    "oritech", "minecraft:lapis_lazuli",64, "minecraft:lapis_block",         "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:lapis_block"],
+    ["nickel",   "oritech", "oritech:raw_nickel",    32, "techreborn:nickel_storage_block","tesseract:tesseract", "oritech:advanced_computing_engine", "techreborn:nickel_storage_block"],
+    ["platinum", "oritech", "oritech:raw_platinum",  32, "techreborn:platinum_storage_block","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:platinum_storage_block"],
+    ["redstone", "oritech", "minecraft:redstone",    64, "minecraft:redstone_block",      "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:redstone_block"],
+    ["uranium",  "oritech", "oritech:raw_uranium",   40, "oritech:deepslate_uranium_ore", "tesseract:tesseract", "oritech:advanced_computing_engine", "oritech:deepslate_uranium_ore"]
 ];
 
 val customNodes = [
-    ["tungsten", "jsonreg", "techreborn:raw_tungsten", 4, "techreborn:hot_tungstensteel_ingot", "tesseract:tesseract", "oritech:super_ai_chip", "techreborn:hot_tungstensteel_ingot"],
-    ["iridium",  "jsonreg", "techreborn:raw_iridium",  3, "techreborn:iridium_alloy_plate",    "tesseract:tesseract", "oritech:super_ai_chip", "techreborn:tungstensteel_plate"],
-    ["fossil",   "jsonreg", "minecraft:ancient_debris",3, "minecraft:ancient_debris",         "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:ancient_debris"],
-    ["lead","jsonreg","techreborn:raw_lead",4, "techreborn:lead_plate","tesseract:tesseract", "oritech:advanced_computing_engine", "techreborn:lead_plate",],
-    ["bauxite","jsonreg","techreborn:bauxite_ore",4, "techreborn:magnalium_plate","tesseract:tesseract", "oritech:advanced_computing_engine", "techreborn:magnalium_plate"],
-    ["neutron","jsonreg","avaritia:neutron_nugget",3,"avaritia:neutronium_block","tesseract:tesseract","oritech:super_ai_chip", "avaritia:neutronium_block"],
-    ["gem","jsonreg","techreborn:ruby_dust",6,"techreborn:ruby_plate","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:ruby_plate"],
-    ["tin","jsonreg","techreborn:raw_tin",2,"techreborn:tin_plate","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:tin_plate"],
-    ["silver","jsonreg","techreborn:raw_silver",4,"techreborn:silver_plate","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:silver_plate"],
-    ["sphalerite","jsonreg","techreborn:sphalerite_ore",6,"techreborn:zinc_storage_block","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:zinc_storage_block"],
-    ["naquadah","jsonreg","jsonreg:raw_naquadah",3,"jsonreg:naquadah_plate","tesseract:tesseract","oritech:advanced_computing_engine","jsonreg:naquadah_plate"]
+    ["tungsten", "jsonreg", "techreborn:raw_tungsten", 32, "techreborn:hot_tungstensteel_ingot", "tesseract:tesseract", "oritech:super_ai_chip", "techreborn:hot_tungstensteel_ingot"],
+    ["iridium",  "jsonreg", "techreborn:raw_iridium",  24, "techreborn:iridium_alloy_plate",    "tesseract:tesseract", "oritech:super_ai_chip", "techreborn:tungstensteel_plate"],
+    ["fossil",   "jsonreg", "minecraft:ancient_debris",24, "minecraft:ancient_debris",         "tesseract:tesseract", "oritech:advanced_computing_engine", "minecraft:ancient_debris"],
+    ["lead","jsonreg","techreborn:raw_lead",32, "techreborn:lead_plate","tesseract:tesseract", "oritech:advanced_computing_engine", "techreborn:lead_plate",],
+    ["bauxite","jsonreg","techreborn:bauxite_ore",32, "techreborn:magnalium_plate","tesseract:tesseract", "oritech:advanced_computing_engine", "techreborn:magnalium_plate"],
+    ["neutron","jsonreg","avaritia:neutron_nugget",24,"avaritia:neutronium_block","tesseract:tesseract","oritech:super_ai_chip", "avaritia:neutronium_block"],
+    ["gem","jsonreg","techreborn:ruby_dust",48,"techreborn:ruby_plate","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:ruby_plate"],
+    ["tin","jsonreg","techreborn:raw_tin",32,"techreborn:tin_plate","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:tin_plate"],
+    ["silver","jsonreg","techreborn:raw_silver",32,"techreborn:silver_plate","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:silver_plate"],
+    ["sphalerite","jsonreg","techreborn:sphalerite_ore",48,"techreborn:zinc_storage_block","tesseract:tesseract","oritech:advanced_computing_engine","techreborn:zinc_storage_block"],
+    ["naquadah","jsonreg","jsonreg:raw_naquadah",24,"jsonreg:naquadah_plate","tesseract:tesseract","oritech:advanced_computing_engine","jsonreg:naquadah_plate"]
 ];
 
 // 1. 深钻配方（先清空所有原配方）

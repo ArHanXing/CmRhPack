@@ -643,6 +643,12 @@ import crafttweaker.api.ingredient.IIngredient;
 // ========== TR 柴油发电机配方 ==========
 // 轻石脑油
 <recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/light_naphtha", {type: "techreborn:diesel_generator", power: 92, fluid: "oritech:still_naphtha"});
+// 常压渣油（重质燃料油）
+// 原配方只能进 semi_fluid_generator（32 EU/t）与 OR 燃油发电机，前者输出太低、
+// 堆之纯亏占地，导致玩家直接把渣油丢弃 —— 大气分馏 18% 的燃料值被白白浪费。
+// 真实炼厂里常压渣油就是重质燃料油，进柴油机完全合理。
+// power 67 = fuel_ledger 标定的市场热值（67,000 EU/桶，与其它燃料同一口径）。
+<recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/atmospheric_residue", {type: "techreborn:diesel_generator", power: 67, fluid: "jsonreg:atmospheric_residue"});
 // 重柴油
 <recipetype:techreborn:diesel_generator>.addJsonRecipe("oil.burn.trdiesel/heavy_diesel", {type: "techreborn:diesel_generator", power: 148, fluid: "jsonreg:heavy_diesel"});
 // 柴油

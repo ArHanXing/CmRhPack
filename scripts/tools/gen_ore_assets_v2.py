@@ -90,6 +90,25 @@ FLUIDS = [
     ("pyrolusite_solution", "4a3d63"),
     ("chromite_solution", "4e6b4a"),
     ("hausmannite_solution", "7a4a6b"),
+    # ---- 火箭燃料线：低温中间体（冷色调，近无色/淡蓝）----
+    ("liquid_oxygen",   "b8d4e8"),
+    ("liquid_hydrogen", "d8f0ff"),
+    ("liquid_methane",  "a8c8e0"),
+    # ---- 化工中间体 ----
+    ("carbon_monoxide", "9098a0"),
+    ("methanol",        "d0d8e0"),
+    ("formaldehyde",    "c8d0d8"),
+    ("refined_kerosene","d8b870"),
+    # ---- 氧化剂 / 肼类（N2O4 真实为红棕色，肼类近无色）----
+    ("dinitrogen_tetroxide",             "b86848"),
+    ("monomethylhydrazine",              "c0c8d0"),
+    ("unsymmetrical_dimethylhydrazine",  "d0c890"),
+    # ---- 火箭燃料成品（GT 风格单流体）----
+    ("rocket_fuel_rp1",     "c89858"),
+    ("rocket_fuel_methane", "a0c0d8"),
+    ("rocket_fuel_mmh",     "b0b890"),
+    ("rocket_fuel_udmh",    "c0b878"),
+    ("rocket_fuel_lh2",     "c8e8f8"),
 ]
 
 # 模板：任选一个既有溶液即可（它们共享同一套流动图案，只有色相不同）

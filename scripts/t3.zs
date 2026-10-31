@@ -1,5 +1,19 @@
 import crafttweaker.api.tag.MCTag;
 import crafttweaker.api.recipe.type.Recipe;
+//工业电路板
+<recipetype:techreborn:precise_assembler>.addJsonRecipe("t3.tr.pa.industrial_circuit", {type: "techreborn:precise_assembler",
+    outputs: [
+        {id: "techreborn:industrial_circuit", count: 1}
+    ],
+    time: 100,
+    power: 128,
+    ingredients: [
+        {count: 2, item: "oritech:advanced_computing_engine"},
+        {count: 4, item: "jsonreg:enriched_naquadah_dust"},
+        {count: 4, item: "techreborn:electrum_plate"}
+    ]
+});
+
 //聚变堆
 craftingTable.remove(<item:techreborn:fusion_control_computer>);
 <recipetype:avaritia:extreme_crafting>.addJsonRecipe("t3.techreborn.fusion_contoller", {type: "avaritia:extreme_shaped", result: {id: "techreborn:fusion_control_computer", count: 1}, pattern: 

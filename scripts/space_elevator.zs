@@ -221,8 +221,8 @@ import crafttweaker.api.recipe.type.Recipe;
     power: 128,
     ingredients: [
         {count: 4, item: "jsonreg:structure_concrete"},
-        {count: 1, item: "jsonreg:steel_fiber"},
-        {count: 1, item: "techreborn:tungstensteel_plate"}
+        {count: 16, item: "jsonreg:steel_fiber"},
+        {count: 4, item: "techreborn:tungstensteel_plate"}
     ]
 });
 
@@ -235,7 +235,7 @@ import crafttweaker.api.recipe.type.Recipe;
     power: 128,
     ingredients: [
         {count: 4, item: "jsonreg:structure_concrete"},
-        {count: 1, item: "techreborn:aluminum_plate"}
+        {count: 4, item: "techreborn:aluminum_plate"}
     ]
 });
 
@@ -261,36 +261,42 @@ import crafttweaker.api.recipe.type.Recipe;
 
 // --- 1. 主机（无尽工作台）---
 // 外形：外圈强化硅岩合金板 + 四角钻石晶格，中心硅岩星 + 中子素核
-/*
+
 //TODO
 <recipetype:avaritia:extreme_crafting>.addJsonRecipe("space.elevator.main",
 {type: "avaritia:extreme_shaped", result: {id: "techreborn:space_elevator", count: 1}, pattern: [
-    "DRRRRRRRD",
-    "R.......R",
-    "R.......R",
-    "R..GGG..R",
-    "R..GNG..R",
-    "R..GGG..R",
-    "R.......R",
-    "R.......R",
-    "DRRRRRRRD"],
+    "    B    ",
+    "   BBB   ",
+    "   BCB   ",
+    "  BIIIB  ",
+    "  BIHIB  ",
+    " BGDHDGB ",
+    " BGDEDGB ",
+    "BFFDEDFFB",
+    "BFFBABFFB"],
  key: {
-    R: {item: "jsonreg:reinforced_naquadah_alloy_plate"},
-    D: {item: "avaritia:diamond_lattice"},
-    G: {item: "jsonreg:gravi_star"},
-    N: {item: "avaritia:neutronium_block"}}});
+    A: {item: "techreborn:elevator"},
+    B: {item: "techreborn:space_elevator_casing"},
+    C: {item: "jsonreg:gravi_star"},
+    D: {item: "jsonreg:hv_electric_motor"},
+    E: {item: "techreborn:computer_cube"},
+    F: {item: "techreborn:universal_chemical_fuel_engine"},
+    G: {item: "techreborn:large_compressor"},
+    H: {item: "oritech:advanced_computing_engine"},
+    I: {item: "jsonreg:naquadah_frame"}
+}});
 
-// --- 2. 供电模块（精密装配）---
+// --- 2. 动力模块（精密装配）---
 <recipetype:techreborn:precise_assembler>.addJsonRecipe("space.elevator.power_module", {type: "techreborn:precise_assembler",
     outputs: [
         {id: "techreborn:space_elevator_power_module", count: 1}
     ],
-    time: 600,
+    time: 200,
     power: 256,
     ingredients: [
-        {count: 4, item: "jsonreg:reinforced_naquadah_alloy_plate"},
-        {count: 4, item: "jsonreg:naquadah_alloy_plate"},
-        {count: 2, item: "techreborn:lithium_ion_battery"}
+        {count: 1, item: "techreborn:space_elevator_casing"},
+        {count: 2, item: "jsonreg:naquadah_alloy_plate"},
+        {count: 2, item: "jsonreg:hv_electric_motor"}
     ]
 });
 
@@ -302,9 +308,10 @@ import crafttweaker.api.recipe.type.Recipe;
     time: 600,
     power: 256,
     ingredients: [
-        {count: 4, item: "jsonreg:reinforced_naquadah_alloy_plate"},
+        {count: 4, item: "techreborn:space_elevator_casing"},
         {count: 2, item: "oritech:advanced_computing_engine"},
-        {count: 2, item: "techreborn:advanced_machine_casing"}
+        {count: 4, item: "jsonreg:hv_robot_arm"},
+        {count: 2, item: "techreborn:precise_assembler"}
     ]
 });
 
@@ -316,9 +323,9 @@ import crafttweaker.api.recipe.type.Recipe;
     time: 600,
     power: 256,
     ingredients: [
-        {count: 4, item: "jsonreg:reinforced_naquadah_alloy_plate"},
-        {count: 2, item: "jsonreg:duratium_plate"},
-        {count: 2, item: "techreborn:advanced_machine_casing"}
+        {count: 4, item: "techreborn:space_elevator_casing"},
+        {count: 2, item: "oritech:advanced_computing_engine"},
+        {count: 4, item: "jsonreg:hv_robot_arm"},
+        {count: 2, item: "techreborn:void_drill"}
     ]
 });
-*/

@@ -1,0 +1,28 @@
+# Infinity What configuration.
+
+[balance]
+# Master switch for the infinite behaviour of both generators.
+# Fluid generator: if false it behaves like a normal tank limited to finiteTankCapacity.
+# Item generator: if false it never becomes an unlimited item source.
+enableInfiniteSource = true
+
+# Capacity in mB used when enableInfiniteSource is false.
+finiteTankCapacity = 16000
+
+[item_filter]
+# BLACKLIST: listed item ids can never be inserted.
+# WHITELIST: only listed item ids can be inserted.
+mode = "BLACKLIST"
+
+# Item ids (e.g. "minecraft:diamond") the mode above applies to.
+list = [
+]
+
+[fluid_filter]
+# BLACKLIST: listed fluid ids can never be inserted.
+# WHITELIST: only listed fluid ids can be inserted.
+mode = "BLACKLIST"
+
+# Fluid ids (e.g. "minecraft:water") the mode above applies to.
+list = [
+]

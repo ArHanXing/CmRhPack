@@ -70,6 +70,8 @@
 
 [OR裂变堆规划器](https://arhanxing.github.io/Oritech-cmrh/)，为本整合包定制的 Oritech Reactor Planner
 
+[Ez2Rs](https://github.com/ArHanXing/ez2rs), 一个 Refined Storage 2 的拓展，主要加入 AE2WTLib 以及部分附属的优秀QOL功能
+
 ## 服务端mod
 - Ledger 类似于CoreProtect，查熊
 - EasyAuth 账号系统
@@ -84,6 +86,7 @@ JDK: Temurin 26
 - 稳态
 - fast noise（引入无谓配置库zconfig）
 - more culling
+- RS2, RFS
 
 打包：
 - 删除 `fuji/backup` `fuji/cache` `fuji/modules/home`

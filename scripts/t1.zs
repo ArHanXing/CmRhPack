@@ -150,6 +150,7 @@ _smd_assembler("t1.ori.assembler/transistor","techreborn:tin_cable","techreborn:
 <recipetype:oritech:assembler>.removeByName("oritech:assembler/processingunit");
 //高级电路板，及其SoC配方
 craftingTable.remove(<item:techreborn:advanced_circuit>);
+<recipetype:techreborn:assembling_machine>.removeByName("techreborn:assembling_machine/industrial_circuit");
 <recipetype:techreborn:assembling_machine>.removeByName("techreborn:assembling_machine/advanced_circuit");
 <recipetype:oritech:assembler>.addJsonRecipe("t1.oritech.assembler/advanced_circuit", 
     {type: "oritech:assembler", fluidOutput: {fluid: "minecraft:empty", amount: 0}, results: [{id: "techreborn:advanced_circuit", count: 2}], 

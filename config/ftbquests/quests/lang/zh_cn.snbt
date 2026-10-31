@@ -10,11 +10,12 @@
 	chapter.39B9308C115E8BE1.title: "WIP &b天地九重&r"
 	chapter.3A75FC2BABF5DD54.title: "__cmxx_debug"
 	chapter.3BA0B31CD6E6C4BB.title: "&d新世界理论"
-	chapter.3E95754083204492.title: "&z循此苦旅，直达天际"
+	chapter.3E95754083204492.title: "(移除) &z循此苦旅，直达天际"
 	chapter.41E7BFAA3F10C45F.title: "&b发电学"
 	chapter.43E68DA38CB524C7.title: "&b矿物处理学"
 	chapter.4B0E94BED93B19C2.title: "&d炎狱之境"
 	chapter.4B122B97959C1E81.title: "&b精！致！存储"
+	chapter.6084EEF8F23A89E0.title: "&z我们与神的间隙&r"
 	chapter.68D3B8D4284E4BF4.title: "&a初来乍到"
 	chapter.69D03D6AA0D77973.title: "WIP &b简单的怪物农场&r"
 	chapter.6DB5109FF6BF0444.title: "&a魔法脉动 Pt.1"
@@ -99,6 +100,7 @@
 		"然后就会生成诅咒祭坛（Stellarity所用的合成机器，对主线本身意义不大）"
 	]
 	quest.07DF71C81A3FB1DA.title: "修复岛屿"
+	quest.08021E7DFFAADF64.title: "末影珍珠"
 	quest.0822E1E8DAD332E4.quest_desc: [
 		"你知道吗：除了金币之外，硅岩锭是作者开始重置整合包后&b注册的第一个物品&r！"
 		""
@@ -107,10 +109,17 @@
 	quest.0822E1E8DAD332E4.quest_subtitle: "重要材料"
 	quest.088183B47AA93C09.quest_desc: ["特制的超级加强加强玻璃，使其能够在最高等级的冲击下不崩解让你还能看到极光"]
 	quest.088183B47AA93C09.quest_subtitle: "忽略这个警报！"
+	quest.08A44DE9CE9BB22E.quest_desc: ["对于部分需要流体的合成（e.g. 紫颂果造纸）的配方，这种特制样板可以指挥自动合成系统&b直接使用流体&r而非水桶"]
 	quest.08CCE022E6C6F185.quest_desc: [
 		"并非便宜"
 		"它的最大作用或许是养村民电工"
 	]
+	quest.0986EEB2F41E391C.quest_desc: [
+		"职责分为："
+		"- &a太空组装&r仪器和物品，并将它们送回地面"
+		"- &b发射卫星&r至太空（你拿到的只是一个调用终端）"
+	]
+	quest.0986EEB2F41E391C.quest_subtitle: "最初与最初的太空探索"
 	quest.09A2C0E83E15AA85.title: "随机管道和线缆"
 	quest.0A299504294A8F02.title: "魔力浸染的产物"
 	quest.0A539E167A19F7C6.quest_desc: [""]
@@ -1064,7 +1073,7 @@
 		"严禁使用"
 	]
 	quest.4FEA567CFFE38694.quest_subtitle: "我们依旧和核弹绕不开"
-	quest.512130A9330064D9.quest_desc: ["具体需要的别的结构方块等请去&b天地九重&r一章"]
+	quest.512130A9330064D9.quest_desc: ["[ \"具体需要的别的结构方块等请去\", { \"text\": \"天地九重一章\", \"underlined\": true, \"clickEvent\": { \"action\": \"change_page\", \"value\": \"39B9308C115E8BE1\" } }]"]
 	quest.513218436C2937E0.quest_desc: [""]
 	quest.513218436C2937E0.title: "随机食物"
 	quest.51354A47E6666F0D.quest_desc: ["显示周遭的矿物数量。只适合用于探索矿脉。"]
@@ -1170,6 +1179,7 @@
 		"而且这些群系没一个诗人"
 	]
 	quest.587515186DECFBD6.title: "Welcome to HeLL"
+	quest.5893FE9E0D0470BE.quest_subtitle: "重新封装一下就好了"
 	quest.58DBCB4CFF40BAA9.quest_desc: ["你的化学小帮手"]
 	quest.58DBCB4CFF40BAA9.quest_subtitle: "有一些独有配方"
 	quest.59BF6C313663D446.title: "主世界"
@@ -1226,6 +1236,7 @@
 	quest.5F1F6ED0A21FB05A.title: "星光世界的传送门"
 	quest.5F4BC0C1D5FDB23C.quest_desc: ["一级大号处理器（"]
 	quest.5F4BC0C1D5FDB23C.title: "基础电路板与基础主机"
+	quest.5F9580E1490E1C8E.title: "军费不可省！"
 	quest.5FB90E38B246AC9E.quest_desc: ["最帅的一集"]
 	quest.5FDF280E5EC6A5E7.quest_desc: [
 		"打完龙后，一角的一根黑曜石柱露出了一些缝隙"
@@ -1312,6 +1323,8 @@
 	quest.660BFCC3F8EB4523.quest_subtitle: "&b三&a魂&c合&d一！"
 	quest.660C8C862E990CFA.quest_desc: ["可以无限食用"]
 	quest.660C8C862E990CFA.quest_subtitle: "凭具齐聚开拓前路"
+	quest.660D138C14B7D1D3.quest_desc: ["推荐与集成矿处一同食用"]
+	quest.660D138C14B7D1D3.quest_subtitle: "最后与最后的采矿手段"
 	quest.6687368EE271813C.quest_desc: [
 		"由 EarlyStage 自定义的开局，你需要首先花那么一点点时间制作燧石工具，再用它制作工作台"
 		""
@@ -1376,6 +1389,7 @@
 		"氟石不支持这种处理"
 	]
 	quest.6D9F3B41944AE64D.quest_subtitle: "NaOH 处理 / TR 化反"
+	quest.6DA3B7CD304AEC06.quest_desc: ["这些资金用于你启动"]
 	quest.6DA3B7CD304AEC06.quest_subtitle: "多数结构来自 GTNH"
 	quest.6DA3B7CD304AEC06.title: "原版大型机器"
 	quest.6DA3E098E5802548.title: "祖母绿-自然金共生矿脉"
@@ -1490,6 +1504,7 @@
 	quest.7764ADF9F5C87C00.quest_desc: ["&a双酚&r 是指它的分子结构是由两个酚（一种芳香族有机化合物）连接而成的，而 &aA&r 这个字母直接来源于合成它的关键原料之一——&a丙酮 (Acetone)&r . "]
 	quest.77769AA1A6C16B9C.quest_desc: ["你正常挖矿的话可能会很难遇到，但是你可以开挂"]
 	quest.77769AA1A6C16B9C.quest_subtitle: "最为高贵的......"
+	quest.77D8445EFB7AD595.quest_subtitle: "怎么又是你！魔法线主播灵魂催化..."
 	quest.77FA50402C836C59.quest_desc: [
 		"依旧是大件，有了它就可以造出很多东西了"
 		""
