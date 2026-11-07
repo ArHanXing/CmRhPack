@@ -228,3 +228,8 @@ import crafttweaker.api.ingredient.IIngredient;
 <tag:item:c:rods/vanadium>.add(<item:jsonreg:vanadium_rod>);
 <tag:item:c:dusts>.add(<item:jsonreg:vanadium_magnetite_dust>);
 <tag:item:c:dusts/vanadium_magnetite>.add(<item:jsonreg:vanadium_magnetite_dust>);
+
+// ===== 金红石通用增产线中间体 =====
+<tag:item:c:clumps>.add(<item:jsonreg:rutile_clump>);
+<tag:item:c:gems>.add(<item:jsonreg:rutile_gem>);
+<tag:item:c:dusts>.add(<item:jsonreg:rutile_concentrate>);

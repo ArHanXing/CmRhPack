@@ -80,10 +80,10 @@ Dynamic Ore Veins wiki @ https://github.com/TheBrewingMiner/DOV-Homepage/wiki
 | nether_rose_quartz | 下界 | rose_quartz (`rose_quartz_ore`) | smoky_quartz `smoky_quartz_ore` (30%) | 35 | 16 | 19~51 | [5.25, 10.50) | 12.5% |
 | nether_sphalerite | 下界 | sphalerite (`sphalerite_ore`) | sulfur `sulfur_ore` (30%) | 35 | 16 | 19~51 | [10.50, 15.75) | 12.5% |
 | nether_vanadium_magnetite | 下界 | nether_vanadium_magnetite (`nether_vanadium_magnetite_ore`) | nether_chromite `nether_chromite_ore` (35%) | 35 | 16 | 19~51 | [15.75, 21.00) | 12.5% |
-| end_naquadah_ore | 末地 | end_naquadah (`end_naquadah_ore`) | end_enriched_naquadah `end_enriched_naquadah_ore` (30%) | 30 | 16 | 14~46 | [-21.00, -10.50) | 25.0% |
-| end_peridot_ore | 末地 | sodalite (`sodalite_ore`) | peridot `peridot_ore` (30%) | 30 | 16 | 14~46 | [-10.50, 0.00) | 25.0% |
-| end_rutile_ore | 末地 | end_rutile (`end_rutile_ore`) | tungsten `tungsten_ore` (25%) | 30 | 16 | 14~46 | [0.00, 10.50) | 25.0% |
-| end_sheldonite_ore | 末地 | sheldonite (`sheldonite_ore`) | tungsten `tungsten_ore` (30%) | 30 | 16 | 14~46 | [10.50, 21.00) | 25.0% |
+| end_naquadah_ore | 末地 | end_naquadah (`end_naquadah_ore`) | end_enriched_naquadah `end_enriched_naquadah_ore` (30%) | 60 | 20 | 40~80 | [-21.00, -10.50) | 25.0% |
+| end_peridot_ore | 末地 | sodalite (`sodalite_ore`) | peridot `peridot_ore` (30%) | 60 | 20 | 40~80 | [-10.50, 0.00) | 25.0% |
+| end_rutile_ore | 末地 | end_rutile (`end_rutile_ore`) | tungsten `tungsten_ore` (25%) | 60 | 20 | 40~80 | [0.00, 10.50) | 25.0% |
+| end_sheldonite_ore | 末地 | sheldonite (`sheldonite_ore`) | tungsten `tungsten_ore` (30%) | 60 | 20 | 40~80 | [10.50, 21.00) | 25.0% |
 | _test_starlight_ore *(测试)* | 星光 | uranium (`deepslate_uranium_ore`) | lead `deepslate_lead_ore` (40%) | 68 | 16 | 52~84 | [-21.00, 0.00) | 50.0% |
 | starlight_rutile | 星光 | voidstone_rutile (`voidstone_rutile_ore`) | voidstone_malarite `voidstone_malarite_ore` (40%) | -32 | 16 | -48~-16 | [0.00, 21.00) | 50.0% |
 

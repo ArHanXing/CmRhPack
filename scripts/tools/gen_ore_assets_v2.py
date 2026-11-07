@@ -55,6 +55,10 @@ ITEMS = [
     ("vanadium_magnetite_clump", "dull", "crushed", "4a3f52"),
     ("vanadium_magnetite_gem", "dull", "gem_flawed", "4a3f52"),
     ("vanadium_magnetite_concentrate", "certus", "gem", "4a3f52"),
+    # ---- 金红石（TiO₂）中间体：暗红棕色 ----
+    ("rutile_clump", "dull", "crushed", "8a4b3c"),
+    ("rutile_gem", "dull", "gem_flawed", "8a4b3c"),
+    ("rutile_concentrate", "certus", "gem", "8a4b3c"),
     ("pyrolusite_clump", "dull", "crushed", "2e2a33"),
     ("pyrolusite_gem", "dull", "gem_flawed", "2e2a33"),
     ("pyrolusite_concentrate", "certus", "gem", "2e2a33"),
@@ -90,6 +94,7 @@ FLUIDS = [
     ("pyrolusite_solution", "4a3d63"),
     ("chromite_solution", "4e6b4a"),
     ("hausmannite_solution", "7a4a6b"),
+    ("rutile_solution", "8a4b3c"),
     # ---- 火箭燃料线：低温中间体（冷色调，近无色/淡蓝）----
     ("liquid_oxygen",   "b8d4e8"),
     ("liquid_hydrogen", "d8f0ff"),

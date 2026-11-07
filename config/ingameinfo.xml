@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  CmRhPack HUD
+
+  颜色：$9 深蓝 / $3 暗青 / $b 青 / $f 白 / $7 灰 / $e 黄 / $c 红
+-->
+<config>
+
+	<lines at="topleft">
+
+		<!-- ═══ 抬头 ═══ -->
+		<line>
+			<str>$9$l▐ $b$lCmRhPack$r $8 || $7</str>
+			<var>username</var>
+			<str> $f</str>
+			<var>pingicon</var>
+			<str> $b</str>
+			<var>ping</var>
+			<str>$7ms</str>
+		</line>
+
+		<!-- ═══ 性能 ═══ -->
+		<line>
+			<str>$3FPS  $r</str>
+			<operation>
+				<str>ge</str>
+				<var>fps</var>
+				<num>120</num>
+				<num>60</num>
+				<num>30</num>
+				<num>0</num>
+				<str>$b</str>
+				<str>$b</str>
+				<str>$e</str>
+				<str>$c</str>
+			</operation>
+			<var>fps</var>
+			<str>$r $8| $3MSPT $r</str>
+			<operation>
+				<str>lt</str>
+				<var>mspt</var>
+				<num>20</num>
+				<num>35</num>
+				<num>50</num>
+				<str>$b</str>
+				<str>$e</str>
+				<str>$c</str>
+			</operation>
+			<var>mspt</var>
+			<str>$r $8| $3TPS $r</str>
+			<operation>
+				<str>ge</str>
+				<var>tps</var>
+				<num>19.9</num>
+				<num>19</num>
+				<num>15</num>
+				<num>0</num>
+				<str>$b</str>
+				<str>$b</str>
+				<str>$e</str>
+				<str>$c</str>
+			</operation>
+			<var>tps</var>
+		</line>
+
+		<!-- ═══ 实体 / 内存 ═══ -->
+		<line>
+			<str>$3ENT  $r$b{entitiesrendered}$7/$b{entitiestotal}$r</str>
+			<str> $8| $3MEM $r$b</str>
+			<round>
+				<div>
+					<var>memused</var>
+					<num>1048576</num>
+				</div>
+				<num>0</num>
+			</round>
+			<str>$7/$b</str>
+			<round>
+				<div>
+					<var>memmax</var>
+					<num>1048576</num>
+				</div>
+				<num>0</num>
+			</round>
+			<str>$7M $r($b</str>
+			<round>
+				<pct>
+					<var>memused</var>
+					<var>memmax</var>
+				</pct>
+				<num>0</num>
+			</round>
+			<str>$7%)</str>
+		</line>
+
+		<!-- ═══ 位置 / 区块 / 粘液 ═══ -->
+		<line>
+			<str>$3POS  $r$b</str>
+			<round>
+				<var>chunkx</var>
+				<num>0</num>
+			</round>
+			<str>$7, $b</str>
+			<round>
+				<var>chunkz</var>
+				<num>0</num>
+			</round>
+			<str>$r $8| $3</str>
+			<if>
+				<var>slimechunk</var>
+				<str>$a✔ SLIME$r</str>
+				<str>$8—$r</str>
+			</if>
+			<str> $8| $b{dimension}$r $8@ $b{biome}</str>
+		</line>
+
+		<!-- ═══ 时间 ═══ -->
+		<line>
+			<str>$3TIME $r$b{mctime}$r $8· $3DAY $r$b{day}$r </str>
+			<if>
+				<var>daytime</var>
+				<str>$e☀</str>
+				<str>$8☾</str>
+			</if>
+		</line>
+
+		<!-- ═══ 电力网络 ═══ -->
+		<line>
+			<str>$9$l▐ $b$lPOWERNET$r</str>
+		</line>
+		<line>
+			<str>$3IN $a+</str>
+			<var>techreborn_energy_in</var>
+			<str>$r $3OUT $c-</str>
+			<var>techreborn_energy_out</var>
+			<str>$r $3EU/t</str>
+		</line>
+		<line>
+			<str>$3BUF $b</str>
+			<var>techreborn_energy_buffer</var>
+			<str>$r $3(</str>
+			<var>techreborn_energy_percent</var>
+			<str>$3%)  $3ETA $e</str>
+			<var>techreborn_energy_eta</var>
+		</line>
+
+		<!-- ═══ 奥术 ═══ -->
+		<line>
+			<str>$9$l▐ $b$lARCANE$r</str>
+		</line>
+		<line>
+			<str>$3MANA $b</str>
+			<var>botania_mana</var>
+			<str>$r $3(</str>
+			<round>
+				<var>botania_mana_pct</var>
+				<num>1</num>
+			</round>
+			<str>$3%) $8| $3</str>
+			<var>botania_mana_rate</var>
+			<str>$3/s</str>
+		</line>
+		<line>
+			<str>$3AF $b</str>
+			<var>affinity_player_aethum</var>
+			<str>$3/$b</str>
+			<var>affinity_player_aethum_max</var>
+			<str>$r $8| $3</str>
+			<var>affinity_player_aethum_rate</var>
+			<str>$3/s $8| $3CHUNK $b</str>
+			<var>affinity_chunk_aethum</var>
+		</line>
+
+	</lines>
+
+</config>

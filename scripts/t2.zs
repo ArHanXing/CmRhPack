@@ -490,58 +490,10 @@ _reactor("t2.ori.reactor.nqdriamx2", "jsonreg:dual_naquadria_fuel_rod", 720000);
 });
 
 // T2 金红石 → 钛 科学处理线（氯化法）
-// 1. 磨矿: 虚空石金红石矿 → 金红石粉（TiO2 精矿）
-<recipetype:techreborn:grinder>.addJsonRecipe("t2.tr.grinder.rutile_dust_from_ore", {type: "techreborn:grinder",
-    time: 100,
-    outputs: [
-        {id: "jsonreg:rutile_dust", count: 2}
-    ],
-    power: 32,
-    ingredients: [
-        {item: "jsonreg:voidstone_rutile_ore"}
-    ]
-});
-
-// 1b. 工业磨粉（水洗磨矿，带副产）: 1 矿石 → 2 金红石粉 + 铁杂
-<recipetype:techreborn:industrial_grinder>.addJsonRecipe("t2.tr.industrial_grinder.rutile_dust_from_ore", {type: "techreborn:industrial_grinder",
-    time: 200,
-    outputs: [
-        {id: "jsonreg:rutile_dust", count: 3},
-        {id: "oritech:iron_dust", count: 1}
-    ],
-    fluid: {fluid: {fluid: "minecraft:water"}, amount: {value: 81000}},
-    power: 64,
-    ingredients: [
-        {item: "jsonreg:voidstone_rutile_ore", count: 1}
-    ]
-});
-
-// 1c. 末地金红石矿（末地石形态）走同一套精矿入口
-//     末地矿脉 nether→end 的产物与虚空石金红石矿等价，故复用 T1/T1.5 出口
-<recipetype:techreborn:grinder>.addJsonRecipe("t2.tr.grinder.rutile_dust_from_end_ore", {type: "techreborn:grinder",
-    time: 100,
-    outputs: [
-        {id: "jsonreg:rutile_dust", count: 2}
-    ],
-    power: 32,
-    ingredients: [
-        {item: "jsonreg:end_rutile_ore"}
-    ]
-});
-
-// 1d. 末地金红石矿工业磨粉（水洗，带铁杂）
-<recipetype:techreborn:industrial_grinder>.addJsonRecipe("t2.tr.industrial_grinder.rutile_dust_from_end_ore", {type: "techreborn:industrial_grinder",
-    time: 200,
-    outputs: [
-        {id: "jsonreg:rutile_dust", count: 3},
-        {id: "oritech:iron_dust", count: 1}
-    ],
-    fluid: {fluid: {fluid: "minecraft:water"}, amount: {value: 81000}},
-    power: 64,
-    ingredients: [
-        {item: "jsonreg:end_rutile_ore", count: 1}
-    ]
-});
+// 1~1d 的临时处理配方（磨矿/工业磨粉共 4 条）**已删除**，
+//   金红石现已接入 scripts/ore_process/ 的通用增产线
+//   （T1 → T1.5 → T2a/T2b → T2.3，与其他矿物同级）。
+//   入口两条矿石：jsonreg:voidstone_rutile_ore（星光）、jsonreg:end_rutile_ore（末地）。
 
 // 2. 加碳氯化（改为了大化反）
 <recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("t2.tr.largechemreactor.chlorinate_rutile", {type: "techreborn:large_chemical_reactor",

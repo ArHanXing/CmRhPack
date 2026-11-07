@@ -141,6 +141,14 @@ primary_input: {item: "affinity:clay_cup"}, output: {id: "affinity:affinitea", c
     result: {id: "botania:terrasteel_ingot", count: 1},
     mana: 250000,
     ingredients: [{tag: "c:ingots/elementium"}, {tag: "c:gems/dragonstone"}, {tag: "c:dusts/pixie"}, {item:"botania:rune_of_earth"}]});
+<recipetype:botania:terrestrial_agglomeration_plate>.addJsonRecipe("magic.botania.terrestrial_agglomeration_plate/terrasteel_ingot/runeless", {type: "botania:terrestrial_agglomeration_plate",
+    result: {id: "botania:terrasteel_ingot", count: 1},
+    mana: 500000,
+    ingredients: [{tag: "c:ingots/manasteel"}, {tag: "c:gems/mana_diamond"}, {tag: "c:gems/mana_pearl"}, {item:"eternal_starlight:starlight_flower"}]});
+<recipetype:botania:terrestrial_agglomeration_plate>.addJsonRecipe("magic.botania.terrestrial_agglomeration_plate/better_terrasteel_ingot/runeless", {type: "botania:terrestrial_agglomeration_plate",
+    result: {id: "botania:terrasteel_ingot", count: 1},
+    mana: 250000,
+    ingredients: [{tag: "c:ingots/elementium"}, {tag: "c:gems/dragonstone"}, {tag: "c:dusts/pixie"}, {item:"eternal_starlight:starlight_flower"}]});
 
 //末地石
 <recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("etst.tr.lcr/end_stone", {type: "techreborn:large_chemical_reactor", 
@@ -368,6 +376,13 @@ craftingTable.removeByName("minecraft:ender_eye");
     ]
 });
 
+//泥巴
+<recipetype:oritech:centrifuge_fluid>.addJsonRecipe("magic.oritech.centrifuge/mud", {type: "oritech:centrifuge_fluid",
+    results: [{id: "minecraft:mud"}],
+    time: 1,
+    fluidInput: {fluid: "minecraft:water", amount: 20250},
+    ingredients: [{item: "minecraft:dirt"}]
+});
 
 craftingTable.removeByName("botania:mana_fluxfield");
 

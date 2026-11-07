@@ -967,3 +967,47 @@
     ingredients: [{item: "jsonreg:hausmannite_concentrate"}]
 });
 
+
+// ---------- 金红石 ----------
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("general.t2a.concentrate.rutile", {type: "techreborn:chemical_reactor",
+    time: 400,
+    power: 128,
+    outputs: [
+        {id: "jsonreg:rutile_concentrate", count: 1},
+        {id: "techreborn:cell", count: 1}
+    ],
+    ingredients: [
+        {item: "jsonreg:rutile_clump", count: 1},
+        {count: 1, components: {"techreborn:fluid": "jsonreg:sodium_hydroxide_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+<recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.water.rutile", {type: "techreborn:industrial_grinder",
+    outputs: [
+        {id: "jsonreg:rutile_dust", count: 5}
+    ],
+    time: 200,
+    power: 128,
+    fluid: {fluid: {fluid: "minecraft:water"}, amount: {value: 81000}},
+    ingredients: [{item: "jsonreg:rutile_concentrate"}]
+});
+<recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.mercury.rutile", {type: "techreborn:industrial_grinder",
+    outputs: [
+        {id: "jsonreg:rutile_dust", count: 4},
+        {id: "oritech:iron_dust", count: 1}
+    ],
+    time: 200,
+    power: 128,
+    fluid: {fluid: {fluid: "techreborn:mercury"}, amount: {value: 81000}},
+    ingredients: [{item: "jsonreg:rutile_concentrate"}]
+});
+<recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t2b.persulfate.rutile", {type: "techreborn:industrial_grinder",
+    outputs: [
+        {id: "jsonreg:rutile_dust", count: 3},
+        {id: "oritech:iron_dust", count: 2},
+        {id: "techreborn:aluminum_dust", count: 1}
+    ],
+    time: 200,
+    power: 128,
+    fluid: {fluid: {fluid: "techreborn:sodium_persulfate"}, amount: {value: 81000}},
+    ingredients: [{item: "jsonreg:rutile_concentrate"}]
+});

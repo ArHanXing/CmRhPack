@@ -728,3 +728,43 @@
     ingredients: [{item: "jsonreg:hausmannite_gem"}]
 });
 
+
+// ---------- 金红石 ----------
+<recipetype:oritech:refinery>.addJsonRecipe("general.t15a.leach.rutile", {type: "oritech:refinery",
+    results: [],
+    fluidOutputs: [
+        {fluid: "jsonreg:rutile_solution", amount: 81000},
+        {fluid: "oritech:still_mineral_slurry", amount: 20250}
+    ],
+    time: 160,
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 81000},
+    ingredients: [{item: "jsonreg:voidstone_rutile_ore", count: 1}]
+});
+<recipetype:oritech:refinery>.addJsonRecipe("general.t15a.leach.rutile_end", {type: "oritech:refinery",
+    results: [],
+    fluidOutputs: [
+        {fluid: "jsonreg:rutile_solution", amount: 81000},
+        {fluid: "oritech:still_mineral_slurry", amount: 20250}
+    ],
+    time: 160,
+    fluidInput: {fluid: "oritech:still_sulfuric_acid", amount: 81000},
+    ingredients: [{item: "jsonreg:end_rutile_ore", count: 1}]
+});
+<recipetype:oritech:centrifuge_fluid>.addJsonRecipe("general.t15b.precipitate.rutile", {type: "oritech:centrifuge_fluid",
+    results: [{id: "jsonreg:rutile_clump", count: 1}],
+    time: 150,
+    fluidInput: {fluid: "jsonreg:rutile_solution", amount: 81000},
+    ingredients: [{item: "jsonreg:salt_dust", count: 1}]
+});
+<recipetype:oritech:centrifuge_fluid>.addJsonRecipe("general.t15c.recrystallize.rutile", {type: "oritech:centrifuge_fluid",
+    results: [{id: "jsonreg:rutile_gem", count: 1}],
+    fluidOutputs: [{fluid: "oritech:still_mineral_slurry", amount: 8100}],
+    time: 200,
+    fluidInput: {fluid: "minecraft:water", amount: 40500},
+    ingredients: [{item: "jsonreg:rutile_clump", count: 1}]
+});
+<recipetype:techreborn:grinder>.addJsonRecipe("general.t15d.grind_gem.rutile", {type: "techreborn:grinder",
+    time: 200, power: 32,
+    outputs: [{id: "jsonreg:rutile_dust", count: 3}],
+    ingredients: [{item: "jsonreg:rutile_gem"}]
+});

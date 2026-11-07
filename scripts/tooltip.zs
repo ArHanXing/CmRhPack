@@ -561,3 +561,8 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:jsonreg:vanadium_rod>.addTooltip("§e§lV§r");
 <item:jsonreg:vanadium_magnetite_dust>.addTooltip("§e§l(Fe,V)₃O₄§r");
 
+
+// —— 金红石中间体 ——
+<item:jsonreg:rutile_clump>.addTooltip("§c§lTiO₂§r");
+<item:jsonreg:rutile_gem>.addTooltip("§c§lTiO₂§r");
+<item:jsonreg:rutile_concentrate>.addTooltip("§c§lTiO₂§r");

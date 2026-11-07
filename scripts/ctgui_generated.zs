@@ -891,3 +891,15 @@ craftingTable.addShaped("ctgui/new/crafting/hunter_process_reactor", <item:techr
 
 <recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/dust/titanium_dust_from_small");
 
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine/gas_collector");
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/gas_collector", <item:techreborn:gas_collector>, [
+    [<item:techreborn:titanium_plate>, <item:jsonreg:naquadah_frame>, <item:techreborn:titanium_plate>],
+    [<item:jsonreg:mv_electric_motor>, <item:jsonreg:naquadah_frame>, <item:jsonreg:mv_electric_motor>],
+    [<item:jsonreg:machine_casing_turbine_titanium>, <item:techreborn:large_compressor>, <item:jsonreg:machine_casing_turbine_titanium>]]);
+
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine/void_drill");
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/void_drill", <item:techreborn:void_drill>, [
+    [<item:jsonreg:naquadah_alloy_plate>, <item:jsonreg:naquadah_frame>, <item:jsonreg:naquadah_alloy_plate>],
+    [<item:jsonreg:mv_electric_motor>, <item:jsonreg:machine_casing_turbine_titanium>, <item:jsonreg:mv_electric_motor>],
+    [<item:jsonreg:machine_casing_turbine_titanium>, <item:affinity:resonance_crystal>, <item:jsonreg:machine_casing_turbine_titanium>]]);
+

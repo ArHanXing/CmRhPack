@@ -592,3 +592,17 @@
     ingredients: [{item: "jsonreg:nether_hausmannite_ore"}]
 });
 
+
+// ---------- 金红石（TiO₂）----------
+// 两种矿石形态共用同一套下游：星光虚空石矿 / 末地末地石矿。
+// 用直接物品引用（本文件比 material_tags.zs 早加载）。
+<recipetype:techreborn:grinder>.addJsonRecipe("general.t1.rutile", {type: "techreborn:grinder",
+    time: 100, power: 16,
+    outputs: [{id: "jsonreg:rutile_dust", count: 2}],
+    ingredients: [{item: "jsonreg:voidstone_rutile_ore"}]
+});
+<recipetype:techreborn:grinder>.addJsonRecipe("general.t1.rutile_end", {type: "techreborn:grinder",
+    time: 100, power: 16,
+    outputs: [{id: "jsonreg:rutile_dust", count: 2}],
+    ingredients: [{item: "jsonreg:end_rutile_ore"}]
+});

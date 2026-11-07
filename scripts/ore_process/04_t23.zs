@@ -315,3 +315,15 @@
     fluid: {fluid: {fluid: "jsonreg:soul_injection_catalyst"}, amount: {value: 81000}},
     ingredients: [{item: "jsonreg:fluorite_concentrate"}]
 });
+
+// ---------- 金红石 ----------
+<recipetype:techreborn:industrial_grinder>.addJsonRecipe("general.t23.catalyzed.rutile", {type: "techreborn:industrial_grinder",
+    outputs: [
+        {id: "jsonreg:rutile_dust", count: 6},
+        {id: "oritech:iron_dust", count: 2}
+    ],
+    time: 200,
+    power: 256,
+    fluid: {fluid: {fluid: "jsonreg:soul_injection_catalyst"}, amount: {value: 81000}},
+    ingredients: [{item: "jsonreg:rutile_concentrate"}]
+});

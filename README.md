@@ -38,8 +38,8 @@
 - 超立方体**不建议用于能量传输**（曾经出现过和TR线缆连接后崩服的bug）。**若需要使用，确保不要使用「同时输入输出」的选项，可能会导致连接的线缆无限和超立方体互换电能导致崩服！**
 - 不兼容加速渲染
 ## 主要魔改
-- 半个专家包，主线难度可能略难于ATM9。
-- 移除了很多轮椅，例如碳粉复制单元、空单元蒸馏柴油、堆叠裂变堆主机复制发电量
+- 半个专家包，主线难度可能略难于ATM10。
+- 移除了错误配方
 - 格雷风格矿脉生成和原版生成同时存在，且矿脉生成固定，不需要找
 - 早期加入了 EarlyStage，例如燧石工具等，不再能空手砍树
 - TR和OR融合的早期科技
@@ -59,18 +59,22 @@
 - 虚空采矿机，支持主要矿物，甚至是下界残骸
 - 永恒星光──试炼密室也被移动到了这里，包含新矿物──金红石及其特别处理
 - 末地──获得硅岩以及新的处理线路，以及一个自动化挑战
-- 集气室，快速获取空气
-- 虚空钻机，快速获得一些流体
-### Also See...
+- 集气室，虚空钻机
+- 太空无人机
+### 其他组分
+以上或者以下的项目，都来源于 AI 生成
+
 [HanXingReborn](https://github.com/ArHanXing/HanXingReborn), 为本整合包定制的 Tech Reborn 版本
 
 [cmrh-affinity](https://github.com/ArHanXing/cmrh-affinity), 为本整合包定制的 Affinity 版本
 
 [Oritech-CmRhTweak](https://github.com/ArHanXing/Oritech-cmrh), 为本整合包定制的 Oritech 版本
 
-[OR裂变堆规划器](https://arhanxing.github.io/Oritech-cmrh/)，为本整合包定制的 Oritech Reactor Planner
+[OR裂变堆规划器](https://arhanxing.github.io/Oritech-cmrh/)，为本整合包定制的 Oritech 核电规划器
 
-[Ez2Rs](https://github.com/ArHanXing/ez2rs), 一个 Refined Storage 2 的拓展，主要加入 AE2WTLib 以及部分附属的优秀QOL功能
+[Ez2Rs](https://github.com/ArHanXing/ez2rs), 一个 Refined Storage 2 的拓展，主要加入 AE2WTLib 以及部分附属的QOL功能
+
+[InGameInfo XML Port Edition](https://github.com/ArHanXing/InGameInfoXML-fabric)，复活了 InGameInfo XML，感谢 ZomGraves 此前的 neoforge 复活代码
 
 ## 服务端mod
 - Ledger 类似于CoreProtect，查熊
