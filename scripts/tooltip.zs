@@ -561,8 +561,16 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:jsonreg:vanadium_rod>.addTooltip("§e§lV§r");
 <item:jsonreg:vanadium_magnetite_dust>.addTooltip("§e§l(Fe,V)₃O₄§r");
 
-
 // —— 金红石中间体 ——
-<item:jsonreg:rutile_clump>.addTooltip("§c§lTiO₂§r");
-<item:jsonreg:rutile_gem>.addTooltip("§c§lTiO₂§r");
-<item:jsonreg:rutile_concentrate>.addTooltip("§c§lTiO₂§r");
+<item:jsonreg:rutile_clump>.addTooltip("§e§lTiO₂§r");
+<item:jsonreg:rutile_gem>.addTooltip("§e§lTiO₂§r");
+<item:jsonreg:rutile_concentrate>.addTooltip("§e§lTiO₂§r");
+
+<item:jsonreg:space_drone_mk1>.addTooltip("§e未灌注燃油！§r");
+<item:jsonreg:space_drone_mk1_powered>.addTooltip("§a已灌注燃油！§r");
+<item:jsonreg:space_drone_mk2>.addTooltip("§e未灌注燃油！§r");
+<item:jsonreg:space_drone_mk2_powered>.addTooltip("§a已灌注燃油！§r");
+<item:jsonreg:space_drone_mk3>.addTooltip("§e未灌注燃油！§r");
+<item:jsonreg:space_drone_mk3_powered>.addTooltip("§a已灌注燃油！§r");
+
+<item:oritech:small_tank_block>.addTooltip("§e可能存在吞流体等Bug，慎用！§r");

@@ -4,30 +4,9 @@ import crafttweaker.api.recipe.type.Recipe;
 // =====================================================================
 // 太空电梯 —— 强化硅岩合金 / 超高强度混凝土 / 结构方块
 // =====================================================================
-// 设计稿：scripts/tools/space_elevator_design.md
-//
-// 两条材料线：
-//   A. 强化硅岩合金 —— 在既有 naquadah_alloy(Nq⁺₂W₇Ni) 上加一道强化改性
-//      基体批次 → 强化批次 → 电高炉 → 真空冷冻 → 板/杆 → 机械外壳
-//   B. 超高强度混凝土 UHPC —— 熟料 → 水泥 → 拌合料 → 蒸汽养护 → 结构混凝土
-//
-// 关键设计约束：
-//   1. 不新建平行合金：以既有硅岩合金粉为基体，只补 5 个强化态物品。
-//      既有基体配方已经用的是 enriched_naquadah_dust，故 Nq⁺ 由基体满足，
-//      强化步不再重复添加富集硅岩。
-//   2. 热值不突破 5000（硅岩线圈上限），避免产生无线圈可达的死配方。
-//   3. 混凝土不依赖副产：石灰走「方解石煅烧」，石膏走「生石灰 + 硫酸」，
-//      两条都是可量产路线；既有的 calcium_oxide_slag / calcium_sulfate_dust
-//      副产照旧存在（作为补充而非唯一来源）。
-//   4. 蒸汽养护用 oritech:centrifuge_fluid（OR 侧唯一被验证「吃真实流体 + 出物品」
-//      的机器；oritech:assembler 在包内 12 条配方全是 minecraft:empty，不可靠）。
-//      重跑 gen_large_machine_compat.py 后会自动镜像出一份 large_mixer 入口。
-// =====================================================================
 
 
-// =====================================================================
 // 一、强化硅岩合金
-// =====================================================================
 
 // --- 1. 强化批次（大化反，4 进 / 4 出）---
 // 既有基体：钨粉×7 + 富集硅岩粉×2 + 镍粉×1 → 硅岩合金粉×10（t2.zs，不改）
@@ -114,20 +93,18 @@ import crafttweaker.api.recipe.type.Recipe;
 // 形制对齐 multiblock_casing.zs 的既有 6 种外壳
 <recipetype:techreborn:precise_assembler>.addJsonRecipe("space.elevator_casing", {type: "techreborn:precise_assembler",
     outputs: [
-        {id: "techreborn:space_elevator_casing", count: 1}
+        {id: "techreborn:space_elevator_casing", count: 4}
     ],
     time: 400,
     power: 256,
     ingredients: [
-        {count: 4, item: "jsonreg:reinforced_naquadah_alloy_plate"},
-        {count: 1, item: "jsonreg:duratium_frame"}
+        {count: 2, item: "jsonreg:reinforced_naquadah_alloy_plate"},
+        {count: 2, item: "jsonreg:duratium_frame"}
     ]
 });
 
 
-// =====================================================================
 // 二、超高强度混凝土 UHPC
-// =====================================================================
 
 // --- 1. 生石灰（方解石煅烧路线）---
 // 依据：CaCO₃ → CaO + CO₂
@@ -221,8 +198,8 @@ import crafttweaker.api.recipe.type.Recipe;
     power: 128,
     ingredients: [
         {count: 4, item: "jsonreg:structure_concrete"},
-        {count: 16, item: "jsonreg:steel_fiber"},
-        {count: 4, item: "techreborn:tungstensteel_plate"}
+        {count: 8, item: "jsonreg:steel_fiber"},
+        {count: 2, item: "techreborn:tungstensteel_plate"}
     ]
 });
 
@@ -235,34 +212,13 @@ import crafttweaker.api.recipe.type.Recipe;
     power: 128,
     ingredients: [
         {count: 4, item: "jsonreg:structure_concrete"},
-        {count: 4, item: "techreborn:aluminum_plate"}
+        {count: 2, item: "techreborn:aluminum_plate"}
     ]
 });
 
 
-// =====================================================================
-// 三、太空电梯功能方块  ——【状态：整节暂时停用，非故障】
-// =====================================================================
-// TR 5.12 里这 5 个方块原本**全部 0 配方**，其中 casing 已在上面第一节补齐。
-// 下面这段块注释里的 4 条配方（主机 / 供电模块 / 组装机 / 采矿机）
-// 是**有意注释**的，等整条「太空电梯怎么玩」定下来再恢复，不是写坏或被误删。
-//
-// 恢复前需要先决定的两件事：
-//   1. 主机 techreborn:space_elevator —— 原方案走无尽工作台
-//      （avaritia:extreme_shaped，9×9，外圈强化板 + 四角钻石晶格 +
-//        中心硅岩星包中子素块），方案是否保留待定。
-//   2. 供电模块 techreborn:space_elevator_power_module —— 结构里要 **160 个**，
-//      单件成本需要单独评估，否则很容易变成 800+ 强化锭的天文数字。
-//
-// 结构体本身（config/techreborn/multiblock/space_elevator.json，35×35×43）
-// 需要 G(主机) ×1 与 H(供电模块) ×160，因此**这两条不恢复，电梯无法成型**。
-// 其余所需方块（承压/内部混凝土、外壳、硅岩框架、高能机械外壳、日蚀核心）
-// 均已具备配方。
+// 三、太空电梯功能方块 
 
-// --- 1. 主机（无尽工作台）---
-// 外形：外圈强化硅岩合金板 + 四角钻石晶格，中心硅岩星 + 中子素核
-
-//TODO
 <recipetype:avaritia:extreme_crafting>.addJsonRecipe("space.elevator.main",
 {type: "avaritia:extreme_shaped", result: {id: "techreborn:space_elevator", count: 1}, pattern: [
     "    B    ",
@@ -329,3 +285,4 @@ import crafttweaker.api.recipe.type.Recipe;
         {count: 2, item: "techreborn:void_drill"}
     ]
 });
+
