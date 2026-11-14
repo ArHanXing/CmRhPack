@@ -40,7 +40,7 @@ import crafttweaker.api.recipe.type.Recipe;
 
 <recipetype:techreborn:precise_assembler>.addJsonRecipe("mbcasing.turbine_titanium", {type: "techreborn:precise_assembler", 
     outputs: [
-        {id: "jsonreg:machine_casing_turbine_titanium", count: 1}
+        {id: "jsonreg:machine_casing_turbine_titanium", count: 2}
     ],
     time: 100, power: 128,
     ingredients: [
@@ -51,7 +51,7 @@ import crafttweaker.api.recipe.type.Recipe;
 
 <recipetype:techreborn:precise_assembler>.addJsonRecipe("mbcasing.robust_tungstensteel", {type: "techreborn:precise_assembler", 
     outputs: [
-        {id: "jsonreg:machine_casing_robust_tungstensteel", count: 1}
+        {id: "jsonreg:machine_casing_robust_tungstensteel", count: 2}
     ],
     time: 100, power: 128,
     ingredients: [

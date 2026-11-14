@@ -1,0 +1,446 @@
+{
+  "type": "asteroid_belt",
+  "tier": 1,
+  "system": "sol",
+  "from_system": "sol:sun",
+  "parent": "sol:sun",
+  "sort_order": 40,
+  "display": {
+    "name_key": "gui.techreborn.space.body.asteroid_belt",
+    "description_key": "planet.cmrh.sol.asteroid_belt.desc"
+  },
+  "marker_block": "minecraft:stone",
+  "marker_scale": 0.6,
+  "time": 240,
+  "physical": {
+    "radius_km": 473,
+    "orbit_radius_au": 2.77,
+    "orbit_phase_deg": 280,
+    "temperature_k": 167,
+    "rotation_period_hours": 9.074,
+    "orbital_period_days": 1681.63,
+    "orbit_features": []
+  },
+  "missions": {
+    "survey": {
+      "enabled": true,
+      "time": 6000,
+      "variants": [
+        {
+          "tier": 1,
+          "inputs": [
+            {
+              "item": "techreborn:space_probe_mk1_powered",
+              "count": 1
+            },
+            {
+              "item": "jsonreg:mv_sensor",
+              "count": 4
+            }
+          ],
+          "outputs": [
+            {
+              "item": "techreborn:space_probe_mk1",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "tier": 2,
+          "inputs": [
+            {
+              "item": "techreborn:space_probe_mk2_powered",
+              "count": 1
+            },
+            {
+              "item": "jsonreg:mv_sensor",
+              "count": 4
+            }
+          ],
+          "outputs": [
+            {
+              "item": "techreborn:space_probe_mk2",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "tier": 3,
+          "inputs": [
+            {
+              "item": "techreborn:space_probe_mk3_powered",
+              "count": 1
+            },
+            {
+              "item": "jsonreg:mv_sensor",
+              "count": 4
+            }
+          ],
+          "outputs": [
+            {
+              "item": "techreborn:space_probe_mk3",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    "land": {
+      "enabled": true,
+      "time": 6000,
+      "variants": [
+        {
+          "tier": 1,
+          "inputs": [
+            {
+              "item": "techreborn:space_lander_mk1_powered",
+              "count": 1
+            },
+            {
+              "item": "jsonreg:stress_proof_casing",
+              "count": 16
+            },
+            {
+              "item": "jsonreg:steel_frame",
+              "count": 16
+            }
+          ],
+          "outputs": [
+            {
+              "item": "techreborn:space_lander_mk1",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "tier": 2,
+          "inputs": [
+            {
+              "item": "techreborn:space_lander_mk2_powered",
+              "count": 1
+            },
+            {
+              "item": "jsonreg:stress_proof_casing",
+              "count": 16
+            },
+            {
+              "item": "jsonreg:steel_frame",
+              "count": 16
+            }
+          ],
+          "outputs": [
+            {
+              "item": "techreborn:space_lander_mk2",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "tier": 3,
+          "inputs": [
+            {
+              "item": "techreborn:space_lander_mk3_powered",
+              "count": 1
+            },
+            {
+              "item": "jsonreg:stress_proof_casing",
+              "count": 16
+            },
+            {
+              "item": "jsonreg:steel_frame",
+              "count": 16
+            }
+          ],
+          "outputs": [
+            {
+              "item": "techreborn:space_lander_mk3",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    "outpost": {
+      "enabled": true,
+      "time": 24000,
+      "variants": [
+        {
+          "tier": 1,
+          "inputs": [
+            {
+              "item": "techreborn:space_lander_mk1_powered",
+              "count": 1
+            },
+            {
+              "item": "techreborn:core_mk1",
+              "count": 1
+            },
+            {
+              "item": "jsonreg:stress_proof_casing",
+              "count": 32
+            },
+            {
+              "item": "jsonreg:large_scale_assembling_casing",
+              "count": 16
+            },
+            {
+              "item": "jsonreg:steel_frame",
+              "count": 32
+            },
+            {
+              "item": "techreborn:advanced_circuit",
+              "count": 32
+            },
+            {
+              "item": "techreborn:basic_solar_panel",
+              "count": 16
+            },
+            {
+              "item": "techreborn:insulated_gold_cable",
+              "count": 32
+            }
+          ],
+          "outputs": [
+            {
+              "item": "techreborn:space_lander_mk1",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "tier": 2,
+          "inputs": [
+            {
+              "item": "techreborn:space_lander_mk2_powered",
+              "count": 1
+            },
+            {
+              "item": "techreborn:core_mk2",
+              "count": 1
+            },
+            {
+              "item": "jsonreg:stress_proof_casing",
+              "count": 32
+            },
+            {
+              "item": "jsonreg:large_scale_assembling_casing",
+              "count": 16
+            },
+            {
+              "item": "jsonreg:steel_frame",
+              "count": 32
+            },
+            {
+              "item": "techreborn:advanced_circuit",
+              "count": 32
+            },
+            {
+              "item": "techreborn:basic_solar_panel",
+              "count": 16
+            },
+            {
+              "item": "techreborn:insulated_gold_cable",
+              "count": 32
+            }
+          ],
+          "outputs": [
+            {
+              "item": "techreborn:space_lander_mk2",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "tier": 3,
+          "inputs": [
+            {
+              "item": "techreborn:space_lander_mk3_powered",
+              "count": 1
+            },
+            {
+              "item": "techreborn:core_mk3",
+              "count": 1
+            },
+            {
+              "item": "jsonreg:stress_proof_casing",
+              "count": 32
+            },
+            {
+              "item": "jsonreg:large_scale_assembling_casing",
+              "count": 16
+            },
+            {
+              "item": "jsonreg:steel_frame",
+              "count": 32
+            },
+            {
+              "item": "techreborn:advanced_circuit",
+              "count": 32
+            },
+            {
+              "item": "techreborn:basic_solar_panel",
+              "count": 16
+            },
+            {
+              "item": "techreborn:insulated_gold_cable",
+              "count": 32
+            }
+          ],
+          "outputs": [
+            {
+              "item": "techreborn:space_lander_mk3",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    "mining": {
+      "enabled": true,
+      "requires_landing": true,
+      "variants": [
+        {
+          "tier": 1,
+          "inputs": [
+            {
+              "item": "techreborn:space_drone_mk1_powered",
+              "count": 1
+            }
+          ],
+          "outputs": [
+            {
+              "item": "techreborn:space_drone_mk1",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "tier": 2,
+          "inputs": [
+            {
+              "item": "techreborn:space_drone_mk2_powered",
+              "count": 1
+            }
+          ],
+          "outputs": [
+            {
+              "item": "techreborn:space_drone_mk2",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "tier": 3,
+          "inputs": [
+            {
+              "item": "techreborn:space_drone_mk3_powered",
+              "count": 1
+            }
+          ],
+          "outputs": [
+            {
+              "item": "techreborn:space_drone_mk3",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "resources": [
+    {
+      "id": "naquadah",
+      "item": "jsonreg:end_naquadah_ore",
+      "count": 24,
+      "order": 10
+    },
+    {
+      "id": "enriched_naquadah",
+      "item": "jsonreg:end_enriched_naquadah_ore",
+      "count": 16,
+      "order": 20
+    },
+    {
+      "id": "ancient_debris",
+      "item": "minecraft:ancient_debris",
+      "count": 24,
+      "order": 30
+    },
+    {
+      "id": "diamond",
+      "item": "minecraft:diamond_ore",
+      "count": 16,
+      "order": 40
+    },
+    {
+      "id": "emerald",
+      "item": "minecraft:emerald_ore",
+      "count": 12,
+      "order": 50
+    },
+    {
+      "id": "starcore",
+      "item": "eternal_starlight:voidstone_starcore_ore",
+      "count": 16,
+      "order": 60
+    },
+    {
+      "id": "starlit_diamond",
+      "item": "eternal_starlight:voidstone_starlit_diamond_ore",
+      "count": 16,
+      "order": 70
+    },
+    {
+      "id": "dimslag",
+      "item": "eternal_starlight:dimslag",
+      "count": 16,
+      "order": 80
+    },
+    {
+      "id": "peculiar_clump",
+      "item": "affinity:peculiar_clump",
+      "count": 16,
+      "order": 90
+    },
+    {
+      "id": "thioquartz",
+      "item": "eternal_starlight:thioquartz_cluster",
+      "count": 16,
+      "order": 100
+    },
+    {
+      "id": "red_starlight_crystal",
+      "item": "eternal_starlight:red_starlight_crystal_cluster",
+      "count": 16,
+      "order": 110
+    },
+    {
+      "id": "blue_starlight_crystal",
+      "item": "eternal_starlight:blue_starlight_crystal_cluster",
+      "count": 16,
+      "order": 120
+    },
+    {
+      "id": "nickel",
+      "item": "oritech:nickel_ore",
+      "count": 16,
+      "order": 130
+    },
+    {
+      "id": "platinum",
+      "item": "oritech:deepslate_platinum_ore",
+      "count": 16,
+      "order": 140
+    }
+  ],
+  "visibility": {
+    "name": "always",
+    "physical": "after_survey",
+    "resources": "after_survey"
+  },
+  "tags": [
+    "cmrh_t1",
+    "inner_system",
+    "outpost_mining"
+  ]
+}

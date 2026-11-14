@@ -20,144 +20,18 @@ T2.4 终末处理：
 解锁OR义体（t2.2）
 使用硅岩建造OR粒子对撞，然后处理超能硅岩，合成PBI，制作T3电路板，为聚变堆铺路。
 
-t1 洗涤溶剂
-太空组装——轨道中继卫星——跨维度无线
 
+---
+评定模组：
+Pipster 替掉原本的线缆和 Tesseract
+需要额外兼容，移植材质（例如直接搬 mek）
 
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:affinity:wisp_forest>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:cinderscapes:ashy_shoals>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:cinderscapes:blackstone_shales>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:cinderscapes:luminous_grove>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:cinderscapes:quartz_cavern>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:crystallized_desert>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:dark_swamp>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:ether_river>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:glimmer_scrubland>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:grim_shore>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:icy_sea>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:lucent_mycelium_isle>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:lush_shallow_sea>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:permafrost_peaks>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:scarlet_forest>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:shimmer_river>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:solaris_isles>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:spiral_kelp_forest>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:starlight_dense_forest>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:starlight_forest>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:starlight_permafrost_forest>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:starlight_taiga>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:starlit_sea>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:starlit_sky>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:the_abyss>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:torreya_forest>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:umbral_plains>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:eternal_starlight:warm_shore>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:far_end:amethyst_forest>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:far_end:ashfall_delta>
-[23:03:42.761][INFO][CraftTweaker-Commands]: <biome:far_end:end_wilds>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:far_end:ender_waste>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:far_end:flesh_tundra>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:far_end:the_nest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:far_end:void>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:far_end:warped_marsh>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:badlands>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:bamboo_jungle>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:basalt_deltas>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:beach>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:birch_forest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:cherry_grove>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:cold_ocean>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:crimson_forest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:dark_forest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:deep_cold_ocean>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:deep_dark>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:deep_frozen_ocean>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:deep_lukewarm_ocean>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:deep_ocean>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:desert>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:dripstone_caves>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:end_barrens>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:end_highlands>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:end_midlands>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:eroded_badlands>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:flower_forest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:forest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:frozen_ocean>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:frozen_peaks>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:frozen_river>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:grove>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:ice_spikes>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:jagged_peaks>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:jungle>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:lukewarm_ocean>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:lush_caves>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:mangrove_swamp>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:meadow>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:mushroom_fields>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:nether_wastes>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:ocean>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:old_growth_birch_forest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:old_growth_pine_taiga>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:old_growth_spruce_taiga>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:plains>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:river>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:savanna>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:savanna_plateau>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:small_end_islands>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:snowy_beach>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:snowy_plains>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:snowy_slopes>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:snowy_taiga>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:soul_sand_valley>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:sparse_jungle>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:stony_peaks>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:stony_shore>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:sunflower_plains>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:swamp>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:taiga>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:the_end>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:the_void>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:warm_ocean>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:warped_forest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:windswept_forest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:windswept_gravelly_hills>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:windswept_hills>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:windswept_savanna>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:minecraft:wooded_badlands>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:mysticsbiomes:autumnal_grove>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:mysticsbiomes:bamboo_blossom_forest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:mysticsbiomes:lagoon>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:mysticsbiomes:lavender_meadow>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:mysticsbiomes:lush_oasis>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:mysticsbiomes:strawberry_fields>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:mysticsbiomes:tropics>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:amethyst_forest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:ashfall_deltas>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:blazing_dunes>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:crystal_crags>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:dragons_den>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:end_shrubland>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:end_wilds>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:ender_wastes>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:endless_dunes>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:fiery_hills>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:flesh_tundra>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:frosted_hills>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:frosted_valley>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:frozen_marsh>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:frozen_shrubland>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:frozen_spikes>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:hallowed_tundra>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:prismarine_forest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:prismatic_dunes>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:sculk_growth>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:the_hallow>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:the_nest>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:the_void>
-[23:03:42.762][INFO][CraftTweaker-Commands]: <biome:stellarity:warped_marsh>
-# 写任务
-硅岩处理
-PBI
+额外模组：
 
-我想通了，末期就是猫猫锭处理
-
+邪恶工艺
+暮色森林
+机械动力（Create Reforged）
+自然灵气
+Just Another Witchery Remake
+RF工具箱
+Things （glisco做的）

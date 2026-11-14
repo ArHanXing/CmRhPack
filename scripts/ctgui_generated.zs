@@ -903,3 +903,9 @@ craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/void_drill"
     [<item:jsonreg:mv_electric_motor>, <item:jsonreg:machine_casing_turbine_titanium>, <item:jsonreg:mv_electric_motor>],
     [<item:jsonreg:machine_casing_turbine_titanium>, <item:affinity:resonance_crystal>, <item:jsonreg:machine_casing_turbine_titanium>]]);
 
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine/water_sink");
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/water_sink", <item:techreborn:water_sink>, [
+    [<item:minecraft:white_terracotta>, <item:techreborn:crude_tank_unit>, <item:minecraft:white_terracotta>],
+    [<tag:item:minecraft:planks>, <item:minecraft:white_terracotta>, <tag:item:minecraft:planks>],
+    [<tag:item:minecraft:planks>, <tag:item:minecraft:planks>, <tag:item:minecraft:planks>]]);
+

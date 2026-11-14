@@ -566,11 +566,12 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:jsonreg:rutile_gem>.addTooltip("§e§lTiO₂§r");
 <item:jsonreg:rutile_concentrate>.addTooltip("§e§lTiO₂§r");
 
-<item:jsonreg:space_drone_mk1>.addTooltip("§e未灌注燃油！§r");
-<item:jsonreg:space_drone_mk1_powered>.addTooltip("§a已灌注燃油！§r");
-<item:jsonreg:space_drone_mk2>.addTooltip("§e未灌注燃油！§r");
-<item:jsonreg:space_drone_mk2_powered>.addTooltip("§a已灌注燃油！§r");
-<item:jsonreg:space_drone_mk3>.addTooltip("§e未灌注燃油！§r");
-<item:jsonreg:space_drone_mk3_powered>.addTooltip("§a已灌注燃油！§r");
-
+/* TODO
+<item:techreborn:space_drone_mk1>.addTooltip("§e未灌注燃油！§r");
+<item:techreborn:space_drone_mk1_powered>.addTooltip("§a已灌注燃油！§r");
+<item:techreborn:space_drone_mk2>.addTooltip("§e未灌注燃油！§r");
+<item:techreborn:space_drone_mk2_powered>.addTooltip("§a已灌注燃油！§r");
+<item:techreborn:space_drone_mk3>.addTooltip("§e未灌注燃油！§r");
+<item:techreborn:space_drone_mk3_powered>.addTooltip("§a已灌注燃油！§r");
+*/
 <item:oritech:small_tank_block>.addTooltip("§e可能存在吞流体等Bug，慎用！§r");
