@@ -1,0 +1,69 @@
+{
+  "enableHud": true,
+  "enableTaskBook": true,
+  "enableSoundEffects": true,
+  "maxTasksPerPlayer": 100,
+  "autoSave": true,
+  "autoSaveIntervalMinutes": 5,
+  "defaultPriority": "MEDIUM",
+  "enableTaskRewards": false,
+  "defaultPersonalProjectInitialized": true,
+  // commandAccessMode notes:
+  // OP_ONLY: only OP can use all commands
+  // VIEW_ONLY: non-OP can use view commands, edit still requires OP
+  // FULL: non-OP can use view/edit commands (not recommended for public servers)
+  "commandAccessMode": "OP_ONLY",
+  // storageBackend notes:
+  // nbt: deprecated legacy file storage, will be ignored and forced to h2
+  // h2: H2 database storage (forced, only supported mode)
+  "storageBackend": "h2",
+  // h2BackupOnStart notes:
+  // false: do not create a startup backup
+  // true: create one H2 backup after H2 initializes on startup (default; only effective when storageBackend is h2)
+  "h2BackupOnStart": true,
+  // h2BackupRetentionCount notes:
+  // how many automatic backups (startup backups / pre-restore safety backups) to keep; older ones are deleted automatically (minimum 1)
+  "h2BackupRetentionCount": 10,
+  "gui": {
+    "guiWidth": 500,
+    "guiHeight": 400,
+    "taskListY": 30,
+    "taskItemHeight": 25,
+    "inputFieldYOffset": -50,
+    "priorityFieldWidth": 100,
+    "titleFieldWidth": 200,
+    "descFieldWidth": 280,
+    "buttonHeight": 20,
+    "saveButtonYOffset": -30,
+    "completeButtonYOffset": -85,
+    "backgroundColor": -2013265920,
+    "selectedBackgroundColor": -11184811,
+    "hoveredBackgroundColor": -13421773,
+    "borderColor": -12632257,
+    "padding": 10,
+    "elementSpacing": 5,
+    "buttonSpacing": 5,
+    "enableDarkTheme": false,
+    "showCompletedTasks": true,
+    "sortByPriority": false,
+    "hudPosition": "TOP_RIGHT",
+    "hudWidth": 200,
+    "hudMaxHeight": 400,
+    "hudTodoLimit": 12,
+    "hudDoneLimit": 5,
+    "hudDefaultExpanded": true,
+    "hudOpacity": 0.9,
+    "hudUseCustomPosition": false,
+    "hudCustomX": 10,
+    "hudCustomY": 10,
+    "hudShowWhenEmpty": false,
+    "hudShowSubtasks": true,
+    "hudDefaultView": "PERSONAL",
+    "hudProjectSource": "CURRENT",
+    "hudStarredProjectIds": [],
+    "lastActiveProjectIdsByNamespace": {
+      "local": "default-personal-project"
+    },
+    "projectSidebarWidth": 100
+  }
+}

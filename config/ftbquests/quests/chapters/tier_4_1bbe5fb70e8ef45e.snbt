@@ -9,7 +9,20 @@
 	id: "1BBE5FB70E8EF45E"
 	images: [ ]
 	order_index: 2
-	quest_links: [ ]
+	quest_links: [
+		{
+			id: "0AD0AECF7A79342E"
+			linked_quest: "53CBB99B1D299155"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			id: "037577573A6DCB82"
+			linked_quest: "2C09085AFD33EB13"
+			x: 2.0d
+			y: 7.5d
+		}
+	]
 	quests: [
 		{
 			icon: {
@@ -217,20 +230,6 @@
 		}
 		{
 			dependencies: ["2E5EBD89875B28CF"]
-			icon: {
-				id: "eternal_starlight:thermal_springstone"
-			}
-			id: "04619F54D8C55DAF"
-			tasks: [{
-				biome: "eternal_starlight:the_abyss"
-				id: "182FA17184E395B4"
-				type: "biome"
-			}]
-			x: 2.5d
-			y: 1.5d
-		}
-		{
-			dependencies: ["2E5EBD89875B28CF"]
 			id: "65494CDB32EFB1D3"
 			tasks: [{
 				biome: "eternal_starlight:starlight_permafrost_forest"
@@ -312,26 +311,15 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["7A17C4E91C429C0D"]
-			id: "157E60350169C749"
+			dependencies: ["2E5EBD89875B28CF"]
+			id: "316D21B81299A2A8"
 			tasks: [{
-				id: "014F794DA39DF194"
-				item: { count: 1, id: "techreborn:hunter_process_reactor" }
+				id: "01743A542DD72DF3"
+				item: { count: 1, id: "eternal_starlight:raw_amaramber" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.5d
-		}
-		{
-			dependencies: ["7A17C4E91C429C0D"]
-			id: "48731DB768FB7FE5"
-			tasks: [{
-				id: "3257786DB3A4CF6D"
-				item: { count: 1, id: "techreborn:kroll_reduction_vessel" }
-				type: "item"
-			}]
-			x: 2.0d
-			y: 6.5d
+			x: 2.5d
+			y: 1.5d
 		}
 	]
 }

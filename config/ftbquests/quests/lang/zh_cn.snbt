@@ -15,7 +15,7 @@
 	chapter.43E68DA38CB524C7.title: "&b矿物处理学"
 	chapter.4B0E94BED93B19C2.title: "&d炎狱之境"
 	chapter.4B122B97959C1E81.title: "&b精！致！存储"
-	chapter.6084EEF8F23A89E0.title: "&z我们与神的间隙&r"
+	chapter.6084EEF8F23A89E0.title: "&z我们与「神」的间隙&r"
 	chapter.68D3B8D4284E4BF4.title: "&a初来乍到"
 	chapter.69D03D6AA0D77973.title: "WIP &b简单的怪物农场&r"
 	chapter.6DB5109FF6BF0444.title: "&a魔法脉动 Pt.1"
@@ -60,8 +60,6 @@
 	]
 	quest.037D68233D148CB6.quest_subtitle: "真是一对苦命鸳鸯（指不会挨在一起）"
 	quest.043BE3C25FAC553D.title: "奇妙染料"
-	quest.04619F54D8C55DAF.quest_desc: ["采集热泉石并与水压斗争"]
-	quest.04619F54D8C55DAF.title: "深渊"
 	quest.047219C2D3981C40.quest_desc: [
 		"&e&lT2 &r发电机"
 		"驱动&a原子裂变的能量&r。离可控聚变反应还有差距。"
@@ -594,6 +592,7 @@
 	quest.2A8169C6DFBEB32D.quest_desc: ["和铂处说再见......"]
 	quest.2A8169C6DFBEB32D.title: "铂"
 	quest.2B9B96CE36E283A9.quest_desc: ["可持久化回滚带修附魔台"]
+	quest.2C09085AFD33EB13.quest_desc: ["相对而言，速度更快，并行更高，而且甚至不需要烧制"]
 	quest.2C453E81D0B53296.quest_desc: ["你甚至可以借由它们的高活性来降低合成泰拉钢的消耗"]
 	quest.2C4ECEB40FD7F147.title: "铅-辉银矿脉"
 	quest.2CB1B3EA63706836.title: "魔法补给"
@@ -670,6 +669,11 @@
 	quest.30A353841DCF3E21.title: "AR永恒光太阳能"
 	quest.311C7A96A4ED555E.quest_desc: ["哦，我可爱的硅"]
 	quest.311C7A96A4ED555E.title: "石英"
+	quest.316D21B81299A2A8.quest_desc: [
+		"给 &a榧木原木&r 进行 &b去皮&r 之后概率获得"
+		""
+		"可以用于量产&a含杂无烟煤粉&r"
+	]
 	quest.316E0D54918B76B4.title: "\"活\"的方块"
 	quest.318B9F9C16A228D5.quest_desc: ["星光人：我不是，我没有，别胡说"]
 	quest.318B9F9C16A228D5.quest_subtitle: "击杀圣域乱飞的粒子效果获得"
@@ -839,6 +843,16 @@
 		"一次投掷多个相同的锭会增加效果的持续时间"
 	]
 	quest.3EDCB5493D6516E9.quest_subtitle: "直接挖，没问题的"
+	quest.3F105BB74CFB5365.quest_desc: [
+		"默认按下 &aH&r 键打开 To-Do List"
+		""
+		"你可以配置一个简单的 HUD 来提醒你还有没有完成的事情"
+		""
+		"&b在界面下面输入框写任务，然后 Enter 即可添加。&r"
+		""
+		"此外还有团队任务，但是似乎不支持 FTBTeams，有需要的同学们可以使用喵"
+	]
+	quest.3F105BB74CFB5365.title: "To-Do List"
 	quest.3F287A5CEB164771.quest_desc: ["魔法很神奇吧！"]
 	quest.3F287A5CEB164771.quest_subtitle: "首次合成时请使用带有&z灵魂注入催化剂&r的配方"
 	quest.3F87CE644D11CFA2.quest_desc: [
@@ -1111,6 +1125,11 @@
 		"在它的上方放置&eTR 铁栅栏&r，可以高效引来雷击，雷雨天发电量极高（单次262144 EU，2A &cZPM&r）。"
 		""
 		"但是强依赖天气。"
+	]
+	quest.53CBB99B1D299155.quest_desc: [
+		"产出 &b钛粉&r"
+		""
+		"&b钛粉&r烧制钛的速度&a更快&r，也就是说你可以从烧钛的深渊里挣脱了！"
 	]
 	quest.5433466C47A1067D.quest_subtitle: "这时的钛需要从铝土中微量提取"
 	quest.5433CFF8D40149C8.quest_desc: [""]
@@ -1437,6 +1456,25 @@
 	]
 	quest.71B012A9F2F032AB.quest_subtitle: "强制要求2.5kJ了"
 	quest.71EFF4EA370A6B00.title: "虚空"
+	quest.71F93CA40AF9DE80.quest_desc: [
+		"在左上角会看到的，可以显示一些&a当前游戏状态&r的 GUI"
+		""
+		"{image:minecraft:textures/20.png width:200 height:100 align:center}"
+		"———— &bPOWERNET 分组&r"
+		"首先你需要使用 &a指令 /techreborn igi_energybind <x> <y> <z>&r 来绑定一个电网，这里的 xyz 是&e电网中&r任意一个&e线缆&r的位置"
+		""
+		"可以将视角对准线缆方块之后自动填充，自动填充的坐标便是线缆的坐标"
+		""
+		"当然，暂时不支持 Oritech 的能量线缆和 Pipster 的线缆"
+		""
+		"数据中 &bBUF&r 代表 &b电网当前的缓存容量&r"
+		""
+		"———— &dARCANE 分组&r"
+		"显示 &aBotania&r 或者 &bAffinity&r 的玩家身上的&d魔力值&r，以及&d区块生灵通量值&r"
+		""
+		"这几个数据将会在你进入魔法章节后对你有不少作用"
+	]
+	quest.71F93CA40AF9DE80.title: "In Game Info"
 	quest.71FB4A1FAFDAF7C4.quest_desc: [
 		"产能速率 &a32 EU/t&r，雷雨天气&a 128 EU/t&r"
 		"&bT1&r 发电机"

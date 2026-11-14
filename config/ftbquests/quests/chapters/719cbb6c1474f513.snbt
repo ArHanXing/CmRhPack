@@ -141,6 +141,15 @@
 				id: "minecraft:dragon_egg"
 			}
 			id: "79514903FB21A9F3"
+			rewards: [{
+				count: 64
+				id: "42FD2D39CA67B359"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "49562DF752DBD62D"
@@ -254,11 +263,20 @@
 				id: "minecraft:cherry_leaves"
 			}
 			id: "3AADBBE2A192F179"
-			tasks: [{
-				biome: "stellarity:the_hallow"
-				id: "3EB3E463CD5144FD"
-				type: "biome"
-			}]
+			tasks: [
+				{
+					biome: "stellarity:the_hallow"
+					id: "3EB3E463CD5144FD"
+					optional_task: true
+					type: "biome"
+				}
+				{
+					biome: "stellarity:hallowed_tundra"
+					id: "5016E11923823398"
+					optional_task: true
+					type: "biome"
+				}
+			]
 			x: 9.5d
 			y: 5.5d
 		}
@@ -268,6 +286,15 @@
 				id: "minecraft:quartz_block"
 			}
 			id: "5AD2CE81280D82A8"
+			rewards: [{
+				count: 16
+				id: "550A533BF5FCB916"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "15394F3A20F622C6"
 				structure: "stellarity:chapel_of_light"
@@ -365,6 +392,15 @@
 		{
 			dependencies: ["79514903FB21A9F3"]
 			id: "5FDF280E5EC6A5E7"
+			rewards: [{
+				count: 16
+				id: "112287E95527A8C2"
+				item: {
+					count: 1
+					id: "minecraft:ender_pearl"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "13CA2152BC26F751"
 				type: "checkmark"
@@ -453,6 +489,15 @@
 		{
 			dependencies: ["6B4DADE2E38CAF2A"]
 			id: "354F84885E39A244"
+			rewards: [{
+				count: 32
+				id: "3D828180D9E79072"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "20C2CAEA2F396459"
 				item: { components: { "minecraft:custom_data": { stellarity.special_item: "enderite_smithing_template" }, "minecraft:custom_model_data": 90000, "minecraft:item_name": "{\"color\":\"light_purple\",\"fallback\":\"Smithing Template\",\"italic\":false,\"translate\":\"stellarity.items.materials.enderite_smithing_template\"}", "minecraft:lore": [ "{\"color\":\"gray\",\"fallback\":\"Enderite Upgrade\",\"italic\":false,\"translate\":\"stellarity.items.materials.enderite_smithing_template.upgrade\"}", "\"\"", "{\"color\":\"gray\",\"italic\":false,\"translate\":\"item.minecraft.smithing_template.applies_to\"}", "{\"extra\":[{\"color\":\"blue\",\"fallback\":\"Netherite Equipment\",\"italic\":false,\"translate\":\"stellarity.items.materials.enderite_smithing_template.applies_to\"}],\"text\":\" \"}", "{\"extra\":[{\"color\":\"blue\",\"fallback\":\"Only usable at the Altar of The Accursed\",\"italic\":false,\"translate\":\"stellarity.items.materials.enderite_smithing_template.description\"}],\"text\":\" \"}", "{\"color\":\"gray\",\"italic\":false,\"translate\":\"item.minecraft.smithing_template.ingredients\"}", "{\"extra\":[{\"color\":\"blue\",\"fallback\":\"%1$s %2$s\",\"italic\":false,\"translate\":\"stellarity.items.materials.enderite_smithing_template.ingredients\",\"with\":[{\"fallback\":\"4x\",\"translate\":\"stellarity.items.materials.enderite_smithing_template.ingredients.count.4\"},{\"fallback\":\"Hallowed Ingot\",\"translate\":\"stellarity.items.materials.hallowed_ingot\"}]}],\"text\":\" \"}", "{\"extra\":[{\"color\":\"blue\",\"fallback\":\"%1$s %2$s\",\"italic\":false,\"translate\":\"stellarity.items.materials.enderite_smithing_template.ingredients\",\"with\":[{\"fallback\":\"4x\",\"translate\":\"stellarity.items.materials.enderite_smithing_template.ingredients.count.4\"},{\"fallback\":\"Chorus Plating\",\"translate\":\"stellarity.items.materials.chorus_plating\"}]}],\"text\":\" \"}", "{\"extra\":[{\"color\":\"blue\",\"fallback\":\"%1$s %2$s\",\"italic\":false,\"translate\":\"stellarity.items.materials.enderite_smithing_template.ingredients\",\"with\":[{\"fallback\":\"4x\",\"translate\":\"stellarity.items.materials.enderite_smithing_template.ingredients.count.4\"},{\"translate\":\"item.minecraft.shulker_shell\"}]}],\"text\":\" \"}", "{\"extra\":[{\"color\":\"blue\",\"fallback\":\"%1$s %2$s\",\"italic\":false,\"translate\":\"stellarity.items.materials.enderite_smithing_template.ingredients\",\"with\":[{\"fallback\":\"8x\",\"translate\":\"stellarity.items.materials.enderite_smithing_template.ingredients.count.8\"},{\"translate\":\"block.minecraft.cherry_leaves\"}]}],\"text\":\" \"}", "\"\"", "{\"color\":\"#CC26FF\",\"italic\":true,\"translate\":\"Stellarity\"}" ], "minecraft:rarity": "rare" }, count: 1, id: "minecraft:jigsaw" }
@@ -475,6 +520,15 @@
 		{
 			dependencies: ["354F84885E39A244"]
 			id: "5FB90E38B246AC9E"
+			rewards: [{
+				count: 32
+				id: "3334D8C2E81B342C"
+				item: {
+					count: 1
+					id: "jsonreg:coin"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "1CC61179B48621A4"
 				item: { components: { "minecraft:attribute_modifiers": { modifiers: [ { amount: 0.10000000149011612d, id: "minecraft:armor.chestplate", operation: "add_multiplied_base", slot: "chest", type: "minecraft:generic.movement_speed" }, { amount: -0.25d, id: "minecraft:armor.chestplate", operation: "add_multiplied_total", slot: "chest", type: "minecraft:generic.fall_damage_multiplier" }, { amount: 4.0d, id: "minecraft:armor.chestplate", operation: "add_value", slot: "chest", type: "minecraft:generic.safe_fall_distance" }, { amount: -0.3499999940395355d, id: "minecraft:armor.chestplate", operation: "add_multiplied_total", slot: "chest", type: "minecraft:generic.gravity" } ] }, "minecraft:custom_data": { stellarity.special_item: "empress_wings" }, "minecraft:custom_model_data": 90001, "minecraft:fire_resistant": { }, "minecraft:item_name": "{\"color\":\"#FF76D0\",\"fallback\":\"Empress Wings\",\"italic\":false,\"translate\":\"stellarity.items.elytra.empress_wings\"}", "minecraft:lore": [ "\"\"", "{\"color\":\"#EEEEEE\",\"fallback\":\"Delicate wings provide excellent\",\"italic\":false,\"translate\":\"stellarity.items.elytra.empress_wings.description.1\"}", "{\"color\":\"#EEEEEE\",\"fallback\":\"flight speed and agility\",\"italic\":false,\"translate\":\"stellarity.items.elytra.empress_wings.description.2\"}", "\"\"", "{\"color\":\"#EEEEEE\",\"fallback\":\"'Yes, their flight trail is rainbow'\",\"italic\":true,\"translate\":\"stellarity.items.elytra.empress_wings.flavor_text\"}", "\"\"", "{\"color\":\"#CC26FF\",\"italic\":true,\"translate\":\"Stellarity\"}" ], "minecraft:rarity": "epic" }, count: 1, id: "minecraft:elytra" }

@@ -909,3 +909,16 @@ craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/water_sink"
     [<tag:item:minecraft:planks>, <item:minecraft:white_terracotta>, <tag:item:minecraft:planks>],
     [<tag:item:minecraft:planks>, <tag:item:minecraft:planks>, <tag:item:minecraft:planks>]]);
 
+craftingTable.addShaped("ctgui/new/crafting/industrial_alloy_smelter", <item:techreborn:industrial_alloy_smelter>, [
+    [<item:techreborn:aluminum_plate>, <item:jsonreg:mv_voltage_coil>, <item:techreborn:aluminum_plate>],
+    [<item:techreborn:advanced_machine_casing>, <item:techreborn:alloy_smelter>, <item:techreborn:advanced_machine_casing>],
+    [<item:techreborn:aluminum_plate>, <item:jsonreg:mv_voltage_coil>, <item:techreborn:aluminum_plate>]]);
+
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine/large_mixer");
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/large_mixer", <item:techreborn:large_mixer>, [
+    [<item:jsonreg:tetrafluoroethylene_plate>, <item:techreborn:large_chemical_reactor>, <item:jsonreg:tetrafluoroethylene_plate>],
+    [<item:techreborn:advanced_machine_casing>, <item:oritech:centrifuge_block>, <item:techreborn:advanced_machine_casing>],
+    [<item:techreborn:magnalium_plate>, <item:techreborn:basic_tank_unit>, <item:techreborn:magnalium_plate>]]);
+
+craftingTable.addShapeless("ctgui/new/crafting/anthracite_powder", <item:affinity:anthracite_powder> * 4, [<item:eternal_starlight:raw_amaramber>, <item:botania:mana_powder>, <item:botania:mana_powder>, <item:botania:mana_powder>]);
+

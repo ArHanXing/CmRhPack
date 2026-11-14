@@ -281,14 +281,14 @@ ingredients: [{item: "techreborn:lazurite_plate"}, {item: "techreborn:industrial
 //钨钢的简单法
 <recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("t2.tr.lcr/tungstensteel_catalyzed", {type: "techreborn:large_chemical_reactor",
     outputs: [
-        {id: "techreborn:hot_tungstensteel_ingot", count: 1},
+        {id: "techreborn:hot_tungstensteel_ingot", count: 8},
         {id: "techreborn:cell", count: 4}
     ],
-    time: 800,
+    time: 6400,
     power: 128,
     ingredients: [
-        {item: "techreborn:tungsten_ingot", count: 1},
-        {item: "techreborn:steel_ingot", count: 1},
+        {item: "techreborn:tungsten_ingot", count: 8},
+        {item: "techreborn:steel_ingot", count: 8},
         {item: "botania:orechid_ignem", count: 1},
         {count: 4, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
