@@ -922,3 +922,8 @@ craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/large_mixer
 
 craftingTable.addShapeless("ctgui/new/crafting/anthracite_powder", <item:affinity:anthracite_powder> * 4, [<item:eternal_starlight:raw_amaramber>, <item:botania:mana_powder>, <item:botania:mana_powder>, <item:botania:mana_powder>]);
 
+craftingTable.addShaped("ctgui/new/crafting/compressed_crafting_table", <item:avaritia:compressed_crafting_table>, [
+    [<item:techreborn:refined_iron_plate>, <item:minecraft:iron_axe>, <item:techreborn:refined_iron_plate>],
+    [<tag:item:minecraft:logs>, <tag:item:minecraft:logs>, <tag:item:minecraft:logs>],
+    [<item:techreborn:refined_iron_plate>, <tag:item:minecraft:logs>, <item:techreborn:refined_iron_plate>]]);
+

@@ -422,7 +422,7 @@
 	quest.2020C04A83B1A6D9.quest_subtitle: "其实它是多方块结构"
 	quest.202B776E9289D479.quest_desc: ["他还是一种熔炉燃料"]
 	quest.202B776E9289D479.quest_subtitle: "这一步是大家熟悉的焦炉"
-	quest.214C7D6BFE0BC942.quest_desc: [""]
+	quest.214C7D6BFE0BC942.quest_desc: ["需要一桶&z光辉灵魂注入催化剂&r浇在全息图中铁桶位置"]
 	quest.214C7D6BFE0BC942.quest_subtitle: "富集硅岩线路"
 	quest.217D36A6EECA52F6.quest_desc: ["漫漫岩浆海走不过去怎么办？骑过去不就成了"]
 	quest.217D36A6EECA52F6.title: "骑乘！"
@@ -587,7 +587,7 @@
 		"&e这个特效只是概率触发！！！&r"
 		"使用神圣锭时的结果"
 	]
-	quest.2A28943AFB868811.quest_desc: [""]
+	quest.2A28943AFB868811.quest_desc: ["有一个常被忽视的配方：你可以用&b精炼铁板和原木&r合成&a压缩工作台&r，然后分解为 9 个&a普通工作台&r"]
 	quest.2A28943AFB868811.quest_subtitle: "卷板机...？"
 	quest.2A8169C6DFBEB32D.quest_desc: ["和铂处说再见......"]
 	quest.2A8169C6DFBEB32D.title: "铂"
@@ -673,6 +673,8 @@
 		"给 &a榧木原木&r 进行 &b去皮&r 之后概率获得"
 		""
 		"可以用于量产&a含杂无烟煤粉&r"
+		""
+		"收集的时候&e注意树冠上的掉落物&r"
 	]
 	quest.316E0D54918B76B4.title: "\"活\"的方块"
 	quest.318B9F9C16A228D5.quest_desc: ["星光人：我不是，我没有，别胡说"]
@@ -785,6 +787,7 @@
 	]
 	quest.3AB51A20C6B52B9E.title: "晶体之漠"
 	quest.3AB7AA1F1C3B44A9.quest_desc: ["证明你正在双线推进（）"]
+	quest.3B094068216DE7A6.quest_desc: ["说不定你可以在一些群系里找到大量方解石"]
 	quest.3BDB05ED30D63D74.quest_desc: [
 		"寻找&8虚空&r当中散落的&7中子素&r"
 		"出奇地，你&a不需要多少科技&r就可以制造它"
@@ -896,12 +899,14 @@
 		"需要25种食物来回到20血"
 	]
 	quest.410B01BEABD84A86.title: "为什么我的血量这么低？"
+	quest.4150C1F39809B227.quest_subtitle: "唯一你想要爆一爆的机器"
 	quest.4174360A0B8C514C.quest_desc: ["然后...覆盖电路。"]
 	quest.4174360A0B8C514C.title: "RS处理器"
 	quest.418FE37F0309FEE9.quest_desc: ["我知道你喜欢这个"]
 	quest.418FE37F0309FEE9.title: "背包"
 	quest.4258970782B0209D.quest_desc: [""]
 	quest.4258970782B0209D.quest_subtitle: "比什么勿落草简单"
+	quest.42B9597DC39FD1D9.quest_subtitle: "哈哈我的大冰箱"
 	quest.42E203F6AFEDD132.quest_desc: ["经过这一步&a常压蒸馏&r，随着温度升高，沸点较高的组分依次汽化并冷凝，从而实现不同组分的&e分离&r。"]
 	quest.42E203F6AFEDD132.quest_subtitle: "聚乙烯 / 塑料产线"
 	quest.42FB94F8CBBE2ED7.quest_desc: ["其实可以修家"]
@@ -964,6 +969,7 @@
 	]
 	quest.47614B42FB9C45AB.quest_desc: ["这里列出的只是部分新机器"]
 	quest.47614B42FB9C45AB.quest_subtitle: "解锁下一步配方"
+	quest.485DD8577DD5E14A.quest_desc: ["同时你解锁了&b转底炉&r"]
 	quest.487A744D02414E1E.quest_desc: [
 		"增！产！"
 		"此外还有一些别的离心配方（比如离心末地石出钛）"
@@ -1090,7 +1096,15 @@
 		"严禁使用"
 	]
 	quest.4FEA567CFFE38694.quest_subtitle: "我们依旧和核弹绕不开"
-	quest.512130A9330064D9.quest_desc: ["[ \"具体需要的别的结构方块等请去\", { \"text\": \"天地九重一章\", \"underlined\": true, \"clickEvent\": { \"action\": \"change_page\", \"value\": \"39B9308C115E8BE1\" } }]"]
+	quest.512130A9330064D9.quest_desc: [
+		"[ \"具体需要的别的结构方块等请去\", { \"text\": \"天地九重一章\", \"underlined\": true, \"clickEvent\": { \"action\": \"change_page\", \"value\": \"39B9308C115E8BE1\" } }]"
+		""
+		"[ \"关于这个系统的大概说明见\", { \"text\": \"探测器的任务\", \"underlined\": true, \"clickEvent\": { \"action\": \"change_page\", \"value\": \"64FC130D79B2D372\" } }]"
+		""
+		"&c确保你已经加入了一个 FTBTeam&e，或者自己创建一个，否则数据将在进入他人队伍后&c丢失！&r太空电梯的数据绑定于队伍，因此同队共享电梯数据"
+		""
+		"在发射任务的时候，必须将左下角的&b选择器材方案等级&r设为&e符合输入的等级&r，否则会认为任务投入不足！"
+	]
 	quest.513218436C2937E0.quest_desc: [""]
 	quest.513218436C2937E0.title: "随机食物"
 	quest.51354A47E6666F0D.quest_desc: ["显示周遭的矿物数量。只适合用于探索矿脉。"]
@@ -1327,6 +1341,20 @@
 		"任意选一个配方进行，但是&e启动能源是300M EU，需要一个至少8size的聚变堆&r（361M EU缓存），需要额外做8个线圈"
 	]
 	quest.64C0F532AC652609.quest_desc: ["光子尘需要&a蒸馏星光空气&r得到"]
+	quest.64FC130D79B2D372.quest_desc: [
+		"别担心，航天器本体是可以回收的。"
+		""
+		"对于每一个天体，我们的太空任务分为三步："
+		"    &b太空开拓──登陆──建立永久据点&r"
+		"首先发射 &b探测器&r 对天体&e测绘&r，获得&a天体的矿产数据&r；"
+		""
+		"对于有用的天体，可以选择发射 &b登陆舱体&r 进行 &e登陆&r，解锁&a远程采矿&r的能力"
+		""
+		"但是用时和产出将会受到限制，因为没有永久据点，每次任务的固定载荷占用很大"
+		""
+		"于是我们可以 &e修建永久据点&r，来极大的加快采矿速度，用于&a稳定采矿&r"
+	]
+	quest.64FC130D79B2D372.quest_subtitle: "航天器精密制造"
 	quest.651D9F28501E4611.quest_desc: [
 		"灌进TR等离子涡轮，获得全TR最劲的发电机（但还是打不过Ori的裂变，天啊我怎么会做这种梦）"
 		""
@@ -1344,7 +1372,11 @@
 	quest.660BFCC3F8EB4523.quest_subtitle: "&b三&a魂&c合&d一！"
 	quest.660C8C862E990CFA.quest_desc: ["可以无限食用"]
 	quest.660C8C862E990CFA.quest_subtitle: "凭具齐聚开拓前路"
-	quest.660D138C14B7D1D3.quest_desc: ["推荐与集成矿处一同食用"]
+	quest.660D138C14B7D1D3.quest_desc: [
+		"推荐与集成矿处一同食用"
+		""
+		"&bEMI 内行星矿物的显示将随阶段展开&r，第二阶段时显示的储量不代表最终储量"
+	]
 	quest.660D138C14B7D1D3.quest_subtitle: "最后与最后的采矿手段"
 	quest.6687368EE271813C.quest_desc: [
 		"由 EarlyStage 自定义的开局，你需要首先花那么一点点时间制作燧石工具，再用它制作工作台"
@@ -1524,6 +1556,11 @@
 	quest.755B64B430153FF5.quest_subtitle: "为了卡阶段所以有点昂贵"
 	quest.7603EAAC2705757C.title: "生魂"
 	quest.7663E3EF052DDA67.quest_desc: ["用物品右键摆放，然后再用岩石多敲击几下以制作"]
+	quest.76BC2CEB438D8FC2.quest_desc: [
+		"&e&lT2+ &r发电机"
+		"高达 1A &9IV&r (&a8192EU/t&r)"
+	]
+	quest.76BC2CEB438D8FC2.quest_subtitle: "挣脱引力！"
 	quest.76E1CE41F5A49826.quest_desc: [
 		"吸收水源，还会枯萎。"
 		"燃料不足可以用。"
@@ -1582,7 +1619,11 @@
 	quest.7AA66A4C69622754.quest_subtitle: "太稳了"
 	quest.7AADC0FE68BF84C9.quest_desc: ["你也可以用它来简化钷的生产"]
 	quest.7AADC0FE68BF84C9.quest_subtitle: "亘古不变的力量"
-	quest.7AC6EB081C2DC640.quest_desc: ["在这里编写样板"]
+	quest.7AC6EB081C2DC640.quest_desc: [
+		"在这里编写样板"
+		""
+		"如果遇到了冲突的合成（e.g. 钢块），可以看看左上角的&e金光闪闪的按钮&r来切换配方"
+	]
 	quest.7B45F104EF36AF9D.quest_desc: ["火力发电机~"]
 	quest.7B45F104EF36AF9D.quest_subtitle: "开局产能两兄妹  #1"
 	quest.7B718A9811F6318D.quest_desc: [
@@ -1599,6 +1640,17 @@
 	quest.7CA6587FBCD74202.quest_desc: ["开始处理"]
 	quest.7CA6587FBCD74202.quest_subtitle: "加硫酸酸洗 / OR 精炼机"
 	quest.7CCAF12A550F7D7E.quest_subtitle: "二级产能花"
+	quest.7D0A14FCE9DFD46D.quest_desc: [
+		"你需要消耗的只是油"
+		""
+		"&aMK1&r 对应 &e甲烷-液氧&r 或 &eRP-1-液氧&r 燃料"
+		"&dMK2&r 对应 &e甲基肼-四氧化二氮&r 或 &e偏二甲肼-四氧化二氮&r 燃料"
+		"&9MK3&r 对应 &e液氢-液氧&r 燃料"
+		""
+		"Q: 这不科学啊！"
+		"A: 这很游戏设计学。"
+	]
+	quest.7D0A14FCE9DFD46D.quest_subtitle: "这才对了嘛！"
 	quest.7D56AA6C3DEF738A.title: "煤层"
 	quest.7F0896BD9B9C3AD6.quest_desc: [""]
 	quest.7F0896BD9B9C3AD6.quest_subtitle: "你的第一个TR多方块"

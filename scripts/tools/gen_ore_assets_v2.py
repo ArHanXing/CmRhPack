@@ -114,6 +114,8 @@ FLUIDS = [
     ("rocket_fuel_mmh",     "b0b890"),
     ("rocket_fuel_udmh",    "c0b878"),
     ("rocket_fuel_lh2",     "c8e8f8"),
+    # ---- 硅岩去共振：氟钨阻尼液（氟碳重液 839b5c 载钨后偏深偏冷）----
+    ("fluorotungsten_damping_fluid", "5f6b4a"),
 ]
 
 # 模板：任选一个既有溶液即可（它们共享同一套流动图案，只有色相不同）

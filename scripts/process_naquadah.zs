@@ -7,8 +7,6 @@ import crafttweaker.api.ingredient.IIngredient;
 //   · 普通硅岩矿石 —— 磨粉出粗硅岩 ×2，随后接 nqdh.1.crushed 进富集线
 //   · 富集硅岩矿石 —— 工业磨粉直接出粉碎矿 + 含杂富集粉，省掉「磨粉 → 粗矿」一步
 
-// AI 这招太狠了
-// 普通硅岩矿石 → 2 粗硅岩
 <recipetype:techreborn:grinder>.addJsonRecipe("nqdh.0a.grind_end_naquadah_ore", {type: "techreborn:grinder",
     time: 200,
     power: 32,
@@ -16,9 +14,6 @@ import crafttweaker.api.ingredient.IIngredient;
     ingredients: [{item: "jsonreg:end_naquadah_ore"}]
 });
 
-// 富集硅岩矿石：工业磨粉（水）→ 粉碎矿 ×3 + 含杂富集粉 ×1
-// 对照普通矿石要走「磨粉 → 工业磨粉 → 离心」三道才拿到 0.5 个含杂粉；
-// 富集矿石一道就是 2.5 个（3 粉碎矿 = 1.5 个 + 直出 1 个），仍是最划算的入口。
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("nqdh.0b.grind_enriched_naquadah_ore", {type: "techreborn:industrial_grinder",
     outputs: [
         {id: "jsonreg:crushed_naquadah_ore", count: 3},
@@ -56,17 +51,39 @@ import crafttweaker.api.ingredient.IIngredient;
     ingredients: [{count: 2, item: "jsonreg:crushed_naquadah_ore"}]});
 
 
-// 含杂富集粉 → **稳定化**富集粉，是 nqdh.3 的唯一上游
-// 稳定化粉是新注册的独立物品（#8B5CF6 紫罗兰），与可以直接进高炉的「富集硅岩粉」分开：
-//   富集硅岩粉   → nqdh.smelt.enriched_ingot（快速短路，1 粉 → 1 热锭）
-//   稳定化富集粉 → nqdh.3 起的整条湿法线（10 粉 → 3 热锭，但吃硫酸/氢气并有废液回收）
+// 含杂富集粉 → **稳定化**富集粉
 <recipetype:techreborn:naquadah_deresonator>.removeAll();
 <recipetype:techreborn:naquadah_deresonator>.addJsonRecipe("nqdh.2b.deresonate", {type: "techreborn:naquadah_deresonator",
     power: 384,
     time: 200,
-    fluid: "oritech:still_sulfuric_acid",
+    fluid: "jsonreg:fluorotungsten_damping_fluid",
+    fluid_output: "jsonreg:light_fluorotungsten_damping_fluid",
     ingredients: [{item: "jsonreg:impure_enriched_naquadah_dust", count: 4}],
     outputs: [{id: "jsonreg:stabilized_enriched_naquadah_dust", count: 4}]
+});
+
+// ---------- 氟钨阻尼液 ----------
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("nqdh.2b.damping_fluid", {type: "techreborn:large_chemical_reactor",
+    time: 600,
+    power: 128,
+    outputs: [
+        {id: "techreborn:cell", count: 4, components: {"techreborn:fluid": "jsonreg:fluorotungsten_damping_fluid"}}
+    ],
+    ingredients: [
+        {count: 4, components: {"techreborn:fluid": "jsonreg:fluorocarbon_heavy_liquid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:tungsten_dust", count: 2}
+    ]
+});
+
+<recipetype:techreborn:centrifuge>.addJsonRecipe("nqdh.2b.damping_fluid_recovery", {type: "techreborn:centrifuge",
+    time: 60,
+    power: 128,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:fluorotungsten_damping_fluid"}}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:light_fluorotungsten_damping_fluid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
 });
 
 <recipetype:oritech:refinery>.addJsonRecipe("nqdh.3.refinery", {type: "oritech:refinery",

@@ -332,11 +332,11 @@ craftingTable.addShaped("magic.time_in_a_bottle", <item:tiab:time_in_a_bottle>, 
 <recipetype:techreborn:irradiated_mutagensis_chamber>.addJsonRecipe("magic.tr.irradiated/dusk_glass", {type: "techreborn:irradiated_mutagensis_chamber", 
     outputs: [
         {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:soul_injection_catalyst"}},
-        {id: "eternal_starlight:dusk_glass", count: 1}
+        {id: "eternal_starlight:dusk_glass", count: 16}
     ],
     time: 100, power: 256,
     ingredients: [
-        {item: "botania:bifrost", count: 1},
+        {item: "botania:bifrost", count: 16},
         {count: 1, components: {"techreborn:fluid": "jsonreg:shine_soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });

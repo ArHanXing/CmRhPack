@@ -468,7 +468,11 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:techreborn:shine_rotor>.addTooltip("§b光辉合金转子§r ── 最大转速 §a100%§r，且具有§a额外 30% 耗能减成§r");
 
 <item:techreborn:naquadah_deresonator>.addTooltip("§b移除硅岩粉末的不稳定因素§r");
-<item:techreborn:naquadah_deresonator>.addTooltip("用于：§e含杂富集硅岩粉§r → §d稳定化富集硅岩粉§r（阻尼液 §b硫酸§r）");
+<item:techreborn:naquadah_deresonator>.addTooltip("用于：§e含杂富集硅岩粉§r → §d稳定化富集硅岩粉§r（阻尼液 §3氟钨阻尼液§r）");
+<item:techreborn:naquadah_deresonator>.addTooltip("===============");
+<item:techreborn:naquadah_deresonator>.addTooltip("阻尼液§a不消耗§r：输入多少、输出罐就还多少，只做能量搬运");
+<item:techreborn:naquadah_deresonator>.addTooltip("但必须自己把§b输出罐§r接回§b输入罐§r（§a无损循环§r）");
+<item:techreborn:naquadah_deresonator>.addTooltip("输出罐满时机器§c拒绝启动§r，不会吞掉流体");
 <item:techreborn:naquadah_deresonator>.addTooltip("===============");
 <item:techreborn:naquadah_deresonator>.addTooltip("运行时机器必须在§c下界§r维度，否则具有§e耗时 1.5x，耗能 0.8x§r");
 <item:techreborn:naquadah_deresonator>.addTooltip("配方§e有成功率§r，基础成功率为 §a10%§r");
@@ -548,11 +552,11 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:jsonreg:end_rutile_ore>.addTooltip("§e§lTiO₂§r");
 
 // —— 太空电梯：强化硅岩合金 / UHPC ——
-<item:jsonreg:reinforced_naquadah_alloy_dust>.addTooltip("§e§l(Nq₂W₇Ni)+Ti₄Cr₃SiC₃§r");
-<item:jsonreg:hot_reinforced_naquadah_alloy_ingot>.addTooltip("§e§l(Nq₂W₇Ni)+Ti₄Cr₃SiC₃§r");
-<item:jsonreg:reinforced_naquadah_alloy_ingot>.addTooltip("§e§l(Nq₂W₇Ni)+Ti₄Cr₃SiC₃§r");
-<item:jsonreg:reinforced_naquadah_alloy_plate>.addTooltip("§e§l(Nq₂W₇Ni)+Ti₄Cr₃SiC₃§r");
-<item:jsonreg:reinforced_naquadah_alloy_rod>.addTooltip("§e§l(Nq₂W₇Ni)+Ti₄Cr₃SiC₃§r");
+<item:jsonreg:reinforced_naquadah_alloy_dust>.addTooltip("§e§l(Nq+₂W₇Ni)+Ti₄Cr₃SiC₃§r");
+<item:jsonreg:hot_reinforced_naquadah_alloy_ingot>.addTooltip("§e§l(Nq+₂W₇Ni)+Ti₄Cr₃SiC₃§r");
+<item:jsonreg:reinforced_naquadah_alloy_ingot>.addTooltip("§e§l(Nq+₂W₇Ni)+Ti₄Cr₃SiC₃§r");
+<item:jsonreg:reinforced_naquadah_alloy_plate>.addTooltip("§e§l(Nq+₂W₇Ni)+Ti₄Cr₃SiC₃§r");
+<item:jsonreg:reinforced_naquadah_alloy_rod>.addTooltip("§e§l(Nq+₂W₇Ni)+Ti₄Cr₃SiC₃§r");
 <item:jsonreg:cement_clinker>.addTooltip("§e§l3CaO·SiO₂§r");
 <item:jsonreg:cement>.addTooltip("§e§lC₃S+C₂S+C₃A+CaSO₄§r");
 <item:jsonreg:steel_fiber>.addTooltip("§e§l(Fe₁₀₀C)§r");
@@ -566,12 +570,24 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:jsonreg:rutile_gem>.addTooltip("§e§lTiO₂§r");
 <item:jsonreg:rutile_concentrate>.addTooltip("§e§lTiO₂§r");
 
-/* TODO
+
 <item:techreborn:space_drone_mk1>.addTooltip("§e未灌注燃油！§r");
 <item:techreborn:space_drone_mk1_powered>.addTooltip("§a已灌注燃油！§r");
 <item:techreborn:space_drone_mk2>.addTooltip("§e未灌注燃油！§r");
 <item:techreborn:space_drone_mk2_powered>.addTooltip("§a已灌注燃油！§r");
 <item:techreborn:space_drone_mk3>.addTooltip("§e未灌注燃油！§r");
 <item:techreborn:space_drone_mk3_powered>.addTooltip("§a已灌注燃油！§r");
-*/
+<item:techreborn:space_probe_mk1>.addTooltip("§e未灌注燃油！§r");
+<item:techreborn:space_probe_mk1_powered>.addTooltip("§a已灌注燃油！§r");
+<item:techreborn:space_probe_mk2>.addTooltip("§e未灌注燃油！§r");
+<item:techreborn:space_probe_mk2_powered>.addTooltip("§a已灌注燃油！§r");
+<item:techreborn:space_probe_mk3>.addTooltip("§e未灌注燃油！§r");
+<item:techreborn:space_probe_mk3_powered>.addTooltip("§a已灌注燃油！§r");
+<item:techreborn:space_lander_mk1>.addTooltip("§e未灌注燃油！§r");
+<item:techreborn:space_lander_mk1_powered>.addTooltip("§a已灌注燃油！§r");
+<item:techreborn:space_lander_mk2>.addTooltip("§e未灌注燃油！§r");
+<item:techreborn:space_lander_mk2_powered>.addTooltip("§a已灌注燃油！§r");
+<item:techreborn:space_lander_mk3>.addTooltip("§e未灌注燃油！§r");
+<item:techreborn:space_lander_mk3_powered>.addTooltip("§a已灌注燃油！§r");
+
 <item:oritech:small_tank_block>.addTooltip("§e可能存在吞流体等Bug，慎用！§r");

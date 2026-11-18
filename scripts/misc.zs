@@ -48,11 +48,9 @@ craftingTable.addShaped("misc.easy_mob_farm.t3_mob_farm", <item:easy_mob_farm:ti
     [<item:techreborn:tungstensteel_ingot>, <item:easy_mob_farm:tier2_mob_farm_template>, <item:techreborn:tungstensteel_ingot>], 
     [<item:minecraft:glass>, <item:techreborn:industrial_circuit>, <item:minecraft:glass>]]);
 
-//便携储罐有Bug
-craftingTable.remove(<item:oritech:small_tank_block>);
+//更加便宜的TR罐子
 craftingTable.remove(<item:techreborn:basic_storage_unit>);
 craftingTable.remove(<item:techreborn:crude_unit_upgrader>);
-//更加便宜的TR罐子
 craftingTable.addShaped("misc.techreborn.crafting_table/unit/storage/basic_storage_unit", <item:techreborn:basic_storage_unit>, [
     [<tag:item:c:plates/refined_iron>, <tag:item:c:plates/refined_iron>, <tag:item:c:plates/refined_iron>], 
     [<item:techreborn:crude_storage_unit>, <item:techreborn:basic_machine_frame>, <item:techreborn:crude_storage_unit>], 

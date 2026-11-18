@@ -13,7 +13,7 @@
 //     （例：oil.process.or.nitric_acid 的水单元），转换时保留其流体组件。
 //   奖励：耗时 ×0.8、耗能 ×0.5（FE→EU 按 1:1，基准见 precision_assembly.zs）。
 //
-// 共 83 条；OR 原配方保留不动，本文件只做「复制一份给 TR」。
+// 共 88 条；OR 原配方保留不动，本文件只做「复制一份给 TR」。
 // ============================================================
 
 <recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.bio.sep.ethanol", {type: "techreborn:large_mixer",
@@ -155,6 +155,17 @@
     ingredients: [
         {count: 2, components: {"techreborn:fluid": "jsonreg:purified_naquadria_acid_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
         {count: 4, components: {"techreborn:fluid": "jsonreg:ammonia_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.rocket.refine.kerosene", {type: "techreborn:large_refinery",
+    time: 240,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:refined_kerosene"}}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:heavy_diesel"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
 
@@ -1130,5 +1141,60 @@
     ingredients: [
         {count: 5, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
         {item: "jsonreg:hausmannite_clump", count: 10}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.general.t15a.leach.rutile", {type: "techreborn:large_refinery",
+    time: 512,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 4, components: {"techreborn:fluid": "jsonreg:rutile_solution"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_mineral_slurry"}}
+    ],
+    ingredients: [
+        {count: 4, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:voidstone_rutile_ore", count: 4},
+        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_refinery>.addJsonRecipe("large.refinery.general.t15a.leach.rutile_end", {type: "techreborn:large_refinery",
+    time: 512,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 4, components: {"techreborn:fluid": "jsonreg:rutile_solution"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_mineral_slurry"}}
+    ],
+    ingredients: [
+        {count: 4, components: {"techreborn:fluid": "oritech:still_sulfuric_acid"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:end_rutile_ore", count: 4},
+        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.general.t15b.precipitate.rutile", {type: "techreborn:large_mixer",
+    time: 120,
+    power: 32,
+    outputs: [
+        {id: "jsonreg:rutile_clump", count: 1},
+        {id: "techreborn:cell", count: 1}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:rutile_solution"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:salt_dust", count: 1}
+    ]
+});
+
+<recipetype:techreborn:large_mixer>.addJsonRecipe("large.mixer.general.t15c.recrystallize.rutile", {type: "techreborn:large_mixer",
+    time: 1600,
+    power: 32,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "oritech:still_mineral_slurry"}},
+        {id: "jsonreg:rutile_gem", count: 10},
+        {id: "techreborn:cell", count: 4}
+    ],
+    ingredients: [
+        {count: 5, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "jsonreg:rutile_clump", count: 10}
     ]
 });

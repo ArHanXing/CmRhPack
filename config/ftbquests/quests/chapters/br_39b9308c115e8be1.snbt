@@ -169,5 +169,77 @@
 			x: 2.0d
 			y: 1.5d
 		}
+		{
+			dependencies: ["0986EEB2F41E391C"]
+			id: "64FC130D79B2D372"
+			tasks: [{
+				id: "252CD21346047654"
+				item: { count: 1, id: "techreborn:space_probe_mk1" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["42B9597DC39FD1D9"]
+			id: "042CFA237DEDD5C2"
+			tasks: [{
+				id: "09F5C7F8EFD3828A"
+				item: { components: { "techreborn:fluid": "jsonreg:rocket_fuel_rp1" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"2745FFF82445034D"
+				"42B9597DC39FD1D9"
+			]
+			dependency_requirement: "one_completed"
+			id: "73BE46214BE37A0D"
+			tasks: [{
+				id: "389499D9749A4FCD"
+				item: { components: { "techreborn:fluid": "jsonreg:rocket_fuel_methane" }, count: 1, id: "techreborn:cell" }
+				match_components: "strict"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"64FC130D79B2D372"
+				"042CFA237DEDD5C2"
+				"73BE46214BE37A0D"
+			]
+			dependency_requirement: "one_completed"
+			id: "7D0A14FCE9DFD46D"
+			tasks: [{
+				id: "76EE61555B365788"
+				item: { count: 1, id: "techreborn:space_probe_mk1_powered" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"08A105909CB62D75"
+				"042CFA237DEDD5C2"
+				"73BE46214BE37A0D"
+			]
+			dependency_requirement: "one_completed"
+			icon_scale: 2.0d
+			id: "6383974405B392DD"
+			tasks: [{
+				id: "053EE34D49621EFD"
+				item: { count: 1, id: "techreborn:rocketdyne_f1a_engine" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: -3.0d
+		}
 	]
 }
