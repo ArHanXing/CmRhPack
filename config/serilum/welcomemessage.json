@@ -1,0 +1,51 @@
+{
+	"//": "These settings are easier to change in-game! Mod List -> Welcome Message -> Config",
+	"Enable Welcome Message": {
+		"//": "Whether Welcome Message is enabled. When disabled, none of its features run and its other settings are hidden. Takes effect after a restart.",
+		"value": true
+	},
+	"onlyRunOnDedicatedServers": {
+		"//": "If the mod should only run on dedicated servers. When enabled it's not sent when in a singleplayer world.",
+		"value": false
+	},
+	"sendEmptyLineBeforeFirstMessage": {
+		"//": "Whether an empty line should be send before to first message to separate the welcome from other chat messages that might be sent.",
+		"value": true
+	},
+	"messageOneText": {
+		"//": "The first message a player will receive when joining the world. Can be left empty.",
+		"value": "欢迎加入这个服务器！/欢迎游玩这个整合包！"
+	},
+	"messageOneColourIndex": {
+		"//": "0: black, 1: dark_blue, 2: dark_green, 3: dark_aqua, 4: dark_red, 5: dark_purple, 6: gold, 7: gray, 8: dark_gray, 9: blue, 10: green, 11: aqua, 12: red, 13: light_purple, 14: yellow, 15: white min: 0, max: 15",
+		"value": 6
+	},
+	"messageOneOptionalURL": {
+		"//": "If a link is entered here, the complete message will be clickable.",
+		"value": ""
+	},
+	"messageTwoText": {
+		"//": "The second message a player will receive when joining the world. Can be left empty.",
+		"value": "请打开FTB任务（这个按键默认是 M） 来获取指引！"
+	},
+	"messageTwoColourIndex": {
+		"//": "0: black, 1: dark_blue, 2: dark_green, 3: dark_aqua, 4: dark_red, 5: dark_purple, 6: gold, 7: gray, 8: dark_gray, 9: blue, 10: green, 11: aqua, 12: red, 13: light_purple, 14: yellow, 15: white min: 0, max: 15",
+		"value": 11
+	},
+	"messageTwoOptionalURL": {
+		"//": "If a link is entered here, the complete message will be clickable.",
+		"value": ""
+	},
+	"messageThreeText": {
+		"//": "The third message a player will receive when joining the world. Can be left empty.",
+		"value": "CmRhPack 1.3.0-indev"
+	},
+	"messageThreeColourIndex": {
+		"//": "0: black, 1: dark_blue, 2: dark_green, 3: dark_aqua, 4: dark_red, 5: dark_purple, 6: gold, 7: gray, 8: dark_gray, 9: blue, 10: green, 11: aqua, 12: red, 13: light_purple, 14: yellow, 15: white min: 0, max: 15",
+		"value": 2
+	},
+	"messageThreeOptionalURL": {
+		"//": "If a link is entered here, the complete message will be clickable.",
+		"value": ""
+	}
+}

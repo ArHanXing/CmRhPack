@@ -30,6 +30,11 @@
   "dropUpgrades": false,
   "regenerateHealthEveryNTicks": 0,
   "requireShiftForRepair": false,
+  "defaultCanEnter": true,
+  "canEnter": {
+    "minecraft:player": false,
+    "#immersive_aircraft:water_animals": false
+  },
   "bombBayEntity": {
     "minecraft:egg": "minecraft:chicken"
   },
@@ -38,6 +43,7 @@
   "fuelList": {
     "minecraft:blaze_powder": 1200
   },
+  "fluidFuelList": {},
   "validDimensions": {
     "minecraft:the_nether": true,
     "minecraft:overworld": true,

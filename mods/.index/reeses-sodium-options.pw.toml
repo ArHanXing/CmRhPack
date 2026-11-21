@@ -1,17 +1,29 @@
-filename = 'reeses-sodium-options-fabric-1.8.3+mc1.21.4.jar'
+filename = 'reeses-sodium-options-fabric-2.2.4+mc1.21.1.jar'
 name = "Reese's Sodium Options"
 side = ''
-x-prismlauncher-loaders = [ 'quilt', 'fabric' ]
-x-prismlauncher-mc-versions = [ '1.21', '1.21', '1.21.1', '1.21.1', '1.21.2', '1.21.2', '1.21.3', '1.21.3', '1.21.4', '1.21.4', '1.21.5', '1.21.5' ]
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = 'mc1.21.4-1.8.3+fabric'
+x-prismlauncher-version-number = 'mc1.21.1-2.2.4+fabric'
 
 [download]
-hash = '42fd766fb3f4064938389599a53c3baad29e40e6ab9cdae9a4302eaa8b2daa96af9128978348549ef47122ecf2663b2e81e5155d01a4be4eba4d03c7e6974dba'
+hash = '7784880c4dedae15e3e03c6de4cfa67a9ed242006f90b764c0fa6fda8679e219ca6c9987aae76ec9b0fff6f8cc38fff86b16e2836aaa0200998c9de938617d3e'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/Bh37bMuy/versions/KoUrx3jJ/reeses-sodium-options-fabric-1.8.3%2Bmc1.21.4.jar'
+url = 'https://cdn.modrinth.com/data/Bh37bMuy/versions/XtuPOKUN/reeses-sodium-options-fabric-2.2.4%2Bmc1.21.1.jar'
 
 [update.modrinth]
 mod-id = 'Bh37bMuy'
-version = 'KoUrx3jJ'
+version = 'XtuPOKUN'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'PtjYWJkn'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'AANobbMI'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'YL57xq9U'
+type = 'OPTIONAL'

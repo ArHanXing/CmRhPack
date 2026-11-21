@@ -1,28 +1,20 @@
-filename = 'tesseract-1.0.38-fabric-mc1.21.jar'
+filename = 'tesseract-1.0.40-fabric-mc1.21.jar'
 name = 'Tesseract'
-side = 'both'
+side = ''
 x-prismlauncher-loaders = [ 'quilt', 'fabric' ]
 x-prismlauncher-mc-versions = [ '1.21', '1.21.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '1.0.38-fabric-mc1.21'
+x-prismlauncher-version-number = '1.0.40-fabric-mc1.21'
 
 [download]
-hash = '721b2d0ad573c70600f597bbaa6f3510f0cc3316cffb7eff94a3834faecc972c3da8de29f5c9f1747e5eae23830f579683f9928bbe8527798c8eee0950dbd326'
+hash = '782dfe834f83a64cc442c17c2af739019d47dfeb4fe6432fb245d10a74e17b7d6f19e5924ef235327ec858dd2ee8b42572525ec24326f9f531fe94e5012d27d0'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/OUhp5O2m/versions/9L9uix4F/tesseract-1.0.38-fabric-mc1.21.jar'
+url = 'https://cdn.modrinth.com/data/OUhp5O2m/versions/4mSV2KUM/tesseract-1.0.40-fabric-mc1.21.jar'
 
 [update.modrinth]
 mod-id = 'OUhp5O2m'
-version = '9L9uix4F'
-
-[[x-prismlauncher-dependencies]]
-addonId = 'LN9BxssP'
-type = 'REQUIRED'
-
-[[x-prismlauncher-dependencies]]
-addonId = 'P7dR8mSH'
-type = 'REQUIRED'
+version = '4mSV2KUM'
 
 [[x-prismlauncher-dependencies]]
 addonId = 'rOUBggPv'
@@ -31,3 +23,11 @@ type = 'REQUIRED'
 [[x-prismlauncher-dependencies]]
 addonId = 'nvQzSEkH'
 type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'LN9BxssP'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'P7dR8mSH'
+type = 'REQUIRED'

@@ -27,6 +27,7 @@
     "blast_immune": false,
     "trapped_custom": false,
     "should_drop_player_loot": false,
+    "break_to_drop_loot": false,
     "brushables_self_support": false,
     "item_frames_self_support": false
   },
@@ -36,7 +37,8 @@
     "loot_table_blacklist": [],
     "loot_modid_blacklist": [],
     "modid_dimension_whitelist": [],
-    "modid_dimension_blacklist": []
+    "modid_dimension_blacklist": [],
+    "loot_table_forced_whitelist": []
   },
   "decay": {
     "decay_value": 6000,
@@ -58,13 +60,20 @@
     "refresh_dimensions": []
   },
   "notifications": {
-    "notification_delay": 600,
-    "disable_notifications": false,
     "disable_message_styles": false
   },
   "client": {
     "vanilla_textures": false,
     "new_textures": true,
-    "unopened_particles": true
+    "unopened_particles": true,
+    "refresh_particles": true,
+    "decay_particles": true,
+    "display_toasts": true,
+    "notification_delay": 600,
+    "disable_notifications": false
+  },
+  "team": {
+    "team_loot": false,
+    "pinned_team_resolver": ""
   }
 }

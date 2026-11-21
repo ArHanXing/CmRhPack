@@ -1,27 +1,23 @@
-filename = 'ftb-quests-fabric-2101.1.34.jar'
-name = 'FTB Quests (Fabric)'
+filename = 'ftb-quests-fabric-2101.1.39.jar'
+name = 'FTB Quests'
 side = 'server'
 x-prismlauncher-loaders = [ 'fabric' ]
 x-prismlauncher-mc-versions = [ '1.21.1' ]
 x-prismlauncher-release-type = 'release'
-x-prismlauncher-version-number = '[FABRIC][1.21.1] FTB Quests 2101.1.34'
+x-prismlauncher-version-number = '[FABRIC][1.21.1] FTB Quests 2101.1.39'
 
 [download]
-hash = '274c8eec0375ae73193e6b8ba8e5cdd128fa339c'
+hash = 'c1281ff2403f979c5ce6f7eeeaed1397b5ef3a4e'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 8730557
+file-id = 9650793
 project-id = 438496
 
 [[x-prismlauncher-dependencies]]
-addonId = '889915'
-type = 'OPTIONAL'
-
-[[x-prismlauncher-dependencies]]
-addonId = '438495'
+addonId = '419699'
 type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
@@ -29,8 +25,12 @@ addonId = '438497'
 type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
-addonId = '419699'
+addonId = '438495'
 type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '889915'
+type = 'OPTIONAL'
 
 [[x-prismlauncher-dependencies]]
 addonId = '306612'
