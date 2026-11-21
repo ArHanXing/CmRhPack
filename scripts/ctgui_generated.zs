@@ -927,3 +927,15 @@ craftingTable.addShaped("ctgui/new/crafting/compressed_crafting_table", <item:av
     [<tag:item:minecraft:logs>, <tag:item:minecraft:logs>, <tag:item:minecraft:logs>],
     [<item:techreborn:refined_iron_plate>, <tag:item:minecraft:logs>, <item:techreborn:refined_iron_plate>]]);
 
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine/high_voltage_su");
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/high_voltage_su", <item:techreborn:high_voltage_su>, [
+    [<item:techreborn:energy_crystal>, <item:techreborn:advanced_circuit>, <item:techreborn:energy_crystal>],
+    [<item:botania:natura_pylon>, <item:techreborn:medium_voltage_su>, <item:botania:natura_pylon>],
+    [<item:techreborn:energy_crystal>, <item:techreborn:advanced_machine_frame>, <item:techreborn:energy_crystal>]]);
+
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine/isotope_separator");
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/isotope_separator", <item:techreborn:isotope_separator>, [
+    [<item:oritech:advanced_computing_engine>, <item:techreborn:large_centrifuge>, <item:oritech:advanced_computing_engine>],
+    [<item:jsonreg:mv_electric_motor>, <item:techreborn:industrial_machine_frame>, <item:jsonreg:mv_electric_motor>],
+    [<item:jsonreg:naquadah_plate>, <item:jsonreg:naquadah_plate>, <item:jsonreg:naquadah_plate>]]);
+

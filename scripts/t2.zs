@@ -226,7 +226,7 @@ key: {
 <recipetype:oritech:refinery>.removeByName("oritech:refinery/siliconwashing");
 <recipetype:oritech:refinery>.addJsonRecipe("t2.oritech.refinery/siliconwashing", {type: "oritech:refinery",
     results: [{id: "jsonreg:silicon_boule", count: 1}], time: 160,
-    fluidInput: {fluid: "oritech:still_silicon_wash"}, ingredients: [{item:"oritech:silicon"}]
+    fluidInput: {fluid: "oritech:still_silicon_wash",amount: 81000}, ingredients: [{item:"oritech:silicon"}]
 });
 <recipetype:techreborn:industrial_sawmill>.addJsonRecipe("t2.tr.industrial_sawmill/wafer", {type: "techreborn:industrial_sawmill",
     outputs: [{id: "oritech:silicon_wafer", count: 2}],

@@ -199,9 +199,11 @@
     time: 128,
     power: 64,
     outputs: [
-        {id: "jsonreg:silicon_boule", count: 1}
+        {id: "jsonreg:silicon_boule", count: 1},
+        {id: "techreborn:cell", count: 1}
     ],
     ingredients: [
+        {count: 1, components: {"techreborn:fluid": "oritech:still_silicon_wash"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
         {item: "oritech:silicon", count: 1}
     ]
 });

@@ -30,6 +30,9 @@ OUT_SLOTS = {
     "oritech:centrifuge": 1,
     "oritech:centrifuge_fluid": 1,
     "techreborn:chemical_reactor": 2,
+    # 工业高炉：inventory 5 槽 = 输入[0,1] + 输出[2,3] + 能量[4]
+    # （反编译 IndustrialBlastFurnaceBlockEntity 构造函数确认）
+    "techreborn:blast_furnace": 2,
     "techreborn:industrial_grinder": 4,
     "techreborn:large_chemical_reactor": 4,
     "techreborn:distillation_tower": 6,

@@ -5,6 +5,8 @@
 由于匹配问题，
 - 输出中的方法： {id: "techreborn:cell", count: 15, components: {"techreborn:fluid": "命名空间:你的流体"}},
 
+照抄schema，很枯燥吧。.png
+
 # 工业磨粉机 TR
 ```
 <recipetype:techreborn:industrial_grinder>.addJsonRecipe("oritech:compat/techreborn/industrial_grinder/nickel", {type: "techreborn:industrial_grinder",

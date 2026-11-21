@@ -468,16 +468,12 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:techreborn:shine_rotor>.addTooltip("§b光辉合金转子§r ── 最大转速 §a100%§r，且具有§a额外 30% 耗能减成§r");
 
 <item:techreborn:naquadah_deresonator>.addTooltip("§b移除硅岩粉末的不稳定因素§r");
-<item:techreborn:naquadah_deresonator>.addTooltip("用于：§e含杂富集硅岩粉§r → §d稳定化富集硅岩粉§r（阻尼液 §3氟钨阻尼液§r）");
 <item:techreborn:naquadah_deresonator>.addTooltip("===============");
-<item:techreborn:naquadah_deresonator>.addTooltip("阻尼液§a不消耗§r：输入多少、输出罐就还多少，只做能量搬运");
-<item:techreborn:naquadah_deresonator>.addTooltip("但必须自己把§b输出罐§r接回§b输入罐§r（§a无损循环§r）");
-<item:techreborn:naquadah_deresonator>.addTooltip("输出罐满时机器§c拒绝启动§r，不会吞掉流体");
-<item:techreborn:naquadah_deresonator>.addTooltip("===============");
-<item:techreborn:naquadah_deresonator>.addTooltip("运行时机器必须在§c下界§r维度，否则具有§e耗时 1.5x，耗能 0.8x§r");
-<item:techreborn:naquadah_deresonator>.addTooltip("配方§e有成功率§r，基础成功率为 §a10%§r");
+<item:techreborn:naquadah_deresonator>.addTooltip("运行时机器必须在§c下界§r维度，否则具有§e耗时倍率 1.5x，耗能倍率 0.8x§r");
+<item:techreborn:naquadah_deresonator>.addTooltip("配方§e有成功率§r，基础成功率为 §a20%§r");
 <item:techreborn:naquadah_deresonator>.addTooltip("每 §a5tick§r 都会消耗所有流体仓中的流体，每消耗 §a10B§r 配方要求流体获得当前运行的配方 §a+10% 成功概率§r");
 <item:techreborn:naquadah_deresonator>.addTooltip("但是如果提供的流体量不是 §a10B§r 的整数倍，则成功率 §ex§r 变为 §ex*2^(-10*溢出比率)§r");
+<item:techreborn:naquadah_deresonator>.addTooltip("本机器的流体输出量与输入量§a相等§r");
 <item:techreborn:naquadah_deresonator>.addTooltip("===============");
 <item:techreborn:naquadah_deresonator>.addTooltip("逻辑来自 GTNH 三级净化水");
 
@@ -504,6 +500,7 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:affinity:wise_wisp_matter>.addTooltip("§7由 §e生魂原液§r + §b星光空气§r 塑魂而成§r");
 //只有紫铜和生铁有板
 //bgm:反转宇宙
+/*
 <item:neko-technology:tin_ingot>.addTooltip("- 说着§c「初次见面」§r这样的话 -");
 <item:neko-technology:tin_ingot>.addTooltip("- 装满§b整整一杯§r的§d「心」§r -");
 <item:neko-technology:tin_ingot>.addTooltip("- 仿佛§6坠入爱河§r一样 §b啦哒哒§r -");
@@ -528,6 +525,7 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:neko-technology:neko_copper_ingot>.addTooltip("- 说道§6Lovers§r的§eBirth§r 那就只有§c你§r！ -");
 <item:neko-technology:neko_copper_ingot>.addTooltip("- 请将§b它§r传达到§6流星群§r那里 -");
 <item:neko-technology:neko_copper_ingot>.addTooltip("- 就这样§e拜托§d你§r了！ -");
+*/
 // —— 下界钒磁铁 / 软锰矿 / 铬铁矿 / 硬锰矿 ——
 <item:jsonreg:vanadium_dust>.addTooltip("§e§lV§r");
 <item:jsonreg:vanadium_ingot>.addTooltip("§e§lV§r");
@@ -570,7 +568,6 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:jsonreg:rutile_gem>.addTooltip("§e§lTiO₂§r");
 <item:jsonreg:rutile_concentrate>.addTooltip("§e§lTiO₂§r");
 
-
 <item:techreborn:space_drone_mk1>.addTooltip("§e未灌注燃油！§r");
 <item:techreborn:space_drone_mk1_powered>.addTooltip("§a已灌注燃油！§r");
 <item:techreborn:space_drone_mk2>.addTooltip("§e未灌注燃油！§r");
@@ -591,3 +588,8 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:techreborn:space_lander_mk3_powered>.addTooltip("§a已灌注燃油！§r");
 
 <item:oritech:small_tank_block>.addTooltip("§e可能存在吞流体等Bug，慎用！§r");
+
+<item:eternal_starlight:raw_amaramber>.addTooltip("§a给榧树木去皮概率获得§r");
+// —— 绯夜脂产线（见 scripts/amaramber.zs）——
+<item:eternal_starlight:raw_amaramber>.addTooltip("§6§l绯夜脂§r");
+<item:eternal_starlight:raw_amaramber>.addTooltip("§e榧木热解 → 乙醇萃取 → 裂解 → 活化§r");

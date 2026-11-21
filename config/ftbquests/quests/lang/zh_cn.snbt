@@ -422,7 +422,38 @@
 	quest.2020C04A83B1A6D9.quest_subtitle: "其实它是多方块结构"
 	quest.202B776E9289D479.quest_desc: ["他还是一种熔炉燃料"]
 	quest.202B776E9289D479.quest_subtitle: "这一步是大家熟悉的焦炉"
-	quest.214C7D6BFE0BC942.quest_desc: ["需要一桶&z光辉灵魂注入催化剂&r浇在全息图中铁桶位置"]
+	quest.214C7D6BFE0BC942.quest_desc: [
+		"需要一桶&z光辉灵魂注入催化剂&r浇在全息图中铁桶位置"
+		""
+		"对于它的自动化，你需要插入&b恰好 80B/90B/100B &r阻尼液。且它是个无底洞，&e无论投入多少流体它都会全部吸收&r。"
+		""
+		"你当然可以大水漫灌地使用子网下单。但是如果不想要如此粗暴的解，在这里你要怎么实现呢...?"
+		"{@pagebreak}"
+		"提示：你可以通过比较器来获得流体储罐的内容量，而且流体储罐的比较器 &a输出等级为 15 的红石信号&r 当且仅当 &e流体储罐已经全满&r。"
+		""
+		"提示：&b80 是 16 的 5 倍&r。"
+		""
+		"提示：硅岩去共振机在不输入阻尼液时&e不会工作&r。"
+		"{@pagebreak}"
+		"作者的 AE 和红石功底都不够，因此这里给出作者的一个不优雅的方法，大家可以改进。"
+		""
+		"我们可以使用&b 5 个基础流体储罐&r并检测其容量，想办法仅在它们&a全部已满&r的时候使其输出流体（可以使用红石控制的 RS2 输入总线）。"
+		""
+		"输出流体需要时间，但是相对硅岩去共振机的时间而言肯定是够的。"
+		""
+		"这么自动化需要的时序控制比较严格，因此建议在创造档内先实验。（推荐使用 Pipster 的 T3 管道以及 Cable Tiers，并给离心机打满超频）"
+		""
+		"&m&7好麻烦，还是子网下单吧。"
+		""
+		"{@pagebreak}"
+		""
+		"{image:minecraft:textures/21.png width:192 height:100 align:center}"
+		"{image:minecraft:textures/22.png width:192 height:100 align:center}"
+		""
+		"这是作者的构型，其中离心机和去共振均为4超频，输入总线为终极且4加速，每次配方运行大约 120 tick.（20tick/个）"
+		""
+		"相对来说还是很慢，但是瓶颈已经尽量压在去共振本身了"
+	]
 	quest.214C7D6BFE0BC942.quest_subtitle: "富集硅岩线路"
 	quest.217D36A6EECA52F6.quest_desc: ["漫漫岩浆海走不过去怎么办？骑过去不就成了"]
 	quest.217D36A6EECA52F6.title: "骑乘！"
@@ -592,13 +623,15 @@
 	quest.2A8169C6DFBEB32D.quest_desc: ["和铂处说再见......"]
 	quest.2A8169C6DFBEB32D.title: "铂"
 	quest.2B9B96CE36E283A9.quest_desc: ["可持久化回滚带修附魔台"]
+	quest.2BD0B63C43E6EE90.quest_desc: [""]
 	quest.2C09085AFD33EB13.quest_desc: ["相对而言，速度更快，并行更高，而且甚至不需要烧制"]
-	quest.2C453E81D0B53296.quest_desc: ["你甚至可以借由它们的高活性来降低合成泰拉钢的消耗"]
+	quest.2C453E81D0B53296.quest_desc: [
+		"你甚至可以借由它们的高活性来降低合成泰拉钢的消耗"
+		""
+		"&a请及时更换你的生魂晶体复合物配方到龙尘！&r"
+	]
 	quest.2C4ECEB40FD7F147.title: "铅-辉银矿脉"
 	quest.2CB1B3EA63706836.title: "魔法补给"
-	quest.2CCF50BBB1A88B73.quest_desc: ["它负责引诱"]
-	quest.2CCF50BBB1A88B73.quest_subtitle: "不可重复"
-	quest.2CCF50BBB1A88B73.title: "到星云中去"
 	quest.2CDC44A53B482712.quest_subtitle: "刷怪塔"
 	quest.2CDC44A53B482712.title: "地狱堡垒"
 	quest.2CE434067E7D2FF7.quest_desc: [""]
@@ -608,7 +641,7 @@
 	quest.2D9BCE6EA20323A7.quest_desc: ["没办法关掉检测"]
 	quest.2D9BCE6EA20323A7.quest_subtitle: "二级产能花"
 	quest.2DDD8825853DD58D.quest_desc: ["使用了大佬的 BiomeSpy 优化模组，可能不太准"]
-	quest.2DE6A16633CD9EB3.quest_desc: ["不算难"]
+	quest.2DE6A16633CD9EB3.quest_desc: ["如果你和作者一样不善于躲技能，可以参考一些自动喷药水等 mcmod 上的辅助技巧"]
 	quest.2DE6A16633CD9EB3.quest_subtitle: "最后一战？"
 	quest.2E4063A2B2A13391.title: "末地橄榄石宝石矿脉"
 	quest.2E431E845165D15F.quest_subtitle: "3000K！"
@@ -948,7 +981,7 @@
 	]
 	quest.45E45ECA23073D45.quest_subtitle: "自动化克星"
 	quest.461E8E7E0C621B41.quest_desc: [
-		"&b{image:minecraft:textures/11.png width:200 height:120 align:center}"
+		"&b{image:minecraft:textures/11.png width:192 height:120 align:center}"
 		""
 		"&b生魂森林&r是你对&a生魂&r研究的开端！"
 		""
@@ -1060,6 +1093,7 @@
 		"{@pagebreak}"
 		"选出了加成反应再领取哦 =w="
 	]
+	quest.4D993AEEBFF9747B.quest_desc: ["同时可以在&z「圣域」&r群系中钻取（位于末地）"]
 	quest.4DD8DE3B45126136.quest_desc: [
 		"关于化学式的显示："
 		"只完成了所有锭和部分TR可电解物质的标注。"
@@ -1248,7 +1282,7 @@
 	]
 	quest.5CAE17A6C89E4237.quest_subtitle: "谁需要压缩升级！"
 	quest.5CB096DBE42521DD.quest_subtitle: "AUV光刻"
-	quest.5CCB8F7DE44E4ECA.quest_desc: ["同时可以在&6「」&r"]
+	quest.5CCB8F7DE44E4ECA.quest_desc: ["同时可以在&6「耀阳浮岛」&r群系中钻取（位于永恒星光）"]
 	quest.5CD334B14687D45B.quest_desc: [
 		"&c&lT3 &r发电机"
 		"利用黑洞吞噬方块产生速子来发电"
@@ -1264,7 +1298,9 @@
 	quest.5F1F6ED0A21FB05A.quest_desc: [
 		"右键他，挑战守门人"
 		"&b守门人的血量并不是很高，纳米套+纳米剑可以轻松过&r"
-		"打完之后右键战利品包，就可以爆出这个先知球体了"
+		"打完之后右键战利品包，就可以爆出这个先知球体了。"
+		""
+		"先知球体右键传送门即可激活（首先需要使用&b微光&r将&7失活雕纹虚空石&r转化为&b普通雕纹虚空石&r）"
 		""
 		"&a以防你不知道，&6试炼之地&a只生成在&d星光维度&a！&r"
 	]

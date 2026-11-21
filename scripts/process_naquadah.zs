@@ -59,7 +59,7 @@ import crafttweaker.api.ingredient.IIngredient;
     fluid: "jsonreg:fluorotungsten_damping_fluid",
     fluid_output: "jsonreg:light_fluorotungsten_damping_fluid",
     ingredients: [{item: "jsonreg:impure_enriched_naquadah_dust", count: 4}],
-    outputs: [{id: "jsonreg:stabilized_enriched_naquadah_dust", count: 4}]
+    outputs: [{id: "jsonreg:stabilized_enriched_naquadah_dust", count: 6}]
 });
 
 // ---------- 氟钨阻尼液 ----------
