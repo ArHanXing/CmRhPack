@@ -590,6 +590,3 @@ r	耗时	成功率	EU/t	单次耗电	产能	每产出耗电	磨损间隔
 <item:oritech:small_tank_block>.addTooltip("§e可能存在吞流体等Bug，慎用！§r");
 
 <item:eternal_starlight:raw_amaramber>.addTooltip("§a给榧树木去皮概率获得§r");
-// —— 绯夜脂产线（见 scripts/amaramber.zs）——
-<item:eternal_starlight:raw_amaramber>.addTooltip("§6§l绯夜脂§r");
-<item:eternal_starlight:raw_amaramber>.addTooltip("§e榧木热解 → 乙醇萃取 → 裂解 → 活化§r");

@@ -390,35 +390,6 @@ ingredients: [{item: "justarod:redstone_rod"}, {item: "oritech:advanced_computin
         {count: 2, components: {"techreborn:fluid": "jsonreg:shine_soul_injection_catalyst"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
     ]
 });
-
-//TODO
-//创造存储
-<recipetype:avaritia:extreme_crafting>.addJsonRecipe("t2.rs/creative_storage/item", {type: "avaritia:extreme_shaped", result: {id: "refinedstorage:creative_storage_block", count: 1}, pattern: 
- [
- "PP  O  PP", 
- "P       P", 
- "    X    ", 
- "  X E X  ", 
- "OXE A EXO", 
- "  X E X  ", 
- "    X    ", 
- "P       P", 
- "PP  O  PP"], 
- key: {A: {item:"techreborn:quantum_storage_unit"},E:{item:"techreborn:data_storage_core"},X:{item:"techreborn:superconductor"},
-       P:{item:"oritech:carbon_plating_block"},O:{item:"transmog:void_fragment"}}});
-<recipetype:avaritia:extreme_crafting>.addJsonRecipe("t2.rs/creative_storage/fluid", {type: "avaritia:extreme_shaped", result: {id: "refinedstorage:creative_fluid_storage_block", count: 1}, pattern: 
- [
- "PP  O  PP", 
- "P       P", 
- "    X    ", 
- "  X E X  ", 
- "OXE A EXO", 
- "  X E X  ", 
- "    X    ", 
- "P       P", 
- "PP  O  PP"], 
- key: {A: {item:"techreborn:quantum_tank_unit"},E:{item:"techreborn:data_storage_core"},X:{item:"techreborn:superconductor"},
-       P:{item:"oritech:carbon_plating_block"},O:{item:"transmog:void_fragment"}}});
 //避雷针
 <recipetype:avaritia:extreme_crafting>.addJsonRecipe("t2.techreborn.lightning_rod", {type: "avaritia:extreme_shaped",
 result: {id: "techreborn:lightning_rod", count: 1}, pattern: 
@@ -432,7 +403,6 @@ result: {id: "techreborn:lightning_rod", count: 1}, pattern:
  "  BA AB  ", 
  "         "],
  key: {H:{item: "techreborn:copper_cable"},A: {item: "jsonreg:naquadah_plate" }, B: {item:"jsonreg:epoxy_resin_plate"}, C:{item:"techreborn:advanced_circuit"},D:{item:"techreborn:advanced_machine_frame"},E:{item:"techreborn:energy_flow_chip"}}});
-
 
 //核电，轻而易举啊！（Ori）
 /*
@@ -788,4 +758,114 @@ _reactor("t2.ori.reactor.nqdriamx2", "jsonreg:dual_naquadria_fuel_rod", 720000);
         {count: 2, item: "jsonreg:naquadah_alloy_rod"}
     ]
 });
+
+// =====================================================================
+// 榧木 → 绯夜脂（raw_amaramber）产线
+// =====================================================================
+
+<recipetype:techreborn:blast_furnace>.addJsonRecipe("amaramber.1.pyrolysis", {type: "techreborn:blast_furnace",
+    time: 600,
+    heat: 1500,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:torreya_tar"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:carbon_dioxide"}}
+    ],
+    ingredients: [
+        {item: "eternal_starlight:torreya_log", count: 1},
+        {count: 2, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("amaramber.2.extract", {type: "techreborn:chemical_reactor",
+    time: 200,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:torreya_resin"}},
+        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:recovered_ethanol"}}
+    ],
+    ingredients: [
+        {count: 2, components: {"techreborn:fluid": "jsonreg:torreya_tar"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+        {count: 2, components: {"techreborn:fluid": "jsonreg:ethanol"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("amaramber.2b.recover_ethanol", {type: "techreborn:chemical_reactor",
+    time: 200,
+    power: 30,
+    outputs: [
+        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:ethanol"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:wisp_water"}}
+    ],
+    ingredients: [
+        {count: 2, components: {"techreborn:fluid": "jsonreg:recovered_ethanol"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "minecraft:water"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+<recipetype:techreborn:distillation_tower>.addJsonRecipe("amaramber.3.crack_resin", {type: "techreborn:distillation_tower",
+    time: 200,
+    power: 64,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:amaramber_precursor"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:coke_gas"}},
+        {id: "techreborn:cell", count: 2}
+    ],
+    ingredients: [
+        {count: 2, components: {"techreborn:fluid": "jsonreg:torreya_resin"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 2, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("amaramber.4.activate", {type: "techreborn:chemical_reactor",
+    time: 200,
+    power: 128,
+    outputs: [
+        {id: "eternal_starlight:raw_amaramber", count: 1},
+        {id: "techreborn:cell", count: 1}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:amaramber_precursor"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {item: "minecraft:blaze_powder", count: 2}
+    ]
+});
+// 榧木焦油的出口（避免死产物）
+<recipetype:techreborn:semi_fluid_generator>.addJsonRecipe("oil.burn.trsemi_fluid/torreya_tar", {type: "techreborn:semi_fluid_generator", power: 42, fluid: "jsonreg:torreya_tar"});
+<recipetype:oritech:fuel_generator>.addJsonRecipe("oil.burn.orfuelgen/torreya_tar", {type: "oritech:fuel_generator", results: [], time: 8, fluidInput: {fluid: "jsonreg:torreya_tar", amount: 8100}, ingredients: []});
+
+
+// 二氧化碳（jsonreg:carbon_dioxide）的固有配方
+<recipetype:techreborn:chemical_reactor>.addJsonRecipe("amaramber.co2.combustion", {type: "techreborn:chemical_reactor",
+    time: 40,
+    power: 30,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:carbon_dioxide"}}
+    ],
+    ingredients: [
+        {item: "techreborn:coal_dust", count: 1},
+        {count: 1, components: {"techreborn:fluid": "techreborn:compressed_air"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+<recipetype:techreborn:industrial_electrolyzer>.addJsonRecipe("amaramber.co2.electrolysis", {type: "techreborn:industrial_electrolyzer",
+    time: 100,
+    power: 128,
+    outputs: [
+        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "jsonreg:carbon_monoxide"}},
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "jsonreg:liquid_oxygen"}}
+    ],
+    ingredients: [
+        {count: 2, components: {"techreborn:fluid": "jsonreg:carbon_dioxide"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 1, components: {"techreborn:fluid": "minecraft:empty"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+<recipetype:techreborn:large_chemical_reactor>.addJsonRecipe("amaramber.co2.sabatier", {type: "techreborn:large_chemical_reactor",
+    time: 100,
+    power: 256,
+    outputs: [
+        {id: "techreborn:cell", count: 1, components: {"techreborn:fluid": "techreborn:methane"}},
+        {id: "techreborn:cell", count: 2, components: {"techreborn:fluid": "minecraft:water"}},
+        {id: "techreborn:cell", count: 2}
+    ],
+    ingredients: [
+        {count: 1, components: {"techreborn:fluid": "jsonreg:carbon_dioxide"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"},
+        {count: 4, components: {"techreborn:fluid": "techreborn:hydrogen"}, base: {item: "techreborn:cell"}, "fabric:type": "fabric:components"}
+    ]
+});
+
 

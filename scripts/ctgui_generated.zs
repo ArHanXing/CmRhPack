@@ -939,3 +939,34 @@ craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/isotope_sep
     [<item:jsonreg:mv_electric_motor>, <item:techreborn:industrial_machine_frame>, <item:jsonreg:mv_electric_motor>],
     [<item:jsonreg:naquadah_plate>, <item:jsonreg:naquadah_plate>, <item:jsonreg:naquadah_plate>]]);
 
+<recipetype:minecraft:crafting>.removeByName("techreborn:crafting_table/machine/rocketdyne_f1a_engine");
+craftingTable.addShaped("ctgui/new/techreborn/crafting_table/machine/rocketdyne_f1a_engine", <item:techreborn:rocketdyne_f1a_engine>, [
+    [<item:techreborn:industrial_machine_frame>, <item:jsonreg:naquadah_alloy_plate>, <item:techreborn:industrial_machine_frame>],
+    [<item:jsonreg:naquadah_alloy_plate>, <item:techreborn:universal_chemical_fuel_engine>, <item:jsonreg:naquadah_alloy_plate>],
+    [<item:techreborn:universal_chemical_fuel_engine>, <item:techreborn:energy_flow_chip>, <item:techreborn:universal_chemical_fuel_engine>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/basic_infinite_storage_block", <item:jsonreg:basic_infinite_storage_block>, [
+    [<item:techreborn:steel_plate>, <item:refinedstorage:64k_storage_block>, <item:techreborn:steel_plate>],
+    [<item:techreborn:steel_plate>, <item:transmog:void_fragment>, <item:techreborn:steel_plate>],
+    [<item:techreborn:steel_plate>, <item:refinedstorage:4096b_fluid_storage_block>, <item:techreborn:steel_plate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/infinite_storage_water", <item:ez2rs:infinite_storage_water>, [
+    [<item:techreborn:cell>.withJsonComponent(<componenttype:techreborn:fluid>, "minecraft:water"), <item:techreborn:cell>.withJsonComponent(<componenttype:techreborn:fluid>, "homeostatic:purified_water"), <item:techreborn:cell>.withJsonComponent(<componenttype:techreborn:fluid>, "jsonreg:ammonia_solution")],
+    [<item:techreborn:cell>.withJsonComponent(<componenttype:techreborn:fluid>, "jsonreg:saline_water"), <item:jsonreg:basic_infinite_storage_block>, <item:botania:rune_of_water>],
+    [<item:techreborn:cell>.withJsonComponent(<componenttype:techreborn:fluid>, "jsonreg:brine"), <item:techreborn:cell>.withJsonComponent(<componenttype:techreborn:fluid>, "jsonreg:wisp_water"), <item:techreborn:cell>.withJsonComponent(<componenttype:techreborn:fluid>, "techreborn:electrolyzed_water")]]);
+
+craftingTable.addShaped("ctgui/new/crafting/infinite_storage_cobblestone", <item:ez2rs:infinite_storage_cobblestone>, [
+    [<item:eternal_starlight:cobbled_voidstone>, <item:techreborn:block_breaker>, <item:eternal_starlight:cobbled_grimstone>],
+    [<item:minecraft:lava_bucket>, <item:jsonreg:basic_infinite_storage_block>, <item:minecraft:water_bucket>],
+    [<item:minecraft:cobblestone>, <item:botania:terrasteel_ingot>, <item:minecraft:cobbled_deepslate>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/infinite_storage_lava", <item:ez2rs:infinite_storage_lava>, [
+    [<item:minecraft:lava_bucket>, <item:oritech:lava_generator_block>, <item:minecraft:lava_bucket>],
+    [<item:immersive_aircraft:industrial_gears>, <item:jsonreg:basic_infinite_storage_block>, <item:immersive_aircraft:industrial_gears>],
+    [<item:minecraft:lava_bucket>, <item:techreborn:thermal_generator>, <item:minecraft:lava_bucket>]]);
+
+craftingTable.addShaped("ctgui/new/crafting/infinite_storage_cell", <item:ez2rs:infinite_storage_cell>, [
+    [<item:jsonreg:coin>, <item:techreborn:tin_storage_block>, <item:jsonreg:coin>],
+    [<item:techreborn:tin_storage_block>, <item:jsonreg:basic_infinite_storage_block>, <item:techreborn:tin_storage_block>],
+    [<item:jsonreg:coin>, <item:techreborn:tin_storage_block>, <item:jsonreg:coin>]]);
+
